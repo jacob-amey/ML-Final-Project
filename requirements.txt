@@ -1,0 +1,4 @@
+#Running List
+
+Pillow
+pandas

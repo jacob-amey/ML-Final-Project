@@ -1,0 +1,35 @@
+# Python and local environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Local settings and credentials
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+kaggle.json
+
+# Downloaded and generated data; preserve folder placeholders
+data/raw/**/*
+!data/raw/**/
+!data/raw/**/.gitkeep
+data/processed/
+*.zip
+*.tar
+*.tar.gz
+
+# Future model artifacts and training logs
+checkpoints/
+runs/
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.keras
