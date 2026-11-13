@@ -1,13 +1,26 @@
-# Python and local environments
+# Python environments, caches, and build outputs
 .venv/
 venv/
+env/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.tox/
+.nox/
+build/
+dist/
+*.egg-info/
+.coverage
+.coverage.*
+htmlcov/
 
 # Local settings and credentials
 .DS_Store
+._*
 Thumbs.db
 .idea/
 .vscode/
@@ -16,20 +29,51 @@ Thumbs.db
 !.env.example
 kaggle.json
 
-# Downloaded and generated data; preserve folder placeholders
-data/raw/**/*
-!data/raw/**/
-!data/raw/**/.gitkeep
-data/processed/
+# Downloaded datasets at the repository root (including dated updates)
+/PLANT-DATASET/
+/Plant_Dataset_Updated_*/
+/plantwild*/
+/datasets/
+
+# Data contents are local; retain documentation, manifests, and placeholders
+/data/*
+!/data/README.md
+!/data/manifests/
+!/data/raw/
+/data/raw/**/*
+!/data/raw/**/
+!/data/raw/**/.gitkeep
+
+# Downloaded dataset archives
 *.zip
 *.tar
 *.tar.gz
+*.tgz
+*.tar.bz2
+*.tar.xz
+*.7z
+*.rar
 
-# Future model artifacts and training logs
+# Local Create ML projects and exported models
+*.mlproj/
+*.mlmodel
+*.mlmodelc/
+*.mlpackage/
+
+# Model artifacts and training logs
 checkpoints/
 runs/
+wandb/
+mlruns/
+logs/
+*.log
+events.out.tfevents.*
 *.pt
 *.pth
 *.ckpt
 *.h5
+*.hdf5
 *.keras
+*.onnx
+*.safetensors
+*.joblib
