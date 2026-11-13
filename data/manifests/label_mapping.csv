@@ -1,1 +1,10 @@
 source,original_label,project_label,status,reason
+plantvillage,Tomato___Early_blight,early_blight,included,Release color class with documented leaf IDs
+local_bundle_extra,Tomato__early_blight,early_blight,excluded,Renamed copies of PlantDoc entries
+plantvillage,Tomato___Late_blight,late_blight,included,Release color class with documented leaf IDs
+local_bundle_extra,Tomato__late_blight,late_blight,excluded,Renamed copies of PlantDoc entries
+plantvillage,Tomato___healthy,healthy,included,Release color class with documented leaf IDs
+local_bundle_extra,Tomato__healthy,healthy,excluded,Renamed copies of PlantDoc entries
+plantdoc,Tomato Early blight leaf,early_blight,included,Matching PlantDoc class
+plantdoc,Tomato leaf,healthy,included,Source baseline tomato-leaf label used as healthy proxy
+plantdoc,Tomato leaf late blight,late_blight,included,Matching PlantDoc class
