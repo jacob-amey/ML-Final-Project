@@ -77,3 +77,5 @@ events.out.tfevents.*
 *.onnx
 *.safetensors
 *.joblib
+/Plant_CNN_Starter_300/
+/AI Project Build Guide.docx

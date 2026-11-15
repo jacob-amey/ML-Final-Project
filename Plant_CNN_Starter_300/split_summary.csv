@@ -1,4 +1,0 @@
-class_id,class_name,train,val,test,total
-0,tomato__early_blight,70,20,10,100
-1,tomato__healthy,70,20,10,100
-2,tomato__late_blight,70,20,10,100
