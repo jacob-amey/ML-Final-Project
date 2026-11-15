@@ -1,0 +1,45 @@
+{
+  "source_dataset": "/Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/Plant_Dataset_Updated_2026-11-11",
+  "output_dataset": "/Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/Plant_CNN_Starter_300",
+  "purpose": "Small three-class dataset for a first custom CNN implementation",
+  "seed": 42,
+  "classes": {
+    "tomato__early_blight": 0,
+    "tomato__healthy": 1,
+    "tomato__late_blight": 2
+  },
+  "unique_images": 300,
+  "images_per_class": 100,
+  "splits": {
+    "train": 210,
+    "val": 60,
+    "test": 30
+  },
+  "per_class_split_counts": {
+    "train": 70,
+    "val": 20,
+    "test": 10
+  },
+  "image_size": [
+    256,
+    256
+  ],
+  "image_mode": "RGB",
+  "format": "JPEG",
+  "source_split_membership_preserved": true,
+  "image_contents_changed": false,
+  "source_images_fully_decoded": true,
+  "known_cross_label_duplicate_groups_excluded": true,
+  "one_image_per_parent_group": true,
+  "no_duplicate_sha256_or_decoded_dihedral_fingerprints": true,
+  "quick_check": {
+    "images": 15,
+    "images_per_class": 5,
+    "source": "Copies of main training images",
+    "purpose": "Training pipeline and tiny-batch overfit check only"
+  },
+  "selection_skip_counts": {
+    "not_rgb_256_jpeg_candidate": 23,
+    "known_label_conflict": 3
+  }
+}

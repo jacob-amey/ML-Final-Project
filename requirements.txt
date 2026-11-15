@@ -2,3 +2,10 @@
 
 Pillow
 pandas
+
+# Small custom CNN notebook
+torch==2.15.0
+torchvision==0.29.2
+matplotlib==3.11.2
+jupyterlab==4.6.6
+ipykernel==7.4.0
