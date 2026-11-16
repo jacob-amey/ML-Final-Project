@@ -14,7 +14,7 @@ def main():
     decisions = json.loads(decisions_path.read_text()) if decisions_path.exists() else {}
     records = []
     for directory in sorted(RUNS.iterdir()):
-        if not (directory / "history.csv").exists() or not (directory / "config.json").exists(): continue
+        if not all((directory / name).exists() for name in ("history.csv", "config.json", "status.json")): continue
         config = json.loads((directory / "config.json").read_text())
         history = list(csv.DictReader((directory / "history.csv").open()))
         if not history: continue
@@ -27,6 +27,8 @@ def main():
                         "completed_epochs": len(history), "selected_epoch": best["epoch"],
                         "validation_macro_f1": best["macro_f1"], "validation_accuracy": best["accuracy"], "validation_loss": best["loss"],
                         "training_seconds": status.get("training_seconds", sum(float(r["epoch_seconds"]) for r in history)),
+                        "additional_refinement_seconds": status.get("additional_refinement_seconds", ""),
+                        "parent_run": status.get("parent_run", ""),
                         "hypothesis": config["hypothesis"], "change_from_reference": config.get("reference"),
                         "dataset_fingerprint": frozen["fingerprint"], "git_revision": environment["git_revision"],
                         "source_fingerprint": environment["source_fingerprint"],

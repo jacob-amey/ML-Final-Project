@@ -38,8 +38,8 @@ def prepare_batch(raw, spec, device="cpu", augmentation="none"):
             x = ((x - centers) * contrast + centers).mul(brightness).clamp_(0, 1)
         elif augmentation != "dihedral":
             raise ValueError(f"Unsupported augmentation: {augmentation}")
-    mean = torch.tensor(spec["mean"], device=device)[None, :, None, None]
-    std = torch.tensor(spec["std"], device=device)[None, :, None, None]
+    mean = torch.tensor(spec["mean"], device=device, dtype=torch.float32)[None, :, None, None]
+    std = torch.tensor(spec["std"], device=device, dtype=torch.float32)[None, :, None, None]
     return ((x - mean) / std).contiguous(memory_format=torch.channels_last)
 
 

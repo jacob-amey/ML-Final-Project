@@ -116,7 +116,7 @@ predictions throughout the epoch, while validation uses the final epoch weights.
 The pipeline saves the best inference checkpoint immediately and atomically.
 The resumable checkpoint additionally saves optimizer and scheduler states,
 epoch/batch position, deterministic shuffle plan inputs, partial metric totals,
-early-stop state and Python/NumPy/PyTorch/MPS random states. Seven tests verify
+early-stop state and Python/NumPy/PyTorch/MPS random states. Eight tests verify
 contracts, cache integrity, metrics and resume, including real CPU and MPS interrupted runs.
 CPU resumed model tensors match exactly; MPS checks use a small numeric tolerance.
 

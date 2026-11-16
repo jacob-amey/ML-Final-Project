@@ -6,6 +6,9 @@ import json
 from pathlib import Path
 import numpy as np
 import torch
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 from .common import ROOT, atomic_json, metrics_from_matrix, sha256, update_matrix, utc_now, write_csv
 from .inference import Predictor
 
@@ -55,6 +58,19 @@ def main():
                     "checkpoint_sha256": freeze["checkpoint_sha256"], "evaluated_utc": utc_now()})
     write_csv(directory / "external_predictions.csv", predictions)
     write_csv(directory / "external_per_class.csv", covered)
+    indices = [mapping[name] for name in sorted(protocol["class_counts"])]
+    collapsed = np.column_stack([matrix[np.ix_(indices, indices)], matrix[indices].sum(1)-matrix[np.ix_(indices, indices)].sum(1)])
+    np.savetxt(directory / "external_confusion_matrix.csv", collapsed, fmt="%d", delimiter=",")
+    fig, axis = plt.subplots(figsize=(9, 5))
+    axis.imshow(collapsed, cmap="Blues")
+    labels = [classes[i].removeprefix("tomato__").replace("_", " ") for i in indices]
+    axis.set_xticks(range(4), labels+["Other supported label"])
+    axis.set_yticks(range(3), labels)
+    axis.set(xlabel="Predicted label", ylabel="Reference tomato label", title="Supplementary PlantDoc evaluation — all 177 outputs eligible")
+    for row in range(3):
+        for column in range(4):
+            axis.text(column, row, str(collapsed[row, column]), ha="center", va="center", color="white" if collapsed[row,column]>collapsed.max()/2 else "black")
+    fig.tight_layout(); fig.savefig(directory / "external_confusion_matrix.png", dpi=160); plt.close(fig)
     atomic_json(directory / "external_metrics.json", metrics)
     artifact = json.loads((directory / "artifact.json").read_text())
     artifact["supplementary_evaluation_complete"] = True

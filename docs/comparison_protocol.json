@@ -244,7 +244,10 @@
         "zucchini__yellow_mosaic_virus"
       ],
       "supported_final_labels": 177,
-      "unmapped_labels": []
+      "unmapped_labels": [],
+      "checkpoint_sha256": "680c77645aaf35b8dba369b515d59574a6c3aa978429423d4649cc323be6a9ee",
+      "matches_project_export_byte_for_byte": true,
+      "project_export_sha256": "680c77645aaf35b8dba369b515d59574a6c3aa978429423d4649cc323be6a9ee"
     }
   },
   "valid_full_177_test_comparison": [

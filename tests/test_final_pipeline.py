@@ -11,7 +11,7 @@ import numpy as np
 import torch
 from leafcheck.common import ROOT, better, metrics_from_matrix, sha256
 from leafcheck.model import LeafCNN
-from leafcheck.preprocessing import PREPROCESSING_VERSION, image_bytes, image_tensor
+from leafcheck.preprocessing import PREPROCESSING_VERSION, image_bytes, image_tensor, prepare_batch
 
 
 class FinalPipelineTests(unittest.TestCase):
@@ -38,6 +38,16 @@ class FinalPipelineTests(unittest.TestCase):
         self.assertFalse(better({"macro_f1": .39, "loss": .5}, reference))
         self.assertTrue(better({"macro_f1": .4, "loss": .9}, reference))
         self.assertFalse(better(reference, reference))
+
+    def test_input_contract_stays_float32_with_a_different_global_default(self):
+        original = torch.get_default_dtype()
+        try:
+            torch.set_default_dtype(torch.float64)
+            spec = {"version":PREPROCESSING_VERSION, "mean":[.4,.5,.6], "std":[.2,.2,.3]}
+            result = prepare_batch(torch.zeros((2,8,8,3),dtype=torch.uint8),spec)
+            self.assertEqual(result.dtype,torch.float32)
+        finally:
+            torch.set_default_dtype(original)
 
     def test_orientation_rgb_padding_and_scaling_share_one_contract(self):
         with tempfile.TemporaryDirectory() as directory:

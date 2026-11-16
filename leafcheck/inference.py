@@ -37,7 +37,7 @@ class Predictor:
             if path.exists():
                 assert json.loads(path.read_text()) == expected, f"Inconsistent artifact metadata: {name}"
         self.device = torch.device(device)
-        self.model = LeafCNN(**checkpoint["model_config"]).to(device=self.device, memory_format=torch.channels_last)
+        self.model = LeafCNN(**checkpoint["model_config"]).to(device=self.device, dtype=torch.float32, memory_format=torch.channels_last)
         self.model.load_state_dict(checkpoint["model_state_dict"], strict=True); self.model.eval()
         self.metadata = {"name": "Final Custom CNN", "ready": True, "class_count": 177, "classes": self.classes,
                          "model_version": "leafcheck177-v1", "dataset": "leafcheck177_final-v1",

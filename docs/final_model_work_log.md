@@ -92,3 +92,30 @@ independent student implementation.
 - A 100-update concurrent probe of the weighted experiment took 43.84 seconds
   including startup. No throughput advantage was demonstrated; full jobs remain
   sequential. Its partial checkpoint is queued for complete resumable training.
+
+## 2026-11-16 — completed capacity comparison and rejected refinement
+
+- Residual CNN completed 48 full-data epochs (22,128 updates), selected epoch 47:
+  validation accuracy 0.882989, macro-F1 0.595327, loss 0.490400. Full selected-model
+  reload matched. Runtime 4,188.1 seconds, including session overhead.
+- Compared with the compact reference, observed validation macro-F1 increased by
+  0.058796 with the same data, seed, augmentation policy, optimizer and schedule.
+  Initialization/augmentation random streams need not be identical across
+  architectures; this is an observed single-seed comparison, not a significance claim.
+- Ran a matched post-training BatchNorm statistics experiment on all 59,008
+  training images with augmentation off and learned parameters held bitwise
+  fixed. Validation macro-F1 changed from 0.595327 to 0.595177 (-0.000149).
+  Rejected the refinement and preserved the original checkpoint. Additional cost
+  591.7 seconds; its logged total includes the parent procedure and is not a
+  separate fresh 48-epoch training run.
+- The class-weighted residual run resumed its exact saved batch-100 state and
+  continues full-data training. Its comparison decision remains pending convergence.
+- A second initialization of the leading recipe is planned if practical under
+  the measured local runtime. The test and supplementary sets remain unscored.
+
+- Recorded training support for all 177 labels: 4–5,116 images per class, median
+  100, with 26 classes below 30 images. Saved a reproducible distribution figure
+  and known/inferred group counts; these groups do not prove specimen independence.
+- Eight pipeline checks passed, including explicit float32 inference inputs under
+  a changed PyTorch default dtype. Added a readable supplementary confusion figure
+  generator, to run only after the final model is frozen.

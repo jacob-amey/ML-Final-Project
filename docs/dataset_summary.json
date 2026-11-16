@@ -1,0 +1,12 @@
+{
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "classes": 177,
+  "training_images": 59008,
+  "training_groups": 36219,
+  "minimum_training_images_per_class": 4,
+  "median_training_images_per_class": 100.0,
+  "maximum_training_images_per_class": 5116,
+  "classes_with_fewer_than_30_training_images": 26,
+  "healthy_labels": 23,
+  "plant_or_crop_prefixes": 43
+}

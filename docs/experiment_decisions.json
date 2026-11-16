@@ -1,0 +1,14 @@
+{
+  "plain177_seed434": {
+    "decision": "Retain as completed full-data reference; not current leader",
+    "rationale": "48 complete epochs. Validation macro-F1 0.536531; the matched deeper architecture reached 0.595327."
+  },
+  "residual177_seed434": {
+    "decision": "Current completed leader; final selection pending imbalance comparison and feasible seed check",
+    "rationale": "48 complete epochs. Selected epoch 47: validation macro-F1 0.595327, accuracy 0.882989; +0.058796 macro-F1 versus compact reference."
+  },
+  "residual177_bn_seed434": {
+    "decision": "Reject",
+    "rationale": "Training-only feature-statistics recomputation kept learned weights unchanged but changed validation macro-F1 by -0.000149, adding no benefit."
+  }
+}
