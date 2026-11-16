@@ -49,3 +49,24 @@ independent student implementation.
 - Added final integration tests for class order, numerical API parity, JPEG EXIF,
   grayscale/RGBA PNG, unavailable artifacts and standalone packaged examples.
   These final-artifact tests are pending selection and evaluation.
+
+## 2026-11-15 — completed reference and supplementary protocol
+
+- Compact reference finished 48 full-data epochs, 22,128 updates, with selected
+  epoch 44: validation accuracy 0.854835, macro-F1 0.536531, loss 0.543217.
+  Full validation recomputation after reload matched. Total runtime 1,775.1 s.
+  Its late learning-rate reductions produced flattening gains; the stronger
+  architecture experiment is the next use of resources.
+- Validation-source diagnostics showed different results on controlled leaf-ID
+  images and a small PlantDoc-matched stratum. Class compositions differ, so
+  this is a generalization warning rather than a causal background claim.
+- Audited the existing 240-photo external collection without predictions.
+  Removed 35 exact decoded/recorded group overlaps plus 22 additional related
+  photos confirmed through 26 visual pair reviews. Frozen supplement: 183 photos
+  (50 early blight, 54 healthy-proxy, 79 late blight). This covers only three
+  tomato labels and is not a completely unseen-source benchmark.
+- Registered the supplementary conditional rule using training counts only:
+  always predict tomato late blight. Both main and supplementary sets stay
+  sealed from model selection until the final configuration is frozen.
+- CPU and MPS resume checks passed. Added carried partial-epoch timing so resume
+  does not under-report the first resumed epoch's runtime; optimization is unchanged.

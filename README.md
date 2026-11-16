@@ -105,6 +105,7 @@ command contract; use the actual selected run in the final manifest.
   --output artifacts/leafcheck177-v1 \
   --rationale "Document the validation-based selection and stopping decision"
 .venv/bin/python -m leafcheck.evaluate_final --artifact artifacts/leafcheck177-v1
+.venv/bin/python -m leafcheck.evaluate_external --artifact artifacts/leafcheck177-v1
 ```
 
 Final evaluation saves per-image predictions, correct/total, accuracy, macro-F1,
@@ -112,6 +113,15 @@ per-class metrics and support, confusion tables/figures, successes/failures,
 the most-common-training-class rule and latency measurements. After seeing
 test results, further proposed tuning belongs in future work. Rechecking an
 unchanged frozen artifact is acceptable; do not select another model on this test.
+
+The preregistered supplementary PlantDoc collection contains 183 screened photos
+covering three tomato labels, with 57 overlaps/related photos omitted. Its own
+manifest and protocol are under `data/manifests/leafcheck177_external*`. It is
+evaluated only after selection, retaining all 177 logits as possible predictions.
+Its macro-F1 averages the three represented labels; it must not be compared
+numerically with macro-F1 over the full 177-class test. PlantDoc also appears
+elsewhere in the master, so this is not an unseen-source benchmark. Generic
+`Tomato leaf` is an inherited healthy proxy, and undetected related views may remain.
 
 ## Standalone inference and website
 

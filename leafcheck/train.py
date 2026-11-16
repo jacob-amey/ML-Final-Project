@@ -96,7 +96,7 @@ def train(config, run_dir, resume=False, max_updates=None):
     run_dir = Path(run_dir)
     history = []; best = None; epoch = 1; next_batch = 0
     matrix = np.zeros((177, 177), np.int64); loss_sum = 0.0; seen = 0
-    early_score = -1.0; meaningful_epoch = 0; total_steps = 0; accumulated_seconds = 0.0
+    early_score = -1.0; meaningful_epoch = 0; total_steps = 0; accumulated_seconds = 0.0; epoch_elapsed = 0.0
     if resume:
         checkpoint = torch.load(run_dir / "last.pt", map_location="cpu", weights_only=True)
         assert checkpoint["config"] == config and checkpoint["dataset_fingerprint"] == frozen["fingerprint"]
@@ -108,6 +108,7 @@ def train(config, run_dir, resume=False, max_updates=None):
         history = checkpoint["history"]; best = checkpoint["best"]
         early_score = checkpoint["early_score"]; meaningful_epoch = checkpoint["meaningful_epoch"]
         total_steps = checkpoint["total_steps"]; accumulated_seconds = checkpoint["training_seconds"]
+        epoch_elapsed = checkpoint.get("epoch_elapsed_seconds", 0.0)
         restore_rng(checkpoint["rng"])
     else:
         run_dir.mkdir(parents=True, exist_ok=False)
@@ -131,7 +132,8 @@ def train(config, run_dir, resume=False, max_updates=None):
             "rng": rng_state(), "epoch": current_epoch, "next_batch": offset,
             "train_matrix": matrix.tolist(), "train_loss_sum": loss_sum, "train_seen": seen,
             "history": history, "best": best, "early_score": early_score, "meaningful_epoch": meaningful_epoch,
-            "total_steps": total_steps, "training_seconds": accumulated_seconds + time.perf_counter() - began})
+            "total_steps": total_steps, "training_seconds": accumulated_seconds + time.perf_counter() - began,
+            "epoch_elapsed_seconds": epoch_elapsed + time.perf_counter() - epoch_started if offset else 0.0})
 
     parameters = sum(p.numel() for p in model.parameters())
     print(json.dumps({"run": str(run_dir), "device": str(device), "parameters": parameters,
@@ -187,12 +189,12 @@ def train(config, run_dir, resume=False, max_updates=None):
         row = {"epoch": current_epoch, "train_loss": training["loss"], "train_accuracy": training["accuracy"],
                "train_macro_f1": training["macro_f1"], "validation_loss": val["loss"], "validation_accuracy": val["accuracy"],
                "validation_macro_f1": val["macro_f1"], "learning_rate_next": optimizer.param_groups[0]["lr"],
-               "epoch_seconds": time.perf_counter() - epoch_started, "train_images": seen,
+               "epoch_seconds": epoch_elapsed + time.perf_counter() - epoch_started, "train_images": seen,
                "maximum_gradient_norm": maximum_gradient, "selected": chosen}
         history.append(row); write_csv(run_dir / "history.csv", history)
         atomic_json(run_dir / f"validation_epoch_{current_epoch:03d}.json", val)
         print(json.dumps(row), flush=True)
-        matrix = np.zeros((177, 177), np.int64); loss_sum = 0.0; seen = 0; next_batch = 0
+        matrix = np.zeros((177, 177), np.int64); loss_sum = 0.0; seen = 0; next_batch = 0; epoch_elapsed = 0.0
         save_resume(current_epoch + 1, 0)
         atomic_json(run_dir / "status.json", {"state": "running", "completed_epochs": current_epoch,
                     "best": best, "total_steps": total_steps, "saved_utc": utc_now()})
