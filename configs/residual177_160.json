@@ -1,0 +1,32 @@
+{
+  "experiment": "residual177-resolution160",
+  "hypothesis": "Preserve more small lesion and texture detail than128 pixels without adding parameters; evaluate against the same seed434 weighted128 recipe.",
+  "reference": "residual177_weighted_long64_seed434; change input_size128 to160 and refit the same normalization algorithm on training pixels only; architecture, all images, seed and training settings remain the same.",
+  "seed": 434,
+  "device": "auto",
+  "cpu_threads": 4,
+  "input_size": 160,
+  "model": {
+    "architecture": "residual_v1",
+    "channels": [
+      24,
+      48,
+      96,
+      192
+    ],
+    "num_classes": 177,
+    "dropout": 0.2
+  },
+  "batch_size": 128,
+  "validation_batch_size": 256,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5.0,
+  "augmentation": "dihedral",
+  "class_weight_power": 0.5,
+  "label_smoothing": 0.0,
+  "max_epochs": 64,
+  "min_epochs": 24,
+  "patience": 10,
+  "early_min_delta": 0.001
+}

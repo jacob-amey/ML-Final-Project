@@ -18,5 +18,9 @@
   "residual177_weighted_long64_seed434": {
     "decision": "Keep as current best validation checkpoint; no further duration search",
     "rationale": "Stopped at 55 cumulative epochs under the unchanged plateau rule, selected epoch 50. Macro-F1 0.603681 versus parent 0.603053 (+0.000628); additional 605.4 seconds. Small observed change, below the 0.005 practical signal; same architecture and inference cost. Fresh-seed check remains pending."
+  },
+  "residual177_weighted_seed435": {
+    "decision": "Keep as completed stability evidence; not the leading128 checkpoint",
+    "rationale": "64 full-data epochs, selected63; macro-F1 0.598316, accuracy0.874258, loss0.534610,5214.1seconds. Reload verified. The128 weighted recipe scores0.598316\u20130.603681 across these two seeds; this is limited variability evidence, not significance."
   }
 }

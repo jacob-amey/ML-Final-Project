@@ -186,3 +186,23 @@ independent student implementation.
   matplotlib and notebook libraries absent. Top-five development scores matched
   the research runtime exactly on a software fixture; final all-score API parity
   and packaged-archive checks remain pending the frozen selected artifact.
+
+## 2026-11-16 — user timing clarification and resolution check
+
+- The user confirmed there is no hard deadline and asked to prioritize the
+  strongest defensible result. Amended the still-sealed selection plan before
+  test evaluation to allow one modest resolution check (160 versus 128 pixels).
+- The hypothesis is preservation of small lesion detail, not a claim that higher
+  resolution will solve source/label or rare-class limitations. Keep architecture,
+  data, weighting and training policy fixed; benchmark actual local cost first.
+  A stability repeat is conditional on meaningful validation benefit. No open-ended
+  architecture/resolution grid or test-driven tuning is introduced.
+
+- Confirmed seed435 completed64 full epochs, selected63: validation macro-F1
+  0.598316, accuracy0.874258, loss0.534610; runtime5,214.1seconds. Reload verified.
+  Its status records completion at 2026-11-16T07:47:14.470996+00:00; completed status was observed
+  at 2026-11-16T12:52:04.203999+00:00. The two128-pixel seeds span 0.005365 macro-F1.
+- Declared the resolution acceptance rule before160 validation: a seed434 gain
+  of at least0.005365 triggers a160-pixel seed435 repeat; select160 only
+  if the two-seed mean gain reaches0.005, otherwise retain128 for lower compute.
+  Checkpoint selection within the accepted recipe keeps the original F1/loss rule.
