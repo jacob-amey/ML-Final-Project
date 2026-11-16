@@ -134,3 +134,15 @@ independent student implementation.
   checkpoints are preserved. A temporary-copy check confirmed all model, optimizer,
   scheduler and RNG tensors are bitwise preserved, with only declared procedure
   metadata changed. No additional training has run under this option yet.
+
+- Preregistered the remaining bounded search in `final_selection_plan.json`: finish
+  the matched loss comparison, at most 64 cumulative epochs for its leader if
+  late improvements justify continuation, then one fresh seed of that recipe.
+  This is a practical local compute budget, not a global optimality claim.
+- A short synchronized timing probe during active training showed no justified
+  pipeline shortcut; MPS does not support foreach gradient clipping here. The
+  active pipeline remains unchanged. A host-process snapshot was about 4.57 GB
+  resident memory; it is not a peak GPU/unified-memory measurement.
+- Inspected confidently incorrect validation examples. Scores near one can be
+  wrong; visually similar pest damage and mixed plant parts remain limitations.
+  No labels were changed from model disagreement or unauthenticated diagnosis.

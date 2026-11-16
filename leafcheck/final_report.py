@@ -45,6 +45,16 @@ def main():
     for i, row in enumerate(fresh_runs): axes[1].text(i, float(row["validation_macro_f1"])+.012, f"{float(row['validation_macro_f1']):.3f}", ha="center")
     fig.suptitle("Development evidence — shared frozen train/validation splits")
     fig.tight_layout(); fig.savefig(figures / "experiment_comparison.png", dpi=180); plt.close(fig)
+    training_support = {r["class_name"]:int(r["training_images"]) for r in csv.DictReader((ROOT / "docs/training_class_support.csv").open())}
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.3))
+    for axis, result, title in zip(axes, [validation, test], ["Selected validation checkpoint", "Frozen final test"]):
+        for sparse, color, label in [(False,"#527a67","At least 10 evaluation images"),(True,"#bd812c","Fewer than 10 evaluation images")]:
+            points = [r for r in result["per_class"] if (r["support"]<10)==sparse]
+            axis.scatter([training_support[r["class_name"]] for r in points], [r["f1"] for r in points], color=color, label=label, alpha=.65, s=22)
+        axis.set(xscale="log",xlabel="Training images for the label (log scale)",ylabel="Per-class F1",ylim=(-.03,1.03),title=title)
+        axis.grid(alpha=.15); axis.legend(fontsize=7,loc="lower right")
+    fig.suptitle("Class support and performance — descriptive, not a causal comparison")
+    fig.tight_layout(); fig.savefig(figures / "support_and_f1.png", dpi=180); plt.close(fig)
     rows = "\n".join(f"| {r['run']} | {r['completed_epochs']} | {r['selected_epoch']} | {float(r['validation_accuracy']):.4f} | {float(r['validation_macro_f1']):.4f} | {float(r['validation_loss']):.4f} | {r['decision']} |" for r in experiments)
     confusion = list(csv.DictReader((directory / "major_confusions.csv").open()))[:8]
     confusion_rows = "\n".join(f"| {r['actual_class']} | {r['predicted_class']} | {r['count']} / {r['actual_support']} | {float(r['fraction_of_actual_class']):.1%} |" for r in confusion)
@@ -170,6 +180,7 @@ observed test recall. Per-class precision, recall, F1, image/group support and
 all predictions are retained in the bundle. A single rare-class success/failure
 is unstable evidence; high overall accuracy does not imply reliable rare labels.
 
+![Class support and performance](figures/support_and_f1.png)
 ![Frozen confusion matrix](figures/confusion_matrix.png)
 ![Largest directed confusions](figures/major_confusions.png)
 

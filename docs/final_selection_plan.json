@@ -1,0 +1,17 @@
+{
+  "declared_utc": "2026-11-16T05:51:35.380382+00:00",
+  "test_predictions_inspected": false,
+  "primary_metric": "validation macro-F1 over all 177 classes",
+  "checkpoint_tie_break": "Within 1e-6, lower unweighted validation cross-entropy, then earlier epoch",
+  "completed_recipe_screen": [
+    "plain177_seed434",
+    "residual177_seed434"
+  ],
+  "pending_recipe_screen": "residual177_weighted_seed434: finish the same declared 48-epoch maximum/early-stop procedure",
+  "already_rejected": "residual177_bn_seed434: no validation benefit; learned weights unchanged",
+  "longer_budget_rule": "After the matched screen, extend only the leading recipe to at most 64 cumulative epochs if its best checkpoint falls within the last 10 completed epochs or its best macro-F1 improved by at least 0.005 during that interval. Keep the original run intact; preserve exact last model/optimizer/scheduler/RNG state. Retain the same early stop and selection rule.",
+  "stability_rule": "Train seed 435 from fresh weights using the leading recipe after the duration check, with the same full train/validation splits, preprocessing, and declared budget. Report the two initialization results as limited stability evidence, not significance. Select the deliverable by validation, not seed identity.",
+  "stopping_rule": "Conclude this bounded local search after the controlled architecture/loss comparisons, one duration check when justified and one additional initialization. This is about five hours of active accelerator work at the measured throughput plus diagnostics; it is a practical student-project budget, not a global optimum. Remaining rare-label, source/annotation and independent-field-data gaps are documented future work.",
+  "fresh_data_decision": "Keep the already audited release for comparable experiments. Rare classes need verified compatible examples and expert labels; no unverified web downloads or generated evaluation evidence are introduced.",
+  "confidence_policy": "No fitted threshold or calibration; display uncalibrated softmax scores with limitations."
+}
