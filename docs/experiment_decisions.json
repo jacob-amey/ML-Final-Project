@@ -4,11 +4,15 @@
     "rationale": "48 complete epochs. Validation macro-F1 0.536531; the matched deeper architecture reached 0.595327."
   },
   "residual177_seed434": {
-    "decision": "Current completed leader; final selection pending imbalance comparison and feasible seed check",
-    "rationale": "48 complete epochs. Selected epoch 47: validation macro-F1 0.595327, accuracy 0.882989; +0.058796 macro-F1 versus compact reference."
+    "decision": "Retain as completed capacity reference; weighted recipe leads declared macro-F1 objective",
+    "rationale": "48 complete epochs, selected epoch 47: macro-F1 0.595327, accuracy 0.882989. Higher accuracy but lower macro-F1 than matched weighted recipe; no test comparison was used."
   },
   "residual177_bn_seed434": {
     "decision": "Reject",
     "rationale": "Training-only feature-statistics recomputation kept learned weights unchanged but changed validation macro-F1 by -0.000149, adding no benefit."
+  },
+  "residual177_weighted_seed434": {
+    "decision": "Keep; leading matched 48-epoch recipe, duration and seed checks pending",
+    "rationale": "Selected epoch 48, validation macro-F1 0.603053 versus 0.595327 unweighted (+0.007727), accuracy 0.874376 versus 0.882989. Mean class F1 for 71 labels with <20 validation images rose from 0.344437 to 0.375945; zero-recall labels in that stratum increased from 13 to 14, so improvement is not universal."
   }
 }

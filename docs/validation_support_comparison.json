@@ -1,0 +1,95 @@
+{
+  "runs": {
+    "residual177_seed434": {
+      "checkpoint_sha256": "63d5abaf6918c77e4862712dec05c9fa62c48799a4cb243d50349b6115b90d2d",
+      "selected_epoch": 47,
+      "validation_macro_f1": 0.5953268278572574,
+      "support_bins": {
+        "at_least_100_validation_images": {
+          "classes": 41,
+          "mean_class_f1": 0.8993885282904603,
+          "zero_recall_classes": 0
+        },
+        "under_20_validation_images": {
+          "classes": 71,
+          "mean_class_f1": 0.344437168831733,
+          "zero_recall_classes": 13
+        },
+        "20_to_99_validation_images": {
+          "classes": 65,
+          "mean_class_f1": 0.677582767442656,
+          "zero_recall_classes": 0
+        }
+      },
+      "provenance": {
+        "documented_PlantVillage_leaf_ID": {
+          "images": 7586,
+          "correct": 7422,
+          "accuracy": 0.9783812285789613,
+          "covered_classes": 26,
+          "macro_f1_over_covered_classes": 0.9738005658679014
+        },
+        "other_traceable_images": {
+          "images": 9186,
+          "correct": 7424,
+          "accuracy": 0.8081863705639016,
+          "covered_classes": 159,
+          "macro_f1_over_covered_classes": 0.529893847277141
+        },
+        "PlantDoc_byte_matches": {
+          "images": 64,
+          "correct": 20,
+          "accuracy": 0.3125,
+          "covered_classes": 9,
+          "macro_f1_over_covered_classes": 0.2180674264007597
+        }
+      }
+    },
+    "residual177_weighted_seed434": {
+      "checkpoint_sha256": "6a7a9ac5032e26888ce6152d5aa54f9d0192b8cbcdd4380e59fb78abe098d977",
+      "selected_epoch": 48,
+      "validation_macro_f1": 0.6030533562903017,
+      "support_bins": {
+        "at_least_100_validation_images": {
+          "classes": 41,
+          "mean_class_f1": 0.8868020113369341,
+          "zero_recall_classes": 0
+        },
+        "under_20_validation_images": {
+          "classes": 71,
+          "mean_class_f1": 0.37594457155793715,
+          "zero_recall_classes": 14
+        },
+        "20_to_99_validation_images": {
+          "classes": 65,
+          "mean_class_f1": 0.6721461079685471,
+          "zero_recall_classes": 0
+        }
+      },
+      "provenance": {
+        "documented_PlantVillage_leaf_ID": {
+          "images": 7586,
+          "correct": 7365,
+          "accuracy": 0.9708673872923806,
+          "covered_classes": 26,
+          "macro_f1_over_covered_classes": 0.961535548229086
+        },
+        "other_traceable_images": {
+          "images": 9186,
+          "correct": 7332,
+          "accuracy": 0.798171129980405,
+          "covered_classes": 159,
+          "macro_f1_over_covered_classes": 0.5397343246582664
+        },
+        "PlantDoc_byte_matches": {
+          "images": 64,
+          "correct": 24,
+          "accuracy": 0.375,
+          "covered_classes": 9,
+          "macro_f1_over_covered_classes": 0.37473517473517476
+        }
+      }
+    }
+  },
+  "caveat": "Development strata differ in support and source/class composition; not independent field performance or causal evidence."
+}

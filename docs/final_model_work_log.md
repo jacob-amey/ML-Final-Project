@@ -152,3 +152,18 @@ independent student implementation.
   while the final package is unavailable. Saved preflight evidence and screenshot.
   Simplified the missing-final-package message; the real final-model browser
   rehearsal remains pending and is not inferred from this preflight.
+
+## 2026-11-16 — completed class-weight comparison
+
+- Weighted residual finished 48 full-data epochs (22,128 updates), selected epoch 48:
+  validation macro-F1 0.603053, accuracy 0.874376, loss 0.535239, 4,204.0 seconds.
+  Reloaded checkpoint reproduced the full validation results. Its macro gain
+  over the unweighted model is 0.007727; accuracy decreases by 0.008612.
+- Reconciled completed-checkpoint validation diagnostics against saved predictions
+  and now stamp every diagnostic with its checkpoint hash. Among 71 labels with
+  fewer than 20 validation images, mean F1 rises 0.344437→0.375945, while zero-recall
+  labels increase 13→14. Weighting therefore helps the average without solving all
+  rare classes. Source-stratum differences are not a separate field benchmark.
+- Started `residual177_weighted_long64_seed434` from the exact epoch 49 resume
+  state. Its parent remains intact; maximum 64 cumulative epochs, same optimizer,
+  scheduler, augmentation, weighting and early-stop policy.
