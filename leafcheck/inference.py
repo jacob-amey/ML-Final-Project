@@ -31,6 +31,11 @@ class Predictor:
         self.classes = checkpoint["classes"]; self.spec = checkpoint["preprocessing"]
         assert len(self.classes) == 177 and len(set(self.classes)) == 177
         assert checkpoint["class_to_idx"] == {name: i for i, name in enumerate(self.classes)}
+        for name, expected in [("class_to_idx.json", checkpoint["class_to_idx"]), ("preprocessing.json", self.spec),
+                               ("config.json", checkpoint["config"])]:
+            path = self.directory / name
+            if path.exists():
+                assert json.loads(path.read_text()) == expected, f"Inconsistent artifact metadata: {name}"
         self.device = torch.device(device)
         self.model = LeafCNN(**checkpoint["model_config"]).to(device=self.device, memory_format=torch.channels_last)
         self.model.load_state_dict(checkpoint["model_state_dict"], strict=True); self.model.eval()

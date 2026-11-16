@@ -33,3 +33,19 @@ independent student implementation.
 - Both initial full-data configurations use the same maximum 48 epochs, minimum
   24, patience 10, optimizer/augmentation/seed/resolution and schedule; architecture
   is the controlled change. A validation plateau reduces learning rate first.
+
+## 2026-11-15 — comparison audit and demo integration
+
+- The Create ML source records identify the original master splits. The final
+  test includes 5,832 images from its declared training split and 1,683 from its
+  validation split. It cannot be a held-out comparison on this test. No new test
+  predictions were made for this audit.
+- Nine existing demo tests passed before changes, including a fresh standalone
+  copy. Relevant pre-existing migration/bundling/UI work was preserved in nested
+  commit `22e454f`; the unrelated hosting-file deletion was left out.
+- Added the explicit final-model adapter, validated bundle installer, fourth
+  model card, saved model-versus-rule score display and comparison caveats.
+  The final model stays unavailable until real completed artifacts are installed.
+- Added final integration tests for class order, numerical API parity, JPEG EXIF,
+  grayscale/RGBA PNG, unavailable artifacts and standalone packaged examples.
+  These final-artifact tests are pending selection and evaluation.

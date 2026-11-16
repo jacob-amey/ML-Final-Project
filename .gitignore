@@ -63,6 +63,7 @@ kaggle.json
 # Model artifacts and training logs
 checkpoints/
 runs/
+/artifacts/
 wandb/
 mlruns/
 logs/

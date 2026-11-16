@@ -1,0 +1,59 @@
+{
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "test_predictions_computed": false,
+  "scope": "Training exposure and label coverage only; performance not compared here.",
+  "models": {
+    "leafcheck_small": {
+      "checkpoint_sha256": "ef7ce8d2ebab5ca23b4a8e7d0b0b7feca4f9c9482de1d28fd9ec96e7d3476499",
+      "classes": [
+        "early_blight",
+        "healthy",
+        "late_blight"
+      ],
+      "class_count": 3,
+      "training_images": 120,
+      "historical_protocol": "Earlier three-class pilot; different splits and known related-view concerns",
+      "new_test_exact_overlap_with_recorded_experiment_exposures": 0,
+      "comparison_policy": "Keep earlier scores labelled historical. Three labels and different training budgets do not support an architecture-superiority claim against the 177-class model."
+    },
+    "leafcheck_starter300": {
+      "checkpoint_sha256": "cd439b36a87442bc31a26619b5e3722f474dfb5886190ddf507e9d3a228accd3",
+      "classes": [
+        "tomato__early_blight",
+        "tomato__healthy",
+        "tomato__late_blight"
+      ],
+      "class_count": 3,
+      "training_images": 210,
+      "historical_protocol": "Earlier three-class pilot; different splits and known related-view concerns",
+      "new_test_exact_overlap_with_recorded_experiment_exposures": 0,
+      "comparison_policy": "Keep earlier scores labelled historical. Three labels and different training budgets do not support an architecture-superiority claim against the 177-class model."
+    },
+    "createml": {
+      "class_count": 177,
+      "source_records": {
+        "train": {
+          "data_url": "file:///Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/Plant_Dataset_Updated_2026-11-11/train/",
+          "record_sha256": "3020404c187f8ac4fd5c9f8bce12eedb4c582cb35917572f8cb5bbda6aea3b33"
+        },
+        "val": {
+          "data_url": "file:///Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/Plant_Dataset_Updated_2026-11-11/val/",
+          "record_sha256": "ff391c5a2c139d29d58651b0aa1fcdcc8eafa0667097ba677444dfaa5807c762"
+        },
+        "test": {
+          "data_url": "file:///Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/Plant_Dataset_Updated_2026-11-11/test/",
+          "record_sha256": "b352c2a12aa700122822dc52cb01ab8f75a4bc5a4adc24e11a38784d246b86ea"
+        }
+      },
+      "new_test_images_from_declared_old_training_split": 5832,
+      "new_test_images_from_declared_old_validation_split": 1683,
+      "new_test_images_from_declared_old_test_split": 910,
+      "exposure_evidence": "Local Create ML data-source records point to the original master train/val/test folders.",
+      "comparison_policy": "Do not evaluate or rank Create ML on the new 177-class holdout: 5,832 images come from its declared training split and 1,683 from its validation split. Older saved testing used a different, less strictly grouped protocol."
+    }
+  },
+  "valid_full_177_test_comparison": [
+    "selected custom CNN",
+    "most-frequent-training-class rule"
+  ]
+}
