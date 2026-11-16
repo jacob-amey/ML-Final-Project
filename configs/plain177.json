@@ -1,0 +1,22 @@
+{
+  "experiment": "plain177-reference",
+  "hypothesis": "A compact four-stage CNN establishes the full-data randomly initialized reference.",
+  "reference": null,
+  "seed": 434,
+  "device": "auto",
+  "cpu_threads": 4,
+  "input_size": 128,
+  "model": {"architecture": "plain_v1", "channels": [24, 48, 96, 192], "num_classes": 177, "dropout": 0.2},
+  "batch_size": 128,
+  "validation_batch_size": 256,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5.0,
+  "augmentation": "dihedral",
+  "class_weight_power": 0.0,
+  "label_smoothing": 0.0,
+  "max_epochs": 48,
+  "min_epochs": 24,
+  "patience": 10,
+  "early_min_delta": 0.001
+}
