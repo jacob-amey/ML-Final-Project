@@ -70,6 +70,15 @@ def environment(device):
             "source_fingerprint": hashlib.sha256(json.dumps(sources, sort_keys=True).encode()).hexdigest()}
 
 
+def hardware():
+    result = {"platform": platform.platform(), "architecture": platform.machine(),
+              "cpu": platform.processor() or platform.machine()}
+    if platform.system() == "Darwin":
+        result["cpu"] = subprocess.check_output(["sysctl", "-n", "machdep.cpu.brand_string"], text=True).strip()
+        result["physical_memory_bytes"] = int(subprocess.check_output(["sysctl", "-n", "hw.memsize"], text=True))
+    return result
+
+
 def metrics_from_matrix(matrix, classes, loss=None):
     matrix = np.asarray(matrix, dtype=np.int64)
     tp = matrix.diagonal().astype(np.float64)

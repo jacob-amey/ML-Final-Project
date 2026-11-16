@@ -17,6 +17,8 @@ import zipfile
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from leafcheck.common import hardware
 
 
 def digest(path):
@@ -97,6 +99,7 @@ def main():
                         assert error.code == code; error.close()
                     else: raise AssertionError("Invalid/unsupported upload was accepted")
                 evidence = {"archive_sha256":record["sha256"], "checkpoint_sha256":reference["checkpoint_sha256"],
+                            "hardware":hardware(),
                             "fresh_process":True, "working_directory_has_training_data":False, "notebooks_present":False,
                             "manifest_files_verified":len(manifest), "all_four_real_models_ready":True,
                             "python_executable":runtime_python, "startup_ms_including_first_swift_compile":startup_ms,

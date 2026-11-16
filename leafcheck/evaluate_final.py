@@ -9,7 +9,7 @@ import time
 import numpy as np
 import torch
 from PIL import Image
-from .common import ROOT, atomic_json, metrics_from_matrix, sha256, utc_now, write_csv
+from .common import ROOT, atomic_json, environment, hardware, metrics_from_matrix, sha256, utc_now, write_csv
 from .data import PixelCache, build_cache, release
 from .inference import Predictor
 from .train import evaluate
@@ -31,6 +31,7 @@ def main():
         print("This unchanged frozen artifact has already been evaluated. Preserving saved test results.")
         print((directory / "test_metrics.json").read_text()[:400]); return
     predictor = Predictor(directory, freeze["evaluation_device"])
+    atomic_json(directory / "evaluation_environment.json", {**environment(predictor.device), "hardware":hardware()})
     # Test cache construction is intentionally unavailable in the development CLI.
     build_cache("test", predictor.spec["input_size"], frozen)
     test = PixelCache("test", predictor.spec["input_size"], frozen, allow_test=True)
@@ -94,7 +95,7 @@ def main():
     timings = []
     for i in range(48):
         start = time.perf_counter(); measured.predict(samples[i % len(samples)]); timings.append((time.perf_counter() - start) * 1000)
-    atomic_json(directory / "latency.json", {"device": "CPU Apple M2 Max", "torch_threads": torch.get_num_threads(),
+    atomic_json(directory / "latency.json", {"device": "cpu", "hardware": hardware(), "torch_threads": torch.get_num_threads(),
                 "batch_size": 1, "input_size": predictor.spec["input_size"], "warmup_calls": 8, "timed_calls": 48,
                 "includes": "File decode, frame zero, EXIF, RGB, letterbox, scaling/normalization, network and softmax; local file cache warm",
                 "p50_ms": float(np.median(timings)), "p95_ms": float(np.percentile(timings, 95)),

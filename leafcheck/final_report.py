@@ -232,7 +232,7 @@ multiple diseases or provide a definitive diagnosis.
 
 Checkpoint: `{selected['checkpoint_sha256']}`.
 Checkpoint size: {latency['checkpoint_bytes']:,} bytes.
-CPU batch-one inference on an M2 Max with 4 PyTorch threads: median
+CPU batch-one inference on {latency['hardware']['cpu']} with {latency['torch_threads']} PyTorch threads: median
 {latency['p50_ms']:.3f}ms, p95 {latency['p95_ms']:.3f}ms over48 timed calls after 8 warmups,
 cycling four predetermined native test images. This includes decode, EXIF/RGB,
 padding, normalization, network and softmax with warm local file cache; it excludes
