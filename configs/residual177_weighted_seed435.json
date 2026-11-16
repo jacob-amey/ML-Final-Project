@@ -1,0 +1,32 @@
+{
+  "experiment": "residual177-sqrt-class-weights-seed-repeat",
+  "hypothesis": "Check the leading recipe with an independent random initialization, shuffle and augmentation stream; report limited seed stability without using test results.",
+  "reference": "residual177_weighted_long64_seed434; identical training settings and maximum 64-epoch/early-stop budget, changing only seed from 434 to 435; this run starts from new random weights.",
+  "seed": 435,
+  "device": "auto",
+  "cpu_threads": 4,
+  "input_size": 128,
+  "model": {
+    "architecture": "residual_v1",
+    "channels": [
+      24,
+      48,
+      96,
+      192
+    ],
+    "num_classes": 177,
+    "dropout": 0.2
+  },
+  "batch_size": 128,
+  "validation_batch_size": 256,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5.0,
+  "augmentation": "dihedral",
+  "class_weight_power": 0.5,
+  "label_smoothing": 0.0,
+  "max_epochs": 64,
+  "min_epochs": 24,
+  "patience": 10,
+  "early_min_delta": 0.001
+}

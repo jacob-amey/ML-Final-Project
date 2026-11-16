@@ -14,5 +14,9 @@
   "residual177_weighted_seed434": {
     "decision": "Keep; leading matched 48-epoch recipe, duration and seed checks pending",
     "rationale": "Selected epoch 48, validation macro-F1 0.603053 versus 0.595327 unweighted (+0.007727), accuracy 0.874376 versus 0.882989. Mean class F1 for 71 labels with <20 validation images rose from 0.344437 to 0.375945; zero-recall labels in that stratum increased from 13 to 14, so improvement is not universal."
+  },
+  "residual177_weighted_long64_seed434": {
+    "decision": "Keep as current best validation checkpoint; no further duration search",
+    "rationale": "Stopped at 55 cumulative epochs under the unchanged plateau rule, selected epoch 50. Macro-F1 0.603681 versus parent 0.603053 (+0.000628); additional 605.4 seconds. Small observed change, below the 0.005 practical signal; same architecture and inference cost. Fresh-seed check remains pending."
   }
 }

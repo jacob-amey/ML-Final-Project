@@ -167,3 +167,14 @@ independent student implementation.
 - Started `residual177_weighted_long64_seed434` from the exact epoch 49 resume
   state. Its parent remains intact; maximum 64 cumulative epochs, same optimizer,
   scheduler, augmentation, weighting and early-stop policy.
+
+## 2026-11-16 — duration check and independent seed
+
+- The duration check stopped at 55 cumulative epochs after the configured
+  validation plateau. Selected epoch 50: macro-F1 0.603681, accuracy 0.876277,
+  loss 0.529681. Reload verification passed. Additional training cost: 605.4 s;
+  cumulative parent plus continuation: 4,809.4 s. The 0.000628 macro gain is small
+  and below the preregistered 0.005 practical signal; no further duration search.
+- Declared a fresh seed-435 run of the same weighted recipe and maximum
+  64-epoch/early-stop procedure. This is a new initialization and random training
+  stream, not a continuation or pretrained model. Both held-out sets remain sealed.
