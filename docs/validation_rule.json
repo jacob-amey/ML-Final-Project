@@ -1,0 +1,16 @@
+{
+  "rule": {
+    "rule": "Always predict the most frequent training class",
+    "class_index": 78,
+    "class_name": "grape__black_rot",
+    "training_count": 5116,
+    "training_images": 59008,
+    "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c"
+  },
+  "validation": {
+    "correct": 1462,
+    "sample_count": 16836,
+    "accuracy": 0.08683772867664528,
+    "macro_f1": 0.0009028185600229225
+  }
+}

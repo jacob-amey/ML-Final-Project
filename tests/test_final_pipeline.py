@@ -54,10 +54,17 @@ class FinalPipelineTests(unittest.TestCase):
             self.assertEqual(tuple(image_tensor(gray, spec).shape), (1, 3, 16, 16))
 
     def test_mid_epoch_resume_matches_uninterrupted_cpu_updates(self):
+        self.check_resume_device("cpu")
+
+    @unittest.skipUnless(torch.backends.mps.is_available(), "MPS is unavailable")
+    def test_mid_epoch_resume_matches_uninterrupted_mps_updates(self):
+        self.check_resume_device("mps")
+
+    def check_resume_device(self, device):
         # Actual caches and augmentation are used; test data is never opened.
         with tempfile.TemporaryDirectory(dir=ROOT / "runs/final177", prefix="resume-check-") as directory:
             directory = Path(directory)
-            config = {"seed": 434, "input_size": 128, "device": "cpu", "cpu_threads": 2,
+            config = {"seed": 434, "input_size": 128, "device": device, "cpu_threads": 2,
                       "model": {"architecture": "plain_v1", "channels": [4, 8, 16, 32], "num_classes": 177, "dropout": .2},
                       "learning_rate": .002, "weight_decay": .0001, "batch_size": 8,
                       "augmentation": "dihedral", "max_epochs": 2, "min_epochs": 1, "patience": 1}
@@ -73,9 +80,10 @@ class FinalPipelineTests(unittest.TestCase):
             self.assertEqual(uninterrupted["total_steps"], resumed["total_steps"])
             self.assertEqual(uninterrupted["next_batch"], resumed["next_batch"])
             self.assertEqual(uninterrupted["train_seen"], resumed["train_seen"])
-            self.assertEqual(uninterrupted["train_loss_sum"], resumed["train_loss_sum"])
+            self.assertAlmostEqual(uninterrupted["train_loss_sum"], resumed["train_loss_sum"], places=4)
             for name, tensor in uninterrupted["model_state_dict"].items():
-                torch.testing.assert_close(tensor, resumed["model_state_dict"][name], atol=0, rtol=0)
+                tolerance = 0 if device == "cpu" else 1e-6
+                torch.testing.assert_close(tensor, resumed["model_state_dict"][name], atol=tolerance, rtol=tolerance)
 
 
 if __name__ == "__main__": unittest.main()

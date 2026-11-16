@@ -7,7 +7,7 @@ understand the data, models, evaluation, and demonstration.
 
 | Member | Primary responsibilities |
 | --- | --- |
-| Jacob Amey (user-stated role) | Dataset, custom CNN, training, evaluation and integration handoff |
+| Model/dataset team member (user) | Dataset, custom CNN, training, evaluation and integration handoff |
 | Project partner (name not supplied) | Frontend/application/interface, as described by the user |
 | Codex assistance | Dataset preparation and final execution/verification explicitly delegated in this conversation; work is identified in the log |
 
