@@ -178,3 +178,11 @@ independent student implementation.
 - Declared a fresh seed-435 run of the same weighted recipe and maximum
   64-epoch/early-stop procedure. This is a new initialization and random training
   stream, not a continuation or pretrained model. Both held-out sets remain sealed.
+
+- Installed only the app's two declared top-level dependencies in a separate
+  environment from the official PyPI registry (11 installed runtime distributions
+  plus pip). Verified the three historical real models and the completed
+  177-output development checkpoint can predict with NumPy, torchvision, pandas,
+  matplotlib and notebook libraries absent. Top-five development scores matched
+  the research runtime exactly on a software fixture; final all-score API parity
+  and packaged-archive checks remain pending the frozen selected artifact.

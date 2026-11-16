@@ -31,6 +31,9 @@ def package(run, destination, rationale):
         shutil.copyfile(ROOT / "requirements-lock.txt", destination / "requirements-training-lock.txt")
     env = json.loads((run / "environment.json").read_text())
     (destination / "requirements-runtime.txt").write_text(f"torch=={env['torch']}\nPillow=={env['pillow']}\n")
+    runtime_lock = ROOT / "leafcheck-demo/requirements-lock.txt"
+    if runtime_lock.exists():
+        shutil.copyfile(runtime_lock, destination / "requirements-runtime-lock.txt")
     (destination / "README.md").write_text(
         "# Frozen LeafCheck model bundle\n\n"
         "The checkpoint, configuration, preprocessing and class order are paired. "

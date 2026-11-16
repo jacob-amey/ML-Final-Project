@@ -23,7 +23,7 @@ def main():
     from final_model import FinalCNN
     final = FinalCNN()  # Refuses missing, inconsistent or unevaluated releases.
     reference = json.loads((DEMO / "models/final_model.json").read_text())
-    files = [DEMO / name for name in ["Launch LeafCheck.command", "README.md", "requirements.txt"]]
+    files = [DEMO / name for name in ["Launch LeafCheck.command", "README.md", "requirements.txt", "requirements-lock.txt"]]
     for folder in ["backend", "web"]:
         files.extend(path for path in (DEMO / folder).rglob("*") if path.is_file()
                      and "__pycache__" not in path.parts and not path.name.startswith("."))

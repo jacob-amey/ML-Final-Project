@@ -75,6 +75,12 @@ Tools are needed to compile the small Swift helper on its first launch. If missi
 install them with `xcode-select --install`. The compiled helper is reused in
 `.runtime/`. These setup steps can need internet; normal app use does not.
 
+`requirements-lock.txt` records the tested small app environment and its transitive
+dependencies. NumPy, torchvision, notebooks and plotting libraries are not needed
+to run predictions. In an environment without NumPy, PyTorch may print that its
+optional NumPy bridge is unavailable; the app uses a different input path and
+its live predictions were verified without that package.
+
 ## Run from a terminal
 
 From the original `ML-Final-Project` folder:

@@ -1,5 +1,6 @@
 """Extract the delivery archive and rehearse a fresh, dataset-free real process."""
 
+import argparse
 import hashlib
 import json
 import os
@@ -26,6 +27,9 @@ def digest(path):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--python",type=Path,default=Path(sys.executable),help="Compatible app-only Python interpreter for the extracted server")
+    runtime_python = str(parser.parse_args().python.resolve())
     archive = ROOT / "artifacts/LeafCheck-final-demo.zip"
     record = json.loads((ROOT / "docs/demo_archive.json").read_text())
     assert digest(archive) == record["sha256"]
@@ -49,7 +53,7 @@ def main():
         log = directory / "server.log"
         with log.open("w") as output:
             launched = time.perf_counter()
-            process = subprocess.Popen([sys.executable, str(demo / "backend/server.py"), "--port", "0"],
+            process = subprocess.Popen([runtime_python, str(demo / "backend/server.py"), "--port", "0"],
                                        cwd=demo, stdout=output, stderr=subprocess.STDOUT, env=environment)
             try:
                 address = None
@@ -95,7 +99,7 @@ def main():
                 evidence = {"archive_sha256":record["sha256"], "checkpoint_sha256":reference["checkpoint_sha256"],
                             "fresh_process":True, "working_directory_has_training_data":False, "notebooks_present":False,
                             "manifest_files_verified":len(manifest), "all_four_real_models_ready":True,
-                            "python_executable":sys.executable, "startup_ms_including_first_swift_compile":startup_ms,
+                            "python_executable":runtime_python, "startup_ms_including_first_swift_compile":startup_ms,
                             "http_latency":{"warmup_requests":2,"timed_requests":len(measurements),
                                             "p50_ms":float(np.median(measurements)), "p95_ms":float(np.percentile(measurements,95)),
                                             "measurements_ms":measurements,
