@@ -198,11 +198,11 @@ independent student implementation.
   A stability repeat is conditional on meaningful validation benefit. No open-ended
   architecture/resolution grid or test-driven tuning is introduced.
 
-- Confirmed seed435 completed64 full epochs, selected63: validation macro-F1
-  0.598316, accuracy0.874258, loss0.534610; runtime5,214.1seconds. Reload verified.
+- Confirmed seed 435 completed64 full epochs, selected63: validation macro-F1
+  0.598316, accuracy 0.874258, loss 0.534610; runtime 5,214.1 seconds. Reload verified.
   Its status records completion at 2026-11-16T07:47:14.470996+00:00; completed status was observed
-  at 2026-11-16T12:52:04.203999+00:00. The two128-pixel seeds span 0.005365 macro-F1.
-- Declared the resolution acceptance rule before160 validation: a seed434 gain
-  of at least0.005365 triggers a160-pixel seed435 repeat; select160 only
-  if the two-seed mean gain reaches0.005, otherwise retain128 for lower compute.
+  at 2026-11-16T12:52:04.203999+00:00. The two 128-pixel seeds span 0.005365 macro-F1.
+- Declared the resolution acceptance rule before 160 validation: a seed 434 gain
+  of at least 0.005365 triggers a160-pixel seed 435 repeat; select 160 only
+  if the two-seed mean gain reaches 0.005, otherwise retain 128 for lower compute.
   Checkpoint selection within the accepted recipe keeps the original F1/loss rule.

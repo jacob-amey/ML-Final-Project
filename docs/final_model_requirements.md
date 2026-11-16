@@ -81,3 +81,15 @@ Official API references checked during implementation:
 [MPS RNG/state APIs](https://docs.pytorch.org/docs/main/mps.html),
 [cross-entropy](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html),
 [AdamW](https://docs.pytorch.org/docs/stable/generated/torch.optim.AdamW.html).
+
+## Resolution protocol amendment before held-out evaluation
+
+On November 16 the user confirmed no hard deadline and prioritized a defensible
+result. `final_selection_plan.json` records one additional 160-pixel check, with
+architecture, data, seed, weighting and training settings fixed. The observed
+128-pixel seed range is 0.005365 macro-F1. A seed-434 gain at least that large
+triggers a 160-pixel seed-435 repeat. Accept 160 only if its two-seed mean gain
+over 128 is at least 0.005; otherwise prefer 128's lower compute cost. This
+acceptance rule was declared before any 160-pixel validation results. Checkpoint
+F1/loss selection stays unchanged. This is a practical effect-size rule, not a
+claim of statistical significance.

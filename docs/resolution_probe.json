@@ -1,0 +1,16 @@
+{
+  "updates": 100,
+  "training_images_visited": 12800,
+  "training_seconds": 27.87711520800076,
+  "seconds_per_update_including_warmup_and_checkpoint": 0.2787711520800076,
+  "extrapolated_training_part_seconds_per_epoch": 128.5135011088835,
+  "conditions": "Actual 160-pixel batch128 weighted training pipeline; includes finite/gradient checks, batch fetch/preprocessing, optimizer, metrics and checkpoints; excludes initial process/cache validation and full validation pass. First100 updates retained for exact resume.",
+  "hardware": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "Apple M2 Max",
+    "physical_memory_bytes": 34359738368
+  },
+  "recorded_utc": "2026-11-16T12:56:11.438780+00:00",
+  "decision": "Practical; resumed the exact 100-update state into full-data training with the declared 64-epoch/early-stop budget."
+}
