@@ -25,6 +25,9 @@ def prepare(parent, output, max_epochs):
                    "max_epochs": max_epochs})
     best = torch.load(parent / "best_model.pt", map_location="cpu", weights_only=True)
     last["config"] = config
+    # The parent's last update checkpoint precedes its final reload verification.
+    # Include that completed procedure cost when reporting cumulative runtime.
+    last["training_seconds"] = status["training_seconds"]
     best["config"] = config  # Procedure metadata changes; the parent tensors remain untouched.
     output.mkdir(parents=True, exist_ok=False)
     for name in ["dataset.json", "preprocessing.json", "class_to_idx.json", "class_weights.json", "history.csv", "validation_metrics.json", "validation_predictions.csv"]:
@@ -40,6 +43,7 @@ def prepare(parent, output, max_epochs):
                "parent_best_sha256":sha256(parent / "best_model.pt"),"parent_last_sha256":sha256(parent / "last.pt"),
                "parent_training_seconds":status["training_seconds"],"continuation_epoch":last["epoch"],
                "changed_training_settings":["max_epochs"],"all_parent_model_optimizer_scheduler_rng_tensors_preserved":True}
+    lineage["timing_metadata_includes_parent_completion_verification"] = True
     atomic_json(output / "lineage.json", lineage)
     atomic_json(output / "status.json", {"state":"ready_to_resume", "parent_run":parent.name})
     print(f"Prepared {output}. Resume it with python -m leafcheck.train --run {output} --resume", flush=True)
