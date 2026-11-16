@@ -1,0 +1,27 @@
+{
+  "version": "leafcheck177_plantdoc_supplement-v1",
+  "manifest_sha256": "61a4211e7705eef88b2cbd50985a9d247f1e03100cf0f94214e02dbb63810fc2",
+  "review_sha256": "daa7fdd885e934d7ce2d0bdcbe9487602f8e8b013fee2cb7e8e242747a113f19",
+  "original_images": 240,
+  "included_images": 183,
+  "class_counts": {
+    "tomato__healthy": 54,
+    "tomato__early_blight": 50,
+    "tomato__late_blight": 79
+  },
+  "model_predictions_computed_before_selection": false,
+  "purpose": "Supplementary three-tomato-class evaluation after final model selection; all 177 output logits remain eligible for prediction.",
+  "source_revision": "5467f6012d78d1c446145d5f582da6096f852ae8",
+  "overlap_screen": "All master byte hashes, decoded rotation/flip hashes, available prior groups and rotation/flip-aware pHash<=3 candidates with visual review; no detected overlap remains.",
+  "limitations": [
+    "Same broad PlantDoc source is represented elsewhere in the master; not an unseen-source benchmark.",
+    "Heavy crops and undocumented related plants may evade screening.",
+    "Source labels inherited; generic Tomato leaf annotation is used as a healthy proxy, without independent diagnosis."
+  ],
+  "conditional_rule": {
+    "rule": "Most frequent training class among these three labels",
+    "class_name": "tomato__late_blight",
+    "training_count": 1450
+  },
+  "freeze_created_utc": "2026-11-16T03:55:01.777445+00:00"
+}

@@ -22,6 +22,10 @@ def package(run, destination, rationale):
     shutil.copyfile(run / "best_model.pt", destination / "model.pt")
     for name in ["config.json", "environment.json", "class_to_idx.json", "preprocessing.json", "validation_metrics.json", "history.csv", "status.json"]:
         shutil.copyfile(run / name, destination / name)
+    external_protocol = ROOT / "data/manifests/leafcheck177_external_frozen.json"
+    if external_protocol.exists():
+        shutil.copyfile(external_protocol, destination / "external_protocol.json")
+        shutil.copyfile(ROOT / "data/manifests/leafcheck177_external.csv", destination / "external_manifest.csv")
     runtime = destination / "runtime/leafcheck"; runtime.mkdir(parents=True)
     for name in ["__init__.py", "model.py", "preprocessing.py", "inference.py"]:
         shutil.copyfile(ROOT / "leafcheck" / name, runtime / name)
@@ -32,6 +36,9 @@ def package(run, destination, rationale):
               "selection": checkpoint["selection"], "validation_macro_f1": checkpoint["validation"]["macro_f1"],
               "rationale": rationale, "confidence_policy": "Display softmax scores; no calibrated confidence or unknown-input threshold",
               "evaluation_device": "cpu", "evaluation_batch_size": 128, "test_predictions_used_in_selection": False}
+    if external_protocol.exists():
+        freeze["external_protocol_sha256"] = sha256(destination / "external_protocol.json")
+        freeze["external_manifest_sha256"] = sha256(destination / "external_manifest.csv")
     atomic_json(destination / "freeze.json", freeze)
     atomic_json(destination / "artifact.json", {**freeze, "files": {
         str(p.relative_to(destination)): sha256(p) for p in sorted(destination.rglob("*")) if p.is_file()}})

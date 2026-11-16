@@ -53,6 +53,8 @@ class Predictor:
             self.metadata["test"] = json.loads(evaluation.read_text()); self.metadata["test_images"] = 8425
         baseline = self.directory / "baseline_metrics.json"
         if baseline.exists(): self.metadata["baseline"] = json.loads(baseline.read_text())
+        external = self.directory / "external_metrics.json"
+        if external.exists(): self.metadata["external"] = json.loads(external.read_text())
 
     @torch.inference_mode()
     def logits(self, path):
