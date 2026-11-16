@@ -19,7 +19,14 @@ def main():
     assert sha256(directory / "external_protocol.json") == freeze["external_protocol_sha256"]
     assert sha256(directory / "external_manifest.csv") == freeze["external_manifest_sha256"]
     if (directory / "external_metrics.json").exists():
-        print("Supplement already evaluated; preserve its saved results."); return
+        saved = json.loads((directory / "external_metrics.json").read_text())
+        assert saved["checkpoint_sha256"] == freeze["checkpoint_sha256"]
+        artifact = json.loads((directory / "artifact.json").read_text())
+        artifact["supplementary_evaluation_complete"] = True
+        artifact["files"] = {str(p.relative_to(directory)): sha256(p) for p in sorted(directory.rglob("*"))
+                             if p.is_file() and p.name != "artifact.json" and "__pycache__" not in p.parts}
+        atomic_json(directory / "artifact.json", artifact)
+        print("Supplement already evaluated; preserved its saved results and verified the bundle record."); return
     protocol = json.loads((directory / "external_protocol.json").read_text())
     rows = [row for row in csv.DictReader((directory / "external_manifest.csv").open()) if row["status"] == "included"]
     assert len(rows) == protocol["included_images"] == 183

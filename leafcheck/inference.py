@@ -46,7 +46,7 @@ class Predictor:
                          "selected_epoch": checkpoint["epoch"], "train_images": 59008, "validation_images": 16836,
                          "preprocessing": self.spec, "selection": checkpoint["selection"],
                          "validation": checkpoint["validation"], "checkpoint_sha256": file_hash(self.path),
-                         "comparison_note": "Earlier pilots have different label spaces/splits; Create ML exposure is not established. Only the declared rule shares this final held-out protocol.",
+                         "comparison_note": "Earlier pilots have different label spaces/splits. Create ML's declared training/validation data overlaps this new holdout. Only the declared rule shares the final held-out protocol.",
                          "limitations": "Source annotations; rare classes; missing specimen IDs; unknown-input and field-photo performance not guaranteed."}
         evaluation = self.directory / "test_metrics.json"
         if evaluation.exists():

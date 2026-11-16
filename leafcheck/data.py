@@ -49,7 +49,9 @@ def build_cache(split, size, frozen, workers=6):
     started = time.perf_counter()
 
     def prepare(row):
-        return image_bytes(DATA / row["output_relative_path"], size)
+        path = DATA / row["output_relative_path"]
+        assert sha256(path) == row["sha256"], "An image changed after the release audit"
+        return image_bytes(path, size)
 
     with ThreadPoolExecutor(max_workers=workers) as pool:
         for index, pixels in enumerate(pool.map(prepare, rows)):
@@ -71,7 +73,10 @@ class PixelCache:
         directory = cache_path(size, frozen["fingerprint"])
         self.metadata = json.loads((directory / f"{split}.json").read_text())
         assert self.metadata["dataset_fingerprint"] == frozen["fingerprint"]
+        assert self.metadata["preprocessing_version"] == PREPROCESSING_VERSION
+        assert sha256(directory / f"{split}.npy") == self.metadata["pixels_sha256"], "Pixel cache integrity check failed"
         self.pixels = np.load(directory / f"{split}.npy", mmap_mode="r")
+        assert self.pixels.dtype == np.uint8 and self.pixels.shape == (self.metadata["count"], size, size, 3)
         self.rows = self.metadata["rows"]
         self.labels = np.asarray([int(row["class_id"]) for row in self.rows], dtype=np.int64)
         assert len(self.pixels) == len(self.labels)

@@ -32,6 +32,9 @@ class FinalCNN:
             if not artifact.is_relative_to((demo / "models").resolve()):
                 raise ValueError("Invalid final-model artifact reference")
         manifest = json.loads((artifact / "artifact.json").read_text())
+        if not explicit and (manifest["checkpoint_sha256"] != record["checkpoint_sha256"]
+                             or manifest["model_version"] != record["model_version"]):
+            raise ValueError("The final-model reference does not identify this bundle")
         if not manifest.get("final_evaluation_complete"):
             raise ValueError("Final model has no completed frozen evaluation")
         if manifest.get("external_protocol_sha256") and not manifest.get("supplementary_evaluation_complete"):

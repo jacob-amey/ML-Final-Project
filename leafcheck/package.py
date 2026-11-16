@@ -1,11 +1,12 @@
 """Freeze an explicitly selected completed run before its one final evaluation."""
 
 import argparse
+import csv
 import json
 from pathlib import Path
 import shutil
 import torch
-from .common import ROOT, atomic_json, sha256, utc_now
+from .common import ROOT, DATA, atomic_json, sha256, utc_now
 from .data import release
 
 
@@ -22,6 +23,20 @@ def package(run, destination, rationale):
     shutil.copyfile(run / "best_model.pt", destination / "model.pt")
     for name in ["config.json", "environment.json", "class_to_idx.json", "preprocessing.json", "validation_metrics.json", "history.csv", "status.json"]:
         shutil.copyfile(run / name, destination / name)
+    if (ROOT / "requirements-lock.txt").exists():
+        shutil.copyfile(ROOT / "requirements-lock.txt", destination / "requirements-training-lock.txt")
+    env = json.loads((run / "environment.json").read_text())
+    (destination / "requirements-runtime.txt").write_text(f"torch=={env['torch']}\nPillow=={env['pillow']}\n")
+    (destination / "README.md").write_text(
+        "# Frozen LeafCheck model bundle\n\n"
+        "The checkpoint, configuration, preprocessing and class order are paired. "
+        "Use the included runtime/leafcheck package for inference; no notebooks or dataset are needed.\n\n"
+        "Install requirements-runtime.txt in a compatible Python environment. "
+        "Add this bundle's runtime directory to PYTHONPATH and run "
+        "python -m leafcheck.inference --artifact /absolute/bundle/path /absolute/photo.jpg.\n\n"
+        "The app installer validates artifact.json and creates an explicit model reference. "
+        "freeze.json records selection before evaluation. Saved scores apply only to their declared datasets. "
+        "Softmax scores are not calibrated correctness probabilities or definitive diagnoses.\n")
     external_protocol = ROOT / "data/manifests/leafcheck177_external_frozen.json"
     if external_protocol.exists():
         shutil.copyfile(external_protocol, destination / "external_protocol.json")
@@ -29,6 +44,19 @@ def package(run, destination, rationale):
     runtime = destination / "runtime/leafcheck"; runtime.mkdir(parents=True)
     for name in ["__init__.py", "model.py", "preprocessing.py", "inference.py"]:
         shutil.copyfile(ROOT / "leafcheck" / name, runtime / name)
+    # A training photo is a software-format fixture, never evaluation evidence.
+    with (DATA / "manifest.csv").open() as file:
+        candidates = [row for row in csv.DictReader(file) if row["status"] == "included" and row["split"] == "train"
+                      and row["format"] == "MPO" and int(row["width"]) * int(row["height"]) <= 24000000
+                      and (DATA / row["output_relative_path"]).stat().st_size < 10 * 1024 * 1024]
+    if candidates:
+        row = min(candidates, key=lambda row:(DATA / row["output_relative_path"]).stat().st_size)
+        samples = destination / "samples"; samples.mkdir(exist_ok=True)
+        target = samples / "format_mpo.jpg"; shutil.copyfile(DATA / row["output_relative_path"], target)
+        assert sha256(target) == row["sha256"]
+        atomic_json(destination / "integration_fixtures.json", [{"sample_file": "samples/format_mpo.jpg",
+                    "source_image_id": row["image_id"], "source_split": "train", "frames": int(row["frames"]),
+                    "purpose": "First-frame MPO/JPEG software compatibility only; not a scored evaluation example."}])
     freeze = {"model_version": "leafcheck177-v1", "created_utc": utc_now(), "run": str(run.resolve()),
               "checkpoint_sha256": sha256(destination / "model.pt"), "dataset_fingerprint": frozen["fingerprint"],
               "config_sha256": sha256(destination / "config.json"), "preprocessing_sha256": sha256(destination / "preprocessing.json"),

@@ -6,10 +6,10 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from PIL import Image
+from PIL import Image, ImageOps
 import numpy as np
 import torch
-from leafcheck.common import ROOT, better, metrics_from_matrix
+from leafcheck.common import ROOT, better, metrics_from_matrix, sha256
 from leafcheck.model import LeafCNN
 from leafcheck.preprocessing import PREPROCESSING_VERSION, image_bytes, image_tensor
 
@@ -42,9 +42,14 @@ class FinalPipelineTests(unittest.TestCase):
     def test_orientation_rgb_padding_and_scaling_share_one_contract(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "oriented.png"
-            image = Image.new("RGB", (5, 9), (20, 80, 140)); exif = Image.Exif(); exif[274] = 6
+            image = Image.new("RGB", (5, 9), (20, 80, 140))
+            image.putpixel((0, 0), (250, 10, 20)); image.putpixel((1, 1), (10, 250, 20))
+            exif = Image.Exif(); exif[274] = 6
             image.save(path, exif=exif)
             pixels = np.frombuffer(image_bytes(path, 16), np.uint8).reshape(16, 16, 3)
+            independently_rotated = ImageOps.pad(image.transpose(Image.Transpose.ROTATE_270), (16, 16),
+                                                 method=Image.Resampling.BILINEAR, color=(128, 128, 128))
+            np.testing.assert_array_equal(pixels, np.asarray(independently_rotated))
             self.assertTrue(np.array_equal(pixels[0, 0], [128, 128, 128]))
             self.assertTrue(np.array_equal(pixels[8, 8], [20, 80, 140]))
             spec = {"version": PREPROCESSING_VERSION, "input_size": 16, "mean": [0, 0, 0], "std": [1, 1, 1]}
@@ -55,6 +60,23 @@ class FinalPipelineTests(unittest.TestCase):
 
     def test_mid_epoch_resume_matches_uninterrupted_cpu_updates(self):
         self.check_resume_device("cpu")
+
+    def test_modified_pixel_cache_is_rejected_before_training(self):
+        from unittest.mock import patch
+        from leafcheck.data import PixelCache
+        with tempfile.TemporaryDirectory() as directory:
+            directory = Path(directory); path = directory / "train.npy"
+            np.save(path, np.zeros((2, 8, 8, 3), np.uint8))
+            frozen = {"fingerprint": "test-release", "classes": [f"class_{i}" for i in range(177)]}
+            metadata = {"dataset_fingerprint": frozen["fingerprint"], "preprocessing_version": PREPROCESSING_VERSION,
+                        "pixels_sha256": sha256(path), "count": 2,
+                        "rows": [{"class_id": str(i), "class_name": f"class_{i}"} for i in range(2)]}
+            (directory / "train.json").write_text(json.dumps(metadata))
+            with patch("leafcheck.data.cache_path", return_value=directory):
+                self.assertEqual(len(PixelCache("train", 8, frozen)), 2)
+                pixels = np.load(path, mmap_mode="r+"); pixels[0, 0, 0, 0] = 1; pixels.flush(); del pixels
+                with self.assertRaisesRegex(AssertionError, "integrity"):
+                    PixelCache("train", 8, frozen)
 
     @unittest.skipUnless(torch.backends.mps.is_available(), "MPS is unavailable")
     def test_mid_epoch_resume_matches_uninterrupted_mps_updates(self):
