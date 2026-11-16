@@ -70,3 +70,25 @@ independent student implementation.
   sealed from model selection until the final configuration is frozen.
 - CPU and MPS resume checks passed. Added carried partial-epoch timing so resume
   does not under-report the first resumed epoch's runtime; optimization is unchanged.
+
+## 2026-11-15 — source checkout and software safeguards
+
+- Found that the app's parent gitlink had neither `.gitmodules` configuration nor
+  a nested remote. A normal parent checkout would omit all website source.
+- Preserved pre-existing work in nested `22e454f`, new integration in `a8d2eef`,
+  verified a Git history bundle, and retained original Git metadata under the
+  parent's `.git/leafcheck-demo-history`. The existing uncommitted hosting-file
+  deletion remained intact in that archived metadata/worktree record.
+- Consolidated app files into ordinary parent-repository source without changing
+  their working contents. Original model binaries remain ignored.
+- Seven pipeline tests passed, including pixel-cache tamper rejection and CPU/MPS
+  resume. Added source/checksum checks when building or loading image caches.
+- Eight legacy/API checks passed against the four-adapter server with the final
+  model explicitly unavailable; earlier real models continued predicting.
+- Added app revision detection so a launcher does not silently reopen an older
+  already-running process after code/model-reference updates.
+- Standalone inference on the completed reference's validation images matched
+  cached batch inference: maximum logit difference 2.29e-5, 177 aligned classes.
+- A 100-update concurrent probe of the weighted experiment took 43.84 seconds
+  including startup. No throughput advantage was demonstrated; full jobs remain
+  sequential. Its partial checkpoint is queued for complete resumable training.

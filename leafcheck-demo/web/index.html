@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f1">
+  <meta name="description" content="Compare the final custom CNN with earlier LeafCheck models locally on your Mac.">
+  <title>LeafCheck — Local model lab</title>
+  <link rel="icon" href="assets/leaf.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="leaf" viewBox="0 0 24 24"><path d="M20 4C21 16 14 20 9 17 3 13 8 5 20 4Z"/><path d="m4 21 12-12"/></symbol>
+    <symbol id="upload" viewBox="0 0 24 24"><path d="M12 16V4m-4 4 4-4 4 4M4 15v5h16v-5"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-5-5 5 5-5 5"/></symbol>
+    <symbol id="download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4h16v-4"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="computer" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></symbol>
+  </svg>
+
+  <header class="app-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="LeafCheck home"><span class="brand-icon"><svg><use href="#leaf"/></svg></span>LeafCheck<span class="app-label">LOCAL MODEL LAB</span></a>
+      <div class="header-actions"><button class="quiet-button" id="model-details-button">Model details</button><button class="quiet-button" id="help-button">How to use</button></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">YOUR MODELS. YOUR MAC.</p><h1 id="page-title">One image. Four models.</h1><p class="intro-copy">Try the final 177-class custom CNN alongside two earlier CNN pilots and Apple Create ML.</p></div>
+      <div class="connection-group"><span class="connection-badge" id="connection-status" role="status"><span class="status-dot"></span><span id="connection-text">Connecting to local models…</span></span><button class="quiet-button retry-button" id="retry-button" hidden>Retry connection</button></div>
+    </section>
+
+    <div class="app-message" id="app-message" role="status" hidden></div>
+
+    <section class="workspace" aria-label="Leaf classification workspace">
+      <aside class="upload-panel panel" aria-labelledby="upload-title">
+        <div class="panel-title"><h2 id="upload-title">1. Choose a photo</h2><button class="quiet-button small" id="reset-button">Clear</button></div>
+        <input id="file-input" type="file" accept="image/jpeg,image/png" hidden>
+        <div class="drop-zone" id="drop-zone" role="button" tabindex="0" aria-label="Choose or drop a leaf photo">
+          <div class="upload-empty" id="upload-empty"><span class="upload-icon"><svg><use href="#upload"/></svg></span><strong>Drop your leaf photo</strong><span>or click to choose a file</span><small>JPEG or PNG · Up to 10 MB</small></div>
+          <img id="image-preview" alt="Your selected leaf photograph" hidden>
+          <span class="image-badge" id="image-badge" hidden>YOUR PHOTO</span>
+          <div class="drop-overlay">Drop photo here</div>
+        </div>
+        <div class="file-summary"><strong id="file-name">No photo selected</strong><span id="file-description">A clear photo of a single leaf works best.</span></div>
+        <button class="secondary-button full-width" id="choose-button"><svg><use href="#upload"/></svg>Choose photo</button>
+        <button class="primary-button full-width" id="compare-button" disabled><span id="compare-label">Run comparison</span><svg><use href="#arrow"/></svg></button>
+        <p class="upload-note">The same photo is sent to all four local models.</p>
+
+        <div class="examples"><h3>Or try an example</h3><div class="example-grid" id="examples"></div><p id="example-note">Earlier pilot examples. The final CNN may have seen these images during training. Each comparison runs fresh.</p></div>
+        <div class="local-note"><svg><use href="#computer"/></svg><span>Processed on this Mac.<br>Uploaded photos are removed after prediction.</span></div>
+      </aside>
+
+      <section class="results-panel" aria-labelledby="results-title">
+        <div class="results-toolbar"><div><h2 id="results-title">2. Compare predictions</h2><p id="results-context">Choose a photo, then run the comparison.</p></div><button class="secondary-button export-button" id="export-button" disabled><svg><use href="#download"/></svg>Export results</button></div>
+        <div class="model-grid" id="model-grid"></div>
+        <div class="comparison-summary" id="comparison-summary" role="status"><span class="summary-symbol">i</span><div><strong>Read each model in context</strong><p>The final CNN and Create ML cover 177 labels. The earlier pilots cover three tomato conditions.</p></div></div>
+        <section class="final-evaluation panel" aria-labelledby="final-score-title"><h3 id="final-score-title">Final model and simple rule</h3><div id="final-score">Loading the saved evaluation…</div></section>
+        <p class="interpretation">Research prototype, not a definitive plant diagnosis. Model scores describe each model’s output. They are not a guarantee of accuracy or a direct ranking of the models.</p>
+      </section>
+    </section>
+
+    <footer><span><span class="footer-dot"></span>Runs entirely on your Mac</span><span>Keep the launcher window open while using LeafCheck.</span><button class="quiet-button small" id="footer-help">Help with the local app</button></footer>
+  </main>
+
+  <template id="model-card-template">
+    <article class="model-card panel">
+      <div class="model-topline"><span class="model-letter"></span><span class="model-kicker"></span></div>
+      <h3 class="model-name"></h3><p class="model-description"></p>
+      <div class="model-meta"><span class="class-count"></span><span class="model-ready">Checking…</span></div>
+      <div class="model-result" aria-live="polite"></div>
+      <div class="model-footer"><span class="model-time">Not run yet</span><button class="quiet-button small details-link" type="button">Details</button></div>
+    </article>
+  </template>
+
+  <dialog id="details-dialog" aria-labelledby="details-title"><div class="dialog-heading"><div><p class="eyebrow">MODEL INFORMATION</p><h2 id="details-title">Your saved models</h2></div><button class="icon-button" data-close aria-label="Close model details"><svg><use href="#close"/></svg></button></div><div id="model-details"></div><p class="dialog-note">The earlier pilots have different label spaces and splits. Create ML has training exposure to much of the new test set. Only the final CNN and simple rule share the reported frozen 177-class test protocol. The app does not train models or rerun held-out test evaluation.</p></dialog>
+
+  <dialog id="help-dialog" aria-labelledby="help-title"><div class="dialog-heading"><div><p class="eyebrow">GETTING STARTED</p><h2 id="help-title">A local app, start to finish.</h2></div><button class="icon-button" data-close aria-label="Close help"><svg><use href="#close"/></svg></button></div><ol class="help-steps"><li><strong>Start LeafCheck</strong><p>Double-click <code>Launch LeafCheck.command</code> in the app folder. It opens LeafCheck in your usual browser. Leave the terminal window open.</p></li><li><strong>Pick a leaf photo</strong><p>Choose a JPEG or PNG photo, drag one onto the upload area, or select an example.</p></li><li><strong>Run the comparison</strong><p>All four saved models process the photo on your Mac. Read their predictions and scores, or export the results as a JSON file.</p></li><li><strong>Stop when you’re finished</strong><p>Go to the launcher’s terminal window and press Control-C. Restart by double-clicking the launcher again.</p></li></ol><p class="dialog-note">No account or internet connection is needed during use. If the connection is lost, restart the launcher and choose “Retry connection.”</p></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <noscript><p class="app-message">Enable JavaScript in your browser to upload photos and display model predictions.</p></noscript>
+</body>
+</html>

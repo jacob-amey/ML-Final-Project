@@ -1,0 +1,12 @@
+{
+  "reason": "Replace an unconfigured gitlink so a parent checkout contains the actual demo source. No app working files were changed by consolidation.",
+  "original_parent_gitlink": "1d17fb880da1c5c48ffcfb5fa50511c7c4981265",
+  "preserved_nested_head": "a8d2eefffd04e2fcd2491d3f7654c3bf4a25f1b3",
+  "prior_migration_commit": "22e454f",
+  "final_integration_commit": "a8d2eef",
+  "archived_git_metadata": ".git/leafcheck-demo-history",
+  "history_bundle": "artifacts/leafcheck-demo-history.bundle",
+  "history_bundle_sha256": "13da240a8aa25423f913ba8e74cd7d348e9c4c096dfb9f8260233ebe98aecdd1",
+  "preexisting_uncommitted_status_preserved": "D .openai/hosting.json",
+  "nested_remote_was_configured": false
+}

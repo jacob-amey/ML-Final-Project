@@ -7,8 +7,12 @@ convolutions, automatic gradients and optimization; no pretrained weights are
 used in the final CNN.
 
 The current task branch is `codex/final-leafcheck177`. The comparison app in
-`leafcheck-demo/` has its own Git repository. Its pre-existing local migration was
-preserved separately before final-model changes. Datasets, checkpoints, caches,
+`leafcheck-demo/` is tracked as ordinary source in this repository. It began as
+an unconfigured gitlink with no remote; its earlier separate history and local
+changes were preserved before consolidation. See `docs/repository_history.json`
+and `artifacts/leafcheck-demo-history.bundle` for the recoverable original history.
+The original metadata is retained under `.git/leafcheck-demo-history`; use the
+parent repository for new commits. Datasets, checkpoints, caches,
 local bundles and archives follow `.gitignore`; they are not large Git binaries.
 
 ## Status and evidence
@@ -31,6 +35,8 @@ Use the existing project `.venv` where possible. The verified environment is
 Python 3.14.7, PyTorch 2.15.0, torchvision 0.29.2, Pillow 13.0.0 and Apple MPS.
 Training also uses NumPy; figures use matplotlib. Exact run environments and
 source fingerprints are recorded in each run directory.
+`requirements-lock.txt` records the exact 108 installed package versions used on
+this Mac; it does not recreate macOS or its accelerator driver.
 
 From this project folder:
 

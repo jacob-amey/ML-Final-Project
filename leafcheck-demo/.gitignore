@@ -1,0 +1,9 @@
+.runtime/
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+models/
+/web/assets/final_examples.json
+/web/assets/final_success.*
+/web/assets/final_mistake.*
