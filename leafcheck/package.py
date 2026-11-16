@@ -21,8 +21,9 @@ def package(run, destination, rationale):
         raise FileExistsError("A frozen artifact already exists. Preserve it; use a new version before any new test protocol.")
     destination.mkdir(parents=True)
     shutil.copyfile(run / "best_model.pt", destination / "model.pt")
-    for name in ["config.json", "environment.json", "class_to_idx.json", "preprocessing.json", "validation_metrics.json", "history.csv", "status.json"]:
+    for name in ["config.json", "environment.json", "dataset.json", "class_to_idx.json", "class_weights.json", "preprocessing.json", "validation_metrics.json", "history.csv", "status.json"]:
         shutil.copyfile(run / name, destination / name)
+    shutil.copyfile(DATA / "dataset_info.json", destination / "dataset_release_info.json")
     if (ROOT / "requirements-lock.txt").exists():
         shutil.copyfile(ROOT / "requirements-lock.txt", destination / "requirements-training-lock.txt")
     env = json.loads((run / "environment.json").read_text())

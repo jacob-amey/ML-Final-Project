@@ -79,7 +79,7 @@ def main():
             if device.type == "mps": torch.mps.empty_cache()
     atomic_json(out / "checks.json", {"environment": environment(device), "dataset_fingerprint": frozen["fingerprint"],
                 "tiny_history": history, "gradient_and_update_verified": True, "checkpoint_reload_verified": True,
-                "benchmark": results, "benchmark_conditions": "Warm MPS, float32, channels_last, cached training images; 3 warmup + 12 timed optimizer updates; excludes validation and checkpoint I/O."})
+                "benchmark": results, "benchmark_conditions": "Warm MPS, float32, channels_last, fixed preprocessed training batch; 3 warmup + 12 timed forward/loss/backward/AdamW updates. Excludes per-batch cache/preprocessing, clipping/metrics, validation and checkpoint I/O; actual full-run epoch times are recorded separately."})
 
 
 if __name__ == "__main__":

@@ -74,14 +74,15 @@ def evaluation_figures(directory, metrics, predictions, classes):
     # Preserve source bytes, including EXIF, for genuine upload/inference checks.
     import shutil
     success = next((row for row in correct if row["actual_class"] == "tomato__healthy"), correct[0])
-    mistake = wrong[0] if wrong else None
+    shared_tomato_labels = {"tomato__early_blight", "tomato__healthy", "tomato__late_blight"}
+    mistake = next((row for row in wrong if row["actual_class"] in shared_tomato_labels), wrong[0] if wrong else None)
     sample_records = []
     for name, row in [("success", success), ("mistake", mistake)]:
         if row:
             suffix = Path(row["image_path"]).suffix
             target = demo / (name + suffix); shutil.copyfile(DATA / row["image_path"], target)
             sample_records.append({**row, "sample_file": str(target.relative_to(directory)), "purpose": name,
-                                   "note": "Chosen after final evaluation for demonstration; never used to tune the model."})
+                                   "note": "Chosen after final evaluation for demonstration, preferring shared tomato-label coverage; never used to tune the model."})
     atomic_json(directory / "demo_examples.json", sample_records)
 
 

@@ -8,6 +8,7 @@ from pathlib import Path
 import time
 import numpy as np
 import torch
+from PIL import Image
 from .common import ROOT, atomic_json, metrics_from_matrix, sha256, utc_now, write_csv
 from .data import PixelCache, build_cache, release
 from .inference import Predictor
@@ -82,6 +83,12 @@ def main():
     learning_curves(directory)
     # Measure end-to-end CPU batch-one inference separately from training speed.
     samples = [ROOT / "data/processed/leafcheck177_final" / test.rows[i]["output_relative_path"] for i in [0, 1000, 4000, 8000]]
+    source_cases = []
+    for index, path in zip([0, 1000, 4000, 8000], samples):
+        with Image.open(path) as image:
+            source_cases.append({"image_id": test.rows[index]["image_id"], "image_path": test.rows[index]["output_relative_path"],
+                                 "width": image.width, "height": image.height, "format": image.format,
+                                 "frames": getattr(image, "n_frames", 1)})
     load_start = time.perf_counter(); measured = Predictor(directory, "cpu"); load_ms = (time.perf_counter() - load_start) * 1000
     for i in range(8): measured.predict(samples[i % len(samples)])
     timings = []
@@ -92,7 +99,7 @@ def main():
                 "includes": "File decode, frame zero, EXIF, RGB, letterbox, scaling/normalization, network and softmax; local file cache warm",
                 "p50_ms": float(np.median(timings)), "p95_ms": float(np.percentile(timings, 95)),
                 "mean_ms": float(np.mean(timings)), "model_loading_ms_warm_filesystem": load_ms,
-                "checkpoint_bytes": (directory / "model.pt").stat().st_size, "measurements_ms": timings})
+                "checkpoint_bytes": (directory / "model.pt").stat().st_size, "source_cases": source_cases, "measurements_ms": timings})
     artifact = json.loads((directory / "artifact.json").read_text())
     artifact["final_evaluation_complete"] = True
     artifact["files"] = {str(p.relative_to(directory)): sha256(p) for p in sorted(directory.rglob("*"))
