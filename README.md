@@ -38,6 +38,19 @@ source fingerprints are recorded in each run directory.
 `requirements-lock.txt` records the exact 108 installed package versions used on
 this Mac; it does not recreate macOS or its accelerator driver.
 
+For a new checkout with a compatible Python 3.14 installation and no `.venv`,
+create the research environment first:
+
+```sh
+python3.14 -m venv .venv
+.venv/bin/python -m pip install -r requirements-lock.txt
+```
+
+Keep an existing working environment intact. The website has a smaller separate
+dependency list and tested lock under `leafcheck-demo/`; it needs no notebook or
+plotting packages. The verified isolated app environment is recorded in
+`docs/minimal_runtime_environment.json`.
+
 From this project folder:
 
 ```sh
@@ -54,6 +67,9 @@ traceable source/content ID. Known related groups remain within one split; many
 physical specimen identities are unknown. Some classes have only six images.
 The local master is preserved. See `data/README.md` for preparation/restoration
 evidence and source records. A checkout does not download the image data.
+Reproducing training requires the exact provided master or prepared release,
+including the recorded metadata and bytes. This repository does not establish
+reuse rights or a public download location for every upstream master image.
 
 The cache command prepares only training/validation images and calculates
 training-only normalization. Final evaluation prepares the test cache only after
@@ -89,6 +105,30 @@ selected by validation macro-F1, with lower validation loss as the tie-breaker.
 The checkpoint includes its architecture, class mapping and preprocessing.
 Seeds, model/optimizer/scheduler states, RNG states and partial-epoch totals are
 preserved for resume. Backend/device/version differences can still affect numbers.
+Resuming a completed procedure preserves it and exits. To reproduce an experiment
+again, choose a new empty run name. Restoring a recorded source snapshot means
+placing its `leafcheck` package into a clean project checkout with the matching
+data layout, not executing the snapshot directly from its archived subfolder.
+
+The controlled weighting and duration/stability checks use these commands. They
+are reproduction instructions, not prerequisites for running the saved demo:
+
+```sh
+caffeinate -i .venv/bin/python -m leafcheck.train \
+  --config configs/residual177_weighted.json --run runs/final177/residual177_weighted_seed434
+.venv/bin/python -m leafcheck.extend_run \
+  --parent runs/final177/residual177_weighted_seed434 \
+  --output runs/final177/residual177_weighted_long64_seed434 --max-epochs 64
+caffeinate -i .venv/bin/python -m leafcheck.train \
+  --run runs/final177/residual177_weighted_long64_seed434 --resume
+caffeinate -i .venv/bin/python -m leafcheck.train \
+  --config configs/residual177_weighted_seed435.json --run runs/final177/residual177_weighted_seed435
+```
+
+The continuation preserves the parent and its exact optimizer/scheduler/RNG
+state. Its copied early epochs are not another independent fresh run. Incremental
+runtime is recorded separately to prevent double-counting. The seed-repeat starts
+with new random weights and a different shuffle/augmentation stream.
 
 Inspect `history.csv`, `validation_metrics.json`, `validation_predictions.csv`,
 `status.json`, configuration, environment and source snapshots under each run.
@@ -161,6 +201,23 @@ These checks include earlier-model regressions, standalone-copy startup,
 numerical final-model/API parity, orientation/color formats, invalid uploads and
 private-file routing. Full historical-reference tests use the original research
 environment; the running application needs no training data or notebooks.
+
+To record both the pipeline and website suites and execute the review notebook:
+
+```sh
+.venv/bin/python scripts/verify_final.py --url http://127.0.0.1:8765
+```
+
+The command requires the real completed bundle, checks its identity against the
+live server, saves actual test logs/results, and preserves an executed review
+notebook under `runs/final177/verification/`. It does not retrain or select a model.
+Open `cnn_final_model_review.ipynb` in VS Code or Jupyter with the **Python
+(LeafCheck)** kernel for a guided architecture/evidence review. If that kernel is
+missing in a new research checkout, register its environment with:
+
+```sh
+.venv/bin/python -m ipykernel install --user --name leafcheck --display-name "Python (LeafCheck)"
+```
 
 ## Interpretation and course submission
 
