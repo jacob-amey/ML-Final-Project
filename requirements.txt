@@ -2,6 +2,7 @@
 
 Pillow
 pandas
+numpy
 
 # Small custom CNN notebook
 torch==2.15.0

@@ -1,4 +1,39 @@
-# LeafCheck dataset splits
+# LeafCheck datasets
+
+## Final model: 177 labels
+
+Use `data/processed/leafcheck177_final/` for the final custom CNN. This release
+preserves all 177 master labels and retains 84,269 of the 90,574 master images.
+The original master folder is unchanged.
+
+| Folder | Images | Purpose |
+| --- | ---: | --- |
+| `train` | 59,008 | Fit model weights; estimate preprocessing statistics |
+| `val` | 16,836 | Select settings and checkpoints |
+| `test` | 8,425 | Final evaluation after development decisions are fixed |
+
+The release removes exact byte/pixel duplicates, confirmed cross-label related
+groups, images with a side below 32 pixels, and recorded unresolved/content
+issues. It retains traceable images without documented specimen IDs and assigns
+SHA-256 image IDs. Available documented leaf IDs, filename families, previous
+review evidence, and conservative near-copy matches determine related groups.
+Groups stay within one split. Previously used experiment images and recognized
+offline augmentation families stay in training.
+
+All three splits contain every label, but some classes have only one test image.
+Missing specimen metadata and unreviewed low-priority similarity candidates mean
+that additional related views or annotation errors may remain. Consult the
+[release README](processed/leafcheck177_final/README.md),
+[per-class counts](processed/leafcheck177_final/split_summary.csv), and
+[recorded limitations and checks](processed/leafcheck177_final/dataset_info.json).
+Use its `class_to_idx.json`; the final label order has 177 entries.
+
+The [preparation script](../scripts/prepare_final_dataset.py) provides `audit`,
+`group`, `prepare`, and `verify` phases. The release includes its evidence
+snapshots, review decisions, complete manifest, and exclusions. The processed
+images remain outside version control under the existing repository rules.
+
+## Earlier three-class dataset
 
 The dataset assigns `early_blight`, `healthy`, and `late_blight` to class indices 0, 1, and 2 respectively. The image folders under `data/processed/leafcheck/` are ready for a loader such as PyTorch `ImageFolder`. The [image inventory](manifests/image_inventory.csv) records the exact membership, original path, source revision, group, file hash, and any exclusion. The [label mapping](manifests/label_mapping.csv) records how the source labels translate to project labels.
 
