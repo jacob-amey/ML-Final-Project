@@ -146,3 +146,9 @@ independent student implementation.
 - Inspected confidently incorrect validation examples. Scores near one can be
   wrong; visually similar pest damage and mixed plant parts remain limitations.
   No labels were changed from model disagreement or unauthenticated diagnosis.
+
+- Observed the actual browser upload flow against the staging app: an unreadable
+  PNG is rejected clearly, and the other three real classifiers still predict
+  while the final package is unavailable. Saved preflight evidence and screenshot.
+  Simplified the missing-final-package message; the real final-model browser
+  rehearsal remains pending and is not inferred from this preflight.

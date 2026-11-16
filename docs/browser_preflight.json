@@ -1,0 +1,10 @@
+{
+  "observed_utc": "2026-11-16T05:59:00.071288+00:00",
+  "url": "http://127.0.0.1:8791",
+  "browser_missing_final_card_visible": true,
+  "other_three_real_models_returned_visible_predictions": true,
+  "invalid_png_rejected_by_browser": "This image could not be opened. Try another JPEG or PNG.",
+  "screenshot": "runs/final177/diagnostics/browser_missing_model.jpg",
+  "updated_missing_package_message": "The final model package is not installed. Restore the saved model bundle and restart LeafCheck.",
+  "real_final_model_browser_rehearsal": "pending final training, selection and artifact installation"
+}

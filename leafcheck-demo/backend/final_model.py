@@ -23,10 +23,12 @@ class FinalCNN:
         explicit = os.environ.get("LEAFCHECK_FINAL_ARTIFACT")
         if explicit:
             artifact = Path(explicit).expanduser().resolve()
+            if not artifact.is_dir():
+                raise FileNotFoundError("The selected final model package is unavailable. Restore its files and restart LeafCheck.")
         else:
             reference = demo / "models/final_model.json"
             if not reference.exists():
-                raise FileNotFoundError("The final 177-class model has not been bundled. Run backend/bundle_final.py with its frozen artifact folder.")
+                raise FileNotFoundError("The final model package is not installed. Restore the saved model bundle and restart LeafCheck.")
             record = json.loads(reference.read_text())
             artifact = (demo / "models" / record["artifact"]).resolve()
             if not artifact.is_relative_to((demo / "models").resolve()):
