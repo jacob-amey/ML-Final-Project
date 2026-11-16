@@ -119,3 +119,18 @@ independent student implementation.
 - Eight pipeline checks passed, including explicit float32 inference inputs under
   a changed PyTorch default dtype. Added a readable supplementary confusion figure
   generator, to run only after the final model is frozen.
+
+## 2026-11-16 — completion safeguards and review materials
+
+- Nine pipeline checks passed (34.5 seconds); completed procedures now reject
+  accidental re-training through the resume command while preserving their files.
+- Prepared a focused final-review notebook, with no invented outputs, and a
+  report generator that refuses incomplete evaluation artifacts. Execution waits
+  for the real frozen bundle. Added a delivery-archive fresh-process rehearsal.
+- The deeper model's late validation curve still improved through epoch 47.
+  Before any test evaluation, allow one separate longer-budget experiment of the
+  leading recipe if its 48-epoch curve still shows an improvement opportunity:
+  maximum 64 cumulative epochs, same scheduler and early-stop rule. Parent
+  checkpoints are preserved. A temporary-copy check confirmed all model, optimizer,
+  scheduler and RNG tensors are bitwise preserved, with only declared procedure
+  metadata changed. No additional training has run under this option yet.

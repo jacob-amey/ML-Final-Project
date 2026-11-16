@@ -19,6 +19,7 @@ def main():
         history = list(csv.DictReader((directory / "history.csv").open()))
         if not history: continue
         status = json.loads((directory / "status.json").read_text())
+        if not status.get("best"): continue
         environment = json.loads((directory / "environment.json").read_text())
         best = status["best"]
         records.append({"run": directory.name, "experiment": config["experiment"], "state": status["state"],
@@ -28,6 +29,7 @@ def main():
                         "validation_macro_f1": best["macro_f1"], "validation_accuracy": best["accuracy"], "validation_loss": best["loss"],
                         "training_seconds": status.get("training_seconds", sum(float(r["epoch_seconds"]) for r in history)),
                         "additional_refinement_seconds": status.get("additional_refinement_seconds", ""),
+                        "additional_training_seconds": status.get("additional_training_seconds", ""),
                         "parent_run": status.get("parent_run", ""),
                         "hypothesis": config["hypothesis"], "change_from_reference": config.get("reference"),
                         "dataset_fingerprint": frozen["fingerprint"], "git_revision": environment["git_revision"],

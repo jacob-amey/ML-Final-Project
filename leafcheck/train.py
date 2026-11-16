@@ -72,6 +72,12 @@ def evaluate(model, cache, spec, device, classes, batch_size=256, keep_predictio
 
 
 def train(config, run_dir, resume=False, max_updates=None):
+    run_dir = Path(run_dir)
+    if resume and (run_dir / "status.json").exists():
+        status = json.loads((run_dir / "status.json").read_text())
+        if status.get("state") == "complete":
+            print("This procedure is already complete. Preserving its checkpoints; use a new run for a new experiment.", flush=True)
+            return
     torch.set_num_threads(config.get("cpu_threads", 4))
     device = device_for(config.get("device", "auto"))
     frozen = release()
@@ -93,7 +99,6 @@ def train(config, run_dir, resume=False, max_updates=None):
     weights /= np.sum(weights * counts) / len(train_data)
     loss_fn = nn.CrossEntropyLoss(weight=torch.tensor(weights, dtype=torch.float32, device=device),
                                   reduction="none", label_smoothing=config.get("label_smoothing", 0.0))
-    run_dir = Path(run_dir)
     history = []; best = None; epoch = 1; next_batch = 0
     matrix = np.zeros((177, 177), np.int64); loss_sum = 0.0; seen = 0
     early_score = -1.0; meaningful_epoch = 0; total_steps = 0; accumulated_seconds = 0.0; epoch_elapsed = 0.0
@@ -210,9 +215,15 @@ def train(config, run_dir, resume=False, max_updates=None):
     verified, _ = evaluate(restored, validation, spec, device, classes, config.get("validation_batch_size", batch_size * 2))
     assert abs(verified["macro_f1"] - checkpoint["validation"]["macro_f1"]) < 1e-12
     assert abs(verified["loss"] - checkpoint["validation"]["loss"]) < 1e-5
-    atomic_json(run_dir / "status.json", {"state": "complete", "completed_epochs": current_epoch,
+    final_status = {"state": "complete", "completed_epochs": current_epoch,
                 "best": best, "total_steps": total_steps, "training_seconds": accumulated_seconds + time.perf_counter() - began,
-                "stopping_reason": reason, "checkpoint_reload_verified": True, "saved_utc": utc_now()})
+                "stopping_reason": reason, "checkpoint_reload_verified": True, "saved_utc": utc_now()}
+    lineage_path = run_dir / "lineage.json"
+    if lineage_path.exists():
+        lineage = json.loads(lineage_path.read_text())
+        final_status["parent_run"] = lineage["parent_run"]
+        final_status["additional_training_seconds"] = final_status["training_seconds"] - lineage["parent_training_seconds"]
+    atomic_json(run_dir / "status.json", final_status)
     print("COMPLETE", json.dumps(best), reason, flush=True)
 
 

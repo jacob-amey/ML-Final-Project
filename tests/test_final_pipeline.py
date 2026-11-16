@@ -15,6 +15,16 @@ from leafcheck.preprocessing import PREPROCESSING_VERSION, image_bytes, image_te
 
 
 class FinalPipelineTests(unittest.TestCase):
+    def test_completed_resume_preserves_the_run(self):
+        from leafcheck.train import train
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)
+            status = '{"state":"complete","checkpoint_reload_verified":true}'
+            (path / "status.json").write_text(status)
+            train({}, path, resume=True)
+            self.assertEqual((path / "status.json").read_text(), status)
+            self.assertEqual(len(list(path.iterdir())), 1)
+
     def test_custom_architectures_have_177_logits_and_finite_gradients(self):
         torch.set_num_threads(2)
         for architecture in ("plain_v1", "residual_v1"):

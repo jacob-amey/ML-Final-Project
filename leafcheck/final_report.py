@@ -1,0 +1,284 @@
+"""Build submission source material from completed, frozen experiment records."""
+
+import argparse
+import csv
+import json
+from pathlib import Path
+import shutil
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from .common import ROOT, sha256
+
+
+def read(path):
+    return json.loads(Path(path).read_text())
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--artifact", type=Path, required=True)
+    directory = parser.parse_args().artifact
+    artifact = read(directory / "artifact.json")
+    assert artifact["final_evaluation_complete"] and artifact["supplementary_evaluation_complete"]
+    assert sha256(directory / "model.pt") == artifact["checkpoint_sha256"]
+    test = read(directory / "test_metrics.json"); rule = read(directory / "baseline_metrics.json")
+    external = read(directory / "external_metrics.json"); latency = read(directory / "latency.json")
+    config = read(directory / "config.json"); status = read(directory / "status.json")
+    selected = read(directory / "freeze.json"); validation = read(directory / "validation_metrics.json")
+    experiments = list(csv.DictReader((ROOT / "docs/experiments.csv").open()))
+    assert all(row["state"] == "complete" for row in experiments)
+    figures = ROOT / "docs/figures"; figures.mkdir(exist_ok=True)
+    for name in ["learning_curves.png", "confusion_matrix.png", "major_confusions.png", "external_confusion_matrix.png"]:
+        shutil.copyfile(directory / name, figures / name)
+    fresh_runs = [row for row in experiments if not row["parent_run"] or row.get("additional_training_seconds")]
+    fig, axes = plt.subplots(1, 2, figsize=(13, 4.8))
+    for row in fresh_runs:
+        history = list(csv.DictReader((ROOT / "runs/final177" / row["run"] / "history.csv").open()))
+        axes[0].plot([int(r["epoch"]) for r in history], [float(r["validation_macro_f1"]) for r in history], label=row["run"], linestyle="--" if row["parent_run"] else "-")
+    axes[0].set(xlabel="Completed full-data epoch", ylabel="Validation macro-F1 (177 classes)", ylim=(0, 1))
+    axes[0].grid(alpha=.2); axes[0].legend(fontsize=7)
+    names = [row["run"].replace("177", "").replace("_seed", "\nseed ") for row in fresh_runs]
+    axes[1].bar(range(len(names)), [float(row["validation_macro_f1"]) for row in fresh_runs], color="#527a67")
+    axes[1].set_xticks(range(len(names)), names, rotation=15, ha="right", fontsize=8)
+    axes[1].set(ylabel="Selected-checkpoint validation macro-F1", ylim=(0, 1))
+    for i, row in enumerate(fresh_runs): axes[1].text(i, float(row["validation_macro_f1"])+.012, f"{float(row['validation_macro_f1']):.3f}", ha="center")
+    fig.suptitle("Development evidence — shared frozen train/validation splits")
+    fig.tight_layout(); fig.savefig(figures / "experiment_comparison.png", dpi=180); plt.close(fig)
+    rows = "\n".join(f"| {r['run']} | {r['completed_epochs']} | {r['selected_epoch']} | {float(r['validation_accuracy']):.4f} | {float(r['validation_macro_f1']):.4f} | {float(r['validation_loss']):.4f} | {r['decision']} |" for r in experiments)
+    confusion = list(csv.DictReader((directory / "major_confusions.csv").open()))[:8]
+    confusion_rows = "\n".join(f"| {r['actual_class']} | {r['predicted_class']} | {r['count']} / {r['actual_support']} | {float(r['fraction_of_actual_class']):.1%} |" for r in confusion)
+    rare = [r for r in test["per_class"] if r["support"] < 10]
+    no_recall = [r for r in test["per_class"] if r["recall"] == 0]
+    ext_rows = "\n".join(f"| {r['class_name']} | {r['support']} | {r['precision']:.3f} | {r['recall']:.3f} | {r['f1']:.3f} |" for r in external["per_class"])
+    conditional = external["conditional_rule"]
+    report = f'''# LeafCheck final model: methods, results and defense material
+
+Generated from completed saved records. This is report source material, not a
+claim that a formatted 5–10 page report or presentation has been submitted.
+
+## Introduction and related work
+
+LeafCheck classifies a photograph into one of 177 inherited plant-condition
+categories. Labels combine crop/species with conditions, including healthy
+tissue, disease, pests and some non-leaf plant parts. It is single-label image
+classification. The project pairs a randomly initialized custom CNN with an
+existing local comparison application. PlantVillage research motivates caution
+about controlled-background accuracy versus new photographs [1]. PlantDoc
+provides more varied scenes [2]. Residual connections [3] motivate the capacity
+experiment; the project does not claim to invent this established technique.
+
+## Contribution and scope
+
+The implemented contribution is an audited 177-label release, shared train/inference
+preprocessing, a reproducible custom architecture comparison, validation-led
+selection, sealed final evaluation, explicit artifact packaging and a tested
+four-model comparison workflow. The older three-tomato-label pilots are preserved
+as historical experiments. The earlier MobileNet proposal is superseded; no
+pretrained weights are used by the final CNN. Codex-assisted implementation and
+execution are disclosed in `contributions.md`; the student must understand and
+review the work and follow course policy.
+
+## Dataset and leakage precautions
+
+The release contains 84,269 images across all 177 labels: 59,008 training,
+16,836 validation and 8,425 test. The original 90,574-image master is intact.
+The audit records 6,305 exclusions with provenance and reasons. Related-image
+groups, duplicates and documented prior exposure informed split assignment.
+Content IDs provide traceability, not physical plant identity. Training support
+ranges from 4 to 5,116 images per label (median 100); 26 labels have fewer than
+30 training images. No new downloaded images or generated evaluation images
+were added during this final execution. See `final_dataset_audit.md`,
+`dataset_summary.json`, `training_class_support.csv` and pinned source manifests.
+Source reuse terms must be reviewed before redistribution of the full dataset.
+
+Dataset fingerprint: `{selected['dataset_fingerprint']}`.
+
+![Training distribution](figures/class_distribution.png)
+
+## Methods and preprocessing
+
+The selected model is `{config['model']['architecture']}`, seed {config['seed']},
+with 724,713 trainable parameters. The shape/parameter table and derivations are
+in `model_defense_guide.md`. It uses a stride-2 convolutional stem, four custom
+two-convolution residual blocks (24/48/96/192 channels), batch normalization,
+ReLU, global average pooling, dropout {config['model']['dropout']} and 177 logits.
+Framework layers/autograd implement the mathematics; all weights start randomly.
+
+Preprocessing selects frame zero, corrects EXIF orientation, converts to RGB,
+bilinearly resizes while preserving aspect ratio and center-pads with gray 128
+to {config['input_size']}×{config['input_size']}. Float32 pixels are divided by 255
+and standardized with saved training-only mean/std. Training alone uses whole-image
+reflections and quarter turns. These avoid hue shifts and lesion-removing crops,
+but upright field scenes need not be rotation invariant. Augmented views are
+not independent samples. Evaluation and inference share one deterministic function.
+
+Training uses AdamW, initial learning rate {config['learning_rate']}, batch size
+{config['batch_size']}, weight decay {config['weight_decay']}, gradient clipping
+{config['gradient_clip']}, class-weight power {config['class_weight_power']}, and
+cross-entropy on raw logits. Class weights use training counts only, are clipped
+and normalized. Unweighted validation loss is reported separately from weighted
+training loss. ReduceLROnPlateau follows validation macro-F1. The budget is
+{config['max_epochs']} full epochs, minimum {config['min_epochs']}, early-stop
+patience {config['patience']}. The selected procedure completed
+{status['completed_epochs']} epochs; checkpoint epoch {selected['selected_epoch']}.
+
+All fresh full-data runs visit all 59,008 training images per epoch. Configuration,
+code/source fingerprints, versions, RNG/optimizer/scheduler states and atomic
+best/resume checkpoints are retained. Training uses Apple M2 Max MPS, 30 GPU
+cores, 32 GB unified RAM. The benchmark and tiny-learning/resume checks are under
+`runs/final177/diagnostics`; source tests verify CPU and MPS interrupted resumes.
+
+## Controlled experiments and selection
+
+Checkpoint/configuration selection uses validation macro-F1 over all 177 labels,
+then lower unweighted validation loss within 1e-6, then earlier epoch; effectively
+tied configurations favor the smaller/faster model. Methods share frozen splits.
+Architecture comparisons do not guarantee identical random streams. Seed repeats
+investigate stability, not statistical significance. BatchNorm refinement reuses
+a parent procedure; its cost must not be counted as another fresh 48-epoch run.
+
+| Run | Epochs | Selected epoch | Val accuracy | Val macro-F1 | Val loss | Decision |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+{rows}
+
+![Development comparison](figures/experiment_comparison.png)
+
+**Frozen selection rationale and stopping decision:** {selected['rationale']}
+
+Validation at the selected checkpoint: accuracy {validation['accuracy']:.4%},
+macro-F1 {validation['macro_f1']:.6f}. This is development evidence, not an
+unbiased estimate after repeated model selection. No test predictions, thresholds
+or calibration were used for selection. The test seal/freeze records preserve
+the protocol. After final evaluation, improvement proposals remain future work.
+
+![Selected learning curves](figures/learning_curves.png)
+
+## Frozen final testing
+
+| Method on the same 177-class holdout | Correct / total | Accuracy | Macro-F1 over 177 |
+| --- | ---: | ---: | ---: |
+| Selected custom CNN | {test['correct']} / {test['sample_count']} | {test['accuracy']:.4%} | {test['macro_f1']:.6f} |
+| Most frequent training label: {rule['rule']['class_name']} | {rule['correct']} / {rule['sample_count']} | {rule['accuracy']:.4%} | {rule['macro_f1']:.6f} |
+
+The test has {test['known_group_count']} known/inferred related-image groups.
+Mean within-group correct fraction, averaged equally across groups, is
+{test['group_balanced_accuracy']:.4%} (rule {rule['group_balanced_accuracy']:.4%}).
+This is a sensitivity summary, not proof of independent biological sampling.
+{len(rare)} labels have fewer than 10 test images; {len(no_recall)} labels have zero
+observed test recall. Per-class precision, recall, F1, image/group support and
+all predictions are retained in the bundle. A single rare-class success/failure
+is unstable evidence; high overall accuracy does not imply reliable rare labels.
+
+![Frozen confusion matrix](figures/confusion_matrix.png)
+![Largest directed confusions](figures/major_confusions.png)
+
+| Actual | Predicted | Errors / actual support | Fraction of actual class |
+| --- | --- | ---: | ---: |
+{confusion_rows}
+
+`test_examples.jpg`, `example_records.json` and `demo_examples.json` preserve
+successes and confidently wrong predictions. Demo examples were chosen after
+evaluation for explanation and were not used to tune the model.
+
+## Supplementary three-label PlantDoc protocol
+
+The preregistered supplementary collection retains 183 photos after 57 exact or
+related overlaps were removed. Outputs still compete across all 177 labels.
+The CNN gets {external['correct']}/183 correct ({external['accuracy']:.4%}), with
+macro-F1 over the three represented tomato labels {external['macro_f1']:.6f}.
+The training-frequency conditional tomato rule gets {conditional['correct']}/183
+({conditional['accuracy']:.4%}), macro-F1 {conditional['macro_f1']:.6f}.
+These macro scores have a different label denominator from the 177-class test.
+
+| Reference label | Support | Precision | Recall | F1 |
+| --- | ---: | ---: | ---: | ---: |
+{ext_rows}
+
+![Supplementary confusion matrix](figures/external_confusion_matrix.png)
+
+PlantDoc appears elsewhere in the master, so this is not an unseen-source test.
+Generic `Tomato leaf` is an inherited healthy proxy rather than an independently
+verified diagnosis. A small three-label collection does not validate other crops,
+unfamiliar diseases or deployment in the field. Missing/cropped related views may
+remain despite screening. Final test findings do not trigger more tuning here.
+
+## Comparison integrity and application handoff
+
+The pilots cover three labels and use different splits. The actual bundled
+Create ML model covers all 177, but its declared earlier training data contains
+5,832 new-test images, with 1,683 more in its old validation split. Its exposure
+cannot support a fair new-test score. The website retains live exploratory
+predictions without presenting the historical models as equivalent held-out
+competitors. See `comparison_protocol.json`.
+
+The final bundle pairs weights, architecture/runtime, mapping, preprocessing,
+versions, freeze record and saved metrics. The website uses an explicit checkpoint
+reference, CPU evaluation mode and a shared prediction contract. Model scores are
+uncalibrated softmax outputs, not correctness probabilities. The classifier
+does not reliably reject unknown/non-plant images, localize symptoms, resolve
+multiple diseases or provide a definitive diagnosis.
+
+Checkpoint: `{selected['checkpoint_sha256']}`.
+Checkpoint size: {latency['checkpoint_bytes']:,} bytes.
+CPU batch-one inference on an M2 Max with 4 PyTorch threads: median
+{latency['p50_ms']:.3f}ms, p95 {latency['p95_ms']:.3f}ms over48 timed calls after 8 warmups,
+cycling four predetermined native test images. This includes decode, EXIF/RGB,
+padding, normalization, network and softmax with warm local file cache; it excludes
+HTTP and other comparison models. Warm-filesystem model loading is
+{latency['model_loading_ms_warm_filesystem']:.3f}ms. Training throughput and app-wide
+request latency are different measurements. See `latency.json` and the separately
+recorded demo verification/packaging evidence.
+
+## Discussion and future work
+
+The evidence supports this model only under the documented splits and inherited
+labels. Missing specimen IDs, residual near-duplicate risks, coarse/ambiguous
+condition labels, controlled backgrounds, imbalance and limited field imagery
+constrain the conclusions. The strong accuracy/macro-F1 gap warrants caution.
+Prioritize verified, traceable independent examples for weak/rare labels and
+plant/session IDs, plus an independently collected field evaluation. Resolution,
+augmentation or capacity changes would require new validation experiments and a
+genuinely new independent final evaluation protocol after this test has been seen.
+Compression/quantization require parity and performance checks if deployment
+measurements justify them. No globally optimal model or target accuracy is claimed.
+
+## Conclusion and project management
+
+The selected artifact completes the documented custom 177-label training and
+frozen evaluation procedure. Application verification is reported separately
+in `demo_verification.json`; do not infer a browser check from offline metrics.
+Use the exact README commands for training, interruption/resume, packaging,
+inference and website launch. Machine-readable metrics, confusion matrices,
+predictions and raw checkpoints remain recoverable local artifacts outside Git.
+
+The user owns the data/model/evaluation role; the partner's assigned role is the
+application/frontend. Codex-assisted execution is recorded explicitly rather
+than attributed as independent student activity. Names, meeting participation,
+team approval and institutional AI policy must be supplied/verified by the team.
+Formal report formatting, repository submission and presentation remain team work.
+
+## References
+
+[1] S. P. Mohanty, D. P. Hughes, and M. Salathé, “Using deep learning for
+image-based plant disease detection,” *Front. Plant Sci.*, vol. 7, art. 1419, 2016,
+doi: [10.3389/fpls.2016.01419](https://doi.org/10.3389/fpls.2016.01419).
+
+[2] D. Singh et al., “PlantDoc: A dataset for visual plant disease detection,”
+in *Proc. CoDS-COMAD*, 2020, pp. 249–253,
+doi: [10.1145/3371158.3371196](https://doi.org/10.1145/3371158.3371196).
+
+[3] K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning for image
+recognition,” in *Proc. CVPR*, 2016, pp. 770–778,
+doi: [10.1109/CVPR.2016.90](https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html).
+
+Dataset revisions, annotations and source links are in `data/README.md` and
+`final_dataset_audit.md`; original code references include PyTorch documentation
+and the architecture references above. No original pretrained implementation
+or weights were copied into the final model.
+'''
+    (ROOT / "docs/final_model_report.md").write_text(report)
+    print("Saved report source material and figures from completed frozen evidence.")
+
+
+if __name__ == "__main__": main()

@@ -23,6 +23,8 @@ def package(run, destination, rationale):
     shutil.copyfile(run / "best_model.pt", destination / "model.pt")
     for name in ["config.json", "environment.json", "dataset.json", "class_to_idx.json", "class_weights.json", "preprocessing.json", "validation_metrics.json", "history.csv", "status.json"]:
         shutil.copyfile(run / name, destination / name)
+    if (run / "lineage.json").exists():
+        shutil.copyfile(run / "lineage.json", destination / "lineage.json")
     shutil.copyfile(DATA / "dataset_info.json", destination / "dataset_release_info.json")
     if (ROOT / "requirements-lock.txt").exists():
         shutil.copyfile(ROOT / "requirements-lock.txt", destination / "requirements-training-lock.txt")
