@@ -21,8 +21,10 @@ def main():
     directory = parser.parse_args().artifact
     artifact = read(directory / "artifact.json")
     assert artifact["final_evaluation_complete"] and artifact["supplementary_evaluation_complete"]
+    assert artifact["reference_evaluation_complete"]
     assert sha256(directory / "model.pt") == artifact["checkpoint_sha256"]
     test = read(directory / "test_metrics.json"); rule = read(directory / "baseline_metrics.json")
+    reference = read(directory / "reference/test_metrics.json")
     external = read(directory / "external_metrics.json"); latency = read(directory / "latency.json")
     config = read(directory / "config.json"); status = read(directory / "status.json")
     selected = read(directory / "freeze.json"); validation = read(directory / "validation_metrics.json")
@@ -169,7 +171,16 @@ the protocol. After final evaluation, improvement proposals remain future work.
 | Method on the same 177-class holdout | Correct / total | Accuracy | Macro-F1 over 177 |
 | --- | ---: | ---: | ---: |
 | Selected custom CNN | {test['correct']} / {test['sample_count']} | {test['accuracy']:.4%} | {test['macro_f1']:.6f} |
+| Compact177 full-data reference | {reference['correct']} / {reference['sample_count']} | {reference['accuracy']:.4%} | {reference['macro_f1']:.6f} |
 | Most frequent training label: {rule['rule']['class_name']} | {rule['correct']} / {rule['sample_count']} | {rule['accuracy']:.4%} | {rule['macro_f1']:.6f} |
+
+The compact reference is a separate 253,257-parameter, randomly initialized CNN,
+trained on all 59,008 images and all 177 labels. Its validation-selected epoch
+{reference['selected_epoch']} and checkpoint were frozen before any test results.
+It is distinct from the earlier three-class Small CNN pilot. This held-out
+comparison evaluates complete recipes; it does not isolate the causal effect of
+architecture, weighting, duration or resolution. A better test result would not
+be used to switch the already selected deliverable.
 
 The test has {test['known_group_count']} known/inferred related-image groups.
 Mean within-group correct fraction, averaged equally across groups, is

@@ -206,3 +206,13 @@ independent student implementation.
   of at least 0.005365 triggers a160-pixel seed 435 repeat; select 160 only
   if the two-seed mean gain reaches 0.005, otherwise retain 128 for lower compute.
   Checkpoint selection within the accepted recipe keeps the original F1/loss rule.
+
+- Verified the two completed 128-pixel seeds share identical numeric settings,
+  ordered labels, preprocessing, per-class loss weights and core training source hashes.
+  Overall macro-F1 spans 0.005365; 12 labels change F1 by at least 0.2, and 11 have
+  zero observed validation recall in both runs. Saved all 177 class comparisons.
+- Registered the full-data Compact177 reference (epoch 44, 253,257 parameters) for
+  a fair same-holdout comparison. Its checkpoint will freeze with the selected
+  model; test scores cannot change the deliverable. It is separate from the
+  earlier three-class pilot. Added paired-bundle loading checks without evaluating
+  any test photos: both checkpoints load with the same 177-label order.

@@ -39,6 +39,8 @@ class FinalCNN:
             raise ValueError("The final-model reference does not identify this bundle")
         if not manifest.get("final_evaluation_complete"):
             raise ValueError("Final model has no completed frozen evaluation")
+        if manifest.get("comparison_reference") and not manifest.get("reference_evaluation_complete"):
+            raise ValueError("The registered full-data reference evaluation is incomplete")
         if manifest.get("external_protocol_sha256") and not manifest.get("supplementary_evaluation_complete"):
             raise ValueError("The registered supplementary evaluation is incomplete")
         for name, expected in manifest["files"].items():

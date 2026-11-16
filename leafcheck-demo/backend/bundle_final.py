@@ -22,6 +22,8 @@ def main():
     manifest = json.loads((source / "artifact.json").read_text())
     if not manifest.get("final_evaluation_complete"):
         raise ValueError("Complete the frozen final evaluation before installing a release")
+    if manifest.get("comparison_reference") and not manifest.get("reference_evaluation_complete"):
+        raise ValueError("Complete the registered compact-reference evaluation before installing this release")
     if manifest.get("external_protocol_sha256") and not manifest.get("supplementary_evaluation_complete"):
         raise ValueError("Complete the registered supplementary evaluation before installing this release")
     models = Path(__file__).resolve().parents[1] / "models"; models.mkdir(exist_ok=True)

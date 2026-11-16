@@ -154,6 +154,12 @@ command contract; use the actual selected run in the final manifest.
 .venv/bin/python -m leafcheck.evaluate_external --artifact artifacts/leafcheck177-v1
 ```
 
+Final evaluation freezes and scores the completed Compact177 full-data reference
+alongside the selected model and training-frequency rule. Compact177 uses the
+same 177 labels and split membership; it is separate from the older three-class
+pilots. The package command defaults to `runs/final177/plain177_seed434` for that
+reference; use `--reference-run` only to name its reproduced completed run.
+
 Final evaluation saves per-image predictions, correct/total, accuracy, macro-F1,
 per-class metrics and support, confusion tables/figures, successes/failures,
 the most-common-training-class rule and latency measurements. After seeing

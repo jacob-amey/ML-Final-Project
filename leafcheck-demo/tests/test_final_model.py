@@ -46,6 +46,9 @@ class FinalModelIntegrationTests(unittest.TestCase):
         self.assertEqual(final["train_images"], 59008)
         self.assertEqual(final["test"]["sample_count"], 8425)
         self.assertEqual(final["baseline"]["sample_count"], 8425)
+        self.assertEqual(final["reference"]["sample_count"], 8425)
+        self.assertEqual(final["reference"]["class_count"], 177)
+        self.assertNotEqual(final["reference"]["checkpoint_sha256"], final["checkpoint_sha256"])
         self.assertEqual(final["checkpoint_sha256"], self.adapter.metadata["checkpoint_sha256"])
 
     def test_real_packaged_success_and_mistake_match_standalone(self):

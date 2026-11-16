@@ -10,17 +10,28 @@ from .common import ROOT, DATA, atomic_json, sha256, utc_now
 from .data import release
 
 
-def package(run, destination, rationale):
+def package(run, destination, rationale, reference_run=ROOT / "runs/final177/plain177_seed434"):
     run = Path(run); destination = Path(destination)
     status = json.loads((run / "status.json").read_text())
     assert status["state"] == "complete" and status["checkpoint_reload_verified"]
     checkpoint = torch.load(run / "best_model.pt", weights_only=True, map_location="cpu")
     frozen = release()
     assert checkpoint["dataset_fingerprint"] == frozen["fingerprint"]
+    reference_run = Path(reference_run)
+    reference_status = json.loads((reference_run / "status.json").read_text())
+    assert reference_status["state"] == "complete" and reference_status["checkpoint_reload_verified"]
+    reference_checkpoint = torch.load(reference_run / "best_model.pt", weights_only=True, map_location="cpu")
+    assert reference_checkpoint["dataset_fingerprint"] == frozen["fingerprint"]
+    assert reference_checkpoint["classes"] == frozen["classes"]
+    assert reference_checkpoint["model_config"]["architecture"] == "plain_v1"
     if destination.exists():
         raise FileExistsError("A frozen artifact already exists. Preserve it; use a new version before any new test protocol.")
     destination.mkdir(parents=True)
     shutil.copyfile(run / "best_model.pt", destination / "model.pt")
+    reference = destination / "reference"; reference.mkdir()
+    shutil.copyfile(reference_run / "best_model.pt", reference / "model.pt")
+    for name in ["config.json", "environment.json", "preprocessing.json", "class_to_idx.json", "status.json", "validation_metrics.json"]:
+        shutil.copyfile(reference_run / name, reference / name)
     for name in ["config.json", "environment.json", "dataset.json", "class_to_idx.json", "class_weights.json", "preprocessing.json", "validation_metrics.json", "history.csv", "status.json"]:
         shutil.copyfile(run / name, destination / name)
     for optional in ["lineage.json", "validation_diagnostics.json"]:
@@ -71,6 +82,11 @@ def package(run, destination, rationale):
               "selection": checkpoint["selection"], "validation_macro_f1": checkpoint["validation"]["macro_f1"],
               "rationale": rationale, "confidence_policy": "Display softmax scores; no calibrated confidence or unknown-input threshold",
               "evaluation_device": "cpu", "evaluation_batch_size": 128, "test_predictions_used_in_selection": False}
+    freeze["comparison_reference"] = {"name":"Compact177 full-data reference", "directory":"reference",
+                                      "run":str(reference_run.resolve()),"checkpoint_sha256":sha256(reference / "model.pt"),
+                                      "dataset_fingerprint":frozen["fingerprint"],"input_size":reference_checkpoint["preprocessing"]["input_size"],
+                                      "selected_epoch":reference_checkpoint["epoch"],"validation_macro_f1":reference_checkpoint["validation"]["macro_f1"],
+                                      "protocol":"Same 177 labels and train/validation/test membership; compact recipe selected by validation before test. Comparing completed recipes, not isolating each changed setting."}
     if external_protocol.exists():
         freeze["external_protocol_sha256"] = sha256(destination / "external_protocol.json")
         freeze["external_manifest_sha256"] = sha256(destination / "external_manifest.csv")
@@ -85,7 +101,8 @@ def main():
     parser.add_argument("--run", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--rationale", required=True)
-    args = parser.parse_args(); package(args.run, args.output, args.rationale)
+    parser.add_argument("--reference-run",type=Path,default=ROOT / "runs/final177/plain177_seed434")
+    args = parser.parse_args(); package(args.run, args.output, args.rationale,args.reference_run)
 
 
 if __name__ == "__main__": main()

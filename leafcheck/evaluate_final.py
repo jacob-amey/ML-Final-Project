@@ -14,6 +14,7 @@ from .data import PixelCache, build_cache, release
 from .inference import Predictor
 from .train import evaluate
 from .report import evaluation_figures, learning_curves
+from .reference_evaluation import evaluate_reference
 
 
 def main():
@@ -80,6 +81,7 @@ def main():
     baseline["known_group_count"] = len(groups)
     baseline["group_balanced_accuracy"] = sum(members[0]["actual_index"] == rule["class_index"] for members in groups.values()) / len(groups)
     atomic_json(directory / "baseline_metrics.json", baseline)
+    evaluate_reference(directory, frozen, freeze)
     evaluation_figures(directory, metrics, predictions, frozen["classes"])
     learning_curves(directory)
     # Measure end-to-end CPU batch-one inference separately from training speed.
@@ -103,6 +105,7 @@ def main():
                 "checkpoint_bytes": (directory / "model.pt").stat().st_size, "source_cases": source_cases, "measurements_ms": timings})
     artifact = json.loads((directory / "artifact.json").read_text())
     artifact["final_evaluation_complete"] = True
+    artifact["reference_evaluation_complete"] = True
     artifact["files"] = {str(p.relative_to(directory)): sha256(p) for p in sorted(directory.rglob("*"))
                          if p.is_file() and p.name != "artifact.json" and "__pycache__" not in p.parts}
     atomic_json(directory / "artifact.json", artifact)

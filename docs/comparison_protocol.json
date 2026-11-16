@@ -253,5 +253,15 @@
   "valid_full_177_test_comparison": [
     "selected custom CNN",
     "most-frequent-training-class rule"
-  ]
+  ],
+  "compact177_reference": {
+    "run": "runs/final177/plain177_seed434",
+    "classes": 177,
+    "training_images": 59008,
+    "selected_epoch": 44,
+    "checkpoint_sha256": "de865d5024cd725409ebd5dde15f28cc5fd488271c41e8b87432628f4c60648a",
+    "selection": "validation macro-F1 before any final test predictions",
+    "protocol": "Freeze the compact checkpoint with the final selection; evaluate both on the identical untouched 177-class test membership. Full-recipe comparison, distinct from the historical three-class pilots.",
+    "test_results": "Pending final selection/freeze; no test predictions have been computed."
+  }
 }

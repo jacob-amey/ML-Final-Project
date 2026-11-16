@@ -55,6 +55,8 @@ class Predictor:
         if baseline.exists(): self.metadata["baseline"] = json.loads(baseline.read_text())
         external = self.directory / "external_metrics.json"
         if external.exists(): self.metadata["external"] = json.loads(external.read_text())
+        reference = self.directory / "reference/test_metrics.json"
+        if reference.exists(): self.metadata["reference"] = json.loads(reference.read_text())
 
     @torch.inference_mode()
     def logits(self, path):
