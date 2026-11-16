@@ -65,7 +65,7 @@ def evaluation_figures(directory, metrics, predictions, classes):
         with Image.open(DATA / row["image_path"]) as image:
             image = ImageOps.exif_transpose(image).convert("RGB"); image.thumbnail((600, 500))
             axis.imshow(image)
-        axis.set_title(f"True: {row['actual_class']}\nPred: {row['predicted_class']}\nSoftmax score: {row['score']:.3f}", fontsize=9)
+        axis.set_title(f"Reference: {row['actual_class']}\nPred: {row['predicted_class']}\nSoftmax score: {row['score']:.3f}", fontsize=9)
         axis.axis("off")
     fig.suptitle("Frozen test examples — successes and confidently incorrect predictions")
     fig.tight_layout(); fig.savefig(directory / "test_examples.jpg", dpi=160); plt.close(fig)
