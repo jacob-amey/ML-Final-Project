@@ -216,3 +216,30 @@ independent student implementation.
   model; test scores cannot change the deliverable. It is separate from the
   earlier three-class pilot. Added paired-bundle loading checks without evaluating
   any test photos: both checkpoints load with the same 177-label order.
+
+## 2026-11-16 — training paused by user
+
+- The user requested a pause after the system reported battery operation. Sent
+  SIGINT to the verified training process; it stopped at a completed update.
+  Saved state: 26 complete epochs, 74 completed batches of epoch 27, 9,472 images
+  in that partial epoch and 12,060 total optimizer updates.
+- Strict CPU model loading, finite tensors, optimizer/scheduler loading and
+  Python/NumPy/CPU random-state restoration were verified. The MPS random-state
+  payload is present. No training update was made during these checks.
+- Last checkpoint SHA-256: `b7a9f7391dd141f636004f7a4d3a68f547cbb4f1afa20ff45adc6f43cd7dd026`.
+  Backup: `artifacts/LeafCheck-paused160-20261116T145536Z.zip`; both checkpoint members were hash-verified.
+- Closed the two temporary staging servers created for earlier verification.
+  The final real-model browser rehearsal has not occurred. No test cache or
+  frozen final evaluation was created. Do not auto-resume training; wait for
+  an explicit user request. Exact continuation is recorded in
+  `docs/training_pause.json` and below:
+
+```sh
+caffeinate -i .venv/bin/python -m leafcheck.train --run runs/final177/residual177_160_seed434 --resume
+```
+
+- Remaining: complete the resolution procedure and any justified paired repeat;
+  freeze the selection plus Compact177 reference; evaluate the primary holdout,
+  rule/reference and supplementary collection; install the real final artifact;
+  execute full tests, notebook review, fresh browser rehearsal and delivery
+  archive verification; record final results, documentation and commits.

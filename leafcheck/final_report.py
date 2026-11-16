@@ -247,7 +247,8 @@ CPU batch-one inference on {latency['hardware']['cpu']} with {latency['torch_thr
 {latency['p50_ms']:.3f}ms, p95 {latency['p95_ms']:.3f}ms over48 timed calls after 8 warmups,
 cycling four predetermined native test images. This includes decode, EXIF/RGB,
 padding, normalization, network and softmax with warm local file cache; it excludes
-HTTP and other comparison models. Warm-filesystem model loading is
+HTTP and other comparison models. Power source at measurement:
+{latency['hardware'].get('power_source','not recorded')}. Warm-filesystem model loading is
 {latency['model_loading_ms_warm_filesystem']:.3f}ms. Training throughput and app-wide
 request latency are different measurements. See `latency.json` and the separately
 recorded demo verification/packaging evidence.

@@ -76,6 +76,8 @@ def hardware():
     if platform.system() == "Darwin":
         result["cpu"] = subprocess.check_output(["sysctl", "-n", "machdep.cpu.brand_string"], text=True).strip()
         result["physical_memory_bytes"] = int(subprocess.check_output(["sysctl", "-n", "hw.memsize"], text=True))
+        power = subprocess.check_output(["pmset", "-g", "batt"], text=True).splitlines()[0]
+        result["power_source"] = power.removeprefix("Now drawing from ").strip("'")
     return result
 
 
