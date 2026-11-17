@@ -24,7 +24,7 @@
     "rationale": "64 full-data epochs, selected63; macro-F1 0.598316, accuracy0.874258, loss0.534610,5214.1seconds. Reload verified. The128 weighted recipe scores0.598316\u20130.603681 across these two seeds; this is limited variability evidence, not significance."
   },
   "residual177_160_seed434": {
-    "decision": "Resumed; full resolution comparison pending",
-    "rationale": "User-authorized continuation on AC power from the verified pause. No final resolution decision or test evaluation yet."
+    "decision": "Keep as competitive completed resolution recipe; paired seed pending",
+    "rationale": "64 complete full-data epochs, selected60: macro-F1 0.608147, accuracy0.879069, loss0.515985. Reload verified. Gain0.004466 over the matched128 seed434 checkpoint is small; a paired160 seed435 run is underway under the resource-amended plan."
   }
 }

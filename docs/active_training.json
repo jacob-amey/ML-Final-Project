@@ -1,7 +1,7 @@
 {
-  "state": "resuming_at_user_request",
+  "state": "running_second_resolution_seed",
   "authorized_utc": "2026-11-17T01:13:29.075569+00:00",
-  "run": "runs/final177/residual177_160_seed434",
+  "run": "runs/final177/residual177_160_seed435",
   "resume_epoch": 27,
   "completed_batches_in_epoch": 74,
   "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
@@ -9,5 +9,6 @@
   "mps_available": true,
   "power_source": "AC Power",
   "test_predictions_inspected": false,
-  "previous_pause_record": "docs/training_pause.json"
+  "previous_pause_record": "docs/training_pause.json",
+  "first_resolution_run_complete": true
 }

@@ -257,3 +257,16 @@ caffeinate -i .venv/bin/python -m leafcheck.train --run runs/final177/residual17
   record is historical; current state is `docs/active_training.json`. Both held-out
   sets remain unopened. Further trials require validation evidence and recorded
   hypotheses; no globally optimal-model claim is made.
+
+- Completed the first 160-pixel procedure: 64 full epochs, selected 60, validation
+  macro-F1 0.608147, accuracy 0.879069, loss 0.515985. Full reload verification
+  passed. Total active procedure time 6,213.4 seconds includes the pre-pause work;
+  paused wall time is excluded. The matched seed gain over 128 is 0.004466.
+- The declared 160-pixel seed 435 repeat started after the first run completed.
+  Mild illumination configurations are prospective; neither has run yet.
+- Supplemental integrity review inspected the 36 closest cross-split representative
+  pairs from the remaining 792 candidates, with enlarged native views for two
+  visually similar rice pairs. Found no confirmed shared photograph; no release
+  bytes, labels or splits changed. Remaining 756 candidates and unknown specimen/
+  session IDs remain limitations. Raw integrity views did not include predictions
+  and do not guide model choices; augmentation was declared before this review.

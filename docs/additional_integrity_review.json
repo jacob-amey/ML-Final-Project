@@ -1,0 +1,15 @@
+{
+  "reviewed_utc": "2026-11-17T02:12:38.431242+00:00",
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "original_candidates": 792,
+  "cross_split_candidates": 366,
+  "additional_pairs_visually_reviewed": 36,
+  "selection": "Lowest aligned64-pixel mean absolute error among cross-split representative pairs",
+  "confirmed_shared_photographs": 0,
+  "additional_exclusions_or_split_changes": 0,
+  "remaining_candidate_pairs_without_this_supplemental_review": 756,
+  "candidate_source_sha256": "d43ee3b747fd49bdfb07ceb76599d0502d0b5190899b036fb36a0b0a4d3835b4",
+  "evidence_csv": "docs/additional_integrity_review.csv",
+  "test_protocol": "Raw image files were inspected only for integrity/grouping, without model predictions, metrics or mistakes. These images do not guide architecture, augmentation, thresholds or checkpoint selection.",
+  "limitations": "Not exhaustive biological identity or annotation verification. Different images can share an undocumented plant or capture session; crops/edits outside the similarity screen can remain."
+}
