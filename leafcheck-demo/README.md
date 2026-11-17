@@ -139,7 +139,7 @@ export LEAFCHECK_COREML_MODEL="/absolute/path/to/classifier.mlmodel"
 
 - **Final Custom CNN:** custom architecture trained from random initialization on
   the full 59,008-image training split; all 177 labels. Selection uses validation
-  macro-F1. Its saved 8,425-image test result appears beside the simple rule,
+  macro-F1. Its saved 8,425-image test result appears beside the full-data Compact177 reference and simple rule,
   with a separately labelled supplementary 183-photo, three-tomato-class check.
 - **Small CNN:** original 120-image pilot; 3 tomato conditions.
 - **Starter 300 CNN:** second experiment; 210 training, 60 validation, and 30 test
@@ -155,8 +155,10 @@ Core ML helper uses orientation correction and Vision center cropping and scalin
 Scores are model outputs, not calibrated accuracy estimates. Agreement is context,
 not proof that a prediction is correct. The earlier experiments use different evaluation sets. The new test includes
 5,832 images from Create ML’s declared old training split and 1,683 from its old
-validation split. Create ML is not scored on this holdout. Only the selected final
-CNN and declared simple rule share the reported 177-class test protocol. Timing includes different work in the CNN and Vision paths and is not
+validation split. Create ML is not scored on this holdout. The selected final
+CNN, frozen Compact177 full-data reference and declared simple rule share the
+reported 177-class test protocol. Compact177 is a separate 177-label model,
+distinct from the three-class Small CNN pilot. Timing includes different work in the CNN and Vision paths and is not
 a speed benchmark. The model-details dialog reads saved metrics; the app never
 trains a model or evaluates another held-out test set.
 
