@@ -50,5 +50,9 @@
   "residual177_wide_seed434": {
     "decision": "Reject scaling under predeclared screen rule; retain completed one-seed evidence",
     "rationale": "Completed45 full-data epochs, selected35, macro-F10.623912. Does not improve the matched reference0.624215 or reach0.005169 repeat trigger; not proof width cannot help. Reload verified; no test use."
+  },
+  "residual177_224_seed434": {
+    "decision": "Keep as promising completed resolution screen; paired repeat running",
+    "rationale": "63 full epochs, selected53; validation macro-F1 0.643382 (+0.019167 versus matched160 reference), accuracy0.893799; reload verified. Await seed435 and paired mean before acceptance. Test sealed."
   }
 }

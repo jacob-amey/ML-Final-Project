@@ -345,3 +345,7 @@ Both illumination and stronger-decay seed pairs finished and reloaded correctly.
 ### Completed wider-channel screen
 
 The32/64/128/256-channel160-pixel CNN early-stopped at45full epochs, selected35, validation macro-F1 0.623912. This does not exceed the matched illumination reference0.624215. The declared repeat trigger was not reached; no second seed or added width is accepted. This limited one-seed result does not rule out all wider architectures. Saved checkpoint reload passed. The independent224-pixel screen has started; no test scores inspected.
+
+### Completed first224-pixel procedure
+
+Early stopped after63 full epochs; selected53, validation macro-F1 0.643382, accuracy0.893799, loss0.431804. Reload verification passed. Matched seed434 improvement0.019167 exceeds the predeclared0.005169 trigger. Seed435 started with identical numeric settings except seed; acceptance awaits the paired result. Test and supplementary model predictions remain sealed.

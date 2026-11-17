@@ -78,6 +78,7 @@ def main():
             else:
                 atomic_json(repeat_config, config)
             repeat_path = run_path.with_name(f"residual177_{tag}_seed435")
+            atomic_json(ROOT / "docs/active_training.json", {"state":"scaling_seed_repeat", "run":str(repeat_path.relative_to(ROOT)), "updated_utc":utc_now(), "test_predictions_inspected":False})
             result["second_seed"] = run(repeat_config, repeat_path)
             command(["-m","leafcheck.seed_analysis","--runs",str(run_path),str(repeat_path),"--output",str(ROOT/f"docs/seed_stability_{tag}")], ROOT/f"runs/final177/{tag}_seed_analysis.log")
             pair = json.loads((ROOT/f"docs/seed_stability_{tag}.json").read_text())

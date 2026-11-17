@@ -1,0 +1,25 @@
+{
+  "recorded_utc": "2026-11-17T15:22:35.966005+00:00",
+  "run": "residual177_224_seed434",
+  "status": {
+    "state": "complete",
+    "completed_epochs": 63,
+    "best": {
+      "macro_f1": 0.6433816585883837,
+      "loss": 0.4318041101586623,
+      "accuracy": 0.8937990021382751,
+      "epoch": 53
+    },
+    "total_steps": 29043,
+    "training_seconds": 8224.818099291995,
+    "stopping_reason": "early stopping after validation macro-F1 plateau",
+    "checkpoint_reload_verified": true,
+    "saved_utc": "2026-11-17T15:22:03.773174+00:00"
+  },
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "matched_reference_macro_f1": 0.6242151517031679,
+  "gain": 0.019166506885215817,
+  "repeat_trigger": 0.005168516658778821,
+  "repeat_required": true,
+  "test_predictions_used": false
+}
