@@ -1,0 +1,32 @@
+{
+  "experiment": "residual177-256-native-size-screen",
+  "hypothesis": "Native256 inputs may retain symptom detail beyond224 for the36925 training photos recorded exactly256x256; only input size changes.",
+  "reference": "Conditional on accepted paired224 recipe; compare resolution only, same full splits and all other numeric settings.",
+  "seed": 435,
+  "device": "auto",
+  "cpu_threads": 4,
+  "input_size": 256,
+  "model": {
+    "architecture": "residual_v1",
+    "channels": [
+      24,
+      48,
+      96,
+      192
+    ],
+    "num_classes": 177,
+    "dropout": 0.2
+  },
+  "batch_size": 128,
+  "validation_batch_size": 256,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5.0,
+  "augmentation": "dihedral_color",
+  "class_weight_power": 0.5,
+  "label_smoothing": 0.0,
+  "max_epochs": 64,
+  "min_epochs": 24,
+  "patience": 10,
+  "early_min_delta": 0.001
+}
