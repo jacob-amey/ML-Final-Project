@@ -1,0 +1,70 @@
+{
+  "reviewed_utc": "2026-11-17T19:26:20.946222+00:00",
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "candidate_pairs_reviewed": 426,
+  "contact_pages_reviewed": 36,
+  "split_pair_counts": {
+    "train/train": 374,
+    "val/val": 40,
+    "test/test": 12
+  },
+  "unique_raw_images_sha256_verified": 444,
+  "larger_source_views_reviewed": [
+    327,
+    226,
+    669,
+    710,
+    648,
+    444,
+    342,
+    344,
+    671,
+    331,
+    381,
+    780,
+    185,
+    352,
+    129
+  ],
+  "feature_cases": [
+    327,
+    226,
+    669,
+    710,
+    648,
+    444,
+    342,
+    344,
+    671,
+    331,
+    381,
+    780,
+    185,
+    352,
+    129
+  ],
+  "feature_record": "runs/final177/additional_integrity_review/within/feature_matching_review.json",
+  "feature_record_sha256": "e99cff37d2516a199d67d8cb305c553f8ada36973278bc223590b42faeebbdef",
+  "feature_displays_visually_reviewed": [
+    "444",
+    "710",
+    "331",
+    "185",
+    "same_photo_software_control"
+  ],
+  "candidate_distributed_matches_confirmed": 0,
+  "same_photo_software_control_inliers": 113,
+  "same_photo_software_control_unique_destinations": 104,
+  "confirmed_shared_photographs": 0,
+  "additional_exclusions_or_split_changes": 0,
+  "evidence_csv": "docs/within_integrity_review.csv",
+  "evidence_csv_sha256": "13b38c65ca944b2f689215076092e723ded1e0e2fee9fba408c511f47fae293a",
+  "rendering_record_sha256": "6afa657efdc6dc56d3bdd1de7d07548ac9ecdd8aeb52de094f4b476d2b5e861f",
+  "scripts": {
+    "scripts/review_within_candidates.py": "12b4a3172018f5bf79d24df70f84f650b106b4e2ce335bebde2b16548960806d",
+    "scripts/check_within_integrity_features.py": "10172bbe7745d280686dbec0147c4c0f077a795731ed6384c3d92cee98b8fa2f"
+  },
+  "notes": "Broadleaf outlines/veins/petioles and narrow-leaf widths/folds/marks did not establish matching photographs. Cases444 and331 had many nominal inliers collapsed to one destination;710 had zero. Visual inspection and correspondence are evidence aids, not automatic exclusion rules.",
+  "limitations": "Does not exhaust unlisted related photos, unknown physical plants/capture sessions, semantic annotation conflicts or every crop/edit. Failed matching does not prove independence.",
+  "test_policy": "Raw identity integrity only, labels/predictions masked in contact/native displays; no model test outputs or clinical judgments used."
+}

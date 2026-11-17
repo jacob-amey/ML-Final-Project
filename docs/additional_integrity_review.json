@@ -1,20 +1,20 @@
 {
-  "reviewed_utc": "2026-11-17T04:44:44.488911+00:00",
+  "reviewed_utc": "2026-11-17T19:26:20.946222+00:00",
   "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
   "original_candidates": 792,
   "cross_split_candidates": 366,
-  "additional_pairs_visually_reviewed": 366,
-  "selection": "All366 cross-split representatives from the792 remaining component-pair candidates; first36 prioritized by aligned64-pixel MAE, then the remaining330 contact-sheet reviews.",
+  "additional_pairs_visually_reviewed": 792,
+  "selection": "All366 cross-split and426 within-split representatives from the unchanged792-row remaining-candidate list.",
   "confirmed_shared_photographs": 0,
   "additional_exclusions_or_split_changes": 0,
-  "remaining_candidate_pairs_without_this_supplemental_review": 426,
+  "remaining_candidate_pairs_without_this_supplemental_review": 0,
   "candidate_source_sha256": "d43ee3b747fd49bdfb07ceb76599d0502d0b5190899b036fb36a0b0a4d3835b4",
   "evidence_csv": "docs/additional_integrity_review.csv",
   "test_protocol": "Raw image files were inspected only for integrity/grouping, without model predictions, metrics or mistakes. These images do not guide architecture, augmentation, thresholds or checkpoint selection.",
   "limitations": "Not exhaustive biological identity or annotation verification. Different images can share an undocumented plant or capture session; crops/edits outside the similarity screen can remain.",
   "initial36_reviewed_utc": "2026-11-17T02:12:38.431242+00:00",
   "cross_split_pairs_reviewed": 366,
-  "remaining_scope": "The426 remaining listed candidates are within splits; this review does not exhaust every possible related image outside the candidate screen.",
+  "remaining_scope": "All listed representatives reviewed. Unknown physical identity, unlisted crops/edits and semantic annotation quality remain limitations.",
   "larger_source_views_reviewed": [
     673,
     757,
@@ -68,5 +68,7 @@
     482
   ],
   "reproduction_requirements": "docs/integrity_requirements.txt",
-  "case_list_reconstruction": "Both helpers reconstruct the exact792 ordered cases from the frozen release manifest and candidate metadata, and reject an existing list with different values/order."
+  "case_list_reconstruction": "Both helpers reconstruct the exact792 ordered cases from the frozen release manifest and candidate metadata, and reject an existing list with different values/order.",
+  "cross_split_reviewed_utc": "2026-11-17T04:44:44.488911+00:00",
+  "within_split_review": "docs/within_integrity_review.json"
 }

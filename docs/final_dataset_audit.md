@@ -155,10 +155,11 @@ The software control recovered113 geometric inliers.
 
 No additional photographic identity was confirmed, so the frozen release remains
 84,269 images and177 labels with the same fingerprint and split assignments.
-The original792-row candidate file remains intact;426 listed within-split pairs
-did not receive this supplemental review. Unknown physical specimens/sessions,
-unreviewed within-split conflicts, missed crops/edits and inherited annotations
-remain limitations. A failed feature match is not proof of biological independence.
+The original 792-row candidate file remains intact. The subsequent within-split
+review below completes its remaining 426 representatives. Unknown physical
+specimens/sessions, unlisted related views, missed crops/edits and inherited
+annotation semantics remain limitations. A failed feature match is not proof
+of biological independence.
 
 `docs/additional_integrity_review.csv` and its JSON summary record the cases,
 methods, source dimensions, control and limitations. The inspection environment
@@ -180,3 +181,38 @@ they do not require an untracked setup script. The first command creates a
 separate inspection environment. Its pinned packages do not replace training
 dependencies. Candidate feature matches are review aids, not automatic exclusion
 or diagnosis rules. The same-photo control is software evidence only.
+
+### Completion of within-split candidate review, November 17
+
+All remaining 426 within-split representatives were inspected on 36 contact
+pages with disease labels and predictions masked: 374 train/train, 40 val/val
+and 12 test/test pairs. Fifteen closer cases received larger raw-image views
+with original dimensions recorded, plus SIFT/RANSAC correspondence checks in
+the isolated inspection environment. The 444 distinct source files matched their
+recorded raw hashes. No additional shared photograph was confirmed.
+
+Some high nominal correspondence counts were degenerate: case 444's 34 inliers
+and case 331's 20 inliers each collapsed to one destination. Larger source views
+and the displayed matches did not establish photographic identity. The same-photo
+crop/resize/JPEG software control again recovered 113 inliers at 104 distinct
+destinations; it is not a training example or CNN evaluation result.
+
+No images, labels, groups, split membership or release fingerprint changed.
+All 792 representatives in this lower-priority list now have supplemental
+contact review (366 cross-split and 426 within-split). This is a bounded
+identity screen, not exhaustive biological independence or expert label validation.
+Raw test files were inspected only for permitted integrity review; test-model
+predictions, scores and errors remain excluded from model development.
+
+Evidence: `docs/within_integrity_review.csv` and
+`docs/within_integrity_review.json`. Reproduce the raw views and geometry with
+the same isolated environment and restored release:
+
+```sh
+runs/final177/integrity_env/bin/python scripts/review_within_candidates.py
+runs/final177/integrity_env/bin/python scripts/review_within_candidates.py --cases 327 226 669 710 648 444 342 344 671 331 381 780 185 352 129
+runs/final177/integrity_env/bin/python scripts/check_within_integrity_features.py
+```
+
+These helpers write into a separate `within` evidence folder and preserve the
+earlier cross-split review. They never edit the dataset or select a model.
