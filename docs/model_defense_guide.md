@@ -186,3 +186,20 @@ spatial sizes are112,112,56,28,14. Each changes one setting against the
 paired illumination reference. Neither larger setting is assumed superior.
 Completed seed434 gain must reach0.0051685 macro-F1 to trigger a second seed;
 acceptance requires paired mean gain at least0.005. See final_selection_plan.json.
+
+## Completed224 comparison and conditional native size
+
+The224-pixel pair completed with validation macro-F1 0.643382 and0.638739,
+mean0.641060, range0.004643. The matched160 illumination mean was0.621631;
+both seed changes were positive. This is limited replication, not significance.
+Class-level changes are in `resolution224_class_changes.csv`; eight labels had
+zero observed recall in both224 seeds, so improvements were not universal.
+
+Training metadata shows36925/59008 images exactly256×256. The conditional
+native256 check tests whether avoiding their downsampling improves validation.
+Its stem and residual spatial sizes are128,128,64,32,16; global pooling still
+provides192 features and177 logits, with724713 trainable parameters.
+Input area increases by256²/224²≈1.306; the sequential benchmark measured
+0.3184 versus0.2419 seconds per training update at batch128. Actual full-run
+times include validation and I/O and can vary with power and concurrent work.
+The larger resolution's quality remains pending until its full procedure finishes.

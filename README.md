@@ -21,8 +21,11 @@ Full-data training and validation experiments are in progress at the user's
 request. The paired 128/160-pixel comparison is complete; 160 pixels improved
 validation macro-F1 in both seeds. The completed illumination comparison raised
 two-seed mean macro-F1 from0.608911 to0.621631. Stronger weight decay did not
-improve that mean, so0.0001 is retained. The predeclared wider-channel and
-224-pixel scaling screens are next; larger models are not assumed better. `docs/active_training.json` identifies the current
+improve that mean, so0.0001 is retained. The completed wider-channel screen did not improve its matched reference.
+Both224-pixel procedures completed and reloaded: paired mean macro-F1
+0.641060 versus160-pixel mean0.621631. Both seed gains were positive.
+The conditional native256 screen is now running before final selection;
+larger inputs are not assumed better. `docs/active_training.json` identifies the current
 run; its `status.json` is the live epoch/checkpoint record. The historical pause record is retained separately.
 
 Final selection, held-out evaluation and the real final-model website rehearsal
