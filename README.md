@@ -22,9 +22,9 @@ request. The paired 128/160-pixel comparison is complete; 160 pixels improved
 validation macro-F1 in both seeds. The completed illumination comparison raised
 two-seed mean macro-F1 from0.608911 to0.621631. Stronger weight decay did not
 improve that mean, so0.0001 is retained. The completed wider-channel screen did not improve its matched reference.
-Both224-pixel procedures completed and reloaded: paired mean macro-F1
-0.641060 versus160-pixel mean0.621631. Both seed gains were positive.
-The conditional native256 screen is now running before final selection;
+Both 224-pixel procedures completed and reloaded: paired mean macro-F1
+0.641060 versus 160-pixel mean 0.621631. Both seed gains were positive.
+The conditional native 256 screen is now running before final selection;
 larger inputs are not assumed better. `docs/active_training.json` identifies the current
 run; its `status.json` is the live epoch/checkpoint record. The historical pause record is retained separately.
 
@@ -223,7 +223,15 @@ numerical final-model/API parity, orientation/color formats, invalid uploads and
 private-file routing. Full historical-reference tests use the original research
 environment; the running application needs no training data or notebooks.
 
-To record both the pipeline and website suites and execute the review notebook:
+After both frozen evaluations finish, generate the report source and figures
+before executing the review notebook. The notebook reads the saved development
+comparison figure. This command does not retrain or change the checkpoint:
+
+```sh
+.venv/bin/python -m leafcheck.final_report --artifact artifacts/leafcheck177-v1
+```
+
+Then record both the pipeline and website suites and execute the review notebook:
 
 ```sh
 .venv/bin/python scripts/verify_final.py --url http://127.0.0.1:8765
@@ -239,6 +247,19 @@ missing in a new research checkout, register its environment with:
 ```sh
 .venv/bin/python -m ipykernel install --user --name leafcheck --display-name "Python (LeafCheck)"
 ```
+
+After verification and the observed browser rehearsal, package the real local
+application and test a fresh extracted process without dataset or notebook files:
+
+```sh
+.venv/bin/python scripts/package_demo.py
+.venv/bin/python scripts/verify_demo_archive.py \
+  --python /absolute/path/to/app-only-environment/bin/python
+```
+
+The latter interpreter should have only the app dependencies from
+`leafcheck-demo/requirements-lock.txt`. The verification writes actual archive
+hashes, startup and HTTP measurements; packaging alone is not a completed check.
 
 ## Interpretation and course submission
 
