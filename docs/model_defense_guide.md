@@ -84,8 +84,10 @@ preserve symptoms without cropping away a lesion or changing hue. Their realism
 is limited for upright field scenes, which is a stated tradeoff. Evaluation and
 inference are deterministic and use no augmentation. Augmented views do not
 increase the count of independent plants. The controlled `dihedral_color` trial
-adds brightness and contrast factors from 0.9 to 1.1; whether this is retained
-must follow its completed validation results and the frozen configuration.
+adds brightness and contrast factors from 0.9 to 1.1; the completed two-seed comparison retained this mild variation: mean validation
+macro-F1 rose from0.608911 to0.621631. Stronger weight decay0.001 gave
+0.620684, so0.0001 remains the reference. These limited seed comparisons
+do not establish significance; width and224-pixel scaling checks are pending.
 
 The model returns logits, which are unrestricted scores. Cross-entropy accepts
 logits and an integer class index. At inference, softmax converts the 177 logits
@@ -173,3 +175,14 @@ tie tolerance; it never selects by test accuracy.
 [1] K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning for image
 recognition,” in *Proc. CVPR*, 2016, pp. 770–778, doi:
 [10.1109/CVPR.2016.90](https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html).
+
+## Controlled scaling checks
+
+The predeclared width screen uses32/64/128/256 channels at160 pixels,
+1,271,889 trainable parameters. Its stem shape is B×32×80×80;
+residual stages end at B×256×10×10, followed by256 pooled features and177logits.
+The separate224-pixel screen retains24/48/96/192 widths and724,713parameters;
+spatial sizes are112,112,56,28,14. Each changes one setting against the
+paired illumination reference. Neither larger setting is assumed superior.
+Completed seed434 gain must reach0.0051685 macro-F1 to trigger a second seed;
+acceptance requires paired mean gain at least0.005. See final_selection_plan.json.

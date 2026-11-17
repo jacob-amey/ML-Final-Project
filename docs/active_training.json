@@ -1,24 +1,6 @@
 {
-  "state": "running_illumination_seed_repeat",
-  "authorized_utc": "2026-11-17T01:13:29.075569+00:00",
-  "run": "runs/final177/residual177_160_color_seed435",
-  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
-  "mps_available": true,
-  "power_source": "AC Power; detected94W charger",
-  "test_predictions_inspected": false,
-  "previous_pause_record": "docs/training_pause.json",
-  "first_resolution_run_complete": true,
-  "historical_resume": {
-    "resume_epoch": 27,
-    "completed_batches_in_epoch": 74,
-    "checkpoint_sha256_before_resume": "b7a9f7391dd141f636004f7a4d3a68f547cbb4f1afa20ff45adc6f43cd7dd026"
-  },
-  "live_status_file": "runs/final177/residual177_160_color_seed435/status.json",
-  "resolution_repeat_complete": true,
-  "selected_development_resolution": 160,
-  "illumination_first_seed_complete": true,
-  "queued_run": "runs/final177/residual177_160_color_decay_seed434",
-  "queue_requires_completed_reference": "runs/final177/residual177_160_color_seed435/status.json",
-  "followed_by": "runs/final177/residual177_160_color_decay_seed435",
-  "queue_reason": "The saved best in both illumination seeds exceeds its completed D4 counterpart; paired mean is already higher and can only change within the checkpoint tie tolerance. Wait for full completion/reload before starting the declared decay comparison."
+  "state": "scaling_screen",
+  "run": "runs/final177/residual177_wide_seed434",
+  "updated_utc": "2026-11-17T12:01:17.743472+00:00",
+  "test_predictions_inspected": false
 }
