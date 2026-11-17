@@ -16,5 +16,9 @@
   "live_status_file": "runs/final177/residual177_160_color_seed435/status.json",
   "resolution_repeat_complete": true,
   "selected_development_resolution": 160,
-  "illumination_first_seed_complete": true
+  "illumination_first_seed_complete": true,
+  "queued_run": "runs/final177/residual177_160_color_decay_seed434",
+  "queue_requires_completed_reference": "runs/final177/residual177_160_color_seed435/status.json",
+  "followed_by": "runs/final177/residual177_160_color_decay_seed435",
+  "queue_reason": "The saved best in both illumination seeds exceeds its completed D4 counterpart; paired mean is already higher and can only change within the checkpoint tie tolerance. Wait for full completion/reload before starting the declared decay comparison."
 }

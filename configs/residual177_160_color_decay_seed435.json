@@ -1,0 +1,32 @@
+{
+  "experiment": "residual177-160-mild-illumination-stronger-weight-decay-seed-repeat",
+  "hypothesis": "Repeat the stronger-weight-decay recipe with independent initialization, shuffle and augmentation randomness to compare paired-seed validation means.",
+  "reference": "residual177_160_color_decay_seed434; same numeric configuration except seed. Compare with the same seed435 illumination reference.",
+  "seed": 435,
+  "device": "auto",
+  "cpu_threads": 4,
+  "input_size": 160,
+  "model": {
+    "architecture": "residual_v1",
+    "channels": [
+      24,
+      48,
+      96,
+      192
+    ],
+    "num_classes": 177,
+    "dropout": 0.2
+  },
+  "batch_size": 128,
+  "validation_batch_size": 256,
+  "learning_rate": 0.002,
+  "weight_decay": 0.001,
+  "gradient_clip": 5.0,
+  "augmentation": "dihedral_color",
+  "class_weight_power": 0.5,
+  "label_smoothing": 0.0,
+  "max_epochs": 64,
+  "min_epochs": 24,
+  "patience": 10,
+  "early_min_delta": 0.001
+}
