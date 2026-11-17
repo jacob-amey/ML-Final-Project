@@ -49,6 +49,16 @@
       "hypothesis": "Moderately stronger weight decay may reduce fitting of unstable training-specific features without discarding lesion information.",
       "acceptance": "Repeat a promising improvement with seed435; compare paired-seed means, accuracy, loss and class support. Small changes relative to observed initialization variability remain tentative.",
       "stopping_evidence": "If illumination and stronger weight decay fail to produce a reproducible validation improvement after the completed resolution comparison, stop this regularization branch. Additional model complexity requires new validation evidence rather than the absence of a time limit. Final test stays sealed."
+    },
+    {
+      "declared_utc": "2026-11-17T03:18:42.111552+00:00",
+      "trigger": "User-authorized uncapped local computation; before completion of the first illumination screen and before any test predictions.",
+      "change": "Run both planned regularization comparisons with seed434 and435, including a second seed when the first is not promising. This strengthens the evidence for keeping or rejecting the recipe rather than assuming one initialization settles the method.",
+      "resolution": 160,
+      "illumination_control": "Compare D4 versus D4 plus brightness/contrast0.9\u20131.1 on the same two seeds.",
+      "decay_control": "Then test weight_decay0.001 versus0.0001 on the leading paired-seed augmentation recipe, with the same two seeds and all other numerical settings fixed.",
+      "selection": "Compare paired-seed mean selected-checkpoint validation macro-F1; small changes relative to initialization range remain tentative. Select a delivered checkpoint within the accepted recipe by the existing F1/loss/earlier-epoch rule.",
+      "invariants": "Same all177 labels and frozen train/validation membership. No test predictions or thresholds. No pretrained weights. Further changes require validation evidence and a declared hypothesis; no global-optimum claim."
     }
   ],
   "fair_heldout_reference": {

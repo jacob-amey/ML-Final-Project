@@ -15,5 +15,7 @@
   },
   "live_status_file": "runs/final177/residual177_160_color_seed434/status.json",
   "resolution_repeat_complete": true,
-  "selected_development_resolution": 160
+  "selected_development_resolution": 160,
+  "queued_run": "runs/final177/residual177_160_color_seed435",
+  "queue_requires_completed_reference": "runs/final177/residual177_160_color_seed434/status.json"
 }
