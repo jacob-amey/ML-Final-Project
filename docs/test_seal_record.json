@@ -8,5 +8,14 @@
   "test_cache_present": false,
   "final177_test_prediction_records_present": false,
   "supplementary_predictions_present": false,
-  "scope": "Observed filesystem/entry-point evidence before model selection; integrity audits inspected file/group metadata but no final model test metrics were computed."
+  "scope": "Observed filesystem/entry-point evidence before model selection; integrity audits inspected file/group metadata but no final model test metrics were computed.",
+  "latest_development_observation": {
+    "observed_utc": "2026-11-17T02:49:05.129191+00:00",
+    "test_cache_present": false,
+    "frozen_final_artifact_exists": false,
+    "final177_test_prediction_records_present": false,
+    "supplementary_prediction_records_present": false,
+    "raw_file_integrity_review": "Additional36 raw cross-split candidate pairs inspected without model outputs; see additional_integrity_review.json. No model/data choices were based on test predictions or errors.",
+    "model_selection_complete": false
+  }
 }
