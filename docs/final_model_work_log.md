@@ -270,3 +270,13 @@ caffeinate -i .venv/bin/python -m leafcheck.train --run runs/final177/residual17
   bytes, labels or splits changed. Remaining 756 candidates and unknown specimen/
   session IDs remain limitations. Raw integrity views did not include predictions
   and do not guide model choices; augmentation was declared before this review.
+
+- While the second resolution seed was running, macOS detected a 45 W adapter
+  but the battery continued falling. The user connected a higher-power charger;
+  the system then reported 94 W and a rising charge. The exact training state
+  continued without changes to data, weights, optimizer or schedule. Resource
+  observations distinguish this power condition from algorithm comparisons.
+- The runtime package now checks the selected run's architecture/preprocessing
+  source hashes before freezing. The compact reference's earlier implicit
+  float32 normalization and the explicit float32 implementation were checked
+  to produce bitwise-identical tensors under its original default.
