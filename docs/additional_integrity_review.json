@@ -50,10 +50,10 @@
     "limitations": "Sparse/collinear/background correspondences are not enough for identity. Failed correspondence does not prove no related plant, source photo crop or capture session."
   },
   "render_scripts": {
-    "scripts/review_integrity_candidates.py": "032192cac5c00e2cc4a96556eca57bb42edbd84aaa1c95871633080350e966b1",
-    "scripts/check_integrity_features.py": "23e332474dbf622cae45d7a09e59063fc7f690e79fbd2993eb44cc6676628848"
+    "scripts/review_integrity_candidates.py": "3c6576b05fe7ad51f8b6b5f7aaeffe61bfe455d38f2979d4eff1da1498597043",
+    "scripts/check_integrity_features.py": "b0f89204cfca142f39a65b74bd1878a894c9604f9bc3264b53a1a3827727c354"
   },
-  "rendering_record_sha256": "a714821e7820de1f30bfb1f9610c4256fba8feb10fa572eddf734caf0fb8ccaa",
+  "rendering_record_sha256": "3807379ca42ccb13e730eaca065d338f79be03c43959f0d382e9f28f620b4570",
   "initial_larger_views_reviewed": [
     673,
     757
@@ -66,5 +66,7 @@
     525,
     556,
     482
-  ]
+  ],
+  "reproduction_requirements": "docs/integrity_requirements.txt",
+  "case_list_reconstruction": "Both helpers reconstruct the exact792 ordered cases from the frozen release manifest and candidate metadata, and reject an existing list with different values/order."
 }

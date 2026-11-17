@@ -164,3 +164,19 @@ remain limitations. A failed feature match is not proof of biological independen
 methods, source dimensions, control and limitations. The inspection environment
 was isolated from model training. Only raw-file integrity was reviewed; test
 predictions, metrics and mistakes were not used for model development.
+
+To reproduce this supplemental inspection after restoring the exact release:
+
+```sh
+.venv/bin/python -m venv runs/final177/integrity_env
+runs/final177/integrity_env/bin/python -m pip install -r docs/integrity_requirements.txt
+runs/final177/integrity_env/bin/python scripts/review_integrity_candidates.py --start 0 --stop 366
+runs/final177/integrity_env/bin/python scripts/review_integrity_candidates.py --native-cases 673 757 284 286 351 477 525 556 482
+runs/final177/integrity_env/bin/python scripts/check_integrity_features.py
+```
+
+The helpers reconstruct the original ordered792-case list from release metadata;
+they do not require an untracked setup script. The first command creates a
+separate inspection environment. Its pinned packages do not replace training
+dependencies. Candidate feature matches are review aids, not automatic exclusion
+or diagnosis rules. The same-photo control is software evidence only.

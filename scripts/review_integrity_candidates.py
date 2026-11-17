@@ -16,6 +16,32 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data/processed/leafcheck177_final"
 
 
+def load_cases():
+    """Reconstruct the ordered review list from the unchanged release metadata."""
+    directory = ROOT / "runs/final177/additional_integrity_review"
+    directory.mkdir(parents=True, exist_ok=True)
+    source = directory / "cases.csv"
+    with (DATA / "manifest.csv").open() as file:
+        included = {row["master_relative_path"]:row for row in csv.DictReader(file) if row["status"] == "included"}
+    with (DATA / "metadata/unreviewed_cross_label_candidates.csv").open() as file:
+        candidates = list(csv.DictReader(file))
+    rows = []
+    for index, row in enumerate(candidates):
+        first = included[row["first"]]; second = included[row["second"]]
+        rows.append({"case_id":str(index), **row, "first_final_path":first["output_relative_path"],
+                     "second_final_path":second["output_relative_path"], "first_split":first["split"],
+                     "second_split":second["split"], "cross_split":str(first["split"] != second["split"]),
+                     "touches_test":str("test" in [first["split"],second["split"]])})
+    rows.sort(key=lambda row:(row["cross_split"] != "True", float(row["mean_absolute_error"]), int(row["case_id"])))
+    assert len(rows) == 792
+    if source.exists():
+        assert rows == list(csv.DictReader(source.open())), "Review list changed after the recorded integrity decisions"
+    else:
+        with source.open("w",newline="") as file:
+            writer=csv.DictWriter(file,fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
+    return rows
+
+
 def thumbnail(path):
     with Image.open(path) as source:
         source.seek(0)
@@ -44,7 +70,7 @@ def main():
     args = parser.parse_args()
     directory = ROOT / "runs/final177/additional_integrity_review"
     source = directory / "cases.csv"
-    rows = list(csv.DictReader(source.open()))
+    rows = load_cases()
     assert sum(row["cross_split"] == "True" for row in rows) == 366
     assert all(row["cross_split"] == "True" for row in rows[:366])
     assert 0 <= args.start < args.stop <= 366

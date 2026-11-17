@@ -12,6 +12,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 from PIL import Image, ImageOps
+from review_integrity_candidates import load_cases
 
 ROOT = Path(__file__).resolve().parents[1]
 DIRECTORY = ROOT / "runs/final177/additional_integrity_review"
@@ -67,7 +68,7 @@ def match(first, second, name):
 
 def main():
     cv2.setNumThreads(2); cv2.setRNGSeed(434)
-    rows = {int(row["case_id"]):row for row in csv.DictReader((DIRECTORY / "cases.csv").open())}
+    rows = {int(row["case_id"]):row for row in load_cases()}
     results = []
     for case in [284,286,351,477,525,556,482,102]:
         row = rows[case]
