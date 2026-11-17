@@ -140,3 +140,15 @@ Relevant pinned primary sources:
 Dataset preparation and verification were assisted by Codex. The student should
 review these policies, understand the grouping and split decisions, and describe
 this assistance accurately in project documentation under course rules.
+
+## Supplemental integrity review during final training
+
+After the release freeze, 36 of the 792 lower-priority component-pair candidates
+were inspected again, prioritizing the closest cross-split representatives by
+aligned mean absolute pixel error. No shared photograph was confirmed in these
+36 pairs, so no images, labels, groups or split assignments changed. The original
+792-row evidence file remains intact; 756 pairs did not receive this additional
+review. This does not establish biological independence or verify diagnoses.
+`docs/additional_integrity_review.csv` and its JSON summary record the cases,
+selection and limitations. Only raw-file integrity was reviewed; test predictions,
+metrics and mistakes remain excluded from model development.
