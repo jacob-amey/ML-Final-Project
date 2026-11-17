@@ -44,6 +44,19 @@ The classifier still receives 192 pooled features, so the parameter count stays
 724,713. Most spatial convolution work grows roughly with image area: 160²/128²
 is 1.5625, although measured runtime also includes device and data overhead.
 
+The completed paired-resolution comparison retained 160-pixel inputs for the
+current development reference. Its spatial trace is:
+
+| Component | Residual model shape at 160 pixels |
+| --- | --- |
+| Input | B×3×160×160 |
+| Convolutional stem | B×24×80×80 |
+| Residual block 1 | B×24×80×80 |
+| Residual block 2 | B×48×40×40 |
+| Residual block 3 | B×96×20×20 |
+| Residual block 4 | B×192×10×10 |
+| Global pooling and classifier | B×192, then B×177 logits |
+
 The first convolution has `3×24×3×3 = 648` weights; its bias is omitted because
 batch normalization follows. Batch normalization adds 24 learned scales and
 24 offsets, plus non-trainable running statistics. The final linear layer has
