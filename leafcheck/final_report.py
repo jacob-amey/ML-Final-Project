@@ -58,6 +58,13 @@ def main():
     fig.suptitle("Class support and performance — descriptive, not a causal comparison")
     fig.tight_layout(); fig.savefig(figures / "support_and_f1.png", dpi=180); plt.close(fig)
     rows = "\n".join(f"| {r['run']} | {r['completed_epochs']} | {r['selected_epoch']} | {float(r['validation_accuracy']):.4f} | {float(r['validation_macro_f1']):.4f} | {float(r['validation_loss']):.4f} | {r['decision']} |" for r in experiments)
+    seed_rows = []
+    for path in sorted((ROOT / "docs").glob("seed_stability_*.json")):
+        evidence = read(path)
+        assert evidence["matching_numeric_configs_and_core_training_sources_verified"]
+        cfg = read(ROOT / "runs/final177" / evidence["runs"][0]["run"] / "config.json")
+        seed_rows.append(f"| {cfg['input_size']} | {cfg['augmentation']} | {cfg['weight_decay']} | {evidence['mean_macro_f1']:.6f} | {evidence['macro_f1_range']:.6f} |")
+    seed_table = "\n".join(seed_rows)
     confusion = list(csv.DictReader((directory / "major_confusions.csv").open()))[:8]
     confusion_rows = "\n".join(f"| {r['actual_class']} | {r['predicted_class']} | {r['count']} / {r['actual_support']} | {float(r['fraction_of_actual_class']):.1%} |" for r in confusion)
     rare = [r for r in test["per_class"] if r["support"] < 10]
@@ -157,6 +164,14 @@ a parent procedure; its cost must not be counted as another fresh 48-epoch run.
 | Run | Epochs | Selected epoch | Val accuracy | Val macro-F1 | Val loss | Decision |
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
 {rows}
+
+| Input size | Training augmentation | Weight decay | Two-seed mean macro-F1 | Observed seed range |
+| ---: | --- | ---: | ---: | ---: |
+{seed_table}
+
+These are two selected validation checkpoints per recipe, not confidence
+intervals or evidence of significance. Rare-class sampling variability and
+repeated use of the validation set still limit the comparison.
 
 ![Development comparison](figures/experiment_comparison.png)
 

@@ -41,6 +41,7 @@ def main():
     write_csv(args.output.with_suffix(".csv"),rows)
     scores=[r["metrics"]["macro_f1"] for r in records]
     summary={"evaluation_split":"validation only","input_size":left["config"]["input_size"],
+             "controlled_config":{k:v for k,v in left["config"].items() if k not in descriptive},
              "matching_numeric_configs_and_core_training_sources_verified":True,
              "runs":[{k:r[k] for k in ["run","seed","selected_epoch","checkpoint_sha256"]} | {"macro_f1":r["metrics"]["macro_f1"],"accuracy":r["metrics"]["accuracy"]} for r in records],
              "mean_macro_f1":sum(scores)/2,"macro_f1_range":max(scores)-min(scores),
