@@ -1,0 +1,45 @@
+{
+  "recorded_utc": "2026-11-17T16:26:40.908670+00:00",
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "input_size": 256,
+  "test_pixels_prepared": false,
+  "splits": {
+    "train": {
+      "count": 59008,
+      "row_metadata_exactly_matches224": true,
+      "pixel_file_bytes": 11601444992,
+      "pixel_sha256": "e066ad3eb491c2b6c3a75e83ebb15bb38bbb3c063737f6b86234a11b171eda48",
+      "metadata_sha256": "32f6294d89c44b43ca1303b07c8bfd94d0d4996c39f68e0ce82af882684fa200"
+    },
+    "val": {
+      "count": 16836,
+      "row_metadata_exactly_matches224": true,
+      "pixel_file_bytes": 3310092416,
+      "pixel_sha256": "d8fd563c5d29b4cd4454c06c32c83c06fc00ee9b9d3d0636c75209a59d76f308",
+      "metadata_sha256": "3a1e23959d19614c0c5ca3ed394d5a5f5da93a801fe53b9d60d2cae030a6e8ff"
+    }
+  },
+  "preprocessing": {
+    "version": "exif_rgb_letterbox_bilinear_v1",
+    "input_size": 256,
+    "mean": [
+      0.47821272768632384,
+      0.5103671370939181,
+      0.42243798838124985
+    ],
+    "std": [
+      0.21698199695678783,
+      0.19916624813567338,
+      0.23681870560541451
+    ],
+    "statistics_split": "train",
+    "statistics_images": 59008,
+    "resize": "Pillow ImageOps.pad bilinear, RGB padding 128",
+    "orientation": "EXIF transpose",
+    "channels": "RGB",
+    "frame": 0,
+    "scaling": "uint8 / 255, then (x - mean) / std",
+    "tensor_layout": "NCHW"
+  },
+  "concurrent_preparation_note": "CPU cache preparation overlapped part of224 seed435; total run times are not controlled causal comparisons of method cost."
+}
