@@ -34,17 +34,20 @@ def main():
     for name in ["learning_curves.png", "confusion_matrix.png", "major_confusions.png", "external_confusion_matrix.png"]:
         shutil.copyfile(directory / name, figures / name)
     fresh_runs = [row for row in experiments if not row["parent_run"] or row.get("additional_training_seconds")]
-    fig, axes = plt.subplots(1, 2, figsize=(13, 4.8))
+    fig, axes = plt.subplots(1, 2, figsize=(16, max(6.2, len(fresh_runs) * .48)))
     for row in fresh_runs:
         history = list(csv.DictReader((ROOT / "runs/final177" / row["run"] / "history.csv").open()))
         axes[0].plot([int(r["epoch"]) for r in history], [float(r["validation_macro_f1"]) for r in history], label=row["run"], linestyle="--" if row["parent_run"] else "-")
     axes[0].set(xlabel="Completed full-data epoch", ylabel="Validation macro-F1 (177 classes)", ylim=(0, 1))
     axes[0].grid(alpha=.2); axes[0].legend(fontsize=7)
     names = [row["run"].replace("177", "").replace("_seed", "\nseed ") for row in fresh_runs]
-    axes[1].bar(range(len(names)), [float(row["validation_macro_f1"]) for row in fresh_runs], color="#527a67")
-    axes[1].set_xticks(range(len(names)), names, rotation=15, ha="right", fontsize=8)
-    axes[1].set(ylabel="Selected-checkpoint validation macro-F1", ylim=(0, 1))
-    for i, row in enumerate(fresh_runs): axes[1].text(i, float(row["validation_macro_f1"])+.012, f"{float(row['validation_macro_f1']):.3f}", ha="center")
+    selected_name = Path(selected["run"]).name
+    axes[1].barh(range(len(names)), [float(row["validation_macro_f1"]) for row in fresh_runs],
+                 color=["#bd812c" if row["run"] == selected_name else "#527a67" for row in fresh_runs])
+    axes[1].set_yticks(range(len(names)), names, fontsize=8)
+    axes[1].set(xlabel="Selected-checkpoint validation macro-F1", xlim=(0, 1))
+    axes[1].invert_yaxis()
+    for i, row in enumerate(fresh_runs): axes[1].text(float(row["validation_macro_f1"])+.012, i, f"{float(row['validation_macro_f1']):.3f}", va="center", fontsize=8)
     fig.suptitle("Development evidence — shared frozen train/validation splits")
     fig.tight_layout(); fig.savefig(figures / "experiment_comparison.png", dpi=180); plt.close(fig)
     training_support = {r["class_name"]:int(r["training_images"]) for r in csv.DictReader((ROOT / "docs/training_class_support.csv").open())}
