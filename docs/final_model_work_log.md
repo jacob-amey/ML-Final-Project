@@ -300,3 +300,11 @@ caffeinate -i .venv/bin/python -m leafcheck.train --run runs/final177/residual17
 - In the historical resumed epoch 27, the logged maximum gradient norm covers
   the post-resume segment. Every update was still checked for finite gradients;
   weights, optimizer/RNG state and partial training metrics were restored.
+
+- Expanded the pretest scaling plan after the user's removal of compute/time
+  caps: one moderately wider channel configuration and one 224-pixel input
+  check, separately controlled after regularization. Positive completed
+  capacity/resolution evidence motivates these screens; larger is not assumed
+  better. Fixed effect-size and seed-repeat conditions prevent an unbounded
+  architecture grid. Preparing224 train/validation caches changes no split,
+  image bytes or labels; no test cache is built.

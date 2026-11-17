@@ -59,6 +59,20 @@
       "decay_control": "Then test weight_decay0.001 versus0.0001 on the leading paired-seed augmentation recipe, with the same two seeds and all other numerical settings fixed.",
       "selection": "Compare paired-seed mean selected-checkpoint validation macro-F1; small changes relative to initialization range remain tentative. Select a delivered checkpoint within the accepted recipe by the existing F1/loss/earlier-epoch rule.",
       "invariants": "Same all177 labels and frozen train/validation membership. No test predictions or thresholds. No pretrained weights. Further changes require validation evidence and a declared hypothesis; no global-optimum claim."
+    },
+    {
+      "declared_utc": "2026-11-17T03:34:43.782521+00:00",
+      "trigger": "User removed compute/time caps. Completed paired128-to160 change gained0.007912 macro-F1, and the completed initial capacity comparison improved macro-F1 from0.536531 to0.595327. Test predictions remain sealed.",
+      "change": "After the paired regularization comparisons, test two further single-variable scaling hypotheses against the leading supported recipe: channels32/64/128/256 instead of24/48/96/192 at the reference input size, and input_size224 instead of160 with reference channels. Do not combine the two changes in the initial screens. This supersedes the earlier cost-driven160-pixel ceiling.",
+      "hypotheses": [
+        "Moderately wider feature maps may better distinguish the177 inherited categories and the cross-crop validation confusions. Increased capacity can also worsen overfitting, so larger is not assumed better.",
+        "The positive paired resolution result motivates checking whether224 retains useful fine symptom detail beyond160, while leaving trainable parameter count fixed."
+      ],
+      "controls": "Same frozen membership and all177 labels, training-only normalization fitting algorithm, selected augmentation/weighting/regularization/schedule and seed434. Each fresh full-data run visits59008 images per epoch.",
+      "benchmark": "Benchmark a short representative run sequentially on MPS before the larger full procedure; record memory, power and actual throughput. Keep batch size fixed when feasible.",
+      "repeat_trigger": "Repeat a scaling candidate with seed435 if its completed seed434 macro-F1 gain reaches max(0.005, observed paired-seed range of the reference recipe). Otherwise record the single-seed screen as limited evidence and keep the reference; do not claim a universal lack of benefit.",
+      "acceptance": "Require a paired-seed mean macro-F1 improvement of at least0.005 to accept extra scaling complexity; inspect accuracy, loss, class support and measured demo cost as secondary evidence. Report seed ranges and do not claim significance.",
+      "stopping": "Stop a scaling direction when its controlled result is negligible, unstable or worse. Further scaling requires a new validation-supported hypothesis and meaningful expected gain rather than the absence of a time cap. No model changes after frozen test evaluation."
     }
   ],
   "fair_heldout_reference": {
