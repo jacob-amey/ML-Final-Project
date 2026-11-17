@@ -292,3 +292,11 @@ caffeinate -i .venv/bin/python -m leafcheck.train --run runs/final177/residual17
 - The preregistered mild-illumination trial started after the repeat
   completed. Only augmentation changes; all 59,008 training images remain.
   The final test and supplement remain sealed.
+
+- Visually checked original and mild-illumination/D4 views for fixed training
+  indices 1234, 15555 and 40000. Image content, outlines and visible markings
+  remain present. Preview IDs, seed and SHA are recorded; this is a three-image
+  software sanity check, not disease-evaluation evidence.
+- In the historical resumed epoch 27, the logged maximum gradient norm covers
+  the post-resume segment. Every update was still checked for finite gradients;
+  weights, optimizer/RNG state and partial training metrics were restored.

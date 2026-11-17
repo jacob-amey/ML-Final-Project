@@ -1,0 +1,28 @@
+{
+  "preview": "runs/final177/diagnostics/illumination_augmentation_preview.png",
+  "seed": 434,
+  "split": "train",
+  "examples": [
+    {
+      "training_index": 1234,
+      "image_id": "sha256:6e8ff418a6af0f2ab009dcc3f31aac3dde552458df3bb5152ef1116db4231ff0",
+      "class_name": "apple__healthy"
+    },
+    {
+      "training_index": 15555,
+      "image_id": "sha256:a09861b2f961d84884430f3977d2b6c672270b2d639b1f8019b2223a62d822a4",
+      "class_name": "grape__black_measles"
+    },
+    {
+      "training_index": 40000,
+      "image_id": "sha256:e1e6e33b3ef9e7301b3a510b39ec47b4e62bd695c6adf3b45a1efdc5d950b943",
+      "class_name": "soybean__healthy"
+    }
+  ],
+  "purpose": "Visual preprocessing/augmentation check, not disease accuracy evidence",
+  "reviewed_utc": "2026-11-17T03:07:03.805309+00:00",
+  "preview_sha256": "0558fbef30d4489b01b51df8138bd9fa39abaa427d6609c007eb4ee07f935f0e",
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "visual_observation": "All three previews retain the image content, leaf outlines and visible disease markings. Brightness/contrast changes are mild; reflections/quarter turns keep the complete square image.",
+  "limitations": "Three training examples are a software/visual sanity check, not proof that every augmentation is botanically valid or improves held-out performance. No model predictions were used."
+}
