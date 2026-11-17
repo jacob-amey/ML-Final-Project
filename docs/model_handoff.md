@@ -72,8 +72,8 @@ Both should agree on supported file types, limits, raw label names versus displa
 names, uncertainty text, model-version display and the response/error schema.
 Actual assisted work is recorded separately in `docs/contributions.md`.
 
-The app displays saved final-model and rule scores for their shared 177-class
-test set, and separately labels the supplementary three-class PlantDoc check.
+The app displays saved final-model, Compact177 full-data reference and rule
+scores for their shared 177-class test set, and separately labels the supplementary three-class PlantDoc check.
 Earlier pilots have different label spaces and splits. Create ML's old training
 and validation images overlap the new test, so its score is not a fair held-out
 comparison on that set.

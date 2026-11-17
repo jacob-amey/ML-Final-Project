@@ -17,18 +17,16 @@ local bundles and archives follow `.gitignore`; they are not large Git binaries.
 
 ## Status and evidence
 
-Full-data training has resumed at the user's request on AC power. The first 160-pixel
-trial has completed all 64 epochs; its independently initialized seed repeat is
-training on the same complete split. Current run information
-is in `docs/active_training.json`; the earlier verified pause snapshot and backup
-are retained in `docs/training_pause.json`.
+Full-data training and validation experiments are in progress at the user's
+request. The paired 128/160-pixel comparison is complete; 160 pixels improved
+validation macro-F1 in both seeds. The declared augmentation and regularization
+checks follow that reference. `docs/active_training.json` identifies the current
+run and its live status file. The historical pause record is retained separately.
 
-The best completed 160-pixel run has validation macro-F1 0.608147, compared with
-0.603681 for the best 128-pixel run. Resolution stability and the declared
-regularization experiments remain development work. Final selection,
-held-out evaluation and the real final-model website rehearsal remain pending.
-Both test sets are sealed. Read `docs/experiments.csv` for recorded validation
-results and `docs/final_model_work_log.md` for completed work.
+Final selection, held-out evaluation and the real final-model website rehearsal
+remain pending. No final-model predictions have been inspected on the primary
+holdout or supplementary collection. Read `docs/experiments.csv` for saved
+validation results and `docs/final_model_work_log.md` for completed work.
 
 - `docs/final_model_requirements.md`: verified requirements, assumptions and
   declared checkpoint/experiment selection rules.
