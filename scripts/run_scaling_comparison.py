@@ -38,6 +38,8 @@ def command(args, log):
 def run(config_path, run_path):
     status_path = run_path / "status.json"
     status = json.loads(status_path.read_text()) if status_path.exists() else {}
+    if (run_path / "config.json").exists():
+        assert json.loads((run_path / "config.json").read_text()) == json.loads(config_path.read_text()), "Run/config mismatch; do not silently resume different settings"
     if status.get("state") != "complete":
         args = ["-m", "leafcheck.train", "--run", str(run_path)]
         if (run_path / "last.pt").exists():

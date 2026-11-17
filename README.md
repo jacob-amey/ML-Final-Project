@@ -19,9 +19,11 @@ local bundles and archives follow `.gitignore`; they are not large Git binaries.
 
 Full-data training and validation experiments are in progress at the user's
 request. The paired 128/160-pixel comparison is complete; 160 pixels improved
-validation macro-F1 in both seeds. The declared augmentation and regularization
-checks follow that reference. `docs/active_training.json` identifies the current
-run and its live status file. The historical pause record is retained separately.
+validation macro-F1 in both seeds. The completed illumination comparison raised
+two-seed mean macro-F1 from0.608911 to0.621631. Stronger weight decay did not
+improve that mean, so0.0001 is retained. The predeclared wider-channel and
+224-pixel scaling screens are next; larger models are not assumed better. `docs/active_training.json` identifies the current
+run; its `status.json` is the live epoch/checkpoint record. The historical pause record is retained separately.
 
 Final selection, held-out evaluation and the real final-model website rehearsal
 remain pending. No final-model predictions have been inspected on the primary
