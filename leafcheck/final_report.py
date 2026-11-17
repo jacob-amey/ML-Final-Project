@@ -124,7 +124,7 @@ Framework layers/autograd implement the mathematics; all weights start randomly.
 Preprocessing selects frame zero, corrects EXIF orientation, converts to RGB,
 bilinearly resizes while preserving aspect ratio and center-pads with gray 128
 to {config['input_size']}×{config['input_size']}. Float32 pixels are divided by 255
-and standardized with saved training-only mean/std. Training alone uses whole-image
+and standardized with saved training-only mean/std. Training alone uses
 {augmentation_description}. These avoid hue shifts and lesion-removing crops,
 but upright field scenes need not be rotation invariant. Augmented views are
 not independent samples. Evaluation and inference share one deterministic function.

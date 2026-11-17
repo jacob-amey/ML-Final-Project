@@ -41,6 +41,14 @@
       "next_controlled_trial": "After choosing the competitive resolution recipe, test dihedral_color versus dihedral, holding architecture, split, class weighting, seed and schedule fixed. Brightness and contrast range0.9\u20131.1; no hue shifts or crops.",
       "hypothesis": "Persistently larger training than validation macro-F1 and weaker varied-scene validation strata justify testing mild illumination variation before increasing capacity. Source strata have different class compositions, so this does not assert a proven causal background shortcut.",
       "repeat_rule": "Repeat a promising augmentation recipe with seed435. Preserve all reference checkpoints, report both seed results, and select using validation only. No test predictions until the search stops and artifacts are frozen."
+    },
+    {
+      "declared_utc": "2026-11-17T02:22:08.654767+00:00",
+      "next_conditional_trial": "After the mild-illumination screen and any justified repeat, test AdamW weight_decay=0.001 versus 0.0001 on the leading supported resolution/augmentation recipe. Hold all other numeric settings fixed and initialize seed434 from scratch.",
+      "validation_evidence": "Completed weighted recipes have training macro-F1 about0.87\u20130.88 and validation macro-F1 about0.60 after learning-rate reduction. This supports a controlled stronger-regularization trial; losses with and without class weights are not directly compared.",
+      "hypothesis": "Moderately stronger weight decay may reduce fitting of unstable training-specific features without discarding lesion information.",
+      "acceptance": "Repeat a promising improvement with seed435; compare paired-seed means, accuracy, loss and class support. Small changes relative to observed initialization variability remain tentative.",
+      "stopping_evidence": "If illumination and stronger weight decay fail to produce a reproducible validation improvement after the completed resolution comparison, stop this regularization branch. Additional model complexity requires new validation evidence rather than the absence of a time limit. Final test stays sealed."
     }
   ],
   "fair_heldout_reference": {
