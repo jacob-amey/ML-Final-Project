@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-17T13:04:50.466023+00:00",
+  "updated_utc": "2026-11-17T17:43:38.752162+00:00",
   "evaluation_split": "validation only",
   "reference": "docs/seed_stability_160_color.json",
   "results": [
@@ -26,6 +26,45 @@
       "repeat_required": false,
       "accepted_by_declared_rule": false,
       "limitation": "One-seed screen below declared repeat trigger; not proof scaling cannot help."
+    },
+    {
+      "direction": "224",
+      "first_seed": {
+        "state": "complete",
+        "completed_epochs": 63,
+        "best": {
+          "macro_f1": 0.6433816585883837,
+          "loss": 0.4318041101586623,
+          "accuracy": 0.8937990021382751,
+          "epoch": 53
+        },
+        "total_steps": 29043,
+        "training_seconds": 8224.818099291995,
+        "stopping_reason": "early stopping after validation macro-F1 plateau",
+        "checkpoint_reload_verified": true,
+        "saved_utc": "2026-11-17T15:22:03.773174+00:00"
+      },
+      "reference_seed434_macro_f1": 0.6242151517031679,
+      "screen_gain": 0.019166506885215817,
+      "repeat_trigger": 0.005168516658778821,
+      "repeat_required": true,
+      "second_seed": {
+        "state": "complete",
+        "completed_epochs": 57,
+        "best": {
+          "macro_f1": 0.6387387281180741,
+          "loss": 0.4325664806150716,
+          "accuracy": 0.8900570206699929,
+          "epoch": 47
+        },
+        "total_steps": 26277,
+        "training_seconds": 8479.921346500021,
+        "stopping_reason": "early stopping after validation macro-F1 plateau",
+        "checkpoint_reload_verified": true,
+        "saved_utc": "2026-11-17T17:43:33.994422+00:00"
+      },
+      "paired_mean_gain": 0.01942929997945053,
+      "accepted_by_declared_rule": true
     }
   ],
   "test_predictions_used": false

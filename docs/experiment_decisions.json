@@ -52,7 +52,11 @@
     "rationale": "Completed45 full-data epochs, selected35, macro-F10.623912. Does not improve the matched reference0.624215 or reach0.005169 repeat trigger; not proof width cannot help. Reload verified; no test use."
   },
   "residual177_224_seed434": {
-    "decision": "Keep as promising completed resolution screen; paired repeat running",
-    "rationale": "63 full epochs, selected53; validation macro-F1 0.643382 (+0.019167 versus matched160 reference), accuracy0.893799; reload verified. Await seed435 and paired mean before acceptance. Test sealed."
+    "decision": "Retain; accepted paired224 resolution reference",
+    "rationale": "Completed and reload verified. Paired mean macro-F1 0.641060 versus160 mean0.621631 (+0.019429); both seed gains positive. Seed range0.004643. See resolution224_decision.json. Native256 check remains pending; test sealed."
+  },
+  "residual177_224_seed435": {
+    "decision": "Retain; accepted paired224 resolution reference",
+    "rationale": "Completed and reload verified. Paired mean macro-F1 0.641060 versus160 mean0.621631 (+0.019429); both seed gains positive. Seed range0.004643. See resolution224_decision.json. Native256 check remains pending; test sealed."
   }
 }

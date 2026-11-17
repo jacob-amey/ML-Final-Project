@@ -357,3 +357,7 @@ The first224 result is promising while its second seed remains running. Training
 The256 train/validation cache completed with exact224 row/ID/label/group metadata and59008/16836 counts. Training-only statistics are saved; no256 test cache exists. The second224 run later detected45W AC and declining battery; the user was asked to reconnect higher-power charging while authorized work continues.
 
 The user reconnected higher-power charging; the Mac detected94W and subsequently80% battery charging. No source/data/algorithm change was needed. Latest filesystem seal check confirms no test cache or frozen final artifact; native256 cache preparation remains train/validation only.
+
+### Paired224 resolution accepted
+
+Both full procedures completed/reloaded: seed43463epochs selected53, F1 0.643382; seed43557epochs selected47, F1 0.638739. Mean0.641060 versus160 illumination0.621631 (+0.019429), both matched gains positive, observed range0.004643. Two seeds are limited stability evidence, not significance. The predeclared conditional native256 screen is now warranted; its repeat trigger is0.005 and paired acceptance gain0.005. No test predictions have informed these decisions.

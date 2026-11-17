@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-11-17T17:44:05.817860+00:00",
+  "evaluation_split": "validation only",
+  "accepted_resolution": 224,
+  "reference_mean_macro_f1": 0.6216308933737784,
+  "candidate_mean_macro_f1": 0.641060193353229,
+  "paired_mean_gain": 0.01942929997945053,
+  "candidate_seed_range": 0.004642930470309614,
+  "paired_seed_gains": [
+    0.019166506885215817,
+    0.019692093073685024
+  ],
+  "decision": "Accept224 over160 by predeclared rule; both matched seed gains are positive. Conditional native256 check remains before final selection.",
+  "test_predictions_used": false
+}
