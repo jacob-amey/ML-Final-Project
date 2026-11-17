@@ -31,5 +31,8 @@
   "backup_sha256": "006ccc60c4bfd929b00aae2b4025eaca78eacb1ac700ecc1dc22252fa8558fb2",
   "backup_bytes": 12416475,
   "backup_checkpoint_members_verified": true,
-  "backup_manifest_files": 59
+  "backup_manifest_files": 59,
+  "record_is_historical": true,
+  "resumed_at_user_request_utc": "2026-11-17T01:16:22.536634+00:00",
+  "current_state_record": "docs/active_training.json"
 }

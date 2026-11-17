@@ -243,3 +243,17 @@ caffeinate -i .venv/bin/python -m leafcheck.train --run runs/final177/residual17
   rule/reference and supplementary collection; install the real final artifact;
   execute full tests, notebook review, fresh browser rehearsal and delivery
   archive verification; record final results, documentation and commits.
+
+## 2026-11-16 — authorized continuation on AC power
+
+- The user requested continuation and removed time/resource intensity as a limiting
+  preference. Verified AC power, ample memory, MPS availability, matching dataset
+  fingerprint and the exact saved checkpoint hash before restarting.
+- Found the working checkout on `dev` at 4874ab0. Preserved and rechecked all 37
+  untracked report-draft files and the history bundle; no website source differed
+  from the saved feature branch. Restored the model branch and merged the user's
+  newer history-bundle commit, preserving it in 5160705. No remote push occurred.
+- Resumed `residual177_160_seed434` from epoch 27, after 74 batches. The earlier pause
+  record is historical; current state is `docs/active_training.json`. Both held-out
+  sets remain unopened. Further trials require validation evidence and recorded
+  hypotheses; no globally optimal-model claim is made.

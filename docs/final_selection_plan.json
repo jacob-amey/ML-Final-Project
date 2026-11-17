@@ -26,6 +26,13 @@
       "resolved_128_seed_spread": 0.005364860173655894,
       "resolution_screen_minimum_gain": 0.005364860173655894,
       "paired_resolution_decision": "If seed434 at160 improves macro-F1 by at least max(0.005, observed128-seed range), repeat160 with435. Select160 only if its two-seed mean selected-checkpoint macro-F1 exceeds the128 two-seed mean by at least0.005; otherwise prefer128 for its lower compute cost. This configuration acceptance rule is declared before any160 validation results. Within the accepted recipe select the saved checkpoint by macro-F1, then the existing loss/earlier-epoch tie break."
+    },
+    {
+      "declared_utc": "2026-11-17T01:16:22.535924+00:00",
+      "trigger": "User explicitly resumed training and removed time/resource intensity as a limiting preference.",
+      "change": "Resume the exact saved160-pixel procedure. The earlier approximate five-hour compute budget no longer limits the search. After the resolution/stability comparison, use validation learning curves and class/source errors to preregister any further justified single-variable experiments.",
+      "invariants": "All177 classes; random initialization for fresh recipes; same frozen split membership; training-only fitted statistics; no test predictions until configuration/checkpoint selection is complete; no paid resources or external data publication implied.",
+      "stopping_rule": "Conclude when targeted changes no longer produce reproducible, practically meaningful validation macro-F1 gains beyond seed variation, learning curves have plateaued with the planned schedule, and the remaining bottlenecks are data/annotation/representativeness rather than a supported model change. Document the evidence; do not claim global optimality."
     }
   ],
   "fair_heldout_reference": {

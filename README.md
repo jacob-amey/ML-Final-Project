@@ -17,18 +17,15 @@ local bundles and archives follow `.gitignore`; they are not large Git binaries.
 
 ## Status and evidence
 
-Training is paused at the user's request. The 160-pixel trial is saved after
-26 complete epochs plus 74 batches of epoch 27. Its model, optimizer, scheduler
-and random states are preserved; CPU checkpoint loading was verified without
-training updates. See `docs/training_pause.json` for hashes, the backup archive
-and exact continuation command. Training will not restart automatically.
+Full-data training has resumed at the user's request on AC power. The 160-pixel
+trial continues from the saved epoch-27, batch-74 state. Current run information
+is in `docs/active_training.json`; the earlier verified pause snapshot and backup
+are retained in `docs/training_pause.json`.
 
-The best completed 128-pixel run has validation macro-F1 0.603681. The 160-pixel
-comparison remains incomplete, so final selection, held-out evaluation and the
-real final-model website rehearsal are still pending. Both test sets remain
-sealed. Read `docs/experiments.csv` for actual recorded validation results and
-`docs/final_model_work_log.md` for completed work. Final test results must only be
-added after the selection/freeze procedure below.
+The best completed 128-pixel run has validation macro-F1 0.603681. Final selection,
+held-out evaluation and the real final-model website rehearsal remain pending.
+Both test sets are sealed. Read `docs/experiments.csv` for recorded validation
+results and `docs/final_model_work_log.md` for completed work.
 
 - `docs/final_model_requirements.md`: verified requirements, assumptions and
   declared checkpoint/experiment selection rules.
