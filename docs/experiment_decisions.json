@@ -12,19 +12,23 @@
     "rationale": "Training-only feature-statistics recomputation kept learned weights unchanged but changed validation macro-F1 by -0.000149, adding no benefit."
   },
   "residual177_weighted_seed434": {
-    "decision": "Keep; leading matched 48-epoch recipe, duration and seed checks pending",
+    "decision": "Keep as completed matched48-epoch weighting evidence",
     "rationale": "Selected epoch 48, validation macro-F1 0.603053 versus 0.595327 unweighted (+0.007727), accuracy 0.874376 versus 0.882989. Mean class F1 for 71 labels with <20 validation images rose from 0.344437 to 0.375945; zero-recall labels in that stratum increased from 13 to 14, so improvement is not universal."
   },
   "residual177_weighted_long64_seed434": {
-    "decision": "Keep as current best validation checkpoint; no further duration search",
-    "rationale": "Stopped at 55 cumulative epochs under the unchanged plateau rule, selected epoch 50. Macro-F1 0.603681 versus parent 0.603053 (+0.000628); additional 605.4 seconds. Small observed change, below the 0.005 practical signal; same architecture and inference cost. Fresh-seed check remains pending."
+    "decision": "Keep as completed128 reference;160 paired recipe leads",
+    "rationale": "Completed55 cumulative epochs, selected50: macro-F1 0.603681; incremental605.4seconds. Duration gain0.000628 over parent. The128 recipe seed repeat and160 resolution comparison are now complete; see seed_stability_128.json and resolution_decision.json."
   },
   "residual177_weighted_seed435": {
     "decision": "Keep as completed stability evidence; not the leading128 checkpoint",
     "rationale": "64 full-data epochs, selected63; macro-F1 0.598316, accuracy0.874258, loss0.534610,5214.1seconds. Reload verified. The128 weighted recipe scores0.598316\u20130.603681 across these two seeds; this is limited variability evidence, not significance."
   },
   "residual177_160_seed434": {
-    "decision": "Keep as competitive completed resolution recipe; paired seed pending",
-    "rationale": "64 complete full-data epochs, selected60: macro-F1 0.608147, accuracy0.879069, loss0.515985. Reload verified. Gain0.004466 over the matched128 seed434 checkpoint is small; a paired160 seed435 run is underway under the resource-amended plan."
+    "decision": "Keep; selected resolution supported by paired validation results",
+    "rationale": "64 full-data epochs, selected60; macro-F1 0.608147. Paired160 mean0.608911 versus128 mean0.600999; both seed gains positive. Reload verified. See resolution_decision.json; no test use."
+  },
+  "residual177_160_seed435": {
+    "decision": "Keep; current best completed validation checkpoint",
+    "rationale": "Early stopped at51 complete full-data epochs, selected41; macro-F1 0.609675, accuracy0.876990, loss0.500699,3340.2seconds. Reload verified. Additional augmentation and weight-decay checks remain pending before final selection."
   }
 }

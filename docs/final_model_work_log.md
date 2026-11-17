@@ -280,3 +280,15 @@ caffeinate -i .venv/bin/python -m leafcheck.train --run runs/final177/residual17
   source hashes before freezing. The compact reference's earlier implicit
   float32 normalization and the explicit float32 implementation were checked
   to produce bitwise-identical tensors under its original default.
+
+- Completed the 160-pixel seed repeat: early stopping after 51 full epochs,
+  selected epoch 41; validation macro-F1 0.609675, accuracy 0.876990,
+  unweighted loss 0.500699; 3,340.2 seconds. Full reload check passed.
+- Paired 160-pixel mean macro-F1 is 0.608911 versus 0.600999 at 128, a
+  gain of 0.007912. Both seeds improve; numeric configurations differ only
+  in resolution and core training sources are identical. Training-only
+  statistics were fitted separately by the same algorithm. Keep 160 as
+  the development reference; two seeds are not significance.
+- The preregistered mild-illumination trial started after the repeat
+  completed. Only augmentation changes; all 59,008 training images remain.
+  The final test and supplement remain sealed.

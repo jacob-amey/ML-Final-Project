@@ -1,0 +1,27 @@
+{
+  "declared_utc": "2026-11-17T02:53:39.867009+00:00",
+  "selected_resolution": 160,
+  "mean_macro_f1_128": 0.6009988521764222,
+  "mean_macro_f1_160": 0.6089108824359919,
+  "paired_mean_gain": 0.007912030259569658,
+  "paired_results": [
+    {
+      "seed": 434,
+      "macro_f1_128": 0.6036812822632501,
+      "macro_f1_160": 0.6081471154074615,
+      "gain": 0.00446583314421134
+    },
+    {
+      "seed": 435,
+      "macro_f1_128": 0.5983164220895942,
+      "macro_f1_160": 0.6096746494645223,
+      "gain": 0.011358227374928087
+    }
+  ],
+  "numeric_config_only_input_size_different": true,
+  "core_training_source_hashes_identical_across_resolutions": true,
+  "dataset_mapping_membership_identical": true,
+  "statistics": "Same training-only fitting algorithm, refitted at each resolution",
+  "decision_basis": "Higher paired-seed validation macro-F1 under resource-amended policy; both observed seed changes positive. No test predictions.",
+  "limitations": "Two seeds, selected checkpoints, rare validation supports and repeated validation use; not statistical significance. Power conditions differ, so runtime records are not controlled causal speed measurements."
+}

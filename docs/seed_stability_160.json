@@ -1,0 +1,158 @@
+{
+  "evaluation_split": "validation only",
+  "input_size": 160,
+  "controlled_config": {
+    "device": "auto",
+    "cpu_threads": 4,
+    "input_size": 160,
+    "model": {
+      "architecture": "residual_v1",
+      "channels": [
+        24,
+        48,
+        96,
+        192
+      ],
+      "num_classes": 177,
+      "dropout": 0.2
+    },
+    "batch_size": 128,
+    "validation_batch_size": 256,
+    "learning_rate": 0.002,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "augmentation": "dihedral",
+    "class_weight_power": 0.5,
+    "label_smoothing": 0.0,
+    "max_epochs": 64,
+    "min_epochs": 24,
+    "patience": 10,
+    "early_min_delta": 0.001
+  },
+  "matching_numeric_configs_and_core_training_sources_verified": true,
+  "runs": [
+    {
+      "run": "residual177_160_seed434",
+      "seed": 434,
+      "selected_epoch": 60,
+      "checkpoint_sha256": "f33977165e0b48671f732bb52259ce49bd47e40c998cb7c52ba4d5e9daf1430a",
+      "macro_f1": 0.6081471154074615,
+      "accuracy": 0.8790686623901164
+    },
+    {
+      "run": "residual177_160_seed435",
+      "seed": 435,
+      "selected_epoch": 41,
+      "checkpoint_sha256": "9351056f779d93dd14037fbf72f95ea6b5927c38f9fb2335e7e7197432652c2a",
+      "macro_f1": 0.6096746494645223,
+      "accuracy": 0.8769897837966263
+    }
+  ],
+  "mean_macro_f1": 0.6089108824359919,
+  "macro_f1_range": 0.001527534057060853,
+  "classes_with_f1_difference_at_least_point2": 10,
+  "classes_with_zero_recall_in_both": 8,
+  "largest_class_differences": [
+    {
+      "class_name": "cauliflower__bacterial_soft_rot",
+      "validation_images": 6,
+      "f1_seed434": 0.5,
+      "f1_seed435": 0.8,
+      "absolute_f1_difference": 0.30000000000000004,
+      "recall_seed434": 0.5,
+      "recall_seed435": 0.6666666666666666,
+      "zero_observed_recall_both": false
+    },
+    {
+      "class_name": "cabbage__alternaria_leaf_spot",
+      "validation_images": 9,
+      "f1_seed434": 0.0,
+      "f1_seed435": 0.2857142857142857,
+      "absolute_f1_difference": 0.2857142857142857,
+      "recall_seed434": 0.0,
+      "recall_seed435": 0.2222222222222222,
+      "zero_observed_recall_both": false
+    },
+    {
+      "class_name": "plum__rust",
+      "validation_images": 7,
+      "f1_seed434": 0.7272727272727273,
+      "f1_seed435": 0.4444444444444445,
+      "absolute_f1_difference": 0.2828282828282828,
+      "recall_seed434": 0.5714285714285714,
+      "recall_seed435": 0.2857142857142857,
+      "zero_observed_recall_both": false
+    },
+    {
+      "class_name": "ginger__leaf_spot",
+      "validation_images": 5,
+      "f1_seed434": 0.4000000000000001,
+      "f1_seed435": 0.15384615384615385,
+      "absolute_f1_difference": 0.24615384615384622,
+      "recall_seed434": 0.4,
+      "recall_seed435": 0.2,
+      "zero_observed_recall_both": false
+    },
+    {
+      "class_name": "plum__pocket_disease",
+      "validation_images": 11,
+      "f1_seed434": 0.09999999999999999,
+      "f1_seed435": 0.33333333333333326,
+      "absolute_f1_difference": 0.23333333333333328,
+      "recall_seed434": 0.09090909090909091,
+      "recall_seed435": 0.2727272727272727,
+      "zero_observed_recall_both": false
+    },
+    {
+      "class_name": "cauliflower__alternaria_leaf_spot",
+      "validation_images": 6,
+      "f1_seed434": 0.0,
+      "f1_seed435": 0.2222222222222222,
+      "absolute_f1_difference": 0.2222222222222222,
+      "recall_seed434": 0.0,
+      "recall_seed435": 0.16666666666666666,
+      "zero_observed_recall_both": false
+    },
+    {
+      "class_name": "celery__anthracnose",
+      "validation_images": 6,
+      "f1_seed434": 0.2222222222222222,
+      "f1_seed435": 0.0,
+      "absolute_f1_difference": 0.2222222222222222,
+      "recall_seed434": 0.16666666666666666,
+      "recall_seed435": 0.0,
+      "zero_observed_recall_both": false
+    },
+    {
+      "class_name": "coffee__berry_blotch",
+      "validation_images": 21,
+      "f1_seed434": 0.6500000000000001,
+      "f1_seed435": 0.4390243902439024,
+      "absolute_f1_difference": 0.21097560975609775,
+      "recall_seed434": 0.6190476190476191,
+      "recall_seed435": 0.42857142857142855,
+      "zero_observed_recall_both": false
+    },
+    {
+      "class_name": "rice__sheath_blight",
+      "validation_images": 13,
+      "f1_seed434": 0.608695652173913,
+      "f1_seed435": 0.4000000000000001,
+      "absolute_f1_difference": 0.2086956521739129,
+      "recall_seed434": 0.5384615384615384,
+      "recall_seed435": 0.46153846153846156,
+      "zero_observed_recall_both": false
+    },
+    {
+      "class_name": "blueberry__anthracnose",
+      "validation_images": 8,
+      "f1_seed434": 0.5714285714285715,
+      "f1_seed435": 0.36363636363636365,
+      "absolute_f1_difference": 0.20779220779220786,
+      "recall_seed434": 0.5,
+      "recall_seed435": 0.25,
+      "zero_observed_recall_both": false
+    }
+  ],
+  "limitations": "Two selected-checkpoint seed results are limited stability evidence, not significance or a confidence interval. Very small validation supports can produce large per-class swings. No test predictions enter this comparison."
+}
