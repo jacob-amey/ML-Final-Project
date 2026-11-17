@@ -20,12 +20,19 @@ def package(run, destination, rationale, reference_run=ROOT / "runs/final177/pla
     checkpoint = torch.load(run / "best_model.pt", weights_only=True, map_location="cpu")
     frozen = release()
     assert checkpoint["dataset_fingerprint"] == frozen["fingerprint"]
+    assert checkpoint["classes"] == frozen["classes"] and checkpoint["class_to_idx"] == frozen["class_to_idx"]
+    assert checkpoint["config"] == json.loads((run / "config.json").read_text())
+    assert checkpoint["epoch"] == status["best"]["epoch"]
+    assert abs(checkpoint["validation"]["macro_f1"] - status["best"]["macro_f1"]) < 1e-12
     reference_run = Path(reference_run)
     reference_status = json.loads((reference_run / "status.json").read_text())
     assert reference_status["state"] == "complete" and reference_status["checkpoint_reload_verified"]
     reference_checkpoint = torch.load(reference_run / "best_model.pt", weights_only=True, map_location="cpu")
     assert reference_checkpoint["dataset_fingerprint"] == frozen["fingerprint"]
     assert reference_checkpoint["classes"] == frozen["classes"]
+    assert reference_checkpoint["config"] == json.loads((reference_run / "config.json").read_text())
+    assert reference_checkpoint["epoch"] == reference_status["best"]["epoch"]
+    assert abs(reference_checkpoint["validation"]["macro_f1"] - reference_status["best"]["macro_f1"]) < 1e-12
     assert reference_checkpoint["model_config"]["architecture"] == "plain_v1"
     assert sha256(reference_run / "source/leafcheck/model.py") == sha256(ROOT / "leafcheck/model.py")
     if destination.exists():
