@@ -73,6 +73,14 @@
       "repeat_trigger": "Repeat a scaling candidate with seed435 if its completed seed434 macro-F1 gain reaches max(0.005, observed paired-seed range of the reference recipe). Otherwise record the single-seed screen as limited evidence and keep the reference; do not claim a universal lack of benefit.",
       "acceptance": "Require a paired-seed mean macro-F1 improvement of at least0.005 to accept extra scaling complexity; inspect accuracy, loss, class support and measured demo cost as secondary evidence. Report seed ranges and do not claim significance.",
       "stopping": "Stop a scaling direction when its controlled result is negligible, unstable or worse. Further scaling requires a new validation-supported hypothesis and meaningful expected gain rather than the absence of a time cap. No model changes after frozen test evaluation."
+    },
+    {
+      "declared_utc": "2026-11-17T16:17:59.934580+00:00",
+      "trigger": "Completed224 seed434 improves macro-F1 by0.019167 versus160; seed435 remains running and test predictions are sealed. Training-only geometry:36925/59008 photos are256x256;56431 have short side>=256.",
+      "change": "If224 passes its declared paired acceptance rule, screen256 pixels against the accepted224 recipe. Keep channels, augmentation, regularization, weighting, batch size and schedule unchanged. No pretrained weights or new images.",
+      "hypothesis": "The common native256 size may retain additional symptom detail removed by224 downsampling. Larger inputs cannot recover absent detail; this is a test of a specific native-size boundary, not an assumption that larger is always better.",
+      "protocol": "Prepare train/validation cache and training-only statistics; benchmark256 sequentially after the current accelerator job. Full59008 train images per epoch, seed434. Repeat435 only if completed gain>=max(0.005, observed224 two-seed range). Accept256 only if its paired mean exceeds224 mean by>=0.005.",
+      "stopping": "If the native-size screen is negligible, unstable or worse, stop this resolution branch. Any additional scaling requires completed validation evidence showing a meaningful expected benefit, including where native resolution and class support make it plausible. No test-based changes."
     }
   ],
   "fair_heldout_reference": {

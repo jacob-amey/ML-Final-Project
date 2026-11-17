@@ -1,0 +1,67 @@
+{
+  "recorded_utc": "2026-11-17T16:16:44.644716+00:00",
+  "split": "train only",
+  "images": 59008,
+  "short_side_at_least": {
+    "160": 57907,
+    "224": 57031,
+    "256": 56431,
+    "288": 19137,
+    "320": 18564,
+    "384": 17570,
+    "512": 10880
+  },
+  "most_common_original_dimensions": [
+    {
+      "width": 256,
+      "height": 256,
+      "images": 36925
+    },
+    {
+      "width": 500,
+      "height": 500,
+      "images": 4702
+    },
+    {
+      "width": 6000,
+      "height": 4000,
+      "images": 1817
+    },
+    {
+      "width": 3120,
+      "height": 3120,
+      "images": 787
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "images": 713
+    },
+    {
+      "width": 2048,
+      "height": 1152,
+      "images": 367
+    },
+    {
+      "width": 4128,
+      "height": 3096,
+      "images": 338
+    },
+    {
+      "width": 3120,
+      "height": 4160,
+      "images": 210
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "images": 209
+    },
+    {
+      "width": 4160,
+      "height": 3120,
+      "images": 202
+    }
+  ],
+  "note": "Original geometry, not CNN scores. Larger inputs cannot recover detail absent from native images; any further scaling needs validation evidence."
+}

@@ -349,3 +349,7 @@ The32/64/128/256-channel160-pixel CNN early-stopped at45full epochs, selected35,
 ### Completed first224-pixel procedure
 
 Early stopped after63 full epochs; selected53, validation macro-F1 0.643382, accuracy0.893799, loss0.431804. Reload verification passed. Matched seed434 improvement0.019167 exceeds the predeclared0.005169 trigger. Seed435 started with identical numeric settings except seed; acceptance awaits the paired result. Test and supplementary model predictions remain sealed.
+
+### Conditional native-size check declared before results
+
+The first224 result is promising while its second seed remains running. Training-only geometry shows36925/59008 images exactly256x256,56431 with short side>=256. If224 is accepted, screen native256 with one variable changed; repeat and accept only by the documented gain rule. Train/validation cache preparation is CPU-only and never reads the test split. Additional cache preparation overlaps part of the seed435 run, so elapsed times are not controlled method-cost comparisons.
