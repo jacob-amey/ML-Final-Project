@@ -28,11 +28,23 @@
     "rationale": "64 full-data epochs, selected60; macro-F1 0.608147. Paired160 mean0.608911 versus128 mean0.600999; both seed gains positive. Reload verified. See resolution_decision.json; no test use."
   },
   "residual177_160_seed435": {
-    "decision": "Keep; current best completed validation checkpoint",
-    "rationale": "Early stopped at51 complete full-data epochs, selected41; macro-F1 0.609675, accuracy0.876990, loss0.500699,3340.2seconds. Reload verified. Additional augmentation and weight-decay checks remain pending before final selection."
+    "decision": "Retain as completed comparison; not selected recipe",
+    "rationale": "See regularization_decision.json and matched two-seed records; scaling checks remain pending. No test results used."
   },
   "residual177_160_color_seed434": {
-    "decision": "Keep as promising completed augmentation screen; repeat pending",
-    "rationale": "51 full-data epochs, selected41; macro-F1 0.624215, accuracy0.884830, loss0.462634;3459.5seconds; reload verified. Matched seed434 macro-F1 gain0.016068. Seed435 repeat is running before acceptance."
+    "decision": "Retain as paired illumination reference",
+    "rationale": "See regularization_decision.json and matched two-seed records; scaling checks remain pending. No test results used."
+  },
+  "residual177_160_color_seed435": {
+    "decision": "Retain as paired illumination reference",
+    "rationale": "See regularization_decision.json and matched two-seed records; scaling checks remain pending. No test results used."
+  },
+  "residual177_160_color_decay_seed434": {
+    "decision": "Retain as completed comparison; not selected recipe",
+    "rationale": "See regularization_decision.json and matched two-seed records; scaling checks remain pending. No test results used."
+  },
+  "residual177_160_color_decay_seed435": {
+    "decision": "Retain as completed comparison; not selected recipe",
+    "rationale": "See regularization_decision.json and matched two-seed records; scaling checks remain pending. No test results used."
   }
 }

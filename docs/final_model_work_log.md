@@ -337,3 +337,7 @@ caffeinate -i .venv/bin/python -m leafcheck.train --run runs/final177/residual17
   listed candidates are within splits; biological IDs, missed crops/edits and
   annotation quality remain limitations. Training dependencies were untouched;
   the separate integrity environment records its actual versions.
+
+### 2026-11-17: resumed completed regularization evidence
+
+Both illumination and stronger-decay seed pairs finished and reloaded correctly. Illumination mean macro-F10.621631 exceeds D4 mean0.608911. Stronger decay mean0.620684 does not improve the illumination reference; retain weight_decay0.0001. New width and224 screens hold other settings fixed and follow the already declared repeat/acceptance rule. Integrity feature evidence rerun reproduced its saved hash exactly. No test predictions inspected.

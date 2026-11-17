@@ -1,0 +1,14 @@
+{
+  "declared_utc": "2026-11-17T12:00:26.690909+00:00",
+  "split": "validation only",
+  "illumination_mean": 0.6216308933737784,
+  "dihedral_mean": 0.6089108824359919,
+  "illumination_gain": 0.012720010937786519,
+  "stronger_decay_mean": 0.6206839159815919,
+  "stronger_decay_delta": -0.000946977392186521,
+  "decision": "Retain mild illumination and weight_decay0.0001. Stronger decay does not improve paired mean; this small difference does not establish significance.",
+  "scaling_reference": "residual177_160_color_seed434",
+  "repeat_trigger_gain": 0.005168516658778821,
+  "scaling_acceptance_paired_mean_gain": 0.005,
+  "test_predictions_used": false
+}
