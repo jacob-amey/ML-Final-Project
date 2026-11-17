@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-11-17T03:42:23.585677+00:00",
+  "input_size": 224,
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "splits": {
+    "train": {
+      "count": 59008,
+      "membership_label_group_metadata_identical_to160": true,
+      "pixels_sha256_recorded": "af7a3c8f7390ff5c45518af4f5878822352ea05be86b3dbf4654503a7f610bd5",
+      "bytes": 8882356352
+    },
+    "val": {
+      "count": 16836,
+      "membership_label_group_metadata_identical_to160": true,
+      "pixels_sha256_recorded": "df0d4e047e2d8bf9a36cbcdeb92605ebad62e201e15bc9a3b3183e4b952f7d08",
+      "bytes": 2534289536
+    }
+  },
+  "preprocessing": {
+    "version": "exif_rgb_letterbox_bilinear_v1",
+    "input_size": 224,
+    "mean": [
+      0.4784016648304472,
+      0.5105523029653197,
+      0.4226283058778863
+    ],
+    "std": [
+      0.21336004335832504,
+      0.19522565407254905,
+      0.2335556113898882
+    ],
+    "statistics_split": "train",
+    "statistics_images": 59008,
+    "resize": "Pillow ImageOps.pad bilinear, RGB padding 128",
+    "orientation": "EXIF transpose",
+    "channels": "RGB",
+    "frame": 0,
+    "scaling": "uint8 / 255, then (x - mean) / std",
+    "tensor_layout": "NCHW"
+  },
+  "test_cache_present": false,
+  "preparation_log": "runs/final177/cache224_preparation.log",
+  "preparation_log_sha256": "84259194ee46f71e684d8c69b4f45fa3da2ec1f95c8fe97fc288523f03780d1b",
+  "conditions": "CPU train/validation cache preparation ran alongside the160-pixel illumination trial. It can affect wall time, not data membership or the training arithmetic. No224 model predictions or performance results yet."
+}
