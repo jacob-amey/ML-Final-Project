@@ -30,6 +30,7 @@
     "early_min_delta": 0.001
   },
   "matching_numeric_configs_and_core_training_sources_verified": true,
+  "matching_shared_math_seed_and_save_functions_verified": true,
   "runs": [
     {
       "run": "residual177_160_seed434",

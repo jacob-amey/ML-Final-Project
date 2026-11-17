@@ -1,6 +1,7 @@
 """Compare completed validation-only seed repeats without opening the test set."""
 
 import argparse
+import ast
 import json
 from pathlib import Path
 from .common import atomic_json, sha256, write_csv
@@ -29,6 +30,18 @@ def main():
     core_files=["model.py","train.py","preprocessing.py","data.py"]
     assert all(sha256(args.runs[0]/name)==sha256(args.runs[1]/name) for name in common_files)
     assert all(sha256(args.runs[0]/"source/leafcheck"/name)==sha256(args.runs[1]/"source/leafcheck"/name) for name in core_files)
+    # Hardware-reporting helpers evolved; compare every shared math/seed/save
+    # function separately so telemetry changes cannot hide a training change.
+    common_functions={"seed_everything", "metrics_from_matrix", "update_matrix", "better",
+                      "sha256", "atomic_json", "atomic_checkpoint", "write_csv"}
+    shared=[]
+    for run in args.runs:
+        tree=ast.parse((run/"source/leafcheck/common.py").read_text())
+        definitions={node.name:ast.dump(node,include_attributes=False) for node in tree.body
+                     if isinstance(node,ast.FunctionDef) and node.name in common_functions}
+        assert set(definitions)==common_functions
+        shared.append(definitions)
+    assert shared[0]==shared[1],"Shared training math, seeding or saving changed between seed repeats"
     rows=[]
     for a,b in zip(left["metrics"]["per_class"],right["metrics"]["per_class"]):
         assert (a["class_index"],a["class_name"],a["support"])==(b["class_index"],b["class_name"],b["support"])
@@ -43,6 +56,7 @@ def main():
     summary={"evaluation_split":"validation only","input_size":left["config"]["input_size"],
              "controlled_config":{k:v for k,v in left["config"].items() if k not in descriptive},
              "matching_numeric_configs_and_core_training_sources_verified":True,
+             "matching_shared_math_seed_and_save_functions_verified":True,
              "runs":[{k:r[k] for k in ["run","seed","selected_epoch","checkpoint_sha256"]} | {"macro_f1":r["metrics"]["macro_f1"],"accuracy":r["metrics"]["accuracy"]} for r in records],
              "mean_macro_f1":sum(scores)/2,"macro_f1_range":max(scores)-min(scores),
              "classes_with_f1_difference_at_least_point2":sum(row["absolute_f1_difference"]>=.2 for row in rows),
