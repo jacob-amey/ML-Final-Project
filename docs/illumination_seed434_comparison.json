@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-11-17T03:53:38.055908+00:00",
+  "reference": "residual177_160_seed434",
+  "trial": "residual177_160_color_seed434",
+  "seed": 434,
+  "only_numeric_or_method_setting_changed": "augmentation: dihedral to dihedral_color",
+  "checkpoint_sha256": "80d1e4f3fc3a011ae6d6300ecbaad799695ff05fc1a404bfab5e736729edb3a9",
+  "completed_epochs": 51,
+  "selected_epoch": 41,
+  "checkpoint_reload_verified": true,
+  "macro_f1_reference": 0.6081471154074615,
+  "macro_f1_trial": 0.6242151517031679,
+  "macro_f1_change": 0.01606803629570641,
+  "accuracy_change": 0.0057614635305298645,
+  "validation_loss_change": -0.05335173018968825,
+  "training_seconds": 3459.4595674170123,
+  "support_bins": {
+    "at_least_100_validation_images": {
+      "classes": 41,
+      "reference_mean_f1": 0.8900611301031542,
+      "trial_mean_f1": 0.8982683199551887,
+      "reference_zero_recall": 0,
+      "trial_zero_recall": 0
+    },
+    "under_20_validation_images": {
+      "classes": 71,
+      "reference_mean_f1": 0.37534762944854205,
+      "trial_mean_f1": 0.39230724127745403,
+      "reference_zero_recall": 13,
+      "trial_zero_recall": 10
+    },
+    "20_to_99_validation_images": {
+      "classes": 65,
+      "reference_mean_f1": 0.6846130984929979,
+      "trial_mean_f1": 0.7046656400399807,
+      "reference_zero_recall": 0,
+      "trial_zero_recall": 0
+    }
+  },
+  "decision": "Promising completed screen; seed435 running before recipe acceptance",
+  "limitations": "Single-seed result; no test predictions. Class/source composition and very low support limit interpretation. Cache224 preparation ran concurrently for part of this procedure, so elapsed time is not a controlled causal augmentation-cost measurement."
+}

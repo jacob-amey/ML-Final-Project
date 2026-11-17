@@ -316,3 +316,12 @@ caffeinate -i .venv/bin/python -m leafcheck.train --run runs/final177/residual17
   throughput result. Those representative MPS benchmarks remain pending.
 - Clarified that the original Small CNN used120 training images and460
   validation images; its historical protocol differs from the177-class release.
+
+- Completed the first mild-illumination procedure:51 full epochs, selected41;
+  macro-F1 0.624215, accuracy 0.884830, loss 0.462634;3,459.5 seconds.
+  Full reload verification passed. Matched seed434 change is +0.016068 F1,
+  +0.005761 accuracy and -0.053352 unweighted validation loss.
+- The independent illumination seed435 repeat started automatically only after
+  completion. Recipe acceptance remains pending. The224 train/validation cache
+  uses exactly the same row/label/group metadata, fitted training-only stats
+  and no test pixels; this preparation ran concurrently with part of seed434.
