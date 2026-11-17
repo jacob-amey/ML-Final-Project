@@ -104,3 +104,24 @@ repeat, and paired-seed validation macro-F1 informs the choice; small difference
 remain tentative. Mild brightness/contrast augmentation is the next declared
 single-setting trial. The stopping decision must use validation plateaus,
 reproducibility and data limitations; no test prediction may influence it.
+
+## Verified development progress, November 17
+
+The historical “State at start” column above is not a final delivery claim.
+Current completed development evidence includes:
+
+| Requirement | Verified evidence now | Remaining work |
+| --- | --- | --- |
+| Custom random-initialization177 outputs | `leafcheck/model.py`; completed full-data configs/status/checkpoints | Choose/freeze the accepted final recipe |
+| Shared deterministic input preparation | Saved train-only statistics; `preprocessing.py`; exact row metadata checks at128/160/224/256 | Verify selected bundle/API parity |
+| Pipeline can learn and save/reload | `runs/final177/diagnostics/checks.json`:12/12 tiny training examples after40 updates; finite gradients and parameter changes; reload passed | Final selected-artifact test suites |
+| Full training split and validation objective | Every full epoch visits59008; run histories/status, `docs/experiments.csv` | Finish active scaling procedures |
+| Controlled comparisons and stability | Paired128/160, illumination and decay evidence; completed wider screen; first224 procedure complete/reloaded | Finish224 repeat and conditional native-size check |
+| Dataset freeze and test seal | Fingerprint4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c; `test_seal_record.json` | Freeze selected checkpoint, then evaluate once |
+| Honest comparison protocols | `comparison_protocol.json`: full-data Compact177 fair reference; old pilots separate; Create ML exposure limitation | Record frozen shared-test scores |
+| Reproducible integration contract | `model_handoff.md`, explicit bundling/inference entry points, minimal app environment | Install evaluated artifact, real API/browser/archive rehearsal |
+
+The positive first224 result and training-only native geometry justified the
+prospectively declared conditional256 check. Latest rules are timestamped in
+`final_selection_plan.json`; they supersede historical resource ceilings.
+No final test predictions or supplementary predictions have informed selection.
