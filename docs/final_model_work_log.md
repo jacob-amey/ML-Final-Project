@@ -361,3 +361,5 @@ The user reconnected higher-power charging; the Mac detected94W and subsequently
 ### Paired224 resolution accepted
 
 Both full procedures completed/reloaded: seed43463epochs selected53, F1 0.643382; seed43557epochs selected47, F1 0.638739. Mean0.641060 versus160 illumination0.621631 (+0.019429), both matched gains positive, observed range0.004643. Two seeds are limited stability evidence, not significance. The predeclared conditional native256 screen is now warranted; its repeat trigger is0.005 and paired acceptance gain0.005. No test predictions have informed these decisions.
+
+The native256 sequential benchmark passed finite-loss/gradient/update checks:724713parameters,0.3184s/update versus2240.2419s/update, batch128. Post-update driver allocation4.31GB is an allocator snapshot, not a peak. Full256 training started from random seed434. Class-level224 paired changes are saved; eight classes have zero observed recall in both224 seeds versus seven in both160 illumination seeds, so gains are not universal.
