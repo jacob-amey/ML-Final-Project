@@ -14,6 +14,9 @@ def package(run, destination, rationale, reference_run=ROOT / "runs/final177/pla
     run = Path(run); destination = Path(destination)
     status = json.loads((run / "status.json").read_text())
     assert status["state"] == "complete" and status["checkpoint_reload_verified"]
+    for name in ["model.py", "preprocessing.py"]:
+        assert sha256(run / "source/leafcheck" / name) == sha256(ROOT / "leafcheck" / name), \
+            f"Selected-run runtime source changed: {name}. Review compatibility before freezing."
     checkpoint = torch.load(run / "best_model.pt", weights_only=True, map_location="cpu")
     frozen = release()
     assert checkpoint["dataset_fingerprint"] == frozen["fingerprint"]
@@ -24,6 +27,7 @@ def package(run, destination, rationale, reference_run=ROOT / "runs/final177/pla
     assert reference_checkpoint["dataset_fingerprint"] == frozen["fingerprint"]
     assert reference_checkpoint["classes"] == frozen["classes"]
     assert reference_checkpoint["model_config"]["architecture"] == "plain_v1"
+    assert sha256(reference_run / "source/leafcheck/model.py") == sha256(ROOT / "leafcheck/model.py")
     if destination.exists():
         raise FileExistsError("A frozen artifact already exists. Preserve it; use a new version before any new test protocol.")
     destination.mkdir(parents=True)
