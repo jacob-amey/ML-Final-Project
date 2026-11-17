@@ -38,7 +38,11 @@ channels, height, width. Both models use widths 24, 48, 96 and 192.
 
 A convolution's output width is `floor((W + 2P - K) / S) + 1`. For the stem,
 `floor((128 + 2 - 3) / 2) + 1 = 64`. A 3×3, stride-1, padding-1 convolution
-preserves width. The same calculation applies to height.
+preserves width. The same calculation applies to height. At input size 160,
+the stem and residual stages have spatial sizes 80, 80, 40, 20 and 10.
+The classifier still receives 192 pooled features, so the parameter count stays
+724,713. Most spatial convolution work grows roughly with image area: 160²/128²
+is 1.5625, although measured runtime also includes device and data overhead.
 
 The first convolution has `3×24×3×3 = 648` weights; its bias is omitted because
 batch normalization follows. Batch normalization adds 24 learned scales and
@@ -66,7 +70,9 @@ Training augmentation uses whole-image reflections and quarter turns. These
 preserve symptoms without cropping away a lesion or changing hue. Their realism
 is limited for upright field scenes, which is a stated tradeoff. Evaluation and
 inference are deterministic and use no augmentation. Augmented views do not
-increase the count of independent plants.
+increase the count of independent plants. The controlled `dihedral_color` trial
+adds brightness and contrast factors from 0.9 to 1.1; whether this is retained
+must follow its completed validation results and the frozen configuration.
 
 The model returns logits, which are unrestricted scores. Cross-entropy accepts
 logits and an integer class index. At inference, softmax converts the 177 logits

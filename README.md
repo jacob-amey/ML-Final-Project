@@ -17,12 +17,15 @@ local bundles and archives follow `.gitignore`; they are not large Git binaries.
 
 ## Status and evidence
 
-Full-data training has resumed at the user's request on AC power. The 160-pixel
-trial continues from the saved epoch-27, batch-74 state. Current run information
+Full-data training has resumed at the user's request on AC power. The first 160-pixel
+trial has completed all 64 epochs; its independently initialized seed repeat is
+training on the same complete split. Current run information
 is in `docs/active_training.json`; the earlier verified pause snapshot and backup
 are retained in `docs/training_pause.json`.
 
-The best completed 128-pixel run has validation macro-F1 0.603681. Final selection,
+The best completed 160-pixel run has validation macro-F1 0.608147, compared with
+0.603681 for the best 128-pixel run. Resolution stability and the declared
+regularization experiments remain development work. Final selection,
 held-out evaluation and the real final-model website rehearsal remain pending.
 Both test sets are sealed. Read `docs/experiments.csv` for recorded validation
 results and `docs/final_model_work_log.md` for completed work.
