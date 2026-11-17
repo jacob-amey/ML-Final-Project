@@ -1,15 +1,70 @@
 {
-  "reviewed_utc": "2026-11-17T02:12:38.431242+00:00",
+  "reviewed_utc": "2026-11-17T04:44:44.488911+00:00",
   "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
   "original_candidates": 792,
   "cross_split_candidates": 366,
-  "additional_pairs_visually_reviewed": 36,
-  "selection": "Lowest aligned64-pixel mean absolute error among cross-split representative pairs",
+  "additional_pairs_visually_reviewed": 366,
+  "selection": "All366 cross-split representatives from the792 remaining component-pair candidates; first36 prioritized by aligned64-pixel MAE, then the remaining330 contact-sheet reviews.",
   "confirmed_shared_photographs": 0,
   "additional_exclusions_or_split_changes": 0,
-  "remaining_candidate_pairs_without_this_supplemental_review": 756,
+  "remaining_candidate_pairs_without_this_supplemental_review": 426,
   "candidate_source_sha256": "d43ee3b747fd49bdfb07ceb76599d0502d0b5190899b036fb36a0b0a4d3835b4",
   "evidence_csv": "docs/additional_integrity_review.csv",
   "test_protocol": "Raw image files were inspected only for integrity/grouping, without model predictions, metrics or mistakes. These images do not guide architecture, augmentation, thresholds or checkpoint selection.",
-  "limitations": "Not exhaustive biological identity or annotation verification. Different images can share an undocumented plant or capture session; crops/edits outside the similarity screen can remain."
+  "limitations": "Not exhaustive biological identity or annotation verification. Different images can share an undocumented plant or capture session; crops/edits outside the similarity screen can remain.",
+  "initial36_reviewed_utc": "2026-11-17T02:12:38.431242+00:00",
+  "cross_split_pairs_reviewed": 366,
+  "remaining_scope": "The426 remaining listed candidates are within splits; this review does not exhaust every possible related image outside the candidate screen.",
+  "larger_source_views_reviewed": [
+    673,
+    757,
+    284,
+    286,
+    351,
+    477,
+    525,
+    556,
+    482
+  ],
+  "raw_feature_checks": {
+    "cases": [
+      284,
+      286,
+      351,
+      477,
+      525,
+      556,
+      482,
+      102
+    ],
+    "tool_environment": "runs/final177/integrity_env",
+    "opencv": "5.0.0",
+    "numpy": "2.5.5",
+    "training_environment_changed": false,
+    "robust_distributed_candidate_match_established": false,
+    "same_photo_software_control_inliers": 113,
+    "same_photo_software_control_unique_destinations": 104,
+    "control_purpose": "Crop/resize/JPEG correspondence software only; not additional training/evaluation evidence.",
+    "record": "runs/final177/additional_integrity_review/feature_matching_review.json",
+    "record_sha256": "d668089b8926301dfb5bf991cb4812512c82ca70155d3f3f176c58b3f5e9dcba",
+    "limitations": "Sparse/collinear/background correspondences are not enough for identity. Failed correspondence does not prove no related plant, source photo crop or capture session."
+  },
+  "render_scripts": {
+    "scripts/review_integrity_candidates.py": "032192cac5c00e2cc4a96556eca57bb42edbd84aaa1c95871633080350e966b1",
+    "scripts/check_integrity_features.py": "23e332474dbf622cae45d7a09e59063fc7f690e79fbd2993eb44cc6676628848"
+  },
+  "rendering_record_sha256": "a714821e7820de1f30bfb1f9610c4256fba8feb10fa572eddf734caf0fb8ccaa",
+  "initial_larger_views_reviewed": [
+    673,
+    757
+  ],
+  "additional_larger_source_views_reviewed": [
+    284,
+    286,
+    351,
+    477,
+    525,
+    556,
+    482
+  ]
 }

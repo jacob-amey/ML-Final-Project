@@ -325,3 +325,15 @@ caffeinate -i .venv/bin/python -m leafcheck.train --run runs/final177/residual17
   completion. Recipe acceptance remains pending. The224 train/validation cache
   uses exactly the same row/label/group metadata, fitted training-only stats
   and no test pixels; this preparation ran concurrently with part of seed434.
+
+- Completed the additional raw-file review of all366 cross-split candidates
+  from the remaining792-row list. Inspected330 additional pairs, seven larger
+  rice-source views and eight feature-correspondence cases. No additional
+  shared photograph was confirmed. The isolated OpenCV correspondence check
+  recovered113 inliers for a known cropped/resized/JPEG same-photo software
+  control; sparse/repeated-point/background matches did not establish identity
+  in the candidates. This is integrity software evidence, not CNN accuracy.
+- No images, labels, groups or split membership changed. The426 remaining
+  listed candidates are within splits; biological IDs, missed crops/edits and
+  annotation quality remain limitations. Training dependencies were untouched;
+  the separate integrity environment records its actual versions.

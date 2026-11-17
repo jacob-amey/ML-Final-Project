@@ -143,12 +143,24 @@ this assistance accurately in project documentation under course rules.
 
 ## Supplemental integrity review during final training
 
-After the release freeze, 36 of the 792 lower-priority component-pair candidates
-were inspected again, prioritizing the closest cross-split representatives by
-aligned mean absolute pixel error. No shared photograph was confirmed in these
-36 pairs, so no images, labels, groups or split assignments changed. The original
-792-row evidence file remains intact; 756 pairs did not receive this additional
-review. This does not establish biological independence or verify diagnoses.
+After the release freeze, all366 cross-split representative pairs from the792
+remaining lower-priority candidates were visually inspected. The first36 were
+prioritized by aligned mean absolute error; the additional330 were reviewed as
+paired, orientation-aligned contact sheets without disease-label display or model
+outputs. An additional seven rice pairs received larger source-image inspection and geometric
+feature checks, with one visually distinct pair and a known same-photo software
+control. Sparse/background or repeated-point matches did not confirm a new shared
+photograph. Two earlier larger views are retained in the initial36-case record.
+The software control recovered113 geometric inliers.
+
+No additional photographic identity was confirmed, so the frozen release remains
+84,269 images and177 labels with the same fingerprint and split assignments.
+The original792-row candidate file remains intact;426 listed within-split pairs
+did not receive this supplemental review. Unknown physical specimens/sessions,
+unreviewed within-split conflicts, missed crops/edits and inherited annotations
+remain limitations. A failed feature match is not proof of biological independence.
+
 `docs/additional_integrity_review.csv` and its JSON summary record the cases,
-selection and limitations. Only raw-file integrity was reviewed; test predictions,
-metrics and mistakes remain excluded from model development.
+methods, source dimensions, control and limitations. The inspection environment
+was isolated from model training. Only raw-file integrity was reviewed; test
+predictions, metrics and mistakes were not used for model development.
