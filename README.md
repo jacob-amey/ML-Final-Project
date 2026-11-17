@@ -112,6 +112,9 @@ selected by validation macro-F1, with lower validation loss as the tie-breaker.
 The checkpoint includes its architecture, class mapping and preprocessing.
 Seeds, model/optimizer/scheduler states, RNG states and partial-epoch totals are
 preserved for resume. Backend/device/version differences can still affect numbers.
+Exact interrupted-resume checks cover CPU and Apple MPS. Other accelerators,
+including CUDA, need their own RNG-state handling and verification before an
+equivalent resume claim; that portability work is outside this Mac execution.
 Resuming a completed procedure preserves it and exits. To reproduce an experiment
 again, choose a new empty run name. Restoring a recorded source snapshot means
 placing its `leafcheck` package into a clean project checkout with the matching
