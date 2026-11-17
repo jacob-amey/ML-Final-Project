@@ -355,3 +355,5 @@ Early stopped after63 full epochs; selected53, validation macro-F1 0.643382, acc
 The first224 result is promising while its second seed remains running. Training-only geometry shows36925/59008 images exactly256x256,56431 with short side>=256. If224 is accepted, screen native256 with one variable changed; repeat and accept only by the documented gain rule. Train/validation cache preparation is CPU-only and never reads the test split. Additional cache preparation overlaps part of the seed435 run, so elapsed times are not controlled method-cost comparisons.
 
 The256 train/validation cache completed with exact224 row/ID/label/group metadata and59008/16836 counts. Training-only statistics are saved; no256 test cache exists. The second224 run later detected45W AC and declining battery; the user was asked to reconnect higher-power charging while authorized work continues.
+
+The user reconnected higher-power charging; the Mac detected94W and subsequently80% battery charging. No source/data/algorithm change was needed. Latest filesystem seal check confirms no test cache or frozen final artifact; native256 cache preparation remains train/validation only.

@@ -10,12 +10,13 @@
   "supplementary_predictions_present": false,
   "scope": "Observed filesystem/entry-point evidence before model selection; integrity audits inspected file/group metadata but no final model test metrics were computed.",
   "latest_development_observation": {
-    "observed_utc": "2026-11-17T04:54:45.848773+00:00",
+    "observed_utc": "2026-11-17T16:54:19.737925+00:00",
     "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
     "development_resolutions_prepared": [
       128,
       160,
-      224
+      224,
+      256
     ],
     "test_cache_present": false,
     "frozen_final_artifact_exists": false,
