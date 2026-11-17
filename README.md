@@ -243,8 +243,9 @@ benchmark is claimed.
 Create ML's declared old training split contains 5,832 images now in the new test
 set; its old validation split contains 1,683 more. Its predictions are available
 for exploration, but scoring it on this holdout would be contaminated. Earlier
-three-class pilots use different data and coverage. The final CNN and declared
-simple rule share the valid full-177 held-out comparison.
+three-class pilots use different data and coverage. The final CNN, frozen
+Compact177 full-data reference and declared simple rule share the valid
+177-class held-out comparison.
 
 The updated working proposal is in `docs/proposal.md`. The team remains
 responsible for reviewing assisted work, following course policy, submitting the
