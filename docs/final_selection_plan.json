@@ -33,6 +33,14 @@
       "change": "Resume the exact saved160-pixel procedure. The earlier approximate five-hour compute budget no longer limits the search. After the resolution/stability comparison, use validation learning curves and class/source errors to preregister any further justified single-variable experiments.",
       "invariants": "All177 classes; random initialization for fresh recipes; same frozen split membership; training-only fitted statistics; no test predictions until configuration/checkpoint selection is complete; no paid resources or external data publication implied.",
       "stopping_rule": "Conclude when targeted changes no longer produce reproducible, practically meaningful validation macro-F1 gains beyond seed variation, learning curves have plateaued with the planned schedule, and the remaining bottlenecks are data/annotation/representativeness rather than a supported model change. Document the evidence; do not claim global optimality."
+    },
+    {
+      "declared_utc": "2026-11-17T01:35:05.685384+00:00",
+      "trigger": "Resources are no longer a limiting preference, and the160-pixel run is competitive with completed128-pixel seeds before test evaluation.",
+      "resolution_rule_update": "Repeat160 with seed435 if its completed macro-F1 is within the observed128-seed range of the current best or better. Compare paired-seed mean macro-F1; do not reject a numerically stronger recipe solely for compute cost. Differences smaller than seed variation remain tentative, not significant. The earlier cost-driven160 acceptance threshold is superseded.",
+      "next_controlled_trial": "After choosing the competitive resolution recipe, test dihedral_color versus dihedral, holding architecture, split, class weighting, seed and schedule fixed. Brightness and contrast range0.9\u20131.1; no hue shifts or crops.",
+      "hypothesis": "Persistently larger training than validation macro-F1 and weaker varied-scene validation strata justify testing mild illumination variation before increasing capacity. Source strata have different class compositions, so this does not assert a proven causal background shortcut.",
+      "repeat_rule": "Repeat a promising augmentation recipe with seed435. Preserve all reference checkpoints, report both seed results, and select using validation only. No test predictions until the search stops and artifacts are frozen."
     }
   ],
   "fair_heldout_reference": {
