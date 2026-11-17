@@ -1,0 +1,32 @@
+{
+  "updated_utc": "2026-11-17T13:04:50.466023+00:00",
+  "evaluation_split": "validation only",
+  "reference": "docs/seed_stability_160_color.json",
+  "results": [
+    {
+      "direction": "wide",
+      "first_seed": {
+        "state": "complete",
+        "completed_epochs": 45,
+        "best": {
+          "macro_f1": 0.6239120364870377,
+          "loss": 0.4727172354644708,
+          "accuracy": 0.8839985744832501,
+          "epoch": 35
+        },
+        "total_steps": 20745,
+        "training_seconds": 3805.2828422919847,
+        "stopping_reason": "early stopping after validation macro-F1 plateau",
+        "checkpoint_reload_verified": true,
+        "saved_utc": "2026-11-17T13:04:47.407606+00:00"
+      },
+      "reference_seed434_macro_f1": 0.6242151517031679,
+      "screen_gain": -0.00030311521613013426,
+      "repeat_trigger": 0.005168516658778821,
+      "repeat_required": false,
+      "accepted_by_declared_rule": false,
+      "limitation": "One-seed screen below declared repeat trigger; not proof scaling cannot help."
+    }
+  ],
+  "test_predictions_used": false
+}

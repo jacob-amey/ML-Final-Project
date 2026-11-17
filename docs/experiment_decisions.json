@@ -46,5 +46,9 @@
   "residual177_160_color_decay_seed435": {
     "decision": "Retain as completed comparison; not selected recipe",
     "rationale": "See regularization_decision.json and matched two-seed records; scaling checks remain pending. No test results used."
+  },
+  "residual177_wide_seed434": {
+    "decision": "Reject scaling under predeclared screen rule; retain completed one-seed evidence",
+    "rationale": "Completed45 full-data epochs, selected35, macro-F10.623912. Does not improve the matched reference0.624215 or reach0.005169 repeat trigger; not proof width cannot help. Reload verified; no test use."
   }
 }

@@ -1,6 +1,6 @@
 {
   "state": "scaling_screen",
-  "run": "runs/final177/residual177_wide_seed434",
-  "updated_utc": "2026-11-17T12:01:17.743472+00:00",
+  "run": "runs/final177/residual177_224_seed434",
+  "updated_utc": "2026-11-17T13:04:51.721223+00:00",
   "test_predictions_inspected": false
 }
