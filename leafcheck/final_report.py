@@ -64,6 +64,10 @@ def main():
     no_recall = [r for r in test["per_class"] if r["recall"] == 0]
     ext_rows = "\n".join(f"| {r['class_name']} | {r['support']} | {r['precision']:.3f} | {r['recall']:.3f} | {r['f1']:.3f} |" for r in external["per_class"])
     conditional = external["conditional_rule"]
+    augmentation_description = {
+        "dihedral": "whole-image reflections and quarter turns",
+        "dihedral_color": "whole-image reflections and quarter turns, plus independently sampled brightness and contrast factors from 0.9 to 1.1",
+    }[config["augmentation"]]
     report = f'''# LeafCheck final model: methods, results and defense material
 
 Generated from completed saved records. This is report source material, not a
@@ -111,7 +115,7 @@ Dataset fingerprint: `{selected['dataset_fingerprint']}`.
 ## Methods and preprocessing
 
 The selected model is `{config['model']['architecture']}`, seed {config['seed']},
-with 724,713 trainable parameters. The shape/parameter table and derivations are
+with {selected['parameters']:,} trainable parameters. The shape/parameter table and derivations are
 in `model_defense_guide.md`. It uses a stride-2 convolutional stem, four custom
 two-convolution residual blocks (24/48/96/192 channels), batch normalization,
 ReLU, global average pooling, dropout {config['model']['dropout']} and 177 logits.
@@ -121,7 +125,7 @@ Preprocessing selects frame zero, corrects EXIF orientation, converts to RGB,
 bilinearly resizes while preserving aspect ratio and center-pads with gray 128
 to {config['input_size']}×{config['input_size']}. Float32 pixels are divided by 255
 and standardized with saved training-only mean/std. Training alone uses whole-image
-reflections and quarter turns. These avoid hue shifts and lesion-removing crops,
+{augmentation_description}. These avoid hue shifts and lesion-removing crops,
 but upright field scenes need not be rotation invariant. Augmented views are
 not independent samples. Evaluation and inference share one deterministic function.
 
@@ -132,7 +136,7 @@ cross-entropy on raw logits. Class weights use training counts only, are clipped
 and normalized. Unweighted validation loss is reported separately from weighted
 training loss. ReduceLROnPlateau follows validation macro-F1. The budget is
 {config['max_epochs']} full epochs, minimum {config['min_epochs']}, early-stop
-patience {config['patience']}. The selected procedure completed
+patience {config['patience']}; label smoothing {config.get('label_smoothing', 0.0)}. The selected procedure completed
 {status['completed_epochs']} epochs; checkpoint epoch {selected['selected_epoch']}.
 
 All fresh full-data runs visit all 59,008 training images per epoch. Configuration,

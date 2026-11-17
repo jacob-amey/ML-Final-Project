@@ -93,3 +93,14 @@ over 128 is at least 0.005; otherwise prefer 128's lower compute cost. This
 acceptance rule was declared before any 160-pixel validation results. Checkpoint
 F1/loss selection stays unchanged. This is a practical effect-size rule, not a
 claim of statistical significance.
+
+## Resource and resolution policy amendment on resumed work
+
+The user's later instruction explicitly removed time and resource intensity as
+limiting preferences. The earlier cost-driven 160-pixel acceptance rule above is
+historical and superseded by the timestamped amendments in
+`final_selection_plan.json`. Competitive resolutions receive a matched seed
+repeat, and paired-seed validation macro-F1 informs the choice; small differences
+remain tentative. Mild brightness/contrast augmentation is the next declared
+single-setting trial. The stopping decision must use validation plateaus,
+reproducibility and data limitations; no test prediction may influence it.

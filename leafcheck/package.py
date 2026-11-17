@@ -79,6 +79,7 @@ def package(run, destination, rationale, reference_run=ROOT / "runs/final177/pla
               "checkpoint_sha256": sha256(destination / "model.pt"), "dataset_fingerprint": frozen["fingerprint"],
               "config_sha256": sha256(destination / "config.json"), "preprocessing_sha256": sha256(destination / "preprocessing.json"),
               "class_mapping_sha256": sha256(destination / "class_to_idx.json"), "selected_epoch": checkpoint["epoch"],
+              "parameters": checkpoint["parameters"],
               "selection": checkpoint["selection"], "validation_macro_f1": checkpoint["validation"]["macro_f1"],
               "rationale": rationale, "confidence_policy": "Display softmax scores; no calibrated confidence or unknown-input threshold",
               "evaluation_device": "cpu", "evaluation_batch_size": 128, "test_predictions_used_in_selection": False}
