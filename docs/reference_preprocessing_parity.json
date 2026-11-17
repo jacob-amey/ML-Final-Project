@@ -1,0 +1,8 @@
+{
+  "scope": "Software preprocessing parity on deterministic uint8 values, no disease performance or held-out data",
+  "historical_run": "plain177_seed434",
+  "historical_default_dtype": "torch.float32",
+  "change": "Make mean/std float32 explicitly instead of inheriting the global default",
+  "maximum_absolute_tensor_difference": 0.0,
+  "exact_match": true
+}
