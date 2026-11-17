@@ -141,7 +141,7 @@ export LEAFCHECK_COREML_MODEL="/absolute/path/to/classifier.mlmodel"
   the full 59,008-image training split; all 177 labels. Selection uses validation
   macro-F1. Its saved 8,425-image test result appears beside the full-data Compact177 reference and simple rule,
   with a separately labelled supplementary 183-photo, three-tomato-class check.
-- **Small CNN:** original 120-image pilot; 3 tomato conditions.
+- **Small CNN:** original pilot trained on 120 images; 3 tomato conditions.
 - **Starter 300 CNN:** second experiment; 210 training, 60 validation, and 30 test
   images from the 300-image dataset; 3 tomato conditions.
 - **Apple Create ML:** 177 plant classes; may predict other plants or conditions.

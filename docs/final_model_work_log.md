@@ -308,3 +308,11 @@ caffeinate -i .venv/bin/python -m leafcheck.train --run runs/final177/residual17
   better. Fixed effect-size and seed-repeat conditions prevent an unbounded
   architecture grid. Preparing224 train/validation caches changes no split,
   image bytes or labels; no test cache is built.
+
+- The configurable resource benchmark passed a CPU software smoke run using
+  four real training images, a reduced-width177-output network, one warmup
+  and two timed updates. Loss/gradient checks and an actual parameter change
+  passed. This is not predictive-quality evidence or a larger-model MPS
+  throughput result. Those representative MPS benchmarks remain pending.
+- Clarified that the original Small CNN used120 training images and460
+  validation images; its historical protocol differs from the177-class release.
