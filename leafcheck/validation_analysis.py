@@ -6,7 +6,7 @@ import json
 from collections import defaultdict
 from pathlib import Path
 import numpy as np
-from .common import DATA, atomic_json, metrics_from_matrix, sha256, update_matrix
+from .common import DATA, atomic_json, metrics_from_matrix, sha256, update_matrix, write_csv
 
 
 def analyze(run):
@@ -39,9 +39,17 @@ def analyze(run):
         supported = [row for row in result["per_class"] if row["support"]]
         provenance[key] = {"images": result["sample_count"], "correct": result["correct"], "accuracy": result["accuracy"],
                            "covered_classes": len(supported), "macro_f1_over_covered_classes": sum(row["f1"] for row in supported) / len(supported)}
+    matrix = np.asarray(metrics["confusion_matrix"])
+    confusions = [{"actual_class": classes[i], "predicted_class": classes[j], "errors": int(matrix[i, j]),
+                   "support": int(matrix[i].sum()), "fraction": float(matrix[i, j] / matrix[i].sum())}
+                  for i in range(177) for j in range(177) if i != j and matrix[i, j]]
+    confusions.sort(key=lambda row: (-row["errors"], row["actual_class"], row["predicted_class"]))
+    write_csv(run / "validation_major_confusions.csv", confusions,
+              fields=["actual_class", "predicted_class", "errors", "support", "fraction"])
     result = {"checkpoint_selection": "validation macro-F1", "checkpoint_sha256":sha256(run / "best_model.pt"),
               "selected_epoch":status["best"]["epoch"],"validation_macro_f1":metrics["macro_f1"], "support_bins": support_summary,
-              "provenance": provenance, "caveat": "These validation strata differ in class composition and share development sources. They are not an independent field benchmark or proof of a causal background shortcut."}
+              "provenance": provenance, "largest_confusions": confusions[:12],
+              "caveat": "These validation strata differ in class composition and share development sources. They are not an independent field benchmark or proof of a causal background shortcut. Predictions do not establish annotation errors or justify automatic relabeling."}
     atomic_json(run / "validation_diagnostics.json", result)
     print(json.dumps(result, indent=2))
 
