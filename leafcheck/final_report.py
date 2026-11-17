@@ -8,7 +8,7 @@ import shutil
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from .common import ROOT, sha256
+from .common import ROOT, sha256, write_csv
 
 
 def read(path):
@@ -30,6 +30,34 @@ def main():
     selected = read(directory / "freeze.json"); validation = read(directory / "validation_metrics.json")
     experiments = list(csv.DictReader((ROOT / "docs/experiments.csv").open()))
     assert all(row["state"] == "complete" for row in experiments)
+    # A zero tensor verifies software shapes only; it is never accuracy evidence.
+    import torch
+    from .inference import Predictor
+    torch.set_num_threads(4)
+    network = Predictor(directory, "cpu").model
+    size = config["input_size"]
+    x = torch.zeros(1, 3, size, size, dtype=torch.float32)
+    stages = [{"stage":"Input", "output_shape":f"B×3×{size}×{size}",
+               "trainable_parameters":0, "purpose":"RGB image after deterministic preprocessing"}]
+    with torch.inference_mode():
+        for index, block in enumerate(network.features):
+            x = block(x)
+            stages.append({"stage":"Stem" if index == 0 else f"Residual block {index}",
+                           "output_shape":"B×"+"×".join(str(d) for d in x.shape[1:]),
+                           "trainable_parameters":sum(p.numel() for p in block.parameters() if p.requires_grad),
+                           "purpose":"Learn local features and downsample" if index != 1 else "Refine features at the same spatial size"})
+        for module in network.classifier:
+            x = module(x)
+            purposes = {"AdaptiveAvgPool2d":"Average each feature channel across space", "Flatten":"Convert pooled channels to a vector",
+                        "Dropout":"Training regularizer; inactive during evaluation", "Linear":"Produce one logit per supported class"}
+            kind = type(module).__name__
+            stages.append({"stage":kind, "output_shape":"B×"+"×".join(str(d) for d in x.shape[1:]),
+                           "trainable_parameters":sum(p.numel() for p in module.parameters() if p.requires_grad),
+                           "purpose":purposes[kind]})
+    assert tuple(x.shape) == (1, 177)
+    assert sum(row["trainable_parameters"] for row in stages) == selected["parameters"]
+    write_csv(ROOT / "docs/selected_architecture.csv", stages)
+    architecture_table = "\n".join(f"| {r['stage']} | {r['output_shape']} | {r['trainable_parameters']:,} | {r['purpose']} |" for r in stages)
     figures = ROOT / "docs/figures"; figures.mkdir(exist_ok=True)
     for name in ["learning_curves.png", "confusion_matrix.png", "major_confusions.png", "external_confusion_matrix.png"]:
         shutil.copyfile(directory / name, figures / name)
@@ -78,6 +106,7 @@ def main():
         "dihedral": "whole-image reflections and quarter turns",
         "dihedral_color": "whole-image reflections and quarter turns, plus independently sampled brightness and contrast factors from 0.9 to 1.1",
     }[config["augmentation"]]
+    channel_description = "/".join(str(c) for c in config["model"]["channels"])
     report = f'''# LeafCheck final model: methods, results and defense material
 
 Generated from completed saved records. This is report source material, not a
@@ -125,11 +154,16 @@ Dataset fingerprint: `{selected['dataset_fingerprint']}`.
 ## Methods and preprocessing
 
 The selected model is `{config['model']['architecture']}`, seed {config['seed']},
-with {selected['parameters']:,} trainable parameters. The shape/parameter table and derivations are
-in `model_defense_guide.md`. It uses a stride-2 convolutional stem, four custom
-two-convolution residual blocks (24/48/96/192 channels), batch normalization,
+with {selected['parameters']:,} trainable parameters. The table below traces a
+zero-input software check; shape/parameter derivations are in
+`model_defense_guide.md`. It uses a stride-2 convolutional stem, four custom
+two-convolution residual blocks ({channel_description} channels), batch normalization,
 ReLU, global average pooling, dropout {config['model']['dropout']} and 177 logits.
 Framework layers/autograd implement the mathematics; all weights start randomly.
+
+| Stage | Output tensor shape | Trainable parameters | Purpose |
+| --- | --- | ---: | --- |
+{architecture_table}
 
 Preprocessing selects frame zero, corrects EXIF orientation, converts to RGB,
 bilinearly resizes while preserving aspect ratio and center-pads with gray 128
