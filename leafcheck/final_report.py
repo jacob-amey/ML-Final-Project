@@ -94,7 +94,8 @@ def main():
         evidence = read(path)
         assert evidence["matching_numeric_configs_and_core_training_sources_verified"]
         cfg = read(ROOT / "runs/final177" / evidence["runs"][0]["run"] / "config.json")
-        seed_rows.append(f"| {cfg['input_size']} | {cfg['augmentation']} | {cfg['weight_decay']} | {evidence['mean_macro_f1']:.6f} | {evidence['macro_f1_range']:.6f} |")
+        widths = "/".join(str(c) for c in cfg["model"]["channels"])
+        seed_rows.append(f"| {cfg['input_size']} | {widths} | {cfg['augmentation']} | {cfg['weight_decay']} | {evidence['mean_macro_f1']:.6f} | {evidence['macro_f1_range']:.6f} |")
     seed_table = "\n".join(seed_rows)
     confusion = list(csv.DictReader((directory / "major_confusions.csv").open()))[:8]
     confusion_rows = "\n".join(f"| {r['actual_class']} | {r['predicted_class']} | {r['count']} / {r['actual_support']} | {float(r['fraction_of_actual_class']):.1%} |" for r in confusion)
@@ -202,8 +203,8 @@ a parent procedure; its cost must not be counted as another fresh 48-epoch run.
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
 {rows}
 
-| Input size | Training augmentation | Weight decay | Two-seed mean macro-F1 | Observed seed range |
-| ---: | --- | ---: | ---: | ---: |
+| Input size | Channels | Training augmentation | Weight decay | Two-seed mean macro-F1 | Observed seed range |
+| ---: | --- | --- | ---: | ---: | ---: |
 {seed_table}
 
 These are two selected validation checkpoints per recipe, not confidence
