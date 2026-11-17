@@ -344,7 +344,8 @@ Formal report formatting, repository submission and presentation remain team wor
 image-based plant disease detection,” *Front. Plant Sci.*, vol. 7, art. 1419, 2016,
 doi: [10.3389/fpls.2016.01419](https://doi.org/10.3389/fpls.2016.01419).
 
-[2] D. Singh et al., “PlantDoc: A dataset for visual plant disease detection,”
+[2] D. Singh, N. Jain, P. Jain, P. Kayal, S. Kumawat, and N. Batra,
+“PlantDoc: A dataset for visual plant disease detection,”
 in *Proc. CoDS-COMAD*, 2020, pp. 249–253,
 doi: [10.1145/3371158.3371196](https://doi.org/10.1145/3371158.3371196).
 
@@ -356,6 +357,23 @@ Dataset revisions, annotations and source links are in `data/README.md` and
 `final_dataset_audit.md`; original code references include PyTorch documentation
 and the architecture references above. No original pretrained implementation
 or weights were copied into the final model.
+
+## Appendix and project source
+
+The configured project repository is
+[jacob-amey/ML-Final-Project](https://github.com/jacob-amey/ML-Final-Project).
+Final execution work is recorded on the local `codex/final-leafcheck177` branch;
+the team must ensure the approved source revision is available to the instructor.
+Large datasets/checkpoints follow repository storage rules. Artifact fingerprints,
+local archive locations and restoration instructions accompany the delivered
+model; a source checkout alone does not include the image collection or weights.
+Dataset source links and pinned revisions are in `data/README.md`; the provided
+master remains necessary for exact training-data restoration where no public
+download is established. Source code, configurations and the review notebook
+are identified in the project README. Framework API references include the
+[PyTorch documentation](https://docs.pytorch.org/docs/stable/index.html).
+The numbered reference format follows the assignment's
+[University of Pittsburgh IEEE guide](https://pitt.libguides.com/citationhelp/ieee).
 '''
     (ROOT / "docs/final_model_report.md").write_text(report)
     print("Saved report source material and figures from completed frozen evidence.")
