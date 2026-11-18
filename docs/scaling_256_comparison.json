@@ -1,0 +1,27 @@
+{
+  "state": "repeat_pending",
+  "reference": "docs/seed_stability_224.json",
+  "screen_gain": 0.007868607659367477,
+  "repeat_trigger": 0.005,
+  "repeat_required": true,
+  "accepted_by_declared_rule": false,
+  "completed_procedures": [
+    {
+      "state": "complete",
+      "completed_epochs": 64,
+      "best": {
+        "macro_f1": 0.6512502662477512,
+        "loss": 0.4388695292123482,
+        "accuracy": 0.8946899501069138,
+        "epoch": 63
+      },
+      "total_steps": 29504,
+      "training_seconds": 11592.016385333001,
+      "stopping_reason": "completed declared maximum epoch budget",
+      "checkpoint_reload_verified": true,
+      "saved_utc": "2026-11-17T20:57:51.142896+00:00"
+    }
+  ],
+  "updated_utc": "2026-11-17T20:57:54.679707+00:00",
+  "test_predictions_used": false
+}
