@@ -181,6 +181,7 @@ command contract; use the actual selected run in the final manifest.
 .venv/bin/python -m leafcheck.package \
   --run runs/final177/SELECTED_RUN \
   --output artifacts/leafcheck177-v1 \
+  --policy-record docs/inference_policy_comparison.json \
   --rationale "Document the validation-based selection and stopping decision"
 .venv/bin/python -m leafcheck.evaluate_final --artifact artifacts/leafcheck177-v1
 .venv/bin/python -m leafcheck.evaluate_external --artifact artifacts/leafcheck177-v1
@@ -209,8 +210,9 @@ elsewhere in the master, so this is not an unseen-source benchmark. Generic
 
 ## Standalone inference and website
 
-The final bundle includes `model.pt`, exact mapping/config/preprocessing, freeze
-record, artifact hashes, saved evaluation and its small inference runtime. It
+The final bundle includes `model.pt`, exact class mapping, model configuration,
+preprocessing, the scoring policy, freeze record, hashes and saved evaluation.
+It also includes the small inference runtime and
 does not require notebooks or the full training dataset.
 
 ```sh

@@ -20,7 +20,7 @@ def prepare(parent, output, max_epochs):
     assert last["config"] == original_config
     config = copy.deepcopy(original_config)
     config.update({"experiment": original_config["experiment"] + "-longer-budget",
-                   "hypothesis": "The leading 48-epoch recipe was still improving late; continue its exact optimizer/RNG state to test whether a longer budget yields meaningful validation gains.",
+                   "hypothesis": f"The {original_config['max_epochs']}-epoch recipe showed a late validation gain. Continue the saved optimizer and random state to test whether a longer budget helps.",
                    "reference": parent.name + "; only the maximum epoch budget changes, with the same validation-led early stop and scheduler",
                    "max_epochs": max_epochs})
     best = torch.load(parent / "best_model.pt", map_location="cpu", weights_only=True)

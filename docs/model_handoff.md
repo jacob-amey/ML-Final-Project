@@ -14,7 +14,7 @@ identifies a checkpoint-hash-named directory; final-model loading never chooses
 the newest run automatically. Final evaluation files accompany the exact weights.
 
 The bundle contains weights, architecture/runtime code, model configuration,
-class mapping, preprocessing, package versions, dataset/selection fingerprints,
+class mapping, preprocessing, prediction policy, package versions, dataset fingerprints,
 saved evaluation and example images. Training notebooks and the full dataset
 are not needed for the packaged application. Large binaries remain outside Git.
 
@@ -47,7 +47,7 @@ The independent Python `Predictor.predict(path)` interface returns:
 | Field | Meaning |
 | --- | --- |
 | `label` | Top class name from the saved 177-entry mapping |
-| `score` | That class's softmax output, from 0 to 1 |
+| `score` | That class's score after the frozen prediction policy, from 0 to 1 |
 | `class_scores` | All 177 class names and scores, in saved class order; scores sum to one |
 | `elapsed_ms` | This adapter's image preparation, network and output time |
 | `model_version` | `leafcheck177-v1`; identify the exact weights with the artifact SHA-256 |
