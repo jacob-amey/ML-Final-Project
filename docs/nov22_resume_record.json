@@ -1,5 +1,5 @@
 {
-  "recorded_utc": "2026-11-23T00:47:28.349304+00:00",
+  "recorded_utc": "2026-11-23T00:50:14.450575+00:00",
   "recovered": {
     "epoch": 1,
     "next_batch": 100,
@@ -10,10 +10,10 @@
     "core_source_hashes_match_saved_run": true
   },
   "last_verified": {
-    "epoch": 4,
-    "next_batch": 300,
-    "total_steps": 1683,
-    "sha256": "4afd48b64b58b5786b34b8f3f6a6b1da1b3ca4c2fd527335b810a040e4cc0464"
+    "epoch": 5,
+    "next_batch": 200,
+    "total_steps": 2044,
+    "sha256": "cd1649b7e825eb7eb70e15caded03cd87f41af217ca35fb1783d1a9e85a8a8ad"
   },
   "train_run": "runs/final177/residual177_256_seed435",
   "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
@@ -22,6 +22,16 @@
   "training_log": "runs/final177/residual177_256_seed435_training.log",
   "followup": "caffeinate -i /usr/bin/lockf -k runs/final177/native_resolution.lock .venv/bin/python scripts/run_final_development.py",
   "followup_driver_log": "runs/final177/final_development_driver.log",
-  "process_check": "One MPS trainer PID6402 resumed at batch100. The follow-up process waits on the same lock. No OS service is active. The terminal-owned process is monitored and checkpoints survive interrupted sessions.",
-  "test_or_supplementary_predictions_opened": false
+  "test_or_supplementary_predictions_opened": false,
+  "execution": {
+    "session": "leafcheck-final177",
+    "session_pid": 8064,
+    "trainer_pid_at_verification": 8090,
+    "relaunch": "/usr/bin/screen -dmS leafcheck-final177 /bin/zsh scripts/run_remaining_development.sh",
+    "transfer_after_epoch": 4,
+    "transferred_checkpoint_epoch": 5,
+    "transferred_checkpoint_next_batch": 62,
+    "transferred_checkpoint_updates": 1906,
+    "driver_scope": "paired native resolution, conditional paired duration, validation scoring policies; active review precedes freeze"
+  }
 }

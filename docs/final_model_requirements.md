@@ -2,7 +2,9 @@
 
 ## Verified sources and scope
 
-The CSC 434 rubric pasted in the project conversation requires implementation,
+The current project is CSC-427, **Plant Health Classification and an Interactive
+Application**, as identified by the user. The earlier course rubric pasted in
+the project conversation (labeled CSC 434 there) requires implementation,
 comparative validation/testing, a working demonstration and Q&A, a documented
 GitHub repository, a two-page proposal, a 5–10 page final report, and explicit
 individual contributions. The local `AI Project Build Guide.docx` additionally

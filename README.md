@@ -17,16 +17,17 @@ local bundles and archives follow `.gitignore`; they are not large Git binaries.
 
 ## Status and evidence
 
-Full-data training and validation experiments are in progress at the user's
-request. The paired 128/160-pixel comparison is complete; 160 pixels improved
+Full-data training and validation experiments are in progress for the
+CSC-427 final project, **Plant Health Classification and an Interactive
+Application**. The paired 128/160-pixel comparison is complete. 160 pixels improved
 validation macro-F1 in both seeds. The completed illumination comparison raised
 two-seed mean macro-F1 from0.608911 to0.621631. Stronger weight decay did not
 improve that mean, so0.0001 is retained. The completed wider-channel screen did not improve its matched reference.
 Both 224-pixel procedures completed and reloaded: paired mean macro-F1
 0.641060 versus 160-pixel mean 0.621631. Both seed gains were positive.
-The conditional native 256 screen is now running before final selection;
-larger inputs are not assumed better. `docs/active_training.json` identifies the current
-run; its `status.json` is the live epoch/checkpoint record. The historical pause record is retained separately.
+The first 256-pixel run passed the repeat threshold. Its independent repeat
+resumed from saved training state. `docs/active_training.json` identifies the
+current procedure, and its `status.json` and training log record live progress.
 
 Final selection, held-out evaluation and the real final-model website rehearsal
 remain pending. No final-model predictions have been inspected on the primary
@@ -89,6 +90,22 @@ checking the model/data freeze. Do not change class order, image orientation,
 RGB conversion, interpolation, padding, scaling or normalization at deployment.
 
 ## Training and resume
+
+On this Mac, check whether the named detached session or an existing trainer
+owns the job before resuming. The remaining development command acquires the
+shared lock, preserves completed runs and resumes the last valid checkpoint.
+It applies the declared paired decisions in order and records the candidate
+for the final review while keeping the holdouts sealed.
+
+```sh
+/usr/bin/screen -ls
+/usr/bin/screen -dmS leafcheck-final177 /bin/zsh scripts/run_remaining_development.sh
+tail -f runs/final177/residual177_256_seed435_training.log
+```
+
+For an already completed native comparison, the same command reuses its valid
+checkpoints. The follow-up driver records its work in
+`runs/final177/final_development_tasks.log` and `docs/active_training.json`.
 
 Each new run starts with fresh weights unless an explicitly documented later
 refinement configuration says otherwise. The training entry point accepts no
