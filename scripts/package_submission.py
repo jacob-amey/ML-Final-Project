@@ -3,8 +3,10 @@
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import subprocess
+import sys
 import tarfile
 import tempfile
 import zipfile
@@ -108,10 +110,24 @@ samples are included. Re-running the evaluation requires the original data.
         assert digest(destination / model_dir / "model.pt") == checkpoint
         assert digest(destination / "LeafCheck-final-demo.zip") == archive_check["archive_sha256"]
         assert not (destination / "source/data/processed").exists()
+        # Check the default artifact path from the extracted source using one
+        # packaged photo. The full test split stays outside the archive.
+        environment = os.environ.copy()
+        environment.pop("PYTHONPATH", None)
+        environment.pop("LEAFCHECK_REVIEW_ARTIFACT", None)
+        bundle = destination / model_dir
+        example = read(bundle / "demo_examples.json")[0]
+        standalone = subprocess.check_output([
+            sys.executable, "-m", "leafcheck.inference", "--artifact", "artifacts/leafcheck177-v1",
+            str(bundle / example["sample_file"])], cwd=destination / "source", env=environment, text=True)
+        prediction = json.loads(standalone)
+        assert prediction["label"] == example["predicted_class"]
+        assert abs(prediction["score"] - example["score"]) < 1e-4
     temporary.replace(output)
     record = {"archive": str(output.relative_to(ROOT)), "bytes": output.stat().st_size,
               "sha256": digest(output), "source_revision": source_revision,
-              "checkpoint_sha256": checkpoint, "files_verified_from_fresh_extraction": len(manifest)}
+              "checkpoint_sha256": checkpoint, "files_verified_from_fresh_extraction": len(manifest),
+              "fresh_extraction_standalone_prediction": {"label":prediction["label"], "score":prediction["score"]}}
     (SUBMISSION / "verification.json").write_text(json.dumps(record, indent=2) + "\n")
     print(json.dumps(record, indent=2))
 
