@@ -44,7 +44,7 @@ def check_latency(run, cache, policy):
     return measurements
 
 
-def compare(pair_file, output):
+def compare(pair_file, output, device_name="auto"):
     if (ROOT / "artifacts/leafcheck177-v1/freeze.json").exists():
         raise RuntimeError("The final model is frozen. Validation selection is closed.")
     pair = json.loads(Path(pair_file).read_text())
@@ -55,7 +55,7 @@ def compare(pair_file, output):
     counts = np.bincount([int(row["class_id"]) for row in split_rows("train")], minlength=177).tolist()
     policies = [{"name": "single_view"}, {"name": "train_prior_quarter", "training_counts": counts},
                 {"name": "d4_probability_mean"}]
-    device = device_for("auto")
+    device = device_for(device_name)
     torch.set_num_threads(4)
     cache = PixelCache("val", pair["input_size"], frozen)
     assert len(cache) == 16836
@@ -87,10 +87,16 @@ def compare(pair_file, output):
             else:
                 control = results["single_view"][-1]
                 result["macro_f1_gain"] = result["macro_f1"] - control["macro_f1"]
+                result["changed_predictions"] = sum(row["predicted_index"] != before["predicted_index"]
+                                                    for row, before in zip(rows, control_rows))
+                result["corrected_predictions"] = sum(row["correct"] and not before["correct"] for row, before in zip(rows, control_rows))
+                result["new_mistakes"] = sum(before["correct"] and not row["correct"] for row, before in zip(rows, control_rows))
                 original = json.loads((output / f"{run.name}-single_view-metrics.json").read_text())
                 result["per_class_f1_gains"] = {row["class_name"]: row["f1"] - before["f1"]
                                                for row, before in zip(metrics["per_class"], original["per_class"])}
             results[name].append(result)
+            if name == "single_view":
+                control_rows = rows
             atomic_json(output / f"{run.name}-{name}-metrics.json", metrics)
             write_csv(output / f"{run.name}-{name}-predictions.csv", rows)
             print(json.dumps({"policy": name, **{k:v for k,v in result.items() if k != "per_class_f1_gains"}}), flush=True)
@@ -113,7 +119,7 @@ def compare(pair_file, output):
     if eligible:
         winner = max(eligible, key=lambda candidate: candidate[0])[1]
     winning_result = None
-    for candidate in results[winner["name"]]:
+    for candidate in sorted(results[winner["name"]], key=lambda row: row["epoch"]):
         if better(candidate, winning_result):
             winning_result = candidate
     decision = {"recorded_utc": utc_now(), "evaluation_split": "validation only", "incumbent_pair": str(pair_file),
@@ -130,5 +136,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--pair", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--device", default="auto", choices=["auto", "cpu", "mps"])
     args = parser.parse_args()
-    compare(args.pair, args.output)
+    compare(args.pair, args.output, args.device)

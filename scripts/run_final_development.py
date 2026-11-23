@@ -39,6 +39,27 @@ def late_evidence(run):
             "next_learning_rate": float(rows[-1]["learning_rate_next"])}
 
 
+def paired_resolution_details(candidate, reference):
+    records = []
+    for old, new in zip(reference["runs"], candidate["runs"]):
+        assert old["seed"] == new["seed"]
+        endpoints = []
+        for record in (old, new):
+            run = RUNS / record["run"]
+            status = read(run / "status.json")
+            diagnostics = read(run / "validation_diagnostics.json")
+            assert status["state"] == "complete" and status["checkpoint_reload_verified"]
+            assert sha256(run / "best_model.pt") == record["checkpoint_sha256"] == diagnostics["checkpoint_sha256"]
+            endpoints.append({"run": run.name, "selected_epoch": status["best"]["epoch"], **status["best"],
+                              "checkpoint_sha256": record["checkpoint_sha256"],
+                              "support_bins": diagnostics["support_bins"], "provenance": diagnostics["provenance"],
+                              "largest_confusions": diagnostics["largest_confusions"][:5]})
+        old_result, new_result = endpoints
+        changes = {key: new_result[key] - old_result[key] for key in ("macro_f1", "accuracy", "loss")}
+        records.append({"seed": old["seed"], "reference": old_result, "candidate": new_result, "change": changes})
+    return records
+
+
 def extension_pair(original):
     paths = []
     for record in original["runs"]:
@@ -80,6 +101,7 @@ def main():
         row["late_peak"] and row["late_gain"] >= .003 and row["next_learning_rate"] > .00002 for row in evidence)
     decision = {"recorded_utc": utc_now(), "evaluation_split": "validation only", "native_size_accepted": promoted,
                 "native_size_paired_gain": gain, "parent_pair": pair.name, "late_curve_evidence": evidence,
+                "native_size_matched_seed_details": paired_resolution_details(candidate, reference),
                 "duration_trial_triggered": extend, "duration_trial_complete": False, "test_predictions_used": False}
     atomic_json(DOCS / "duration_trial_decision.json", decision)
     print(f"Native resolution comparison complete. Incumbent: {pair.name}. Extend: {extend}.", flush=True)
