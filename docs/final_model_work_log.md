@@ -429,3 +429,18 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   deck has an editable held-out comparison table. The delivery ZIP keeps data,
   saved weights and evidence local. The full master and prepared image files
   are available in the original local locations.
+
+### Stop checkpoint verification
+
+- The final 224-pixel seed-434 procedure has 63 complete epochs of 59,008
+  images. The later 256-pixel seed-435 comparison finished 58 epochs. No
+  training process or detached training session was active at inspection.
+- Reloaded the frozen 177-class artifact on CPU and matched its weights to the
+  selected epoch-53 checkpoint. Rechecked all 59 bundle file hashes and the
+  submission archive hash. The deployed eight-view policy holds the recorded
+  validation result of 0.649221 macro-F1. Its paired validation gain was
+  0.007758. The 256-pixel recipe's paired gain of 0.003166 fell below its 0.005
+  acceptance threshold.
+- The project is stopped at `verified_delivery_complete` with the existing
+  frozen evaluation and local submission archive. This check verified
+  identities and completion records without generating new holdout predictions.
