@@ -28,6 +28,17 @@ def main():
     external = read(directory / "external_metrics.json"); latency = read(directory / "latency.json")
     config = read(directory / "config.json"); status = read(directory / "status.json")
     selected = read(directory / "freeze.json"); validation = read(directory / "validation_metrics.json")
+    deployment_validation = selected.get("deployment_validation", validation)
+    policy_names = {"single_view":"One standard image view", "d4_probability_mean":"Mean softmax scores over eight orientations",
+                    "train_prior_quarter":"Training frequency adjustment by subtracting 0.25 log class prior from each logit"}
+    policy_name = selected.get("inference_policy", {"name":"single_view"})["name"]
+    policy_record = directory / "inference_policy_selection.json"
+    policy_paragraph = ""
+    if policy_record.exists():
+        policy_results = read(policy_record)
+        assert policy_results["selected_policy"]["name"] == policy_name
+        effects = " and ".join(f"{policy_names[r['policy']]} ({r['mean_gain']:+.6f})" for r in policy_results["policies"])
+        policy_paragraph = f"\nThe paired validation trial measured macro-F1 changes of {effects}. Each used the same trained CNN weights and validation images as the single-view control. The selected policy was included in the freeze.\n"
     experiments = list(csv.DictReader((ROOT / "docs/experiments.csv").open()))
     assert all(row["state"] == "complete" for row in experiments)
     # A zero tensor verifies software shapes only; it is never accuracy evidence.
@@ -108,7 +119,7 @@ def main():
         "dihedral_color": "whole-image reflections and quarter turns, plus independently sampled brightness and contrast factors from 0.9 to 1.1",
     }[config["augmentation"]]
     channel_description = "/".join(str(c) for c in config["model"]["channels"])
-    report = f'''# LeafCheck final model: methods, results and defense material
+    report = f'''# Plant Health Classification and an Interactive Application
 
 Generated from completed saved records. This is report source material, not a
 claim that a formatted 5–10 page report or presentation has been submitted.
@@ -215,11 +226,15 @@ repeated use of the validation set still limit the comparison.
 
 **Frozen selection rationale and stopping decision:** {selected['rationale']}
 
-Validation at the selected checkpoint: accuracy {validation['accuracy']:.4%},
-macro-F1 {validation['macro_f1']:.6f}. This is development evidence, not an
-unbiased estimate after repeated model selection. No test predictions, thresholds
-or calibration were used for selection. The test seal/freeze records preserve
-the protocol. After final evaluation, improvement proposals remain future work.
+The selected checkpoint scored {validation['macro_f1']:.6f} macro-F1 and
+{validation['accuracy']:.4%} accuracy with the original training validation
+protocol. The delivered prediction policy is {policy_names[policy_name].lower()}.
+With this policy, the selected checkpoint scored
+{deployment_validation['macro_f1']:.6f} validation macro-F1 and
+{deployment_validation['accuracy']:.4%} validation accuracy. Repeated selection
+can favor matches to the validation split. The test seal and freeze records
+preserve the separate holdout protocol.
+{policy_paragraph}
 
 ![Selected learning curves](figures/learning_curves.png)
 

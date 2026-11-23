@@ -31,7 +31,12 @@ def digest(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--python",type=Path,default=Path(sys.executable),help="Compatible app-only Python interpreter for the extracted server")
-    runtime_python = str(parser.parse_args().python.resolve())
+    # Resolving the executable symlink would leave its virtual environment.
+    runtime_python = parser.parse_args().python.absolute()
+    runtime_prefix = Path(subprocess.check_output(
+        [str(runtime_python), "-c", "import sys; print(sys.prefix)"], text=True).strip())
+    assert (runtime_prefix / "bin/python").is_file() and (runtime_prefix / "pyvenv.cfg").is_file(), \
+        "Pass the app-only virtual environment's bin/python"
     archive = ROOT / "artifacts/LeafCheck-final-demo.zip"
     record = json.loads((ROOT / "docs/demo_archive.json").read_text())
     assert digest(archive) == record["sha256"]
@@ -46,16 +51,20 @@ def main():
         manifest = json.loads((demo / "PACKAGE_MANIFEST.json").read_text())
         assert len(names) == len(manifest) + 1
         assert all(digest(demo / name) == expected for name, expected in manifest.items())
+        (demo / ".venv").symlink_to(runtime_prefix, target_is_directory=True)
+        launcher = demo / "Launch LeafCheck.command"
+        launcher.chmod(0o755)
         reference = json.loads((demo / "models/final_model.json").read_text())
         artifact = demo / "models" / reference["artifact"]
         examples = json.loads((artifact / "demo_examples.json").read_text())
         environment = os.environ.copy()
         for key in ["LEAFCHECK_CNN_CHECKPOINT", "LEAFCHECK_STARTER300_CHECKPOINT", "LEAFCHECK_COREML_MODEL", "LEAFCHECK_FINAL_ARTIFACT", "PYTHONPATH"]:
             environment.pop(key, None)
+        environment["LEAFCHECK_OPEN_BROWSER"] = "0"
         log = directory / "server.log"
         with log.open("w") as output:
             launched = time.perf_counter()
-            process = subprocess.Popen([runtime_python, str(demo / "backend/server.py"), "--port", "0"],
+            process = subprocess.Popen([str(launcher), "--port", "0"],
                                        cwd=demo, stdout=output, stderr=subprocess.STDOUT, env=environment)
             try:
                 address = None
@@ -102,7 +111,9 @@ def main():
                             "hardware":hardware(),
                             "fresh_process":True, "working_directory_has_training_data":False, "notebooks_present":False,
                             "manifest_files_verified":len(manifest), "all_four_real_models_ready":True,
-                            "python_executable":runtime_python, "startup_ms_including_first_swift_compile":startup_ms,
+                            "python_executable":str(runtime_python), "python_venv":str(runtime_prefix),
+                            "startup_command":"./Launch LeafCheck.command --port 0 (automatic browser disabled for the HTTP check)",
+                            "startup_ms_including_first_swift_compile":startup_ms,
                             "http_latency":{"warmup_requests":2,"timed_requests":len(measurements),
                                             "p50_ms":float(np.median(measurements)), "p95_ms":float(np.percentile(measurements,95)),
                                             "measurements_ms":measurements,

@@ -115,7 +115,10 @@ function renderDetails() {
     if (model.parameters) facts.push(`${model.parameters.toLocaleString()} parameters`);
     if (model.train_images) facts.push(`${model.train_images} training images`);
     if (model.selected_epoch) facts.push(`Selected epoch ${model.selected_epoch}`);
-    if (model.validation) facts.push(`${percent(model.validation.accuracy)} validation accuracy · ${model.validation_images} images`, `Validation F1 ${model.validation.macro_f1.toFixed(3)}`);
+    const validation = model.deployment_validation || model.validation;
+    if (validation) facts.push(`${percent(validation.accuracy)} validation accuracy · ${model.validation_images} images`, `Validation F1 ${validation.macro_f1.toFixed(3)}`);
+    const policyNames = { single_view: 'Single image view', d4_probability_mean: 'Average of eight image orientations', train_prior_quarter: 'Training frequency score adjustment' };
+    if (policyNames[model.inference_policy]) facts.push(policyNames[model.inference_policy]);
     if (model.test) facts.push(`${percent(model.test.accuracy)} test accuracy · ${model.test_images} images`, `Test F1 ${model.test.macro_f1.toFixed(3)}`);
     const detail = info.key === 'final177'
       ? 'Custom CNN trained from random initialization on all 59,008 training images. Selected by validation macro F1; evaluated once after the model and preprocessing were frozen.'

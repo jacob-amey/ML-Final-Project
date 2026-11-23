@@ -367,3 +367,15 @@ The native256 sequential benchmark passed finite-loss/gradient/update checks:724
 ### Remaining within-split raw identity review completed
 
 Reviewed all426 remaining pairs on36 contact pages,15 larger source views and15 geometric cases. Verified raw hashes for444 distinct files. No additional shared photograph was confirmed; source release count,177 labels, groups, splits and fingerprint are unchanged. Degenerate34/20-inlier cases collapsed to one destination; the known same-photo software control recovered113inliers at104positions. Evidence is raw identity QA only, not model performance. All792 listed representatives now have supplemental review; undocumented biological identity and unlisted edits remain risks. Test predictions stay sealed.
+
+### November 22 recovery and delivery preparation
+
+The clean dev checkout had no live trainer. The seed 435 checkpoint recovered
+at epoch 1, batch 100 with saved optimizer, scheduler and RNG state. The core
+source hashes, configuration and frozen dataset fingerprint matched. Training
+resumed on MPS behind a shared lock and completed its first full epoch. The
+cached README-only collaborator commit remains in history, and the detailed
+instructions were restored on the local feature branch. A launch service did
+not start successfully. The monitored terminal session owns the live process.
+The next development checks are queued behind its lock and require completed
+paired evidence. See nov22_resume_record.json and the selection plan.

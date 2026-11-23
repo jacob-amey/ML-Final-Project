@@ -1,0 +1,27 @@
+{
+  "recorded_utc": "2026-11-23T00:47:28.349304+00:00",
+  "recovered": {
+    "epoch": 1,
+    "next_batch": 100,
+    "total_steps": 100,
+    "train_images_seen": 12800,
+    "sha256": "667e7354e4e71bfcab4735111748ea9cef83f094ffc26873da6ddaff4c72f145",
+    "optimizer_scheduler_rng_verified": true,
+    "core_source_hashes_match_saved_run": true
+  },
+  "last_verified": {
+    "epoch": 4,
+    "next_batch": 300,
+    "total_steps": 1683,
+    "sha256": "4afd48b64b58b5786b34b8f3f6a6b1da1b3ca4c2fd527335b810a040e4cc0464"
+  },
+  "train_run": "runs/final177/residual177_256_seed435",
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "incumbent_pair": "docs/seed_stability_224.json",
+  "launch": "caffeinate -i /usr/bin/lockf -t 0 runs/final177/native_resolution.lock .venv/bin/python scripts/run_native_resolution_check.py",
+  "training_log": "runs/final177/residual177_256_seed435_training.log",
+  "followup": "caffeinate -i /usr/bin/lockf -k runs/final177/native_resolution.lock .venv/bin/python scripts/run_final_development.py",
+  "followup_driver_log": "runs/final177/final_development_driver.log",
+  "process_check": "One MPS trainer PID6402 resumed at batch100. The follow-up process waits on the same lock. No OS service is active. The terminal-owned process is monitored and checkpoints survive interrupted sessions.",
+  "test_or_supplementary_predictions_opened": false
+}
