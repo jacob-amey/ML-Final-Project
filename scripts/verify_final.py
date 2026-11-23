@@ -9,6 +9,7 @@ import subprocess
 import sys
 import time
 from urllib.request import urlopen
+from unittest.mock import patch
 import nbformat
 from nbclient import NotebookClient
 
@@ -49,12 +50,9 @@ def main():
         print(label, "passed", records[-1]["test_cases"], "cases",flush=True)
     notebook_path = ROOT / "cnn_final_model_review.ipynb"
     notebook = nbformat.read(notebook_path,as_version=4)
-    for cell in notebook.cells:
-        if cell.cell_type == "code" and 'ARTIFACT = ROOT / "artifacts/leafcheck177-v1"' in cell.source:
-            cell.source = cell.source.replace('ARTIFACT = ROOT / "artifacts/leafcheck177-v1"',
-                                              "ARTIFACT = Path(" + repr(str(args.artifact.resolve())) + ")")
     began = time.perf_counter()
-    NotebookClient(notebook,timeout=180,kernel_name="leafcheck",resources={"metadata":{"path":str(ROOT)}}).execute()
+    with patch.dict(os.environ, {"LEAFCHECK_REVIEW_ARTIFACT": str(args.artifact.resolve())}):
+        NotebookClient(notebook,timeout=180,kernel_name="leafcheck",resources={"metadata":{"path":str(ROOT)}}).execute()
     executed = output / "cnn_final_model_review.executed.ipynb"
     nbformat.write(notebook,executed)
     assert all(out.get("output_type") != "error" for cell in notebook.cells if cell.cell_type=="code" for out in cell.get("outputs",[]))

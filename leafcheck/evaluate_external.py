@@ -21,6 +21,8 @@ def main():
     assert sha256(directory / "model.pt") == freeze["checkpoint_sha256"]
     assert sha256(directory / "external_protocol.json") == freeze["external_protocol_sha256"]
     assert sha256(directory / "external_manifest.csv") == freeze["external_manifest_sha256"]
+    manifest = json.loads((directory / "artifact.json").read_text())
+    assert manifest.get("inference_policy") == freeze.get("inference_policy")
     if (directory / "external_metrics.json").exists():
         saved = json.loads((directory / "external_metrics.json").read_text())
         assert saved["checkpoint_sha256"] == freeze["checkpoint_sha256"]
@@ -55,7 +57,8 @@ def main():
     baseline["macro_f1"] = sum(row["f1"] for row in baseline_covered) / len(baseline_covered)
     metrics.update({"conditional_rule": {key: baseline[key] for key in ["correct", "sample_count", "accuracy", "macro_f1"]},
                     "conditional_rule_definition": protocol["conditional_rule"], "protocol": protocol,
-                    "checkpoint_sha256": freeze["checkpoint_sha256"], "evaluated_utc": utc_now()})
+                    "checkpoint_sha256": freeze["checkpoint_sha256"], "inference_policy": predictor.policy["name"],
+                    "evaluated_utc": utc_now()})
     write_csv(directory / "external_predictions.csv", predictions)
     write_csv(directory / "external_per_class.csv", covered)
     indices = [mapping[name] for name in sorted(protocol["class_counts"])]

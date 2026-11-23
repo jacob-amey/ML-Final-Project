@@ -35,6 +35,10 @@ def package(run, destination, rationale, reference_run=ROOT / "runs/final177/pla
     assert abs(reference_checkpoint["validation"]["macro_f1"] - reference_status["best"]["macro_f1"]) < 1e-12
     assert reference_checkpoint["model_config"]["architecture"] == "plain_v1"
     assert sha256(reference_run / "source/leafcheck/model.py") == sha256(ROOT / "leafcheck/model.py")
+    registered = json.loads((ROOT / "docs/final_selection_plan.json").read_text())["fair_heldout_reference"]
+    assert registered["declared_before_test_predictions"]
+    assert reference_run.name == registered["run"] and reference_checkpoint["epoch"] == registered["selected_epoch"]
+    assert sha256(reference_run / "best_model.pt") == registered["checkpoint_sha256"]
     policy = {"name": "single_view"}
     deployment_validation = checkpoint["validation"]
     if policy_record:
