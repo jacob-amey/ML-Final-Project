@@ -1,10 +1,11 @@
 {
-  "state": "repeat_pending",
+  "state": "complete",
   "reference": "docs/seed_stability_224.json",
   "screen_gain": 0.007868607659367477,
   "repeat_trigger": 0.005,
   "repeat_required": true,
   "accepted_by_declared_rule": false,
+  "paired_mean_gain": 0.0031660036714167283,
   "completed_procedures": [
     {
       "state": "complete",
@@ -20,8 +21,23 @@
       "stopping_reason": "completed declared maximum epoch budget",
       "checkpoint_reload_verified": true,
       "saved_utc": "2026-11-17T20:57:51.142896+00:00"
+    },
+    {
+      "state": "complete",
+      "completed_epochs": 58,
+      "best": {
+        "macro_f1": 0.6372021278015403,
+        "loss": 0.4292301634115486,
+        "accuracy": 0.8917795200760276,
+        "epoch": 56
+      },
+      "total_steps": 26738,
+      "training_seconds": 11011.951296583986,
+      "stopping_reason": "early stopping after validation macro-F1 plateau",
+      "checkpoint_reload_verified": true,
+      "saved_utc": "2026-11-23T03:40:03.216396+00:00"
     }
   ],
-  "updated_utc": "2026-11-23T00:49:13.512388+00:00",
+  "updated_utc": "2026-11-23T03:40:07.754036+00:00",
   "test_predictions_used": false
 }

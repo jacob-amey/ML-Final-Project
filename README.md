@@ -91,6 +91,28 @@ RGB conversion, interpolation, padding, scaling or normalization at deployment.
 
 ## Training and resume
 
+To reproduce the paired 224- and 256-pixel training comparisons and the fair
+compact reference, start in a fresh checkout with the verified frozen release
+and research environment. Run the training commands sequentially on Apple MPS.
+Each creates a separate run directory. Prepare the training and validation
+caches first.
+
+```sh
+.venv/bin/python -m leafcheck.data --size 128 --workers 6
+.venv/bin/python -m leafcheck.data --size 224 --workers 6
+.venv/bin/python -m leafcheck.data --size 256 --workers 6
+caffeinate -i .venv/bin/python -m leafcheck.train --config configs/plain177.json --run runs/final177/plain177_seed434
+caffeinate -i .venv/bin/python -m leafcheck.train --config configs/residual177_224_seed434.json --run runs/final177/residual177_224_seed434
+caffeinate -i .venv/bin/python -m leafcheck.train --config configs/residual177_224_seed435.json --run runs/final177/residual177_224_seed435
+caffeinate -i .venv/bin/python -m leafcheck.train --config configs/residual177_256_seed434.json --run runs/final177/residual177_256_seed434
+caffeinate -i .venv/bin/python -m leafcheck.train --config configs/residual177_256_seed435.json --run runs/final177/residual177_256_seed435
+.venv/bin/python -m leafcheck.seed_analysis --runs runs/final177/residual177_224_seed434 runs/final177/residual177_224_seed435 --output docs/seed_stability_224_reproduction
+```
+
+The saved evaluation uses the exact distributed checkpoint bytes. A training
+reproduction can assess the same recipe and compare metrics, while backend
+differences and checkpoint serialization can change file hashes.
+
 On this Mac, check whether the named detached session or an existing trainer
 owns the job before resuming. The remaining development command acquires the
 shared lock, preserves completed runs and resumes the last valid checkpoint.

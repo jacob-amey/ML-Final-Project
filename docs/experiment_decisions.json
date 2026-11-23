@@ -52,11 +52,19 @@
     "rationale": "Completed45 full-data epochs, selected35, macro-F10.623912. Does not improve the matched reference0.624215 or reach0.005169 repeat trigger; not proof width cannot help. Reload verified; no test use."
   },
   "residual177_224_seed434": {
-    "decision": "Retain; accepted paired224 resolution reference",
-    "rationale": "Completed and reload verified. Paired mean macro-F1 0.641060 versus160 mean0.621631 (+0.019429); both seed gains positive. Seed range0.004643. See resolution224_decision.json. Native256 check remains pending; test sealed."
+    "decision": "Retain as accepted 224-pixel recipe and carry into the paired scoring comparison",
+    "rationale": "Both full-data procedures completed and passed checkpoint reload. The 224-pixel mean macro-F1 improved from 0.621631 at 160 pixels to 0.641060 (+0.019429), with both seeds improving. The 256-pixel repeat did not clear the practical +0.005 paired threshold. See resolution224_decision.json, duration_trial_decision.json and the validation-only scoring comparison."
   },
   "residual177_224_seed435": {
-    "decision": "Retain; accepted paired224 resolution reference",
-    "rationale": "Completed and reload verified. Paired mean macro-F1 0.641060 versus160 mean0.621631 (+0.019429); both seed gains positive. Seed range0.004643. See resolution224_decision.json. Native256 check remains pending; test sealed."
+    "decision": "Retain as accepted 224-pixel recipe and carry into the paired scoring comparison",
+    "rationale": "Both full-data procedures completed and passed checkpoint reload. The 224-pixel mean macro-F1 improved from 0.621631 at 160 pixels to 0.641060 (+0.019429), with both seeds improving. The 256-pixel repeat did not clear the practical +0.005 paired threshold. See resolution224_decision.json, duration_trial_decision.json and the validation-only scoring comparison."
+  },
+  "residual177_256_seed434": {
+    "decision": "Reject 256 pixels under the declared paired rule; preserve checkpoint and validation evidence",
+    "rationale": "Completed 64 full-data epochs, selected epoch 63, macro-F1 0.651250, matched difference +0.007869. Reload verified. The paired mean improved by 0.003166 versus 224, below 0.005. The repeat also plateaued before the epoch cap, so the conditional duration comparison was not triggered."
+  },
+  "residual177_256_seed435": {
+    "decision": "Reject 256 pixels under the declared paired rule; preserve checkpoint and validation evidence",
+    "rationale": "Completed 58 full-data epochs, selected epoch 56, macro-F1 0.637202, matched difference -0.001537. Reload verified. The paired mean improved by 0.003166 versus 224, below 0.005. The repeat also plateaued before the epoch cap, so the conditional duration comparison was not triggered."
   }
 }

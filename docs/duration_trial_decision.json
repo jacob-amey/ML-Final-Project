@@ -1,0 +1,389 @@
+{
+  "recorded_utc": "2026-11-23T03:40:09.856291+00:00",
+  "evaluation_split": "validation only",
+  "native_size_accepted": false,
+  "native_size_paired_gain": 0.0031660036714167283,
+  "parent_pair": "seed_stability_224.json",
+  "late_curve_evidence": [
+    {
+      "run": "residual177_256_seed434",
+      "hit_cap": true,
+      "late_peak": true,
+      "late_gain": 0.00851855073814145,
+      "next_learning_rate": 0.000125
+    },
+    {
+      "run": "residual177_256_seed435",
+      "hit_cap": false,
+      "late_peak": true,
+      "late_gain": 0.0004938636862704682,
+      "next_learning_rate": 2e-05
+    }
+  ],
+  "native_size_matched_seed_details": [
+    {
+      "seed": 434,
+      "reference": {
+        "run": "residual177_224_seed434",
+        "selected_epoch": 53,
+        "macro_f1": 0.6433816585883837,
+        "loss": 0.4318041101586623,
+        "accuracy": 0.8937990021382751,
+        "epoch": 53,
+        "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+        "support_bins": {
+          "at_least_100_validation_images": {
+            "classes": 41,
+            "mean_class_f1": 0.9103988996703593,
+            "zero_recall_classes": 0
+          },
+          "under_20_validation_images": {
+            "classes": 71,
+            "mean_class_f1": 0.419229568543794,
+            "zero_recall_classes": 11
+          },
+          "20_to_99_validation_images": {
+            "classes": 65,
+            "mean_class_f1": 0.7197984510315357,
+            "zero_recall_classes": 0
+          }
+        },
+        "provenance": {
+          "documented_PlantVillage_leaf_ID": {
+            "images": 7586,
+            "correct": 7365,
+            "accuracy": 0.9708673872923806,
+            "covered_classes": 26,
+            "macro_f1_over_covered_classes": 0.967319083012765
+          },
+          "other_traceable_images": {
+            "images": 9186,
+            "correct": 7661,
+            "accuracy": 0.8339865011974744,
+            "covered_classes": 159,
+            "macro_f1_over_covered_classes": 0.5855008535852058
+          },
+          "PlantDoc_byte_matches": {
+            "images": 64,
+            "correct": 22,
+            "accuracy": 0.34375,
+            "covered_classes": 9,
+            "macro_f1_over_covered_classes": 0.26427553927553926
+          }
+        },
+        "largest_confusions": [
+          {
+            "actual_class": "bell_pepper__bacterial_spot",
+            "predicted_class": "tomato__septoria_leaf_spot",
+            "errors": 43,
+            "support": 224,
+            "fraction": 0.19196428571428573
+          },
+          {
+            "actual_class": "rice__leaf_blast",
+            "predicted_class": "rice__healthy",
+            "errors": 43,
+            "support": 196,
+            "fraction": 0.2193877551020408
+          },
+          {
+            "actual_class": "soybean__diabrotica_speciosa",
+            "predicted_class": "soybean__caterpillar",
+            "errors": 40,
+            "support": 441,
+            "fraction": 0.09070294784580499
+          },
+          {
+            "actual_class": "rice__leaf_blast",
+            "predicted_class": "rice__brown_spot",
+            "errors": 30,
+            "support": 196,
+            "fraction": 0.15306122448979592
+          },
+          {
+            "actual_class": "tomato__late_blight",
+            "predicted_class": "potato__late_blight",
+            "errors": 24,
+            "support": 414,
+            "fraction": 0.057971014492753624
+          }
+        ]
+      },
+      "candidate": {
+        "run": "residual177_256_seed434",
+        "selected_epoch": 63,
+        "macro_f1": 0.6512502662477512,
+        "loss": 0.4388695292123482,
+        "accuracy": 0.8946899501069138,
+        "epoch": 63,
+        "checkpoint_sha256": "fe7685c8a88cf8c175fec6b48e2364e82f2eeb16ef99f2e4f1d506e09b3c9870",
+        "support_bins": {
+          "at_least_100_validation_images": {
+            "classes": 41,
+            "mean_class_f1": 0.9126477174048907,
+            "zero_recall_classes": 0
+          },
+          "under_20_validation_images": {
+            "classes": 71,
+            "mean_class_f1": 0.4360748899438636,
+            "zero_recall_classes": 9
+          },
+          "20_to_99_validation_images": {
+            "classes": 65,
+            "mean_class_f1": 0.7214065157882635,
+            "zero_recall_classes": 0
+          }
+        },
+        "provenance": {
+          "documented_PlantVillage_leaf_ID": {
+            "images": 7586,
+            "correct": 7375,
+            "accuracy": 0.9721856050619563,
+            "covered_classes": 26,
+            "macro_f1_over_covered_classes": 0.9695850046568627
+          },
+          "other_traceable_images": {
+            "images": 9186,
+            "correct": 7662,
+            "accuracy": 0.8340953625081646,
+            "covered_classes": 159,
+            "macro_f1_over_covered_classes": 0.5910390730779279
+          },
+          "PlantDoc_byte_matches": {
+            "images": 64,
+            "correct": 26,
+            "accuracy": 0.40625,
+            "covered_classes": 9,
+            "macro_f1_over_covered_classes": 0.3240910083015346
+          }
+        },
+        "largest_confusions": [
+          {
+            "actual_class": "bell_pepper__bacterial_spot",
+            "predicted_class": "tomato__septoria_leaf_spot",
+            "errors": 56,
+            "support": 224,
+            "fraction": 0.25
+          },
+          {
+            "actual_class": "rice__leaf_blast",
+            "predicted_class": "rice__healthy",
+            "errors": 47,
+            "support": 196,
+            "fraction": 0.23979591836734693
+          },
+          {
+            "actual_class": "soybean__diabrotica_speciosa",
+            "predicted_class": "soybean__caterpillar",
+            "errors": 41,
+            "support": 441,
+            "fraction": 0.09297052154195011
+          },
+          {
+            "actual_class": "rice__leaf_blast",
+            "predicted_class": "rice__brown_spot",
+            "errors": 33,
+            "support": 196,
+            "fraction": 0.1683673469387755
+          },
+          {
+            "actual_class": "cassava__bacterial_blight",
+            "predicted_class": "cassava__healthy",
+            "errors": 27,
+            "support": 97,
+            "fraction": 0.27835051546391754
+          }
+        ]
+      },
+      "change": {
+        "macro_f1": 0.007868607659367477,
+        "accuracy": 0.0008909479686386446,
+        "loss": 0.007065419053685851
+      }
+    },
+    {
+      "seed": 435,
+      "reference": {
+        "run": "residual177_224_seed435",
+        "selected_epoch": 47,
+        "macro_f1": 0.6387387281180741,
+        "loss": 0.4325664806150716,
+        "accuracy": 0.8900570206699929,
+        "epoch": 47,
+        "checkpoint_sha256": "25e3f2225fa3a7f6490edfee5feac88fa3bf480b9b061c2eb530d6e9810c22c3",
+        "support_bins": {
+          "at_least_100_validation_images": {
+            "classes": 41,
+            "mean_class_f1": 0.906143301966828,
+            "zero_recall_classes": 0
+          },
+          "under_20_validation_images": {
+            "classes": 71,
+            "mean_class_f1": 0.410706639208925,
+            "zero_recall_classes": 9
+          },
+          "20_to_99_validation_images": {
+            "classes": 65,
+            "mean_class_f1": 0.7191493555757765,
+            "zero_recall_classes": 0
+          }
+        },
+        "provenance": {
+          "documented_PlantVillage_leaf_ID": {
+            "images": 7586,
+            "correct": 7362,
+            "accuracy": 0.970471921961508,
+            "covered_classes": 26,
+            "macro_f1_over_covered_classes": 0.9635678473256047
+          },
+          "other_traceable_images": {
+            "images": 9186,
+            "correct": 7604,
+            "accuracy": 0.8277814064881341,
+            "covered_classes": 159,
+            "macro_f1_over_covered_classes": 0.5792329684585186
+          },
+          "PlantDoc_byte_matches": {
+            "images": 64,
+            "correct": 19,
+            "accuracy": 0.296875,
+            "covered_classes": 9,
+            "macro_f1_over_covered_classes": 0.2172096908939014
+          }
+        },
+        "largest_confusions": [
+          {
+            "actual_class": "bell_pepper__bacterial_spot",
+            "predicted_class": "tomato__septoria_leaf_spot",
+            "errors": 55,
+            "support": 224,
+            "fraction": 0.24553571428571427
+          },
+          {
+            "actual_class": "rice__leaf_blast",
+            "predicted_class": "rice__healthy",
+            "errors": 50,
+            "support": 196,
+            "fraction": 0.25510204081632654
+          },
+          {
+            "actual_class": "soybean__diabrotica_speciosa",
+            "predicted_class": "soybean__caterpillar",
+            "errors": 41,
+            "support": 441,
+            "fraction": 0.09297052154195011
+          },
+          {
+            "actual_class": "rice__healthy",
+            "predicted_class": "rice__leaf_blast",
+            "errors": 28,
+            "support": 298,
+            "fraction": 0.09395973154362416
+          },
+          {
+            "actual_class": "rice__leaf_blast",
+            "predicted_class": "rice__brown_spot",
+            "errors": 27,
+            "support": 196,
+            "fraction": 0.1377551020408163
+          }
+        ]
+      },
+      "candidate": {
+        "run": "residual177_256_seed435",
+        "selected_epoch": 56,
+        "macro_f1": 0.6372021278015403,
+        "loss": 0.4292301634115486,
+        "accuracy": 0.8917795200760276,
+        "epoch": 56,
+        "checkpoint_sha256": "3bd34fe1c6fe437f882daa3ae2f4019189fbb2e486c99892245394af6272e70e",
+        "support_bins": {
+          "at_least_100_validation_images": {
+            "classes": 41,
+            "mean_class_f1": 0.9085134782654889,
+            "zero_recall_classes": 0
+          },
+          "under_20_validation_images": {
+            "classes": 71,
+            "mean_class_f1": 0.40425873944247576,
+            "zero_recall_classes": 9
+          },
+          "20_to_99_validation_images": {
+            "classes": 65,
+            "mean_class_f1": 0.7205131309472588,
+            "zero_recall_classes": 0
+          }
+        },
+        "provenance": {
+          "documented_PlantVillage_leaf_ID": {
+            "images": 7586,
+            "correct": 7360,
+            "accuracy": 0.9702082784075929,
+            "covered_classes": 26,
+            "macro_f1_over_covered_classes": 0.9666519496066897
+          },
+          "other_traceable_images": {
+            "images": 9186,
+            "correct": 7630,
+            "accuracy": 0.8306118005660789,
+            "covered_classes": 159,
+            "macro_f1_over_covered_classes": 0.5771871845550387
+          },
+          "PlantDoc_byte_matches": {
+            "images": 64,
+            "correct": 24,
+            "accuracy": 0.375,
+            "covered_classes": 9,
+            "macro_f1_over_covered_classes": 0.3096841430174763
+          }
+        },
+        "largest_confusions": [
+          {
+            "actual_class": "bell_pepper__bacterial_spot",
+            "predicted_class": "tomato__septoria_leaf_spot",
+            "errors": 53,
+            "support": 224,
+            "fraction": 0.23660714285714285
+          },
+          {
+            "actual_class": "rice__leaf_blast",
+            "predicted_class": "rice__healthy",
+            "errors": 50,
+            "support": 196,
+            "fraction": 0.25510204081632654
+          },
+          {
+            "actual_class": "soybean__diabrotica_speciosa",
+            "predicted_class": "soybean__caterpillar",
+            "errors": 45,
+            "support": 441,
+            "fraction": 0.10204081632653061
+          },
+          {
+            "actual_class": "rice__leaf_blast",
+            "predicted_class": "rice__brown_spot",
+            "errors": 29,
+            "support": 196,
+            "fraction": 0.14795918367346939
+          },
+          {
+            "actual_class": "rice__healthy",
+            "predicted_class": "rice__leaf_blast",
+            "errors": 26,
+            "support": 298,
+            "fraction": 0.087248322147651
+          }
+        ]
+      },
+      "change": {
+        "macro_f1": -0.0015366003165337982,
+        "accuracy": 0.0017224994060346388,
+        "loss": -0.003336317203522954
+      }
+    }
+  ],
+  "duration_trial_triggered": false,
+  "duration_trial_complete": false,
+  "test_predictions_used": false,
+  "incumbent_pair": "seed_stability_224.json"
+}
