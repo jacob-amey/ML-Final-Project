@@ -1,0 +1,30 @@
+{
+  "archive": "artifacts/LeafCheck-CSC427-submission.zip",
+  "bytes": 64369866,
+  "sha256": "815d1dbf3696a549e396cdff13f7dc5753c0784578460f4838884efc4246c2da",
+  "source_revision": "1629d95d3a331f517d075eef95e8acde31f9b832",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "files_verified_from_fresh_extraction": 359,
+  "fresh_extraction_standalone_prediction": {
+    "label": "tomato__healthy",
+    "score": 0.9999866485595703
+  },
+  "recorded_utc": "2026-11-23T04:01:54.551496+00:00",
+  "fresh_combined_extraction_review_notebook_executed": true,
+  "nested_demo_started_from_combined_extraction": true,
+  "demo_launch_command": "./Launch LeafCheck.command --port 0",
+  "all_four_models_predicted_from_combined_extraction": true,
+  "fresh_demo_examples": [
+    {
+      "fixture": "success",
+      "label": "tomato__healthy",
+      "score": 0.9999866485595703
+    },
+    {
+      "fixture": "mistake",
+      "label": "potato__late_blight",
+      "score": 0.9820762872695923
+    }
+  ],
+  "trained_dataset_required_to_run_demo": false
+}
