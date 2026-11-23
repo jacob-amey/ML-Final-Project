@@ -1,0 +1,58 @@
+{
+  "version": "leafcheck_blight_v1",
+  "sources": {
+    "sheikh": {
+      "title": "Tomato Leaf and Fruit Disease Image Dataset",
+      "credit": "Foysal Sheikh, Md Abdul Bakii, Nishat Sultana Raki, Mosa Nadia Sultana Pria, Shahnaj Parvin, and Mafiul Hasan Matin",
+      "page": "https://data.mendeley.com/datasets/swtt5wy2pr/1",
+      "doi": "10.17632/swtt5wy2pr.1",
+      "files": [
+        {
+          "name": "sheikh_resized.zip",
+          "url": "https://data.mendeley.com/public-files/datasets/swtt5wy2pr/files/0d842411-e89f-4e4d-8dbc-85c00fc85141/file_downloaded",
+          "sha256": "95e590a44dbd5b6526db337004e6f46adc4c05b98ab26ee343197b3a16733576"
+        },
+        {
+          "name": "sheikh_metadata.csv",
+          "url": "https://data.mendeley.com/public-files/datasets/swtt5wy2pr/files/9cde8e3a-9223-42b8-a758-59f67870ea08/file_downloaded",
+          "sha256": "ccb74a5aad42bb5c81583d31a39db3c4c8f842f58707538db1c993544db08ef7"
+        }
+      ]
+    },
+    "mtali": {
+      "title": "Irish Potato Leaf Image Dataset (Healthy, Early Blight, Late Blight)",
+      "credit": "Neema Mduma and Rahel Mtali",
+      "page": "https://zenodo.org/records/17553016",
+      "doi": "10.5281/zenodo.17553016",
+      "files": [
+        {
+          "name": "mtali_late6.zip",
+          "url": "https://zenodo.org/records/17553016/files/LATEBLT_6.zip?download=1",
+          "sha256": "6c8fa8ff5efbd45fd49fca0bf7e7a9624cdd1a11215a1afc0bf732a572d1f22b"
+        }
+      ]
+    },
+    "banu": {
+      "title": "Solanaceae Family Leaf Disease Image Dataset",
+      "credit": "Ayesha Banu and Riad Hossain",
+      "page": "https://data.mendeley.com/datasets/sd5m3mgvvx/1",
+      "doi": "10.17632/sd5m3mgvvx.1",
+      "files": []
+    },
+    "bugwood": {
+      "title": "Bugwood field photographs",
+      "credit": "Individual photographer, organization and Bugwood.org as shown in the photo manifest",
+      "page": "https://www.ipmimages.org/",
+      "files": []
+    }
+  },
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "class_map": {
+    "early blight leaf": "tomato__early_blight",
+    "healthy leaf": "tomato__healthy",
+    "late blight leaf": "tomato__late_blight"
+  },
+  "sheikh_validation_dates": ["06/12/25", "16/02/26"],
+  "near_duplicate_distance": 4
+}

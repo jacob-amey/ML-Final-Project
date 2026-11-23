@@ -1,0 +1,100 @@
+{
+  "version": "leafcheck_blight_v1",
+  "fingerprint": "c2147459192fcc2d49d7787162960786353302220274719d512dedb76ea7cb78",
+  "files_sha256": {
+    "manifest.csv": "8cb7f0dda8ffa89bb1b3bf8d69787e90d95e0964ab75c54c71636cf93e2fe031",
+    "split_summary.csv": "65db92f4f7b14f493856f5535fdc797bf0894e97b2c495d4e5bca2ac92039ca3",
+    "class_to_idx.json": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a",
+    "sources.json": "ae843fc6420b5c5f8378f1bee3ae6434de9906d9436e9201dedef3f87bad168d",
+    "sfld_inventory.csv": "c898f8883611d533fbad25f9569c5c553640b0207be00ef535a096905f9eb634",
+    "field_inventory.csv": "b4f22e6adbede4e199e45ac45c62af165787e76c32fe2132188a25882c7b11a2"
+  },
+  "protected_release_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "master_records_screened": 90574,
+  "plantdoc_records_screened": 183,
+  "candidates": 1636,
+  "counts": {
+    "val": 280,
+    "train": 1146
+  },
+  "exclusions": {
+    "existing_visual_candidate": 14,
+    "new_cluster_cross_split": 17,
+    "new_cluster_label_conflict": 92,
+    "new_cluster_repeated_view": 87
+  },
+  "source_counts": [
+    {
+      "source": "banu",
+      "split": "val",
+      "class_name": "potato__late_blight",
+      "images": 18
+    },
+    {
+      "source": "banu",
+      "split": "val",
+      "class_name": "tomato__healthy",
+      "images": 9
+    },
+    {
+      "source": "banu",
+      "split": "val",
+      "class_name": "tomato__late_blight",
+      "images": 12
+    },
+    {
+      "source": "bugwood",
+      "split": "val",
+      "class_name": "potato__late_blight",
+      "images": 2
+    },
+    {
+      "source": "bugwood",
+      "split": "val",
+      "class_name": "tomato__early_blight",
+      "images": 1
+    },
+    {
+      "source": "bugwood",
+      "split": "val",
+      "class_name": "tomato__late_blight",
+      "images": 5
+    },
+    {
+      "source": "mtali",
+      "split": "train",
+      "class_name": "potato__late_blight",
+      "images": 19
+    },
+    {
+      "source": "sheikh",
+      "split": "train",
+      "class_name": "tomato__early_blight",
+      "images": 406
+    },
+    {
+      "source": "sheikh",
+      "split": "train",
+      "class_name": "tomato__healthy",
+      "images": 285
+    },
+    {
+      "source": "sheikh",
+      "split": "train",
+      "class_name": "tomato__late_blight",
+      "images": 436
+    },
+    {
+      "source": "sheikh",
+      "split": "val",
+      "class_name": "tomato__early_blight",
+      "images": 56
+    },
+    {
+      "source": "sheikh",
+      "split": "val",
+      "class_name": "tomato__healthy",
+      "images": 177
+    }
+  ]
+}

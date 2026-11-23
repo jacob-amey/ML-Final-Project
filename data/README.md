@@ -53,6 +53,14 @@ For a copy of the already prepared release, place it in
 `data/processed/leafcheck177_final/` and run only `verify`. The portable demo
 uses its own packaged weights and two evaluation images.
 
+## Tomato and potato blight supplement
+
+`data/processed/leafcheck_blight_v1/` contains additional online photos for a
+follow-on training and validation study. It uses the same class IDs for tomato
+late blight, tomato early blight, healthy tomato, and potato late blight.
+See the [release notes](../docs/blight_dataset_v1.md) for sources, split groups,
+overlap checks and rebuild commands.
+
 ## Earlier three-class dataset
 
 The dataset assigns `early_blight`, `healthy`, and `late_blight` to class indices 0, 1, and 2 respectively. The image folders under `data/processed/leafcheck/` are ready for a loader such as PyTorch `ImageFolder`. The [image inventory](manifests/image_inventory.csv) records the exact membership, original path, source revision, group, file hash, and any exclusion. The [label mapping](manifests/label_mapping.csv) records how the source labels translate to project labels.
