@@ -1,0 +1,39 @@
+{
+  "recorded_utc": "2026-11-23T03:53:55.263362+00:00",
+  "url": "http://127.0.0.1:8765/",
+  "browser": "Codex in-app browser",
+  "app_revision": "585f86d05c26899a",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "fresh_local_process": true,
+  "all_four_real_models_ready": true,
+  "file_chooser_workflow_verified": true,
+  "all_four_cards_showed_live_results_for_both_images": true,
+  "browser_result_matches_frozen_examples": true,
+  "examples": [
+    {
+      "uploaded_file": "success.jpg",
+      "reference_label": "tomato__healthy",
+      "predicted_label": "tomato__healthy",
+      "model_score": 0.9999866485595703,
+      "displayed_score": "100.0%",
+      "correct": true,
+      "screenshot": "runs/final177/verification/demo-success.jpg",
+      "screenshot_sha256": "bcdbaf9de7790befb3a7b024bdaaba3577add1013405f48d6af6de84b98ff364"
+    },
+    {
+      "uploaded_file": "mistake.jpg",
+      "reference_label": "tomato__late_blight",
+      "predicted_label": "potato__late_blight",
+      "model_score": 0.9820762872695923,
+      "displayed_score": "98.2%",
+      "correct": false,
+      "screenshot": "runs/final177/verification/demo-mistake.jpg",
+      "screenshot_sha256": "2cc8c11066dbcffd1f3845a82b51be8d6ddce6924f6a5ba6a62bf0f205625a0f"
+    }
+  ],
+  "unreadable_file_message": "This image could not be opened. Try another JPEG or PNG.",
+  "score_interpretation_observed": "Scores are uncalibrated rankings of each model\u2019s supported labels.",
+  "shared_heldout_comparison_visible": true,
+  "supplementary_results_displayed_separately": true,
+  "selected_model_details_observed": "224 \u00d7 224 input, epoch 53, 177 classes, eight orientations, validation F1 0.649, test F1 0.617"
+}

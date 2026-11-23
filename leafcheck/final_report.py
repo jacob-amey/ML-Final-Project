@@ -308,20 +308,21 @@ competitors. See `comparison_protocol.json`.
 
 The final bundle pairs weights, architecture/runtime, mapping, preprocessing,
 versions, freeze record and saved metrics. The website uses an explicit checkpoint
-reference, CPU evaluation mode and a shared prediction contract. Model scores are
-uncalibrated softmax outputs, not correctness probabilities. The classifier
+reference, CPU evaluation mode and a shared prediction contract. The uncalibrated
+scores rank the supported labels. A high score can accompany an incorrect
+prediction. The classifier
 does not reliably reject unknown/non-plant images, localize symptoms, resolve
 multiple diseases or provide a definitive diagnosis.
 
 Checkpoint: `{selected['checkpoint_sha256']}`.
 Checkpoint size: {latency['checkpoint_bytes']:,} bytes.
 CPU batch-one inference on {latency['hardware']['cpu']} with {latency['torch_threads']} PyTorch threads: median
-{latency['p50_ms']:.3f}ms, p95 {latency['p95_ms']:.3f}ms over48 timed calls after 8 warmups,
+{latency['p50_ms']:.3f} ms, p95 {latency['p95_ms']:.3f} ms over 48 timed calls after eight warmups,
 cycling four predetermined native test images. This includes decode, EXIF/RGB,
 padding, normalization, network and softmax with warm local file cache; it excludes
 HTTP and other comparison models. Power source at measurement:
 {latency['hardware'].get('power_source','not recorded')}. Warm-filesystem model loading is
-{latency['model_loading_ms_warm_filesystem']:.3f}ms. Training throughput and app-wide
+{latency['model_loading_ms_warm_filesystem']:.3f} ms. Training throughput and app-wide
 request latency are different measurements. See `latency.json` and the separately
 recorded demo verification/packaging evidence.
 
@@ -351,7 +352,8 @@ The user owns the data/model/evaluation role; the partner's assigned role is the
 application/frontend. Codex-assisted execution is recorded explicitly rather
 than attributed as independent student activity. Names, meeting participation,
 team approval and institutional AI policy must be supplied/verified by the team.
-Formal report formatting, repository submission and presentation remain team work.
+The submission archive includes a formatted report and defense deck. The team
+reviews contributions and course policy before formally submitting and presenting.
 
 ## References
 

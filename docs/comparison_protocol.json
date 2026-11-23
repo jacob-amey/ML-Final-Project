@@ -252,6 +252,7 @@
   },
   "valid_full_177_test_comparison": [
     "selected custom CNN",
+    "Compact177 full-data reference",
     "most-frequent-training-class rule"
   ],
   "compact177_reference": {
@@ -262,6 +263,12 @@
     "checkpoint_sha256": "de865d5024cd725409ebd5dde15f28cc5fd488271c41e8b87432628f4c60648a",
     "selection": "validation macro-F1 before any final test predictions",
     "protocol": "Freeze the compact checkpoint with the final selection; evaluate both on the identical untouched 177-class test membership. Full-recipe comparison, distinct from the historical three-class pilots.",
-    "test_results": "Pending final selection/freeze; no test predictions have been computed."
+    "test_results": "Recorded after freeze in artifacts/leafcheck177-v1/reference/test_metrics.json and docs/final_model_report.md."
+  },
+  "delivery_evaluation": {
+    "primary": "artifacts/leafcheck177-v1/test_metrics.json",
+    "supplementary": "artifacts/leafcheck177-v1/external_metrics.json",
+    "only_frozen_registered_models_scored": true,
+    "legacy_models_scored_on_new_test": false
   }
 }

@@ -31,9 +31,21 @@ seeds by a mean of 0.007758 and met the CPU latency guard. The selected
 checkpoint scored **0.649221 macro-F1** and **89.7541% accuracy** on the 16,836
 validation images with the deployed scoring policy.
 
+| Reserved test, same 8,425 images | Correct | Accuracy | Macro-F1 |
+| --- | ---: | ---: | ---: |
+| Selected custom CNN | 7,556 | 89.6855% | 0.616940 |
+| Compact177 full-data reference | 7,234 | 85.8635% | 0.518430 |
+| Most frequent training label | 731 | 8.6766% | 0.000902 |
+
+On the separate 183-photo PlantDoc check, the CNN scored 26/183 correct
+(14.2077%, three-label macro-F1 0.219846). The conditional frequency rule
+scored 79/183 correct (43.1694%, macro-F1 0.201018). The CNN's higher macro-F1
+comes with lower accuracy on this supplement. The primary test has 69 labels
+with fewer than 10 images and 23 labels with zero observed recall.
+
 Read `docs/final_model_selection.json` for the pre-test decision,
 `docs/experiments.csv` for saved training validation results, and
-`docs/final_model_work_log.md` for the execution history.
+`docs/final_model_report.md` for the recorded evaluation and figures.
 
 - `docs/final_model_requirements.md`: verified requirements, assumptions and
   declared checkpoint/experiment selection rules.

@@ -1,9 +1,12 @@
 {
-  "state": "final_selection_locked",
+  "state": "evaluated_and_live_demo_verified",
   "run": "runs/final177/residual177_224_seed434",
   "model_checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
   "selection_record": "docs/final_model_selection.json",
-  "updated_utc": "2026-11-23T03:42:37.882184+00:00",
-  "test_predictions_inspected": false,
-  "next_action": "Freeze the validated artifact and perform the declared evaluation."
+  "updated_utc": "2026-11-23T03:55:04.394809+00:00",
+  "test_predictions_inspected": true,
+  "next_action": "Verify review notebook, test the freshly extracted application and assemble the course submission.",
+  "freeze": "artifacts/leafcheck177-v1/freeze.json",
+  "freeze_sha256": "c482bf50da720589e47470ce7bca5b81b5fbaf24ac9c698d471b75d4e0775d97",
+  "evaluation_artifacts_verified": true
 }

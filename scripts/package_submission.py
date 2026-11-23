@@ -59,6 +59,16 @@ def main():
             include(name, (SUBMISSION / name).read_bytes())
         include("LeafCheck-final-demo.zip", demo.read_bytes())
         include("source/cnn_final_model_review.executed.ipynb", notebook.read_bytes())
+        for suite in suites["suites"]:
+            log = (ROOT / suite["log"]).resolve()
+            assert log.is_relative_to(ROOT / "runs/final177/verification")
+            assert digest(log) == suite["log_sha256"]
+            include(f"source/{log.relative_to(ROOT).as_posix()}", log.read_bytes())
+        for example in browser_check["examples"]:
+            screenshot = (ROOT / example["screenshot"]).resolve()
+            assert screenshot.is_relative_to(ROOT / "runs/final177/verification")
+            assert digest(screenshot) == example["screenshot_sha256"]
+            include(f"source/{screenshot.relative_to(ROOT).as_posix()}", screenshot.read_bytes())
         for name, expected in read(artifact / "artifact.json")["files"].items():
             path = (artifact / name).resolve()
             assert path.is_relative_to(artifact.resolve()) and digest(path) == expected
