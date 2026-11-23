@@ -28,6 +28,7 @@ def main():
     assert sha256(directory / "preprocessing.json") == freeze["preprocessing_sha256"]
     assert sha256(directory / "class_to_idx.json") == freeze["class_mapping_sha256"]
     artifact_record = json.loads((directory / "artifact.json").read_text())
+    assert artifact_record.get("inference_policy") == freeze.get("inference_policy")
     if artifact_record.get("final_evaluation_complete"):
         print("This unchanged frozen artifact has already been evaluated. Preserving saved test results.")
         print((directory / "test_metrics.json").read_text()[:400]); return
@@ -47,11 +48,12 @@ def main():
         print("Resuming figures and packaging from saved predictions; no new test pass.", flush=True)
     else:
         started = time.perf_counter()
-        metrics, predictions = evaluate(predictor.model, test, predictor.spec, predictor.device,
+        metrics, predictions = evaluate(predictor.scoring_model, test, predictor.spec, predictor.device,
                                         frozen["classes"], freeze["evaluation_batch_size"], True)
         metrics.update({"selected_epoch": freeze["selected_epoch"], "checkpoint_sha256": freeze["checkpoint_sha256"],
                         "dataset_fingerprint": frozen["fingerprint"], "evaluation_device": str(predictor.device),
                         "evaluation_batch_size": freeze["evaluation_batch_size"], "evaluated_utc": utc_now(),
+                        "inference_policy": predictor.policy["name"],
                         "evaluation_seconds": time.perf_counter() - started})
         write_csv(directory / "test_predictions.csv", predictions)
         atomic_json(directory / "test_metrics.json", metrics)

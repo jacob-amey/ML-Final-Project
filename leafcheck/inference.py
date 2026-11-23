@@ -7,6 +7,7 @@ import time
 import torch
 from .model import LeafCNN
 from .preprocessing import image_tensor
+from .scoring import PredictionScores
 
 
 def file_hash(path):
@@ -39,6 +40,8 @@ class Predictor:
         self.device = torch.device(device)
         self.model = LeafCNN(**checkpoint["model_config"]).to(device=self.device, dtype=torch.float32, memory_format=torch.channels_last)
         self.model.load_state_dict(checkpoint["model_state_dict"], strict=True); self.model.eval()
+        self.policy = self.artifact.get("inference_policy", {"name": "single_view"})
+        self.scoring_model = PredictionScores(self.model, self.policy).to(self.device).eval()
         self.metadata = {"name": "Final Custom CNN", "ready": True, "class_count": 177, "classes": self.classes,
                          "model_version": "leafcheck177-v1", "dataset": "leafcheck177_final-v1",
                          "dataset_fingerprint": checkpoint["dataset_fingerprint"],
@@ -46,6 +49,8 @@ class Predictor:
                          "selected_epoch": checkpoint["epoch"], "train_images": 59008, "validation_images": 16836,
                          "preprocessing": self.spec, "selection": checkpoint["selection"],
                          "validation": checkpoint["validation"], "checkpoint_sha256": file_hash(self.path),
+                         "inference_policy": self.policy["name"],
+                         "deployment_validation": self.artifact.get("deployment_validation", checkpoint["validation"]),
                          "comparison_note": "Earlier pilots have different label spaces/splits. Create ML's declared training/validation data overlaps this new holdout. The frozen Compact177 full-data reference and training-frequency rule share the final held-out protocol.",
                          "limitations": "Source annotations; rare classes; missing specimen IDs; unknown-input and field-photo performance not guaranteed."}
         evaluation = self.directory / "test_metrics.json"
@@ -60,7 +65,7 @@ class Predictor:
 
     @torch.inference_mode()
     def logits(self, path):
-        return self.model(image_tensor(path, self.spec, self.device)).cpu()
+        return self.scoring_model(image_tensor(path, self.spec, self.device)).cpu()
 
     @torch.inference_mode()
     def predict(self, path):
@@ -71,7 +76,7 @@ class Predictor:
                 "class_scores": dict(zip(self.classes, probabilities)),
                 "elapsed_ms": (time.perf_counter() - start) * 1000,
                 "model_version": self.metadata["model_version"],
-                "score_interpretation": "Softmax output score, not a calibrated probability of correctness."}
+                "score_interpretation": "Uncalibrated model score. Treat it as a ranking across supported classes."}
 
 
 def main():

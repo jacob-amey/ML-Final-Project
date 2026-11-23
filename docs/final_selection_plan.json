@@ -81,6 +81,19 @@
       "hypothesis": "The common native256 size may retain additional symptom detail removed by224 downsampling. Larger inputs cannot recover absent detail; this is a test of a specific native-size boundary, not an assumption that larger is always better.",
       "protocol": "Prepare train/validation cache and training-only statistics; benchmark256 sequentially after the current accelerator job. Full59008 train images per epoch, seed434. Repeat435 only if completed gain>=max(0.005, observed224 two-seed range). Accept256 only if its paired mean exceeds224 mean by>=0.005.",
       "stopping": "If the native-size screen is negligible, unstable or worse, stop this resolution branch. Any additional scaling requires completed validation evidence showing a meaningful expected benefit, including where native resolution and class support make it plausible. No test-based changes."
+    },
+    {
+      "declared_utc": "2026-11-23T00:39:38.385975+00:00",
+      "trigger": "256 seed434 reached epoch64 with validation peak at63, learning rate0.000125 versus floor0.00002. Its last eight epochs improved the best F1 by at least0.003. The resumed seed435 is in its first epoch. Both holdouts remain sealed.",
+      "fixed_256_decision": "Apply the original comparison at64/early stop exactly: promote256 only at paired mean gain >=0.005 over224.",
+      "conditional_duration_trial": "If256 is promoted AND both256 seeds hit the epoch cap AND at least one peak is in the final eight epochs with >=0.003 improvement over all earlier epochs and final learning rate above the floor, extend both procedures to at most80 epochs in new run folders with original optimizer, scheduler, RNG, late stopping state and best checkpoints. Only max_epochs changes. Keep extension if paired mean gain >=0.005 over completed256 and neither seed regresses. No second budget extension unless both runs present new late-learning evidence.",
+      "inference_policy_trial": "After the duration decision, compare fixed single-view scoring with two independent changes on both accepted checkpoints across identical16836 validation images: (1) subtract0.25 log(training class frequency) from logits, and (2) average the eight softmax vectors from rotations and reflections. Do not combine them. Accept only a paired mean F1 gain >=0.005, positive gains in both seeds, and for eight views CPU single-photo p95 <=500ms in the documented check. Choose the largest accepted paired gain. Select the best validation checkpoint within the accepted policy with existing F1/loss/epoch ties.",
+      "evidence": "224 paired validation rare-bin F1 is about0.415 for71 labels under20 examples and eight have zero recall in both seeds. A weaker training-prior correction directly tests relative score bias after weighted training. Whole-image transforms match training geometry; their average may reduce orientation sensitivity but can reverse correct calls and costs more compute. Neither predicts field generalization.",
+      "primary_sources": [
+        "https://arxiv.org/abs/2007.07314",
+        "https://openaccess.thecvf.com/content/ICCV2021/html/Shanmugam_Better_Aggregation_in_Test-Time_Augmentation_ICCV_2021_paper.html"
+      ],
+      "stop_rule": "Finish these bounded evidence-driven checks then review support, source effects and learning curves. No new width or resolution grid. If no stable practically meaningful development signal remains, freeze the winner and open the held-out protocol once."
     }
   ],
   "fair_heldout_reference": {

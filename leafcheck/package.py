@@ -10,7 +10,7 @@ from .common import ROOT, DATA, atomic_json, sha256, utc_now
 from .data import release
 
 
-def package(run, destination, rationale, reference_run=ROOT / "runs/final177/plain177_seed434"):
+def package(run, destination, rationale, reference_run=ROOT / "runs/final177/plain177_seed434", policy_record=None):
     run = Path(run); destination = Path(destination)
     status = json.loads((run / "status.json").read_text())
     assert status["state"] == "complete" and status["checkpoint_reload_verified"]
@@ -35,6 +35,15 @@ def package(run, destination, rationale, reference_run=ROOT / "runs/final177/pla
     assert abs(reference_checkpoint["validation"]["macro_f1"] - reference_status["best"]["macro_f1"]) < 1e-12
     assert reference_checkpoint["model_config"]["architecture"] == "plain_v1"
     assert sha256(reference_run / "source/leafcheck/model.py") == sha256(ROOT / "leafcheck/model.py")
+    policy = {"name": "single_view"}
+    deployment_validation = checkpoint["validation"]
+    if policy_record:
+        evidence = json.loads(Path(policy_record).read_text())
+        assert evidence["evaluation_split"] == "validation only" and not evidence["test_predictions_used"]
+        assert evidence["dataset_fingerprint"] == frozen["fingerprint"] and evidence["selected_run"] == run.name
+        assert evidence["selected_checkpoint_sha256"] == sha256(run / "best_model.pt")
+        policy = evidence["selected_policy"]
+        deployment_validation = evidence["deployment_validation"]
     if destination.exists():
         raise FileExistsError("A frozen artifact already exists. Preserve it; use a new version before any new test protocol.")
     destination.mkdir(parents=True)
@@ -49,6 +58,8 @@ def package(run, destination, rationale, reference_run=ROOT / "runs/final177/pla
         if (run / optional).exists():
             shutil.copyfile(run / optional, destination / optional)
     shutil.copyfile(DATA / "dataset_info.json", destination / "dataset_release_info.json")
+    if policy_record:
+        shutil.copyfile(policy_record, destination / "inference_policy_selection.json")
     if (ROOT / "requirements-lock.txt").exists():
         shutil.copyfile(ROOT / "requirements-lock.txt", destination / "requirements-training-lock.txt")
     env = json.loads((run / "environment.json").read_text())
@@ -71,7 +82,7 @@ def package(run, destination, rationale, reference_run=ROOT / "runs/final177/pla
         shutil.copyfile(external_protocol, destination / "external_protocol.json")
         shutil.copyfile(ROOT / "data/manifests/leafcheck177_external.csv", destination / "external_manifest.csv")
     runtime = destination / "runtime/leafcheck"; runtime.mkdir(parents=True)
-    for name in ["__init__.py", "model.py", "preprocessing.py", "inference.py"]:
+    for name in ["__init__.py", "model.py", "preprocessing.py", "inference.py", "scoring.py"]:
         shutil.copyfile(ROOT / "leafcheck" / name, runtime / name)
     # A training photo is a software-format fixture, never evaluation evidence.
     with (DATA / "manifest.csv").open() as file:
@@ -92,7 +103,8 @@ def package(run, destination, rationale, reference_run=ROOT / "runs/final177/pla
               "class_mapping_sha256": sha256(destination / "class_to_idx.json"), "selected_epoch": checkpoint["epoch"],
               "parameters": checkpoint["parameters"],
               "selection": checkpoint["selection"], "validation_macro_f1": checkpoint["validation"]["macro_f1"],
-              "rationale": rationale, "confidence_policy": "Display softmax scores; no calibrated confidence or unknown-input threshold",
+              "rationale": rationale, "inference_policy": policy, "deployment_validation": deployment_validation,
+              "confidence_policy": "Display uncalibrated model scores for the frozen prediction policy",
               "evaluation_device": "cpu", "evaluation_batch_size": 128, "test_predictions_used_in_selection": False}
     freeze["comparison_reference"] = {"name":"Compact177 full-data reference", "directory":"reference",
                                       "run":str(reference_run.resolve()),"checkpoint_sha256":sha256(reference / "model.pt"),
@@ -114,7 +126,8 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--rationale", required=True)
     parser.add_argument("--reference-run",type=Path,default=ROOT / "runs/final177/plain177_seed434")
-    args = parser.parse_args(); package(args.run, args.output, args.rationale,args.reference_run)
+    parser.add_argument("--policy-record", type=Path, help="Completed validation-only inference policy decision")
+    args = parser.parse_args(); package(args.run, args.output, args.rationale, args.reference_run, args.policy_record)
 
 
 if __name__ == "__main__": main()
