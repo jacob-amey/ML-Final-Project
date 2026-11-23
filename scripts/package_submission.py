@@ -32,11 +32,16 @@ def main():
     archive_check = read(ROOT / "docs/archive_verification.json")
     browser_check = read(ROOT / "docs/demo_verification.json")
     suites = read(ROOT / "docs/test_results.json")
+    review = read(ROOT / "docs/submission_quality.json")
+    restoration = read(ROOT / "docs/dataset_restoration_verification.json")
     demo = ARTIFACTS / "LeafCheck-final-demo.zip"
     checkpoint = freeze["checkpoint_sha256"]
     assert all(record["checkpoint_sha256"] == checkpoint for record in (archive_check, browser_check, suites))
     assert digest(demo) == archive_check["archive_sha256"]
     assert all(result["passed"] for result in suites["suites"]) and suites["review_notebook"]["executed_without_errors"]
+    assert restoration["frozen_fingerprint"] == freeze["dataset_fingerprint"] and restoration["all_fingerprint_files_match"]
+    for name in ("report", "deck"):
+        assert digest(ROOT / review[name]["path"]) == review[name]["sha256"]
     notebook = ROOT / suites["review_notebook"]["executed_copy"]
     assert digest(notebook) == suites["review_notebook"]["executed_sha256"]
     source_revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
@@ -55,6 +60,15 @@ def main():
             for member in tree:
                 if member.isfile():
                     include(f"source/{member.name}", tree.extractfile(member).read())
+        release = ROOT / "data/processed/leafcheck177_final"
+        locked_release = read(ROOT / "data/manifests/leafcheck177_frozen.json")
+        assert locked_release["fingerprint"] == freeze["dataset_fingerprint"]
+        assert all(digest(release / name) == expected for name, expected in locked_release["files"].items())
+        for name in ("README.md", "dataset_info.json", "exclusions.csv", *locked_release["files"]):
+            include(f"source/data/release_metadata/leafcheck177_final/{name}", (release / name).read_bytes())
+        for path in sorted((release / "metadata").rglob("*")):
+            if path.is_file() and not path.name.startswith("."):
+                include(f"source/data/release_metadata/leafcheck177_final/{path.relative_to(release).as_posix()}", path.read_bytes())
         for name in ("LeafCheck_Report.docx", "LeafCheck_Defense.pptx"):
             include(name, (SUBMISSION / name).read_bytes())
         include("LeafCheck-final-demo.zip", demo.read_bytes())
@@ -101,14 +115,16 @@ Dataset fingerprint: {freeze['dataset_fingerprint']}
 
 source/README.md and source/data/README.md give training and restoration commands.
 Exact training reproduction requires a compatible environment and the original
-frozen release or exact master files. The exported notebooks and report read the
+frozen release or exact master files. The frozen membership and audit records
+under source/data/release_metadata allow restoration from the original master.
+The exported notebooks and report read the
 project's documented artifact layout. Saved evaluation results and application
 samples are included. Re-running the evaluation requires the original data.
 """
         include("START_HERE.md", handoff.encode())
         package.writestr("MANIFEST.json", json.dumps(manifest, indent=2))
     with tempfile.TemporaryDirectory(prefix="leafcheck-submission-") as folder:
-        destination = Path(folder)
+        destination = Path(folder).resolve()
         with zipfile.ZipFile(temporary) as package:
             names = package.namelist()
             assert set(names) == {*manifest, "MANIFEST.json"}

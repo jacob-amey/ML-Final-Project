@@ -127,3 +127,17 @@ The positive first224 result and training-only native geometry justified the
 prospectively declared conditional256 check. Latest rules are timestamped in
 `final_selection_plan.json`; they supersede historical resource ceilings.
 No final test predictions or supplementary predictions have informed selection.
+
+## Final delivery verification
+
+| Requirement | Completed evidence |
+| --- | --- |
+| Custom random-initialization CNN and full designated train split | `configs/residual177_224_seed434.json`, `docs/selected_architecture.csv`, selected run history and checkpoint. The procedure completed 63 full epochs of 59,008 images and chose epoch 53. |
+| Train-only statistics, augmentation and reproducible resume | Frozen preprocessing record, pipeline diagnostics, CPU and MPS interrupted-resume tests, and the logged 256-pixel recovery. |
+| Grouped reproducible dataset with all 177 labels | Frozen release fingerprint and audit, manifest in the local submission archive, exact restoration procedure in `data/README.md`. |
+| Validation-controlled selection and independent final testing | `docs/final_model_selection.json`, `docs/test_seal_record.json`, freeze manifest, paired comparisons and `docs/final_model_report.md`. |
+| Honest comparison and detailed measured results | Frozen test metrics, predictions, per-class support and confusion figures, same-split Compact177 and frequency rule, and separately scoped PlantDoc results. |
+| Final-model deployment and live upload | `docs/test_results.json` records 9 pipeline and 15 website tests. `docs/demo_verification.json` records actual uploads, outcomes and error handling. |
+| Fresh extraction and documented launch | `docs/archive_verification.json` records the launched four-model process using the packaged app-only environment, real image predictions and invalid-input responses. |
+| Report, presentation and reproducibility | Seven-page report, defense slides, executed review notebook, local source snapshot and artifact records in the combined submission. |
+| Team approval and formal course submission | The assigned model and app roles and actual assisted work are recorded in `docs/contributions.md`. Team names, approval, additional institutional AI rules and submission status require team confirmation. |

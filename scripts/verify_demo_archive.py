@@ -41,7 +41,7 @@ def main():
     record = json.loads((ROOT / "docs/demo_archive.json").read_text())
     assert digest(archive) == record["sha256"]
     with tempfile.TemporaryDirectory(prefix="leafcheck-delivery-") as temporary:
-        directory = Path(temporary)
+        directory = Path(temporary).resolve()
         with zipfile.ZipFile(archive) as bundle:
             names = bundle.namelist()
             assert all((directory / name).resolve().is_relative_to(directory) for name in names)

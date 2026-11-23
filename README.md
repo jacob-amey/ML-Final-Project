@@ -96,6 +96,8 @@ evidence and source records. A checkout does not download the image data.
 Reproducing training requires the exact provided master or prepared release,
 including the recorded metadata and bytes. This repository does not establish
 reuse rights or a public download location for every upstream master image.
+The submission archive includes the frozen membership and audit metadata.
+See `data/README.md` for the tested restore command from the original master.
 
 The cache command prepares only training/validation images and calculates
 training-only normalization. Final evaluation prepares the test cache only after
@@ -339,3 +341,9 @@ responsible for reviewing assisted work, following course policy, submitting the
 required report/slides, and understanding the methods for Q&A. Do not attribute
 assisted implementation, undocumented meetings or unverified author activity to
 independent student work.
+
+The local delivery is `artifacts/LeafCheck-CSC427-submission.zip`. Its
+`START_HERE.md` points to the Word report, PowerPoint defense deck, standalone
+demo archive, executed review notebook, source snapshot and saved evidence.
+The original images remain in the local dataset and master folders. Use the
+archive's `MANIFEST.json` and verification receipt to identify the files.

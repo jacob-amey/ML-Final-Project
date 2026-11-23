@@ -20,6 +20,8 @@ understand the data, models, evaluation, and demonstration.
 | 2026-11-15 | Pre-existing local demo work, authorship not independently established | Existing migration, bundling and UI preserved before final-model changes; nine integration tests passed | Nested demo `22e454f`; preflight backups identify original changes |
 | 2026-11-16 | Codex-assisted work | Completed full-data architecture, class-weight, duration and paired-seed resolution experiments; preserved all177 labels and the sealed holdouts | `docs/experiments.csv`; `docs/resolution_decision.json` |
 | 2026-11-16 | Codex-assisted work | Implemented final-model packaging, evaluation and website integration tooling; final artifact tests remain pending until selection | Source and `docs/final_model_work_log.md` |
+| 2026-11-22 | Codex-assisted work | Recovered the native-resolution repeat, completed paired selection, froze and evaluated the selected model and fair references | `3443b41`, `1e65c57`, `docs/final_model_report.md` |
+| 2026-11-22 | Codex-assisted work | Installed the frozen model, verified standalone/API/browser agreement and prepared the report, defense deck and archived review notebook | `b0b8720`, `docs/demo_verification.json`, `docs/test_results.json` |
 
 Do not infer attendance, independent student implementation or partner authorship
 from commits. The student should review and understand assisted work and follow

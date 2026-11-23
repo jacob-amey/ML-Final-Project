@@ -93,6 +93,7 @@ sequence.push([
   duration.native_size_accepted ? '256 px with illumination' : '256 px trial',
   f1((await read(path.join(docs, 'seed_stability_256.json'))).mean_macro_f1),
 ]);
+text(selection, 'Mean macro-F1 across two seeds', 655, 126, 520, 37, 17, { color: muted });
 for (const [i, [label, value]] of sequence.entries()) {
   text(selection, label, 66, 170 + i * 66, 580, 57, 22);
   text(selection, value, 655, 170 + i * 66, 250, 57, 25, { bold: true, color: green });
@@ -114,7 +115,7 @@ for (let i = 0; i < measures.length; i++) {
   for (let j = 0; j < 4; j++) resultsTable.getCell(i,j).fill = i === 0 ? '#DDEAE0' : i % 2 === 0 ? '#EDF3ED' : '#FFFFFF';
 }
 text(heldout, `${final.classes_with_fewer_than_10_test_images} classes have fewer than ten test images.`, 66, 513, 1150, 52, 21, { color: muted });
-text(heldout, `PlantDoc supplement: ${supplement.correct} of 183 correct across three reference labels.`, 66, 573, 1150, 52, 21, { color: muted });
+text(heldout, `PlantDoc supplement. CNN ${supplement.correct}/183 correct, tomato frequency rule ${supplement.conditional_rule.correct}/183.`, 66, 573, 1150, 52, 21, { color: muted });
 
 const demo = slide('Live application demo', 'Open the local LeafCheck launcher. Upload a real file and run comparison. Explain that the browser sends photo bytes to the same Python server that hosts the page. Python returns structured model scores. Point out that scores are uncalibrated. Show the fair held-out score table.');
 lines(demo, [['Upload', 'Choose a JPEG or PNG photo and run the comparison.'], ['Predict', 'The local Python server applies the saved preprocessing and CNN.'],
@@ -131,9 +132,15 @@ for (const [i, row] of examples.entries()) {
 
 const limits = slide('Limits and next improvement', 'Explain source provenance and why small class counts matter. Priority: collect verified field examples for sparse categories and record plant/session IDs. Identify actual team responsibilities and disclose Codex assistance. Use docs/contributions.md for the record.');
 lines(limits, [['Rare classes', 'Sparse examples make individual class results uncertain.'], ['Field coverage', 'The 183-photo supplement covers three tomato labels and shares a source with the master.'],
-  ['Next improvement', 'Collect independently labeled field photos for sparse classes and record plant and session IDs.'],
-  ['Reproduction', 'Run the archive locally. The review notebook explains model selection.']], { step: 108, textSize: 21 });
-text(limits, 'github.com/jacob-amey/ML-Final-Project', 66, 622, 1150, 45, 17, { color: green });
+  ['Next improvement', 'Collect independently labeled field photos for sparse classes and record plant and session IDs.']],
+  { top: 184, step: 125, textSize: 21 });
+
+const team = slide('Team responsibilities and reproduction', 'Add verified names to the presentation. Use the actual contributions record for individual credit. Codex assistance is disclosed in the report and repository. The final archive preserves the model weights and frozen evaluation evidence.');
+lines(team, [['Model and dataset role', 'Data preparation, CNN, training, evaluation and model handoff.'],
+  ['Application role', 'Frontend and the image upload and comparison interface.'],
+  ['Execution and evidence', 'Codex-assisted work is disclosed in the report. The local archive includes the launcher and review notebook.']],
+  { top: 174, step: 128, textSize: 21 });
+text(team, 'github.com/jacob-amey/ML-Final-Project', 66, 622, 1150, 45, 21, { color: green });
 
 for (let i = 0; i < deck.slides.items.length; i++) {
   const bitmap = await deck.export({ slide: deck.slides.items[i], format: 'png', scale: 1 });
@@ -145,5 +152,5 @@ await finalizePresentation({ workspaceDir: root, candidatePath, finalPath, pytho
   integrityValidatorPath: path.join(toolsDir, 'inspect_presentation_package_integrity.py'),
   layoutValidatorPath: path.join(toolsDir, 'inspect_presentation_layout_geometry.py'),
   layoutArgs: ['--expected-slide-size-emu', '12192000,6858000', '--require-native-table-slide', '5'],
-  explicitTotalSlideCount: 8, requiredNativeTableOwnerSlides: [5], fontPolicy: { basis: 'design', families: ['Arial'] },
+  explicitTotalSlideCount: 9, requiredNativeTableOwnerSlides: [5], fontPolicy: { basis: 'design', families: ['Arial'] },
   verifyArtifactToolImport: true, receiptPath: path.join(buildDir, 'validation.json') });

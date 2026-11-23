@@ -1,0 +1,18 @@
+{
+  "recorded_utc": "2026-11-23T04:00:35.421960+00:00",
+  "report": {
+    "path": "artifacts/submission/LeafCheck_Report.docx",
+    "sha256": "11b7bce1be29b4ec682e31f4ad9704f65f52bb870cade194586f65e2ec010c20",
+    "pages": 7,
+    "all_pages_rendered_and_reviewed": true
+  },
+  "deck": {
+    "path": "artifacts/submission/LeafCheck_Defense.pptx",
+    "sha256": "972ea1af3124faaf9730e1657577ee1bc66430904414d3674102dd6bc0959492",
+    "slides": 9,
+    "all_exported_slides_rendered_and_reviewed": true,
+    "editable_heldout_results_table_on_slide": 5,
+    "structural_integrity_passed": true,
+    "layout_findings": 0
+  }
+}

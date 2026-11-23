@@ -1,0 +1,55 @@
+{
+  "created_utc": "2026-11-23T03:55:00.057462+00:00",
+  "source_revision": "3b260db2799590e2b135e77cbf581b0eac5253b0",
+  "url": "http://127.0.0.1:8765",
+  "app_revision": "585f86d05c26899a",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "suites": [
+    {
+      "suite": "pipeline",
+      "command": [
+        "/Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "test_cases": 9,
+      "seconds": 22.06313124999724,
+      "log": "runs/final177/verification/pipeline_tests.log",
+      "log_sha256": "0d5310edc89201be9ba00a4f95cb648663dda3d692a2940182460e53dbeda350"
+    },
+    {
+      "suite": "website",
+      "command": [
+        "/Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "leafcheck-demo/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "test_cases": 15,
+      "seconds": 5.079206709000573,
+      "log": "runs/final177/verification/website_tests.log",
+      "log_sha256": "7a222bb801381fbfe251590ec6b0ef2f202ffda657e1c5bde96446b10542a05b"
+    }
+  ],
+  "review_notebook": {
+    "executed_without_errors": true,
+    "seconds": 1.6461299170005077,
+    "executed_artifact": "/Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/artifacts/leafcheck177-v1",
+    "source": "cnn_final_model_review.ipynb",
+    "source_sha256": "4451c166fa727b33e87c6e3e03a59da5d0dce03dcf220d43bfb56bcd5272d665",
+    "executed_copy": "runs/final177/verification/cnn_final_model_review.executed.ipynb",
+    "executed_sha256": "8c2d76fb854cd8a1754971099f37534ef75b85fde5afd440ed77060d732706cd"
+  },
+  "unchanged_frozen_checkpoint_after_checks": true
+}

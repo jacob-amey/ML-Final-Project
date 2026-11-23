@@ -162,6 +162,7 @@ def build(artifact, output):
     doc.add_paragraph("The full-data compact CNN reached 0.536531 validation macro-F1. Adding residual capacity raised it to 0.595327 in a matched seed. Increasing channel width later failed to improve the 160-pixel recipe. Moderate illumination variation improved both seeds, and the selected decay strength was 0.0001.")
     doc.add_paragraph(f"The paired 256-pixel change versus 224 was {duration['native_size_paired_gain']:+.6f} macro-F1. The declared promotion threshold was +0.005. The recorded duration decision and learning curves preserve any late training follow-up. Two seeds provide limited evidence about run variability.")
     doc.add_paragraph(f"The deployed scoring policy is {policy_name.lower()}. Validation also tested training-frequency logit adjustment [4] and mean scores across eight transformed views [5]. Their two-seed gains were " + ", ".join(f"{policy_names[row['policy']].lower()} {row['mean_gain']:+.6f}" for row in policy["policies"]) + f". The delivered checkpoint and policy achieved {validation['macro_f1']:.6f} macro-F1 and {validation['accuracy']:.2%} accuracy on validation.")
+    figure(doc, artifact / "learning_curves.png", "Figure 2. The selected training run. The dashed marker identifies the epoch selected on validation.", 5.9)
 
     heading(doc, "Frozen Test Results")
     table(doc, ["Method", "Correct / total", "Accuracy", "Macro-F1"], [(name, f"{r['correct']:,} / {r['sample_count']:,}", f"{r['accuracy']:.2%}", f"{r['macro_f1']:.6f}")
@@ -169,22 +170,25 @@ def build(artifact, output):
     doc.add_paragraph(f"The frequency rule always predicts {pretty(rule['rule']['class_name'])}. Each method uses the same 8,425 held-out images. The checkpoint, class order, preprocessing, score policy and fair reference were committed to the freeze record before evaluation. The two earlier CNN pilots predict three labels. Create ML covered 177 labels, but 5,832 new test images fall within its declared old training split, so its live outputs are exploratory.")
     no_recall = sum(row["recall"] == 0 for row in test["per_class"])
     doc.add_paragraph(f"The test contains {test['known_group_count']:,} known or inferred groups. Mean accuracy across groups is {test['group_balanced_accuracy']:.2%}. There are {test['classes_with_fewer_than_10_test_images']} classes with fewer than 10 test images and {no_recall} with zero observed recall. Per-class precision, recall, F1, support and every prediction accompany the bundle.")
-    figure(doc, artifact / "major_confusions.png", "Figure 2. Largest directed confusions in the frozen 177-class test.", 6.0)
+    figure(doc, artifact / "major_confusions.png", "Figure 3. Largest directed confusions in the frozen 177-class test.", 6.0)
 
     heading(doc, "Supplementary Results and Demonstration")
     conditional = external["conditional_rule"]
     doc.add_paragraph(f"A second evaluation used 183 screened PlantDoc images representing three tomato labels. The CNN correctly classified {external['correct']} of 183 ({external['accuracy']:.2%}, three-label macro-F1 {external['macro_f1']:.4f}). The conditional frequency rule got {conditional['correct']} of 183 ({conditional['accuracy']:.2%}, macro-F1 {conditional['macro_f1']:.4f}). All 177 CNN outputs were eligible. Related sources appear elsewhere in the master, and the healthy proxy uses the source label Tomato leaf.")
-    table(doc, ["Demo example", "Reference label", "CNN prediction", "Score"], [(r["purpose"].capitalize(), pretty(r["actual_class"]), pretty(r["predicted_class"]), f"{r['score']:.3f}") for r in examples], [1.15, 2.2, 2.25, .9])
+    table(doc, ["Demo example", "Reference label", "CNN prediction", "Score"], [(r["purpose"].capitalize(), pretty(r["actual_class"]), pretty(r["predicted_class"]), f"{r['score']:.6f}") for r in examples], [1.15, 2.2, 2.25, .9])
     doc.add_paragraph("The browser sends JPEG or PNG bytes to the local Python server. The server checks format and size, converts the photo to orientation-corrected RGB and runs each available model. JavaScript renders the returned labels and scores. The final loader verifies bundle hashes and reads the selected checkpoint reference.")
     doc.add_paragraph(f"The frozen CNN checkpoint is {latency['checkpoint_bytes']:,} bytes. On the tested Mac, CPU inference including image preparation had median latency {latency['p50_ms']:.1f} ms and 95th percentile {latency['p95_ms']:.1f} ms over {latency['timed_calls']} timed calls. The fresh extracted application’s four-model HTTP requests had median {app['http_latency']['p50_ms']:.1f} ms. Browser and API checks covered actual photos and unreadable uploads.")
     doc.add_heading("Discussion and Next Step", level=2)
     doc.add_paragraph("The gap between accuracy and macro-F1 matters for rare conditions. Some inherited labels describe broad symptoms, and predictions can be sensitive to background and camera conditions. The score ranks supported categories and is uncalibrated. LeafCheck produces one label per photo and cannot establish a diagnosis or reliably identify unfamiliar inputs. Add independently collected, verified photos with specimen and session IDs for rare and poorly represented categories before making stronger field claims.")
 
-    heading(doc, "Reproduction and References")
+    heading(doc, "Conclusion and Project Management")
+    doc.add_paragraph("The project delivered a custom 177-class CNN, a reproducible selection protocol and a local upload application. Its primary test gains and weak supplementary accuracy define different limits on its use. The team’s model and application responsibilities and Codex-assisted work are documented in docs/contributions.md.")
+    doc.add_heading("Reproduction and Appendix", level=2)
     doc.add_paragraph("Source and configuration history: https://github.com/jacob-amey/ML-Final-Project. The delivery archive records its local source revision. See README.md for exact environment, cache, training, resume, evaluation and launch commands. Open cnn_final_model_review.ipynb in the LeafCheck kernel for the architecture, saved tables and two demo predictions. Reproducing training requires the supplied frozen release or the exact master bytes and source records in data/README.md.")
     doc.add_paragraph("Dataset SHA-256: " + freeze["dataset_fingerprint"])
     doc.add_paragraph("Selected weights SHA-256: " + freeze["checkpoint_sha256"])
     doc.add_paragraph("The model package contains the selected weights, class mapping, preprocessing parameters, scoring policy, evaluation outputs and two demo photos. The application archive can be extracted and run without training data or notebooks. Model architecture, development records, experiment notes and the two contribution roles are documented in the source checkout.")
+    doc.add_heading("References", level=2)
     for ref in [
         "[1] S. P. Mohanty, D. P. Hughes, and M. Salathé, ‘Using deep learning for image-based plant disease detection,’ Front. Plant Sci., vol. 7, art. 1419, 2016. doi: 10.3389/fpls.2016.01419.",
         "[2] D. Singh, N. Jain, P. Jain, P. Kayal, S. Kumawat, and N. Batra, ‘PlantDoc: A dataset for visual plant disease detection,’ Proc. CoDS-COMAD, pp. 249–253, 2020. doi: 10.1145/3371158.3371196.",

@@ -401,3 +401,31 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   recorded in `final_model_selection.json` and committed in `1e65c57`. The
   artifact was frozen before building the test cache or predicting on either
   reserved collection.
+
+## 2026-11-22 — frozen evaluation and delivery checks
+
+- The selected artifact correctly classified 7,556 of 8,425 frozen test images
+  with 0.616940 macro-F1. Compact177 scored 7,234 and 0.518430. The frequency rule
+  scored 731 and 0.000902. Test predictions independently reconcile to the saved
+  metric counts. The 183-photo PlantDoc supplement got 26 correct for the CNN
+  and 79 for the rule, with macro-F1 of 0.219846 and 0.201018 respectively.
+  These results informed documentation and examples only.
+- The bundle installer validated the evaluated artifact and loaded its explicit
+  SHA-256 reference. All 24 pipeline and website tests passed. The first review
+  notebook execution surfaced an undeclared pandas dependency. The notebook
+  now renders the tables with the standard library and IPython and ran to
+  completion in the existing environment.
+- The browser used the file chooser to rehearse the success and high-score
+  mistake, and displayed a clear error for unreadable input. The fully
+  extracted demo started via its launcher with the isolated app environment.
+  All 88 files matched checksums. All four real models predicted on both photos.
+  The frozen CNN had median 38.2 ms warm CPU inference. Four-model requests in
+  the extracted app had median 52.2 ms on loopback.
+- Restored all 84,269 files into a temporary folder from the original master
+  and frozen membership records. The full release verifier passed. This
+  validates the packaged metadata restoration workflow without changing the
+  existing release.
+- Rendered and reviewed all seven report pages and nine exported slides. The
+  deck has an editable held-out comparison table. The delivery ZIP keeps data,
+  saved weights and evidence local. The full master and prepared image files
+  are available in the original local locations.

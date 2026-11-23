@@ -13,6 +13,7 @@ import math
 import random
 import re
 import shutil
+import tempfile
 import time
 import urllib.request
 import warnings
@@ -976,10 +977,51 @@ def verify(workers, root=OUTPUT):
     print(f"Verified {len(included):,} images, {len(mapping)} classes, hashes, unique pixels, and disjoint groups.", flush=True)
 
 
+def restore(workers, master, metadata, output):
+    """Recover exact frozen membership from its records and original image bytes."""
+    master, metadata, output = (Path(path).resolve() for path in (master, metadata, output))
+    assert not output.is_relative_to(master), "Choose an output outside the original master"
+    if output.exists():
+        raise FileExistsError(f"Preserving existing release at {output}")
+    lock = json.loads((PROJECT / "data/manifests/leafcheck177_frozen.json").read_text())
+    for name, expected in lock["files"].items():
+        assert file_sha256(metadata / name) == expected, f"Archived release record changed: {name}"
+    info = json.loads((metadata / "dataset_info.json").read_text())
+    assert file_sha256(master / "manifest.csv") == info["source_manifest_sha256"], "Master manifest differs"
+    mapping = json.loads((metadata / "class_to_idx.json").read_text())
+    rows = verify_records(read_csv(metadata / "manifest.csv"), mapping)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix=".leafcheck177-restore-", dir=output.parent) as temporary:
+        staging = Path(temporary) / "release"
+        shutil.copytree(metadata, staging, ignore=shutil.ignore_patterns("train", "val", "test"))
+        for split in ("train", "val", "test"):
+            for label in mapping:
+                (staging / split / label).mkdir(parents=True)
+
+        def copy_image(row):
+            source = (master / row["master_relative_path"]).resolve()
+            target = (staging / row["output_relative_path"]).resolve()
+            assert source.is_relative_to(master) and target.is_relative_to(staging.resolve())
+            shutil.copyfile(source, target)
+
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            for count, _ in enumerate(pool.map(copy_image, rows), start=1):
+                if count % 10000 == 0 or count == len(rows):
+                    print(f"Restored {count:,} of {len(rows):,} image files", flush=True)
+        verify(workers, staging)
+        if output.exists():
+            raise FileExistsError(f"Another process created {output}; preserving it")
+        staging.rename(output)
+    print(f"Restored frozen release at {output}", flush=True)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("phase", choices=["audit", "group", "prepare", "verify"])
+    parser.add_argument("phase", choices=["audit", "group", "prepare", "verify", "restore"])
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument("--master", type=Path, default=MASTER)
+    parser.add_argument("--release-metadata", type=Path, default=PROJECT / "data/release_metadata/leafcheck177_final")
+    parser.add_argument("--output", type=Path, default=OUTPUT)
     args = parser.parse_args()
     if args.phase == "audit":
         audit(args.workers)
@@ -987,8 +1029,10 @@ def main():
         group(args.workers)
     elif args.phase == "prepare":
         prepare(args.workers)
+    elif args.phase == "restore":
+        restore(args.workers, args.master, args.release_metadata, args.output)
     else:
-        verify(args.workers)
+        verify(args.workers, args.output)
 
 
 if __name__ == "__main__":

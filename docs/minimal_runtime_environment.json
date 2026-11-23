@@ -53,7 +53,7 @@
     }
   ],
   "research_dependencies_required": false,
-  "final_model_runtime_verification": "pending final artifact installation",
+  "final_model_runtime_verification": "Passed real browser and API, plus fresh archive extraction with no research dependencies.",
   "development_177_model_inference_verified": true,
   "development_top_five_scores_equal_research_runtime": true,
   "software_fixture": "leafcheck-demo/web/assets/healthy.jpg (earlier pilot image; not an evaluation result)",

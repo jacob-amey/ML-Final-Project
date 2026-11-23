@@ -29,9 +29,29 @@ that additional related views or annotation errors may remain. Consult the
 Use its `class_to_idx.json`; the final label order has 177 entries.
 
 The [preparation script](../scripts/prepare_final_dataset.py) provides `audit`,
-`group`, `prepare`, and `verify` phases. The release includes its evidence
+`group`, `prepare`, `verify`, and `restore` phases. The release includes its evidence
 snapshots, review decisions, complete manifest, and exclusions. The processed
 images remain outside version control under the existing repository rules.
+
+### Restore the exact final split
+
+The submission archive contains release metadata under
+`source/data/release_metadata/leafcheck177_final/`. From its extracted
+`source/` directory, with the research environment installed and the original
+master directory available, run:
+
+```sh
+.venv/bin/python scripts/prepare_final_dataset.py restore \
+  --master /absolute/path/to/Plant_Dataset_Updated_2026-11-11 --workers 8
+.venv/bin/python scripts/prepare_final_dataset.py verify --workers 8
+```
+
+Restoration uses the fixed manifest to copy files from the original master into
+the exact saved assignments. It checks the archived metadata hashes, master
+manifest, copied bytes and split groups before publishing the restored release.
+For a copy of the already prepared release, place it in
+`data/processed/leafcheck177_final/` and run only `verify`. The portable demo
+uses its own packaged weights and two evaluation images.
 
 ## Earlier three-class dataset
 

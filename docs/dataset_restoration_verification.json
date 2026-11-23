@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-11-23T04:00:02.414068+00:00",
+  "frozen_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "master_manifest_sha256": "9cdffdb06ce9222d58c0ac1fdcaabe1988c1e0ebebd4c7086f85a308c1925ba5",
+  "images_verified_from_original_master": 84269,
+  "classes": 177,
+  "restore_command_exit_code": 0,
+  "all_fingerprint_files_match": true,
+  "master_and_original_release_used_as_read_only_inputs": true,
+  "note": "Restored into a separate temporary directory, then ran the full release verifier; only temporary files were cleaned up."
+}

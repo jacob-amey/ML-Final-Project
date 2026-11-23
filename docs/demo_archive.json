@@ -1,0 +1,11 @@
+{
+  "archive": "artifacts/LeafCheck-final-demo.zip",
+  "sha256": "1b7d23bc8f555e9ce949f9fc21bf040d29188cf263c2900462fab49c7eeefcf2",
+  "bytes": 8999120,
+  "model_checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "files": 88,
+  "source_revision": "b0b8720a2971ad4a195a51eb3f658a7eb6a1d350",
+  "contains_training_dataset": false,
+  "contains_notebooks": false,
+  "restore": "Unzip into a new folder, install the app requirements in a compatible Python environment, then run its launcher or backend/server.py."
+}
