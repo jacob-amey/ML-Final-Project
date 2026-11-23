@@ -24,5 +24,15 @@
     "supplementary_prediction_records_present": false,
     "raw_file_integrity_review": "All792 listed representatives reviewed:366 cross-split and426 within-split; no model outputs. See additional_integrity_review.json and within_integrity_review.json. No dataset changes; test predictions/mistakes did not guide model choices.",
     "model_selection_complete": false
+  },
+  "final_pre_freeze_observation": {
+    "observed_utc": "2026-11-23T03:42:37.881477+00:00",
+    "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+    "test_cache_present": false,
+    "final_artifact_present": false,
+    "primary_or_supplementary_prediction_records_present": false,
+    "model_selection_complete": true,
+    "selected_checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+    "selection_record": "docs/final_model_selection.json"
   }
 }

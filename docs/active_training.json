@@ -1,6 +1,9 @@
 {
-  "state": "native_resolution_check",
-  "run": "runs/final177/residual177_256_seed435",
-  "updated_utc": "2026-11-23T00:49:13.513615+00:00",
-  "test_predictions_inspected": false
+  "state": "final_selection_locked",
+  "run": "runs/final177/residual177_224_seed434",
+  "model_checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "selection_record": "docs/final_model_selection.json",
+  "updated_utc": "2026-11-23T03:42:37.882184+00:00",
+  "test_predictions_inspected": false,
+  "next_action": "Freeze the validated artifact and perform the declared evaluation."
 }

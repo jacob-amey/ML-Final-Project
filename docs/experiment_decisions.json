@@ -52,8 +52,8 @@
     "rationale": "Completed45 full-data epochs, selected35, macro-F10.623912. Does not improve the matched reference0.624215 or reach0.005169 repeat trigger; not proof width cannot help. Reload verified; no test use."
   },
   "residual177_224_seed434": {
-    "decision": "Retain as accepted 224-pixel recipe and carry into the paired scoring comparison",
-    "rationale": "Both full-data procedures completed and passed checkpoint reload. The 224-pixel mean macro-F1 improved from 0.621631 at 160 pixels to 0.641060 (+0.019429), with both seeds improving. The 256-pixel repeat did not clear the practical +0.005 paired threshold. See resolution224_decision.json, duration_trial_decision.json and the validation-only scoring comparison."
+    "decision": "Freeze epoch 53 with eight-view probability averaging",
+    "rationale": "Averaging improved both seeds (+0.005840 and +0.009675 macro-F1), paired mean gain +0.007758, with validation CPU p95 42.56 ms under the 500 ms cap. Seed 434 delivered macro-F1 0.649221; seed 435 delivered 0.648414. Prior adjustment did not qualify. Both holdouts remained sealed."
   },
   "residual177_224_seed435": {
     "decision": "Retain as accepted 224-pixel recipe and carry into the paired scoring comparison",

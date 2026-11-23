@@ -1,0 +1,26 @@
+{
+  "recorded_utc": "2026-11-23T03:42:37.880350+00:00",
+  "selection_split": "validation only",
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "run": "runs/final177/residual177_224_seed434",
+  "selected_policy": {
+    "name": "d4_probability_mean"
+  },
+  "deployment_validation": {
+    "macro_f1": 0.6492213195919269,
+    "accuracy": 0.8975409836065574,
+    "loss": 0.41128860628747915,
+    "sample_count": 16836,
+    "correct": 15111
+  },
+  "reference_checkpoint_sha256": "de865d5024cd725409ebd5dde15f28cc5fd488271c41e8b87432628f4c60648a",
+  "scoring_comparison_sha256": "d7cabd9efe912c88dda7b101bbd9d952c215345032f285922d7e4a129b227976",
+  "native_resolution_paired_gain": 0.0031660036714167283,
+  "scoring_paired_gain": 0.00775757555461043,
+  "scoring_validation_cpu_p95_ms": 42.55885424936423,
+  "confidence_threshold": null,
+  "calibration": "none",
+  "test_predictions_used": false,
+  "stopping_rationale": "Both 224 procedures plateaued at the learning-rate floor. The 256 comparison gained 0.003166 in paired mean, below 0.005, and the repeat plateaued below its cap, so the separate duration trial did not qualify. The width screen and stronger decay did not improve matched references. Eight-view averaging improved both seeds by at least 0.005839 and passed the measured latency guard. Its selected checkpoint still has 11 zero-recall validation classes; 71 classes with fewer than 20 validation images average 0.424771 F1. Persistent source and class-support differences make verified rare-class field data and annotation review a more grounded next question than another unguided capacity sweep."
+}
