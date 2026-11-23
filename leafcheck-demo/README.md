@@ -139,8 +139,10 @@ export LEAFCHECK_COREML_MODEL="/absolute/path/to/classifier.mlmodel"
 
 - **Final Custom CNN:** custom architecture trained from random initialization on
   the full 59,008-image training split; all 177 labels. Selection uses validation
-  macro-F1. Its saved 8,425-image test result appears beside the full-data Compact177 reference and simple rule,
-  with a separately labelled supplementary 183-photo, three-tomato-class check.
+  macro-F1. The delivered 224-pixel checkpoint averages scores over eight
+  orientations of the same photo. Its saved 8,425-image test result appears
+  beside the full-data Compact177 reference and simple rule, with a separately
+  labelled supplementary 183-photo, three-tomato-class check.
 - **Small CNN:** original pilot trained on 120 images; 3 tomato conditions.
 - **Starter 300 CNN:** second experiment; 210 training, 60 validation, and 30 test
   images from the 300-image dataset; 3 tomato conditions.

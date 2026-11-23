@@ -7,8 +7,8 @@ full new backend service is unnecessary for the local demonstration.
 
 ## Artifact and loading
 
-The selected release is installed from `artifacts/leafcheck177-v1/` after its
-selection/freeze and evaluations finish. The app's installer validates the files
+The selected release in `artifacts/leafcheck177-v1/` uses the 224-pixel residual
+CNN from seed 434, checkpoint epoch 53. The app's installer validates the files
 and creates `leafcheck-demo/models/final_model.json`. That explicit reference
 identifies a checkpoint-hash-named directory; final-model loading never chooses
 the newest run automatically. Final evaluation files accompany the exact weights.
@@ -33,12 +33,18 @@ Image preparation must match the bundle's `preprocessing.json` exactly:
    `(128,128,128)` to the saved square resolution.
 4. Represent pixels as float32 NCHW, divide by 255 once, then subtract the saved
    RGB mean and divide by saved RGB standard deviation. Statistics use training
-   images only. Apply no inference augmentation.
+   images only.
 
 Use the runtime's `Predictor` rather than implementing a second preprocessing
 path in the frontend. The website's upload validation first converts the source
 to an orientation-corrected lossless RGB PNG; the model applies its same shared
 resize/scaling/standardization afterward.
+
+The frozen scoring policy applies the CNN to eight orientations of the
+prepared tensor, covering four right-angle rotations and their reflections.
+It averages the 177 softmax scores across views and chooses the class with the
+largest mean score. The transformations are deterministic and the same in the
+held-out evaluator, standalone predictor and website.
 
 ## Output
 
@@ -58,10 +64,10 @@ The existing `/api/predict` endpoint wraps predictions under
 the affected model so available models can still return predictions. Upload
 format/size errors produce an appropriate error response before inference.
 
-Do not apply softmax twice, reorder the outputs, normalize the model's scores
-over only the displayed top three, or interpret a high score as guaranteed
-correctness. Unknown diseases, non-plant inputs, multiple plants and symptoms
-with non-disease causes are not reliably detected or rejected.
+Use the predictor's returned class order and scores directly. Display the
+uncalibrated scores as relative rankings over all supported classes. An
+unfamiliar disease, non-plant input or photo of multiple plants can still get
+a high score on a supported label.
 
 ## Shared responsibilities and agreement points
 

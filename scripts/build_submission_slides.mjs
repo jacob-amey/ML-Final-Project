@@ -89,12 +89,17 @@ lines(architecture, [['Image preparation', `RGB at ${config.input_size} × ${con
 
 const selection = slide('Validation decisions', 'Scores are macro-F1 averaged across 177 labels. Compare two seeds under the same setup. The project retained mild illumination and lighter decay. Higher resolution was accepted only by the declared paired rule. See docs/experiments.csv and docs/duration_trial_decision.json. Primary scoring-policy sources: https://arxiv.org/abs/2007.07314 and https://openaccess.thecvf.com/content/ICCV2021/html/Shanmugam_Better_Aggregation_in_Test-Time_Augmentation_ICCV_2021_paper.html.');
 const sequence = [['128 px weighted','0.600999'], ['160 px with illumination','0.621631'], ['224 px with illumination','0.641060']];
-if (duration.native_size_accepted) sequence.push(['256 px with illumination', f1((await read(path.join(docs, 'seed_stability_256.json'))).mean_macro_f1)]);
+sequence.push([
+  duration.native_size_accepted ? '256 px with illumination' : '256 px trial',
+  f1((await read(path.join(docs, 'seed_stability_256.json'))).mean_macro_f1),
+]);
 for (const [i, [label, value]] of sequence.entries()) {
   text(selection, label, 66, 170 + i * 66, 580, 57, 22);
   text(selection, value, 655, 170 + i * 66, 250, 57, 25, { bold: true, color: green });
 }
-text(selection, 'Two-seed mean validation macro-F1', 67, 456, 1130, 48, 18, { color: muted });
+text(selection, duration.native_size_accepted
+  ? 'Two-seed mean validation macro-F1'
+  : 'The 256 px gain fell below the declared 0.005 threshold.', 67, 456, 1130, 48, 18, { color: muted });
 text(selection, `${scoreNames[freeze.inference_policy.name]}\nDelivered validation macro-F1 ${f1(policies.deployment_validation.macro_f1)}`, 67, 539, 1140, 105, 26, { bold: true });
 
 const heldout = slide('Reserved test results', 'All three methods use exactly the same 8,425 images. The compact CNN trained on the full training split. The rule predicts the most frequent training class. The live Create ML adapter has overlapping declared training exposure. The earlier CNNs use three classes.');
@@ -127,7 +132,8 @@ for (const [i, row] of examples.entries()) {
 const limits = slide('Limits and next improvement', 'Explain source provenance and why small class counts matter. Priority: collect verified field examples for sparse categories and record plant/session IDs. Identify actual team responsibilities and disclose Codex assistance. Use docs/contributions.md for the record.');
 lines(limits, [['Rare classes', 'Sparse examples make individual class results uncertain.'], ['Field coverage', 'The 183-photo supplement covers three tomato labels and shares a source with the master.'],
   ['Next improvement', 'Collect independently labeled field photos for sparse classes and record plant and session IDs.'],
-  ['Reproduction', 'The archive runs locally. The notebook and run records explain how the model was selected.']], { step: 112, textSize: 21 });
+  ['Reproduction', 'Run the archive locally. The review notebook explains model selection.']], { step: 108, textSize: 21 });
+text(limits, 'github.com/jacob-amey/ML-Final-Project', 66, 622, 1150, 45, 17, { color: green });
 
 for (let i = 0; i < deck.slides.items.length; i++) {
   const bitmap = await deck.export({ slide: deck.slides.items[i], format: 'png', scale: 1 });

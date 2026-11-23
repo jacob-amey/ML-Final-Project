@@ -17,22 +17,23 @@ local bundles and archives follow `.gitignore`; they are not large Git binaries.
 
 ## Status and evidence
 
-Full-data training and validation experiments are in progress for the
-CSC-427 final project, **Plant Health Classification and an Interactive
-Application**. The paired 128/160-pixel comparison is complete. 160 pixels improved
-validation macro-F1 in both seeds. The completed illumination comparison raised
-two-seed mean macro-F1 from0.608911 to0.621631. Stronger weight decay did not
-improve that mean, so0.0001 is retained. The completed wider-channel screen did not improve its matched reference.
-Both 224-pixel procedures completed and reloaded: paired mean macro-F1
-0.641060 versus 160-pixel mean 0.621631. Both seed gains were positive.
-The first 256-pixel run passed the repeat threshold. Its independent repeat
-resumed from saved training state. `docs/active_training.json` identifies the
-current procedure, and its `status.json` and training log record live progress.
+The CSC-427 final project, **Plant Health Classification and an Interactive
+Application**, delivers the 224 × 224 residual CNN from seed 434, epoch 53.
+The model has 724,713 trainable parameters and 177 output logits. The frozen
+scoring policy averages softmax distributions across eight orientations of
+the same prepared photo.
 
-Final selection, held-out evaluation and the real final-model website rehearsal
-remain pending. No final-model predictions have been inspected on the primary
-holdout or supplementary collection. Read `docs/experiments.csv` for saved
-validation results and `docs/final_model_work_log.md` for completed work.
+Validation macro-F1 rose from 0.600999 at 128 pixels to 0.608911 at 160 pixels,
+then to 0.621631 with mild brightness and contrast augmentation. The 224-pixel
+pair reached 0.641060. The completed 256-pixel pair reached 0.644226, short of
+the declared +0.005 promotion rule. Orientation averaging improved both 224
+seeds by a mean of 0.007758 and met the CPU latency guard. The selected
+checkpoint scored **0.649221 macro-F1** and **89.7541% accuracy** on the 16,836
+validation images with the deployed scoring policy.
+
+Read `docs/final_model_selection.json` for the pre-test decision,
+`docs/experiments.csv` for saved training validation results, and
+`docs/final_model_work_log.md` for the execution history.
 
 - `docs/final_model_requirements.md`: verified requirements, assumptions and
   declared checkpoint/experiment selection rules.
@@ -107,11 +108,14 @@ caffeinate -i .venv/bin/python -m leafcheck.train --config configs/residual177_2
 caffeinate -i .venv/bin/python -m leafcheck.train --config configs/residual177_256_seed434.json --run runs/final177/residual177_256_seed434
 caffeinate -i .venv/bin/python -m leafcheck.train --config configs/residual177_256_seed435.json --run runs/final177/residual177_256_seed435
 .venv/bin/python -m leafcheck.seed_analysis --runs runs/final177/residual177_224_seed434 runs/final177/residual177_224_seed435 --output docs/seed_stability_224_reproduction
+.venv/bin/python -m leafcheck.compare_inference --pair docs/seed_stability_224_reproduction.json --output runs/final177/inference_comparison_reproduction
 ```
 
 The saved evaluation uses the exact distributed checkpoint bytes. A training
 reproduction can assess the same recipe and compare metrics, while backend
 differences and checkpoint serialization can change file hashes.
+The comparison command writes a new local `docs/inference_policy_comparison.json`
+from those fresh runs. Keep the delivered records in their original checkout.
 
 On this Mac, check whether the named detached session or an existing trainer
 owns the job before resuming. The remaining development command acquires the
@@ -201,10 +205,10 @@ command contract; use the actual selected run in the final manifest.
 
 ```sh
 .venv/bin/python -m leafcheck.package \
-  --run runs/final177/SELECTED_RUN \
+  --run runs/final177/residual177_224_seed434 \
   --output artifacts/leafcheck177-v1 \
   --policy-record docs/inference_policy_comparison.json \
-  --rationale "Document the validation-based selection and stopping decision"
+  --rationale "Selected by the paired validation protocol in docs/final_model_selection.json"
 .venv/bin/python -m leafcheck.evaluate_final --artifact artifacts/leafcheck177-v1
 .venv/bin/python -m leafcheck.evaluate_external --artifact artifacts/leafcheck177-v1
 ```
@@ -213,7 +217,8 @@ Final evaluation freezes and scores the completed Compact177 full-data reference
 alongside the selected model and training-frequency rule. Compact177 uses the
 same 177 labels and split membership; it is separate from the older three-class
 pilots. The package command defaults to `runs/final177/plain177_seed434` for that
-reference; use `--reference-run` only to name its reproduced completed run.
+reference. Its saved SHA-256 is pinned in the selection plan. Restore the
+distributed bundle to reproduce the reported results with the exact weights.
 
 Final evaluation saves per-image predictions, correct/total, accuracy, macro-F1,
 per-class metrics and support, confusion tables/figures, successes/failures,

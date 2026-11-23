@@ -44,17 +44,16 @@ The classifier still receives 192 pooled features, so the parameter count stays
 724,713. Most spatial convolution work grows roughly with image area: 160²/128²
 is 1.5625, although measured runtime also includes device and data overhead.
 
-The completed paired-resolution comparison retained 160-pixel inputs for the
-current development reference. Its spatial trace is:
+The selected 224-pixel model has this spatial trace:
 
-| Component | Residual model shape at 160 pixels |
+| Component | Residual model shape at 224 pixels |
 | --- | --- |
-| Input | B×3×160×160 |
-| Convolutional stem | B×24×80×80 |
-| Residual block 1 | B×24×80×80 |
-| Residual block 2 | B×48×40×40 |
-| Residual block 3 | B×96×20×20 |
-| Residual block 4 | B×192×10×10 |
+| Input | B×3×224×224 |
+| Convolutional stem | B×24×112×112 |
+| Residual block 1 | B×24×112×112 |
+| Residual block 2 | B×48×56×56 |
+| Residual block 3 | B×96×28×28 |
+| Residual block 4 | B×192×14×14 |
 | Global pooling and classifier | B×192, then B×177 logits |
 
 The first convolution has `3×24×3×3 = 648` weights; its bias is omitted because
@@ -81,18 +80,21 @@ or different crop at deployment.
 
 Training augmentation uses whole-image reflections and quarter turns. These
 preserve symptoms without cropping away a lesion or changing hue. Their realism
-is limited for upright field scenes, which is a stated tradeoff. Evaluation and
-inference are deterministic and use no augmentation. Augmented views do not
-increase the count of independent plants. The controlled `dihedral_color` trial
+is limited for upright field scenes. Checkpoint validation uses a single
+deterministic image view. Transformed views of an image share its plant and
+reference label. The controlled `dihedral_color` trial
 adds brightness and contrast factors from 0.9 to 1.1; the completed two-seed comparison retained this mild variation: mean validation
 macro-F1 rose from0.608911 to0.621631. Stronger weight decay0.001 gave
-0.620684, so0.0001 remains the reference. These limited seed comparisons
-do not establish significance; width and224-pixel scaling checks are pending.
+0.620684, so 0.0001 was retained. The wider-channel screen scored 0.623912
+against its matched 0.624215 reference.
 
 The model returns logits, which are unrestricted scores. Cross-entropy accepts
 logits and an integer class index. At inference, softmax converts the 177 logits
-into positive scores summing to one. Apply it once. Argmax selects the class;
-the ordered class list must match the saved output weights exactly.
+into positive scores summing to one. The selected policy averages these
+distributions across eight views of the prepared input. The highest mean
+score selects the class, and the ordered class list aligns with the output
+weights. Both seed checkpoints improved after averaging, with a mean gain of
+0.007758 macro-F1 and warm CPU p95 of 42.56 ms on the validation timing set.
 
 ## Why the splits and metrics matter
 
@@ -117,8 +119,9 @@ across methods and interpret weighted training loss within its own run.
 
 The simple rule chooses the most common training class, never a class selected
 from test frequencies. On validation it gets 1,462/16,836 correct, accuracy
-8.684% and macro-F1 0.000903. Its test result is computed only after freezing the
-final model. Earlier pilots and Create ML do not have the same comparison protocol.
+8.684% and macro-F1 0.000903. Its test result uses the frozen protocol. The
+earlier pilots have separate three-class datasets, and the Create ML training
+images overlap the 177-class test.
 
 ## Understanding the training machinery
 
@@ -202,4 +205,9 @@ provides192 features and177 logits, with724713 trainable parameters.
 Input area increases by256²/224²≈1.306; the sequential benchmark measured
 0.3184 versus0.2419 seconds per training update at batch128. Actual full-run
 times include validation and I/O and can vary with power and concurrent work.
-The larger resolution's quality remains pending until its full procedure finishes.
+The 256-pixel seeds reached 0.651250 and 0.637202, for mean 0.644226.
+The mean gain of 0.003166 fell below the declared 0.005 threshold. Seed 435
+also stopped early at 58 epochs, so the conditional duration trial did not
+qualify. The 224-pixel seed 434 checkpoint with the eight-view scoring policy
+was frozen before opening either holdout. The delivered validation score is
+0.649221 macro-F1 and 89.7541% accuracy.

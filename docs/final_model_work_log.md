@@ -379,3 +379,25 @@ instructions were restored on the local feature branch. A launch service did
 not start successfully. The monitored terminal session owns the live process.
 The next development checks are queued behind its lock and require completed
 paired evidence. See nov22_resume_record.json and the selection plan.
+
+## 2026-11-22 — resumed comparison and final validation decision
+
+- The detached session resumed the native 256-pixel repeat from epoch 5,
+  batch 62 and finished after 58 full epochs. Best epoch 56 reloaded at
+  0.637202 macro-F1, 89.1780% accuracy and 0.429230 loss. The matched seed 434
+  improved by 0.007869 versus 224 pixels, and seed 435 dropped by 0.001537.
+  The 0.003166 paired mean gain fell below 0.005. The conditional longer-budget
+  trial did not qualify.
+- The validation-only scoring trial used the same 16,836 images and two
+  accepted 224-pixel checkpoints. Training-frequency logit adjustment had
+  mixed per-seed changes and a mean gain of 0.000061. Averaging the softmax
+  distributions over eight orientations raised F1 by 0.005840 and 0.009675,
+  with CPU p95 of 42.56 ms over 16 warm calls. Seed 434 epoch 53 led with
+  0.649221 macro-F1 and 15,111 of 16,836 correct. The comparison retained fixed
+  weights and validation-only evidence.
+- Both incumbent training curves stopped at the learning-rate floor. Sparse
+  classes, residual source differences and persistent confusions remained after
+  the paired tests. Choice of the 224-pixel model and eight-view policy was
+  recorded in `final_model_selection.json` and committed in `1e65c57`. The
+  artifact was frozen before building the test cache or predicting on either
+  reserved collection.
