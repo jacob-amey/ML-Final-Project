@@ -1,0 +1,11 @@
+{
+  "version": "leafcheck_tom2024_v1",
+  "title": "TOM2024",
+  "doi": "10.17632/3d4yg89rtr.1",
+  "source": "https://data.mendeley.com/datasets/3d4yg89rtr/1",
+  "paper": "https://doi.org/10.1016/j.dib.2025.111357",
+  "credit": "Obed Appiah et al., WASCAL and collaborators",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "selection": "English-language Category A preprocessed originals only. Per compatible class rank by SHA-256 of leafcheck-tom2024-v1 and publisher file ID, then keep up to 256. The 74 available tomato late blight JPEGs enter screening. Retain only known compatible labels and keep the whole source in training. Reuse source-provided labels."
+}

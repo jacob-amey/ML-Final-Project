@@ -36,16 +36,16 @@ def fetch():
         raise ValueError("The local archive does not match the registered mirror")
 
 
-def protected_with_v2():
-    fingerprint, count, external, raw, exact, locators, visuals, offsets = protected_with_field()
-    metadata = json.loads((MANIFESTS / "leafcheck_field_v2_sampled_release.json").read_text())
-    assert all(file_sha256(V2 / name) == value for name, value in metadata["files_sha256"].items())
+def extend_protected(protected, release, seal):
+    fingerprint, count, external, raw, exact, locators, visuals, offsets = protected
+    metadata = json.loads(seal.read_text())
+    assert all(file_sha256(release / name) == value for name, value in metadata["files_sha256"].items())
     additions, new_offsets = [], []
-    for row in read_csv(V2 / "manifest.csv"):
+    for row in read_csv(release / "manifest.csv"):
         if row["status"] != "included":
             continue
-        path = V2 / row["output_relative_path"]
-        locator = "leafcheck_field_v2_sampled:" + row["image_id"]
+        path = release / row["output_relative_path"]
+        locator = release.name + ":" + row["image_id"]
         assert file_sha256(path) == row["sha256"]
         raw.setdefault(row["sha256"], locator)
         exact.setdefault(row["pixel_d4_sha256"], locator)
@@ -57,6 +57,10 @@ def protected_with_v2():
     return (fingerprint, count, external, raw, exact, locators,
             np.concatenate((visuals, np.array(additions, np.uint64))),
             np.concatenate((offsets, np.array(new_offsets, np.int64))))
+
+
+def protected_with_v2():
+    return extend_protected(protected_with_field(), V2, MANIFESTS / "leafcheck_field_v2_sampled_release.json")
 
 
 def ensure_entry(row, labels, output):

@@ -1,0 +1,14 @@
+{
+  "hypothesis": "A probability blend restricted to the user-supplied potato crop can retain the original model's master validation while recovering the independent field-training gains.",
+  "fractions": [0.25, 0.5, 0.75],
+  "selection": "Pick the strongest paired mean field macro-F1 among fractions meeting both seeds' master limits and mean gains from the parent plan. Evaluate the same fractions for the class-count-matched control. Differences must be positive at both seeds. Use the lower fraction for ties. Choose the better field seed for the frozen candidate and the matching control seed.",
+  "automatic_ensemble": {
+    "hypothesis": "Equal probabilities averaged across the two matched, independently scratch-trained 224px CNNs may improve all-label macro-F1.",
+    "member_sha256": "25e3f2225fa3a7f6490edfee5feac88fa3bf480b9b061c2eb530d6e9810c22c3",
+    "member": "runs/final177/residual177_224_seed435/best_model.pt",
+    "master_min_gain": 0.005,
+    "master_max_accuracy_drop": 0.002,
+    "field_max_mean_f1_drop": 0.02,
+    "test_scope": "Okara supports three potato labels. It cannot validate the automatic ensemble across all 177 labels, so the broad result is validation-only."
+  }
+}
