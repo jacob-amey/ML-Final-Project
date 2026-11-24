@@ -216,3 +216,21 @@ runs/final177/integrity_env/bin/python scripts/check_within_integrity_features.p
 
 These helpers write into a separate `within` evidence folder and preserve the
 earlier cross-split review. They never edit the dataset or select a model.
+
+### PlantSeg source attribution, November 24
+
+All 7,774 images listed by the PlantSeg v7 publisher were traced to the
+existing master by filename, archived member size and CRC32, and the frozen
+master's SHA-256. The frozen release contains 5,301 of these images in
+training, 1,206 in validation, and 642 in test. The original exclusions
+account for the remaining 625 files. Of the publisher's 1,561 test records,
+1,081 already contributed to LeafCheck training. The PlantSeg test split
+therefore cannot provide an independent performance comparison for the
+published LeafCheck checkpoint. This audit changed no assignments and
+computed no holdout predictions. [PlantSeg publisher record](https://zenodo.org/records/17719108)
+
+The [source verification record](potato_context/plantseg_source_audit.json)
+and [reproduction commands](../data/README.md#plantseg-annotation-experiment)
+document the checks. Publisher labels remain inherited. A separate
+annotation study derives new views of training parents and reports them
+as augmentations.

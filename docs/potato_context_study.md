@@ -144,8 +144,9 @@ after restoring the [data releases](../data/README.md).
   --run runs/field_v3/tom2024_matched
 ```
 
-Add `--resume` with the same arguments to continue from a compatible
-checkpoint. For an independent replication, use a new run directory.
+Add `--resume` with the same arguments and the exact trainer revision
+`f79bb4b` to continue a compatible checkpoint. For an independent
+replication, use a new run directory.
 
 ## Reserved Bangladesh tomato check
 
@@ -207,6 +208,42 @@ unavailable. Keep these images and scores out of training and selection.
 ```sh
 .venv/bin/python -m leafcheck.tomato_holdout freeze --output runs/tomato_transfer_reproduction
 .venv/bin/python -m leafcheck.tomato_holdout evaluate --output runs/tomato_transfer_reproduction
+```
+
+## PlantSeg provenance and lesion crops
+
+Archive records identified all 7,774 PlantSeg originals inside the inherited
+master. The attribution check matched filename, archive size and CRC32, and
+the frozen master SHA-256. The frozen split retains 5,301 in training, 1,206
+in validation and 642 in primary test. A further 625 were excluded in the
+original audit. There are 1,081 official PlantSeg test images in LeafCheck
+training. An evaluation on the publisher's full test split would reuse
+training images. [Publisher archive](https://zenodo.org/records/17719108) ·
+[Data paper](https://www.nature.com/articles/s41597-025-06513-4) ·
+[Source reconciliation](potato_context/plantseg_source_audit.json)
+
+The derived release instead uses lesion annotations from compatible
+parents assigned to training in both studies. It yields 722 crops over
+98 labels. A crop keeps a margin around the annotated region and at least
+55% of each original dimension. Visual review found that some photographed
+symptoms occur on fruit and stems as well as leaves. The manually inspected
+examples retain the marked region. An independent reconstruction produced
+the same manifest and release seal. The treatment receives these crops in
+extra replay slots. The control receives those exact parent photos in
+the same positions. The master data, prior supplementary data, seeds and
+optimization settings match. Both arms score ordinary images, using the
+same preprocessing without annotations at inference.
+[Registered training recipe](../configs/leafcheck_plantseg_regions_v1_training.json)
+
+After restoring the [release](../data/README.md#plantseg-annotation-experiment),
+run the command below. Use `--resume` with the same release, configuration,
+trainer revision and run directory after an interruption.
+
+```sh
+.venv/bin/python -m leafcheck.field_expansion \
+  --data data/processed/leafcheck_plantseg_regions_v1 \
+  --config configs/leafcheck_plantseg_regions_v1_training.json \
+  --run runs/field_v3/plantseg_regions
 ```
 
 ## What the app does

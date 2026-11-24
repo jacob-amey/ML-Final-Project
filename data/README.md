@@ -118,6 +118,35 @@ before evaluating.
 .venv/bin/python scripts/prepare_bangladesh_tomato_holdout.py build
 ```
 
+## PlantSeg annotation experiment
+
+All 7,774 publisher images matched originals already in the frozen master.
+The match used names, publisher ZIP member sizes and CRC32 values, and
+recorded SHA-256 values from the master. The original PlantSeg test list
+includes 1,081 files assigned to LeafCheck training. Treat the published
+PlantSeg split as an already exposed benchmark for this model. The
+[source audit](../docs/potato_context/plantseg_source_audit.json) lists the
+observed roles. [Publisher record](https://zenodo.org/records/17719108)
+
+The [derived region release](manifests/leafcheck_plantseg_regions_v1_release.json)
+uses original images and annotations present in both designated training
+splits with compatible labels. It records parent IDs, crop geometry, and
+mask checksums. These views reuse existing parents and do not add independent
+originals. The metadata includes the source URL and CC BY-NC or CC0 tag.
+Keep the media under their applicable source terms.
+
+```sh
+.venv/bin/python scripts/prepare_plantseg_crops.py fetch
+.venv/bin/python scripts/prepare_plantseg_crops.py audit
+.venv/bin/python scripts/prepare_plantseg_crops.py build
+```
+
+The commands use checksum-pinned byte ranges of the publisher archive.
+Existing restored master files are required. Supply `--master /absolute/path`
+to the audit and build commands when the recorded master location differs.
+The archive is sparse and contains the annotations and directory records.
+It cannot restore the original master photos.
+
 ## Earlier three-class dataset
 
 The dataset assigns `early_blight`, `healthy`, and `late_blight` to class indices 0, 1, and 2 respectively. The image folders under `data/processed/leafcheck/` are ready for a loader such as PyTorch `ImageFolder`. The [image inventory](manifests/image_inventory.csv) records the exact membership, original path, source revision, group, file hash, and any exclusion. The [label mapping](manifests/label_mapping.csv) records how the source labels translate to project labels.
