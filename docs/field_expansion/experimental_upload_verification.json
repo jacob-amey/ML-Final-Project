@@ -1,0 +1,60 @@
+{
+  "verified_utc": "2026-11-24T18:48:45.519063+00:00",
+  "default_app_revision": "1a1a7be087844620",
+  "study_app_revision": "0d533a39cf897d90",
+  "experimental_router": {
+    "version": "leafcheck177-field-study-v2",
+    "fingerprint": "8fd2d2e9e772eb984ba0512f020c2e037c505a36cd0743bcb62b4844cacd9150",
+    "candidate_checkpoint_sha256": "0923cfbd425d6ef51d738e46fdda17fd7006a59576eb23d11fc6177ed496ca23",
+    "reference_below": 0.5857925415039062,
+    "candidate_at_least": 0.9
+  },
+  "standalone_comparison": [
+    {
+      "fixture": "kept_uncertain",
+      "path": "data/processed/leafcheck_field_v2_sampled/val/potato__early_blight/ac676cd2ba45f6a878dd59d8f86084e8b86606f8a9576524d34770bf0bda8721.jpg",
+      "sha256": "ac676cd2ba45f6a878dd59d8f86084e8b86606f8a9576524d34770bf0bda8721",
+      "reference": "potato__early_blight",
+      "original_prediction": "cucumber__powdery_mildew",
+      "original_score": 0.4626689553260803,
+      "study_prediction": "cucumber__powdery_mildew",
+      "study_score": 0.4626689553260803,
+      "origin": "original_cnn",
+      "decision": "uncertain",
+      "max_absolute_score_difference": 0.0
+    },
+    {
+      "fixture": "kept_high_original",
+      "path": "data/processed/leafcheck_field_v2_sampled/val/potato__early_blight/82c9d925c4d8ada7adafecc42cd650df7f6b9ae348c0ddc352ef419354556e2f.jpg",
+      "sha256": "82c9d925c4d8ada7adafecc42cd650df7f6b9ae348c0ddc352ef419354556e2f",
+      "reference": "potato__early_blight",
+      "original_prediction": "tomato__septoria_leaf_spot",
+      "original_score": 0.8113961815834045,
+      "study_prediction": "tomato__septoria_leaf_spot",
+      "study_score": 0.8113961815834045,
+      "origin": "original_cnn",
+      "decision": "suggestion",
+      "max_absolute_score_difference": 0.0
+    },
+    {
+      "fixture": "correct_field_switch",
+      "path": "data/processed/leafcheck_field_v2_sampled/val/potato__early_blight/5f4225b1f5b29ae200d726e024251cc7cc9a796063126d41e0d7b7359c78f639.jpg",
+      "sha256": "5f4225b1f5b29ae200d726e024251cc7cc9a796063126d41e0d7b7359c78f639",
+      "reference": "potato__early_blight",
+      "original_prediction": "cherry__leaf_spot",
+      "original_score": 0.34171852469444275,
+      "study_prediction": "potato__early_blight",
+      "study_score": 0.957834780216217,
+      "origin": "field_candidate",
+      "decision": "suggestion",
+      "max_absolute_score_difference": 0.0
+    }
+  ],
+  "invalid_upload_http_status": 400,
+  "latency": {
+    "warmups": 2,
+    "requests": 12,
+    "p95_ms": 240.7888919988181,
+    "conditions": "All four models on loopback HTTP, same switched JPEG, includes upload and response."
+  }
+}

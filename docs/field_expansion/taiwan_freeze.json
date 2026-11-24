@@ -1,0 +1,20 @@
+{
+  "frozen_utc": "2026-11-24T18:47:50.676417+00:00",
+  "decision_sha256": "cff97dc256d40f8b36ef3ce34bf5fbf4f21b07c2d85adc4e64a3f8f0739388d4",
+  "data_manifest_sha256": "e4bd6d632bafefd8e5205d986519e57ebfb57b09aed888a8c202e3d365fda8b0",
+  "release": "94a9489fce692e2b8d21adc312fc882ae42de23686f26319cecc51d07150b781",
+  "class_map_sha256": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a",
+  "preprocessing_sha256": "e5f90e4252b3ee708a9fa0385346429b9bed758d3ad36e5ec6fc0fd3abeaade9",
+  "reference_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "candidate_sha256": "0923cfbd425d6ef51d738e46fdda17fd7006a59576eb23d11fc6177ed496ca23",
+  "candidate_checkpoint": "runs/field_v2/replay_full/new_field/epoch-002.pt",
+  "policy": "d4_probability_mean",
+  "primary_metric": "Macro-F1 over each test source's supported labels. All 177 outputs eligible.",
+  "deployment_guards_passed_on_validation": true,
+  "rule": "Frozen master training class frequencies, restricted independently to each source's true label set",
+  "experimental_routing": {
+    "selection_sha256": "14ef4be6843ce1e8123c6041f43e11d8023537c1d325519aaeac873cd9795856",
+    "reference_below": 0.5857925415039062,
+    "candidate_at_least": 0.9
+  }
+}

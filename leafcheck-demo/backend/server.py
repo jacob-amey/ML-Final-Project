@@ -7,6 +7,7 @@ import hashlib
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from io import BytesIO
 import json
+import os
 from pathlib import Path
 import tempfile
 from urllib.error import URLError
@@ -27,7 +28,13 @@ revision_files.extend(path for path in [
 reference_file = DEMO_ROOT / "models/final_model.json"
 if reference_file.exists():
     revision_files.append(reference_file)
-APP_REVISION = hashlib.sha256(b"".join(path.read_bytes() for path in revision_files)).hexdigest()[:16]
+field_study = os.environ.get("LEAFCHECK_FIELD_STUDY", "")
+if field_study:
+    bundle_file = Path(field_study).expanduser() / "bundle.json"
+    if bundle_file.is_file():
+        revision_files.append(bundle_file)
+APP_REVISION = hashlib.sha256(b"".join(path.read_bytes() for path in revision_files)
+                              + field_study.encode()).hexdigest()[:16]
 MAX_BYTES = 10 * 1024 * 1024
 MAX_PIXELS = 24_000_000
 Image.MAX_IMAGE_PIXELS = MAX_PIXELS

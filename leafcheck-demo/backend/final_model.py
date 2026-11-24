@@ -67,10 +67,20 @@ class FinalCNN:
                          "preprocessing": f"Frame 0, EXIF orientation, RGB, {self.predictor.spec['input_size']} × {self.predictor.spec['input_size']} bilinear gray padding, /255 and training-only RGB standardization"}
         if self.reliability:
             self.metadata["reliability"] = self.reliability
+        self.field_router = None
+        study = os.environ.get("LEAFCHECK_FIELD_STUDY")
+        if study:
+            from field_router import FieldRouter
+            self.field_router = FieldRouter(self.predictor, study, artifact)
+            if not self.reliability or self.field_router.below != self.reliability["threshold"]:
+                raise ValueError("The field study requires the original reliability policy")
+            self.metadata["experimental_field_router"] = self.field_router.metadata
 
     def predict(self, path):
         with self.lock:
             result = self.predictor.predict(path)
+            if self.field_router:
+                result = self.field_router.apply(path, result)
         if self.reliability:
             result["decision"] = "suggestion" if result["score"] >= self.reliability["threshold"] else "uncertain"
         return result

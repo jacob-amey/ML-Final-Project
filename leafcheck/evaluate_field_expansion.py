@@ -4,6 +4,7 @@ import argparse
 from collections import Counter
 import fcntl
 from pathlib import Path
+import shutil
 
 import numpy as np
 import torch
@@ -12,11 +13,12 @@ from .common import atomic_json, sha256, utc_now, write_csv
 from .data import split_rows
 from .inference import Predictor
 from .preprocessing import prepare_batch
+from .route_field import routed
 from .train import device_for
 from .upload_study import ARTIFACT, pixels, read, rows, score, summarize
 
 
-def freeze(output, decision_path, release_path):
+def freeze(output, decision_path, release_path, routing_path=None):
     decision = read(decision_path)
     release = read(release_path / "release.json")
     candidate = decision["arms"]["new_field"]
@@ -28,7 +30,7 @@ def freeze(output, decision_path, release_path):
     lock = output / "freeze.json"
     if lock.exists():
         raise FileExistsError("Preserving the existing test freeze")
-    atomic_json(lock, {
+    record = {
         "frozen_utc": utc_now(), "decision_sha256": sha256(decision_path),
         "data_manifest_sha256": release["files_sha256"]["manifest.csv"], "release": release["fingerprint"],
         "class_map_sha256": sha256(ARTIFACT / "class_to_idx.json"),
@@ -38,7 +40,19 @@ def freeze(output, decision_path, release_path):
         "primary_metric": "Macro-F1 over each test source's supported labels. All 177 outputs eligible.",
         "deployment_guards_passed_on_validation": decision["promotion_guards_passed"],
         "rule": "Frozen master training class frequencies, restricted independently to each source's true label set",
-    })
+    }
+    if routing_path:
+        routing = read(routing_path)
+        if (not routing["promotion_guards_passed"] or routing["release"] != release["fingerprint"]
+                or routing["parent_decision_sha256"] != record["decision_sha256"]):
+            raise ValueError("Routing decision is ineligible or references other weights")
+        record["experimental_routing"] = {
+            "selection_sha256": sha256(routing_path),
+            "reference_below": routing["plan"]["baseline_score_threshold"],
+            "candidate_at_least": routing["selected_options"]["new_field"]["candidate_min"],
+        }
+        record["deployment_guards_passed_on_validation"] = True
+    atomic_json(lock, record)
 
 
 @torch.inference_mode()
@@ -78,6 +92,10 @@ def evaluate(output, release):
     state = torch.load(member, map_location="cpu", weights_only=True)
     incumbent.model.load_state_dict(state["weights"], strict=True)
     fresh = run_model(incumbent, raw)
+    route = lock.get("experimental_routing")
+    switches = 0
+    if route:
+        fresh, switches = routed(baseline, fresh, route["reference_below"], route["candidate_at_least"])
     classes = incumbent.classes
     frequencies = Counter(r["class_name"] for r in split_rows("train"))
     measures, predictions = {}, []
@@ -108,7 +126,18 @@ def evaluate(output, release):
     write_csv(output / "predictions.csv", predictions)
     atomic_json(output / "metrics.json", {"freeze_sha256": sha256(output / "freeze.json"),
                                          "predictions_sha256": sha256(output / "predictions.csv"),
-                                         "evaluated_utc": utc_now(), "groups": measures})
+                                         "evaluated_utc": utc_now(), "groups": measures,
+                                         "router_switches": switches})
+    if route:
+        staged = output / "model.pt.tmp"
+        shutil.copyfile(member, staged)
+        if sha256(staged) != lock["candidate_sha256"]:
+            raise ValueError("Experimental checkpoint changed during bundling")
+        staged.replace(output / "model.pt")
+        atomic_json(output / "bundle.json", {
+            "version": "leafcheck177-field-study-v2",
+            "files_sha256": {name: sha256(output / name) for name in ("model.pt", "freeze.json", "metrics.json")},
+        })
     print({source: {name: {k: value[k] for k in ("correct", "sample_count", "macro_f1", "wrong_crop")}
                     for name, value in data.items() if name != "paired_correctness"}
            for source, data in measures.items()}, flush=True)
@@ -120,6 +149,7 @@ def main():
     parser.add_argument("--release", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--decision", type=Path)
+    parser.add_argument("--routing", type=Path)
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     with (args.output / ".evaluation.lock").open("a") as lock:
@@ -130,7 +160,7 @@ def main():
         if args.action == "freeze":
             if not args.decision:
                 parser.error("--decision is required for freeze")
-            freeze(args.output, args.decision, args.release)
+            freeze(args.output, args.decision, args.release, args.routing)
         else:
             evaluate(args.output, args.release)
 

@@ -105,7 +105,7 @@ function renderPrediction(key, prediction) {
   const entries = Object.entries(prediction.class_scores).sort((a, b) => b[1] - a[1]);
   const score = clampScore(prediction.score);
   cards[key].querySelector('.model-result').innerHTML = `
-    <p class="prediction-label">${prediction.decision === 'suggestion' ? 'MODEL SUGGESTION' : 'TOP PREDICTION'}</p>
+    <p class="prediction-label">${prediction.score_origin === 'field_candidate' ? 'FIELD STUDY SUGGESTION' : prediction.decision === 'suggestion' ? 'MODEL SUGGESTION' : 'TOP PREDICTION'}</p>
     <h4 class="prediction-name">${escapeHTML(label.title)}</h4>
     <p class="prediction-plant" title="${escapeHTML(prediction.label)}">${escapeHTML(label.plant)}</p>
     <div class="score-line"><strong class="score-value">${percent(score)}</strong><span>model score</span></div>
@@ -130,7 +130,9 @@ function renderDetails() {
     if (policyNames[model.inference_policy]) facts.push(policyNames[model.inference_policy]);
     if (model.test) facts.push(`${percent(model.test.accuracy)} test accuracy · ${model.test_images} images`, `Test F1 ${model.test.macro_f1.toFixed(3)}`);
     const detail = info.key === 'final177'
-      ? 'Custom CNN trained from random initialization on all 59,008 training images. Selected by validation macro F1; evaluated once after the model and preprocessing were frozen.'
+      ? (model.experimental_field_router
+        ? 'Experimental field study is active. Some low-scoring uploads use the field-trained CNN. The original model’s archived metrics appear below.'
+        : 'Custom CNN trained from random initialization on all 59,008 training images. Selected by validation macro F1; evaluated once after the model and preprocessing were frozen.')
       : info.key === 'starter300'
       ? 'Second CNN experiment. The 300-image dataset is split into 210 training, 60 validation, and 30 test images.'
       : info.key === 'cnn' ? 'Original pilot CNN. Uses the architecture, class order, and image preparation from your first training notebook.'

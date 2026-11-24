@@ -1,0 +1,8 @@
+{
+  "version": "leafcheck177-field-study-v2",
+  "files_sha256": {
+    "model.pt": "0923cfbd425d6ef51d738e46fdda17fd7006a59576eb23d11fc6177ed496ca23",
+    "freeze.json": "52082b9833a11f281be640cf3d9cb8e1f23caf62d2a7034291a1a644d0c940c0",
+    "metrics.json": "11180df1facf727de04c7fb1030c4faf03cdd1a6c574ae2e543a84785ba2f5df"
+  }
+}

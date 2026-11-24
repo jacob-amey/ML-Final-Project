@@ -1,0 +1,1007 @@
+{
+  "paired_run_sha256": "cff97dc256d40f8b36ef3ce34bf5fbf4f21b07c2d85adc4e64a3f8f0739388d4",
+  "original_decision_sha256": "14ef4be6843ce1e8123c6041f43e11d8023537c1d325519aaeac873cd9795856",
+  "pins": {
+    "hypothesis": "Retaining the incumbent prediction for high-scoring uploads can recover some field wins while avoiding the broad regression of changing every prediction.",
+    "baseline_score_threshold": 0.5857925415039062,
+    "field_model_score_thresholds": [
+      0.5857925415039062,
+      0.75,
+      0.9
+    ],
+    "protocol": "Test the same score rule on the best direct checkpoint of both matched arms. Use both D4 distributions. The alternative returns all 177 scores. Reuse the current display threshold.",
+    "max_added_wrong_suggestion_rate": 0.001,
+    "promotion": "Apply the current full-task limits and field gains. Also require that the fraction of incorrect suggestions among all master validation uploads rises by no more than 0.001. Measure latency before deployment."
+  },
+  "release": "94a9489fce692e2b8d21adc312fc882ae42de23686f26319cecc51d07150b781",
+  "reference": {
+    "threshold": null,
+    "eligible": null,
+    "master": {
+      "accuracy": 0.8975409836065574,
+      "macro_f1": 0.6492213195919269,
+      "correct": 15111,
+      "sample_count": 16836,
+      "wrong_crop": 956
+    },
+    "fields": {
+      "sheikh": {
+        "macro_f1": 0.0,
+        "correct": 0,
+        "sample_count": 233,
+        "wrong_crop": 229,
+        "blight": [
+          {
+            "true": "tomato__early_blight",
+            "opposite_label": "tomato__late_blight",
+            "opposite_count": 0,
+            "total": 56,
+            "correct": 0,
+            "wrong_crop": 56,
+            "right_crop_wrong_condition": 0
+          }
+        ]
+      },
+      "banu": {
+        "macro_f1": 0.0,
+        "correct": 0,
+        "sample_count": 39,
+        "wrong_crop": 39,
+        "blight": [
+          {
+            "true": "potato__late_blight",
+            "opposite_label": "potato__early_blight",
+            "opposite_count": 0,
+            "total": 18,
+            "correct": 0,
+            "wrong_crop": 18,
+            "right_crop_wrong_condition": 0
+          },
+          {
+            "true": "tomato__late_blight",
+            "opposite_label": "tomato__early_blight",
+            "opposite_count": 0,
+            "total": 12,
+            "correct": 0,
+            "wrong_crop": 12,
+            "right_crop_wrong_condition": 0
+          }
+        ]
+      },
+      "mduma": {
+        "macro_f1": 0.05026455026455026,
+        "correct": 7,
+        "sample_count": 211,
+        "wrong_crop": 195,
+        "blight": [
+          {
+            "true": "potato__early_blight",
+            "opposite_label": "potato__late_blight",
+            "opposite_count": 0,
+            "total": 61,
+            "correct": 2,
+            "wrong_crop": 59,
+            "right_crop_wrong_condition": 0
+          },
+          {
+            "true": "potato__late_blight",
+            "opposite_label": "potato__early_blight",
+            "opposite_count": 9,
+            "total": 100,
+            "correct": 5,
+            "wrong_crop": 86,
+            "right_crop_wrong_condition": 9
+          }
+        ]
+      }
+    },
+    "field_mean_f1": 0.02513227513227513,
+    "suggestions": {
+      "master": {
+        "switched": 0,
+        "suggested": 15144,
+        "correct_suggestions": 14463,
+        "wrong_suggestions": 681
+      },
+      "sheikh": {
+        "switched": 0,
+        "suggested": 118,
+        "correct_suggestions": 0,
+        "wrong_suggestions": 118
+      },
+      "banu": {
+        "switched": 0,
+        "suggested": 26,
+        "correct_suggestions": 0,
+        "wrong_suggestions": 26
+      },
+      "mduma": {
+        "switched": 0,
+        "suggested": 56,
+        "correct_suggestions": 1,
+        "wrong_suggestions": 55
+      }
+    }
+  },
+  "options": {
+    "matched_control": [
+      {
+        "threshold": 0.5857925415039062,
+        "eligible": false,
+        "master": {
+          "accuracy": 0.8967094321691613,
+          "macro_f1": 0.647841841228105,
+          "correct": 15097,
+          "sample_count": 16836,
+          "wrong_crop": 968
+        },
+        "fields": {
+          "sheikh": {
+            "macro_f1": 0.10044541405326787,
+            "correct": 17,
+            "sample_count": 233,
+            "wrong_crop": 211,
+            "blight": [
+              {
+                "true": "tomato__early_blight",
+                "opposite_label": "tomato__late_blight",
+                "opposite_count": 0,
+                "total": 56,
+                "correct": 1,
+                "wrong_crop": 55,
+                "right_crop_wrong_condition": 0
+              }
+            ]
+          },
+          "banu": {
+            "macro_f1": 0.0,
+            "correct": 0,
+            "sample_count": 39,
+            "wrong_crop": 39,
+            "blight": [
+              {
+                "true": "potato__late_blight",
+                "opposite_label": "potato__early_blight",
+                "opposite_count": 0,
+                "total": 18,
+                "correct": 0,
+                "wrong_crop": 18,
+                "right_crop_wrong_condition": 0
+              },
+              {
+                "true": "tomato__late_blight",
+                "opposite_label": "tomato__early_blight",
+                "opposite_count": 0,
+                "total": 12,
+                "correct": 0,
+                "wrong_crop": 12,
+                "right_crop_wrong_condition": 0
+              }
+            ]
+          },
+          "mduma": {
+            "macro_f1": 0.05026455026455026,
+            "correct": 7,
+            "sample_count": 211,
+            "wrong_crop": 195,
+            "blight": [
+              {
+                "true": "potato__early_blight",
+                "opposite_label": "potato__late_blight",
+                "opposite_count": 0,
+                "total": 61,
+                "correct": 2,
+                "wrong_crop": 59,
+                "right_crop_wrong_condition": 0
+              },
+              {
+                "true": "potato__late_blight",
+                "opposite_label": "potato__early_blight",
+                "opposite_count": 9,
+                "total": 100,
+                "correct": 5,
+                "wrong_crop": 86,
+                "right_crop_wrong_condition": 9
+              }
+            ]
+          }
+        },
+        "field_mean_f1": 0.07535498215890907,
+        "suggestions": {
+          "master": {
+            "switched": 294,
+            "suggested": 15438,
+            "correct_suggestions": 14599,
+            "wrong_suggestions": 839
+          },
+          "sheikh": {
+            "switched": 28,
+            "suggested": 146,
+            "correct_suggestions": 17,
+            "wrong_suggestions": 129
+          },
+          "banu": {
+            "switched": 4,
+            "suggested": 30,
+            "correct_suggestions": 0,
+            "wrong_suggestions": 30
+          },
+          "mduma": {
+            "switched": 17,
+            "suggested": 73,
+            "correct_suggestions": 3,
+            "wrong_suggestions": 70
+          }
+        }
+      },
+      {
+        "threshold": 0.75,
+        "eligible": false,
+        "master": {
+          "accuracy": 0.8976597766690425,
+          "macro_f1": 0.6492916453069578,
+          "correct": 15113,
+          "sample_count": 16836,
+          "wrong_crop": 955
+        },
+        "fields": {
+          "sheikh": {
+            "macro_f1": 0.05033074489502445,
+            "correct": 7,
+            "sample_count": 233,
+            "wrong_crop": 222,
+            "blight": [
+              {
+                "true": "tomato__early_blight",
+                "opposite_label": "tomato__late_blight",
+                "opposite_count": 0,
+                "total": 56,
+                "correct": 1,
+                "wrong_crop": 55,
+                "right_crop_wrong_condition": 0
+              }
+            ]
+          },
+          "banu": {
+            "macro_f1": 0.0,
+            "correct": 0,
+            "sample_count": 39,
+            "wrong_crop": 39,
+            "blight": [
+              {
+                "true": "potato__late_blight",
+                "opposite_label": "potato__early_blight",
+                "opposite_count": 0,
+                "total": 18,
+                "correct": 0,
+                "wrong_crop": 18,
+                "right_crop_wrong_condition": 0
+              },
+              {
+                "true": "tomato__late_blight",
+                "opposite_label": "tomato__early_blight",
+                "opposite_count": 0,
+                "total": 12,
+                "correct": 0,
+                "wrong_crop": 12,
+                "right_crop_wrong_condition": 0
+              }
+            ]
+          },
+          "mduma": {
+            "macro_f1": 0.05026455026455026,
+            "correct": 7,
+            "sample_count": 211,
+            "wrong_crop": 195,
+            "blight": [
+              {
+                "true": "potato__early_blight",
+                "opposite_label": "potato__late_blight",
+                "opposite_count": 0,
+                "total": 61,
+                "correct": 2,
+                "wrong_crop": 59,
+                "right_crop_wrong_condition": 0
+              },
+              {
+                "true": "potato__late_blight",
+                "opposite_label": "potato__early_blight",
+                "opposite_count": 9,
+                "total": 100,
+                "correct": 5,
+                "wrong_crop": 86,
+                "right_crop_wrong_condition": 9
+              }
+            ]
+          }
+        },
+        "field_mean_f1": 0.05029764757978736,
+        "suggestions": {
+          "master": {
+            "switched": 36,
+            "suggested": 15180,
+            "correct_suggestions": 14478,
+            "wrong_suggestions": 702
+          },
+          "sheikh": {
+            "switched": 10,
+            "suggested": 128,
+            "correct_suggestions": 7,
+            "wrong_suggestions": 121
+          },
+          "banu": {
+            "switched": 4,
+            "suggested": 30,
+            "correct_suggestions": 0,
+            "wrong_suggestions": 30
+          },
+          "mduma": {
+            "switched": 1,
+            "suggested": 57,
+            "correct_suggestions": 1,
+            "wrong_suggestions": 56
+          }
+        }
+      },
+      {
+        "threshold": 0.9,
+        "eligible": false,
+        "master": {
+          "accuracy": 0.8975409836065574,
+          "macro_f1": 0.6492213195919269,
+          "correct": 15111,
+          "sample_count": 16836,
+          "wrong_crop": 956
+        },
+        "fields": {
+          "sheikh": {
+            "macro_f1": 0.0056179775280898875,
+            "correct": 1,
+            "sample_count": 233,
+            "wrong_crop": 228,
+            "blight": [
+              {
+                "true": "tomato__early_blight",
+                "opposite_label": "tomato__late_blight",
+                "opposite_count": 0,
+                "total": 56,
+                "correct": 0,
+                "wrong_crop": 56,
+                "right_crop_wrong_condition": 0
+              }
+            ]
+          },
+          "banu": {
+            "macro_f1": 0.0,
+            "correct": 0,
+            "sample_count": 39,
+            "wrong_crop": 39,
+            "blight": [
+              {
+                "true": "potato__late_blight",
+                "opposite_label": "potato__early_blight",
+                "opposite_count": 0,
+                "total": 18,
+                "correct": 0,
+                "wrong_crop": 18,
+                "right_crop_wrong_condition": 0
+              },
+              {
+                "true": "tomato__late_blight",
+                "opposite_label": "tomato__early_blight",
+                "opposite_count": 0,
+                "total": 12,
+                "correct": 0,
+                "wrong_crop": 12,
+                "right_crop_wrong_condition": 0
+              }
+            ]
+          },
+          "mduma": {
+            "macro_f1": 0.05026455026455026,
+            "correct": 7,
+            "sample_count": 211,
+            "wrong_crop": 195,
+            "blight": [
+              {
+                "true": "potato__early_blight",
+                "opposite_label": "potato__late_blight",
+                "opposite_count": 0,
+                "total": 61,
+                "correct": 2,
+                "wrong_crop": 59,
+                "right_crop_wrong_condition": 0
+              },
+              {
+                "true": "potato__late_blight",
+                "opposite_label": "potato__early_blight",
+                "opposite_count": 9,
+                "total": 100,
+                "correct": 5,
+                "wrong_crop": 86,
+                "right_crop_wrong_condition": 9
+              }
+            ]
+          }
+        },
+        "field_mean_f1": 0.027941263896320075,
+        "suggestions": {
+          "master": {
+            "switched": 4,
+            "suggested": 15148,
+            "correct_suggestions": 14463,
+            "wrong_suggestions": 685
+          },
+          "sheikh": {
+            "switched": 1,
+            "suggested": 119,
+            "correct_suggestions": 1,
+            "wrong_suggestions": 118
+          },
+          "banu": {
+            "switched": 3,
+            "suggested": 29,
+            "correct_suggestions": 0,
+            "wrong_suggestions": 29
+          },
+          "mduma": {
+            "switched": 0,
+            "suggested": 56,
+            "correct_suggestions": 1,
+            "wrong_suggestions": 55
+          }
+        }
+      }
+    ],
+    "new_field": [
+      {
+        "threshold": 0.5857925415039062,
+        "eligible": false,
+        "master": {
+          "accuracy": 0.8964718460441911,
+          "macro_f1": 0.6448269752308468,
+          "correct": 15093,
+          "sample_count": 16836,
+          "wrong_crop": 971
+        },
+        "fields": {
+          "sheikh": {
+            "macro_f1": 0.287647315582715,
+            "correct": 62,
+            "sample_count": 233,
+            "wrong_crop": 170,
+            "blight": [
+              {
+                "true": "tomato__early_blight",
+                "opposite_label": "tomato__late_blight",
+                "opposite_count": 0,
+                "total": 56,
+                "correct": 2,
+                "wrong_crop": 54,
+                "right_crop_wrong_condition": 0
+              }
+            ]
+          },
+          "banu": {
+            "macro_f1": 0.0,
+            "correct": 0,
+            "sample_count": 39,
+            "wrong_crop": 39,
+            "blight": [
+              {
+                "true": "potato__late_blight",
+                "opposite_label": "potato__early_blight",
+                "opposite_count": 0,
+                "total": 18,
+                "correct": 0,
+                "wrong_crop": 18,
+                "right_crop_wrong_condition": 0
+              },
+              {
+                "true": "tomato__late_blight",
+                "opposite_label": "tomato__early_blight",
+                "opposite_count": 0,
+                "total": 12,
+                "correct": 0,
+                "wrong_crop": 12,
+                "right_crop_wrong_condition": 0
+              }
+            ]
+          },
+          "mduma": {
+            "macro_f1": 0.5576130781942686,
+            "correct": 94,
+            "sample_count": 211,
+            "wrong_crop": 94,
+            "blight": [
+              {
+                "true": "potato__early_blight",
+                "opposite_label": "potato__late_blight",
+                "opposite_count": 0,
+                "total": 61,
+                "correct": 23,
+                "wrong_crop": 37,
+                "right_crop_wrong_condition": 1
+              },
+              {
+                "true": "potato__late_blight",
+                "opposite_label": "potato__early_blight",
+                "opposite_count": 22,
+                "total": 100,
+                "correct": 51,
+                "wrong_crop": 27,
+                "right_crop_wrong_condition": 22
+              }
+            ]
+          }
+        },
+        "field_mean_f1": 0.4226301968884918,
+        "suggestions": {
+          "master": {
+            "switched": 358,
+            "suggested": 15502,
+            "correct_suggestions": 14620,
+            "wrong_suggestions": 882
+          },
+          "sheikh": {
+            "switched": 70,
+            "suggested": 188,
+            "correct_suggestions": 62,
+            "wrong_suggestions": 126
+          },
+          "banu": {
+            "switched": 3,
+            "suggested": 29,
+            "correct_suggestions": 0,
+            "wrong_suggestions": 29
+          },
+          "mduma": {
+            "switched": 119,
+            "suggested": 175,
+            "correct_suggestions": 94,
+            "wrong_suggestions": 81
+          }
+        }
+      },
+      {
+        "threshold": 0.75,
+        "eligible": false,
+        "master": {
+          "accuracy": 0.8971252078878593,
+          "macro_f1": 0.6479214052652749,
+          "correct": 15104,
+          "sample_count": 16836,
+          "wrong_crop": 965
+        },
+        "fields": {
+          "sheikh": {
+            "macro_f1": 0.2238218865549524,
+            "correct": 47,
+            "sample_count": 233,
+            "wrong_crop": 185,
+            "blight": [
+              {
+                "true": "tomato__early_blight",
+                "opposite_label": "tomato__late_blight",
+                "opposite_count": 0,
+                "total": 56,
+                "correct": 1,
+                "wrong_crop": 55,
+                "right_crop_wrong_condition": 0
+              }
+            ]
+          },
+          "banu": {
+            "macro_f1": 0.0,
+            "correct": 0,
+            "sample_count": 39,
+            "wrong_crop": 39,
+            "blight": [
+              {
+                "true": "potato__late_blight",
+                "opposite_label": "potato__early_blight",
+                "opposite_count": 0,
+                "total": 18,
+                "correct": 0,
+                "wrong_crop": 18,
+                "right_crop_wrong_condition": 0
+              },
+              {
+                "true": "tomato__late_blight",
+                "opposite_label": "tomato__early_blight",
+                "opposite_count": 0,
+                "total": 12,
+                "correct": 0,
+                "wrong_crop": 12,
+                "right_crop_wrong_condition": 0
+              }
+            ]
+          },
+          "mduma": {
+            "macro_f1": 0.4614968635085443,
+            "correct": 68,
+            "sample_count": 211,
+            "wrong_crop": 129,
+            "blight": [
+              {
+                "true": "potato__early_blight",
+                "opposite_label": "potato__late_blight",
+                "opposite_count": 0,
+                "total": 61,
+                "correct": 17,
+                "wrong_crop": 44,
+                "right_crop_wrong_condition": 0
+              },
+              {
+                "true": "potato__late_blight",
+                "opposite_label": "potato__early_blight",
+                "opposite_count": 14,
+                "total": 100,
+                "correct": 34,
+                "wrong_crop": 52,
+                "right_crop_wrong_condition": 14
+              }
+            ]
+          }
+        },
+        "field_mean_f1": 0.34265937503174837,
+        "suggestions": {
+          "master": {
+            "switched": 72,
+            "suggested": 15216,
+            "correct_suggestions": 14484,
+            "wrong_suggestions": 732
+          },
+          "sheikh": {
+            "switched": 47,
+            "suggested": 165,
+            "correct_suggestions": 47,
+            "wrong_suggestions": 118
+          },
+          "banu": {
+            "switched": 3,
+            "suggested": 29,
+            "correct_suggestions": 0,
+            "wrong_suggestions": 29
+          },
+          "mduma": {
+            "switched": 75,
+            "suggested": 131,
+            "correct_suggestions": 66,
+            "wrong_suggestions": 65
+          }
+        }
+      },
+      {
+        "threshold": 0.9,
+        "eligible": true,
+        "master": {
+          "accuracy": 0.897303397481587,
+          "macro_f1": 0.6480078908725698,
+          "correct": 15107,
+          "sample_count": 16836,
+          "wrong_crop": 960
+        },
+        "fields": {
+          "sheikh": {
+            "macro_f1": 0.15311004784688995,
+            "correct": 32,
+            "sample_count": 233,
+            "wrong_crop": 200,
+            "blight": [
+              {
+                "true": "tomato__early_blight",
+                "opposite_label": "tomato__late_blight",
+                "opposite_count": 0,
+                "total": 56,
+                "correct": 0,
+                "wrong_crop": 56,
+                "right_crop_wrong_condition": 0
+              }
+            ]
+          },
+          "banu": {
+            "macro_f1": 0.0,
+            "correct": 0,
+            "sample_count": 39,
+            "wrong_crop": 39,
+            "blight": [
+              {
+                "true": "potato__late_blight",
+                "opposite_label": "potato__early_blight",
+                "opposite_count": 0,
+                "total": 18,
+                "correct": 0,
+                "wrong_crop": 18,
+                "right_crop_wrong_condition": 0
+              },
+              {
+                "true": "tomato__late_blight",
+                "opposite_label": "tomato__early_blight",
+                "opposite_count": 0,
+                "total": 12,
+                "correct": 0,
+                "wrong_crop": 12,
+                "right_crop_wrong_condition": 0
+              }
+            ]
+          },
+          "mduma": {
+            "macro_f1": 0.3659341753536715,
+            "correct": 48,
+            "sample_count": 211,
+            "wrong_crop": 153,
+            "blight": [
+              {
+                "true": "potato__early_blight",
+                "opposite_label": "potato__late_blight",
+                "opposite_count": 0,
+                "total": 61,
+                "correct": 12,
+                "wrong_crop": 49,
+                "right_crop_wrong_condition": 0
+              },
+              {
+                "true": "potato__late_blight",
+                "opposite_label": "potato__early_blight",
+                "opposite_count": 10,
+                "total": 100,
+                "correct": 21,
+                "wrong_crop": 69,
+                "right_crop_wrong_condition": 10
+              }
+            ]
+          }
+        },
+        "field_mean_f1": 0.2595221116002807,
+        "suggestions": {
+          "master": {
+            "switched": 13,
+            "suggested": 15157,
+            "correct_suggestions": 14466,
+            "wrong_suggestions": 691
+          },
+          "sheikh": {
+            "switched": 32,
+            "suggested": 150,
+            "correct_suggestions": 32,
+            "wrong_suggestions": 118
+          },
+          "banu": {
+            "switched": 0,
+            "suggested": 26,
+            "correct_suggestions": 0,
+            "wrong_suggestions": 26
+          },
+          "mduma": {
+            "switched": 49,
+            "suggested": 105,
+            "correct_suggestions": 46,
+            "wrong_suggestions": 59
+          }
+        }
+      }
+    ]
+  },
+  "selected": {
+    "matched_control": {
+      "threshold": 0.75,
+      "eligible": false,
+      "master": {
+        "accuracy": 0.8976597766690425,
+        "macro_f1": 0.6492916453069578,
+        "correct": 15113,
+        "sample_count": 16836,
+        "wrong_crop": 955
+      },
+      "fields": {
+        "sheikh": {
+          "macro_f1": 0.05033074489502445,
+          "correct": 7,
+          "sample_count": 233,
+          "wrong_crop": 222,
+          "blight": [
+            {
+              "true": "tomato__early_blight",
+              "opposite_label": "tomato__late_blight",
+              "opposite_count": 0,
+              "total": 56,
+              "correct": 1,
+              "wrong_crop": 55,
+              "right_crop_wrong_condition": 0
+            }
+          ]
+        },
+        "banu": {
+          "macro_f1": 0.0,
+          "correct": 0,
+          "sample_count": 39,
+          "wrong_crop": 39,
+          "blight": [
+            {
+              "true": "potato__late_blight",
+              "opposite_label": "potato__early_blight",
+              "opposite_count": 0,
+              "total": 18,
+              "correct": 0,
+              "wrong_crop": 18,
+              "right_crop_wrong_condition": 0
+            },
+            {
+              "true": "tomato__late_blight",
+              "opposite_label": "tomato__early_blight",
+              "opposite_count": 0,
+              "total": 12,
+              "correct": 0,
+              "wrong_crop": 12,
+              "right_crop_wrong_condition": 0
+            }
+          ]
+        },
+        "mduma": {
+          "macro_f1": 0.05026455026455026,
+          "correct": 7,
+          "sample_count": 211,
+          "wrong_crop": 195,
+          "blight": [
+            {
+              "true": "potato__early_blight",
+              "opposite_label": "potato__late_blight",
+              "opposite_count": 0,
+              "total": 61,
+              "correct": 2,
+              "wrong_crop": 59,
+              "right_crop_wrong_condition": 0
+            },
+            {
+              "true": "potato__late_blight",
+              "opposite_label": "potato__early_blight",
+              "opposite_count": 9,
+              "total": 100,
+              "correct": 5,
+              "wrong_crop": 86,
+              "right_crop_wrong_condition": 9
+            }
+          ]
+        }
+      },
+      "field_mean_f1": 0.05029764757978736,
+      "suggestions": {
+        "master": {
+          "switched": 36,
+          "suggested": 15180,
+          "correct_suggestions": 14478,
+          "wrong_suggestions": 702
+        },
+        "sheikh": {
+          "switched": 10,
+          "suggested": 128,
+          "correct_suggestions": 7,
+          "wrong_suggestions": 121
+        },
+        "banu": {
+          "switched": 4,
+          "suggested": 30,
+          "correct_suggestions": 0,
+          "wrong_suggestions": 30
+        },
+        "mduma": {
+          "switched": 1,
+          "suggested": 57,
+          "correct_suggestions": 1,
+          "wrong_suggestions": 56
+        }
+      }
+    },
+    "new_field": {
+      "threshold": 0.9,
+      "eligible": true,
+      "master": {
+        "accuracy": 0.897303397481587,
+        "macro_f1": 0.6480078908725698,
+        "correct": 15107,
+        "sample_count": 16836,
+        "wrong_crop": 960
+      },
+      "fields": {
+        "sheikh": {
+          "macro_f1": 0.15311004784688995,
+          "correct": 32,
+          "sample_count": 233,
+          "wrong_crop": 200,
+          "blight": [
+            {
+              "true": "tomato__early_blight",
+              "opposite_label": "tomato__late_blight",
+              "opposite_count": 0,
+              "total": 56,
+              "correct": 0,
+              "wrong_crop": 56,
+              "right_crop_wrong_condition": 0
+            }
+          ]
+        },
+        "banu": {
+          "macro_f1": 0.0,
+          "correct": 0,
+          "sample_count": 39,
+          "wrong_crop": 39,
+          "blight": [
+            {
+              "true": "potato__late_blight",
+              "opposite_label": "potato__early_blight",
+              "opposite_count": 0,
+              "total": 18,
+              "correct": 0,
+              "wrong_crop": 18,
+              "right_crop_wrong_condition": 0
+            },
+            {
+              "true": "tomato__late_blight",
+              "opposite_label": "tomato__early_blight",
+              "opposite_count": 0,
+              "total": 12,
+              "correct": 0,
+              "wrong_crop": 12,
+              "right_crop_wrong_condition": 0
+            }
+          ]
+        },
+        "mduma": {
+          "macro_f1": 0.3659341753536715,
+          "correct": 48,
+          "sample_count": 211,
+          "wrong_crop": 153,
+          "blight": [
+            {
+              "true": "potato__early_blight",
+              "opposite_label": "potato__late_blight",
+              "opposite_count": 0,
+              "total": 61,
+              "correct": 12,
+              "wrong_crop": 49,
+              "right_crop_wrong_condition": 0
+            },
+            {
+              "true": "potato__late_blight",
+              "opposite_label": "potato__early_blight",
+              "opposite_count": 10,
+              "total": 100,
+              "correct": 21,
+              "wrong_crop": 69,
+              "right_crop_wrong_condition": 10
+            }
+          ]
+        }
+      },
+      "field_mean_f1": 0.2595221116002807,
+      "suggestions": {
+        "master": {
+          "switched": 13,
+          "suggested": 15157,
+          "correct_suggestions": 14466,
+          "wrong_suggestions": 691
+        },
+        "sheikh": {
+          "switched": 32,
+          "suggested": 150,
+          "correct_suggestions": 32,
+          "wrong_suggestions": 118
+        },
+        "banu": {
+          "switched": 0,
+          "suggested": 26,
+          "correct_suggestions": 0,
+          "wrong_suggestions": 26
+        },
+        "mduma": {
+          "switched": 49,
+          "suggested": 105,
+          "correct_suggestions": 46,
+          "wrong_suggestions": 59
+        }
+      }
+    }
+  },
+  "promotion_guards_passed_on_validation": true
+}
