@@ -14,7 +14,7 @@
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--page); color: var(--ink); }
-button, input { font: inherit; }
+button, input, select { font: inherit; }
 button { cursor: pointer; color: inherit; }
 button:disabled { opacity: .5; cursor: default; }
 button, a, [tabindex] { -webkit-tap-highlight-color: transparent; }
@@ -64,6 +64,10 @@ h2 { margin: 0; font-size: 15px; font-weight: 650; letter-spacing: -.2px; }
 .file-summary { padding: 14px 0 15px; min-height: 73px; }
 .file-summary strong { display: block; font-size: 12px; font-weight: 600; overflow-wrap: anywhere; }
 .file-summary span { display: block; color: #8a9583; font-size: 11px; line-height: 1.6; margin-top: 4px; }
+.crop-context { margin: 13px 0; }
+.crop-context label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 5px; }
+.crop-context select { width: 100%; padding: 8px; border: 1px solid #b3bda6; border-radius: 6px; background: white; color: #233322; }
+.crop-context p { margin: 5px 0 0; color: #51624c; font-size: 11px; }
 .primary-button, .secondary-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 7px; font-size: 12px; font-weight: 550; padding: 10px 13px; min-height: 40px; transition: background .15s; }
 .secondary-button { border: 1px solid #d7e0d0; color: #657d52; background: white; }
 .secondary-button:hover:not(:disabled) { background: #f3f7ee; }

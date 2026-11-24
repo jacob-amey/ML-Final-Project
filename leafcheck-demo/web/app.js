@@ -44,6 +44,7 @@ function readyCount() {
 
 function updateControls() {
   $('#compare-button').disabled = state.busy || !state.selected || !state.connected || readyCount() === 0;
+  $('#crop-context').disabled = !state.selected || !state.connected;
   $('#compare-label').textContent = state.busy ? 'Comparing your leaf…' : 'Run comparison';
   $('#export-button').disabled = state.busy || !state.results;
   for (const { key } of MODELS) cards[key].classList.toggle('loading', state.busy);
@@ -74,6 +75,10 @@ function condition(raw, key) {
 }
 
 function renderSummary(results) {
+  if (results.models.final177?.scope === 'known_potato') {
+    summary('Potato selected', 'LeafCheck compared healthy, early blight, and late blight for a known potato photo. The other cards use their usual label sets.');
+    return;
+  }
   if (results.models.final177?.decision === 'uncertain') {
     summary('LeafCheck withheld its suggestion', 'The other cards show experimental comparisons. Try a clearer photo to get a new LeafCheck result.', true);
     return;
@@ -105,7 +110,7 @@ function renderPrediction(key, prediction) {
   const entries = Object.entries(prediction.class_scores).sort((a, b) => b[1] - a[1]);
   const score = clampScore(prediction.score);
   cards[key].querySelector('.model-result').innerHTML = `
-    <p class="prediction-label">${prediction.score_origin === 'field_candidate' ? 'FIELD STUDY SUGGESTION' : prediction.decision === 'suggestion' ? 'MODEL SUGGESTION' : 'TOP PREDICTION'}</p>
+    <p class="prediction-label">${prediction.scope === 'known_potato' ? 'POTATO-ONLY PREDICTION' : prediction.score_origin === 'field_candidate' ? 'FIELD STUDY SUGGESTION' : prediction.decision === 'suggestion' ? 'MODEL SUGGESTION' : 'TOP PREDICTION'}</p>
     <h4 class="prediction-name">${escapeHTML(label.title)}</h4>
     <p class="prediction-plant" title="${escapeHTML(prediction.label)}">${escapeHTML(label.plant)}</p>
     <div class="score-line"><strong class="score-value">${percent(score)}</strong><span>model score</span></div>
@@ -166,6 +171,8 @@ async function connect() {
     const status = await response.json();
     if (!status.app_id?.startsWith('leafcheck-local-')) throw new Error('Restart LeafCheck with the updated launcher, then refresh this page.');
     state.models = status.models;
+    $('#crop-controls').hidden = !state.models.final177?.crop_context?.potato;
+    if ($('#crop-controls').hidden) $('#crop-context').value = '';
     await loadFinalExamples();
     state.connected = true;
     const count = readyCount();
@@ -208,6 +215,7 @@ function invalidateResults() {
 
 function selectImage(selection, url, description) {
   clearObjectURL();
+  $('#crop-context').value = '';
   state.selected = selection;
   state.objectURL = selection.file ? url : null;
   $('#image-preview').src = url;
@@ -259,6 +267,7 @@ async function compare() {
   if (state.busy || !state.selected || !state.connected || !readyCount()) return;
   const revision = state.revision;
   const selected = state.selected;
+  const crop = $('#crop-context').value;
   state.busy = true;
   state.results = null;
   state.controller = new AbortController();
@@ -269,7 +278,8 @@ async function compare() {
   $('#results-context').textContent = 'Running your saved models…';
   try {
     const body = selected.file || await (await fetch(selected.example.image)).blob();
-    const response = await fetch('/api/predict', { method: 'POST', headers: { 'Content-Type': body.type || 'image/jpeg' }, body, signal: state.controller.signal });
+    const endpoint = crop === 'potato' ? '/api/predict?crop=potato' : '/api/predict';
+    const response = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': body.type || 'image/jpeg' }, body, signal: state.controller.signal });
     const results = await response.json();
     if (!response.ok) throw new Error(results.error || 'The comparison could not finish.');
     if (revision !== state.revision) return;
@@ -298,6 +308,7 @@ async function compare() {
 
 function reset() {
   invalidateResults();
+  $('#crop-context').value = '';
   clearObjectURL();
   state.selected = null;
   $('#file-input').value = '';
@@ -375,6 +386,13 @@ function init() {
   $('#drop-zone').addEventListener('dragleave', (event) => { if (!$('#drop-zone').contains(event.relatedTarget)) $('#drop-zone').classList.remove('dragging'); });
   $('#drop-zone').addEventListener('drop', (event) => { event.preventDefault(); $('#drop-zone').classList.remove('dragging'); acceptFile(event.dataTransfer.files[0]); });
   $('#compare-button').addEventListener('click', compare);
+  $('#crop-context').addEventListener('change', () => {
+    invalidateResults();
+    waitingCards();
+    $('#results-context').textContent = state.selected ? 'Run the comparison with the selected crop context.' : 'Choose a photo, then run the comparison.';
+    summary('Crop context updated', 'The selection applies to the next LeafCheck prediction.');
+    message();
+  });
   $('#export-button').addEventListener('click', exportResults);
   $('#reset-button').addEventListener('click', reset);
   $('#retry-button').addEventListener('click', connect);

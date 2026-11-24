@@ -47,6 +47,14 @@
         </div>
         <div class="file-summary"><strong id="file-name">No photo selected</strong><span id="file-description">A clear photo of a single leaf works best.</span></div>
         <button class="secondary-button full-width" id="choose-button"><svg><use href="#upload"/></svg>Choose photo</button>
+        <div class="crop-context" id="crop-controls" hidden>
+          <label for="crop-context">Known crop (optional)</label>
+          <select id="crop-context" aria-describedby="crop-guidance">
+            <option value="">Automatic · 177 labels</option>
+            <option value="potato">Potato · 3 conditions</option>
+          </select>
+          <p id="crop-guidance">Choose potato only when you know the crop.</p>
+        </div>
         <button class="primary-button full-width" id="compare-button" disabled><span id="compare-label">Run comparison</span><svg><use href="#arrow"/></svg></button>
         <p class="upload-note">The same photo is sent to all four local models.</p>
 

@@ -11,7 +11,7 @@ import os
 from pathlib import Path
 import tempfile
 from urllib.error import URLError
-from urllib.parse import unquote, urlsplit
+from urllib.parse import parse_qs, unquote, urlsplit
 from urllib.request import urlopen
 import warnings
 import webbrowser
@@ -23,7 +23,7 @@ WEB_ROOT = (DEMO_ROOT / "web").resolve()
 APP_ID = "leafcheck-local-" + hashlib.sha256(str(DEMO_ROOT).encode()).hexdigest()[:12]
 revision_files = sorted((DEMO_ROOT / "backend").glob("*.py"))
 revision_files.extend(path for path in [
-    DEMO_ROOT / "backend/reliability_policy.json", WEB_ROOT / "app.js", WEB_ROOT / "index.html",
+    DEMO_ROOT / "backend/reliability_policy.json", WEB_ROOT / "app.js", WEB_ROOT / "index.html", WEB_ROOT / "styles.css",
 ] if path.is_file())
 reference_file = DEMO_ROOT / "models/final_model.json"
 if reference_file.exists():
@@ -80,8 +80,13 @@ def main():
             return super().do_GET()
 
         def do_POST(self):
-            if urlsplit(self.path).path != "/api/predict":
+            request = urlsplit(self.path)
+            if request.path != "/api/predict":
                 return self.send_json({"error": "Unknown endpoint."}, 404)
+            crop_values = parse_qs(request.query, keep_blank_values=True).get("crop", [])
+            if crop_values and crop_values != ["potato"]:
+                return self.send_json({"error": "Crop context must be potato, or omitted for automatic mode."}, 400)
+            crop = crop_values[0] if crop_values else None
             try:
                 length = int(self.headers.get("Content-Length", "0"))
             except ValueError:
@@ -104,7 +109,7 @@ def main():
                 with tempfile.TemporaryDirectory(prefix="leafcheck-") as folder:
                     path = Path(folder) / "upload.png"
                     image.save(path)
-                    result = comparison.predict(path)
+                    result = comparison.predict(path, crop=crop)
                 return self.send_json(result)
             except (Image.DecompressionBombError, Image.DecompressionBombWarning):
                 return self.send_json({"error": "Choose an image under 24 megapixels."}, 413)

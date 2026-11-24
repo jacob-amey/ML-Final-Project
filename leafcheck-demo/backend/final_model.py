@@ -6,6 +6,9 @@ import os
 from pathlib import Path
 import sys
 import threading
+import time
+
+POTATO_LABELS = ("potato__early_blight", "potato__healthy", "potato__late_blight")
 
 
 def digest(path):
@@ -53,6 +56,7 @@ class FinalCNN:
         torch.set_num_threads(4)
         self.predictor = Predictor(artifact, "cpu")
         self.lock = threading.Lock()
+        self.potato_indices = [self.predictor.classes.index(label) for label in POTATO_LABELS]
         policy = json.loads(Path(__file__).with_name("reliability_policy.json").read_text())
         self.reliability = None
         if policy["checkpoint_sha256"] == self.predictor.metadata["checkpoint_sha256"]:
@@ -63,6 +67,7 @@ class FinalCNN:
                 raise ValueError("The reliability rule does not match the final model contract")
             self.reliability = policy
         self.metadata = {**self.predictor.metadata, "source": "Explicit frozen final-model bundle",
+                         "crop_context": {"potato": list(POTATO_LABELS)},
                          "preprocessing_spec": self.predictor.spec,
                          "preprocessing": f"Frame 0, EXIF orientation, RGB, {self.predictor.spec['input_size']} × {self.predictor.spec['input_size']} bilinear gray padding, /255 and training-only RGB standardization"}
         if self.reliability:
@@ -76,8 +81,17 @@ class FinalCNN:
                 raise ValueError("The field study requires the original reliability policy")
             self.metadata["experimental_field_router"] = self.field_router.metadata
 
-    def predict(self, path):
+    def predict(self, path, crop=None):
         with self.lock:
+            if crop == "potato":
+                started = time.perf_counter()
+                scores = self.predictor.logits(path)[0, self.potato_indices].softmax(0).tolist()
+                winner = max(range(len(scores)), key=scores.__getitem__)
+                return {"label": POTATO_LABELS[winner], "score": scores[winner],
+                        "class_scores": dict(zip(POTATO_LABELS, scores)), "scope": "known_potato",
+                        "score_interpretation": "Uncalibrated scores among three conditions given potato.",
+                        "elapsed_ms": (time.perf_counter() - started) * 1000,
+                        "model_version": self.predictor.metadata["model_version"]}
             result = self.predictor.predict(path)
             if self.field_router:
                 result = self.field_router.apply(path, result)

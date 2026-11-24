@@ -35,6 +35,7 @@ def main():
     parser.add_argument("--receipt", type=Path, default=ROOT / "docs/demo_archive.json")
     parser.add_argument("--output", type=Path, default=ROOT / "docs/archive_verification.json")
     parser.add_argument("--uncertain-photo", type=Path, help="Original JPEG expected to produce an uncertain result")
+    parser.add_argument("--potato-photo", type=Path, help="Original JPEG for the user-supplied potato context check")
     args = parser.parse_args()
     # Resolving the executable symlink would leave its virtual environment.
     runtime_python = args.python.absolute()
@@ -63,7 +64,8 @@ def main():
         artifact = demo / "models" / reference["artifact"]
         examples = json.loads((artifact / "demo_examples.json").read_text())
         environment = os.environ.copy()
-        for key in ["LEAFCHECK_CNN_CHECKPOINT", "LEAFCHECK_STARTER300_CHECKPOINT", "LEAFCHECK_COREML_MODEL", "LEAFCHECK_FINAL_ARTIFACT", "PYTHONPATH"]:
+        for key in ["LEAFCHECK_CNN_CHECKPOINT", "LEAFCHECK_STARTER300_CHECKPOINT", "LEAFCHECK_COREML_MODEL",
+                    "LEAFCHECK_FINAL_ARTIFACT", "LEAFCHECK_FIELD_STUDY", "PYTHONPATH"]:
             environment.pop(key, None)
         environment["LEAFCHECK_OPEN_BROWSER"] = "0"
         log = directory / "server.log"
@@ -137,6 +139,28 @@ def main():
                     evidence["uncertain_photo"] = {"sha256": digest(args.uncertain_photo),
                                                    "model_score": prediction["score"],
                                                    "verified_decision": prediction["decision"]}
+                if args.potato_photo:
+                    photo = args.potato_photo.read_bytes()
+                    outputs = []
+                    for query in ("", "?crop=potato"):
+                        request = Request(address + "/api/predict" + query, data=photo,
+                                          headers={"Content-Type": "image/jpeg"})
+                        with urlopen(request, timeout=30) as response:
+                            outputs.append(json.load(response)["models"]["final177"])
+                    automatic, known = outputs
+                    labels = status["models"]["final177"]["crop_context"]["potato"]
+                    assert len(automatic["class_scores"]) == 177 and list(known["class_scores"]) == labels
+                    assert known["scope"] == "known_potato"
+                    subtotal = sum(automatic["class_scores"][label] for label in labels)
+                    drift = max(abs(known["class_scores"][label] - automatic["class_scores"][label] / subtotal)
+                                for label in labels)
+                    assert drift <= 1e-5
+                    assert known["label"] == max(known["class_scores"], key=known["class_scores"].get)
+                    evidence["known_potato_upload"] = {"sha256": digest(args.potato_photo),
+                                                       "automatic_label": automatic["label"],
+                                                       "known_crop_label": known["label"],
+                                                       "score_difference": drift,
+                                                       "known_crop_scores": known["class_scores"]}
                 args.output.write_text(json.dumps(evidence, indent=2) + "\n")
                 print(json.dumps(evidence, indent=2))
             finally:

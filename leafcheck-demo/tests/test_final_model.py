@@ -24,8 +24,8 @@ class FinalModelIntegrationTests(unittest.TestCase):
     def setUpClass(cls):
         cls.adapter = FinalCNN()
 
-    def request(self, raw, content_type="image/png"):
-        with urlopen(Request(BASE + "/api/predict", data=raw, headers={"Content-Type": content_type}), timeout=30) as response:
+    def request(self, raw, content_type="image/png", query=""):
+        with urlopen(Request(BASE + "/api/predict" + query, data=raw, headers={"Content-Type": content_type}), timeout=30) as response:
             return json.load(response)["models"]["final177"]
 
     def assert_parity(self, raw, suffix=".png"):
@@ -39,6 +39,29 @@ class FinalModelIntegrationTests(unittest.TestCase):
         difference = max(abs(actual["class_scores"][key] - value) for key, value in expected["class_scores"].items())
         self.assertLessEqual(difference, 1e-5)
         self.assertTrue(self.adapter.predictor.model.training is False)
+
+    def test_known_potato_scores_equal_the_original_model_restricted_to_three_labels(self):
+        from final_model import POTATO_LABELS
+
+        image = DEMO / "web/assets/final_success.jpg"
+        raw = image.read_bytes()
+        default = self.request(raw, "image/jpeg")
+        self.assertEqual(len(default["class_scores"]), 177)
+        scoped = self.request(raw, "image/jpeg", "?crop=potato")
+        self.assertEqual(scoped["scope"], "known_potato")
+        self.assertEqual(list(scoped["class_scores"]), list(POTATO_LABELS))
+        restricted = [default["class_scores"][label] for label in POTATO_LABELS]
+        expected = [value / sum(restricted) for value in restricted]
+        for actual, reference in zip(scoped["class_scores"].values(), expected):
+            self.assertAlmostEqual(actual, reference, places=5)
+        self.assertEqual(scoped["label"], max(scoped["class_scores"], key=scoped["class_scores"].get))
+
+    def test_unsupported_crop_context_is_rejected(self):
+        with self.assertRaises(HTTPError) as error:
+            self.request(b"not an image", query="?crop=tomato")
+        with error.exception as response:
+            self.assertEqual(response.code, 400)
+            self.assertIn("Crop context", json.load(response)["error"])
 
     def test_frozen_artifact_and_saved_rule_evaluation(self):
         with urlopen(BASE + "/api/status", timeout=10) as response: status = json.load(response)

@@ -21,6 +21,12 @@ Keep the terminal window open while using the app. Press **Control-C** in that
 window to stop it. Double-click the launcher to restart. If this copy is already
 running, launching it again simply opens its browser page.
 
+After picking a photo, leave **Known crop** on **Automatic** to use all 177
+labels. If you know the photo is potato, select **Potato** to compare healthy,
+early blight, and late blight using the original CNN's three potato scores.
+Those scores are conditional on your crop choice. The other three comparison
+cards use their usual label sets.
+
 Your current project already has the Python environment and models needed to run
 it. The launcher automatically finds that environment. It also supports a `.venv`
 inside this app folder or an installed `python3` with the required libraries.

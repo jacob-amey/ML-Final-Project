@@ -180,14 +180,17 @@ class ModelComparison:
                                       "ready": False, "error": str(error)}
                 print(f"{key}: {error}", file=sys.stderr)
 
-    def predict(self, path):
+    def predict(self, path, crop=None):
         results = {}
         for key, _ in self.model_types:
             if key not in self.adapters:
                 results[key] = {"error": self.metadata[key].get("error", "Model unavailable.")}
                 continue
             try:
-                results[key] = self.adapters[key].predict(path)
+                if key == "final177" and crop is not None:
+                    results[key] = self.adapters[key].predict(path, crop=crop)
+                else:
+                    results[key] = self.adapters[key].predict(path)
             except Exception as error:
                 results[key] = {"error": str(error)}
         return {"source": "live", "models": results}
