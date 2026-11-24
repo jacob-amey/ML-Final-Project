@@ -1,30 +1,108 @@
 {
   "archive": "artifacts/LeafCheck-CSC427-submission.zip",
-  "bytes": 64369866,
-  "sha256": "815d1dbf3696a549e396cdff13f7dc5753c0784578460f4838884efc4246c2da",
-  "source_revision": "1629d95d3a331f517d075eef95e8acde31f9b832",
+  "bytes": 65505826,
+  "sha256": "e02c2380a975ccf8ed2734b63d686bb671aca47a71f809a896bd4274cd0a58af",
+  "source_revision": "f684024803a8d1429423c777454c9869aa7cfe74",
   "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
-  "files_verified_from_fresh_extraction": 359,
+  "files_verified_from_fresh_extraction": 372,
   "fresh_extraction_standalone_prediction": {
     "label": "tomato__healthy",
     "score": 0.9999866485595703
   },
-  "recorded_utc": "2026-11-23T04:01:54.551496+00:00",
-  "fresh_combined_extraction_review_notebook_executed": true,
-  "nested_demo_started_from_combined_extraction": true,
-  "demo_launch_command": "./Launch LeafCheck.command --port 0",
-  "all_four_models_predicted_from_combined_extraction": true,
-  "fresh_demo_examples": [
-    {
-      "fixture": "success",
-      "label": "tomato__healthy",
-      "score": 0.9999866485595703
+  "recorded_utc": "2026-11-24T02:18:09.839028+00:00",
+  "freeze_sha256": "c482bf50da720589e47470ce7bca5b81b5fbaf24ac9c698d471b75d4e0775d97",
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "comparison_reference_sha256": "de865d5024cd725409ebd5dde15f28cc5fd488271c41e8b87432628f4c60648a",
+  "report_sha256": "6dd9aaad20b6d761a5d9207aa68b55217f1ffdec020d03a0e54fa6e62cb921bc",
+  "deck_sha256": "0b903a7b733eda23c88a272ef39e3de2f1e8e03c87392f23c93214e13b17eefb",
+  "packaged_executed_notebook_sha256": "770bf9d5342948dc08ac6a407853782bd8d21eea33727557ce43890278c59909",
+  "fresh_extraction_metrics_recomputed_without_images": {
+    "primary": {
+      "correct": 7556,
+      "sample_count": 8425,
+      "accuracy": 0.8968545994065282,
+      "macro_f1": 0.6169397590183023
     },
-    {
-      "fixture": "mistake",
-      "label": "potato__late_blight",
-      "score": 0.9820762872695923
+    "compact177": {
+      "correct": 7234,
+      "sample_count": 8425,
+      "accuracy": 0.8586350148367953,
+      "macro_f1": 0.518430195154408
+    },
+    "frequency_rule": {
+      "correct": 731,
+      "sample_count": 8425,
+      "accuracy": 0.08676557863501484,
+      "macro_f1": 0.0009021283317660242
+    },
+    "validation": {
+      "correct": 15111,
+      "sample_count": 16836,
+      "accuracy": 0.8975409836065574,
+      "macro_f1": 0.6492213195919269
+    },
+    "supplement": {
+      "correct": 26,
+      "sample_count": 183,
+      "accuracy": 0.14207650273224043,
+      "macro_f1": 0.21984649122807018
+    },
+    "supplement_rule": {
+      "correct": 79,
+      "sample_count": 183,
+      "accuracy": 0.43169398907103823,
+      "macro_f1": 0.2010178117048346
     }
-  ],
-  "trained_dataset_required_to_run_demo": false
+  },
+  "fresh_combined_extraction_review_notebook": {
+    "code_cells_executed": 8,
+    "headline_reproduced": true,
+    "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8"
+  },
+  "nested_demo_from_exact_combined_extraction": {
+    "archive_sha256": "1b7d23bc8f555e9ce949f9fc21bf040d29188cf263c2900462fab49c7eeefcf2",
+    "app_revision": "585f86d05c26899a",
+    "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+    "testing_url": "http://127.0.0.1:50262",
+    "all_four_models_ready": true,
+    "all_four_models_predicted": true,
+    "expected_labels_and_all_scores_verified": [
+      {
+        "fixture": "success",
+        "label": "tomato__healthy",
+        "score": 0.9999866485595703,
+        "max_abs_score_error": 0.0
+      },
+      {
+        "fixture": "mistake",
+        "label": "potato__late_blight",
+        "score": 0.9820762872695923,
+        "max_abs_score_error": 0.0
+      }
+    ],
+    "http_error_codes": {
+      "unreadable": 400,
+      "unsupported_format": 415
+    },
+    "browser_proof_matches_identical_demo_bytes": true
+  },
+  "demo_clean_setup_and_launcher_verified": true,
+  "demo_startup_command": "./Launch LeafCheck.command --port 0",
+  "training_data_required_to_run_demo": false,
+  "prior_delivery": {
+    "archive_and_receipt_directory": "artifacts/prior-delivery-1629d95",
+    "archive_sha256": "815d1dbf3696a549e396cdff13f7dc5753c0784578460f4838884efc4246c2da"
+  },
+  "availability": {
+    "locally_prepared": true,
+    "published_project_history": "https://github.com/jacob-amey/ML-Final-Project",
+    "verified_public_dev_revision": "233663bc2b689b67dd7c595d98fba2f410746f2c",
+    "current_archived_revision_resolved_via_public_github_api": false,
+    "current_archived_revision_public_api_status": 422,
+    "runnable_source_location": "source/ inside this exact ZIP",
+    "shared_externally_in_this_session": false,
+    "grader_receipt_or_brightspace_submission_confirmed": false,
+    "permission_and_access_to_exact_master_for_grader_confirmed": false,
+    "human_confirmation_list": "docs/scope_reconciliation.md"
+  }
 }

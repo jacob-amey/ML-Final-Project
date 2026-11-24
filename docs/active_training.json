@@ -3,7 +3,7 @@
   "run": "runs/final177/residual177_224_seed434",
   "model_checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
   "selection_record": "docs/final_model_selection.json",
-  "updated_utc": "2026-11-23T04:02:13.247615+00:00",
+  "updated_utc": "2026-11-24T02:18:09.839028+00:00",
   "test_predictions_inspected": true,
   "freeze": "artifacts/leafcheck177-v1/freeze.json",
   "freeze_sha256": "c482bf50da720589e47470ce7bca5b81b5fbaf24ac9c698d471b75d4e0775d97",
@@ -11,5 +11,6 @@
   "delivery_record": "docs/submission_delivery.json",
   "training_active": false,
   "submission_archive": "artifacts/LeafCheck-CSC427-submission.zip",
-  "submission_sha256": "815d1dbf3696a549e396cdff13f7dc5753c0784578460f4838884efc4246c2da"
+  "submission_sha256": "e02c2380a975ccf8ed2734b63d686bb671aca47a71f809a896bd4274cd0a58af",
+  "submission_source_revision": "f684024803a8d1429423c777454c9869aa7cfe74"
 }
