@@ -1,8 +1,9 @@
 # LeafCheck current project scope
 
-Updated November 15, 2026 to reflect the authorized final scope. This supersedes
-the older three-class transfer-learning outline. Instructor approval and the
-team's formal two-page proposal submission have not been verified.
+Working scope and delivery record for Jacob Amey and Demetre, CSC-427.
+The earlier three-class outline and team decks are reconciled in
+[the scope record](scope_reconciliation.md). Instructor approval and formal
+receipt of a two-page team proposal await confirmation.
 
 ## Introduction
 
@@ -23,8 +24,8 @@ Implement a small convolutional reference and a deeper custom residual CNN with
 standard PyTorch layers. Both start with newly initialized weights; the main
 solution uses no pretrained weights. Compare them on fixed splits with other
 training settings held constant. Investigate imbalance handling when validation
-evidence supports it. Select by validation macro-F1, with lower validation loss
-as a tie-breaker. Keep test predictions out of every development decision.
+evidence supports it. Select by validation macro-F1, with lower validation loss for ties within 1e-6 and the earlier
+epoch for a remaining tie. Keep test predictions out of every development decision.
 
 The simple rule always predicts the most frequent training class. Score it and
 the frozen selected model on the same test images. Preserve the earlier pilots
@@ -44,7 +45,7 @@ documented specimen IDs. Source labels are not independently diagnosed, and
 classification cannot localize several plants/diseases within one photo.
 See `data/README.md` and `docs/final_dataset_audit.md` for provenance and limits.
 
-## Goal and completion criteria
+## Goal
 
 - Finish selected training on all designated training images; verify resume and
   checkpoint reload.
@@ -55,20 +56,22 @@ See `data/README.md` and `docs/final_dataset_audit.md` for provenance and limits
 - Rehearse a fresh upload, one success, one mistake and a justified improvement;
   document actual contributions and assistance.
 
-No accuracy target is promised. The contribution is the implemented, audited,
-reproducible local system and evaluation, rather than a novel learning algorithm.
+The historical team goal was 0.85 held-out macro-F1. The frozen CNN measured
+0.616940 over all 177 labels in the primary test. The delivered contribution is
+the audited dataset, custom CNN, reproducible evaluation and local upload app.
 
-## Work division and deliverables
+## Plan
 
-The user identified their responsibilities as dataset, CNN, training, evaluation
-and model handoff, and their partner's as frontend/application/interface.
-Partner name, meeting attendance and formal approvals have not been supplied.
-Final execution is assisted by Codex and must be acknowledged accurately.
+Jacob Amey’s assigned role covers the dataset, training, evaluation and
+backend handoff. Demetre’s assigned role covers the frontend and interface.
+See [the contribution record](contributions.md) for supported work, role
+evidence and Codex assistance.
 
-The course also requires a 5–10 page report and a presentation. The team must
-review the evidence, prepare its submission and understand the design for Q&A.
-See `docs/contributions.md` for attributable work and `docs/final_model_requirements.md`
-for requirement coverage. Binary storage follows the repository's rules.
+The reviewed delivery includes the report, presentation, executable notebook,
+verified app and frozen results. The course requirements document is headed
+CSC 434, so the exact local rubric and submission procedure remain provisional.
+See [the scope record](scope_reconciliation.md) for pending confirmations
+and [the practice schedule](defense_rehearsal.md) for the defense.
 
 ## References
 

@@ -31,6 +31,7 @@ def main():
     freeze = read(artifact / "freeze.json")
     archive_check = read(ROOT / "docs/archive_verification.json")
     browser_check = read(ROOT / "docs/demo_verification.json")
+    extracted_browser = browser_check["extracted_app_check"]
     suites = read(ROOT / "docs/test_results.json")
     review = read(ROOT / "docs/submission_quality.json")
     restoration = read(ROOT / "docs/dataset_restoration_verification.json")
@@ -38,6 +39,8 @@ def main():
     checkpoint = freeze["checkpoint_sha256"]
     assert all(record["checkpoint_sha256"] == checkpoint for record in (archive_check, browser_check, suites))
     assert digest(demo) == archive_check["archive_sha256"]
+    assert extracted_browser["archive_sha256"] == archive_check["archive_sha256"]
+    assert extracted_browser["app_revision"] == suites["app_revision"]
     assert all(result["passed"] for result in suites["suites"]) and suites["review_notebook"]["executed_without_errors"]
     assert restoration["frozen_fingerprint"] == freeze["dataset_fingerprint"] and restoration["all_fingerprint_files_match"]
     for name in ("report", "deck"):
@@ -73,6 +76,11 @@ def main():
             include(name, (SUBMISSION / name).read_bytes())
         include("LeafCheck-final-demo.zip", demo.read_bytes())
         include("source/cnn_final_model_review.executed.ipynb", notebook.read_bytes())
+        validation_predictions = (
+            "runs/final177/inference_comparison/"
+            "residual177_224_seed434-d4_probability_mean-predictions.csv"
+        )
+        include(f"source/{validation_predictions}", (ROOT / validation_predictions).read_bytes())
         for suite in suites["suites"]:
             log = (ROOT / suite["log"]).resolve()
             assert log.is_relative_to(ROOT / "runs/final177/verification")
@@ -83,6 +91,11 @@ def main():
             assert screenshot.is_relative_to(ROOT / "runs/final177/verification")
             assert digest(screenshot) == example["screenshot_sha256"]
             include(f"source/{screenshot.relative_to(ROOT).as_posix()}", screenshot.read_bytes())
+        invalid_fixture = ROOT / "runs/final177/verification/invalid-image.jpg"
+        invalid_observation = next(row for row in extracted_browser["browser_observations"]
+                                   if row.get("visible_alert"))
+        assert digest(invalid_fixture) == invalid_observation["sha256"]
+        include(f"source/{invalid_fixture.relative_to(ROOT).as_posix()}", invalid_fixture.read_bytes())
         for name, expected in read(artifact / "artifact.json")["files"].items():
             path = (artifact / name).resolve()
             assert path.is_relative_to(artifact.resolve()) and digest(path) == expected
@@ -99,27 +112,64 @@ def main():
             include(f"source/runs/final177/{selected_run.name}/last.pt", (selected_run / "last.pt").read_bytes())
         handoff = f"""# LeafCheck CSC-427 submission
 
-Read LeafCheck_Report.docx for the report and LeafCheck_Defense.pptx for the
-defense deck. The executed notebook at source/cnn_final_model_review.executed.ipynb
-contains measured outputs. Its editable source is source/cnn_final_model_review.ipynb.
-Run either from the extracted source folder with the documented research environment.
+Plant Health Classification and an Interactive Application
 
-For the demo, extract LeafCheck-final-demo.zip and run Launch LeafCheck.command
-inside LeafCheck. The app README covers setup on another Mac, including its
-local Python dependencies. The separate demo archive passed a fresh extraction
-and launcher check. The app needs its packaged weights and no training dataset.
+Jacob Amey and Demetre
 
-Source revision: {source_revision}
-Selected checkpoint SHA-256: {checkpoint}
-Dataset fingerprint: {freeze['dataset_fingerprint']}
+Read [the report](LeafCheck_Report.docx), [defense deck](LeafCheck_Defense.pptx)
+and [six-minute practice plan](source/docs/defense_rehearsal.md). The
+[contribution record](source/docs/contributions.md) documents roles and Codex
+assistance. The archive's `MANIFEST.json` lists a SHA-256 for every payload.
 
-source/README.md and source/data/README.md give training and restoration commands.
-Exact training reproduction requires a compatible environment and the original
-frozen release or exact master files. The frozen membership and audit records
-under source/data/release_metadata allow restoration from the original master.
-The exported notebooks and report read the
-project's documented artifact layout. Saved evaluation results and application
-samples are included. Re-running the evaluation requires the original data.
+## Run the demo
+
+Extract `LeafCheck-final-demo.zip`. On an Apple silicon Mac with Python 3.14,
+enter the extracted `LeafCheck/` folder and run:
+
+```sh
+xcrun --find swiftc
+python3.14 -m venv .venv
+.venv/bin/python -m pip install -r requirements-lock.txt
+chmod +x "Launch LeafCheck.command"
+./Launch\\ LeafCheck.command --port 8765
+```
+
+Install Apple Command Line Tools with `xcode-select --install` if Swift is
+unavailable. Use `--port 0` if 8765 is occupied. Open the URL printed in the
+terminal and choose a JPEG or PNG. The four models use packaged weights.
+The demo needs only the app environment after setup. Photos stay local.
+
+## Recompute the saved results
+
+From `source/`, run `python3.14 scripts/verify_saved_evaluation.py`. This
+reconciles the archived membership, predictions and metrics without image
+data or PyTorch. The [executed notebook](source/cnn_final_model_review.executed.ipynb)
+contains the tables and examples. Run `cnn_final_model_review.ipynb` from
+`source/` using the research environment and `leafcheck` kernel documented
+in its [README](source/README.md).
+
+## Restore and retrain
+
+From `source/`, follow [the data guide](source/data/README.md) to restore
+the frozen split from the exact original master, then verify it and run
+the pinned training and cache commands in the README. The merged image
+bytes are outside this archive. Confirm permitted access with the team.
+Upstream links document source history, but they do not reconstruct the
+exact merged dataset on their own.
+
+## Identities
+
+- Archived runnable source revision `{source_revision}`
+- Selected checkpoint SHA-256 `{checkpoint}`
+- Dataset fingerprint `{freeze['dataset_fingerprint']}`
+- Demo ZIP SHA-256 `{archive_check['archive_sha256']}`
+- [Published GitHub project history](https://github.com/jacob-amey/ML-Final-Project)
+
+Use the included source for this delivery. The frozen experiment and previous
+delivery receipts in the source snapshot are dated records. This archive's
+payload and identities are listed in MANIFEST.json and this guide. The
+outstanding course, data and handoff confirmations are in
+[the scope record](source/docs/scope_reconciliation.md).
 """
         include("START_HERE.md", handoff.encode())
         package.writestr("MANIFEST.json", json.dumps(manifest, indent=2))
@@ -134,6 +184,9 @@ samples are included. Re-running the evaluation requires the original data.
         assert all(digest(destination / name) == expected for name, expected in manifest.items())
         assert read(destination / freeze_entry)["checkpoint_sha256"] == checkpoint
         assert digest(destination / model_dir / "model.pt") == checkpoint
+        assert digest(destination / model_dir / "reference/model.pt") == freeze["comparison_reference"]["checkpoint_sha256"]
+        for name in ("report", "deck"):
+            assert digest(destination / Path(review[name]["path"]).name) == review[name]["sha256"]
         assert digest(destination / "LeafCheck-final-demo.zip") == archive_check["archive_sha256"]
         assert not (destination / "source/data/processed").exists()
         # Check the default artifact path from the extracted source using one
@@ -142,6 +195,10 @@ samples are included. Re-running the evaluation requires the original data.
         environment.pop("PYTHONPATH", None)
         environment.pop("LEAFCHECK_REVIEW_ARTIFACT", None)
         bundle = destination / model_dir
+        subprocess.run(
+            [sys.executable, "scripts/verify_saved_evaluation.py"],
+            cwd=destination / "source", env=environment, check=True, stdout=subprocess.DEVNULL,
+        )
         example = read(bundle / "demo_examples.json")[0]
         standalone = subprocess.check_output([
             sys.executable, "-m", "leafcheck.inference", "--artifact", "artifacts/leafcheck177-v1",

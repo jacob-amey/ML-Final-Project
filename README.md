@@ -6,7 +6,7 @@ starts with randomly initialized weights. Standard PyTorch components supply
 convolutions, automatic gradients and optimization; no pretrained weights are
 used in the final CNN.
 
-The current task branch is `codex/final-leafcheck177`. The comparison app in
+The comparison app in
 `leafcheck-demo/` is tracked as ordinary source in this repository. It began as
 an unconfigured gitlink with no remote; its earlier separate history and local
 changes were preserved before consolidation. See `docs/repository_history.json`
@@ -54,6 +54,43 @@ Read `docs/final_model_selection.json` for the pre-test decision,
 - `docs/comparison_protocol.json`: label coverage and exposure audit.
 - `docs/model_defense_guide.md`: architecture, concepts and presentation questions.
 - `docs/contributions.md`: actual roles, evidence and AI assistance.
+
+## Run the delivered study
+
+Extract `artifacts/LeafCheck-CSC427-submission.zip` and open its
+`START_HERE.md`. The report, defense deck, rehearsal guide, saved predictions
+and source snapshot are included. The [GitHub repository](https://github.com/jacob-amey/ML-Final-Project)
+has the published project history. Use the exact revision in the archive for
+this delivery.
+
+1. **Run the demo.** Extract the nested `LeafCheck-final-demo.zip`. On the
+   tested Apple silicon Mac with Python 3.14 and Apple Swift tools, run the
+   following from its `LeafCheck/` folder:
+
+   ```sh
+   xcrun --find swiftc
+   python3.14 -m venv .venv
+   .venv/bin/python -m pip install -r requirements-lock.txt
+   chmod +x "Launch LeafCheck.command"
+   ./Launch\ LeafCheck.command --port 8765
+   ```
+
+   If Swift is unavailable, install the Apple Command Line Tools with
+   `xcode-select --install`. Use an unused port or `--port 0`. Open the local
+   URL printed by the launcher, choose a JPEG or PNG and click **Run comparison**.
+   The four-model comparison was verified on macOS. The bundle contains the
+   weights and works without the research environment, notebooks or dataset.
+2. **Recompute the saved scores.** From the extracted `source/` folder, run
+   `python3.14 scripts/verify_saved_evaluation.py`. This uses only Python’s
+   standard library and the archived membership, predictions and metrics.
+   Install the research environment below if you want to execute the review
+   notebook or run new inference on the packaged examples.
+3. **Restore and retrain.** Obtain permitted access to the exact original
+   master or frozen release. Follow the restore and verify commands in
+   [the data guide](data/README.md), then build the caches and run the pinned
+   commands below in a separate checkout. The local restore passed for all
+   84,269 images. Individual upstream sources can be identified, but access
+   and redistribution rights for the complete merged master are unconfirmed.
 
 ## Environment and dataset
 
@@ -336,7 +373,11 @@ three-class pilots use different data and coverage. The final CNN, frozen
 Compact177 full-data reference and declared simple rule share the valid
 177-class held-out comparison.
 
-The updated working proposal is in `docs/proposal.md`. The team remains
+The updated working proposal is in `docs/proposal.md`. The
+[scope record](docs/scope_reconciliation.md) reconciles the earlier decks
+and the 0.85 target with the measured result and delivered platform. The
+[six-minute practice plan](docs/defense_rehearsal.md) covers the demo and Q&A.
+The team remains
 responsible for reviewing assisted work, following course policy, submitting the
 required report/slides, and understanding the methods for Q&A. Do not attribute
 assisted implementation, undocumented meetings or unverified author activity to

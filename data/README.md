@@ -53,11 +53,21 @@ For a copy of the already prepared release, place it in
 `data/processed/leafcheck177_final/` and run only `verify`. The portable demo
 uses its own packaged weights and two evaluation images.
 
+The local restore verified all 84,269 images. A recipient still needs permission
+and access to the exact original master or frozen release bytes to retrain.
+The upstream links below identify sources, and archive metadata preserves the
+specific membership and hashes from the merge. A fresh upstream download alone
+does not reproduce that merge. With the submission archive alone, run
+`python3.14 scripts/verify_saved_evaluation.py` from `source/` to reproduce
+the saved metrics using the archived predictions and metadata.
+
 ## Tomato and potato blight supplement
 
 `data/processed/leafcheck_blight_v1/` contains additional online photos for a
 follow-on training and validation study. It uses the same class IDs for tomato
 late blight, tomato early blight, healthy tomato, and potato late blight.
+This later collection did not contribute training or evaluation images to
+the frozen CSC-427 result.
 See the [release notes](../docs/blight_dataset_v1.md) for sources, split groups,
 overlap checks and rebuild commands.
 

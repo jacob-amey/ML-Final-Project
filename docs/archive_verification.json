@@ -6,7 +6,7 @@
     "architecture": "arm64",
     "cpu": "Apple M2 Max",
     "physical_memory_bytes": 34359738368,
-    "power_source": "AC Power"
+    "power_source": "Battery Power"
   },
   "fresh_process": true,
   "working_directory_has_training_data": false,
@@ -16,25 +16,25 @@
   "python_executable": "/Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/runs/final177/runtime_env/bin/python",
   "python_venv": "/Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/runs/final177/runtime_env",
   "startup_command": "./Launch LeafCheck.command --port 0 (automatic browser disabled for the HTTP check)",
-  "startup_ms_including_first_swift_compile": 1869.8405840004853,
+  "startup_ms_including_first_swift_compile": 2043.5976659991866,
   "http_latency": {
     "warmup_requests": 2,
     "timed_requests": 12,
-    "p50_ms": 52.2026039998309,
-    "p95_ms": 54.07567090005614,
+    "p50_ms": 48.68229149997205,
+    "p95_ms": 51.147033149118215,
     "measurements_ms": [
-      49.87254200023017,
-      52.026375000423286,
-      50.123666998842964,
-      50.316832999669714,
-      49.93624999769963,
-      52.5578749984561,
-      51.73858299895073,
-      53.85754199960502,
-      54.18379099864978,
-      52.71999999968102,
-      52.37883299923851,
-      53.98720900120679
+      48.542708000240964,
+      48.97562499900232,
+      47.52812500009895,
+      48.95345799923234,
+      48.82187499970314,
+      47.58087499976682,
+      47.11645800125552,
+      50.96245799904864,
+      51.37262499920325,
+      48.99341599957552,
+      47.63400000047113,
+      47.108165999816265
     ],
     "conditions": "Loopback HTTP, alternating packaged success/mistake, all four real models, warm local files, includes image upload/validation and JSON response; not CNN-only latency"
   },
@@ -57,5 +57,21 @@
     }
   ],
   "invalid_image_http_status": 400,
-  "unsupported_format_http_status": 415
+  "unsupported_format_http_status": 415,
+  "documented_clean_install": {
+    "recorded_utc": "2026-11-24T02:11:38.104519+00:00",
+    "archive_sha256": "1b7d23bc8f555e9ce949f9fc21bf040d29188cf263c2900462fab49c7eeefcf2",
+    "app_revision": "585f86d05c26899a",
+    "new_app_local_venv": true,
+    "python": "3.14.7",
+    "install_command": ".venv/bin/python -m pip install -r requirements-lock.txt",
+    "package_lock_sha256": "6a8aff25363195a874e28fa08d9c32f18cce916890fa63db87ef945f38d723c5",
+    "swiftc_found": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+    "launcher_executable_in_zip": true,
+    "startup_command": "./Launch LeafCheck.command --port 8765",
+    "launch_checks_cleared_model_overrides_and_pythonpath": true,
+    "training_data_or_notebooks_needed": false,
+    "all_four_real_models_ready": true,
+    "receipt_for_browser": "docs/demo_verification.json#extracted_app_check"
+  }
 }

@@ -35,5 +35,80 @@
   "score_interpretation_observed": "Scores are uncalibrated rankings of each model\u2019s supported labels.",
   "shared_heldout_comparison_visible": true,
   "supplementary_results_displayed_separately": true,
-  "selected_model_details_observed": "224 \u00d7 224 input, epoch 53, 177 classes, eight orientations, validation F1 0.649, test F1 0.617"
+  "selected_model_details_observed": "224 \u00d7 224 input, epoch 53, 177 classes, eight orientations, validation F1 0.649, test F1 0.617",
+  "extracted_app_check": {
+    "recorded_utc": "2026-11-24T02:11:38.104519+00:00",
+    "archive_sha256": "1b7d23bc8f555e9ce949f9fc21bf040d29188cf263c2900462fab49c7eeefcf2",
+    "app_revision": "585f86d05c26899a",
+    "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+    "url": "http://127.0.0.1:8765/",
+    "browser": "Codex in-app browser",
+    "test_location": "Fresh extraction of LeafCheck-final-demo.zip with a newly installed app-local venv",
+    "browser_observations": [
+      {
+        "file": "samples/success.jpg",
+        "sha256": "006de0ecce8258a77cebb023fbdc8fb417f63b5bc130c974293e53579101a12b",
+        "fixture": "Held-out success",
+        "reference_label": "tomato__healthy",
+        "top_label": "tomato__healthy",
+        "displayed_score": "100.0%"
+      },
+      {
+        "file": "samples/mistake.jpg",
+        "sha256": "b66c1b645e2b314cfdf09b657b96924dd2fd218ab29be239bde192fb4ad6c031",
+        "fixture": "Held-out mistake",
+        "decoded_upload_preview": true,
+        "reference_label": "tomato__late_blight",
+        "top_label": "potato__late_blight",
+        "displayed_score": "98.2%"
+      },
+      {
+        "file": "invalid-image.jpg",
+        "sha256": "d0dbe942643a96a64b568d2e7c000472395cc3dee27eb39d33686aa80edf7f2b",
+        "fixture": "Unreadable test file",
+        "visible_alert": "This image could not be opened. Try another JPEG or PNG."
+      },
+      {
+        "file": "1568028.jpg",
+        "sha256": "411c4407a90349bbb81de2c3619e9bda0e51f4480225d56f48ff393feb7af312",
+        "fixture": "Functional field photo from the separate blight data collection",
+        "source": "https://www.ipmimages.org/browse/image/1568028",
+        "credit": "Edward Sikora, Auburn University, Bugwood.org",
+        "license": "CC BY 3.0",
+        "decoded_upload_preview": true,
+        "source_label": "tomato__late_blight",
+        "top_label": "zucchini__bacterial_wilt",
+        "displayed_score": "59.0%",
+        "part_of_frozen_evaluation": false
+      }
+    ],
+    "uncertainty_copy": "Scores are uncalibrated rankings of each model\u2019s supported labels.",
+    "four_models_ready": true,
+    "personal_photo_rehearsal_confirmed": false,
+    "separate_http_score_parity": {
+      "success.jpg": {
+        "sha256": "006de0ecce8258a77cebb023fbdc8fb417f63b5bc130c974293e53579101a12b",
+        "label": "tomato__healthy",
+        "score": 0.9999866485595703,
+        "score_count": 177,
+        "max_abs_score_error": 0.0
+      },
+      "mistake.jpg": {
+        "sha256": "b66c1b645e2b314cfdf09b657b96924dd2fd218ab29be239bde192fb4ad6c031",
+        "label": "potato__late_blight",
+        "score": 0.9820762872695923,
+        "score_count": 177,
+        "max_abs_score_error": 0.0
+      },
+      "1568028.jpg": {
+        "sha256": "411c4407a90349bbb81de2c3619e9bda0e51f4480225d56f48ff393feb7af312",
+        "label": "zucchini__bacterial_wilt",
+        "score": 0.5901817679405212,
+        "score_count": 177,
+        "max_abs_score_error": 0.0
+      }
+    },
+    "ordered_label_count": 177,
+    "max_allowed_abs_error": 1e-05
+  }
 }

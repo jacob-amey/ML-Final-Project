@@ -1,0 +1,52 @@
+{
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "reference_sha256": "de865d5024cd725409ebd5dde15f28cc5fd488271c41e8b87432628f4c60648a",
+  "release_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "bundle_files_verified": 59,
+  "groups_verified": 48449,
+  "frequency_rule_label": "grape__black_rot",
+  "supplement_rule_label": "tomato__late_blight",
+  "metrics": {
+    "primary": {
+      "correct": 7556,
+      "sample_count": 8425,
+      "accuracy": 0.8968545994065282,
+      "macro_f1": 0.6169397590183023
+    },
+    "compact177": {
+      "correct": 7234,
+      "sample_count": 8425,
+      "accuracy": 0.8586350148367953,
+      "macro_f1": 0.518430195154408
+    },
+    "frequency_rule": {
+      "correct": 731,
+      "sample_count": 8425,
+      "accuracy": 0.08676557863501484,
+      "macro_f1": 0.0009021283317660242
+    },
+    "validation": {
+      "correct": 15111,
+      "sample_count": 16836,
+      "accuracy": 0.8975409836065574,
+      "macro_f1": 0.6492213195919269
+    },
+    "supplement": {
+      "correct": 26,
+      "sample_count": 183,
+      "accuracy": 0.14207650273224043,
+      "macro_f1": 0.21984649122807018
+    },
+    "supplement_rule": {
+      "correct": 79,
+      "sample_count": 183,
+      "accuracy": 0.43169398907103823,
+      "macro_f1": 0.2010178117048346
+    }
+  },
+  "recorded_utc": "2026-11-24T02:11:38.104519+00:00",
+  "selection_commit": "1e65c57",
+  "read_only": true,
+  "checkpoint_retrained": false,
+  "restoration_receipt": "docs/dataset_restoration_verification.json"
+}
