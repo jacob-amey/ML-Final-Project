@@ -1,0 +1,17 @@
+{
+  "version": "leafcheck_okara_v1",
+  "source": "Okara Potato Disease Leaf Dataset (PLD)",
+  "publication": "https://doi.org/10.3390/electronics10172064",
+  "archive_page": "https://www.kaggle.com/datasets/rizwan123456789/potato-disease-leaf-datasetpld",
+  "archive_url": "https://www.kaggle.com/api/v1/datasets/download/rizwan123456789/potato-disease-leaf-datasetpld",
+  "archive_sha256": "d54fb05fe90e7b1bfa902f9b478991f08cd4009afd3729c56f23b36cb8207b06",
+  "credit": "Javed Rashid et al. (study and source data); Kaggle archive supplied by rizwan123456789",
+  "archive_terms": "Database: Open Database, Contents: Database Contents",
+  "archive_terms_urls": ["https://opendatacommons.org/licenses/odbl/1-0/", "https://opendatacommons.org/licenses/dbcl/1-0/"],
+  "label_map": {
+    "Early_Blight": "potato__early_blight",
+    "Healthy": "potato__healthy",
+    "Late_Blight": "potato__late_blight"
+  },
+  "protocol": "The complete 256px archive is a candidate pool solely for a new source-held test. The mirror includes 4072 files whereas the paper reports 4062. Publisher splits do not determine LeafCheck roles. Remove protected overlaps and review related-image limits before scoring."
+}

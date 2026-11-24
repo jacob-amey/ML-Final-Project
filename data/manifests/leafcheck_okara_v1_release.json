@@ -1,0 +1,23 @@
+{
+  "source": "leafcheck_okara_v1",
+  "candidate_count": 4072,
+  "master_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "master_records_screened": 90574,
+  "plantdoc_records_screened": 183,
+  "roles": "test only",
+  "files_sha256": {
+    "manifest.csv": "6ab5bf804144fd29ec5694c552b0c45922d2994e66f0bf8952877427daae0cce",
+    "source.json": "e53134f57b5e6a98a4d251e25d1d91d4cb5795b04413df0074a53112764479ff"
+  },
+  "class_counts": {
+    "potato__early_blight": 1265,
+    "potato__healthy": 854,
+    "potato__late_blight": 1288
+  },
+  "exclusions": {
+    "new_cluster_label_conflict": 408,
+    "existing_visual_candidate": 187,
+    "new_cluster_repeated_view": 70
+  },
+  "specimen_ids_available": false
+}

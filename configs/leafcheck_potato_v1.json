@@ -1,0 +1,20 @@
+{
+  "hypothesis": "With potato supplied by the user, field training reduces potato condition errors relative to a label-count-matched master-only CNN and to masking the original model to its three potato labels.",
+  "labels": ["potato__early_blight", "potato__healthy", "potato__late_blight"],
+  "channels": [16, 32, 64, 96],
+  "input_size": 128,
+  "batch_size": 96,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "seeds": [434, 435],
+  "max_epochs": 18,
+  "min_epochs": 9,
+  "patience": 5,
+  "selection": {
+    "primary": "Macro-F1 over all three potato labels on date-held Mduma validation. Master potato validation independently constrains degradation. The original 177-label model and test stay frozen.",
+    "field_min_gain_average_vs_masked": 0.05,
+    "field_min_gain_average_vs_control": 0.03,
+    "master_max_macro_f1_drop_per_seed": 0.03,
+    "master_max_accuracy_drop_per_seed": 0.03
+  }
+}
