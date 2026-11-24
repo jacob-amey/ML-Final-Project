@@ -10,7 +10,10 @@ import re
 import shutil
 import subprocess
 import tempfile
+import struct
+from urllib.request import Request, urlopen
 from zipfile import ZipFile
+import zlib
 
 import numpy as np
 from PIL import Image, ImageOps
@@ -34,8 +37,25 @@ def digest(path, method):
         return hashlib.file_digest(stream, method).hexdigest()
 
 
-def fetch(tomato_only):
-    sources = json.loads(PIN.read_text())["sources"]
+def fetch_prefix(entry, temporary):
+    length = entry["prefix_bytes"]
+    request = Request(entry["url"], headers={"Range": f"bytes=0-{length - 1}"})
+    with urlopen(request, timeout=40) as response, temporary.open("wb") as target:
+        if response.status == 206:
+            if response.headers.get("Content-Range") != f"bytes 0-{length - 1}/{entry['archive_bytes']}":
+                raise ValueError("Publisher returned another archive range")
+        elif response.status != 200 or int(response.headers.get("Content-Length", 0)) != entry["archive_bytes"]:
+            raise ValueError("Publisher declined the registered archive request")
+        for offset in range(0, length, 1 << 20):
+            size = min(1 << 20, length - offset)
+            block = response.read(size)
+            if len(block) != size:
+                raise ValueError("Incomplete archive prefix")
+            target.write(block)
+
+
+def fetch(tomato_only, registry):
+    sources = json.loads(registry.read_text())["sources"]
     selected = ("bapari", "huang") if tomato_only else ("bapari", "huang", "mduma")
     RAW.mkdir(parents=True, exist_ok=True)
     for name in selected:
@@ -44,9 +64,12 @@ def fetch(tomato_only):
             temporary = path.with_suffix(path.suffix + ".part")
             method = "sha256" if "sha256" in entry else "md5"
             if not path.exists():
-                subprocess.run(["curl", "--fail", "--silent", "--show-error", "--location",
-                                "--continue-at", "-", "--max-time", "3600",
-                                "--output", str(temporary), entry["url"]], check=True)
+                if "prefix_bytes" in entry:
+                    fetch_prefix(entry, temporary)
+                else:
+                    subprocess.run(["curl", "--fail", "--silent", "--show-error", "--location",
+                                    "--continue-at", "-", "--max-time", "3600",
+                                    "--output", str(temporary), entry["url"]], check=True)
                 if digest(temporary, method) != entry[method]:
                     raise ValueError(f"Downloaded archive differs from publisher checksum: {path.name}")
                 temporary.rename(path)
@@ -70,19 +93,74 @@ def archive_rows(source, entry, base, pattern, labels, role, scratch):
                         role, source + ":collection", "", path.read_bytes())
 
 
+POTATO_MEMBER = re.compile(r"(earlyblt|lateblt|healthy)/[a-z]+\d+\.jpe?g", re.IGNORECASE)
+
+
+def prefix_members(path):
+    """Yield only complete local ZIP members with matching lengths and CRC."""
+    with path.open("rb") as stream:
+        while fixed := stream.read(30):
+            if len(fixed) < 30:
+                return
+            signature, _, flags, method, _, _, crc, packed, length, name_bytes, extra = struct.unpack(
+                "<4s5H3I2H", fixed)
+            if signature != b"PK\x03\x04" or flags & 1 or method not in (0, 8):
+                raise ValueError("Unexpected ZIP entry in registered prefix")
+            name = stream.read(name_bytes).decode("ascii")
+            stream.seek(extra, 1)
+            start = stream.tell()
+            if flags & 8:
+                if method != 8:
+                    raise ValueError("Unknown-size ZIP entries must be deflated")
+                decoder = zlib.decompressobj(-15)
+                chunks = []
+                while not decoder.eof:
+                    block = stream.read(65536)
+                    if not block:
+                        return
+                    chunks.append(decoder.decompress(block))
+                stream.seek(-len(decoder.unused_data), 1)
+                encoded = stream.tell() - start
+                header = stream.read(4)
+                descriptor = stream.read(12) if header == b"PK\x07\x08" else header + stream.read(8)
+                if len(descriptor) < 12:
+                    return
+                crc, packed, length = struct.unpack("<3I", descriptor)
+                content = b"".join(chunks)
+                if encoded != packed:
+                    raise ValueError("ZIP descriptor compressed size mismatch")
+            else:
+                value = stream.read(packed)
+                if len(value) != packed:
+                    return
+                content = zlib.decompress(value, -15) if method == 8 else value
+            if len(content) != length or zlib.crc32(content) != crc:
+                raise ValueError("ZIP member length or CRC mismatch")
+            if POTATO_MEMBER.fullmatch(name):
+                yield name, content
+
+
 def potato_rows(source, entry):
     local = RAW / entry["name"]
-    with ZipFile(local) as archive:
-        members = [r for r in archive.infolist()
-                   if re.fullmatch(r"(earlyblt|lateblt|healthy)/[a-z]+\d+\.jpe?g",
-                                   r.filename, re.IGNORECASE)]
-        if not members:
-            raise ValueError(f"No original image names found in {local}")
-        selected = sorted(members, key=lambda r: hashlib.sha256(
-            f"{NAME}:{r.filename}".encode()).digest())[:source["sample_per_class"]]
-        for record in sorted(selected, key=lambda r: r.header_offset):
-            yield Photo("mduma", f"{entry['name']}:{record.filename}", entry["url"], entry["label"],
-                        entry["label"].split("__")[1], "train", "mduma:collection", "", archive.read(record))
+    limit = source["sample_per_class"]
+
+    def key(name):
+        return hashlib.sha256(f"{NAME}:{name}".encode()).digest()
+
+    if "prefix_bytes" in entry:
+        available = dict(prefix_members(local))
+        selected = sorted(available, key=key)[:limit]
+        samples = [(name, available[name]) for name in selected]
+    else:
+        with ZipFile(local) as archive:
+            names = [r.filename for r in archive.infolist() if POTATO_MEMBER.fullmatch(r.filename)]
+            selected = sorted(names, key=key)[:limit]
+            samples = [(name, archive.read(name)) for name in selected]
+    if len(selected) != limit:
+        raise ValueError(f"Expected {limit} eligible image names in {local}; found {len(selected)}")
+    for name, content in samples:
+        yield Photo("mduma", f"{entry['name']}:{name}", entry["url"], entry["label"],
+                    entry["label"].split("__")[1], "train", "mduma:collection", "", content)
 
 
 def protected_with_field():
@@ -143,10 +221,10 @@ def assign_potato_validation(candidates):
                 photo.split = "val"
 
 
-def build(output, tomato_only):
+def build(output, tomato_only, registry):
     if output.exists():
         raise FileExistsError(f"Preserving existing release at {output}")
-    protocol = json.loads(PIN.read_text())
+    protocol = json.loads(registry.read_text())
     sources = protocol["sources"]
     selected = ("bapari", "huang") if tomato_only else ("bapari", "huang", "mduma")
     archive_hashes = {}
@@ -198,11 +276,11 @@ def build(output, tomato_only):
                 sha256=p.sha256, pixel_d4_sha256=p.pixel_hash, width=p.width, height=p.height,
                 output_relative_path=p.output))
         write_csv(stage / "manifest.csv", rows)
-        shutil.copyfile(PIN, stage / "sources.json")
+        shutil.copyfile(registry, stage / "sources.json")
         shutil.copyfile(FROZEN / "class_to_idx.json", stage / "class_to_idx.json")
         hashes = {name: file_sha256(stage / name) for name in ("manifest.csv", "sources.json", "class_to_idx.json")}
         stamp = {
-            "version": NAME + ("_tomato" if tomato_only else ""),
+            "version": protocol["version"] + ("_tomato" if tomato_only else ""),
             "fingerprint": hashlib.sha256(json.dumps(hashes, sort_keys=True).encode()).hexdigest(),
             "files_sha256": hashes,
             "base_release": protected[0],
@@ -248,12 +326,13 @@ if __name__ == "__main__":
     parser.add_argument("operation", choices=("fetch", "build", "verify"))
     parser.add_argument("--output", type=Path)
     parser.add_argument("--tomato-only", action="store_true")
+    parser.add_argument("--registry", type=Path, default=PIN)
     args = parser.parse_args()
     if args.operation == "fetch":
-        fetch(args.tomato_only)
+        fetch(args.tomato_only, args.registry)
     elif not args.output:
         parser.error("--output is required for build and verify")
     elif args.operation == "build":
-        build(args.output, args.tomato_only)
+        build(args.output, args.tomato_only, args.registry)
     else:
         verify(args.output)
