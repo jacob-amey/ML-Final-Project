@@ -240,6 +240,25 @@ optimization settings match. Both arms score ordinary images, using the
 same preprocessing without annotations at inference.
 [Registered training recipe](../configs/leafcheck_plantseg_regions_v1_training.json)
 
+Both arms finished four epochs. Every frozen master training image was used
+once per arm over those epochs. The selected diagnostic checkpoints were
+both from epoch one. The field column is the equal mean of the Sheikh
+and Mduma development macro-F1 scores.
+
+| D4 policy | Correct / 16,836 | Master accuracy | Master macro-F1 | Field mean macro-F1 |
+| --- | ---: | ---: | ---: | ---: |
+| Original checkpoint | 15,111 | 89.75% | 0.649221 | 0.025132 |
+| Rehearsal on the same original images | 15,026 | 89.25% | 0.640059 | 0.084527 |
+| Lesion crops | 15,025 | 89.24% | 0.639962 | 0.084527 |
+
+The original-image control and crop treatment had identical recall for all
+four monitored blight labels. The treatment missed the master and
+matched-control gains required by the registered promotion rule. Field
+scores rose in later epochs while master scores fell. This comparison gives
+no reason to select or repeat the crop recipe. The selected checkpoints
+were loaded for D4 scoring, and the run closed without opening a reserved
+test. [Matched checkpoints, curves and decisions](potato_context/plantseg_regions_decision.json)
+
 After restoring the [release](../data/README.md#plantseg-annotation-experiment),
 run the command below. Use `--resume` with the same release, configuration,
 trainer revision and run directory after an interruption.
@@ -305,3 +324,17 @@ running a reproduction. Pass `--resume` with the same directory and unchanged
 configuration to continue an interrupted scratch run. Reuse the published
 Okara scores when auditing completed work. Do not use its errors or scores
 to choose new weights, crop thresholds or data.
+
+## Selection at this checkpoint
+
+The original checkpoint serves automatic uploads. The two-seed ensemble
+gained 0.007846 master validation macro-F1, with weak automatic transfer to
+both new sources. The WASCAL and annotation trials missed their comparison
+criteria. The potato specialist's development gains did not carry across
+sources. The demo adds one verified user-provided crop option and continues
+using the original checkpoint for both automatic and potato scoring.
+
+The remaining scientific gap is accurately labeled, whole-plant field
+photography across crops, sites and capture sessions. Another round of
+replay using the same sources or variations of the same images would leave
+that gap unresolved. Preserve opened holdouts as evaluation records.

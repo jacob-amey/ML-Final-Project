@@ -461,3 +461,13 @@ paired evidence. See nov22_resume_record.json and the selection plan.
 - Added 578 screened TOM2024 field training images and completed both arms
   of the four-epoch replay. Neither arm qualified for replacement of the
   original CNN. See the [study and replay receipt](potato_context_study.md).
+- Verified 508 additional reserved tomato images and the directional
+  blight errors for both automatic models and their diagnostic known-crop
+  variants. The automatic ensemble's master-validation gain did not
+  generalize to the new tomato source.
+- Verified PlantSeg exposure and built 722 reproducible training-only crops
+  linked to their original parents. Completed both four-epoch arms. The
+  selected crop checkpoint scored 0.639962 versus 0.640059 for the same-image
+  control and 0.649221 for the original weight file. Both arms gave the same
+  field-validation score. Kept the original model and the verified potato
+  upload option.
