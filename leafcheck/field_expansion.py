@@ -76,6 +76,9 @@ def field_scores(scoring, dev, classes, spec, device, batch_size):
 def validate(model, validation, dev, classes, spec, device, config, policy):
     scoring = PredictionScores(model, {"name": policy})
     main, _ = evaluate(scoring, validation, spec, device, classes, config["batch_size"])
+    crops = np.array([name.split("__", 1)[0] for name in classes])
+    main["wrong_crop"] = int(np.asarray(main["confusion_matrix"])[crops[:, None] != crops].sum())
+    main["right_crop_wrong_condition"] = main["sample_count"] - main["correct"] - main["wrong_crop"]
     fields = field_scores(scoring, dev, classes, spec, device, config["batch_size"])
     return {
         "master": dict(summarize(main), loss=main["loss"]),
