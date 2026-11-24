@@ -1,0 +1,23 @@
+{
+  "version": "leafcheck_bangladesh_tomato_v1",
+  "title": "Tomato Leaf Disease Classification Dataset",
+  "doi": "10.17632/jttrv2w27r.1",
+  "url": "https://data.mendeley.com/datasets/jttrv2w27r/1",
+  "credit": "Nure Alam Siddiki Rachin, Nasim Mahmud Likhon, and Md Abdullah Hel Baki",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "roles": "Independent source for test only. No image or score from this source may influence training, model selection, or threshold development.",
+  "sampling": "Up to 125 JPGs per compatible publisher folder, rank by SHA-256 of the release name and publisher file ID. Retain all 112 late blight candidates. Screen before model predictions.",
+  "label_map": {
+    "Early Blight": "tomato__early_blight",
+    "Healthy": "tomato__healthy",
+    "Late Blight": "tomato__late_blight",
+    "Bacteiral Spot": "tomato__bacterial_spot",
+    "Yellow Leaf Curl Virus": "tomato__yellow_leaf_curl_virus"
+  },
+  "excluded_folders": [
+    "Leaf Miner Flies",
+    "Magnesium Deficiency"
+  ],
+  "notes": "Reference labels are inherited. The publisher reports capture across agricultural regions of Bangladesh, March 10\u201320, 2025. Published folder metadata does not establish individual specimen IDs."
+}

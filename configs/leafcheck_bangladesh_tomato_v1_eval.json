@@ -1,0 +1,22 @@
+{
+  "hypothesis": "On an independently sourced collection containing both tomato blights, the validation-selected two-seed average may transfer better than the original automatic model. A supplied crop may reduce wrong-crop errors while leaving early/late confusion.",
+  "purpose": "One reserved source-transfer check. The deployed model, class order, preprocessing, and prior scores stay frozen. These predictions and errors cannot drive future training, selection, or threshold changes.",
+  "master_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "reference_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "class_map_sha256": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a",
+  "preprocessing_sha256": "e5f90e4252b3ee708a9fa0385346429b9bed758d3ad36e5ec6fc0fd3abeaade9",
+  "secondary": {
+    "member": "runs/final177/residual177_224_seed435/best_model.pt",
+    "member_sha256": "25e3f2225fa3a7f6490edfee5feac88fa3bf480b9b061c2eb530d6e9810c22c3"
+  },
+  "policy": "d4_probability_mean",
+  "known_crop": "tomato",
+  "represented_labels": [
+    "tomato__bacterial_spot",
+    "tomato__early_blight",
+    "tomato__healthy",
+    "tomato__late_blight",
+    "tomato__yellow_leaf_curl_virus"
+  ],
+  "scoring": "Average F1 over the five preregistered source labels. Keep all 177 outputs available in automatic, and all ten existing tomato classes available when given the crop. Average the two probability arrays before optional restriction. Score the most frequent master training class using the appropriate candidate set under each scope. Compare accuracy, wrong crop, both directional blight confusions, and per-label support."
+}
