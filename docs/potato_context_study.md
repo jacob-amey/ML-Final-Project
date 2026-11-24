@@ -25,6 +25,10 @@ probabilities. On the same 16,836 master validation images it scored
 15,158 correct (90.0333%, macro-F1 0.657068), versus 15,111 (89.7541%,
 macro-F1 0.649221) for the original. The 0.007846 gain passed the declared
 0.005 validation criterion. Wrong-crop errors fell from 956 to 917.
+Eighty-one labels gained F1 and 59 lost F1. The 71 labels with fewer
+than 20 validation images gained 0.009683 on average. Zero-recall labels
+fell from eleven to ten. Early blight in tomato was unchanged at 0.914286
+and late blight moved from 0.927318 to 0.925373.
 On grouped field validation, both missed every one of the 233 Sheikh tomato
 images. The ensemble got 12/211 correct on Mduma potato, versus 7/211.
 Keep this candidate as a validation-only alternative for the full 177-label
@@ -44,6 +48,7 @@ and 0.245694 for the original CNN given potato. The frozen blend used the
 stronger field-validation seed, 435. These figures use development data.
 
 [Validation decision and per-source errors](potato_context/validation.json) ·
+[All 177 validation classes](potato_context/ensemble_class_validation.csv) ·
 [Scratch CNN decisions and checkpoint hashes](potato_context/potato_training.json)
 
 ## Frozen Okara check

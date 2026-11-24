@@ -14,6 +14,14 @@ The earlier app and pilot files were preserved during integration. The blight
 data supplement in `233663b` is later work outside the frozen CSC-427
 training and evaluation. No new training took place during delivery.
 
+In the November 24 follow-up, Jacob requested continued optimization and
+authorized the data, training, and app work. Codex prepared and screened
+the additional releases, ran and audited the matched experiments, implemented
+the optional potato mode, and verified the archived upload flow. The
+[crop-context study](potato_context_study.md) records the runs and decisions.
+Relevant implementation commits include `3ba48cf`, `f79bb4b`, `7cee679`,
+`7b2fb0d` and `92f521c`.
+
 Student review, independent code authorship and meeting attendance require
 task records or teammate confirmation. The course-specific AI policy,
 scope approval and personal rehearsal remain pending confirmation.
