@@ -4,6 +4,7 @@ import argparse
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
 import hashlib
+import json
 from pathlib import Path, PurePosixPath
 import re
 import shutil
@@ -19,7 +20,6 @@ from prepare_blight_dataset import (
 )
 from prepare_field_holdout import include_blight
 from prepare_final_dataset import file_sha256, perceptual_hashes, read_csv, write_csv
-import json
 
 
 NAME = "leafcheck_field_v2"
@@ -32,6 +32,27 @@ IMAGES = {".jpg", ".jpeg", ".png"}
 def digest(path, method):
     with path.open("rb") as stream:
         return hashlib.file_digest(stream, method).hexdigest()
+
+
+def fetch(tomato_only):
+    sources = json.loads(PIN.read_text())["sources"]
+    selected = ("bapari", "huang") if tomato_only else ("bapari", "huang", "mduma")
+    RAW.mkdir(parents=True, exist_ok=True)
+    for name in selected:
+        for entry in sources[name]["files"]:
+            path = RAW / entry["name"]
+            temporary = path.with_suffix(path.suffix + ".part")
+            method = "sha256" if "sha256" in entry else "md5"
+            if not path.exists():
+                subprocess.run(["curl", "--fail", "--silent", "--show-error", "--location",
+                                "--continue-at", "-", "--max-time", "3600",
+                                "--output", str(temporary), entry["url"]], check=True)
+                if digest(temporary, method) != entry[method]:
+                    raise ValueError(f"Downloaded archive differs from publisher checksum: {path.name}")
+                temporary.rename(path)
+            elif digest(path, method) != entry[method]:
+                raise ValueError(f"Local archive differs from publisher checksum: {path.name}")
+            print("Verified", path.name, flush=True)
 
 
 def archive_rows(source, entry, base, pattern, labels, role, scratch):
@@ -224,11 +245,15 @@ def verify(path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("operation", choices=("build", "verify"))
-    parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("operation", choices=("fetch", "build", "verify"))
+    parser.add_argument("--output", type=Path)
     parser.add_argument("--tomato-only", action="store_true")
     args = parser.parse_args()
-    if args.operation == "build":
+    if args.operation == "fetch":
+        fetch(args.tomato_only)
+    elif not args.output:
+        parser.error("--output is required for build and verify")
+    elif args.operation == "build":
         build(args.output, args.tomato_only)
     else:
         verify(args.output)
