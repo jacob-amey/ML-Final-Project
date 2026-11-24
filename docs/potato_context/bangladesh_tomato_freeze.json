@@ -1,0 +1,51 @@
+{
+  "config": {
+    "hypothesis": "On an independently sourced collection containing both tomato blights, the validation-selected two-seed average may transfer better than the original automatic model. A supplied crop may reduce wrong-crop errors while leaving early/late confusion.",
+    "purpose": "One reserved source-transfer check. The deployed model, class order, preprocessing, and prior scores stay frozen. These predictions and errors cannot drive future training, selection, or threshold changes.",
+    "master_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+    "reference_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+    "class_map_sha256": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a",
+    "preprocessing_sha256": "e5f90e4252b3ee708a9fa0385346429b9bed758d3ad36e5ec6fc0fd3abeaade9",
+    "secondary": {
+      "member": "runs/final177/residual177_224_seed435/best_model.pt",
+      "member_sha256": "25e3f2225fa3a7f6490edfee5feac88fa3bf480b9b061c2eb530d6e9810c22c3"
+    },
+    "policy": "d4_probability_mean",
+    "known_crop": "tomato",
+    "represented_labels": [
+      "tomato__bacterial_spot",
+      "tomato__early_blight",
+      "tomato__healthy",
+      "tomato__late_blight",
+      "tomato__yellow_leaf_curl_virus"
+    ],
+    "scoring": "Average F1 over the five preregistered source labels. Keep all 177 outputs available in automatic, and all ten existing tomato classes available when given the crop. Average the two probability arrays before optional restriction. Score the most frequent master training class using the appropriate candidate set under each scope. Compare accuracy, wrong crop, both directional blight confusions, and per-label support."
+  },
+  "release": {
+    "version": "leafcheck_bangladesh_tomato_v1",
+    "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+    "candidates": 604,
+    "files_sha256": {
+      "manifest.csv": "e921621af3e7023e40b8f68f4066e9b40f04b3a218db723d731dac43ddc38426",
+      "source.json": "e8a2a0299e61d6a108da7514f519735c522237b155fc6d71de8dc5cb168872ee",
+      "source_files.csv": "246e75fc528c092a807d5a2aa2fc2dbf1a08f2e01e1cd554a196c4e94f1a26e4"
+    },
+    "test_only_counts": {
+      "tomato__bacterial_spot": 101,
+      "tomato__early_blight": 105,
+      "tomato__healthy": 100,
+      "tomato__late_blight": 95,
+      "tomato__yellow_leaf_curl_virus": 107
+    },
+    "exclusions": {
+      "new_cluster_label_conflict": 46,
+      "existing_visual_candidate": 23,
+      "new_cluster_repeated_view": 27
+    },
+    "fingerprint": "efe1af35f3e9bcfe5e596bdb4f3116a90bd6069d89c1560062bc6c398992d7fa"
+  },
+  "frozen_utc": "2026-11-24T19:48:10.271427+00:00",
+  "evaluator_sha256": "f1121e9e9ade846dd0c9f3a9f711c0edf464687e1a36bbecb39591b42f2fa9f8",
+  "validation_decision_sha256": "fb29e57f42e46553124bdf03f37ef6f99e65624afdc20e2e568e3eac30b69a9c",
+  "revision": "a8b13886f57ff5b262e86454df8567c1431d5de3"
+}

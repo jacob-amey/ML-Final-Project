@@ -105,6 +105,19 @@ The build commands expect absent output directories.
 .venv/bin/python scripts/prepare_tom2024.py build
 ```
 
+The [Bangladesh tomato collection](https://data.mendeley.com/datasets/jttrv2w27r/1)
+contributes 508 test-only images across five labels, including both blights.
+It is separately licensed CC BY 4.0. Restore the prior field releases and
+TOM2024 first. The [registry](manifests/leafcheck_bangladesh_tomato_v1_source.json)
+and [file checksums](manifests/leafcheck_bangladesh_tomato_v1_files.csv) pin the
+publisher inputs. Match the [release seal](manifests/leafcheck_bangladesh_tomato_v1_release.json)
+before evaluating.
+
+```sh
+.venv/bin/python scripts/prepare_bangladesh_tomato_holdout.py fetch
+.venv/bin/python scripts/prepare_bangladesh_tomato_holdout.py build
+```
+
 ## Earlier three-class dataset
 
 The dataset assigns `early_blight`, `healthy`, and `late_blight` to class indices 0, 1, and 2 respectively. The image folders under `data/processed/leafcheck/` are ready for a loader such as PyTorch `ImageFolder`. The [image inventory](manifests/image_inventory.csv) records the exact membership, original path, source revision, group, file hash, and any exclusion. The [label mapping](manifests/label_mapping.csv) records how the source labels translate to project labels.

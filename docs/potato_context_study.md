@@ -147,6 +147,68 @@ after restoring the [data releases](../data/README.md).
 Add `--resume` with the same arguments to continue from a compatible
 checkpoint. For an independent replication, use a new run directory.
 
+## Reserved Bangladesh tomato check
+
+This separate check tested whether the validation-selected two-seed gain
+transferred to another source that contains both tomato blights. A fixed
+publisher-ID hash selected up to 125 images per compatible label, including
+all 112 late blight candidates. The 604 verified publisher originals yielded
+508 evaluation images after removing 23 possible cross-release matches, 27
+candidate repeat views, and 46 members of potential label-conflict groups.
+Specimen IDs and independent diagnoses are unavailable. The authors report
+collection across agricultural regions. The reviewed contact sheet showed
+isolated leaves on light backgrounds, so this is a source-transfer check
+with limited relevance to whole-plant garden uploads.
+[Publisher and CC BY 4.0 listing](https://data.mendeley.com/datasets/jttrv2w27r/1) ·
+[Release seal](../data/manifests/leafcheck_bangladesh_tomato_v1_release.json)
+
+The evaluation plan and exact membership were frozen before inference.
+Every method uses the same 508 image IDs. Macro-F1 averages the five source
+labels, including 105 early blight and 95 late blight examples. Automatic
+mode can return any of 177 labels. For the known-crop diagnostic, tomato is
+supplied and all ten existing tomato labels stay eligible.
+
+| Method | Correct / 508 | Accuracy | Macro-F1 | Wrong crop |
+| --- | ---: | ---: | ---: | ---: |
+| Original automatic CNN | 1 | 0.20% | 0.004040 | 486 |
+| Two-seed automatic ensemble | 0 | 0.00% | 0.000000 | 491 |
+| Original CNN given tomato | 56 | 11.02% | 0.098884 | 0 |
+| Two-seed ensemble given tomato | 59 | 11.61% | 0.127929 | 0 |
+| Automatic training frequency rule, grape black rot | 0 | 0.00% | 0.000000 | 508 |
+| Known-tomato training frequency rule, yellow leaf curl virus | 107 | 21.06% | 0.069593 | 0 |
+
+| Method | Early → late / all early | Late → early / all late |
+| --- | ---: | ---: |
+| Original automatic CNN | 1 / 105 | 3 / 95 |
+| Two-seed automatic ensemble | 1 / 105 | 2 / 95 |
+| Original given tomato | 26 / 105 | 15 / 95 |
+| Two-seed ensemble given tomato | 20 / 105 | 16 / 95 |
+
+The original automatic model predicted another crop on 98/105 early blight
+and 90/95 late blight photos. Given tomato it identified 10/105 and 39/95,
+respectively. The known-crop classifiers spread correct predictions across
+multiple labels, which improves macro-F1 over the rule while yielding lower
+top-1 accuracy. The ensemble's higher master validation score did not
+translate to accurate automatic answers here. On this source an automatic
+late-blight mistake can remain a condition mistake even when the crop is
+supplied. The two documented late-blight examples preserve the inherited
+labels and each model's prediction. The deployed app offers potato context.
+The tomato scores are research diagnostics.
+[Freeze](potato_context/bangladesh_tomato_freeze.json) ·
+[Independently reconciled metrics and examples](potato_context/bangladesh_tomato_metrics.json) ·
+[Prediction records](potato_context/bangladesh_tomato_predictions.csv)
+
+The recipes for restoring the source are in the [data guide](../data/README.md).
+From the project root, with the original/default paths and checkpoints in
+place, run the following in a new output directory for verification of the
+same frozen protocol. Reuse the saved prediction records when images are
+unavailable. Keep these images and scores out of training and selection.
+
+```sh
+.venv/bin/python -m leafcheck.tomato_holdout freeze --output runs/tomato_transfer_reproduction
+.venv/bin/python -m leafcheck.tomato_holdout evaluate --output runs/tomato_transfer_reproduction
+```
+
 ## What the app does
 
 Automatic mode uses the original freeze with the prior uncertainty rule.
