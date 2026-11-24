@@ -1,0 +1,73 @@
+{
+  "version": "leafcheck_field_v2",
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "protocol": "Bapari is train only. Huang is a blind tomato evaluation source. Mduma image sessions are grouped by capture day if the date comes from source filenames or EXIF and covers the candidates. Unknown days stay train only. The already evaluated PLDD-UP collection stays outside development.",
+  "sources": {
+    "bapari": {
+      "page": "https://data.mendeley.com/datasets/74zvtzx9pr/1",
+      "credit": "Puja Bapari, Md Zinnahtur Rahman Zitu and Mst Ummehani",
+      "doi": "10.17632/74zvtzx9pr.1",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "files": [
+        {
+          "name": "Bapari2025.rar",
+          "url": "https://data.mendeley.com/public-files/datasets/74zvtzx9pr/files/cf14e677-07db-48d7-a1a0-89772878159b/file_downloaded",
+          "sha256": "a8bdcfa949fad6292f0a81dad44eaba660c76a749f56b73cf8b12c6b649d0286"
+        }
+      ],
+      "labels": {
+        "Disease/Bacterial_Spot": "tomato__bacterial_spot",
+        "Disease/Septoria_Leaf_Spot": "tomato__septoria_leaf_spot",
+        "Disease_Free": "tomato__healthy"
+      }
+    },
+    "huang": {
+      "page": "https://data.mendeley.com/datasets/ngdgg79rzb/1",
+      "credit": "Mei-Ling Huang and Ya-Han Chang",
+      "doi": "10.17632/ngdgg79rzb.1",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "files": [
+        {
+          "name": "taiwan.7z",
+          "url": "https://data.mendeley.com/public-files/datasets/ngdgg79rzb/files/255e82b6-2b3a-41d2-bd07-7bfaf284a533/file_downloaded",
+          "sha256": "f623d13a7f0388dada08ca5b5f22716557defce3832f50ff6af7153e0eab676d"
+        }
+      ],
+      "labels": {
+        "Bacterial spot": "tomato__bacterial_spot",
+        "Late blight": "tomato__late_blight",
+        "health": "tomato__healthy"
+      }
+    },
+    "mduma": {
+      "page": "https://zenodo.org/records/8286529",
+      "credit": "Hudson Laizer, Neema Mduma, Dina Machuve, Tumaini Lyimo, Claire Babirye, Jenifa Swai and Adam Siwingwa",
+      "doi": "10.5281/zenodo.8286529",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "files": [
+        {
+          "name": "mduma-earlyblt.zip",
+          "label": "potato__early_blight",
+          "url": "https://zenodo.org/records/8286529/files/earlyblt.zip?download=1",
+          "md5": "b548e41ecf600700d75ec51ac5bdd293"
+        },
+        {
+          "name": "mduma-lateblt.zip",
+          "label": "potato__late_blight",
+          "url": "https://zenodo.org/records/8286529/files/lateblt.zip?download=1",
+          "md5": "59f0e1dbe4a223bc7921e1766edd4f23"
+        },
+        {
+          "name": "mduma-healthy.zip",
+          "label": "potato__healthy",
+          "url": "https://zenodo.org/records/8286529/files/healthy.zip?download=1",
+          "md5": "06d7c7f1c0ef778bb8dd0dd4786ef57f"
+        }
+      ],
+      "sample_per_class": 600
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "initial_weights": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "initialization": "Continue all trainable layers of the in-house randomly initialized CNN. The historical delivery stays frozen.",
+  "hypothesis": "New, screened field collections improve labeled field validation faster than the same training steps on label-matched historical images.",
+  "seed": 434,
+  "epochs": 4,
+  "master_per_epoch": 4096,
+  "batch_size": 128,
+  "learning_rate": 0.00008,
+  "weight_decay": 0.0001,
+  "distillation_temperature": 2.0,
+  "distillation_mix": 0.4,
+  "fixed_batchnorm_statistics": true,
+  "augmentation": "dihedral_color",
+  "selection": {
+    "primary": "Master validation macro-F1 across all 177 labels. Screen checkpoints with single view, then compare the best eligible checkpoint from each arm with the deployed D4 policy.",
+    "master_max_drop": 0.002,
+    "field_min_gain": 0.06,
+    "control_min_gain": 0.02,
+    "accuracy_max_drop": 0.005,
+    "checkpoint_ties": "Master unweighted loss within 1e-6, then earlier epoch",
+    "field_slices": "Three-label Sheikh tomato capture-date validation with all 177 outputs and, when available, the three potato labels from date-held Mduma validation. Aggregate by mean of slice macro-F1. Observe Banu separately.",
+    "stop": "Run both arms and compare under the same D4 policy. If the challenger fails the field and broad task guards, retain the incumbent. Test any promoted model only after a freeze. Optional blind research comparison is frozen before a single evaluation and cannot be used to tune."
+  }
+}
