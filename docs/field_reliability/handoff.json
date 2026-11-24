@@ -1,0 +1,14 @@
+{
+  "last_completed_milestone": "verified local app and standalone demo with the validation-selected withholding rule",
+  "app_source_revision": "e699f42bd962ab4fea5ec06d1c924355e44d03ee",
+  "published_remotely": false,
+  "active_trainer": null,
+  "training_run_root": "runs/refit_v1",
+  "selected_checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "field_already_evaluated": true,
+  "frozen_field_replay_reproduced_csv_byte_for_byte": true,
+  "next_experiment_prerequisite": "New field-training sources with independent plants/sessions and an evaluation source with no previous exposure",
+  "next_experiment": "Compare the existing scratch CNN to a full-task scratch CNN trained on newly labeled source-diverse data, with a fixed manifest and all 177 labels eligible",
+  "archive": "artifacts/LeafCheck-field-reliability-demo.zip",
+  "archive_sha256": "a5438c2036412ed08ae40378426bc37a1bcbd49add8228ec91ca13e28d774727"
+}
