@@ -1,0 +1,19 @@
+{
+  "version": "leafcheck_tom2024_v1",
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "candidates": 586,
+  "files_sha256": {
+    "manifest.csv": "4f5716c0e9fc1edddc8eefd26363e98bff8625de9e0aa7c3a37f51ee697e4a68",
+    "source.json": "cc45973d911803784575d9b801f8408de668cc76a478c71ef3a906a801a05a2a",
+    "source_files.csv": "64bf67fcc070c147d03fc9bf05981a97425a5603934f1b9e3d0b4eab771e6814"
+  },
+  "train_only_counts": {
+    "tomato__healthy": 255,
+    "tomato__late_blight": 73,
+    "corn__healthy": 250
+  },
+  "exclusions": {
+    "new_cluster_repeated_view": 8
+  },
+  "fingerprint": "b7ffad9c9287f71fd8a4171c0f819e787dc04bef208cbb3a05a5728762b11f2f"
+}

@@ -45,7 +45,8 @@ def load_inputs(release_dir, config):
 
 def prepare_development(previous, new, size):
     dev = {}
-    for source, members in (("sheikh", previous), ("banu", previous), ("mduma", new)):
+    members = previous + new
+    for source in ("sheikh", "banu", "mduma"):
         records = [r for r in members if r["source"] == source and r["split"] == "val"]
         if records:
             labels = np.array([int(row["class_id"]) for row in records])
@@ -80,12 +81,16 @@ def validate(model, validation, dev, classes, spec, device, config, policy):
     main["wrong_crop"] = int(np.asarray(main["confusion_matrix"])[crops[:, None] != crops].sum())
     main["right_crop_wrong_condition"] = main["sample_count"] - main["correct"] - main["wrong_crop"]
     fields = field_scores(scoring, dev, classes, spec, device, config["batch_size"])
-    return {
+    result = {
         "master": dict(summarize(main), loss=main["loss"]),
         "fields": fields,
         "selection_field_f1": float(np.mean([metrics["macro_f1"]
                                              for source, metrics in fields.items() if source != "banu"])),
     }
+    if config.get("tracked_labels"):
+        result["tracked_master_labels"] = {row["class_name"]: row for row in main["per_class"]
+                                           if row["class_name"] in config["tracked_labels"]}
+    return result
 
 
 def choose(checkpoint, best):
@@ -152,6 +157,8 @@ def mixed_epoch(model, teacher, optimizer, cache, common, extra, extra_labels, s
             distill = F.kl_div(logit[:len(base)].div(t).log_softmax(1), reference, reduction="none").sum(1) * t * t
             proportion = config["distillation_mix"]
             weighted[:len(base)] = (1 - proportion) * per_image[:len(base)] * weights[ground[:len(base)]] + proportion * distill
+        if config.get("field_loss_scale", 1.0) != 1.0:
+            weighted[len(base):] *= config["field_loss_scale"]
         loss = weighted.mean()
         if not torch.isfinite(loss).item():
             raise FloatingPointError("Nonfinite training loss")
@@ -170,6 +177,14 @@ def run(release_dir, output, config, resume):
     torch.set_num_threads(4)
     device = device_for("auto")
     frozen, release, previous, new = load_inputs(release_dir, config)
+    common_release = config.get("common_field_release")
+    if common_release:
+        _, saved, _, common_members = load_inputs(ROOT / common_release["path"], config)
+        if saved["fingerprint"] != common_release["fingerprint"]:
+            raise ValueError("The shared field release changed")
+        if {r["image_id"] for r in common_members}.intersection(r["image_id"] for r in new):
+            raise ValueError("Shared and experimental rows overlap")
+        previous = previous + common_members
     receipt = {"config": config, "release": release["fingerprint"],
                "master": frozen["fingerprint"], "device": environment(device),
                "trainer_sha256": sha256(Path(__file__)),
@@ -188,7 +203,7 @@ def run(release_dir, output, config, resume):
     dev = prepare_development(previous, new, spec["input_size"])
     old_train = [r for r in previous if r["split"] == "train"]
     new_train = [r for r in new if r["split"] == "train"]
-    assert set(r["source"] for r in new_train).issubset({"bapari", "mduma"})
+    assert set(r["source"] for r in new_train).issubset(config.get("new_training_sources", {"bapari", "mduma"}))
     assert new_train and len(train) == 59008 and len(val) == 16836
     common = pixels(old_train, spec["input_size"]), np.array([int(r["class_id"]) for r in old_train])
     extra = pixels(new_train, spec["input_size"])
