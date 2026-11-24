@@ -1,0 +1,6 @@
+{
+  "hypothesis": "Interpolating toward the field-trained CNN can retain label coverage with the same inference cost. The pilot control gained on the Sheikh slice while losing full-task macro-F1 and accuracy.",
+  "scope": "Completed paired runs only, each interpolated from the same original in-house weights. No test data or new forward passes at deployment.",
+  "new_weight_fractions": [0.0625, 0.125, 0.25, 0.5],
+  "selection": "Rank fractions by full validation macro-F1 within the parent single-view eligibility limits, then use the parent tie-break. When none qualify, verify the highest full validation macro-F1 in D4 for diagnosis. Evaluate one fraction from each arm at D4 and apply the same parent validation promotion limits."
+}
