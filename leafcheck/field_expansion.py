@@ -177,6 +177,8 @@ def run(release_dir, output, config, resume):
     torch.set_num_threads(4)
     device = device_for("auto")
     frozen, release, previous, new = load_inputs(release_dir, config)
+    if config.get("new_release_fingerprint", release["fingerprint"]) != release["fingerprint"]:
+        raise ValueError("The experimental release changed")
     common_release = config.get("common_field_release")
     if common_release:
         _, saved, _, common_members = load_inputs(ROOT / common_release["path"], config)
@@ -208,6 +210,16 @@ def run(release_dir, output, config, resume):
     common = pixels(old_train, spec["input_size"]), np.array([int(r["class_id"]) for r in old_train])
     extra = pixels(new_train, spec["input_size"])
     extra_labels = np.array([int(r["class_id"]) for r in new_train])
+    matched_images = None
+    if config.get("match_original_images"):
+        train_index = {row["image_id"]: index for index, row in enumerate(train.rows)}
+        parent_indices = [train_index[row["parent_image_id"]] for row in new_train]
+        if (len(parent_indices) != len(set(parent_indices))
+                or not np.array_equal(train.labels[parent_indices], extra_labels)
+                or any(train.rows[index]["group_id"] != row["group_id"]
+                       for index, row in zip(parent_indices, new_train))):
+            raise ValueError("Matched augmentation parents do not match frozen training labels and groups")
+        matched_images, _ = train.batch(np.asarray(parent_indices))
     stop = {"requested": False}
 
     def pause(signum, frame):
@@ -252,7 +264,8 @@ def run(release_dir, output, config, resume):
             started = time.monotonic()
             atomic_json(output / "status.json", {"state": "training", "arm": arm, "epoch": epoch,
                                                 "latest": str(latest), "utc": utc_now()})
-            loss = mixed_epoch(model, incumbent.model, optimizer, train, common, extra if arm == "new_field" else None,
+            arm_images = extra if arm == "new_field" else matched_images
+            loss = mixed_epoch(model, incumbent.model, optimizer, train, common, arm_images,
                                extra_labels, spec, device, config, epoch, stop)
             if loss is None:
                 atomic_json(output / "status.json", {"state": "paused", "arm": arm, "epoch": epoch, "latest": str(latest)})
@@ -298,7 +311,9 @@ def run(release_dir, output, config, resume):
     baseline = reference["d4_probability_mean"]
     control, candidate = selected["matched_control"], selected["new_field"]
     promoted = (is_eligible(candidate, baseline, rules)
-                and candidate["selection_field_f1"] >= control["selection_field_f1"] + rules["control_min_gain"])
+                and candidate["selection_field_f1"] >= control["selection_field_f1"] + rules["control_min_gain"]
+                and candidate["master"]["macro_f1"] >= control["master"]["macro_f1"]
+                + rules.get("control_min_master_gain", -1.0))
     atomic_json(output / "decision.json", {"baseline": baseline, "arms": selected, "promotion_guards_passed": promoted,
                                             "test_opened": False, "release": release["fingerprint"],
                                             "development_utc": utc_now(), "base_checkpoint": config["initial_weights"]})

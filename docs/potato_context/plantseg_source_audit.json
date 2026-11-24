@@ -1,0 +1,20 @@
+{
+  "publisher_records": 7774,
+  "matched_crc_size_and_frozen_sha256": 7774,
+  "leafcheck_roles": {
+    "excluded": 625,
+    "train": 5301,
+    "val": 1206,
+    "test": 642
+  },
+  "publisher_test_leafcheck_roles": {
+    "train": 1081,
+    "excluded": 133,
+    "val": 231,
+    "test": 116
+  },
+  "publisher_metadata_sha256": "03025e84fd4847e21a8cf1a7690b9c5ba40a933022f973df0a5611ffc0439fd2",
+  "archive": "https://zenodo.org/records/17719108/files/plantseg.zip?download=1",
+  "method": "Case-insensitive image basename, archive ZIP size and CRC32, original file SHA-256.",
+  "release_use": "Already present in the original frozen master. Never an independent test or new image source."
+}

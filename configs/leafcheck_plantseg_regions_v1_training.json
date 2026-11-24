@@ -1,0 +1,42 @@
+{
+  "initial_weights": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "initialization": "Continue the in-house CNN, originally trained from random initialization. Neither arm opens a holdout or requires a mask at inference.",
+  "hypothesis": "Lesion crops with surrounding context produce a useful training signal beyond rehearsal of the exact same original training images. Use only compatible PlantSeg annotations whose parents occur in both designated training splits.",
+  "seed": 434,
+  "epochs": 4,
+  "master_per_epoch": 14752,
+  "batch_size": 128,
+  "learning_rate": 1e-05,
+  "weight_decay": 0.0001,
+  "distillation_temperature": 2.0,
+  "distillation_mix": 0.8,
+  "fixed_batchnorm_statistics": true,
+  "augmentation": "dihedral_color",
+  "match_original_images": true,
+  "field_loss_scale": 0.35,
+  "tracked_labels": [
+    "tomato__early_blight",
+    "tomato__late_blight",
+    "potato__early_blight",
+    "potato__late_blight"
+  ],
+  "new_training_sources": [
+    "plantseg"
+  ],
+  "new_release_fingerprint": "1f73f877549782529fb7bd0f0f39fb9b9420b7199a82176580d2bd9f212ee596",
+  "common_field_release": {
+    "path": "data/processed/leafcheck_field_v2_sampled",
+    "fingerprint": "94a9489fce692e2b8d21adc312fc882ae42de23686f26319cecc51d07150b781"
+  },
+  "selection": {
+    "primary": "Master validation macro-F1 across all 177 labels. Minimum gain over the original is .003. Compare selected eligible checkpoints using the original D4 policy. If an arm has no eligible single-view checkpoint, score its strongest master epoch for diagnosis.",
+    "master_max_drop": -0.003,
+    "field_min_gain": 0.06,
+    "control_min_gain": 0.02,
+    "control_min_master_gain": 0.000001,
+    "accuracy_max_drop": 0.005,
+    "checkpoint_ties": "Master unweighted loss within 1e-6, then earlier epoch",
+    "field_slices": "Sheikh tomato and Mduma potato grouped development, with Banu and the four affected blight labels recorded as diagnostics.",
+    "stop": "Complete both four-epoch arms. A qualifying candidate must also strictly beat the matched control on master macro-F1 before a repeat. Keep the frozen app model if the crop recipe fails the broad and field conditions."
+  }
+}
