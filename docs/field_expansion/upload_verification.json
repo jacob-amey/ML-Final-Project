@@ -1,0 +1,165 @@
+{
+  "observed_utc": "2026-11-24T18:44:05.160868+00:00",
+  "app_revision": "580ca931d5b96219",
+  "archive_sha256": "d75159f57dd1b16b80a14a2e298e9f2cabccc3e0c987f81baaa0279f20d1dcc1",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "all_four_models_ready": true,
+  "extracted_app_only": true,
+  "browser": [
+    {
+      "file_sha256": "6fb3fbb49bce4e3ba7a25bea54de0189d0fccecb93ffff0352b399c500918f5a",
+      "check": "oversized original",
+      "observed": "Choose a photo at 24 megapixels or less. Export a smaller copy if needed.",
+      "compare_enabled": false
+    },
+    {
+      "file_sha256": "27fd4d094aa2f321586f87e3b258de4dd9a4e0fbdac0ac42a29c119f1b848584",
+      "check": "invalid JPEG",
+      "observed": "This image could not be opened. Try another JPEG or PNG."
+    },
+    {
+      "file_sha256": "ac676cd2ba45f6a878dd59d8f86084e8b86606f8a9576524d34770bf0bda8721",
+      "check": "unseen by the incumbent training, registered potato development fixture",
+      "observed": "preview and Uncertain result after Run comparison",
+      "model_score": 0.4626689553260803
+    },
+    {
+      "file_sha256": "006de0ecce8258a77cebb023fbdc8fb417f63b5bc130c974293e53579101a12b",
+      "check": "packaged frozen success uploaded with the file chooser",
+      "observed": "Healthy, Tomato, 100.0% model score display",
+      "prediction": "tomato__healthy"
+    }
+  ],
+  "api": {
+    "app_revision": "1c9ddf37ab999a9b",
+    "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+    "class_map_sha256": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a",
+    "models_ready": {
+      "final177": true,
+      "cnn": true,
+      "starter300": true,
+      "createml": true
+    },
+    "probes": [
+      {
+        "source": "banu",
+        "actual": "potato__late_blight",
+        "displayed_model_label": "tea__red_leaf_spot",
+        "decision": "suggestion",
+        "score": 0.8583055138587952,
+        "class_score_error": 0.0,
+        "source_image_sha256": "5addb7a02fdb6f7637c322f17363ac51cdcb539e513c4b06efa426cca7f7b5fc",
+        "image_path": "data/processed/leafcheck_blight_v1/val/potato__late_blight/5addb7a02fdb6f7637c322f17363ac51cdcb539e513c4b06efa426cca7f7b5fc.jpg",
+        "latency_ms": 180.74120899836998
+      },
+      {
+        "source": "banu",
+        "actual": "tomato__healthy",
+        "displayed_model_label": "tea__red_leaf_spot",
+        "decision": "suggestion",
+        "score": 0.9779159426689148,
+        "class_score_error": 0.0,
+        "source_image_sha256": "f6282676e19c96431799516aca63f047b0208c53bd42210a731685660b4ecb0f",
+        "image_path": "data/processed/leafcheck_blight_v1/val/tomato__healthy/f6282676e19c96431799516aca63f047b0208c53bd42210a731685660b4ecb0f.jpg",
+        "latency_ms": 116.48420900019119
+      },
+      {
+        "source": "bugwood",
+        "actual": "potato__late_blight",
+        "displayed_model_label": "potato__late_blight",
+        "decision": "suggestion",
+        "score": 0.7289549708366394,
+        "class_score_error": 0.0,
+        "source_image_sha256": "2e755a7d444fe0b715c0fcac8ec480fb6c21503cff9ea5991110034477ea11c2",
+        "image_path": "data/processed/leafcheck_blight_v1/val/potato__late_blight/2e755a7d444fe0b715c0fcac8ec480fb6c21503cff9ea5991110034477ea11c2.jpg",
+        "latency_ms": 53.15275000248221
+      },
+      {
+        "source": "bugwood",
+        "actual": "tomato__early_blight",
+        "displayed_model_label": "coffee__berry_blotch",
+        "decision": "uncertain",
+        "score": 0.20576266944408417,
+        "class_score_error": 0.0,
+        "source_image_sha256": "5430bbf379b84b139d66d34cd268ef265bcbdf4aec186af8ecd3beb9b96650c8",
+        "image_path": "data/processed/leafcheck_blight_v1/val/tomato__early_blight/5430bbf379b84b139d66d34cd268ef265bcbdf4aec186af8ecd3beb9b96650c8.jpg",
+        "latency_ms": 53.48000000230968
+      },
+      {
+        "source": "bugwood",
+        "actual": "tomato__late_blight",
+        "displayed_model_label": "basil__downy_mildew",
+        "decision": "uncertain",
+        "score": 0.16518692672252655,
+        "class_score_error": 0.0,
+        "source_image_sha256": "5a9ad0167b37180d46a04f8e939be030fe26c36f92b036b8c1c355b56d139cad",
+        "image_path": "data/processed/leafcheck_blight_v1/val/tomato__late_blight/5a9ad0167b37180d46a04f8e939be030fe26c36f92b036b8c1c355b56d139cad.jpg",
+        "latency_ms": 50.96995900021284
+      },
+      {
+        "source": "mduma",
+        "actual": "potato__early_blight",
+        "displayed_model_label": "cucumber__powdery_mildew",
+        "decision": "uncertain",
+        "score": 0.4626689553260803,
+        "class_score_error": 0.0,
+        "source_image_sha256": "ac676cd2ba45f6a878dd59d8f86084e8b86606f8a9576524d34770bf0bda8721",
+        "image_path": "data/processed/leafcheck_field_v2_sampled/val/potato__early_blight/ac676cd2ba45f6a878dd59d8f86084e8b86606f8a9576524d34770bf0bda8721.jpg",
+        "latency_ms": 54.1933330023312
+      },
+      {
+        "source": "mduma",
+        "actual": "potato__healthy",
+        "displayed_model_label": "chili__whitefly",
+        "decision": "uncertain",
+        "score": 0.3267163038253784,
+        "class_score_error": 0.0,
+        "source_image_sha256": "02b784912e7ee20a66a0415d4e5c070dc923b66beecca0b94f128777a1a6c879",
+        "image_path": "data/processed/leafcheck_field_v2_sampled/val/potato__healthy/02b784912e7ee20a66a0415d4e5c070dc923b66beecca0b94f128777a1a6c879.jpg",
+        "latency_ms": 52.434791999985464
+      },
+      {
+        "source": "mduma",
+        "actual": "potato__late_blight",
+        "displayed_model_label": "potato__late_blight",
+        "decision": "uncertain",
+        "score": 0.39652225375175476,
+        "class_score_error": 0.0,
+        "source_image_sha256": "4f83e3f5f2875738a17519804e5cf925e463098b134d622cd35eb4d7ba8be840",
+        "image_path": "data/processed/leafcheck_field_v2_sampled/val/potato__late_blight/4f83e3f5f2875738a17519804e5cf925e463098b134d622cd35eb4d7ba8be840.jpg",
+        "latency_ms": 52.90450000029523
+      },
+      {
+        "source": "sheikh",
+        "actual": "tomato__early_blight",
+        "displayed_model_label": "rice__leaf_blast",
+        "decision": "suggestion",
+        "score": 0.94792240858078,
+        "class_score_error": 0.0,
+        "source_image_sha256": "a4cc9c83c5a63f8ba389af2d36376fdd7ecee0f83e8506ef1a0add8bdff7ab85",
+        "image_path": "data/processed/leafcheck_blight_v1/val/tomato__early_blight/a4cc9c83c5a63f8ba389af2d36376fdd7ecee0f83e8506ef1a0add8bdff7ab85.png",
+        "latency_ms": 42.715292001958005
+      },
+      {
+        "source": "sheikh",
+        "actual": "tomato__healthy",
+        "displayed_model_label": "apple__healthy",
+        "decision": "uncertain",
+        "score": 0.31833094358444214,
+        "class_score_error": 0.0,
+        "source_image_sha256": "c02c91ee271f15b18e34e8803e0e102dfdd52007c1487727f8f744d17211cd67",
+        "image_path": "data/processed/leafcheck_blight_v1/val/tomato__healthy/c02c91ee271f15b18e34e8803e0e102dfdd52007c1487727f8f744d17211cd67.png",
+        "latency_ms": 49.508166997839
+      }
+    ],
+    "invalid_upload": {
+      "status": 400,
+      "body": {
+        "error": "This image could not be read. Try another JPEG or PNG photo."
+      }
+    },
+    "above_limits": {
+      "banu": 37
+    }
+  }
+}
