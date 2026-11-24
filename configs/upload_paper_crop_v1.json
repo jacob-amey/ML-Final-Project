@@ -1,0 +1,8 @@
+{
+  "hypothesis": "Cropping the clearly isolated specimen on a uniform light background may reduce dependence on lighting, background and leaf scale while preserving the original CNN and all 177 outputs.",
+  "recipe": "Only crop when each border is at least 85% bright gray pixels, there is 4% to 70% visible foreground, and an expanded foreground box occupies at most 85% of the frame. Compare a crop with averaged original-and-crop scores.",
+  "minimum_master_macro_f1_gain": 0.001,
+  "minimum_supplement_macro_f1_gain": 0.025,
+  "scoring": "Master validation macro-F1 over all 177 labels; four represented supplement labels, with all 177 predictions eligible. Bugwood field fixtures are diagnostic only.",
+  "stop": "Do not retune the foreground or promotion thresholds on these data."
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "case": "master late-blight success",
+    "path": "data/processed/leafcheck177_final/val/tomato__late_blight/tomato__late_blight__000001.jpg",
+    "reference_label": "tomato__late_blight",
+    "reference_kind": "dataset/catalog annotation",
+    "jacob_original": false
+  },
+  {
+    "case": "master late to early",
+    "path": "data/processed/leafcheck177_final/val/tomato__late_blight/tomato__late_blight__000039.jpg",
+    "reference_label": "tomato__late_blight",
+    "reference_kind": "dataset/catalog annotation",
+    "jacob_original": false
+  },
+  {
+    "case": "master early to late",
+    "path": "data/processed/leafcheck177_final/val/tomato__early_blight/tomato__early_blight__000386.jpg",
+    "reference_label": "tomato__early_blight",
+    "reference_kind": "dataset/catalog annotation",
+    "jacob_original": false
+  },
+  {
+    "case": "cataloged field tomato, broad framing",
+    "path": "data/raw/leafcheck_blight_v1/field/1568028.jpg",
+    "reference_label": "tomato__late_blight",
+    "reference_kind": "dataset/catalog annotation",
+    "jacob_original": false
+  },
+  {
+    "case": "white paper early blight",
+    "path": "data/processed/leafcheck_blight_v1/val/tomato__early_blight/a4cc9c83c5a63f8ba389af2d36376fdd7ecee0f83e8506ef1a0add8bdff7ab85.png",
+    "reference_label": "tomato__early_blight",
+    "reference_kind": "dataset/catalog annotation",
+    "jacob_original": false
+  },
+  {
+    "case": "valid catalog JPEG above the 24-megapixel upload limit",
+    "path": "data/processed/leafcheck_blight_v1/val/tomato__late_blight/6fb3fbb49bce4e3ba7a25bea54de0189d0fccecb93ffff0352b399c500918f5a.jpg",
+    "reference_label": "tomato__late_blight",
+    "reference_kind": "dataset/catalog annotation",
+    "jacob_original": false,
+    "expect_pixel_limit": true
+  }
+]

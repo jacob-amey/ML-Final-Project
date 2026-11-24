@@ -96,8 +96,9 @@ def main():
                     image.save(path)
                     result = comparison.predict(path)
                 return self.send_json(result)
-            except (UnidentifiedImageError, OSError, ValueError, Image.DecompressionBombError,
-                    Image.DecompressionBombWarning):
+            except (Image.DecompressionBombError, Image.DecompressionBombWarning):
+                return self.send_json({"error": "Choose an image under 24 megapixels."}, 413)
+            except (UnidentifiedImageError, OSError, ValueError):
                 return self.send_json({"error": "This image could not be read. Try another JPEG or PNG photo."}, 400)
 
     # A second launch can reopen the app without loading another set of models.

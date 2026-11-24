@@ -8,6 +8,7 @@ import sys
 import tempfile
 import unittest
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 from PIL import Image
 import torch
 
@@ -77,6 +78,15 @@ class FinalModelIntegrationTests(unittest.TestCase):
         from unittest.mock import patch
         with patch.dict(os.environ, {"LEAFCHECK_FINAL_ARTIFACT": "/nonexistent/leafcheck-final-model"}):
             with self.assertRaises(FileNotFoundError): FinalCNN()
+
+    def test_valid_jpeg_above_pixel_cap_reports_size_limit(self):
+        buffer = BytesIO()
+        Image.new("RGB", (6000, 4001), (25, 130, 45)).save(buffer, "JPEG")
+        with self.assertRaises(HTTPError) as error:
+            self.request(buffer.getvalue(), "image/jpeg")
+        with error.exception as response:
+            self.assertEqual(response.code, 413)
+            self.assertIn("24 megapixels", json.load(response)["error"])
 
     def test_multi_picture_jpeg_uses_frame_zero(self):
         directory = self.adapter.predictor.directory

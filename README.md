@@ -54,6 +54,8 @@ Read `docs/final_model_selection.json` for the pre-test decision,
 - `docs/comparison_protocol.json`: label coverage and exposure audit.
 - `docs/model_defense_guide.md`: architecture, concepts and presentation questions.
 - `docs/contributions.md`: actual roles, evidence and AI assistance.
+- [Upload and blight study](docs/upload_blight_study.md): validation results by
+  crop and source, app replay, experiment decisions and the upload-limit fix.
 
 ## Run the delivered study
 

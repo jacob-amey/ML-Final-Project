@@ -1,0 +1,358 @@
+{
+  "normal_app_revision": "95d010b216eacaa3",
+  "hash": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "preprocessing": {
+    "version": "exif_rgb_letterbox_bilinear_v1",
+    "input_size": 224,
+    "mean": [
+      0.4784016648304472,
+      0.5105523029653197,
+      0.4226283058778863
+    ],
+    "std": [
+      0.21336004335832504,
+      0.19522565407254905,
+      0.2335556113898882
+    ],
+    "statistics_split": "train",
+    "statistics_images": 59008,
+    "resize": "Pillow ImageOps.pad bilinear, RGB padding 128",
+    "orientation": "EXIF transpose",
+    "channels": "RGB",
+    "frame": 0,
+    "scaling": "uint8 / 255, then (x - mean) / std",
+    "tensor_layout": "NCHW"
+  },
+  "cases": [
+    {
+      "case": "master late-blight success",
+      "path": "data/processed/leafcheck177_final/val/tomato__late_blight/tomato__late_blight__000001.jpg",
+      "reference_label": "tomato__late_blight",
+      "reference_kind": "dataset/catalog annotation",
+      "jacob_original": false,
+      "input_sha256": "355d9ed5d0212dfc72eeda78118c55966febe086b60ff46fd7702766e92827d3",
+      "source_size": [
+        256,
+        256
+      ],
+      "source_mode": "RGB",
+      "exif_orientation": 1,
+      "corrected_rgb_size": [
+        256,
+        256
+      ],
+      "matched_decoded_rgb_sha256": "1afc419bfd7cdc0dcc057831764ef97632a55d0d1cd34a6501cd29ae712ca52d",
+      "matched_resize_sha256": "9aa76a3754fc26dceb3bee837aecc45008f08898b25bb620f614675b41e52814",
+      "tensor_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "max_tensor_difference": 0.0,
+      "max_raw_logit_difference": 0.0,
+      "max_policy_logit_difference": 0.0,
+      "max_api_score_difference": 0.0,
+      "score_count": 177,
+      "label": "tomato__late_blight",
+      "matches_previous_app": true,
+      "label_index": 156,
+      "score": 0.9950803518295288,
+      "top_three": [
+        [
+          "tomato__late_blight",
+          0.9950803518295288
+        ],
+        [
+          "bell_pepper__blossom_end_rot",
+          0.0024890569038689137
+        ],
+        [
+          "potato__late_blight",
+          0.001193877076730132
+        ]
+      ]
+    },
+    {
+      "case": "master late to early",
+      "path": "data/processed/leafcheck177_final/val/tomato__late_blight/tomato__late_blight__000039.jpg",
+      "reference_label": "tomato__late_blight",
+      "reference_kind": "dataset/catalog annotation",
+      "jacob_original": false,
+      "input_sha256": "95063be367af2aa1f61f82d72ca12d7dd9ed2dd6ad30f61ed72af17a4b5fd0ee",
+      "source_size": [
+        256,
+        256
+      ],
+      "source_mode": "RGB",
+      "exif_orientation": 1,
+      "corrected_rgb_size": [
+        256,
+        256
+      ],
+      "matched_decoded_rgb_sha256": "73bae1494ddc419dbaaaf08ace41d0af9c87fcf84aefe87243d727e55560f28e",
+      "matched_resize_sha256": "c6dad85b373f2e98d5db88a2c716db6167dc20ed6a419fcbbc8c0948e8238991",
+      "tensor_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "max_tensor_difference": 0.0,
+      "max_raw_logit_difference": 0.0,
+      "max_policy_logit_difference": 0.0,
+      "max_api_score_difference": 0.0,
+      "score_count": 177,
+      "label": "tomato__early_blight",
+      "matches_previous_app": true,
+      "label_index": 154,
+      "score": 0.6614727973937988,
+      "top_three": [
+        [
+          "tomato__early_blight",
+          0.6614727973937988
+        ],
+        [
+          "potato__late_blight",
+          0.28145328164100647
+        ],
+        [
+          "tomato__late_blight",
+          0.05193144083023071
+        ]
+      ]
+    },
+    {
+      "case": "master early to late",
+      "path": "data/processed/leafcheck177_final/val/tomato__early_blight/tomato__early_blight__000386.jpg",
+      "reference_label": "tomato__early_blight",
+      "reference_kind": "dataset/catalog annotation",
+      "jacob_original": false,
+      "input_sha256": "8af5fa61cf2009060330f765b4be092a4a396e2b5f6a55e24edb45b6de256b9c",
+      "source_size": [
+        256,
+        256
+      ],
+      "source_mode": "RGB",
+      "exif_orientation": 1,
+      "corrected_rgb_size": [
+        256,
+        256
+      ],
+      "matched_decoded_rgb_sha256": "8b0d6e97468f945be3098da6afd3b0c432e1da61b797aff7f9505c2b1ed35115",
+      "matched_resize_sha256": "3025b503a974d3b1e59434e148dc32bf7e5faf1de39608294f203c88fed0aa12",
+      "tensor_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "max_tensor_difference": 0.0,
+      "max_raw_logit_difference": 0.0,
+      "max_policy_logit_difference": 0.0,
+      "max_api_score_difference": 0.0,
+      "score_count": 177,
+      "label": "tomato__late_blight",
+      "matches_previous_app": true,
+      "label_index": 156,
+      "score": 0.36631348729133606,
+      "top_three": [
+        [
+          "tomato__late_blight",
+          0.36631348729133606
+        ],
+        [
+          "tomato__early_blight",
+          0.24779298901557922
+        ],
+        [
+          "tomato__spider_mites_two_spotted_spider_mite",
+          0.19248738884925842
+        ]
+      ]
+    },
+    {
+      "case": "cataloged field tomato, broad framing",
+      "path": "data/raw/leafcheck_blight_v1/field/1568028.jpg",
+      "reference_label": "tomato__late_blight",
+      "reference_kind": "dataset/catalog annotation",
+      "jacob_original": false,
+      "input_sha256": "411c4407a90349bbb81de2c3619e9bda0e51f4480225d56f48ff393feb7af312",
+      "source_size": [
+        768,
+        512
+      ],
+      "source_mode": "RGB",
+      "exif_orientation": 1,
+      "corrected_rgb_size": [
+        768,
+        512
+      ],
+      "matched_decoded_rgb_sha256": "563514b1a3ade515b891c0b3e73c854a15c1c5ccf00fa6033091b4e8a425c6fe",
+      "matched_resize_sha256": "4704aec90668bdb3ec3b9a4741c321c0280857f5f399c7be843b1a09fa5babd1",
+      "tensor_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "max_tensor_difference": 0.0,
+      "max_raw_logit_difference": 0.0,
+      "max_policy_logit_difference": 0.0,
+      "max_api_score_difference": 0.0,
+      "score_count": 177,
+      "label": "zucchini__bacterial_wilt",
+      "matches_previous_app": true,
+      "label_index": 173,
+      "score": 0.5901817679405212,
+      "top_three": [
+        [
+          "zucchini__bacterial_wilt",
+          0.5901817679405212
+        ],
+        [
+          "cucumber__bacterial_wilt",
+          0.32056131958961487
+        ],
+        [
+          "carrot__alternaria_leaf_blight",
+          0.02469644322991371
+        ]
+      ]
+    },
+    {
+      "case": "white paper early blight",
+      "path": "data/processed/leafcheck_blight_v1/val/tomato__early_blight/a4cc9c83c5a63f8ba389af2d36376fdd7ecee0f83e8506ef1a0add8bdff7ab85.png",
+      "reference_label": "tomato__early_blight",
+      "reference_kind": "dataset/catalog annotation",
+      "jacob_original": false,
+      "input_sha256": "a4cc9c83c5a63f8ba389af2d36376fdd7ecee0f83e8506ef1a0add8bdff7ab85",
+      "source_size": [
+        512,
+        512
+      ],
+      "source_mode": "RGB",
+      "exif_orientation": 1,
+      "corrected_rgb_size": [
+        512,
+        512
+      ],
+      "matched_decoded_rgb_sha256": "c2cad1f3eb6f726de1c9835c0fc868df9f7faf798b5c954dc51c8276f0efcdb2",
+      "matched_resize_sha256": "f67fda8d7f97f5c0caf902d68f95d418bfd3b1631f8b4d0ee1000f8a8effccbc",
+      "tensor_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "max_tensor_difference": 0.0,
+      "max_raw_logit_difference": 0.0,
+      "max_policy_logit_difference": 0.0,
+      "max_api_score_difference": 0.0,
+      "score_count": 177,
+      "label": "rice__leaf_blast",
+      "matches_previous_app": true,
+      "label_index": 120,
+      "score": 0.94792240858078,
+      "top_three": [
+        [
+          "rice__leaf_blast",
+          0.94792240858078
+        ],
+        [
+          "rice__brown_spot",
+          0.04694999009370804
+        ],
+        [
+          "soybean__bacterial_blight",
+          0.0018489608773961663
+        ]
+      ]
+    },
+    {
+      "case": "valid catalog JPEG above the 24-megapixel upload limit",
+      "path": "data/processed/leafcheck_blight_v1/val/tomato__late_blight/6fb3fbb49bce4e3ba7a25bea54de0189d0fccecb93ffff0352b399c500918f5a.jpg",
+      "reference_label": "tomato__late_blight",
+      "reference_kind": "dataset/catalog annotation",
+      "jacob_original": false,
+      "expect_pixel_limit": true,
+      "input_sha256": "6fb3fbb49bce4e3ba7a25bea54de0189d0fccecb93ffff0352b399c500918f5a",
+      "source_size": [
+        4284,
+        5712
+      ],
+      "previous_api_response": {
+        "status": 400,
+        "error": "This image could not be read. Try another JPEG or PNG photo."
+      },
+      "api_response": {
+        "status": 413,
+        "error": "Choose an image under 24 megapixels."
+      }
+    }
+  ],
+  "recorded_utc": "2026-11-24T02:30:54.837412+00:00",
+  "class_map_sha256": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a",
+  "selected": "retained_frozen_cnn",
+  "source_splits_unchanged": true,
+  "original_checkpoint_heldout_recomputed_from_saved_predictions": {
+    "correct": 7556,
+    "sample_count": 8425,
+    "accuracy": 0.8968545994065282,
+    "macro_f1": 0.6169397590183023
+  },
+  "plantdoc_historical_recomputed_from_saved_predictions": {
+    "correct": 26,
+    "sample_count": 183,
+    "accuracy": 0.14207650273224043,
+    "macro_f1": 0.21984649122807018
+  },
+  "browser": {
+    "origin": "http://127.0.0.1:8766",
+    "validated_file_chooser_and_decoded_previews": true,
+    "cases": [
+      {
+        "file": "tomato__late_blight__000001.jpg",
+        "crop": "Tomato",
+        "condition": "Late blight",
+        "score": "99.5%"
+      },
+      {
+        "file": "tomato__late_blight__000039.jpg",
+        "crop": "Tomato",
+        "condition": "Early blight",
+        "score": "66.1%"
+      },
+      {
+        "file": "tomato__early_blight__000386.jpg",
+        "crop": "Tomato",
+        "condition": "Late blight",
+        "score": "36.6%"
+      },
+      {
+        "file": "1568028.jpg",
+        "crop": "Zucchini",
+        "condition": "Bacterial wilt",
+        "score": "59.0%"
+      },
+      {
+        "file": "Banu IMG_6758.jpg",
+        "alert": "Choose a photo under 24 megapixels."
+      }
+    ]
+  },
+  "website_tests_passed": 16,
+  "pipeline_tests_passed": 9,
+  "previous_app_revision": "585f86d05c26899a",
+  "evidence_sha256": {
+    "runs/upload_blight_v1/api_trace.json": "7bb1d80b087675b6dd6fddcf7d1b3fe80f1a21a63adc35234b211c0acf9d88b9",
+    "runs/upload_blight_v1/website_tests.log": "3a908c87654dcb46433ccbd09e346401c00abb40a2fbf4c2990786f92611f594",
+    "runs/upload_blight_v1/pipeline_tests.log": "2919980ab33cbcdf630ef0880e13647da6c5c7c6392e7ac48a6d7e441ca40d04",
+    "runs/upload_blight_v1/baseline.json": "a035448a6b02ab85b3f5eb9b39de92d1fc6d6c3ec46c012cb0f5c53dc2700a68",
+    "runs/upload_blight_v1/paper_crop.json": "fdcc72e180fd268cff9da375d8468a53768d6b17657bae1db82dcf8d99ffe729",
+    "runs/upload_blight_v1/per_class.csv": "0f3970c1d9612ffe62b9bf5b5fb099f10d8c6c5250181909e305104d2cab4b6b",
+    "runs/upload_blight_v1/support_by_source.csv": "a77cdee67f1831b13e844914d9e5196144f459bc7cd213bee18349bd2d859c89",
+    "docs/upload_blight_experiments.csv": "1946462e4b41afdd6cba2483d619899a9620c1e0b8a14bf3efa03e49ac696700",
+    "docs/upload_blight_error_breakdown.csv": "da602267c4a25a265b8f5bdba40e62cfd7f11c0a44137c76c6d0da2164509730"
+  }
+}

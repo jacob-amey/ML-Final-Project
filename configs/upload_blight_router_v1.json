@@ -1,0 +1,15 @@
+{
+  "hypothesis": "A randomly initialized seven-way classifier with explicit non-target examples can recover some tomato and potato cases even when the 177-label CNN puts another crop first.",
+  "base_config": "configs/upload_blight_v1.json",
+  "negative_groups_per_class": 48,
+  "negative_sampling_seed": 812,
+  "minimum_specialist_score": [0.95, 0.985],
+  "maximum_incumbent_score": 0.75,
+  "minimum_master_macro_f1_gain": 0.001,
+  "minimum_supplement_macro_f1_gain": 0.025,
+  "max_epochs": 16,
+  "min_epochs": 10,
+  "patience": 5,
+  "checkpoint_selection": "Master validation macro-F1, then supplement validation macro-F1 within 1e-6. Only promote above both gain floors, with master accuracy and wrong-crop count no worse. Bugwood is diagnostic only.",
+  "design_basis": "The incumbent had 268 wrong-crop predictions among 272 screened supplement validation files. Restricting the first specialist to incumbents already in six target labels yielded at most one correct supplement prediction."
+}

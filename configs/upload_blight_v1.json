@@ -1,0 +1,24 @@
+{
+  "experiment": "upload-blight-v1",
+  "hypothesis": "A small randomly initialized tomato/potato specialist trained with the screened supplemental training images may fix some crop and condition confusions when the original CNN already predicts one of its six labels.",
+  "base_checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "supplement_fingerprint": "c2147459192fcc2d49d7787162960786353302220274719d512dedb76ea7cb78",
+  "labels": ["potato__early_blight", "potato__healthy", "potato__late_blight", "tomato__early_blight", "tomato__healthy", "tomato__late_blight"],
+  "channels": [16, 32, 64, 96],
+  "input_size": 128,
+  "batch_size": 96,
+  "learning_rate": 0.002,
+  "max_epochs": 16,
+  "min_epochs": 9,
+  "patience": 5,
+  "mix": 0.5,
+  "promotion_min_master_macro_f1_gain": 0.001,
+  "promotion_min_supplement_macro_f1_gain": 0.025,
+  "excluded_from_selection": ["frozen test", "registered historical PlantDoc check", "Bugwood field fixtures"],
+  "runs": {
+    "original_unweighted": {"supplement": false, "weight_power": 0.0},
+    "expanded_unweighted": {"supplement": true, "weight_power": 0.0},
+    "expanded_weighted": {"supplement": true, "weight_power": 0.5}
+  }
+}
