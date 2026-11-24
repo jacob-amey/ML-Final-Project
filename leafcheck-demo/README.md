@@ -13,8 +13,9 @@ or build step is needed. After dependencies are installed, use is offline.**
 2. Double-click **Launch LeafCheck.command**.
 3. Wait for the saved models to load. The launcher opens your normal browser at
    **http://127.0.0.1:8765**.
-4. Choose a JPEG or PNG photo, or one of the included examples, then click
-   **Run comparison**.
+4. Choose a JPEG or PNG photo up to 10 MB and 24 megapixels, or one of the
+   included examples, then click **Run comparison**. Export a smaller copy
+   when the original exceeds either limit.
 
 Keep the terminal window open while using the app. Press **Control-C** in that
 window to stop it. Double-click the launcher to restart. If this copy is already

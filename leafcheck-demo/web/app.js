@@ -244,7 +244,7 @@ async function acceptFile(file) {
     image.src = url;
     await image.decode();
     if (revision !== state.revision) { URL.revokeObjectURL(url); return; }
-    if (image.naturalWidth * image.naturalHeight > 24000000) throw new Error('Choose a photo under 24 megapixels.');
+    if (image.naturalWidth * image.naturalHeight > 24000000) throw new Error('Choose a photo at 24 megapixels or less. Export a smaller copy if needed.');
     invalidateResults();
     selectImage({ file, name: file.name }, url, `${image.naturalWidth} × ${image.naturalHeight} pixels · ${Math.round(file.size / 1024)} KB`);
   } catch (error) {
