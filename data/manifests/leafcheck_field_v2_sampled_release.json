@@ -1,0 +1,98 @@
+{
+  "version": "leafcheck_field_v2_sampled",
+  "fingerprint": "94a9489fce692e2b8d21adc312fc882ae42de23686f26319cecc51d07150b781",
+  "files_sha256": {
+    "manifest.csv": "e4bd6d632bafefd8e5205d986519e57ebfb57b09aed888a8c202e3d365fda8b0",
+    "sources.json": "3d3f423b1d921a9f0ec2daa7433c8ea777771c2f500f5debf9fbdc115a0f0d4e",
+    "class_to_idx.json": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a"
+  },
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "source_archive_sha256": {
+    "Bapari2025.rar": "a8bdcfa949fad6292f0a81dad44eaba660c76a749f56b73cf8b12c6b649d0286",
+    "taiwan.7z": "f623d13a7f0388dada08ca5b5f22716557defce3832f50ff6af7153e0eab676d",
+    "mduma-earlyblt.zip": "59bb454d12f624f1ca2fda2ccc32a02b16c857e3586c3c2893cf9485ea7886eb",
+    "mduma-lateblt-first-128m.zip.fragment": "3ee8eb7a7b00421d3d05b149fa9deeca258c8f55191947b654ba60d1a0fa9132",
+    "mduma-healthy-first-128m.zip.fragment": "7f00c05802a067e18b31ce5390543ac6c5aac1c2d91bf93c6b6fc43bb9403547"
+  },
+  "candidate_count": 2566,
+  "counts": [
+    {
+      "source": "bapari",
+      "split": "train",
+      "label": "tomato__bacterial_spot",
+      "count": 66
+    },
+    {
+      "source": "bapari",
+      "split": "train",
+      "label": "tomato__healthy",
+      "count": 265
+    },
+    {
+      "source": "bapari",
+      "split": "train",
+      "label": "tomato__septoria_leaf_spot",
+      "count": 88
+    },
+    {
+      "source": "huang",
+      "split": "test",
+      "label": "tomato__bacterial_spot",
+      "count": 110
+    },
+    {
+      "source": "huang",
+      "split": "test",
+      "label": "tomato__healthy",
+      "count": 106
+    },
+    {
+      "source": "huang",
+      "split": "test",
+      "label": "tomato__late_blight",
+      "count": 98
+    },
+    {
+      "source": "mduma",
+      "split": "train",
+      "label": "potato__early_blight",
+      "count": 411
+    },
+    {
+      "source": "mduma",
+      "split": "train",
+      "label": "potato__healthy",
+      "count": 536
+    },
+    {
+      "source": "mduma",
+      "split": "train",
+      "label": "potato__late_blight",
+      "count": 463
+    },
+    {
+      "source": "mduma",
+      "split": "val",
+      "label": "potato__early_blight",
+      "count": 61
+    },
+    {
+      "source": "mduma",
+      "split": "val",
+      "label": "potato__healthy",
+      "count": 50
+    },
+    {
+      "source": "mduma",
+      "split": "val",
+      "label": "potato__late_blight",
+      "count": 100
+    }
+  ],
+  "exclusions": {
+    "above_app_upload_limit": 4,
+    "new_cluster_label_conflict": 6,
+    "new_cluster_repeated_view": 195,
+    "existing_visual_candidate": 7
+  }
+}

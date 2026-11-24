@@ -1,0 +1,59 @@
+{
+  "version": "leafcheck_field_v2_tomato",
+  "fingerprint": "c03fa3404a546b490ea5282af477d8c1f11cb2d0bdb4bce4f3161c0a1ffb9703",
+  "files_sha256": {
+    "manifest.csv": "efb4617232fe779368f50e2476c78ef434bf44ffaed78ee95e8af6750dfee466",
+    "sources.json": "6ca14951571b0a7e8643d0671d0109bbf65184fa2335fdee1a9cda85a4457526",
+    "class_to_idx.json": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a"
+  },
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "source_archive_sha256": {
+    "Bapari2025.rar": "a8bdcfa949fad6292f0a81dad44eaba660c76a749f56b73cf8b12c6b649d0286",
+    "taiwan.7z": "f623d13a7f0388dada08ca5b5f22716557defce3832f50ff6af7153e0eab676d"
+  },
+  "candidate_count": 766,
+  "counts": [
+    {
+      "source": "bapari",
+      "split": "train",
+      "label": "tomato__bacterial_spot",
+      "count": 66
+    },
+    {
+      "source": "bapari",
+      "split": "train",
+      "label": "tomato__healthy",
+      "count": 265
+    },
+    {
+      "source": "bapari",
+      "split": "train",
+      "label": "tomato__septoria_leaf_spot",
+      "count": 88
+    },
+    {
+      "source": "huang",
+      "split": "test",
+      "label": "tomato__bacterial_spot",
+      "count": 110
+    },
+    {
+      "source": "huang",
+      "split": "test",
+      "label": "tomato__healthy",
+      "count": 106
+    },
+    {
+      "source": "huang",
+      "split": "test",
+      "label": "tomato__late_blight",
+      "count": 98
+    }
+  ],
+  "exclusions": {
+    "above_app_upload_limit": 4,
+    "new_cluster_label_conflict": 2,
+    "new_cluster_repeated_view": 20,
+    "existing_visual_candidate": 7
+  }
+}

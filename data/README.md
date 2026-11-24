@@ -71,6 +71,14 @@ the frozen CSC-427 result.
 See the [release notes](../docs/blight_dataset_v1.md) for sources, split groups,
 overlap checks and rebuild commands.
 
+## Field expansion and source-held validation
+
+The [field expansion study](../docs/field_expansion_study.md) uses additional
+publisher-original training photos and reserves a separate Taiwanese tomato
+collection for testing. The [source registry](manifests/leafcheck_field_v2_sources.json)
+pins reuse terms, exact archive hashes and label mappings. This is a separate
+follow-up release with the original 177-class mapping.
+
 ## Earlier three-class dataset
 
 The dataset assigns `early_blight`, `healthy`, and `late_blight` to class indices 0, 1, and 2 respectively. The image folders under `data/processed/leafcheck/` are ready for a loader such as PyTorch `ImageFolder`. The [image inventory](manifests/image_inventory.csv) records the exact membership, original path, source revision, group, file hash, and any exclusion. The [label mapping](manifests/label_mapping.csv) records how the source labels translate to project labels.

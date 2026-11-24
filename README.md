@@ -367,8 +367,11 @@ hashes, startup and HTTP measurements; packaging alone is not a completed check.
 Softmax scores are model outputs, not calibrated probabilities of correctness.
 The classifier cannot establish a definitive diagnosis, reliably detect every
 unknown input or localize multiple plants/diseases. Source backgrounds, rare
-classes and missing specimen IDs limit generalization. No new independent field
-benchmark is claimed.
+classes and missing specimen IDs limit generalization. The
+[field reliability study](docs/field_reliability_study.md) reports the separate
+218-photo PLDD-UP check. The
+[field expansion study](docs/field_expansion_study.md) documents additional
+source-screened data and controlled experiments for real uploads.
 
 Create ML's declared old training split contains 5,832 images now in the new test
 set; its old validation split contains 1,683 more. Its predictions are available

@@ -1,0 +1,8 @@
+{
+  "hypothesis": "Retaining the incumbent prediction for high-scoring uploads can recover some field wins while avoiding the broad regression of changing every prediction.",
+  "baseline_score_threshold": 0.5857925415039062,
+  "field_model_score_thresholds": [0.5857925415039062, 0.75, 0.9],
+  "protocol": "Test the same score rule on the best direct checkpoint of both matched arms. Use both D4 distributions. The alternative returns all 177 scores. Reuse the current display threshold.",
+  "max_added_wrong_suggestion_rate": 0.001,
+  "promotion": "Apply the current full-task limits and field gains. Also require that the fraction of incorrect suggestions among all master validation uploads rises by no more than 0.001. Measure latency before deployment."
+}
