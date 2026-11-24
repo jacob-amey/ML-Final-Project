@@ -1,0 +1,21 @@
+{
+  "version": "leafcheck-reliability-v1",
+  "registered_utc": "2026-11-24T02:56:25.581720+00:00",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "class_map_sha256": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a",
+  "preprocessing_sha256": "e5f90e4252b3ee708a9fa0385346429b9bed758d3ad36e5ec6fc0fd3abeaade9",
+  "inference_policy": "d4_probability_mean",
+  "score_calibration": "none",
+  "screen": "max_softmax",
+  "threshold": 0.5857925415039062,
+  "development_decision_sha256": "3a5c9bcd33b5291de41c81c840b6074149b78caaca10c3fc60fe72cc1a2dd902",
+  "protocol_sha256": "463374ef6ff58380a2e9b47d4a763ea76b430f9b8a753c9a460cec31456c9b57",
+  "field_manifest_sha256": "8068672453c9f3a0e55b2ddf98229bcb220173d1553fde2f60a811b52291adb2",
+  "field_coverage_labels": [
+    "potato__early_blight",
+    "potato__healthy",
+    "potato__late_blight"
+  ],
+  "field_deployment_guard": "On the newly registered potato field collection, accept at least 25 percent of initially correct labels, show fewer incorrect labels per upload, and improve accuracy among accepted predictions.",
+  "field_metrics_used_in_selection": false
+}

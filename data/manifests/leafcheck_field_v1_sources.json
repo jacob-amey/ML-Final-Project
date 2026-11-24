@@ -1,0 +1,36 @@
+{
+  "title": "PLDD-UP Potato Leaf Disease Dataset from Uttar Pradesh, India",
+  "version": "1",
+  "doi": "10.17632/3j4nfkvp2n.1",
+  "page": "https://data.mendeley.com/datasets/3j4nfkvp2n/1",
+  "credit": "Prakash Kumar Singh, Arun Yadav, Divakar Yadav, Sarthak Tiwari and Aseem Chandel",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "role": "single-source external test only, never fit or selection",
+  "sample_rule": "96 files per class ordered by SHA-256 of study identifier, archive filename and member path, before checking scores",
+  "candidate_count_per_class": 96,
+  "code_version": "leafcheck-field-v1",
+  "files": [
+    {
+      "name": "EB.zip",
+      "size": 2766326616,
+      "publisher_archive_sha256": "cffd37bbb79e75c0e23c1486f88f0a7c873b3fe67f643c41db3abd794bdc01e5",
+      "url": "https://data.mendeley.com/public-files/datasets/3j4nfkvp2n/files/5717ac85-cf61-461d-bf70-e1e5af2f2c53/file_downloaded",
+      "class_name": "potato__early_blight"
+    },
+    {
+      "name": "Healthy.zip",
+      "size": 3683027938,
+      "publisher_archive_sha256": "2b7e4107d7ba03c0ef9636831aa4de7d333435df238f667f562e27b1e46e59e2",
+      "url": "https://data.mendeley.com/public-files/datasets/3j4nfkvp2n/files/d4ce2acf-3af8-416e-90bc-bb834ba9da66/file_downloaded",
+      "class_name": "potato__healthy"
+    },
+    {
+      "name": "LB.zip",
+      "size": 2323338293,
+      "publisher_archive_sha256": "f4d31182b5d2f147c256e1c73838eac9b17592b89ed2b1ae394f58863e74a447",
+      "url": "https://data.mendeley.com/public-files/datasets/3j4nfkvp2n/files/35ff7712-865c-41bf-96b1-d25d84af7b95/file_downloaded",
+      "class_name": "potato__late_blight"
+    }
+  ]
+}

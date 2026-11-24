@@ -1,0 +1,12 @@
+{
+  "hypothesis": "A feature-distance screen can catch source-shifted inputs on which the CNN is overconfident. At the same master acceptance rate it should reject more errors than a maximum-score screen.",
+  "calibration_split": "SHA-256 of reliability-v1 and recorded validation group ID, 40 percent calibration by group",
+  "fit": "Temperature and thresholds use the master calibration groups only. Feature centroids and pooled diagonal variance use group-averaged master training features only.",
+  "target_calibration_coverage": 0.90,
+  "minimum_check_coverage": 0.88,
+  "minimum_check_accuracy_gain": 0.02,
+  "maximum_supplement_coverage": 0.50,
+  "minimum_supplement_gain_over_confidence": 0.15,
+  "promotion": "If a combined or distance screen clears guards, freeze it before opening the new field collection. Report coverage, accepted accuracy and incorrect suggestions per upload, with no guard calibration on that collection.",
+  "external_deployment_guard": "On the registered photos, reduce the error rate among accepted images and retain at least 25 percent of the originally correct predictions. Treat counts as a single-source stress check."
+}

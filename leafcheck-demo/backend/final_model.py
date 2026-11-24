@@ -53,10 +53,24 @@ class FinalCNN:
         torch.set_num_threads(4)
         self.predictor = Predictor(artifact, "cpu")
         self.lock = threading.Lock()
+        policy = json.loads(Path(__file__).with_name("reliability_policy.json").read_text())
+        self.reliability = None
+        if policy["checkpoint_sha256"] == self.predictor.metadata["checkpoint_sha256"]:
+            if (policy["screen"] != "max_softmax" or not 0 < policy["threshold"] < 1
+                    or policy["inference_policy"] != self.predictor.policy["name"]
+                    or policy["class_map_sha256"] != digest(artifact / "class_to_idx.json")
+                    or policy["preprocessing_sha256"] != digest(artifact / "preprocessing.json")):
+                raise ValueError("The reliability rule does not match the final model contract")
+            self.reliability = policy
         self.metadata = {**self.predictor.metadata, "source": "Explicit frozen final-model bundle",
                          "preprocessing_spec": self.predictor.spec,
                          "preprocessing": f"Frame 0, EXIF orientation, RGB, {self.predictor.spec['input_size']} × {self.predictor.spec['input_size']} bilinear gray padding, /255 and training-only RGB standardization"}
+        if self.reliability:
+            self.metadata["reliability"] = self.reliability
 
     def predict(self, path):
         with self.lock:
-            return self.predictor.predict(path)
+            result = self.predictor.predict(path)
+        if self.reliability:
+            result["decision"] = "suggestion" if result["score"] >= self.reliability["threshold"] else "uncertain"
+        return result

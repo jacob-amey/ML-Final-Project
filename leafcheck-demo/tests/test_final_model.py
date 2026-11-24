@@ -88,6 +88,16 @@ class FinalModelIntegrationTests(unittest.TestCase):
             self.assertEqual(response.code, 413)
             self.assertIn("24 megapixels", json.load(response)["error"])
 
+    def test_uncertainty_rule_keeps_raw_scores_and_withholds_low_scores(self):
+        from unittest.mock import patch
+
+        threshold = self.adapter.metadata["reliability"]["threshold"]
+        for score, decision in ((threshold - .01, "uncertain"), (threshold, "suggestion")):
+            raw = {"label": "tomato__late_blight", "score": score,
+                   "class_scores": {"tomato__late_blight": score}}
+            with patch.object(self.adapter.predictor, "predict", return_value=dict(raw)):
+                self.assertEqual(self.adapter.predict(Path("unused")), {**raw, "decision": decision})
+
     def test_multi_picture_jpeg_uses_frame_zero(self):
         directory = self.adapter.predictor.directory
         fixtures = json.loads((directory / "integration_fixtures.json").read_text())

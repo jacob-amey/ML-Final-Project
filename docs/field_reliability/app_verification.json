@@ -1,0 +1,99 @@
+{
+  "app_revision": "1c9ddf37ab999a9b",
+  "policy": {
+    "version": "leafcheck-reliability-v1",
+    "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+    "class_map_sha256": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a",
+    "preprocessing_sha256": "e5f90e4252b3ee708a9fa0385346429b9bed758d3ad36e5ec6fc0fd3abeaade9",
+    "inference_policy": "d4_probability_mean",
+    "screen": "max_softmax",
+    "threshold": 0.5857925415039062,
+    "field_manifest_sha256": "8068672453c9f3a0e55b2ddf98229bcb220173d1553fde2f60a811b52291adb2",
+    "field_freeze_sha256": "8f78eabaef2e062fab632432b6497e8b326b4fa289e84a55ffefaf37ae476a13",
+    "field_scope": "One PLDD-UP field collection across three potato labels",
+    "field": {
+      "support": 218,
+      "accepted": 33,
+      "correct_and_accepted": 3
+    }
+  },
+  "field_examples": [
+    {
+      "reference": "potato__early_blight",
+      "path": "data/processed/leafcheck_field_v1/test/potato__early_blight/4bd77b8e1f1c13128e17a924604e5580452231af2113d7668c2e908e5b1996fd.jpg",
+      "sha256": "4bd77b8e1f1c13128e17a924604e5580452231af2113d7668c2e908e5b1996fd",
+      "label": "soybean__brown_spot",
+      "score": 0.06868536025285721,
+      "decision": "uncertain",
+      "elapsed_ms": 53.2542500004638
+    },
+    {
+      "reference": "potato__early_blight",
+      "path": "data/processed/leafcheck_field_v1/test/potato__early_blight/32fc963d68879b01ff62fd849b16ce73b90aaec084aa9631af45fd7b8b59a392.jpg",
+      "sha256": "32fc963d68879b01ff62fd849b16ce73b90aaec084aa9631af45fd7b8b59a392",
+      "label": "potato__early_blight",
+      "score": 0.7062894701957703,
+      "decision": "suggestion",
+      "elapsed_ms": 36.15729199736961
+    },
+    {
+      "reference": "potato__early_blight",
+      "path": "data/processed/leafcheck_field_v1/test/potato__early_blight/a0444016d28bf1bb9672bf905a066b43852504f44e0c16d6b213d6a1c15fa285.jpg",
+      "sha256": "a0444016d28bf1bb9672bf905a066b43852504f44e0c16d6b213d6a1c15fa285",
+      "label": "peach__scab",
+      "score": 0.770075798034668,
+      "decision": "suggestion",
+      "elapsed_ms": 36.07137500148383
+    }
+  ],
+  "unrelated_post_freeze_diagnostic": [
+    {
+      "path": "runs/refit_v1/unrelated/astronaut.png",
+      "sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+      "label": "maple__tar_spot",
+      "score": 0.5355435609817505,
+      "decision": "uncertain",
+      "elapsed_ms": 39.27570799714886
+    },
+    {
+      "path": "runs/refit_v1/unrelated/camera.png",
+      "sha256": "b0793d2adda0fa6ae899c03989482bff9a42d3d5690fc7e3648f2795d730c23a",
+      "label": "apple__healthy",
+      "score": 0.5890675187110901,
+      "decision": "suggestion",
+      "elapsed_ms": 37.592958000459475
+    },
+    {
+      "path": "runs/refit_v1/unrelated/chelsea.png",
+      "sha256": "596aa1e7cb875eb79f437e310381d26b338a81c2da23439704a73c4651e8c4bb",
+      "label": "peach__brown_rot",
+      "score": 0.4307883083820343,
+      "decision": "uncertain",
+      "elapsed_ms": 35.88954199949512
+    },
+    {
+      "path": "runs/refit_v1/unrelated/coins.png",
+      "sha256": "f8d773fc9cfa6f4d8e5942dc34d0a0788fcaed2a4fefbbed0aef5398d7ef4cba",
+      "label": "squash__powdery_mildew",
+      "score": 0.9991187453269958,
+      "decision": "suggestion",
+      "elapsed_ms": 34.28962500038324
+    }
+  ],
+  "verification": {
+    "browser_file_chooser_used": true,
+    "withheld_title": "Uncertain result",
+    "withheld_raw_label_not_shown": true,
+    "suggestion_visible": "Potato \u00b7 Early blight (70.6%)",
+    "api_177_raw_scores_preserved": true,
+    "website_tests": 17,
+    "pipeline_tests": 9,
+    "second_source_build_matched_release_manifest": true
+  },
+  "sha256_records": {
+    "runs/refit_v1/field_predictions.csv": "f50b52613b2382b478d79ec6a1f0d3bc3c958506fe0de4628e79cff37c898491",
+    "runs/refit_v1/field_metrics.json": "1427aec09eddcd9915f562afb8af562a9e1347ed74ca10b2b474a5ab64020151",
+    "runs/refit_v1/website_tests.log": "0f356ed7703fcf5e3a0e5d7896a04dd43c888941f90dd978ad65f68901886d13",
+    "runs/refit_v1/pipeline_tests.log": "934768c95be35bd4077c4b3a062a32b01b27d9fb3a870e6d85b604a89f97560c"
+  }
+}

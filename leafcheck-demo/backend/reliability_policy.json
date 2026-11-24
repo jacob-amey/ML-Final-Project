@@ -1,0 +1,17 @@
+{
+  "version": "leafcheck-reliability-v1",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "class_map_sha256": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a",
+  "preprocessing_sha256": "e5f90e4252b3ee708a9fa0385346429b9bed758d3ad36e5ec6fc0fd3abeaade9",
+  "inference_policy": "d4_probability_mean",
+  "screen": "max_softmax",
+  "threshold": 0.5857925415039062,
+  "field_manifest_sha256": "8068672453c9f3a0e55b2ddf98229bcb220173d1553fde2f60a811b52291adb2",
+  "field_freeze_sha256": "8f78eabaef2e062fab632432b6497e8b326b4fa289e84a55ffefaf37ae476a13",
+  "field_scope": "One PLDD-UP field collection across three potato labels",
+  "field": {
+    "support": 218,
+    "accepted": 33,
+    "correct_and_accepted": 3
+  }
+}

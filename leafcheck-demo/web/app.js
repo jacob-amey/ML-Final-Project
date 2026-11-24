@@ -74,6 +74,10 @@ function condition(raw, key) {
 }
 
 function renderSummary(results) {
+  if (results.models.final177?.decision === 'uncertain') {
+    summary('LeafCheck withheld its suggestion', 'The other cards show experimental comparisons. Try a clearer photo to get a new LeafCheck result.', true);
+    return;
+  }
   const available = MODELS.filter(({ key }) => results.models[key]?.label && !results.models[key].error);
   const conditions = available.map(({ key }) => condition(results.models[key].label, key));
   if (available.length < 2) {
@@ -91,12 +95,17 @@ function renderPrediction(key, prediction) {
     cards[key].querySelector('.model-time').textContent = 'No result';
     return;
   }
+  if (prediction.decision === 'uncertain') {
+    placeholder(key, 'Uncertain result', 'LeafCheck withheld its suggestion for this photo. Try a sharp, well-lit close-up of one affected leaf.');
+    cards[key].querySelector('.model-time').textContent = `Live comparison · ${Math.round(prediction.elapsed_ms)} ms`;
+    return;
+  }
   const label = labelParts(prediction.label);
   if (key === 'createml' && !String(prediction.label).includes('__')) label.plant = 'Original model label';
   const entries = Object.entries(prediction.class_scores).sort((a, b) => b[1] - a[1]);
   const score = clampScore(prediction.score);
   cards[key].querySelector('.model-result').innerHTML = `
-    <p class="prediction-label">TOP PREDICTION</p>
+    <p class="prediction-label">${prediction.decision === 'suggestion' ? 'MODEL SUGGESTION' : 'TOP PREDICTION'}</p>
     <h4 class="prediction-name">${escapeHTML(label.title)}</h4>
     <p class="prediction-plant" title="${escapeHTML(prediction.label)}">${escapeHTML(label.plant)}</p>
     <div class="score-line"><strong class="score-value">${percent(score)}</strong><span>model score</span></div>
@@ -137,8 +146,10 @@ function renderFinalScore() {
   if (!model?.ready || !model.test || !model.baseline) { target.textContent = 'Final evaluation appears here when the frozen model bundle is available.'; return; }
   const score = (name, metric) => `<tr><th scope="row">${name}</th><td>${metric.correct.toLocaleString()} / ${metric.sample_count.toLocaleString()}</td><td>${percent(metric.accuracy)}</td><td>${metric.macro_f1.toFixed(3)}</td></tr>`;
   const supplemental = model.external;
+  const field = model.reliability?.field;
+  const fieldNote = field ? `<h4>Potato field photo check</h4><p>LeafCheck made suggestions for ${field.accepted} of ${field.support} photos from one field collection. ${field.correct_and_accepted} of those suggestions matched the reference label. Treat suggestions as a starting point for inspection.</p>` : '';
   const supplementalTable = supplemental ? `<h4>Supplementary PlantDoc photos — three tomato labels</h4><table><thead><tr><th>Method</th><th>Correct / total</th><th>Accuracy</th><th>Macro F1 over 3 labels</th></tr></thead><tbody>${score('Final CNN, all 177 outputs eligible', supplemental)}${score('Most common training tomato label', supplemental.conditional_rule)}</tbody></table><p>${supplemental.sample_count.toLocaleString()} photos after overlap screening. This source also appears elsewhere in the master; labels are inherited, with healthy used as a proxy. This is a separate protocol from the 177-class test.</p>` : '';
-  target.innerHTML = `<table><thead><tr><th>Method</th><th>Correct / total</th><th>Accuracy</th><th>Macro F1</th></tr></thead><tbody>${score('Final custom CNN', model.test)}${model.reference ? score('Compact177 full-data reference', model.reference) : ''}${score('Most common training label', model.baseline)}</tbody></table><p>Same frozen test set, all 177 classes. ${model.test.classes_with_fewer_than_10_test_images.toLocaleString()} classes have fewer than ten test images. The Compact177 reference is separate from the earlier three-class pilots. These scores do not establish field-photo performance. Rule prediction: ${escapeHTML(prettyLabel(model.baseline.rule.class_name))}.</p>${supplementalTable}`;
+  target.innerHTML = `<table><thead><tr><th>Method</th><th>Correct / total</th><th>Accuracy</th><th>Macro F1</th></tr></thead><tbody>${score('Final custom CNN', model.test)}${model.reference ? score('Compact177 full-data reference', model.reference) : ''}${score('Most common training label', model.baseline)}</tbody></table><p>Same frozen test set, all 177 classes, scored before any suggestions were withheld. ${model.test.classes_with_fewer_than_10_test_images.toLocaleString()} classes have fewer than ten test images. The Compact177 reference is separate from the earlier three-class pilots. Rule prediction: ${escapeHTML(prettyLabel(model.baseline.rule.class_name))}.</p>${supplementalTable}${fieldNote}`;
 }
 
 async function connect() {

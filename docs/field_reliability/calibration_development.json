@@ -1,0 +1,149 @@
+{
+  "protocol_sha256": "19bf3d200f056a90a79b32f19868c1a156d96d0839249c3b2758a773591ea910",
+  "base_checkpoint": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "head_sha256": null,
+  "calibration_groups": 3331,
+  "candidate": null,
+  "references": {
+    "base_always": {
+      "threshold": 1.0,
+      "check_master": {
+        "support": 10024,
+        "correct_before_screen": 8984,
+        "accepted": 10024,
+        "correct_and_accepted": 8984,
+        "incorrect_and_accepted": 1040,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.8962490023942538,
+        "incorrect_per_upload": 0.10375099760574621
+      },
+      "supplement": {
+        "support": 272,
+        "correct_before_screen": 0,
+        "accepted": 272,
+        "correct_and_accepted": 0,
+        "incorrect_and_accepted": 272,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.0,
+        "incorrect_per_upload": 1.0
+      },
+      "field_diagnostic": {
+        "support": 8,
+        "correct_before_screen": 1,
+        "accepted": 8,
+        "correct_and_accepted": 1,
+        "incorrect_and_accepted": 7,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.125,
+        "incorrect_per_upload": 0.875
+      }
+    },
+    "max_softmax": {
+      "threshold": 0.5857925415039062,
+      "check_master": {
+        "support": 10024,
+        "correct_before_screen": 8984,
+        "accepted": 9014,
+        "correct_and_accepted": 8620,
+        "incorrect_and_accepted": 394,
+        "coverage": 0.8992418196328811,
+        "accepted_accuracy": 0.9562902152207677,
+        "incorrect_per_upload": 0.03930566640063847
+      },
+      "supplement": {
+        "support": 272,
+        "correct_before_screen": 0,
+        "accepted": 144,
+        "correct_and_accepted": 0,
+        "incorrect_and_accepted": 144,
+        "coverage": 0.5294117647058824,
+        "accepted_accuracy": 0.0,
+        "incorrect_per_upload": 0.5294117647058824
+      },
+      "field_diagnostic": {
+        "support": 8,
+        "correct_before_screen": 1,
+        "accepted": 4,
+        "correct_and_accepted": 1,
+        "incorrect_and_accepted": 3,
+        "coverage": 0.5,
+        "accepted_accuracy": 0.25,
+        "incorrect_per_upload": 0.375
+      }
+    },
+    "feature_distance": {
+      "threshold": -1.6959398984909058,
+      "check_master": {
+        "support": 10024,
+        "correct_before_screen": 8984,
+        "accepted": 8948,
+        "correct_and_accepted": 8035,
+        "incorrect_and_accepted": 913,
+        "coverage": 0.8926576217079011,
+        "accepted_accuracy": 0.8979660259275816,
+        "incorrect_per_upload": 0.09108140462889067
+      },
+      "supplement": {
+        "support": 272,
+        "correct_before_screen": 0,
+        "accepted": 272,
+        "correct_and_accepted": 0,
+        "incorrect_and_accepted": 272,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.0,
+        "incorrect_per_upload": 1.0
+      },
+      "field_diagnostic": {
+        "support": 8,
+        "correct_before_screen": 1,
+        "accepted": 8,
+        "correct_and_accepted": 1,
+        "incorrect_and_accepted": 7,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.125,
+        "incorrect_per_upload": 0.875
+      }
+    },
+    "combined": {
+      "threshold": -4.233841896057129,
+      "check_master": {
+        "support": 10024,
+        "correct_before_screen": 8984,
+        "accepted": 9017,
+        "correct_and_accepted": 8600,
+        "incorrect_and_accepted": 417,
+        "coverage": 0.8995411013567438,
+        "accepted_accuracy": 0.9537540201840967,
+        "incorrect_per_upload": 0.041600159616919395
+      },
+      "supplement": {
+        "support": 272,
+        "correct_before_screen": 0,
+        "accepted": 149,
+        "correct_and_accepted": 0,
+        "incorrect_and_accepted": 149,
+        "coverage": 0.5477941176470589,
+        "accepted_accuracy": 0.0,
+        "incorrect_per_upload": 0.5477941176470589
+      },
+      "field_diagnostic": {
+        "support": 8,
+        "correct_before_screen": 1,
+        "accepted": 4,
+        "correct_and_accepted": 1,
+        "incorrect_and_accepted": 3,
+        "coverage": 0.5,
+        "accepted_accuracy": 0.25,
+        "incorrect_per_upload": 0.375
+      }
+    }
+  },
+  "temperature": 1.2020158230963016,
+  "calibration_check": {
+    "top_3_accuracy": 0.9604948124501197,
+    "ece15_before": 0.013335428381277796,
+    "ece15_after": 0.025339543416622687,
+    "ece15_supplement_before": 0.6115595592076287,
+    "ece15_supplement_after": 0.5394483513946717
+  }
+}

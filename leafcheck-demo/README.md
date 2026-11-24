@@ -154,8 +154,12 @@ selection, EXIF correction, RGB conversion, bilinear gray padding, pixel scaling
 and training-only channel standardization through one shared inference runtime. The
 Core ML helper uses orientation correction and Vision center cropping and scaling.
 
-Scores are model outputs, not calibrated accuracy estimates. Agreement is context,
-not proof that a prediction is correct. The earlier experiments use different evaluation sets. The new test includes
+Scores rank the model's supported labels. The final CNN withholds its visible
+suggestion when the top score is below the documented cutoff. The API includes
+`decision` alongside raw scores for reproducibility. In the registered
+218-photo potato field check, 33 suggestions were shown and 3 matched their
+reference labels. This check covers one collection. A displayed suggestion is
+still tentative. The earlier experiments use different evaluation sets. The primary test includes
 5,832 images from Create ML’s declared old training split and 1,683 from its old
 validation split. Create ML is not scored on this holdout. The selected final
 CNN, frozen Compact177 full-data reference and declared simple rule share the

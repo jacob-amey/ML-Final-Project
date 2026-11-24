@@ -56,6 +56,8 @@ Read `docs/final_model_selection.json` for the pre-test decision,
 - `docs/contributions.md`: actual roles, evidence and AI assistance.
 - [Upload and blight study](docs/upload_blight_study.md): validation results by
   crop and source, app replay, experiment decisions and the upload-limit fix.
+- [Field reliability follow-up](docs/field_reliability_study.md): new field
+  evaluation, classifier-head experiments, and the app's uncertainty rule.
 
 ## Run the delivered study
 

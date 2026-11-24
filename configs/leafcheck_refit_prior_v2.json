@@ -1,0 +1,25 @@
+{
+  "base_checkpoint": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "base_config": "configs/upload_blight_v1.json",
+  "hypothesis": "A softened training-prior correction can improve long-tail macro-F1 without giving up the new source coverage. Compare two fixed prior strengths with the completed expanded CE control.",
+  "selection": "Group-frozen master validation macro-F1 is primary. Require gain of at least 0.003, no more than 0.25 percentage points lower master accuracy and at least +0.025 supplement macro-F1. Field sources registered for final evaluation stay hidden from selection.",
+  "epoch_budget": 14,
+  "patience": 5,
+  "batch_size": 512,
+  "lr": 0.001,
+  "l2_to_original": 0.1,
+  "recipes": {
+    "expanded_prior_0.25": {
+      "added": true,
+      "group_power": 0.0,
+      "crop_loss": 0.0,
+      "prior_power": 0.25
+    },
+    "expanded_prior_0.5": {
+      "added": true,
+      "group_power": 0.0,
+      "crop_loss": 0.0,
+      "prior_power": 0.5
+    }
+  }
+}

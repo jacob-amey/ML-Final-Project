@@ -1,0 +1,20 @@
+{
+  "manifest_sha256": "8068672453c9f3a0e55b2ddf98229bcb220173d1553fde2f60a811b52291adb2",
+  "sources_sha256": "2f41b08fa3d98aae285e38e0ef7f9aeceac2b0e3ff96956193c8a85883d9e2d0",
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "master_candidate_records_screened": 90574,
+  "prior_plantdoc_records_screened": 183,
+  "candidate_count": 288,
+  "included": {
+    "potato__early_blight": 62,
+    "potato__healthy": 74,
+    "potato__late_blight": 82
+  },
+  "exclusions": {
+    "above_app_upload_limit": 57,
+    "new_cluster_repeated_view": 12,
+    "invalid_or_unsupported_image": 1
+  },
+  "source_groups": 1,
+  "sealed_for_selection": true
+}

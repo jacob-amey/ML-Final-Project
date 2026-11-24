@@ -21,6 +21,9 @@ from models import DEMO_ROOT, ModelComparison
 WEB_ROOT = (DEMO_ROOT / "web").resolve()
 APP_ID = "leafcheck-local-" + hashlib.sha256(str(DEMO_ROOT).encode()).hexdigest()[:12]
 revision_files = sorted((DEMO_ROOT / "backend").glob("*.py"))
+revision_files.extend(path for path in [
+    DEMO_ROOT / "backend/reliability_policy.json", WEB_ROOT / "app.js", WEB_ROOT / "index.html",
+] if path.is_file())
 reference_file = DEMO_ROOT / "models/final_model.json"
 if reference_file.exists():
     revision_files.append(reference_file)

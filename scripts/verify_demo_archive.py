@@ -31,14 +31,19 @@ def digest(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--python",type=Path,default=Path(sys.executable),help="Compatible app-only Python interpreter for the extracted server")
+    parser.add_argument("--archive", type=Path, default=ROOT / "artifacts/LeafCheck-final-demo.zip")
+    parser.add_argument("--receipt", type=Path, default=ROOT / "docs/demo_archive.json")
+    parser.add_argument("--output", type=Path, default=ROOT / "docs/archive_verification.json")
+    parser.add_argument("--uncertain-photo", type=Path, help="Original JPEG expected to produce an uncertain result")
+    args = parser.parse_args()
     # Resolving the executable symlink would leave its virtual environment.
-    runtime_python = parser.parse_args().python.absolute()
+    runtime_python = args.python.absolute()
     runtime_prefix = Path(subprocess.check_output(
         [str(runtime_python), "-c", "import sys; print(sys.prefix)"], text=True).strip())
     assert (runtime_prefix / "bin/python").is_file() and (runtime_prefix / "pyvenv.cfg").is_file(), \
         "Pass the app-only virtual environment's bin/python"
-    archive = ROOT / "artifacts/LeafCheck-final-demo.zip"
-    record = json.loads((ROOT / "docs/demo_archive.json").read_text())
+    archive = args.archive
+    record = json.loads(args.receipt.read_text())
     assert digest(archive) == record["sha256"]
     with tempfile.TemporaryDirectory(prefix="leafcheck-delivery-") as temporary:
         directory = Path(temporary).resolve()
@@ -80,6 +85,7 @@ def main():
                 assert all(model["ready"] for model in status["models"].values())
                 assert status["models"]["final177"]["checkpoint_sha256"] == reference["checkpoint_sha256"]
                 measurements = []; observed = []
+                policy = status["models"]["final177"].get("reliability")
                 for i in range(14):
                     row = examples[i % len(examples)]
                     raw = (artifact / row["sample_file"]).read_bytes()
@@ -91,6 +97,8 @@ def main():
                     assert final["label"] == row["predicted_class"]
                     assert abs(final["score"] - row["score"]) < 1e-4
                     assert all("label" in prediction for prediction in result["models"].values())
+                    if policy:
+                        assert final["decision"] == ("suggestion" if final["score"] >= policy["threshold"] else "uncertain")
                     if i >= 2: measurements.append(elapsed)
                     if i < 2:
                         observed.append({"purpose":row["purpose"], "reference_label":row["actual_class"],
@@ -119,8 +127,17 @@ def main():
                                             "measurements_ms":measurements,
                                             "conditions":"Loopback HTTP, alternating packaged success/mistake, all four real models, warm local files, includes image upload/validation and JSON response; not CNN-only latency"},
                             "example_results":observed, "invalid_image_http_status":400,"unsupported_format_http_status":415}
-                destination = ROOT / "docs/archive_verification.json"
-                destination.write_text(json.dumps(evidence, indent=2) + "\n")
+                if args.uncertain_photo:
+                    assert policy is not None
+                    request = Request(address + "/api/predict", data=args.uncertain_photo.read_bytes(),
+                                      headers={"Content-Type": "image/jpeg"})
+                    with urlopen(request, timeout=20) as response:
+                        prediction = json.load(response)["models"]["final177"]
+                    assert prediction["decision"] == "uncertain"
+                    evidence["uncertain_photo"] = {"sha256": digest(args.uncertain_photo),
+                                                   "model_score": prediction["score"],
+                                                   "verified_decision": prediction["decision"]}
+                args.output.write_text(json.dumps(evidence, indent=2) + "\n")
                 print(json.dumps(evidence, indent=2))
             finally:
                 if process.poll() is None: process.send_signal(signal.SIGINT)

@@ -1,0 +1,13 @@
+{
+  "hypothesis": "Interpolating the original and adapted class probabilities can keep broad validation performance while recovering some new-source labels. The runner-up gap might also improve selective prediction compared with maximum score.",
+  "head_recipe": "expanded_prior_0.25_seed434",
+  "head_reason": "This trained head retained 0.646984 master macro-F1 and corrected 177 supplemental cases. The 0.5 prior did slightly better on master but recovered 52 fewer supplemental images.",
+  "head_mixture_weights": [0.25, 0.5, 0.75],
+  "head_promotion": {"minimum_master_macro_f1_gain": 0.003, "maximum_master_accuracy_decline": 0.0025, "minimum_supplement_macro_f1_gain": 0.025},
+  "screen_rule_candidates": ["max_softmax", "top_two_margin"],
+  "screen_minimum_master_check_coverage": 0.88,
+  "screen_minimum_master_check_accuracy_gain": 0.02,
+  "screen_maximum_supplement_coverage": 0.55,
+  "screen_final_guard": "On the newly registered potato field collection, accept at least 25 percent of initially correct labels, show fewer incorrect labels per upload, and improve accuracy among accepted predictions.",
+  "note": "This amendment followed development-only evidence on the feature-distance screen. Thresholds come from the same pre-specified 40 percent grouped calibration slice, never the field or earlier test data."
+}
