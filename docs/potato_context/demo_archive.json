@@ -1,0 +1,11 @@
+{
+  "archive": "artifacts/LeafCheck-potato-context-demo.zip",
+  "sha256": "cd714d0d1bc99cc22b63b4c6a399416fc8c33bfa3418d29c71e455a65710cd73",
+  "bytes": 9003508,
+  "model_checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "files": 90,
+  "source_revision": "7cee6792df224fdc4b8cf10c5beea43c7ae94c12",
+  "contains_training_dataset": false,
+  "contains_notebooks": false,
+  "restore": "Unzip into a new folder, install the app requirements in a compatible Python environment, then run its launcher or backend/server.py."
+}

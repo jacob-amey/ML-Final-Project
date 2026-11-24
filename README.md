@@ -58,6 +58,9 @@ Read `docs/final_model_selection.json` for the pre-test decision,
   crop and source, app replay, experiment decisions and the upload-limit fix.
 - [Field reliability follow-up](docs/field_reliability_study.md): new field
   evaluation, classifier-head experiments, and the app's uncertainty rule.
+- [Crop-context and field-image follow-up](docs/potato_context_study.md):
+  independently screened potato results, additional field training images,
+  and the verified **Known crop** option.
 
 ## Run the delivered study
 
@@ -372,6 +375,11 @@ classes and missing specimen IDs limit generalization. The
 218-photo PLDD-UP check. The
 [field expansion study](docs/field_expansion_study.md) documents additional
 source-screened data and controlled experiments for real uploads.
+
+The follow-up demo adds **Potato** under **Known crop** for photos you know
+are potato. It compares the three supported potato conditions using the
+frozen CNN. **Automatic** still covers all 177 labels. The updated demo archive
+and launch instructions are in the [crop-context study](docs/potato_context_study.md).
 
 Create ML's declared old training split contains 5,832 images now in the new test
 set; its old validation split contains 1,683 more. Its predictions are available

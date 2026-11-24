@@ -1,0 +1,745 @@
+{
+  "eligible": false,
+  "run": {
+    "master_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+    "field_fingerprint": "94a9489fce692e2b8d21adc312fc882ae42de23686f26319cecc51d07150b781",
+    "base_checkpoint": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+    "spec": {
+      "version": "exif_rgb_letterbox_bilinear_v1",
+      "input_size": 128,
+      "mean": [
+        0.47854209032958844,
+        0.5106936669477582,
+        0.4227711234017792
+      ],
+      "std": [
+        0.20955548763908846,
+        0.19110100749812656,
+        0.23022600802521317
+      ],
+      "statistics_split": "train",
+      "statistics_images": 59008,
+      "resize": "Pillow ImageOps.pad bilinear, RGB padding 128",
+      "orientation": "EXIF transpose",
+      "channels": "RGB",
+      "frame": 0,
+      "scaling": "uint8 / 255, then (x - mean) / std",
+      "tensor_layout": "NCHW"
+    },
+    "config": {
+      "hypothesis": "With potato supplied by the user, field training reduces potato condition errors relative to a label-count-matched master-only CNN and to masking the original model to its three potato labels.",
+      "labels": [
+        "potato__early_blight",
+        "potato__healthy",
+        "potato__late_blight"
+      ],
+      "channels": [
+        16,
+        32,
+        64,
+        96
+      ],
+      "input_size": 128,
+      "batch_size": 96,
+      "learning_rate": 0.002,
+      "weight_decay": 0.0001,
+      "seeds": [
+        434,
+        435
+      ],
+      "max_epochs": 18,
+      "min_epochs": 9,
+      "patience": 5,
+      "selection": {
+        "primary": "Macro-F1 over all three potato labels on date-held Mduma validation. Master potato validation independently constrains degradation. The original 177-label model and test stay frozen.",
+        "field_min_gain_average_vs_masked": 0.05,
+        "field_min_gain_average_vs_control": 0.03,
+        "master_max_macro_f1_drop_per_seed": 0.03,
+        "master_max_accuracy_drop_per_seed": 0.03
+      }
+    },
+    "trainer_sha256": "226443f4c99e9e9f531e9ec7b960e9a53c7cbfed76495593cdf247f92c35dfc8"
+  },
+  "arms": {
+    "control": [
+      {
+        "epoch": 1,
+        "scores": {
+          "master": {
+            "accuracy": 0.8944223107569721,
+            "macro_f1": 0.8848453897802813,
+            "correct": 449,
+            "sample_count": 502,
+            "loss": 0.30711013078689575,
+            "confusion_matrix": [
+              [
+                193,
+                0,
+                43
+              ],
+              [
+                0,
+                22,
+                6
+              ],
+              [
+                3,
+                1,
+                234
+              ]
+            ],
+            "per_class": [
+              {
+                "class_index": 0,
+                "class_name": "potato__early_blight",
+                "precision": 0.9846938775510204,
+                "recall": 0.8177966101694916,
+                "f1": 0.8935185185185185,
+                "support": 236
+              },
+              {
+                "class_index": 1,
+                "class_name": "potato__healthy",
+                "precision": 0.9565217391304348,
+                "recall": 0.7857142857142857,
+                "f1": 0.8627450980392156,
+                "support": 28
+              },
+              {
+                "class_index": 2,
+                "class_name": "potato__late_blight",
+                "precision": 0.8268551236749117,
+                "recall": 0.9831932773109243,
+                "f1": 0.8982725527831095,
+                "support": 238
+              }
+            ]
+          },
+          "field": {
+            "accuracy": 0.5545023696682464,
+            "macro_f1": 0.3892082590612002,
+            "correct": 117,
+            "sample_count": 211,
+            "loss": 1.4513846635818481,
+            "confusion_matrix": [
+              [
+                21,
+                0,
+                40
+              ],
+              [
+                9,
+                1,
+                40
+              ],
+              [
+                5,
+                0,
+                95
+              ]
+            ],
+            "per_class": [
+              {
+                "class_index": 0,
+                "class_name": "potato__early_blight",
+                "precision": 0.6,
+                "recall": 0.3442622950819672,
+                "f1": 0.43749999999999994,
+                "support": 61
+              },
+              {
+                "class_index": 1,
+                "class_name": "potato__healthy",
+                "precision": 1.0,
+                "recall": 0.02,
+                "f1": 0.0392156862745098,
+                "support": 50
+              },
+              {
+                "class_index": 2,
+                "class_name": "potato__late_blight",
+                "precision": 0.5428571428571428,
+                "recall": 0.95,
+                "f1": 0.6909090909090908,
+                "support": 100
+              }
+            ]
+          }
+        },
+        "train_loss": 0.5196974211931229,
+        "seconds": 1.5151986249984475,
+        "checkpoint": "runs/field_v3/potato_pair/control-434/epoch-001.pt",
+        "sha256": "b2b3cc91ff0a910f290d4f8484b8cac5c81f9fbdc1cec998f32c9511d00d95e8",
+        "completed_epochs": 9,
+        "passed_master_limits": false,
+        "seed": 434,
+        "checkpoint_reload_verified": true
+      },
+      {
+        "epoch": 1,
+        "scores": {
+          "master": {
+            "accuracy": 0.6772908366533864,
+            "macro_f1": 0.5972663250499942,
+            "correct": 340,
+            "sample_count": 502,
+            "loss": 0.7438446879386902,
+            "confusion_matrix": [
+              [
+                210,
+                21,
+                5
+              ],
+              [
+                0,
+                28,
+                0
+              ],
+              [
+                5,
+                131,
+                102
+              ]
+            ],
+            "per_class": [
+              {
+                "class_index": 0,
+                "class_name": "potato__early_blight",
+                "precision": 0.9767441860465116,
+                "recall": 0.8898305084745762,
+                "f1": 0.9312638580931264,
+                "support": 236
+              },
+              {
+                "class_index": 1,
+                "class_name": "potato__healthy",
+                "precision": 0.15555555555555556,
+                "recall": 1.0,
+                "f1": 0.2692307692307693,
+                "support": 28
+              },
+              {
+                "class_index": 2,
+                "class_name": "potato__late_blight",
+                "precision": 0.9532710280373832,
+                "recall": 0.42857142857142855,
+                "f1": 0.591304347826087,
+                "support": 238
+              }
+            ]
+          },
+          "field": {
+            "accuracy": 0.5592417061611374,
+            "macro_f1": 0.42957892138220005,
+            "correct": 118,
+            "sample_count": 211,
+            "loss": 1.0545037984848022,
+            "confusion_matrix": [
+              [
+                34,
+                0,
+                27
+              ],
+              [
+                13,
+                2,
+                35
+              ],
+              [
+                18,
+                0,
+                82
+              ]
+            ],
+            "per_class": [
+              {
+                "class_index": 0,
+                "class_name": "potato__early_blight",
+                "precision": 0.5230769230769231,
+                "recall": 0.5573770491803278,
+                "f1": 0.5396825396825397,
+                "support": 61
+              },
+              {
+                "class_index": 1,
+                "class_name": "potato__healthy",
+                "precision": 1.0,
+                "recall": 0.04,
+                "f1": 0.07692307692307693,
+                "support": 50
+              },
+              {
+                "class_index": 2,
+                "class_name": "potato__late_blight",
+                "precision": 0.5694444444444444,
+                "recall": 0.82,
+                "f1": 0.6721311475409835,
+                "support": 100
+              }
+            ]
+          }
+        },
+        "train_loss": 0.49762314796447754,
+        "seconds": 0.9860282500012545,
+        "checkpoint": "runs/field_v3/potato_pair/control-435/epoch-001.pt",
+        "sha256": "df631aa7e29e7d1967309bacf8daef5c78984951c153bf32e25c2b2cd25b375a",
+        "completed_epochs": 9,
+        "passed_master_limits": false,
+        "seed": 435,
+        "checkpoint_reload_verified": true
+      }
+    ],
+    "field": [
+      {
+        "epoch": 15,
+        "scores": {
+          "master": {
+            "accuracy": 0.9601593625498008,
+            "macro_f1": 0.9416140463387763,
+            "correct": 482,
+            "sample_count": 502,
+            "loss": 0.10148970037698746,
+            "confusion_matrix": [
+              [
+                226,
+                0,
+                10
+              ],
+              [
+                0,
+                26,
+                2
+              ],
+              [
+                4,
+                4,
+                230
+              ]
+            ],
+            "per_class": [
+              {
+                "class_index": 0,
+                "class_name": "potato__early_blight",
+                "precision": 0.9826086956521739,
+                "recall": 0.9576271186440678,
+                "f1": 0.9699570815450643,
+                "support": 236
+              },
+              {
+                "class_index": 1,
+                "class_name": "potato__healthy",
+                "precision": 0.8666666666666667,
+                "recall": 0.9285714285714286,
+                "f1": 0.896551724137931,
+                "support": 28
+              },
+              {
+                "class_index": 2,
+                "class_name": "potato__late_blight",
+                "precision": 0.9504132231404959,
+                "recall": 0.9663865546218487,
+                "f1": 0.9583333333333334,
+                "support": 238
+              }
+            ]
+          },
+          "field": {
+            "accuracy": 0.8815165876777251,
+            "macro_f1": 0.876109606852503,
+            "correct": 186,
+            "sample_count": 211,
+            "loss": 0.7206506729125977,
+            "confusion_matrix": [
+              [
+                55,
+                0,
+                6
+              ],
+              [
+                4,
+                38,
+                8
+              ],
+              [
+                7,
+                0,
+                93
+              ]
+            ],
+            "per_class": [
+              {
+                "class_index": 0,
+                "class_name": "potato__early_blight",
+                "precision": 0.8333333333333334,
+                "recall": 0.9016393442622951,
+                "f1": 0.8661417322834646,
+                "support": 61
+              },
+              {
+                "class_index": 1,
+                "class_name": "potato__healthy",
+                "precision": 1.0,
+                "recall": 0.76,
+                "f1": 0.8636363636363636,
+                "support": 50
+              },
+              {
+                "class_index": 2,
+                "class_name": "potato__late_blight",
+                "precision": 0.8691588785046729,
+                "recall": 0.93,
+                "f1": 0.8985507246376813,
+                "support": 100
+              }
+            ]
+          }
+        },
+        "train_loss": 0.22520513154566288,
+        "seconds": 1.000996041999315,
+        "checkpoint": "runs/field_v3/potato_pair/field-434/epoch-015.pt",
+        "sha256": "30c1dc35d7fe3d046f723949f1f9f0dbb3ffd58cd71548b3b3fe24352a6e6b43",
+        "completed_epochs": 18,
+        "passed_master_limits": false,
+        "seed": 434,
+        "checkpoint_reload_verified": true
+      },
+      {
+        "epoch": 16,
+        "scores": {
+          "master": {
+            "accuracy": 0.9561752988047809,
+            "macro_f1": 0.9315112315112314,
+            "correct": 480,
+            "sample_count": 502,
+            "loss": 0.13769665360450745,
+            "confusion_matrix": [
+              [
+                233,
+                0,
+                3
+              ],
+              [
+                0,
+                24,
+                4
+              ],
+              [
+                12,
+                3,
+                223
+              ]
+            ],
+            "per_class": [
+              {
+                "class_index": 0,
+                "class_name": "potato__early_blight",
+                "precision": 0.9510204081632653,
+                "recall": 0.9872881355932204,
+                "f1": 0.9688149688149688,
+                "support": 236
+              },
+              {
+                "class_index": 1,
+                "class_name": "potato__healthy",
+                "precision": 0.8888888888888888,
+                "recall": 0.8571428571428571,
+                "f1": 0.8727272727272727,
+                "support": 28
+              },
+              {
+                "class_index": 2,
+                "class_name": "potato__late_blight",
+                "precision": 0.9695652173913043,
+                "recall": 0.9369747899159664,
+                "f1": 0.9529914529914529,
+                "support": 238
+              }
+            ]
+          },
+          "field": {
+            "accuracy": 0.8672985781990521,
+            "macro_f1": 0.8655703082092249,
+            "correct": 183,
+            "sample_count": 211,
+            "loss": 0.623978316783905,
+            "confusion_matrix": [
+              [
+                56,
+                1,
+                4
+              ],
+              [
+                0,
+                39,
+                11
+              ],
+              [
+                10,
+                2,
+                88
+              ]
+            ],
+            "per_class": [
+              {
+                "class_index": 0,
+                "class_name": "potato__early_blight",
+                "precision": 0.8484848484848485,
+                "recall": 0.9180327868852459,
+                "f1": 0.8818897637795275,
+                "support": 61
+              },
+              {
+                "class_index": 1,
+                "class_name": "potato__healthy",
+                "precision": 0.9285714285714286,
+                "recall": 0.78,
+                "f1": 0.8478260869565217,
+                "support": 50
+              },
+              {
+                "class_index": 2,
+                "class_name": "potato__late_blight",
+                "precision": 0.8543689320388349,
+                "recall": 0.88,
+                "f1": 0.8669950738916256,
+                "support": 100
+              }
+            ]
+          }
+        },
+        "train_loss": 0.2074344988912344,
+        "seconds": 1.2676629170018714,
+        "checkpoint": "runs/field_v3/potato_pair/field-435/epoch-016.pt",
+        "sha256": "a9959c4152b4477eb7eefee75de2fcbe8513aa80bb2f6ce1fb65e929f6a56c5f",
+        "completed_epochs": 18,
+        "passed_master_limits": false,
+        "seed": 435,
+        "checkpoint_reload_verified": true
+      }
+    ]
+  },
+  "diagnostic_candidate": {
+    "epoch": 15,
+    "scores": {
+      "master": {
+        "accuracy": 0.9601593625498008,
+        "macro_f1": 0.9416140463387763,
+        "correct": 482,
+        "sample_count": 502,
+        "loss": 0.10148970037698746,
+        "confusion_matrix": [
+          [
+            226,
+            0,
+            10
+          ],
+          [
+            0,
+            26,
+            2
+          ],
+          [
+            4,
+            4,
+            230
+          ]
+        ],
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "potato__early_blight",
+            "precision": 0.9826086956521739,
+            "recall": 0.9576271186440678,
+            "f1": 0.9699570815450643,
+            "support": 236
+          },
+          {
+            "class_index": 1,
+            "class_name": "potato__healthy",
+            "precision": 0.8666666666666667,
+            "recall": 0.9285714285714286,
+            "f1": 0.896551724137931,
+            "support": 28
+          },
+          {
+            "class_index": 2,
+            "class_name": "potato__late_blight",
+            "precision": 0.9504132231404959,
+            "recall": 0.9663865546218487,
+            "f1": 0.9583333333333334,
+            "support": 238
+          }
+        ]
+      },
+      "field": {
+        "accuracy": 0.8815165876777251,
+        "macro_f1": 0.876109606852503,
+        "correct": 186,
+        "sample_count": 211,
+        "loss": 0.7206506729125977,
+        "confusion_matrix": [
+          [
+            55,
+            0,
+            6
+          ],
+          [
+            4,
+            38,
+            8
+          ],
+          [
+            7,
+            0,
+            93
+          ]
+        ],
+        "per_class": [
+          {
+            "class_index": 0,
+            "class_name": "potato__early_blight",
+            "precision": 0.8333333333333334,
+            "recall": 0.9016393442622951,
+            "f1": 0.8661417322834646,
+            "support": 61
+          },
+          {
+            "class_index": 1,
+            "class_name": "potato__healthy",
+            "precision": 1.0,
+            "recall": 0.76,
+            "f1": 0.8636363636363636,
+            "support": 50
+          },
+          {
+            "class_index": 2,
+            "class_name": "potato__late_blight",
+            "precision": 0.8691588785046729,
+            "recall": 0.93,
+            "f1": 0.8985507246376813,
+            "support": 100
+          }
+        ]
+      }
+    },
+    "train_loss": 0.22520513154566288,
+    "seconds": 1.000996041999315,
+    "checkpoint": "runs/field_v3/potato_pair/field-434/epoch-015.pt",
+    "sha256": "30c1dc35d7fe3d046f723949f1f9f0dbb3ffd58cd71548b3b3fe24352a6e6b43",
+    "completed_epochs": 18,
+    "passed_master_limits": false,
+    "seed": 434,
+    "checkpoint_reload_verified": true
+  },
+  "masked_incumbent": {
+    "master": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "correct": 502,
+      "sample_count": 502,
+      "loss": 0.007466910872608423,
+      "confusion_matrix": [
+        [
+          236,
+          0,
+          0
+        ],
+        [
+          0,
+          28,
+          0
+        ],
+        [
+          0,
+          0,
+          238
+        ]
+      ],
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "potato__early_blight",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 236
+        },
+        {
+          "class_index": 1,
+          "class_name": "potato__healthy",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 28
+        },
+        {
+          "class_index": 2,
+          "class_name": "potato__late_blight",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 238
+        }
+      ]
+    },
+    "field": {
+      "accuracy": 0.33649289099526064,
+      "macro_f1": 0.24569397789786282,
+      "correct": 71,
+      "sample_count": 211,
+      "loss": 2.827115774154663,
+      "confusion_matrix": [
+        [
+          51,
+          0,
+          10
+        ],
+        [
+          13,
+          0,
+          37
+        ],
+        [
+          80,
+          0,
+          20
+        ]
+      ],
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "potato__early_blight",
+          "precision": 0.3541666666666667,
+          "recall": 0.8360655737704918,
+          "f1": 0.4975609756097561,
+          "support": 61
+        },
+        {
+          "class_index": 1,
+          "class_name": "potato__healthy",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 50
+        },
+        {
+          "class_index": 2,
+          "class_name": "potato__late_blight",
+          "precision": 0.29850746268656714,
+          "recall": 0.2,
+          "f1": 0.23952095808383234,
+          "support": 100
+        }
+      ]
+    }
+  },
+  "per_seed_field_gains": [
+    0.48690134779130284,
+    0.4359913868270248
+  ],
+  "training_counts": {
+    "unique_master": 1771,
+    "unique_field": 1429
+  },
+  "completed_utc": "2026-11-24T19:15:10.636555+00:00"
+}

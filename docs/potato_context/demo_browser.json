@@ -1,0 +1,37 @@
+{
+  "browser": "Codex in-app browser",
+  "origin": "http://127.0.0.1:8772/",
+  "checked_on": "2026-11-24",
+  "extracted_archive": "artifacts/LeafCheck-potato-context-demo.zip",
+  "archive_sha256": "cd714d0d1bc99cc22b63b4c6a399416fc8c33bfa3418d29c71e455a65710cd73",
+  "app_revision": "e3dd8174ffc0f911",
+  "source_commit": "7cee6792df224fdc4b8cf10c5beea43c7ae94c12",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "class_map_sha256": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a",
+  "ready_model_ids": ["final177", "cnn", "starter300", "createml"],
+  "archive_manifest_files_verified": 90,
+  "suite": {"passed": 19, "runtime_log": "runs/field_v3/demo_suite.log"},
+  "observed": [
+    {
+      "fixture": "258787bc44a9e66c0ba10c3c8eb5f740a89669f4908dce256d7b4424856f2bfc.jpg",
+      "source_label": "potato__early_blight",
+      "file_ready": true,
+      "automatic_display": "Bacterial spot / Tomato",
+      "known_potato_display": "Early blight / Potato",
+      "known_potato_score_display": "81.8%",
+      "scope_display": "POTATO-ONLY PREDICTION",
+      "class_list_display": "ALL 3 CLASSES"
+    },
+    {
+      "fixture": "f9adaad86dd5604c0302e3ffd5368a08ca06f8f0a3b98ef2c5605203e83671cf.jpg",
+      "source_label": "potato__early_blight",
+      "selector_after_upload": "Automatic · 177 labels",
+      "known_potato_display": "Healthy / Potato",
+      "known_potato_score_display": "89.9%"
+    },
+    {
+      "fixture": "invalid.jpg",
+      "visible_alert": "This image could not be opened. Try another JPEG or PNG."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "archive_sha256": "cd714d0d1bc99cc22b63b4c6a399416fc8c33bfa3418d29c71e455a65710cd73",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "hardware": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "Apple M2 Max",
+    "physical_memory_bytes": 34359738368,
+    "power_source": "Battery Power"
+  },
+  "fresh_process": true,
+  "working_directory_has_training_data": false,
+  "notebooks_present": false,
+  "manifest_files_verified": 90,
+  "all_four_real_models_ready": true,
+  "python_executable": "/Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/runs/final177/runtime_env/bin/python",
+  "python_venv": "/Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/runs/final177/runtime_env",
+  "startup_command": "./Launch LeafCheck.command --port 0 (automatic browser disabled for the HTTP check)",
+  "startup_ms_including_first_swift_compile": 3276.602208003169,
+  "http_latency": {
+    "warmup_requests": 2,
+    "timed_requests": 12,
+    "p50_ms": 71.940124995308,
+    "p95_ms": 74.72647775066434,
+    "measurements_ms": [
+      69.05970799562056,
+      64.77437500143424,
+      71.21245800226461,
+      73.21912499901373,
+      70.66908301203512,
+      71.8617499951506,
+      72.01849999546539,
+      64.74687499576248,
+      73.91158399695996,
+      73.82987499295268,
+      73.02758400328457,
+      75.72245900519192
+    ],
+    "conditions": "Loopback HTTP, alternating packaged success/mistake, all four real models, warm local files, includes image upload/validation and JSON response; not CNN-only latency"
+  },
+  "example_results": [
+    {
+      "purpose": "success",
+      "reference_label": "tomato__healthy",
+      "predicted_label": "tomato__healthy",
+      "score": 0.9999866485595703,
+      "correct": true,
+      "all_four_predicted": true
+    },
+    {
+      "purpose": "mistake",
+      "reference_label": "tomato__late_blight",
+      "predicted_label": "potato__late_blight",
+      "score": 0.9820762872695923,
+      "correct": false,
+      "all_four_predicted": true
+    }
+  ],
+  "invalid_image_http_status": 400,
+  "unsupported_format_http_status": 415,
+  "known_potato_upload": {
+    "sha256": "258787bc44a9e66c0ba10c3c8eb5f740a89669f4908dce256d7b4424856f2bfc",
+    "automatic_label": "tomato__bacterial_spot",
+    "known_crop_label": "potato__early_blight",
+    "score_difference": 8.596070660837896e-09,
+    "known_crop_scores": {
+      "potato__early_blight": 0.8180854320526123,
+      "potato__healthy": 3.2569114409852773e-06,
+      "potato__late_blight": 0.18191130459308624
+    }
+  }
+}

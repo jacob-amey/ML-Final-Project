@@ -444,3 +444,20 @@ paired evidence. See nov22_resume_record.json and the selection plan.
 - The project is stopped at `verified_delivery_complete` with the existing
   frozen evaluation and local submission archive. This check verified
   identities and completion records without generating new holdout predictions.
+
+## 2026-11-24 — crop context and field follow-up
+
+- The two independently initialized 224-pixel CNNs improved same-split
+  validation macro-F1 from 0.649221 to 0.657068 when averaging their predictions.
+  The 177-label course artifact remains the automatic app model.
+- Two matched scratch runs per recipe tested a potato-only field specialist.
+  The blend improved date-held Mduma validation, then trailed the original CNN
+  given potato in a frozen check on 3,407 screened Okara images. That
+  specialist stays experimental.
+- The deployment adds optional potato context using the original checkpoint.
+  Verified the complete upload path in a fresh archive extraction, including
+  the crop selector, API parity, a success, a wrong condition and invalid
+  input. Nine pipeline tests and 19 website tests passed.
+- Added 578 screened TOM2024 field training images and completed both arms
+  of the four-epoch replay. Neither arm qualified for replacement of the
+  original CNN. See the [study and replay receipt](potato_context_study.md).

@@ -79,6 +79,32 @@ collection for testing. The [source registry](manifests/leafcheck_field_v2_sourc
 pins reuse terms, exact archive hashes and label mappings. This is a separate
 follow-up release with the original 177-class mapping.
 
+## Independent potato evaluation and WASCAL training
+
+The [crop-context study](../docs/potato_context_study.md) uses two later
+releases. `leafcheck_okara_v1` contains 3,407 potato images for reserved
+evaluation. Its [release seal](manifests/leafcheck_okara_v1_release.json) and
+[source registry](manifests/leafcheck_okara_v1_source.json) identify the
+screening, labels and public mirror bytes. The exact images are separate from
+all training releases.
+
+`leafcheck_tom2024_v1` contains 578 training images from the TOM2024
+collection under CC BY 4.0. Its three compatible labels remain in the
+existing class map. Check the [source record](manifests/leafcheck_tom2024_v1_source.json),
+[per-file checksums](manifests/leafcheck_tom2024_v1_files.csv) and
+[release seal](manifests/leafcheck_tom2024_v1_release.json) before use.
+Restore the prior field releases and the frozen master first. Build Okara
+before TOM2024 so its protected membership is present for overlap screening.
+The build commands expect absent output directories.
+
+```sh
+.venv/bin/python scripts/prepare_okara_holdout.py fetch
+.venv/bin/python scripts/prepare_okara_holdout.py build
+.venv/bin/python scripts/prepare_okara_holdout.py verify
+.venv/bin/python scripts/prepare_tom2024.py fetch
+.venv/bin/python scripts/prepare_tom2024.py build
+```
+
 ## Earlier three-class dataset
 
 The dataset assigns `early_blight`, `healthy`, and `late_blight` to class indices 0, 1, and 2 respectively. The image folders under `data/processed/leafcheck/` are ready for a loader such as PyTorch `ImageFolder`. The [image inventory](manifests/image_inventory.csv) records the exact membership, original path, source revision, group, file hash, and any exclusion. The [label mapping](manifests/label_mapping.csv) records how the source labels translate to project labels.
