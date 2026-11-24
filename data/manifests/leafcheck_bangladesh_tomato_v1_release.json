@@ -1,0 +1,23 @@
+{
+  "version": "leafcheck_bangladesh_tomato_v1",
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "candidates": 604,
+  "files_sha256": {
+    "manifest.csv": "e921621af3e7023e40b8f68f4066e9b40f04b3a218db723d731dac43ddc38426",
+    "source.json": "e8a2a0299e61d6a108da7514f519735c522237b155fc6d71de8dc5cb168872ee",
+    "source_files.csv": "246e75fc528c092a807d5a2aa2fc2dbf1a08f2e01e1cd554a196c4e94f1a26e4"
+  },
+  "test_only_counts": {
+    "tomato__bacterial_spot": 101,
+    "tomato__early_blight": 105,
+    "tomato__healthy": 100,
+    "tomato__late_blight": 95,
+    "tomato__yellow_leaf_curl_virus": 107
+  },
+  "exclusions": {
+    "new_cluster_label_conflict": 46,
+    "existing_visual_candidate": 23,
+    "new_cluster_repeated_view": 27
+  },
+  "fingerprint": "efe1af35f3e9bcfe5e596bdb4f3116a90bd6069d89c1560062bc6c398992d7fa"
+}
