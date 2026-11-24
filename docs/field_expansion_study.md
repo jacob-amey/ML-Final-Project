@@ -21,6 +21,7 @@ explains the provisional applicability of the available CSC 434 rubric.
 | [Laizer, Mduma and colleagues, Tanzanian potato leaves](https://zenodo.org/records/8286529) | Deterministic sample from the three pinned publisher ZIP archives. Where enough dates exist to cover every label, reserve complete EXIF days for development validation. | Use potato early blight, healthy and late blight. Unknown days can contribute only to training. |
 | [Sharma and Raheman, field potato corpus](https://zenodo.org/records/22059910) | Download and provenance inspection only. | The archived photographs have no per-image disease labels. Exclude from condition fitting and scoring. |
 | [Bousset-Vaslin, Inrae potato fragments](https://doi.org/10.57745/D6DVD5) | Metadata screened only. The archive's public file server repeatedly reset the transfer. | The table documents candidate early/late labels, but the image bytes were unavailable. |
+| [Zhuo et al., M-TLD tomato collection](https://github.com/zhuojiaxiong6/DETR#-dataset) | Source availability checked. The authors' repository directs users to request access. | The archive and per-image annotations were unavailable for local screening. More than one annotation per image is common in the published study. |
 
 The three admitted sources use CC BY 4.0. [Exact source and archive records](../data/manifests/leafcheck_field_v2_sources.json)
 include attribution and checksums. Labels remain inherited from the publishers.
@@ -38,6 +39,25 @@ The tomato pilot kept 419 training images (66 bacterial spot, 265 healthy,
 98 late blight). Thirty-three candidates failed the audit. Source-level
 evaluation can reveal transfer across collections and is limited to the
 labels and conditions represented in those collections.
+
+The expanded release kept 1,829 new training images and 211 date-held
+potato validation images. The 1,410 Tanzanian training images span 41
+recorded days. Validation spans 13 disjoint days. Each retained Tanzanian
+file had EXIF date information. The largest single training day contributes
+336 photos. This is an observation about capture-day concentration.
+Evidence for independent farms or specimens is limited. The earlier v1
+Tanzanian additions came from reported capture dates in December 2024.
+The new study's 2023 source dates are disjoint from those additions.
+
+The [sampled source registry](../data/manifests/leafcheck_field_v2_sampled_sources.json)
+pins the early-blight archive and exact 128 MiB prefixes for the healthy
+and late-blight archives. All local ZIP members used from the prefixes
+passed compressed size, decoded size and CRC checks. A partial final
+member cannot enter the release. The SHA-256 pins refer to the received
+prefix bytes and the publisher MD5s refer to the whole archives. The
+registered sample uses 600 candidates per potato class before overlap
+screening. Healthy and late-blight candidate pools are constrained to those
+archive prefixes, so they are not a random sample of the full collections.
 
 ## Matched treatment
 
@@ -86,6 +106,46 @@ with the same deployed network size and compute. This borrows the weight
 interpolation idea from Wortsman et al. and applies it to the two states of
 our own CNN. [CVPR paper](https://openaccess.thecvf.com/content/CVPR2022/html/Wortsman_Robust_Fine-Tuning_of_Zero-Shot_Models_CVPR_2022_paper.html)
 
+The tomato interpolation screen retained 0.648734 master macro-F1 at a
+6.25% dose of the field-trained weights. At that dose the Sheikh field
+macro-F1 stayed at 0. A larger dose improved the single-view field score
+while falling below the master limits. No checkpoint from that screen
+earned promotion.
+
+## Expanded replay results
+
+Both arms completed four epochs. Each procedure replayed all 59,008 master
+training images once across those epochs. The epoch-two field checkpoint
+was selected for the diagnostic comparison by the primary validation
+metric. That checkpoint had replayed 29,504 master images after starting
+from the already full-data incumbent.
+
+| Eight-view scoring | Master correct | Master macro-F1 | Sheikh tomato correct | Mduma potato correct | Mean field macro-F1 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Incumbent | 15,111/16,836 | 0.649221 | 0/233 | 7/211 | 0.025132 |
+| Matched control | 14,972/16,836 | 0.643086 | 65/233 | 16/211 | 0.269331 |
+| Expanded field data | 14,917/16,836 | 0.633074 | 134/233 | 143/211 | 0.674532 |
+
+Mduma wrong-crop predictions fell from 195/211 to 32/211. Among potato
+late-blight references, 32/100 were predicted as potato early blight,
+compared with 9/100 for the incumbent. The reverse direction changed
+from 0/61 to 2/61. More predictions named the correct crop while early
+and late symptoms remained hard to separate. The broad macro-F1 fell
+by 0.016148 and accuracy fell by 1.15 percentage points. The direct
+field-adapted candidate failed both deployment limits.
+[Run and environment](field_expansion/replay_run.json) ·
+[Checkpoint and per-source results](field_expansion/replay_decision.json)
+
+## App verification
+
+Ten original diagnostic or validation uploads produced identical ordered
+scores through the API and standalone CPU inference. Thirty-seven Banu
+validation images exceeded a client or server upload limit. The demo
+now shows both limits before selection and explains how to handle an
+oversized file. Its managed archive retains the previously frozen model.
+[Archive receipt](field_expansion/demo_archive.json) ·
+[Fresh extraction verification](field_expansion/archive_verification.json)
+
 ## Reproduce
 
 From the project root with the pinned research environment, original field
@@ -96,6 +156,14 @@ supplement, master release and its 224-pixel training/validation cache:
 .venv/bin/python scripts/prepare_field_expansion.py build --tomato-only --output data/processed/leafcheck_field_v2_tomato
 .venv/bin/python scripts/prepare_field_expansion.py verify --output data/processed/leafcheck_field_v2_tomato
 .venv/bin/python -m leafcheck.field_expansion --data data/processed/leafcheck_field_v2_tomato --run runs/field_v2/tomato_reproduction
+```
+
+To reproduce the expanded run, use the sampled registry and expanded recipe.
+
+```sh
+.venv/bin/python scripts/prepare_field_expansion.py fetch --registry data/manifests/leafcheck_field_v2_sampled_sources.json
+.venv/bin/python scripts/prepare_field_expansion.py build --registry data/manifests/leafcheck_field_v2_sampled_sources.json --output data/processed/leafcheck_field_v2_sampled
+.venv/bin/python -m leafcheck.field_expansion --data data/processed/leafcheck_field_v2_sampled --config configs/leafcheck_field_v2_full.json --run runs/field_v2/expanded_reproduction
 ```
 
 To resume, supply the original configuration, dataset and run directory

@@ -1,0 +1,11 @@
+{
+  "archive": "artifacts/LeafCheck-field-expansion-demo.zip",
+  "sha256": "d75159f57dd1b16b80a14a2e298e9f2cabccc3e0c987f81baaa0279f20d1dcc1",
+  "bytes": 9000589,
+  "model_checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "files": 89,
+  "source_revision": "7478b7260e79ec47c03741c455ef402f0bd3c942",
+  "contains_training_dataset": false,
+  "contains_notebooks": false,
+  "restore": "Unzip into a new folder, install the app requirements in a compatible Python environment, then run its launcher or backend/server.py."
+}
