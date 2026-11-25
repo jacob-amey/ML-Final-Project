@@ -1,0 +1,32 @@
+{
+  "version": "leafcheck_plantcity_holdout_v1",
+  "name": "PlantCity",
+  "publisher_version": 4,
+  "source": "https://data.mendeley.com/datasets/w8kh2xkspx/4",
+  "paper": "https://doi.org/10.1016/j.dib.2025.112130",
+  "credit": "Muhammad Sheraz Khan, Kainat Nisa, Irshad Ahmad and collaborators",
+  "license": "CC BY 4.0",
+  "archive_url": "https://data.mendeley.com/public-files/datasets/w8kh2xkspx/files/cc5d2e50-03cd-450c-a444-4c6f48683d45/file_downloaded",
+  "archive_size": 1128347591,
+  "publisher_archive_sha256": "db1bd5624f42aceebff4d8ff08f99257b0608ac712a8bf5bf7f1e676d68bfffa",
+  "directory_bytes": 4194304,
+  "directory_sha256": "fc9a703adfd475c476488d3e85b40cd5c8fcb7e75c01d7564d6fd927f44725b6",
+  "role": "Reserved confirmation source only. Keep it out of all fitting, selection, thresholds and augmentation decisions. Score a candidate only under a separately frozen comparison.",
+  "selection": "Use only test.zip, whose 10667 file count and selected class counts match the unaugmented column in Table 1. Sample 24 per compatible class by lowest SHA-256 of the ZIP member name. Screen collisions and verify display framing before confirming membership.",
+  "sample_per_class": 24,
+  "labels": {
+    "Apple Normal": ["apple__healthy", 206],
+    "Bean bean rust image": ["bean__rust", 124],
+    "Cherry Normal leaf": ["cherry__healthy", 125],
+    "Corn Normal leaf": ["corn__healthy", 142],
+    "Corn gray leaf spot": ["corn__gray_leaf_spot", 132],
+    "Grape Normal_leaf": ["grape__healthy", 372],
+    "Grape Downy mildew leaf": ["grape__downy_mildew", 155],
+    "tomato_bacterial_spot": ["tomato__bacterial_spot", 400],
+    "tomato_early_blight": ["tomato__early_blight", 400],
+    "tomato_healthy_leaf": ["tomato__healthy", 400],
+    "tomato_late_blight": ["tomato__late_blight", 294],
+    "tomato_leaf_mold": ["tomato__leaf_mold", 400],
+    "tomato_septoria_leaf": ["tomato__septoria_leaf_spot", 341]
+  }
+}
