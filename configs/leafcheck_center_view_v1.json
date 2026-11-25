@@ -1,0 +1,14 @@
+{
+  "hypothesis": "Adding one predetermined central view improves field validation by reducing the influence of photo edges while preserving full-image scores.",
+  "reference_checkpoint": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "master_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "center_fraction_each_axis": 0.8,
+  "probability_weight": 0.4,
+  "field_sources": ["sheikh", "mduma", "pakistan"],
+  "min_field_joint_macro_f1_gain": 0.02,
+  "max_master_joint_macro_f1_drop": 0.003,
+  "max_master_accuracy_drop": 0.0025,
+  "max_field_source_drop": 0.02,
+  "max_cpu_p95_ms": 500,
+  "selection": "Use only registered development sources and all 16,836 master validation photos. Maintain all 177 eligible outputs. Any passing policy requires independent confirmation."
+}
