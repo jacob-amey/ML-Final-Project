@@ -562,3 +562,15 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   Kept original full-image inference. No test files were used.
   [Protocol](../configs/leafcheck_center_view_v1.json) ·
   [Evidence](field_optimization/center_view.json)
+- Admitted 275 Image Safari photos across seven crops after metadata,
+  byte, grouping and prior-overlap checks. Four whole sites supply 129
+  training photos. Six held sites supply 146 crop-only validation views.
+  The original automatic model identified 18 crops correctly. Summed
+  original crop probabilities identified 21. The rejected field crop head
+  identified 15 alone and 20 in the mixed policy.
+- Reviewed all 146 validation thumbnails for framing without viewing
+  per-photo predictions. The original got 10 of 78 primarily foreground,
+  eight of 40 whole-plant or plot views, and zero of 28 sparse views.
+  The crop/site composition differs by framing. Treat these as diagnostic
+  counts and preserve the full cohort. Disease labels are unavailable.
+  [Crop metrics and framing rubric](field_optimization/imagesafari_baseline.json)

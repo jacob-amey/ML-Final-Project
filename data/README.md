@@ -231,6 +231,33 @@ the crop candidate freeze and now stays outside development.
 .venv/bin/python scripts/prepare_crop_confirmation.py build
 ```
 
+## Image Safari site-held crop development
+
+The [Image Safari collection](https://registry.opendata.aws/artemis-image-safari/)
+provides original field photos under CC BY-SA 4.0. This sampling uses
+paired publisher metadata requiring an original image and agreeing
+crop type. The [intake](manifests/leafcheck_imagesafari_intake.json)
+assigns whole sites to either training or validation across all seven
+crops, then takes a bounded sample from the earliest available dates.
+The [pinned release](manifests/leafcheck_imagesafari_crop_v1_release.json)
+contains 129 training and 146 validation photos. It excluded one
+repeated view after checks against protected prior images.
+
+These photos carry crop labels only. Some show fields, sparse plants,
+vegetation with multiple leaves, or soil rather than diagnostic leaf
+detail. Keep this cohort's crop results separate from crop-and-condition
+accuracy. The metadata does not establish individual specimen identity.
+The source registry identifies both image and sidecar objects and their
+SHA-256 values. Raw images remain local.
+
+```sh
+.venv/bin/python scripts/prepare_imagesafari_crop.py restore
+.venv/bin/python scripts/prepare_imagesafari_crop.py build
+.venv/bin/python -m leafcheck.imagesafari_crop_baseline \
+  --selection runs/field_v6/crop-434-recovered/decision.json \
+  --output runs/field_v7/imagesafari-baseline
+```
+
 ## Earlier three-class dataset
 
 The dataset assigns `early_blight`, `healthy`, and `late_blight` to class indices 0, 1, and 2 respectively. The image folders under `data/processed/leafcheck/` are ready for a loader such as PyTorch `ImageFolder`. The [image inventory](manifests/image_inventory.csv) records the exact membership, original path, source revision, group, file hash, and any exclusion. The [label mapping](manifests/label_mapping.csv) records how the source labels translate to project labels.
