@@ -107,7 +107,7 @@ def run(output, plan, seed, resume):
     releases, supplemental, development = load_sources(plan, frozen)
     crop_names, crop_index = np.unique([name.split("__", 1)[0] for name in classes], return_inverse=True)
     crop_to_index = {name: i for i, name in enumerate(crop_names)}
-    config = {**plan, "labels": list(crop_names)}
+    config = {**plan, "labels": crop_names.tolist()}
     train = PixelCache("train", plan["input_size"], frozen)
     validation = PixelCache("val", plan["input_size"], frozen)
     spec = read(cache_path(plan["input_size"], frozen["fingerprint"]) / "preprocessing.json")
