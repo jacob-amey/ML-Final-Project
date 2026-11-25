@@ -1,0 +1,22 @@
+{
+  "version": "leafcheck_ccmt_crop_v1",
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "candidates": 544,
+  "role": "training_crop_only",
+  "intake_sha256": "e92964cf4b04f86c87c7ad3b5e5b78d42cd72463b6be44b057fd7c2d8cf052ec",
+  "files_sha256": {
+    "manifest.csv": "0f06381fb16ef8288ca80de386a495de7e2187d2f9b587bdaef3adaae5339fc1",
+    "source_files.csv": "49b24a284c4562542ad33098890f2c48fc3490622654a2afcb8e742fb08a6077"
+  },
+  "fingerprint": "ec89c3b982dd3278bace72ef6eee057dbfae8a16b3df9b32c4636f282e80c1e1",
+  "crop_counts": {
+    "tomato": 154,
+    "corn": 217,
+    "cassava": 158
+  },
+  "exclusions": {
+    "new_cluster_repeated_view": 1,
+    "invalid_or_unsupported_image": 5,
+    "existing_visual_candidate": 9
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "version": "leafcheck_ccmt_crop_v1",
+  "source": "https://data.mendeley.com/datasets/bwh3zbpkpv/1",
+  "license": "CC BY 4.0",
+  "source_api": "https://data.mendeley.com/public-api/datasets/bwh3zbpkpv/files",
+  "sample_per_folder": 32,
+  "role": "training_crop_only",
+  "folders": {
+    "aa41f1e8-8303-4e3a-8fb6-61828fd133a7": [
+      "tomato",
+      "healthy"
+    ],
+    "0d6b83ec-62b7-4dd2-86a9-17fdef0b83e7": [
+      "tomato",
+      "leaf blight"
+    ],
+    "03ac0d50-4313-47f2-9afb-4bf3166f7fa1": [
+      "tomato",
+      "leaf curl"
+    ],
+    "558d9ee5-c2f2-4dd1-9240-12d45a0532d7": [
+      "tomato",
+      "septoria leaf spot"
+    ],
+    "3f6a4437-0e7a-4047-978f-78c313b0b900": [
+      "tomato",
+      "verticulium wilt"
+    ],
+    "7b44bb20-452c-468d-9caf-9149ea7b21e7": [
+      "corn",
+      "fall armyworm"
+    ],
+    "4da8265a-30d2-49bc-ace2-dbcec2d53aab": [
+      "corn",
+      "grasshoper"
+    ],
+    "b8b2a5ff-7f79-46c4-8815-ba4cec23cfa1": [
+      "corn",
+      "healthy"
+    ],
+    "4cf175af-5a5a-4191-a3ce-f202b75f0d85": [
+      "corn",
+      "leaf beetle"
+    ],
+    "08044ee4-b294-4135-b6d4-b7e6ed689618": [
+      "corn",
+      "leaf blight"
+    ],
+    "632f07ab-cafd-4752-81ed-8f9914ce64e6": [
+      "corn",
+      "leaf spot"
+    ],
+    "d871ac9d-2d79-425f-9d4a-c5ad0de7800a": [
+      "corn",
+      "streak virus"
+    ],
+    "5a089bd5-4c26-415c-862d-530233120bd9": [
+      "cassava",
+      "bacterial blight"
+    ],
+    "d871023f-5dc4-4e10-a4b9-c0b1762ce351": [
+      "cassava",
+      "brown spot"
+    ],
+    "3d09905e-e4f5-4415-a454-120fd29b6951": [
+      "cassava",
+      "green mite"
+    ],
+    "17e79247-49e5-4c6b-b81c-11c97599561d": [
+      "cassava",
+      "healthy"
+    ],
+    "fbf17af1-ab7c-495b-9c9a-705025a7eadc": [
+      "cassava",
+      "mosaic"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "hypothesis": "A separate scratch crop CNN trained with real field photos improves joint 177-label field predictions when the original condition scores are preserved inside every crop.",
+  "control": "same randomly initialized architecture, same number of training occurrences per crop and the same epoch count; additional occurrences are replayed master examples.",
+  "reference_checkpoint": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "master_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "known_development": ["sheikh", "mduma", "pakistan"],
+  "seed_plan": [434, 435],
+  "master_per_crop_cap": 512,
+  "input_size": 128,
+  "channels": [16, 32, 64, 96],
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0005,
+  "min_epochs": 6,
+  "max_epochs": 6,
+  "patience": 6,
+  "crop_inference": "single_view",
+  "crop_blend": 0.5,
+  "selection": {
+    "master_max_macro_f1_drop_per_seed": 0.005,
+    "master_max_accuracy_drop_per_seed": 0.0025,
+    "field_min_macro_f1_gain": 0.02,
+    "field_min_gain_vs_control": 0.01,
+    "field_max_per_source_drop": 0.02,
+    "field_min_wrong_crop_rate_reduction": 0.05
+  },
+  "stopping": "Run seed 434 as a six-epoch matched screen. Repeat seed 435 only if the registered gates pass. Any deployable candidate needs a newly sealed multi-crop field confirmation. None of the course or follow-up test data is used here."
+}
