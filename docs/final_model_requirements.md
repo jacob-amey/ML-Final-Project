@@ -148,13 +148,13 @@ The local project requirement identifies CSC 434 and the team decks identify
 CSC-427. The available report requirements have been applied provisionally.
 The original combined submission remains the archived course snapshot.
 
-| Requirement | Evidence in the editable Field Update report |
+| Requirement | Evidence in the editable Field Study report |
 | --- | --- |
 | Introduction, related work and original contributions | Page 1 gives the task, prior literature and delivered contribution. |
 | Methods, source integrity, training and selection | Pages 2–4 give the frozen split design, architecture and train-only preprocessing, and explain seed and recipe comparisons. |
-| Results, figures and comparative validation/testing | Pages 4–7 show learning curves, directed confusions, paired validation, three methods on the same reserved test, supplementary studies and field-transfer limitations. |
-| Discussion, conclusion and future improvement | Pages 6–8 explain sparse support, dataset shift, uncalibrated scores and the need for independent field data. |
-| Project management and individual contributions | Page 8 distinguishes assigned roles, evidenced decisions and assistance. Student implementation details and meeting activities still require confirmation. |
-| IEEE references, repository link, dataset and source links | Pages 8–9 give the GitHub link, source and restoration pointers, dataset version, weights hash and numbered references. Independent access to the full merged master remains unverified. |
-| Length and formatting | The generated Word file renders to nine pages. The normal style is 11 point with 1.15 line spacing, one-inch margins and bottom-right page numbering. |
+| Results, figures and comparative validation/testing | Pages 4–8 show learning curves, directed confusions, paired validation, three methods on the same reserved test, supplementary studies and the matched tomato comparison with its independent PlantCity check. |
+| Discussion, conclusion and future improvement | Pages 6–9 explain sparse support, dataset shift, uncalibrated scores and the need for independent field data. |
+| Project management and individual contributions | Page 9 distinguishes assigned roles, evidenced decisions and assistance. Student implementation details and meeting activities still require confirmation. |
+| IEEE references, repository link, dataset and source links | Pages 9–10 give the GitHub link, source and restoration pointers, dataset version, weights hash and numbered references. Independent access to the full merged master remains unverified. |
+| Length and formatting | The [verification record](field_optimization/report_tomato_verification.json) covers ten rendered pages, 11-point body, 1.15 line spacing, one-inch margins and bottom-right page numbering. |
 | Single team BrightSpace submission | The team owns submission and confirmation. The separate field update is a local editable report. |

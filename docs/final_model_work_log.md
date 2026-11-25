@@ -510,3 +510,25 @@ paired evidence. See nov22_resume_record.json and the selection plan.
 - Updated the editable report and checked its format against the available
   requirements. The current report and original course archive are separate
   artifacts. [Requirements checklist](final_model_requirements.md#field-update-report-checklist)
+
+### Matched tomato training and independent confirmation
+
+- Completed and reloaded four scratch-trained tomato models. The field
+  arm reached 0.315641 mean known-tomato development macro-F1 against
+  0.279810 for matched master replay. Both field seeds missed the
+  master-validation guard. Joint automatic routing lost 0.016558
+  mean field macro-F1 in both seeds.
+- The 50:50 known-tomato score blend passed development at 0.317404
+  mean macro-F1 and was frozen before inference on the independent
+  PlantCity release. On the same 134 originals given tomato, it got
+  34 correct and 0.233403 macro-F1 against 44 correct and 0.298658 for
+  the original. The original automatic model got 26 of 299
+  across six crops. Wrong crops accounted for 224 of the 273 errors.
+  The blend failed confirmation and the app kept the course checkpoint.
+- Recomputed all three results and class supports from the saved rows.
+  The reconciled PlantCity evidence is now locked to the completed
+  follow-up. See [methods, directional errors and reproduction](field_optimization/tomato_transfer.md).
+- Ran all nine training-pipeline tests and all 19 website tests with a
+  freshly started local service. Rendered and inspected the editable
+  ten-page field study report. The original combined course submission
+  archive remains separate. [Report verification](field_optimization/report_tomato_verification.json)

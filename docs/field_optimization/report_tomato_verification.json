@@ -1,0 +1,18 @@
+{
+  "report": "artifacts/submission/LeafCheck_Report_Field_Study.docx",
+  "sha256": "52a24d932850c388f891a8b9ddcf7af8671701e3783688160433d68b50b459c1",
+  "pages": 10,
+  "body_font_pt": 11,
+  "normal_line_spacing": 1.15,
+  "margin_inches": 1,
+  "page_numbers": "bottom right",
+  "visual_check": "Pages 1\u20137 rendered identically to the reviewed field update. Pages 8\u201310 were compared visually with their text and tables.",
+  "original_course_archive_replaced": false,
+  "research_suite_passed": 9,
+  "website_suite_passed": 19,
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "evidence": {
+    "plantcity_predictions": "325414bba973a710b4ff0abe2af3b37a607711915fc91577ed3da02d1b7f9e25",
+    "plantcity_confirmation": "9da0465545901579c45bb0a6bdde3ae6274315e7a77eafdb5f43464d7869e9f8"
+  }
+}

@@ -166,7 +166,57 @@ def field_followup(doc, docs, freeze):
     )
 
 
-def build(artifact, output, include_field_followup=False):
+def tomato_transfer(doc, docs, freeze):
+    evidence = docs / "field_optimization"
+    study = read(evidence / "tomato_matched.json")
+    blend = read(evidence / "tomato_blend_development.json")
+    holdout = read(evidence / "plantcity_confirmation.json")
+    protocol = read(evidence / "plantcity_freeze.json")
+    assert study["receipt"]["run"]["reference_checkpoint"] == blend["reference_checkpoint"] == freeze["checkpoint_sha256"]
+    assert holdout["membership_and_metrics_independently_reconciled"] and not holdout["passed_confirmation"]
+    assert protocol["created_utc"] < holdout["completed_utc"]
+    heading(doc, "Tomato Transfer Experiment")
+    training = study["training"]
+    development = blend["selected_for_confirmation"]
+    doc.add_paragraph(
+        f"To test whether new field images improve condition recognition, two matched seeds trained "
+        f"from random weights on {training['master']:,} master tomato images. Each epoch added "
+        f"{training['field']:,} same-label master draws in the control or screened supplementary field "
+        "images in the treatment. Controls stopped after 9 and 11 epochs. Both treatment runs reached "
+        "the 12-epoch cap. Learning used ten tomato labels. Grouped Sheikh and Pakistan validation "
+        "sources contributed equally to the development macro-F1."
+    )
+    table(doc, ["Tomato supplied in development", "Mean field macro-F1"], [
+        ("Original CNN restricted to tomato", f"{study['conditional']['reference']['field']['macro_f1']:.4f}"),
+        ("Master-only scratch controls", f"{study['summary']['control']['field_mean_macro_f1']:.4f}"),
+        ("Field-augmented scratch models", f"{study['summary']['field']['field_mean_macro_f1']:.4f}"),
+        ("50:50 original and field score blend", f"{development['mean_field_f1']:.4f}"),
+    ], [4.4, 2.1])
+    doc.add_paragraph(
+        "The standalone specialists missed the master-validation guard. Routing the blend by the "
+        "original model’s crop also reduced joint field macro-F1 by 0.0166 on both seeds. "
+        "The 50:50 blend passed the development checks when tomato was supplied. Its selected "
+        "weights and acceptance criteria were frozen before PlantCity inference."
+    )
+    table(doc, ["PlantCity [12] evaluation", "Correct / total", "Macro-F1"], [
+        (label, f"{row['correct']} / {row['sample_count']}", f"{row['macro_f1']:.4f}")
+        for label, row in [
+            ("Original CNN, automatic", holdout["automatic_reference"]),
+            ("Original CNN, tomato supplied", holdout["given_crop_reference"]),
+            ("50:50 blend, tomato supplied", holdout["given_crop_blend"]),
+        ]
+    ], [3.9, 1.4, 1.2])
+    automatic = holdout["automatic_reference"]
+    doc.add_paragraph(
+        f"PlantCity contributed screened originals covering 13 labels and six crops, including "
+        f"six tomato conditions. Specimen IDs are unavailable. Automatic inference predicted a "
+        f"different crop for {automatic['wrong_crop']} of {automatic['sample_count']} photos. "
+        "The blend lost 0.0653 macro-F1 when tomato was supplied, so it stayed out of the app. "
+        "These results motivate studying crop recognition separately on new capture groups."
+    )
+
+
+def build(artifact, output, include_field_followup=False, include_tomato_transfer=False):
     freeze = read(artifact / "freeze.json")
     manifest = read(artifact / "artifact.json")
     assert all(manifest[key] for key in ("final_evaluation_complete", "reference_evaluation_complete", "supplementary_evaluation_complete"))
@@ -254,6 +304,8 @@ def build(artifact, output, include_field_followup=False):
 
     if include_field_followup:
         field_followup(doc, docs, freeze)
+    if include_tomato_transfer:
+        tomato_transfer(doc, docs, freeze)
 
     heading(doc, "Conclusion and Project Management")
     doc.add_paragraph("The custom CNN outscored both primary test references in accuracy and macro-F1. Its lower supplementary accuracy than the conditional frequency rule shows the need for verified, independently collected photos before drawing field-performance conclusions.")
@@ -263,6 +315,8 @@ def build(artifact, output, include_field_followup=False):
     doc.add_paragraph("The archive identifies its exact runnable source revision in START_HERE.md. Its demo uses bundled weights. The saved metrics can be recomputed from the archived membership and predictions. Retraining also requires permitted access to the exact original master or frozen images. Follow the restore, verification, cache and pinned training commands in the archived README and data guide.")
     if include_field_followup:
         doc.add_paragraph("The follow-up study and its manifests are recorded in docs/potato_context_study.md and docs/field_optimization. The potato-context demo was packaged separately from the original course archive.")
+    if include_tomato_transfer:
+        doc.add_paragraph("The matched tomato runs and PlantCity confirmation are recorded in docs/field_optimization/tomato_transfer.md. PlantCity is a separate, completed evaluation and its results are excluded from model selection.")
     paragraph = doc.add_paragraph()
     links = [
         ("GitHub project history", "https://github.com/jacob-amey/ML-Final-Project"),
@@ -295,6 +349,8 @@ def build(artifact, output, include_field_followup=False):
             "[11] M. N. Malik, S. H. Ali, and H. Ali, “Tomato Leaf Disease Classification Dataset in Pakistan,” Mendeley Data, v2, 2026. doi: 10.17632/3mbnb82mxd.2.",
         ]:
             doc.add_paragraph(ref)
+    if include_tomato_transfer:
+        doc.add_paragraph("[12] M. S. Khan, K. Nisa, I. Ahmad, M. Zubair, and K. Alshammari, “PlantCity: A comprehensive image based on multi crop leaves in Pakistan,” Data Brief, art. 112130, 2025. doi: 10.1016/j.dib.2025.112130.")
     output.parent.mkdir(parents=True, exist_ok=True)
     doc.save(output)
 
@@ -304,5 +360,8 @@ if __name__ == "__main__":
     parser.add_argument("--artifact", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--include-field-followup", action="store_true")
+    parser.add_argument("--include-tomato-transfer", action="store_true")
     arguments = parser.parse_args()
-    build(arguments.artifact, arguments.output, arguments.include_field_followup)
+    build(arguments.artifact, arguments.output,
+          arguments.include_field_followup or arguments.include_tomato_transfer,
+          arguments.include_tomato_transfer)

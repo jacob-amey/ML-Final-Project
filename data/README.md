@@ -172,6 +172,42 @@ for a separate build.
   --output runs/pakistan_tomato_baseline
 ```
 
+## PlantCity independent confirmation
+
+The [PlantCity v4 source](https://data.mendeley.com/datasets/w8kh2xkspx/4)
+provides original Pakistan photos under CC BY 4.0. The release samples
+312 originals in 13 compatible folders of the published original archive.
+It excludes 13 possible prior matches or related views. The [seal](manifests/leafcheck_plantcity_holdout_v1_release.json)
+records 299 eligible test-only images spanning six crops. Specimen IDs
+are unavailable. The processed training archive supplied no examples.
+Restore using `scripts/prepare_plantcity_holdout.py fetch` and then
+`build`. The completed frozen evaluation is recorded under
+`docs/field_optimization/`. Exclude the release from development.
+
+## CCMT crop-only training sample
+
+The [CCMT v1 source](https://data.mendeley.com/datasets/bwh3zbpkpv/1)
+provides Ghana farm images under CC BY 4.0. The intake samples 32
+publisher-listed JPEGs in each of 17 original folders for tomato,
+maize and cassava. Maize maps to `corn`. This is a bounded sample
+from the public listings. The publisher archive includes a separate
+augmented collection. The crop study uses crop labels alone because
+conditions such as leaf blight do not map cleanly to LeafCheck labels.
+Individual capture groups are unknown. All eligible photos remain
+in one training-only source group.
+
+The [pinned registry](manifests/leafcheck_ccmt_crop_v1_files.csv)
+provides 544 file IDs and publisher SHA-256 values. The
+[release](manifests/leafcheck_ccmt_crop_v1_release.json) admits 529
+after prior overlap, repeat-view and image quality checks. Restore the
+earlier registered releases first. The registry establishes exact
+restoration without repeating the live catalog sample.
+
+```sh
+.venv/bin/python scripts/prepare_ccmt_crop_training.py fetch
+.venv/bin/python scripts/prepare_ccmt_crop_training.py build
+```
+
 ## Earlier three-class dataset
 
 The dataset assigns `early_blight`, `healthy`, and `late_blight` to class indices 0, 1, and 2 respectively. The image folders under `data/processed/leafcheck/` are ready for a loader such as PyTorch `ImageFolder`. The [image inventory](manifests/image_inventory.csv) records the exact membership, original path, source revision, group, file hash, and any exclusion. The [label mapping](manifests/label_mapping.csv) records how the source labels translate to project labels.

@@ -61,6 +61,9 @@ Read `docs/final_model_selection.json` for the pre-test decision,
 - [Crop-context and field-image follow-up](docs/potato_context_study.md):
   independently screened potato results, additional field training images,
   and the verified **Known crop** option.
+- [Tomato transfer study](docs/field_optimization/tomato_transfer.md):
+  matched scratch training, frozen PlantCity confirmation, and early- and
+  late-blight error counts on new images.
 
 ## Run the delivered study
 
