@@ -64,7 +64,7 @@ def verify_arm(path, config, run):
     return state
 
 
-def run_arm(directory, config, arm, seed, train, val, baseline, spec, device, stop, run):
+def run_arm(directory, config, arm, seed, train, val, baseline, spec, device, stop, run, assess=None):
     directory.mkdir(parents=True, exist_ok=True)
     seed_everything(seed)
     model = network(config, device)
@@ -84,14 +84,18 @@ def run_arm(directory, config, arm, seed, train, val, baseline, spec, device, st
     weights = weights / ((counts * weights).sum() / counts.sum())
     weights = weights.to(device)
     scorer = PredictionScores(model, {"name": "d4_probability_mean"}).eval()
+    if assess is None:
+        def assess(scorer):
+            return {name: score_pixels(scorer, sample, spec, ordered, device, config["batch_size"])
+                    for name, sample in val.items()}
+
     for epoch in range(len(history) + 1, config["max_epochs"] + 1):
         chosen = eligible or best
         if epoch > config["min_epochs"] and chosen and epoch - chosen["epoch"] > config["patience"]:
             break
         started = time.monotonic()
         loss = run_epoch(model, optimizer, raw, labels, spec, device, config, epoch, seed, weights)
-        measures = {name: score_pixels(scorer, sample, spec, ordered, device, config["batch_size"])
-                    for name, sample in val.items()}
+        measures = assess(scorer)
         result = {"epoch": epoch, "scores": measures, "train_loss": loss, "seconds": time.monotonic() - started}
         history.append(result)
         prev_best = best["scores"]["field"] if best else None
@@ -117,7 +121,7 @@ def run_arm(directory, config, arm, seed, train, val, baseline, spec, device, st
     model_path = directory / f"epoch-{result['epoch']:03d}.pt"
     saved = verify_arm(model_path, config, run)
     model.load_state_dict(saved["weights"], strict=True)
-    replay = score_pixels(scorer, val["field"], spec, ordered, device, config["batch_size"])
+    replay = assess(scorer)["field"]
     assert replay["confusion_matrix"] == result["scores"]["field"]["confusion_matrix"]
     return {**result, "checkpoint": str(model_path), "sha256": sha256(model_path), "completed_epochs": len(history),
             "passed_master_limits": bool(eligible), "seed": seed, "checkpoint_reload_verified": True}

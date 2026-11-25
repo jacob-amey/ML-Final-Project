@@ -1,0 +1,36 @@
+{
+  "hypothesis": "Field-condition supervision teaches a randomly initialized CNN to recognize tomato conditions on new capture groups beyond the effect of an equal dose of master images.",
+  "labels": [
+    "tomato__bacterial_spot", "tomato__early_blight", "tomato__healthy", "tomato__late_blight",
+    "tomato__leaf_mold", "tomato__mosaic_virus", "tomato__septoria_leaf_spot",
+    "tomato__spider_mites_two_spotted_spider_mite", "tomato__target_spot", "tomato__yellow_leaf_curl_virus"
+  ],
+  "sources": {
+    "field_v2": ["leafcheck_field_v2_sampled", "94a9489fce692e2b8d21adc312fc882ae42de23686f26319cecc51d07150b781"],
+    "tom2024": ["leafcheck_tom2024_v1", "b7ffad9c9287f71fd8a4171c0f819e787dc04bef208cbb3a05a5728762b11f2f"],
+    "pakistan": ["leafcheck_pakistan_tomato_dev_v1", "61cf3f0df4c82f6f3d5f1998de98299900bb40ac01bfd7d3e1431d3f9f432ee6"]
+  },
+  "selection_sources": ["pakistan", "sheikh"],
+  "diagnostic_sources": ["banu"],
+  "channels": [16, 32, 64, 96],
+  "input_size": 128,
+  "batch_size": 128,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "seeds": [434, 435],
+  "max_epochs": 12,
+  "min_epochs": 8,
+  "patience": 4,
+  "joint_blend": 0.5,
+  "selection": {
+    "primary": "Checkpoint selection uses the equal source mean of provided-tomato macro-F1 on five represented Pakistan labels and two represented Sheikh labels. Each source retains all ten eligible tomato conditions. Research promotion additionally requires a joint gain with all 177 outputs and a full-master check. Banu is diagnostic.",
+    "constraints": "Same initialization per arm and seed, master train originals, label counts, batch order, training augmentation, loss, device and D4 policy. Replace each supplemental slot with a same-label master replay for control. Use the same fixed 50:50 condition blend in both arms. The joint rule activates only when the incumbent's top category is tomato and preserves the total mass assigned to tomato.",
+    "master_max_macro_f1_drop_per_seed": 0.03,
+    "master_max_accuracy_drop_per_seed": 0.03,
+    "field_min_gain_average_vs_masked": 0.05,
+    "field_min_gain_average_vs_control": 0.03,
+    "joint_field_min_gain": 0.02,
+    "max_joint_master_drop": 0.003,
+    "stop": "Complete both seeds for each arm. Publish every comparison including a failure. A joint candidate that passes still needs new independent confirmation before any change to the app."
+  }
+}
