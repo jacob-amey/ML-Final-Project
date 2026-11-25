@@ -1,0 +1,23 @@
+{
+  "name": "Tomato Leaf Disease Classification Dataset in Pakistan",
+  "source": "https://data.mendeley.com/datasets/3mbnb82mxd/2",
+  "authors": ["Mohammad Naeem Malik", "Syed Hashir Ali", "Hamid Ali"],
+  "license": "CC BY 4.0",
+  "version": 2,
+  "archive_size": 726457628,
+  "publisher_archive_sha256": "2a2b36a8f972337f6d0e95e436835e55ffee5291fa07277157b40f0441f42f50",
+  "archive_url": "https://data.mendeley.com/public-files/datasets/3mbnb82mxd/files/4844fda3-b66b-4b2a-bd83-775c0da974ea/file_downloaded",
+  "directory_bytes": 2097152,
+  "directory_sha256": "b9d999de732af967a0f2a27ff4dcfe1ac9b9c09af2fd23ac0643886090eff0fc",
+  "selection": "Raw camera-named images with the 20251102 date tag only. Preflight two members per publisher class by lowest SHA-256 of full member name. The ready archive also contains web-looking filenames and augmented folders.",
+  "role": "Acquisition audit. If original and annotations are admissible, assign the whole November 2 group to development only, preserving other reserved sources. Do not fit against unverified folder labels.",
+  "sample_per_class": 2,
+  "extended_intake": "After the visual preflight verified natural scenes on the plant, acquire all 158 camera-dated candidates, retain the same prospective development-only role, and screen for EXIF date mismatch, invalid media, exact or approximate overlap, and related or conflicting labels across all already protected releases.",
+  "label_map": {
+    "Tomato_Healthy_leaf": "tomato__healthy",
+    "Tomato_Early_blight_leaf": "tomato__early_blight",
+    "Tomato_leaf_yellow_curl_virus": "tomato__yellow_leaf_curl_virus",
+    "Tomato_mold_leaf": "tomato__leaf_mold",
+    "Tomato_leaf_late_blight": "tomato__late_blight"
+  }
+}
