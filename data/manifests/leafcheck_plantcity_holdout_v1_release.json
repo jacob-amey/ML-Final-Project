@@ -1,0 +1,30 @@
+{
+  "version": "leafcheck_plantcity_holdout_v1",
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "candidates": 312,
+  "files_sha256": {
+    "manifest.csv": "3a9a790808e93c6bc25eeafa0ad108439bc8aeec24c47ec2942b3c1632024abb",
+    "source.json": "02680d508d1bebe1e584d49c6204819520cc62b524e763ceed1aeb5501c5b20e",
+    "source_files.csv": "0dba0f9ae061af83df3057de952fe7e7ca10b18d8a93cc446d8a210b874439f4"
+  },
+  "test_only_counts": {
+    "apple__healthy": 24,
+    "bean__rust": 23,
+    "cherry__healthy": 23,
+    "corn__healthy": 23,
+    "corn__gray_leaf_spot": 24,
+    "grape__downy_mildew": 24,
+    "grape__healthy": 24,
+    "tomato__bacterial_spot": 23,
+    "tomato__early_blight": 22,
+    "tomato__healthy": 23,
+    "tomato__late_blight": 21,
+    "tomato__leaf_mold": 23,
+    "tomato__septoria_leaf_spot": 22
+  },
+  "exclusions": {
+    "existing_visual_candidate": 2,
+    "new_cluster_repeated_view": 11
+  },
+  "fingerprint": "8391c3cc335d3f4a00572efe7a9d40ed679c709ddcb55c025ae387a5a1a2b38e"
+}
