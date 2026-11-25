@@ -1,0 +1,15 @@
+{
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "field_release": "data/processed/leafcheck_field_v2_sampled",
+  "field_fingerprint": "94a9489fce692e2b8d21adc312fc882ae42de23686f26319cecc51d07150b781",
+  "field_selection_sources": ["sheikh", "mduma"],
+  "hypothesis": "The CNN may assign substantial combined score to the true crop while splitting that score across conditions. Rewarding crop consensus may reduce wrong crops without retraining.",
+  "comparison": "Original D4 joint argmax, joint scores multiplied by square root of summed crop probability, and highest summed crop followed by its highest joint score. Same arrays, image IDs, preprocessing and weights throughout.",
+  "primary_metric": "Equal mean of joint macro-F1 on the existing grouped Sheikh and Mduma development sources, each over labels represented there with all 177 outputs eligible.",
+  "constraints": "Master validation joint macro-F1 and accuracy may each drop at most 0.005. Require field mean F1 gain >= 0.02, no field source drop over 0.01 and mean field crop accuracy gain >= 0.05. Banu is diagnostic only. Passing qualifies for a new independent confirmation, not deployment.",
+  "min_field_f1_gain": 0.02,
+  "max_field_source_drop": 0.01,
+  "min_field_crop_accuracy_gain": 0.05,
+  "max_master_drop": 0.005,
+  "cost": "One full D4 validation inference pass plus three small field development slices. No training or test inputs. Broad crops with many conditions can collect spurious mass."
+}
