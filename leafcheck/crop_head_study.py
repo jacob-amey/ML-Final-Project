@@ -11,7 +11,7 @@ import signal
 import numpy as np
 import torch
 
-from .common import ROOT, atomic_json, environment, sha256, utc_now
+from .common import ROOT, atomic_json, environment, metrics_from_matrix, sha256, utc_now
 from .data import PixelCache, cache_path, release as master_release
 from .field_expansion import load_inputs
 from .inference import Predictor
@@ -27,6 +27,24 @@ DATA = ROOT / "data/processed"
 TRAIN = ("leafcheck_field_v2_sampled", "leafcheck_tom2024_v1")
 DEV = "leafcheck_pakistan_tomato_dev_v1"
 CCMT = "leafcheck_ccmt_crop_v1"
+SAFARI = "leafcheck_imagesafari_crop_v1"
+
+
+def checked_safari(plan):
+    path = DATA / SAFARI
+    release = read(path / "release.json")
+    pinned = read(ROOT / f"data/manifests/{SAFARI}_release.json")
+    hashes = {name: sha256(path / name) for name in pinned["files_sha256"]}
+    if (release != pinned or hashes != pinned["files_sha256"]
+            or release["fingerprint"] != plan["imagesafari_fingerprint"]):
+        raise ValueError("Image Safari pilot requires the pinned crop-only release")
+    records = [dict(r, path=path / r["output_relative_path"]) for r in rows(path / "manifest.csv")
+               if r["status"] == "included"]
+    train = [r for r in records if r["split"] == "train"]
+    val = [r for r in records if r["split"] == "val"]
+    if not train or not val or ({r["group_id"] for r in train} & {r["group_id"] for r in val}):
+        raise ValueError("Image Safari training and validation must use disjoint sites")
+    return train, val
 
 
 def checked_ccmt(frozen):
@@ -115,22 +133,34 @@ def run(output, plan, seed, resume):
     pools = [np.flatnonzero(crop_index[train.labels] == i) for i in range(len(crop_names))]
     selected = [sampler.permutation(pool)[:plan["master_per_crop_cap"]] for pool in pools]
     base = np.concatenate(selected)
-    extra_crops = np.array([crop_to_index[row["crop"]] for row in supplemental])
-    replay = np.concatenate([sampler.choice(pool, int((extra_crops == i).sum()), replace=True)
+    safari = "imagesafari_fingerprint" in plan
+    shared = supplemental if safari else []
+    if safari:
+        safari_train, safari_val = checked_safari(plan)
+        repeats = plan["imagesafari_train_occurrences_per_original"]
+        candidate_extra = safari_train * repeats
+        releases[SAFARI] = plan["imagesafari_fingerprint"]
+    else:
+        candidate_extra = supplemental
+        safari_val = []
+    new_crop_indices = np.array([crop_to_index[row["crop"]] for row in candidate_extra])
+    replay = np.concatenate([sampler.choice(pool, int((new_crop_indices == i).sum()), replace=True)
                              for i, pool in enumerate(selected)])
-    train_groups = {train.rows[i]["group_id"] for i in base} | {row["group_id"] for row in supplemental}
+    train_groups = {train.rows[i]["group_id"] for i in base} | {row["group_id"] for row in shared + candidate_extra}
     val_groups = {row["group_id"] for row in validation.rows}
     val_groups.update(row["group_id"] for samples in development.values() for row in samples)
+    val_groups.update(row["group_id"] for row in safari_val)
     if train_groups & val_groups:
         raise ValueError("A validation group appears in the crop training set")
-    if not np.array_equal(np.sort(crop_index[train.labels[replay]]), np.sort(extra_crops)):
+    if not np.array_equal(np.sort(crop_index[train.labels[replay]]), np.sort(new_crop_indices)):
         raise ValueError("Control and treatment crop occurrences differ")
     run_record = {
         "config": config, "seed": seed, "releases": releases, "reference_spec": incumbent.spec,
         "crop_spec": spec, "training_order_sha256": hashlib.sha256(np.concatenate([base, replay]).tobytes()).hexdigest(),
         "trainer": sha256(Path(__file__)), "helper": sha256(Path(__file__).with_name("potato_study.py")),
-        "training": {"master": len(base), "field": len(supplemental),
-                     "by_field_crop": dict(Counter(row["crop"] for row in supplemental))},
+        "training": {"master": len(base), "shared_field": len(shared), "field": len(candidate_extra),
+                     "unique_new_field": len({r["image_id"] for r in candidate_extra}),
+                     "by_field_crop": dict(Counter(row["crop"] for row in candidate_extra))},
     }
     receipt = output / "run.json"
     if receipt.exists():
@@ -161,6 +191,23 @@ def run(output, plan, seed, resume):
         return {"master": by_source["master"], "field": field, "by_source": by_source}
 
     baseline = pack(ref)
+    if safari:
+        safari_truth = np.asarray([crop_to_index[row["crop"]] for row in safari_val])
+        safari_raw = pixels(safari_val, plan["input_size"])
+        raw_original = pixels(safari_val, incumbent.spec["input_size"])
+        safari_original = distribution(incumbent.scoring_model, raw_original, incumbent.spec, device)
+
+        def safari_score(joint):
+            prediction = crop_index[joint.argmax(1)]
+            n = len(crop_names)
+            matrix = np.bincount(safari_truth * n + prediction, minlength=n * n).reshape(n, n)
+            result = metrics_from_matrix(matrix, config["labels"])
+            supported = [row for row in result["per_class"] if row["support"]]
+            return {"macro_f1": float(np.mean([row["f1"] for row in supported])),
+                    "accuracy": result["accuracy"], "correct": result["correct"],
+                    "sample_count": result["sample_count"], "per_crop": supported}
+
+        baseline["site_held_crop"] = safari_score(safari_original)
 
     def assess(scorer):
         crop_network = scorer.network
@@ -170,7 +217,11 @@ def run(output, plan, seed, resume):
             mixed = blend_crop(original[name], crop_prob, crop_index, plan["crop_blend"])
             scores[name] = measures(mixed, labels[name], classes)
             scores[name]["crop_head_accuracy"] = float(np.mean(crop_prob.argmax(1) == crop_index[labels[name]]))
-        return pack(scores)
+        combined = pack(scores)
+        if safari:
+            crop_prob = distribution(crop_network, safari_raw, spec, device, size=plan["batch_size"])
+            combined["site_held_crop"] = safari_score(blend_crop(safari_original, crop_prob, crop_index, plan["crop_blend"]))
+        return combined
 
     stop = {"requested": False}
 
@@ -181,11 +232,18 @@ def run(output, plan, seed, resume):
         signal.signal(sig, request_stop)
     base_raw, base_ids = train.batch(base)
     control_raw, control_ids = train.batch(replay)
+    base_crop = crop_index[base_ids]
+    if safari:
+        base_raw = torch.cat([base_raw, pixels(shared, plan["input_size"])])
+        base_crop = np.concatenate([base_crop, [crop_to_index[r["crop"]] for r in shared]])
+        field_pixels = pixels(safari_train, plan["input_size"]).repeat((repeats, 1, 1, 1))
+    else:
+        field_pixels = pixels(candidate_extra, plan["input_size"])
     arms = {
         "control": (torch.cat([base_raw, control_raw]),
-                    torch.from_numpy(np.concatenate([crop_index[base_ids], crop_index[control_ids]]))),
-        "field": (torch.cat([base_raw, pixels(supplemental, plan["input_size"])]),
-                  torch.from_numpy(np.concatenate([crop_index[base_ids], extra_crops]))),
+                    torch.from_numpy(np.concatenate([base_crop, crop_index[control_ids]]))),
+        "field": (torch.cat([base_raw, field_pixels]),
+                  torch.from_numpy(np.concatenate([base_crop, new_crop_indices]))),
     }
     result = {}
     for name, samples in arms.items():
@@ -207,10 +265,19 @@ def run(output, plan, seed, resume):
               and field_f1 - control_f1 >= rules["field_min_gain_vs_control"]
               and min(per_source.values()) >= -rules["field_max_per_source_drop"]
               and crop_error_reduction >= rules["field_min_wrong_crop_rate_reduction"])
+    site_decision = {}
+    if safari:
+        three = [x["site_held_crop"]["macro_f1"] for x in (baseline, result["control"]["scores"], treated)]
+        site_decision = {"gain_over_reference": three[2] - three[0], "gain_over_control": three[2] - three[1]}
+        passed = (result["field"]["passed_master_limits"]
+                  and site_decision["gain_over_reference"] >= plan["min_imagesafari_crop_macro_f1_gain_vs_joint_reference"]
+                  and site_decision["gain_over_control"] >= plan["min_imagesafari_crop_macro_f1_gain_vs_control"]
+                  and field_f1 >= control_f1 - plan["max_joint_field_drop_vs_control"]
+                  and min(per_source.values()) >= -rules["field_max_per_source_drop"])
     atomic_json(report, {"completed": utc_now(), "run": run_record, "baseline": baseline, "arms": result,
                          "gain_over_reference": field_f1 - ref_f1, "gain_over_control": field_f1 - control_f1,
                          "field_source_gains": per_source, "field_crop_error_reduction": crop_error_reduction,
-                         "passed_screen": passed, "test_opened": False})
+                         "site_held_crop_decision": site_decision, "passed_screen": passed, "test_opened": False})
     print("Field macro-F1", field_f1, "control", control_f1, "reference", ref_f1, "passed", passed, flush=True)
 
 
@@ -218,9 +285,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--seed", type=int, choices=(434, 435), default=434)
+    parser.add_argument("--plan", type=Path, default=PLAN)
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     with (args.output / ".lock").open("a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        run(args.output, read(PLAN), args.seed, args.resume)
+        plan = read(args.plan)
+        if plan.get("inherits") == PLAN.name:
+            plan = {**read(PLAN), **plan}
+        run(args.output, plan, args.seed, args.resume)

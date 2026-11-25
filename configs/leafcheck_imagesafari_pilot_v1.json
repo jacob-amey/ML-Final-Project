@@ -1,0 +1,11 @@
+{
+  "inherits": "leafcheck_crop_head_v1.json",
+  "hypothesis": "Broad Image Safari photo framing can improve joint crop routing and crop recognition on separate capture sites.",
+  "control": "Both scratch arms receive the earlier screened field training. Match the additional crop occurrence counts using either frozen master draws or Image Safari originals.",
+  "imagesafari_fingerprint": "82e42e785911bf00b52d44c3c26d88f715407c0238033ca79fa62fd8fe3f9c28",
+  "imagesafari_train_occurrences_per_original": 6,
+  "min_imagesafari_crop_macro_f1_gain_vs_control": 0.03,
+  "min_imagesafari_crop_macro_f1_gain_vs_joint_reference": 0.03,
+  "max_joint_field_drop_vs_control": 0.01,
+  "stopping": "Use a fixed six-epoch matched screen. Repeat at seed 435 only if master guard and both the site-held crop-only and real-condition validation guards pass. All previous independent confirmations stay outside the experiment."
+}
