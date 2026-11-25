@@ -1,0 +1,23 @@
+{
+  "version": "leafcheck_crop_confirmation_v1",
+  "role": "test_only",
+  "sample_per_class": 64,
+  "sources": {
+    "holeta": {
+      "source": "https://data.mendeley.com/datasets/v4w72bsts5/1",
+      "license": "CC BY 4.0",
+      "archive_url": "https://data.mendeley.com/public-files/datasets/v4w72bsts5/files/e5edcf03-1734-4f75-87e0-895f08727b19/file_downloaded",
+      "archive_sha256": "6928a86923c15059a838003b1113ac7fbac8c0790e64190b0c37acb4bbd5f5eb",
+      "folders": {"Healthy": "potato__healthy", "Late Blight": "potato__late_blight"}
+    },
+    "tlid": {
+      "source": "https://data.mendeley.com/datasets/kt64b2kh89/1",
+      "license": "CC BY 4.0",
+      "dataset_id": "kt64b2kh89",
+      "folders": {
+        "96bd4b96-6908-421e-9e78-62def6cc4464": "tomato__healthy",
+        "f159445f-c7eb-4667-b576-651189112643": "tomato__bacterial_spot"
+      }
+    }
+  }
+}

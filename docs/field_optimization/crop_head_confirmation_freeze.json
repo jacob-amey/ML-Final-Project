@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-11-25T18:28:29.012378+00:00",
+  "protocol_sha256": "20d09aff097576634f5a6d65caf4da216c7289fcad358f49fb4fa307e0487866",
+  "plan_sha256": "d3392f9941e3049950bc63fce9baa5261a44dd4a8a04dded094c56b1cff9e788",
+  "evaluator_sha256": "98ae26d8794e45049403214cccdfd28d33e4a7815e37dbf22962f4cdc0c1f90a",
+  "blend_implementation_sha256": "29e626d0b901bf328118037e52cb2b4946722f2021ad7ba39cae2fe60ca95b71",
+  "confirmatory_data": "2a1c2d34556da2c1685199b3491c099c1f1b83057b5e29576ff737d3087f2a57",
+  "reference_checkpoint": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "candidate_checkpoint": "runs/field_v6/crop-434-recovered/field/epoch-001.pt",
+  "candidate_sha256": "4ebb66a1c3a88968707c6f30a420a628046c6949ff19978e2d490cf0fd67c2f2",
+  "candidate_seed": 434,
+  "decisions": {
+    "runs/field_v6/crop-434-recovered/decision.json": "eca61c25beecb04c97363ab0285858ca1055064dbe212d6a7d51ac13b4c24894",
+    "runs/field_v6/crop-435/decision.json": "b3b696d7834a4e0e26b2f7a57ec401295e22f73442153c78edcf0ef9d1ea0711"
+  },
+  "selected_decision": "runs/field_v6/crop-434-recovered/decision.json",
+  "reference_class_map": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a"
+}

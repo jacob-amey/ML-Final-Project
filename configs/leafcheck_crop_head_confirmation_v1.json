@@ -1,0 +1,11 @@
+{
+  "selection": "Compare both matched seeds on grouped development. When both pass, lock the eligible field checkpoint with highest mean joint field macro-F1.",
+  "protocol": "The reference and frozen candidate predict all 177 labels on the same source-specific confirmation images. Report crop error and joint results. Average joint macro-F1 over represented labels within each source then weight the two sources equally.",
+  "expected_sources": ["holeta", "tlid"],
+  "min_examples_per_label": 25,
+  "min_mean_macro_f1_gain": 0.02,
+  "min_mean_crop_error_reduction": 0.05,
+  "max_source_macro_f1_drop": 0.02,
+  "max_condition_recall_drop": 0.05,
+  "deployment_scope": "This check covers two labels per crop. A pass is field corroboration for the two sampled collections. It does not justify claiming improvement over all 177 field conditions."
+}

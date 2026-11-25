@@ -1,0 +1,21 @@
+{
+  "version": "leafcheck_crop_confirmation_v1",
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "candidates": 256,
+  "files_sha256": {
+    "manifest.csv": "194883850d8a5c882145d676b267de9bff08c63ab0a62c5aa0b332a9f4ac8d1f",
+    "source.json": "070431e43d707143a26437588be53154dce1464733ff7670dd5829cc7e0cca65",
+    "source_files.csv": "8fac25477030bde67451d00519c4bb3c662d990c127ca1d842d73db7eb735fac"
+  },
+  "test_only_counts": {
+    "potato__healthy": 63,
+    "potato__late_blight": 62,
+    "tomato__healthy": 59,
+    "tomato__bacterial_spot": 61
+  },
+  "exclusions": {
+    "new_cluster_repeated_view": 5,
+    "existing_visual_candidate": 6
+  },
+  "fingerprint": "2a1c2d34556da2c1685199b3491c099c1f1b83057b5e29576ff737d3087f2a57"
+}
