@@ -1,0 +1,131 @@
+{
+  "all_raw_members": 830,
+  "raw_folders": {
+    "Tomato_Early_blight_leaf": 119,
+    "Tomato_Healthy_leaf": 137,
+    "Tomato_leaf_late_blight": 113,
+    "Tomato_leaf_yellow_curl_virus": 80,
+    "Tomato_mold_leaf": 186,
+    "Tomato_Septoria_leaf_spot": 195
+  },
+  "camera_date_folders": {
+    "Tomato_Early_blight_leaf": 41,
+    "Tomato_Healthy_leaf": 66,
+    "Tomato_leaf_late_blight": 9,
+    "Tomato_leaf_yellow_curl_virus": 30,
+    "Tomato_mold_leaf": 12
+  },
+  "sample": [
+    {
+      "member": "Tomato Dataset/Dataset (raw)/Tomato_Healthy_leaf/IMG_20251102_152940.jpg",
+      "sha256": "88bf10cb639f833e98f148555cf9d298958689374b746f0b94128ece0d9cfedd",
+      "size": [
+        3072,
+        4080
+      ],
+      "model": "Redmi 14C",
+      "capture_time": "2025:11:02 15:29:40",
+      "format": "JPEG"
+    },
+    {
+      "member": "Tomato Dataset/Dataset (raw)/Tomato_Healthy_leaf/IMG_20251102_161733.jpg",
+      "sha256": "695dd0394c29a7b6d60603033f909ea046c2ba1a3135c64caca9803977ebe67d",
+      "size": [
+        4080,
+        3072
+      ],
+      "model": "23106RN0DA",
+      "capture_time": "2025:11:02 16:17:33",
+      "format": "JPEG"
+    },
+    {
+      "member": "Tomato Dataset/Dataset (raw)/Tomato_Early_blight_leaf/IMG_20251102_155250.jpg",
+      "sha256": "d346cb807f0b9e41dc3236ed153c4b4992178b4ea10748ae7c54634d5918cf66",
+      "size": [
+        3072,
+        4080
+      ],
+      "model": "23106RN0DA",
+      "capture_time": "2025:11:02 15:52:50",
+      "format": "JPEG"
+    },
+    {
+      "member": "Tomato Dataset/Dataset (raw)/Tomato_Early_blight_leaf/IMG_20251102_155144.jpg",
+      "sha256": "5cd3e0ce69be97e5e79db901e7b51fb43f24426fe8a00ba9fe980b58ebb7bb7d",
+      "size": [
+        4080,
+        3072
+      ],
+      "model": "Redmi 14C",
+      "capture_time": "2025:11:02 15:51:44",
+      "format": "JPEG"
+    },
+    {
+      "member": "Tomato Dataset/Dataset (raw)/Tomato_leaf_yellow_curl_virus/IMG_20251102_155916.jpg",
+      "sha256": "d4525d06a161071349d89950b12135237908f7ae7a1c63061650f1c237712a25",
+      "size": [
+        4080,
+        3072
+      ],
+      "model": "Redmi 14C",
+      "capture_time": "2025:11:02 15:59:17",
+      "format": "JPEG"
+    },
+    {
+      "member": "Tomato Dataset/Dataset (raw)/Tomato_leaf_yellow_curl_virus/IMG_20251102_161543.jpg",
+      "sha256": "d1fd79e4138b7e616a6e108834df6c315fad16ebe8b85fa3e5ae268d92b4baad",
+      "size": [
+        3072,
+        4080
+      ],
+      "model": "23106RN0DA",
+      "capture_time": "2025:11:02 16:15:43",
+      "format": "JPEG"
+    },
+    {
+      "member": "Tomato Dataset/Dataset (raw)/Tomato_mold_leaf/IMG_20251102_155449.jpg",
+      "sha256": "d3b1e61a5ed94a2727a239fc8af99ea577d455ed3a109bc0d0c30104f70b840f",
+      "size": [
+        4080,
+        3072
+      ],
+      "model": "Redmi 14C",
+      "capture_time": "2025:11:02 15:54:49",
+      "format": "JPEG"
+    },
+    {
+      "member": "Tomato Dataset/Dataset (raw)/Tomato_mold_leaf/IMG_20251102_155427.jpg",
+      "sha256": "854a8dfa4775e0a58c118a639811be7a0d0d6b1e1b50ccbc77409d60de5ec384",
+      "size": [
+        3072,
+        4080
+      ],
+      "model": "Redmi 14C",
+      "capture_time": "2025:11:02 15:54:27",
+      "format": "JPEG"
+    },
+    {
+      "member": "Tomato Dataset/Dataset (raw)/Tomato_leaf_late_blight/IMG_20251102_155447.jpg",
+      "sha256": "42cad0dc836ea35dc62ed505a66865f842fed8c6fabe2482fba3cdb748b2823a",
+      "size": [
+        3072,
+        4080
+      ],
+      "model": "23106RN0DA",
+      "capture_time": "2025:11:02 15:54:47",
+      "format": "JPEG"
+    },
+    {
+      "member": "Tomato Dataset/Dataset (raw)/Tomato_leaf_late_blight/IMG_20251102_155822.jpg",
+      "sha256": "df744cd535c3398620a9ce8ad9b2a38a20ba037434d6848e079870070c0ddb87",
+      "size": [
+        3072,
+        4080
+      ],
+      "model": "Redmi 14C",
+      "capture_time": "2025:11:02 15:58:22",
+      "format": "JPEG"
+    }
+  ],
+  "evaluation_run": false
+}

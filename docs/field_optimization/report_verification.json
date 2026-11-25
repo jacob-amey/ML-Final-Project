@@ -1,0 +1,17 @@
+{
+  "report": "artifacts/submission/LeafCheck_Report_Field_Update.docx",
+  "sha256": "b8e529b4c36875b816b019af8692c81378d0a9e8ab82f1c68d94280ca7eed382",
+  "pages": 9,
+  "body_font_pt": 11,
+  "normal_line_spacing": 1.15,
+  "margin_inches": 1,
+  "page_numbers": "bottom right",
+  "visual_check": "Pages 1\u20136 were byte-identical to reviewed original renders. Pages 7\u20139 were inspected in their rendered form, including updated text and references.",
+  "reference_document": "../AI&ML/Final Project Requirement_Fall2026.docx",
+  "course_heading_difference": "The available rubric is headed CSC 434. The project decks identify CSC-427.",
+  "checklist": "docs/final_model_requirements.md#field-update-report-checklist",
+  "original_course_archive_replaced": false,
+  "research_suite": 9,
+  "website_suite": 19,
+  "development_manifest_rebuild_byte_identical": true
+}

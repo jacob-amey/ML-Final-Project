@@ -1,0 +1,21 @@
+{
+  "app_revision": "e3dd8174ffc0f911",
+  "checkpoint": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "class_count": 177,
+  "runtime_samples": {
+    "final_success": {
+      "sha256": "006de0ecce8258a77cebb023fbdc8fb417f63b5bc130c974293e53579101a12b",
+      "label": "tomato__healthy",
+      "max_abs_gap": 0.0,
+      "decision": "suggestion"
+    },
+    "final_mistake": {
+      "sha256": "b66c1b645e2b314cfdf09b657b96924dd2fd218ab29be239bde192fb4ad6c031",
+      "label": "potato__late_blight",
+      "max_abs_gap": 0.0,
+      "decision": "suggestion"
+    }
+  },
+  "browser_success": "Tomato / Healthy",
+  "browser_invalid": "This image could not be opened. Try another JPEG or PNG."
+}

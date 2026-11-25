@@ -139,5 +139,22 @@ No final test predictions or supplementary predictions have informed selection.
 | Honest comparison and detailed measured results | Frozen test metrics, predictions, per-class support and confusion figures, same-split Compact177 and frequency rule, and separately scoped PlantDoc results. |
 | Final-model deployment and live upload | `docs/test_results.json` records 9 pipeline and 15 website tests. `docs/demo_verification.json` records actual uploads, outcomes and error handling. |
 | Fresh extraction and documented launch | `docs/archive_verification.json` records the launched four-model process using the packaged app-only environment, real image predictions and invalid-input responses. |
-| Report, presentation and reproducibility | Seven-page report, defense slides, executed review notebook, local source snapshot and artifact records in the combined submission. |
+| Report, presentation and reproducibility | Eight-page report, defense slides, executed review notebook, local source snapshot and artifact records in the combined submission. |
 | Team approval and formal course submission | The assigned model and app roles and actual assisted work are recorded in `docs/contributions.md`. Team names, approval, additional institutional AI rules and submission status require team confirmation. |
+
+## Field update report checklist
+
+The local project requirement identifies CSC 434 and the team decks identify
+CSC-427. The available report requirements have been applied provisionally.
+The original combined submission remains the archived course snapshot.
+
+| Requirement | Evidence in the editable Field Update report |
+| --- | --- |
+| Introduction, related work and original contributions | Page 1 gives the task, prior literature and delivered contribution. |
+| Methods, source integrity, training and selection | Pages 2–4 give the frozen split design, architecture and train-only preprocessing, and explain seed and recipe comparisons. |
+| Results, figures and comparative validation/testing | Pages 4–7 show learning curves, directed confusions, paired validation, three methods on the same reserved test, supplementary studies and field-transfer limitations. |
+| Discussion, conclusion and future improvement | Pages 6–8 explain sparse support, dataset shift, uncalibrated scores and the need for independent field data. |
+| Project management and individual contributions | Page 8 distinguishes assigned roles, evidenced decisions and assistance. Student implementation details and meeting activities still require confirmation. |
+| IEEE references, repository link, dataset and source links | Pages 8–9 give the GitHub link, source and restoration pointers, dataset version, weights hash and numbered references. Independent access to the full merged master remains unverified. |
+| Length and formatting | The generated Word file renders to nine pages. The normal style is 11 point with 1.15 line spacing, one-inch margins and bottom-right page numbering. |
+| Single team BrightSpace submission | The team owns submission and confirmation. The separate field update is a local editable report. |

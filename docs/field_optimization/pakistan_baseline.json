@@ -1,0 +1,247 @@
+{
+  "created_utc": "2026-11-25T17:58:19.820466+00:00",
+  "checkpoint": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "scoring": "d4_probability_mean",
+  "class_count": 177,
+  "release": "61cf3f0df4c82f6f3d5f1998de98299900bb40ac01bfd7d3e1431d3f9f432ee6",
+  "group_count": 1,
+  "results": {
+    "macro_f1": 0.09978260869565217,
+    "accuracy": 0.04929577464788732,
+    "correct": 7,
+    "sample_count": 142,
+    "wrong_crop": 114,
+    "right_crop_wrong_condition": 21,
+    "crop_accuracy": 0.19718309859154926,
+    "balanced_accuracy": 0.07789222271980892,
+    "macro_precision": 0.32653846153846156,
+    "weighted_f1": 0.07028730353133292,
+    "per_class": [
+      {
+        "class_index": 154,
+        "class_name": "tomato__early_blight",
+        "precision": 0.3076923076923077,
+        "recall": 0.12121212121212122,
+        "f1": 0.17391304347826086,
+        "support": 33
+      },
+      {
+        "class_index": 155,
+        "class_name": "tomato__healthy",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 62
+      },
+      {
+        "class_index": 156,
+        "class_name": "tomato__late_blight",
+        "precision": 0.125,
+        "recall": 0.14285714285714285,
+        "f1": 0.13333333333333333,
+        "support": 7
+      },
+      {
+        "class_index": 157,
+        "class_name": "tomato__leaf_mold",
+        "precision": 0.2,
+        "recall": 0.09090909090909091,
+        "f1": 0.12500000000000003,
+        "support": 11
+      },
+      {
+        "class_index": 162,
+        "class_name": "tomato__yellow_leaf_curl_virus",
+        "precision": 1.0,
+        "recall": 0.034482758620689655,
+        "f1": 0.06666666666666667,
+        "support": 29
+      }
+    ],
+    "blight": [
+      {
+        "true": "tomato__early_blight",
+        "opposite_label": "tomato__late_blight",
+        "opposite_count": 3,
+        "total": 33,
+        "correct": 4,
+        "wrong_crop": 25,
+        "right_crop_wrong_condition": 4
+      },
+      {
+        "true": "tomato__late_blight",
+        "opposite_label": "tomato__early_blight",
+        "opposite_count": 2,
+        "total": 7,
+        "correct": 1,
+        "wrong_crop": 4,
+        "right_crop_wrong_condition": 2
+      }
+    ],
+    "largest_errors": [
+      {
+        "truth": "tomato__healthy",
+        "prediction": "cucumber__bacterial_wilt",
+        "count": 17
+      },
+      {
+        "truth": "tomato__healthy",
+        "prediction": "potato__early_blight",
+        "count": 8
+      },
+      {
+        "truth": "tomato__healthy",
+        "prediction": "squash__powdery_mildew",
+        "count": 7
+      },
+      {
+        "truth": "tomato__yellow_leaf_curl_virus",
+        "prediction": "zucchini__yellow_mosaic_virus",
+        "count": 6
+      },
+      {
+        "truth": "tomato__yellow_leaf_curl_virus",
+        "prediction": "tomato__early_blight",
+        "count": 6
+      },
+      {
+        "truth": "tomato__early_blight",
+        "prediction": "cucumber__bacterial_wilt",
+        "count": 6
+      },
+      {
+        "truth": "tomato__healthy",
+        "prediction": "banana__bunchy_top",
+        "count": 5
+      },
+      {
+        "truth": "tomato__early_blight",
+        "prediction": "corn__smut",
+        "count": 5
+      },
+      {
+        "truth": "tomato__yellow_leaf_curl_virus",
+        "prediction": "wheat__powdery_mildew",
+        "count": 3
+      },
+      {
+        "truth": "tomato__yellow_leaf_curl_virus",
+        "prediction": "garlic__leaf_blight",
+        "count": 3
+      },
+      {
+        "truth": "tomato__healthy",
+        "prediction": "zucchini__yellow_mosaic_virus",
+        "count": 3
+      },
+      {
+        "truth": "tomato__healthy",
+        "prediction": "grape__downy_mildew",
+        "count": 3
+      },
+      {
+        "truth": "tomato__early_blight",
+        "prediction": "tomato__late_blight",
+        "count": 3
+      },
+      {
+        "truth": "tomato__early_blight",
+        "prediction": "grape__downy_mildew",
+        "count": 3
+      },
+      {
+        "truth": "tomato__early_blight",
+        "prediction": "garlic__leaf_blight",
+        "count": 3
+      }
+    ],
+    "confidence_ece_15": 0.2991176749199209,
+    "high_score_incorrect": 0,
+    "healthy_reference": 62,
+    "healthy_false_condition": 59,
+    "reference_crop_diagnostic": {
+      "macro_f1": 0.17760825341470504,
+      "accuracy": 0.19014084507042253,
+      "correct": 27,
+      "sample_count": 142,
+      "wrong_crop": 0,
+      "right_crop_wrong_condition": 115,
+      "blight": [
+        {
+          "true": "tomato__early_blight",
+          "opposite_label": "tomato__late_blight",
+          "opposite_count": 10,
+          "total": 33,
+          "correct": 19,
+          "wrong_crop": 0,
+          "right_crop_wrong_condition": 14
+        },
+        {
+          "true": "tomato__late_blight",
+          "opposite_label": "tomato__early_blight",
+          "opposite_count": 5,
+          "total": 7,
+          "correct": 2,
+          "wrong_crop": 0,
+          "right_crop_wrong_condition": 5
+        }
+      ],
+      "per_class": [
+        {
+          "class_index": 154,
+          "class_name": "tomato__early_blight",
+          "precision": 0.24358974358974358,
+          "recall": 0.5757575757575758,
+          "f1": 0.34234234234234234,
+          "support": 33
+        },
+        {
+          "class_index": 155,
+          "class_name": "tomato__healthy",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 62
+        },
+        {
+          "class_index": 156,
+          "class_name": "tomato__late_blight",
+          "precision": 0.04878048780487805,
+          "recall": 0.2857142857142857,
+          "f1": 0.08333333333333334,
+          "support": 7
+        },
+        {
+          "class_index": 157,
+          "class_name": "tomato__leaf_mold",
+          "precision": 0.3076923076923077,
+          "recall": 0.36363636363636365,
+          "f1": 0.33333333333333337,
+          "support": 11
+        },
+        {
+          "class_index": 162,
+          "class_name": "tomato__yellow_leaf_curl_virus",
+          "precision": 1.0,
+          "recall": 0.06896551724137931,
+          "f1": 0.12903225806451613,
+          "support": 29
+        }
+      ]
+    },
+    "already_deployed_gate": {
+      "threshold": 0.5857925415039062,
+      "support": 142,
+      "correct_before_screen": 7,
+      "accepted": 12,
+      "correct_and_accepted": 0,
+      "incorrect_and_accepted": 12,
+      "coverage": 0.08450704225352113,
+      "accepted_accuracy": 0.0,
+      "incorrect_per_upload": 0.08450704225352113
+    }
+  },
+  "predictions_sha256": "f4e34dd2deaf2f2eff4ac963f54a26a556b6992e152ff4367c7f295d68cda4b2",
+  "test_opened": false,
+  "membership_reconciled": true
+}

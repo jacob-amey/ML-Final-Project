@@ -471,3 +471,42 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   control and 0.649221 for the original weight file. Both arms gave the same
   field-validation score. Kept the original model and the verified potato
   upload option.
+
+## 2026-11-25 — field first optimization
+
+- Live browser upload displayed Tomato / Healthy for the packaged success.
+  An unreadable file produced the expected error. Standalone and local
+  upload agreed exactly on all 177 scores for both packaged fixtures.
+  [Runtime and results](field_optimization/upload_baseline.json)
+- Tested crop consensus before fitting more weights. The full validation
+  reference reproduced 0.649221 macro-F1. The crop-first candidate gained
+  0.002995 mean joint F1 on the grouped Sheikh and Mduma development data,
+  below the registered 0.020 gain, and lost 0.001826 master F1. The softer
+  reweighting had zero field F1 gain. Both were rejected.
+  [Protocol](../configs/leafcheck_crop_decoding_v1.json) ·
+  [Outcome and per-class evidence](field_optimization/crop_decoding.json)
+- Acquired 158 raw camera-dated Pakistan tomato photos under CC BY 4.0.
+  The release retained 142 examples in one development group. Its frozen
+  automatic baseline got 7 correct, joint macro-F1 0.099783, and named a
+  different crop on 114. The existing display rule showed 12 predictions,
+  all wrong. With the reference crop supplied, the condition diagnostic
+  got 27 correct and 0.177608 macro-F1. This is evidence for the need to
+  improve condition recognition alongside crop identification.
+  [Baseline and directional errors](field_optimization/pakistan_baseline.json)
+- The next model comparison should isolate the effect of field training on
+  a randomly initialized condition learner, with the same class coverage,
+  dose-matched control, and both the supplied-crop and joint prediction
+  metrics. Keep the 142-image capture group in development, check at least
+  one other independent source, and guard broad 177-label performance.
+  Candidate training already has 11,828 master tomato images, and screened
+  tomato supplements of 1,127, 419 and 328 images. The supplements cover
+  early blight, late blight, healthy, bacterial spot and Septoria. They
+  leave leaf mold and yellow leaf curl dependent on the master.
+  Pota-Toma-To was screened from its pinned archive directory. Its 435
+  raw files are grouped under Google Search paths and have matching
+  processed families. The available inventory does not establish
+  independent field capture or original asset rights, so it stays out
+  of the experiment. [Publisher record](https://data.mendeley.com/datasets/354fsxwccb/1)
+- Updated the editable report and checked its format against the available
+  requirements. The current report and original course archive are separate
+  artifacts. [Requirements checklist](final_model_requirements.md#field-update-report-checklist)

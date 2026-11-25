@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "candidates": 158,
+  "files_sha256": {
+    "manifest.csv": "fea918ca535be8041c871a353d6ea362158c1d3c30435ae651cf1297599d5383",
+    "source.json": "749ab80e7093e9def06dda5b5f948498f9ea629a7fb7f6e54ebeabad22ecf4fc",
+    "source_files.csv": "752a82cb8e3f6aeb01126a72afc5aa918765b8ad6f19c75bc783e862100d2cf8"
+  },
+  "val_only_counts": {
+    "tomato__healthy": 62,
+    "tomato__early_blight": 33,
+    "tomato__yellow_leaf_curl_virus": 29,
+    "tomato__leaf_mold": 11,
+    "tomato__late_blight": 7
+  },
+  "exclusions": {
+    "camera_date_unverified": 10,
+    "new_cluster_label_conflict": 6
+  },
+  "fingerprint": "61cf3f0df4c82f6f3d5f1998de98299900bb40ac01bfd7d3e1431d3f9f432ee6"
+}

@@ -147,6 +147,31 @@ to the audit and build commands when the recorded master location differs.
 The archive is sparse and contains the annotations and directory records.
 It cannot restore the original master photos.
 
+## Camera dated Pakistan tomato development group
+
+The [publisher archive](https://data.mendeley.com/datasets/3mbnb82mxd/2)
+has a CC BY 4.0 license and includes raw and augmented folders. Only the
+158 raw files bearing the November 2, 2025 camera date were considered.
+An inspected sample showed leaves on plants under natural conditions.
+The [intake registry](manifests/leafcheck_pakistan_tomato_intake.json)
+pins the publisher archive, partial byte ranges and label mapping. The
+[release seal](manifests/leafcheck_pakistan_tomato_dev_v1_release.json)
+records 142 admitted photos after date, overlap and label-conflict checks.
+The labels come from the publisher's visual annotations. Specimen
+independence within the session remains unknown.
+
+All included files stay together in development. Restore the protected
+earlier releases before building this one. Use an absent output directory
+for a separate build.
+
+```sh
+.venv/bin/python scripts/inspect_pakistan_tomato.py --all-dated
+.venv/bin/python scripts/build_pakistan_tomato_development.py
+.venv/bin/python -m leafcheck.field_baseline \
+  --release data/processed/leafcheck_pakistan_tomato_dev_v1 \
+  --output runs/pakistan_tomato_baseline
+```
+
 ## Earlier three-class dataset
 
 The dataset assigns `early_blight`, `healthy`, and `late_blight` to class indices 0, 1, and 2 respectively. The image folders under `data/processed/leafcheck/` are ready for a loader such as PyTorch `ImageFolder`. The [image inventory](manifests/image_inventory.csv) records the exact membership, original path, source revision, group, file hash, and any exclusion. The [label mapping](manifests/label_mapping.csv) records how the source labels translate to project labels.

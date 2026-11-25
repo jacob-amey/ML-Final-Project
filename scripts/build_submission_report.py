@@ -112,7 +112,61 @@ def add_link(paragraph, label, url):
     paragraph._p.append(link)
 
 
-def build(artifact, output):
+def field_followup(doc, docs, freeze):
+    evidence = docs / "potato_context"
+    okara = read(evidence / "okara_metrics.json")["methods"]
+    tomato = read(evidence / "bangladesh_tomato_metrics.json")["methods"]
+    validation = read(evidence / "validation.json")["automatic"]
+    replay = read(evidence / "tom2024_matched.json")
+    crops = read(evidence / "plantseg_regions_decision.json")
+    demo = read(evidence / "demo_browser.json")
+    decoding = read(docs / "field_optimization/crop_decoding.json")
+    pakistan = read(docs / "field_optimization/pakistan_baseline.json")["results"]
+    assert demo["checkpoint_sha256"] == freeze["checkpoint_sha256"]
+    assert replay["base_checkpoint"] == crops["base_checkpoint"] == freeze["checkpoint_sha256"]
+    assert not replay["test_opened"] and not crops["test_opened"]
+    heading(doc, "Field Transfer and Upload Reliability")
+    doc.add_paragraph("A follow-up evaluated unfamiliar image sources. The Okara potato collection [7] and the Bangladesh tomato collection [8] supplied publisher-labeled photos. Screening excluded potential duplicates and conflicting groups. Each collection stayed separate from fitting. The audited samples often showed isolated leaves, and undocumented specimen relationships can remain.")
+    table(doc, ["Evaluation scope", "Correct / total", "Macro-F1"], [
+        (name, f"{row['correct']:,} / {row['sample_count']:,}", f"{row['macro_f1']:.4f}")
+        for name, row in [
+            ("Okara automatic", okara["automatic_original"]),
+            ("Okara with potato supplied", okara["masked_original"]),
+            ("Bangladesh automatic", tomato["automatic_original"]),
+            ("Bangladesh with tomato supplied", tomato["known_tomato_original"]),
+        ]
+    ], [3.5, 1.6, 1.4])
+    row = tomato["automatic_original"]
+    doc.add_paragraph(f"Automatic scoring named a different crop on {row['wrong_crop']} of {row['sample_count']} Bangladesh photos. Adjustment using a known crop addresses crop selection, while the remaining errors include confusion between early and late blight. Each source table averages only its represented classes. The potato option was verified through the browser and uses three conditional, uncalibrated scores. The tomato option was evaluated as a research diagnostic.")
+    doc.add_paragraph(
+        f"Eight-view averaging across two seeds improved master validation macro-F1 from "
+        f"{validation['reference']['macro_f1']:.6f} to {validation['ensemble']['macro_f1']:.6f}. "
+        f"The ensemble scored {tomato['automatic_two_seed']['correct']} of {row['sample_count']} "
+        f"on Bangladesh automatic classification. New TOM2024 training photos [9] yielded "
+        f"{replay['arms']['new_field']['master']['macro_f1']:.6f} master validation macro-F1 and "
+        f"PlantSeg lesion crops [10] yielded {crops['arms']['new_field']['master']['macro_f1']:.6f}. "
+        "Both training recipes missed their registered promotion criteria. The app continues to use the frozen checkpoint."
+    )
+    reward = decoding["decisions"]["crop_first"]
+    doc.add_paragraph(
+        f"Choosing the crop with the largest combined model score before ranking its conditions gained "
+        f"{reward['field_f1_gain']:.4f} mean joint macro-F1 across the Sheikh tomato and Mduma potato "
+        f"development slices. The gain fell below the registered threshold of 0.0200. This strengthens the "
+        f"case for obtaining verification images from new capture groups before changing inference."
+    )
+    supplied = pakistan["reference_crop_diagnostic"]
+    shown = pakistan["already_deployed_gate"]
+    doc.add_paragraph(
+        f"On a screened Pakistan development session [11], the CNN classified "
+        f"{pakistan['correct']} of {pakistan['sample_count']} correctly, with joint macro-F1 "
+        f"{pakistan['macro_f1']:.4f}. It named another crop on {pakistan['wrong_crop']} photos. "
+        f"Supplying the source crop recovered {supplied['correct']} correct conditions, "
+        f"and all {shown['accepted']} suggestions shown by the existing score screen were wrong. "
+        "The session uses publisher visual labels and covers one capture day."
+    )
+
+
+def build(artifact, output, include_field_followup=False):
     freeze = read(artifact / "freeze.json")
     manifest = read(artifact / "artifact.json")
     assert all(manifest[key] for key in ("final_evaluation_complete", "reference_evaluation_complete", "supplementary_evaluation_complete"))
@@ -198,12 +252,17 @@ def build(artifact, output):
     doc.add_heading("Discussion and Next Step", level=2)
     doc.add_paragraph("The gap between accuracy and macro-F1 matters for rare conditions. Some inherited labels describe broad symptoms, and predictions can be sensitive to background and camera conditions. The score ranks supported categories and is uncalibrated. LeafCheck produces one label per photo and cannot establish a diagnosis or reliably identify unfamiliar inputs. Add independently collected, verified photos with specimen and session IDs for rare and poorly represented categories before making stronger field claims.")
 
+    if include_field_followup:
+        field_followup(doc, docs, freeze)
+
     heading(doc, "Conclusion and Project Management")
     doc.add_paragraph("The custom CNN outscored both primary test references in accuracy and macro-F1. Its lower supplementary accuracy than the conditional frequency rule shows the need for verified, independently collected photos before drawing field-performance conclusions.")
     doc.add_heading("Project Management", level=2)
     doc.add_paragraph("Jacob Amey’s assigned role covers data, training, evaluation and model integration. Jacob defined the final scope and authorized the delivery. Demetre’s assigned role covers the frontend and upload interface. The planning decks establish these roles. The contribution record documents available evidence and flags individual implementation and meeting claims for team confirmation. Codex assisted with data preparation, training experiments, evaluation, integration, writing and delivery verification.")
     doc.add_heading("Reproduction and Appendix", level=2)
     doc.add_paragraph("The archive identifies its exact runnable source revision in START_HERE.md. Its demo uses bundled weights. The saved metrics can be recomputed from the archived membership and predictions. Retraining also requires permitted access to the exact original master or frozen images. Follow the restore, verification, cache and pinned training commands in the archived README and data guide.")
+    if include_field_followup:
+        doc.add_paragraph("The follow-up study and its manifests are recorded in docs/potato_context_study.md and docs/field_optimization. The potato-context demo was packaged separately from the original course archive.")
     paragraph = doc.add_paragraph()
     links = [
         ("GitHub project history", "https://github.com/jacob-amey/ML-Final-Project"),
@@ -227,6 +286,15 @@ def build(artifact, output):
         "[6] PyTorch, ‘PyTorch source code,’ GitHub. [Online]. Available: https://github.com/pytorch/pytorch",
     ]:
         doc.add_paragraph(ref)
+    if include_field_followup:
+        for ref in [
+            "[7] J. Rashid et al., “Multi-level deep learning model for potato leaf disease recognition,” Electronics, vol. 10, no. 17, 2021, art. 2064. doi: 10.3390/electronics10172064.",
+            "[8] N. A. S. Rachin, N. M. Likhon, and M. A. H. Baki, “Tomato Leaf Disease Classification Dataset,” Mendeley Data, v1, 2025. doi: 10.17632/jttrv2w27r.1.",
+            "[9] O. Appiah et al., “TOM2024,” Mendeley Data, v1. doi: 10.17632/3d4yg89rtr.1.",
+            "[10] T. Wei et al., “A Large-Scale In-the-wild Dataset for Plant Disease Segmentation,” Zenodo, v7, 2025. doi: 10.5281/zenodo.17719108.",
+            "[11] M. N. Malik, S. H. Ali, and H. Ali, “Tomato Leaf Disease Classification Dataset in Pakistan,” Mendeley Data, v2, 2026. doi: 10.17632/3mbnb82mxd.2.",
+        ]:
+            doc.add_paragraph(ref)
     output.parent.mkdir(parents=True, exist_ok=True)
     doc.save(output)
 
@@ -235,5 +303,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--artifact", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--include-field-followup", action="store_true")
     arguments = parser.parse_args()
-    build(arguments.artifact, arguments.output)
+    build(arguments.artifact, arguments.output, arguments.include_field_followup)

@@ -60,6 +60,13 @@ def run(release_dir, output):
     healthy = np.array([label.endswith("__healthy") for label in classes])
     result["healthy_reference"] = int(healthy[truth].sum())
     result["healthy_false_condition"] = int(np.count_nonzero(healthy[truth] & ~healthy[guess]))
+    crops = np.asarray([label.split("__", 1)[0] for label in classes])
+    given_crop = np.where(crops[truth, None] == crops, probability, -1).argmax(1)
+    known = score(truth, given_crop, classes, slots)
+    result["reference_crop_diagnostic"] = {
+        **summarize(known), "blight": [row for row in known["blight"] if row["total"]],
+        "per_class": [known["per_class"][i] for i in slots],
+    }
 
     policy = read(ROOT / "leafcheck-demo/backend/reliability_policy.json")
     if policy["checkpoint_sha256"] != model.metadata["checkpoint_sha256"] or policy["inference_policy"] != model.policy["name"]:
@@ -68,7 +75,8 @@ def run(release_dir, output):
     result["already_deployed_gate"] = {"threshold": policy["threshold"], **measures(truth == guess, accept)}
     output.mkdir(parents=True, exist_ok=True)
     records = [dict(image_id=row["image_id"], group_id=row["group_id"], reference=row["class_name"],
-                    predicted=classes[guess[i]], score=float(confidence[i]), shown=bool(accept[i]))
+                    predicted=classes[guess[i]], score=float(confidence[i]), shown=bool(accept[i]),
+                    predicted_given_reference_crop=classes[given_crop[i]])
                for i, row in enumerate(rows)]
     write_csv(output / "predictions.csv", records)
     receipt = {
