@@ -55,7 +55,7 @@ def fetch():
     fetch_registered_images(REGISTRY, RAW)
 
 
-def build_registered_release(output, registry, source_path, raw, source_id, split, protection):
+def build_registered_release(output, registry, source_path, raw, source_id, split, protection, prepare_candidate=None):
     if output.exists():
         raise FileExistsError(output)
     rows = read_csv(registry)
@@ -72,7 +72,7 @@ def build_registered_release(output, registry, source_path, raw, source_id, spli
         return p
 
     with ThreadPoolExecutor(6) as pool:
-        candidates = list(pool.map(photo, rows))
+        candidates = list(pool.map(prepare_candidate or photo, rows))
     protected = protection()
     filter_protected(candidates, protected)
     deduplicate(candidates)
