@@ -1,0 +1,35 @@
+{
+  "version": "leafcheck_imagesafari_crop_v1",
+  "role": "crop_only_grouped_development",
+  "intake_sha256": "1e88b3e993d1ffba1a1ba56cb843444d195e8b3e2070310dfdd1ae0871008bf9",
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "files_sha256": {
+    "manifest.csv": "09cb6b13af3d2a2ce8d1f10b932f0335eeccc2a380c6e3b1cd46df809ec3b611",
+    "source_files.csv": "dbf6e12c6d0fa0aa3eb8772dc6313c7482a16216e4e9dacc5af74995401729d0"
+  },
+  "fingerprint": "82e42e785911bf00b52d44c3c26d88f715407c0238033ca79fa62fd8fe3f9c28",
+  "candidates": 276,
+  "split_crops": {
+    "train": {
+      "banana": 17,
+      "cassava": 16,
+      "corn": 24,
+      "potato": 17,
+      "bean": 8,
+      "rice": 24,
+      "wheat": 23
+    },
+    "val": {
+      "banana": 19,
+      "cassava": 24,
+      "corn": 20,
+      "potato": 24,
+      "bean": 11,
+      "rice": 24,
+      "wheat": 24
+    }
+  },
+  "excluded": {
+    "new_cluster_repeated_view": 1
+  }
+}
