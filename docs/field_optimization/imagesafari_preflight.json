@@ -1,0 +1,264 @@
+{
+  "source": "https://registry.opendata.aws/artemis-image-safari/",
+  "license": "CC BY-SA 4.0",
+  "role": "intake_only_never_scored",
+  "source_date": "2026-11-25",
+  "groups": [
+    {
+      "key": "ImageSafari/potato/images/ciat-arusha/2025-01-31/0421bdfe1ddc3343f40fe1a589398c09cfe17079bc282f94758f2b40e3d38852.jpg",
+      "sidecar": "ImageSafari/potato/metadata/ciat-arusha/2025-01-31/0421bdfe1ddc3343f40fe1a589398c09cfe17079bc282f94758f2b40e3d38852.json",
+      "site": "ciat-arusha",
+      "capture_group": "ImageSafari/potato/metadata/ciat-arusha/2025-01-31/",
+      "sha256": "ea578cdd38d320f76439e9ea467d8f72ee6f3bcaba91d73fd24c1e728653f9cc",
+      "dimensions": [
+        3000,
+        4000
+      ],
+      "filename_sha_matches": false,
+      "sidecar_fields": {
+        "agronomic_properties": [
+          "crop_type",
+          "fertilizer_level",
+          "growth_stage",
+          "irrigation_level",
+          "planting_date",
+          "season_code",
+          "soil_color",
+          "tillage_type",
+          "weed_pressure"
+        ],
+        "protocol_properties": [
+          "id",
+          "name",
+          "url"
+        ]
+      },
+      "sidecar_sha256": "bdfd49641d44fca8722e104098f6c263a731bd786783b188b22e1e42c0f7eb9c",
+      "publisher_crop_folder": "potato"
+    },
+    {
+      "key": "ImageSafari/potato/images/cip-nairobi/2025-02-24/02eab0e0478415f87f88d5d1f83fd7d54857d9e8cf9ca98ac68390c4023e112b.jpg",
+      "sidecar": "ImageSafari/potato/metadata/cip-nairobi/2025-02-24/02eab0e0478415f87f88d5d1f83fd7d54857d9e8cf9ca98ac68390c4023e112b.json",
+      "site": "cip-nairobi",
+      "capture_group": "ImageSafari/potato/metadata/cip-nairobi/2025-02-24/",
+      "sha256": "ce550fe264801d9d739edd705bbddd1912c8729f48df2ead4877a1462cb8a9c8",
+      "dimensions": [
+        2448,
+        3264
+      ],
+      "filename_sha_matches": false,
+      "sidecar_fields": {
+        "agronomic_properties": [
+          "crop_type",
+          "fertilizer_level",
+          "growth_stage",
+          "irrigation_level",
+          "planting_date",
+          "season_code",
+          "soil_color",
+          "tillage_type",
+          "weed_pressure"
+        ],
+        "protocol_properties": [
+          "id",
+          "name",
+          "url"
+        ]
+      },
+      "sidecar_sha256": "98c05bf90d38aa25f9ab3007e15120bf5394ea9a418c5230672bd84eb8e17387",
+      "publisher_crop_folder": "potato"
+    },
+    {
+      "key": "ImageSafari/cassava/images/iita-osogbo/2025-11-04/01912f82cfa6db311e04b465a06354f2124a673d961a759eb9d430c8e98dcca0.jpg",
+      "sidecar": "ImageSafari/cassava/metadata/iita-osogbo/2025-11-04/01912f82cfa6db311e04b465a06354f2124a673d961a759eb9d430c8e98dcca0.json",
+      "site": "iita-osogbo",
+      "capture_group": "ImageSafari/cassava/metadata/iita-osogbo/2025-11-04/",
+      "sha256": "ee94655ee737d46adade9c215bbe19470f2fa20dcc0f0723e4e16270c3024966",
+      "dimensions": [
+        2448,
+        3264
+      ],
+      "filename_sha_matches": false,
+      "sidecar_fields": {
+        "agronomic_properties": [
+          "crop_type",
+          "fertilizer_level",
+          "growth_stage",
+          "irrigation_level",
+          "planting_date",
+          "season_code",
+          "soil_color",
+          "tillage_type",
+          "weed_pressure"
+        ],
+        "protocol_properties": [
+          "id",
+          "name",
+          "url"
+        ]
+      },
+      "sidecar_sha256": "c8fbc53ebbe192e8678588223c1bf2e8e8af34810e43b6c4d75f38d406e47a2e",
+      "publisher_crop_folder": "cassava"
+    },
+    {
+      "key": "ImageSafari/cassava/images/qed-lilongwe/2025-05-19/005be357c9cbec6098f072a06923122bdd5d5411ecfdf72620c5daab6d177f51.jpg",
+      "sidecar": "ImageSafari/cassava/metadata/qed-lilongwe/2025-05-19/005be357c9cbec6098f072a06923122bdd5d5411ecfdf72620c5daab6d177f51.json",
+      "site": "qed-lilongwe",
+      "capture_group": "ImageSafari/cassava/metadata/qed-lilongwe/2025-05-19/",
+      "sha256": "ee4fb41178b3c38a6c24c0f5501097365a118b910aa4f060ed984f6708fc4e2d",
+      "dimensions": [
+        3456,
+        4608
+      ],
+      "filename_sha_matches": false,
+      "sidecar_fields": {
+        "agronomic_properties": [
+          "crop_type",
+          "fertilizer_level",
+          "growth_stage",
+          "irrigation_level",
+          "planting_date",
+          "season_code",
+          "soil_color",
+          "tillage_type",
+          "weed_pressure"
+        ],
+        "protocol_properties": [
+          "id",
+          "name",
+          "url"
+        ]
+      },
+      "sidecar_sha256": "2cc67720916da783972af8a7da38cf7e787f4e8b87b483d57e4d4c8a0baf068d",
+      "publisher_crop_folder": "cassava"
+    },
+    {
+      "key": "ImageSafari/maize/images/ciat-arusha/2025-10-15/01c6a90c92163d1aec03532b2858105610f1f0859bc530d4debf7e1271a25407.jpg",
+      "sidecar": "ImageSafari/maize/metadata/ciat-arusha/2025-10-15/01c6a90c92163d1aec03532b2858105610f1f0859bc530d4debf7e1271a25407.json",
+      "site": "ciat-arusha",
+      "capture_group": "ImageSafari/maize/metadata/ciat-arusha/2025-10-15/",
+      "sha256": "ee8d9bb225404c61eaa848d7e958d4cce8bc9388c9659032aca224b28f2f213d",
+      "dimensions": [
+        1080,
+        1440
+      ],
+      "filename_sha_matches": false,
+      "sidecar_fields": {
+        "agronomic_properties": [
+          "crop_type",
+          "fertilizer_level",
+          "growth_stage",
+          "irrigation_level",
+          "planting_date",
+          "season_code",
+          "soil_color",
+          "tillage_type",
+          "weed_pressure"
+        ],
+        "protocol_properties": [
+          "id",
+          "name",
+          "url"
+        ]
+      },
+      "sidecar_sha256": "eec2608aee0c4c7af78f95d965f17f812c2db039f530f4488b26d20305432139",
+      "publisher_crop_folder": "maize"
+    },
+    {
+      "key": "ImageSafari/maize/images/cimmyt-kiboko/2025-08-29/26a07c8879abe351e08cd7a698212c98c68a32c397ffe3a08158f8d1cab3e737.jpg",
+      "sidecar": "ImageSafari/maize/metadata/cimmyt-kiboko/2025-08-29/26a07c8879abe351e08cd7a698212c98c68a32c397ffe3a08158f8d1cab3e737.json",
+      "site": "cimmyt-kiboko",
+      "capture_group": "ImageSafari/maize/metadata/cimmyt-kiboko/2025-08-29/",
+      "sha256": "62cba399954ff6f4316574093e890188c3f8cf51357f4e6c10c58e25edfa9412",
+      "dimensions": [
+        1440,
+        1920
+      ],
+      "filename_sha_matches": false,
+      "sidecar_fields": {
+        "agronomic_properties": [
+          "crop_type",
+          "fertilizer_level",
+          "growth_stage",
+          "irrigation_level",
+          "planting_date",
+          "season_code",
+          "soil_color",
+          "tillage_type",
+          "weed_pressure"
+        ],
+        "protocol_properties": [
+          "id",
+          "name",
+          "url"
+        ]
+      },
+      "sidecar_sha256": "50c349df618bfaa182d900be4583cd733d718b475608571d1fae2780821acef2",
+      "publisher_crop_folder": "maize"
+    },
+    {
+      "key": "ImageSafari/banana/images/iita-kampala/2025-06-18/116e3812d45e203f220cb3f250674a55ddc73798ccbcbd05dcbde61a2e88a146.jpg",
+      "sidecar": "ImageSafari/banana/metadata/iita-kampala/2025-06-18/116e3812d45e203f220cb3f250674a55ddc73798ccbcbd05dcbde61a2e88a146.json",
+      "site": "iita-kampala",
+      "capture_group": "ImageSafari/banana/metadata/iita-kampala/2025-06-18/",
+      "sha256": "9c6a066aab35c77747c3eb8a8777186c7439a78ad439709e506f1f30be998042",
+      "dimensions": [
+        2448,
+        3264
+      ],
+      "filename_sha_matches": false,
+      "sidecar_fields": {
+        "agronomic_properties": [
+          "crop_type",
+          "fertilizer_level",
+          "growth_stage",
+          "irrigation_level",
+          "planting_date",
+          "season_code",
+          "soil_color",
+          "tillage_type",
+          "weed_pressure"
+        ],
+        "protocol_properties": [
+          "id",
+          "name",
+          "url"
+        ]
+      },
+      "sidecar_sha256": "767de7b5aa4d5fea694c2654c3a4da27f37b0cad0540d4f9489257242c3eace6",
+      "publisher_crop_folder": "banana"
+    },
+    {
+      "key": "ImageSafari/common-bean/images/qed-lilongwe/2025-02-14/002fae5d20e7aaf4bdc971428a2d1fbc90c1d1d1d64c2f3dc1afd01765608462.jpg",
+      "sidecar": "ImageSafari/common-bean/metadata/qed-lilongwe/2025-02-14/002fae5d20e7aaf4bdc971428a2d1fbc90c1d1d1d64c2f3dc1afd01765608462.json",
+      "site": "qed-lilongwe",
+      "capture_group": "ImageSafari/common-bean/metadata/qed-lilongwe/2025-02-14/",
+      "sha256": "8b710c0d960d0f2d5bd7c42742dd948e3df4fca8eddd7a2849cc1a8ef5e2225c",
+      "dimensions": [
+        3456,
+        4608
+      ],
+      "filename_sha_matches": false,
+      "sidecar_fields": {
+        "agronomic_properties": [
+          "crop_type",
+          "fertilizer_level",
+          "growth_stage",
+          "irrigation_level",
+          "planting_date",
+          "season_code",
+          "soil_color",
+          "tillage_type",
+          "weed_pressure"
+        ],
+        "protocol_properties": [
+          "id",
+          "name",
+          "url"
+        ]
+      },
+      "sidecar_sha256": "b889f6df254d7423fdbcc4506ca3b38307d95e3b481af61562c520b93e7d5c1a",
+      "publisher_crop_folder": "common-bean"
+    }
+  ]
+}

@@ -166,7 +166,7 @@ def field_followup(doc, docs, freeze):
     )
 
 
-def tomato_transfer(doc, docs, freeze):
+def tomato_transfer(doc, docs, freeze, include_crop_head=False):
     evidence = docs / "field_optimization"
     study = read(evidence / "tomato_matched.json")
     blend = read(evidence / "tomato_blend_development.json")
@@ -175,7 +175,7 @@ def tomato_transfer(doc, docs, freeze):
     assert study["receipt"]["run"]["reference_checkpoint"] == blend["reference_checkpoint"] == freeze["checkpoint_sha256"]
     assert holdout["membership_and_metrics_independently_reconciled"] and not holdout["passed_confirmation"]
     assert protocol["created_utc"] < holdout["completed_utc"]
-    heading(doc, "Tomato Transfer Experiment")
+    heading(doc, "Field Transfer Experiments" if include_crop_head else "Tomato Transfer Experiment")
     training = study["training"]
     development = blend["selected_for_confirmation"]
     doc.add_paragraph(
@@ -214,9 +214,30 @@ def tomato_transfer(doc, docs, freeze):
         "The blend lost 0.0653 macro-F1 when tomato was supplied, so it stayed out of the app. "
         "These results motivate studying crop recognition separately on new capture groups."
     )
+    if include_crop_head:
+        crop = read(evidence / "crop_head_matched.json")
+        check = read(evidence / "crop_head_confirmation.json")
+        assert crop["both_seeds_passed_development"] and check["membership_and_metrics_independently_reconciled"]
+        assert not check["passed_confirmation"]
+        comparisons = check["results"].values()
+        total = sum(item["reference"]["sample_count"] for item in comparisons)
+        correct_before = sum(item["reference"]["correct"] for item in comparisons)
+        correct_after = sum(item["candidate"]["correct"] for item in comparisons)
+        center = read(evidence / "center_view.json")
+        assert not center["passes_validation_screen"] and not center["test_opened"]
+        doc.add_heading("Independent Crop Classifier", level=2)
+        doc.add_paragraph(
+            "A scratch CNN trained with 529 CCMT crop labels [13] reweighted crop scores. "
+            "Both seeds improved grouped development macro-F1, mainly on potato. "
+            f"On Holeta [14] and TLID [15], correct predictions rose from {correct_before} to "
+            f"{correct_after} of {total}. Macro-F1 gained {check['mean_macro_f1_gain']:.4f} and "
+            f"wrong crops fell {check['mean_crop_error_reduction']*100:.2f} points, below both gates. "
+            f"A central-view blend changed field validation F1 by {center['field_gain']:+.4f}. "
+            "The app retains the frozen CNN."
+        )
 
 
-def build(artifact, output, include_field_followup=False, include_tomato_transfer=False):
+def build(artifact, output, include_field_followup=False, include_tomato_transfer=False, include_crop_head=False):
     freeze = read(artifact / "freeze.json")
     manifest = read(artifact / "artifact.json")
     assert all(manifest[key] for key in ("final_evaluation_complete", "reference_evaluation_complete", "supplementary_evaluation_complete"))
@@ -305,7 +326,7 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
     if include_field_followup:
         field_followup(doc, docs, freeze)
     if include_tomato_transfer:
-        tomato_transfer(doc, docs, freeze)
+        tomato_transfer(doc, docs, freeze, include_crop_head)
 
     heading(doc, "Conclusion and Project Management")
     doc.add_paragraph("The custom CNN outscored both primary test references in accuracy and macro-F1. Its lower supplementary accuracy than the conditional frequency rule shows the need for verified, independently collected photos before drawing field-performance conclusions.")
@@ -316,7 +337,12 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
     if include_field_followup:
         doc.add_paragraph("The follow-up study and its manifests are recorded in docs/potato_context_study.md and docs/field_optimization. The potato-context demo was packaged separately from the original course archive.")
     if include_tomato_transfer:
-        doc.add_paragraph("The matched tomato runs and PlantCity confirmation are recorded in docs/field_optimization/tomato_transfer.md. PlantCity is a separate, completed evaluation and its results are excluded from model selection.")
+        transfer_location = (
+            "Tomato transfer and crop classifier records are in docs/field_optimization."
+            if include_crop_head else
+            "The matched tomato runs and PlantCity confirmation are recorded in docs/field_optimization/tomato_transfer.md."
+        )
+        doc.add_paragraph(transfer_location + " The independent follow-up evaluations are complete and excluded from model selection.")
     paragraph = doc.add_paragraph()
     links = [
         ("GitHub project history", "https://github.com/jacob-amey/ML-Final-Project"),
@@ -351,6 +377,13 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             doc.add_paragraph(ref)
     if include_tomato_transfer:
         doc.add_paragraph("[12] M. S. Khan, K. Nisa, I. Ahmad, M. Zubair, and K. Alshammari, “PlantCity: A comprehensive image based on multi crop leaves in Pakistan,” Data Brief, art. 112130, 2025. doi: 10.1016/j.dib.2025.112130.")
+    if include_crop_head:
+        for ref in [
+            "[13] P. M. Kwabena et al., “Dataset for Crop Pest and Disease Detection,” Mendeley Data, v1, 2023. doi: 10.17632/bwh3zbpkpv.1.",
+            "[14] N. Tilahun, “Potato Leaf (Healthy and Late Blight),” Mendeley Data, v1, 2020. doi: 10.17632/v4w72bsts5.1.",
+            "[15] M. Pellenz, G. B. Zimmermann, A. S. Britto Jr., and Y. M. G. Costa, “Tomato Leaf Image Dataset (TLID/PTLID),” Mendeley Data, v1, 2025. doi: 10.17632/kt64b2kh89.1.",
+        ]:
+            doc.add_paragraph(ref)
     output.parent.mkdir(parents=True, exist_ok=True)
     doc.save(output)
 
@@ -361,7 +394,9 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--include-field-followup", action="store_true")
     parser.add_argument("--include-tomato-transfer", action="store_true")
+    parser.add_argument("--include-crop-head", action="store_true")
     arguments = parser.parse_args()
     build(arguments.artifact, arguments.output,
-          arguments.include_field_followup or arguments.include_tomato_transfer,
-          arguments.include_tomato_transfer)
+          arguments.include_field_followup or arguments.include_tomato_transfer or arguments.include_crop_head,
+          arguments.include_tomato_transfer or arguments.include_crop_head,
+          arguments.include_crop_head)

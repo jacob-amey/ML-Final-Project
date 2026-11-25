@@ -208,6 +208,29 @@ restoration without repeating the live catalog sample.
 .venv/bin/python scripts/prepare_ccmt_crop_training.py build
 ```
 
+## Holeta and TLID independent crop confirmation
+
+[Holeta potato](https://data.mendeley.com/datasets/v4w72bsts5/1) and
+[TLID tomato](https://data.mendeley.com/datasets/kt64b2kh89/1) provide
+CC BY 4.0 photos. Holeta captures came from an Ethiopian potato farm.
+TLID contains greenhouse-grown original leaf views in Brazil. Its
+derivative patches are excluded. Only healthy and late-blight potato,
+and healthy and bacterial-spot tomato, map into this study. The archive
+lists 363 eligible-extension healthy and 67 late-blight members,
+while the Holeta description lists 363 and 63. The intake pins the
+actual file hash and selected paths.
+
+The [release receipt](manifests/leafcheck_crop_confirmation_v1_release.json)
+covers 245 screened test-only files, sampled from 256 candidates.
+Each publisher remains one source group. The exact manifest and seal
+were reproduced from the pinned files. The set was opened only after
+the crop candidate freeze and now stays outside development.
+
+```sh
+.venv/bin/python scripts/prepare_crop_confirmation.py fetch
+.venv/bin/python scripts/prepare_crop_confirmation.py build
+```
+
 ## Earlier three-class dataset
 
 The dataset assigns `early_blight`, `healthy`, and `late_blight` to class indices 0, 1, and 2 respectively. The image folders under `data/processed/leafcheck/` are ready for a loader such as PyTorch `ImageFolder`. The [image inventory](manifests/image_inventory.csv) records the exact membership, original path, source revision, group, file hash, and any exclusion. The [label mapping](manifests/label_mapping.csv) records how the source labels translate to project labels.

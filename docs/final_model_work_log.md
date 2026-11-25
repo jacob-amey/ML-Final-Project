@@ -532,3 +532,33 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   freshly started local service. Rendered and inspected the editable
   ten-page field study report. The original combined course submission
   archive remains separate. [Report verification](field_optimization/report_tomato_verification.json)
+
+### Crop classification and independent source confirmation
+
+- Registered and restored 529 screened CCMT crop-only photos, 154 tomato,
+  217 corn and 158 cassava. Verified the original bytes against the
+  publisher hashes, visually reviewed one example per source folder,
+  and reproduced the training-only release.
+- The two-seed matched crop study completed all six epochs per arm.
+  Joint mean field development macro-F1 rose from 0.050016 to 0.091941
+  and 0.083875. Most of the gain came from the Mduma potato group.
+  Master validation macro-F1 was 0.646089 and 0.647168, down from
+  0.649221 within the development guard. A metadata fix recovered six
+  completed control epochs with their exact weights.
+- Froze seed 434 before evaluating 245 independent Holeta and TLID
+  photos. The candidate gained 0.006858 mean macro-F1 and reduced
+  wrong-crop rate by 4.48 points. Both differences missed the declared
+  +0.020 and 5-point thresholds. Kept the existing app checkpoint.
+  [Methods, metrics and reproduction](field_optimization/crop_head_study.md)
+- Verified an initial Image Safari intake of eight public original
+  image/sidecar pairs across five crop folders. The source has explicit
+  site and capture-date paths, and its file stems differ from the byte
+  hashes. This remains intake work with zero inference. Disease-label
+  compatibility requires separate evidence.
+  [Publisher record](https://registry.opendata.aws/artemis-image-safari/)
+- Completed the fixed central-view evaluation. Mean field development
+  macro-F1 changed by −0.000534 and master development macro-F1 by
+  −0.001225. Top-1 accuracy on the field groups did not improve.
+  Kept original full-image inference. No test files were used.
+  [Protocol](../configs/leafcheck_center_view_v1.json) ·
+  [Evidence](field_optimization/center_view.json)

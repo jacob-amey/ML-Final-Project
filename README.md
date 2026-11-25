@@ -64,6 +64,9 @@ Read `docs/final_model_selection.json` for the pre-test decision,
 - [Tomato transfer study](docs/field_optimization/tomato_transfer.md):
   matched scratch training, frozen PlantCity confirmation, and early- and
   late-blight error counts on new images.
+- [Crop classifier study](docs/field_optimization/crop_head_study.md):
+  two matched seed comparisons, the CCMT training release, and independent
+  confirmation on Holeta potato and TLID tomato.
 
 ## Run the delivered study
 

@@ -1,0 +1,19 @@
+{
+  "report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev2.docx",
+  "sha256": "75fd6f0f303145a7b8014dca4bbf01919537b67c967e0a58a6e34ae995f7a26a",
+  "pages": 10,
+  "body_font_pt": 11,
+  "normal_line_spacing": 1.15,
+  "margin_inches": 1,
+  "page_numbers": "bottom right",
+  "visual_check": "Previously reviewed pages 1\u20137 are byte-identical. Pages 8\u201310 were visually inspected at the final size.",
+  "original_course_archive_replaced": false,
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "verification": {
+    "report_tomato_verification.json": "2ea205ee4da310f2a99ceebe19aec0727d9d6aeb3c4fb43fd5557e0ff5dedf65",
+    "crop_head_confirmation.json": "bbb5258f03dedb97fa6eec0e5e03bc865f6ba91f15fdf58f5ffbfc8652d2a652",
+    "crop_head_predictions.csv": "af74de8435314915ccb0469654caf2c85d7cc0d4482765b8adf4cea0eed717ea",
+    "crop_head_confirmation_freeze.json": "b7aec219f1aaaef83b477fb3bb967b913c9db2c3dfbd3be5bb787e7186430f09",
+    "center_view.json": "691d6b291af0d92a881350f17fd69d42d7668bb646449b88eaee6b697e8c089f"
+  }
+}
