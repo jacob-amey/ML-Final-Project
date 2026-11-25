@@ -63,6 +63,14 @@ release. The original course checkpoint and deployed optional potato
 context remain in service. The opened PlantCity images and outcomes
 are excluded from candidate design, training and selection.
 
+The production upload API replayed three original PlantCity late-blight
+files. It predicted tomato late blight, tomato early blight and cherry
+leaf spot on the three cases, with the uncertainty state on each.
+The exact 177 ordered scores matched standalone inference for every
+upload. These source-labeled cases reproduce both reported error types
+within the model. The original photos used by the team were unavailable
+for the replay. [Case IDs and scores](plantcity_upload_replay.json)
+
 The [run evidence](tomato_matched.json), [blend validation](tomato_blend_development.json),
 [confirmation freeze](plantcity_freeze.json), [metrics](plantcity_confirmation.json),
 and [exact predictions](plantcity_predictions.csv) record the outcome.

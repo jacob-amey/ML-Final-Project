@@ -1,0 +1,42 @@
+{
+  "observed_utc": "2026-11-25T18:41:50.188474+00:00",
+  "entry_point": "POST /api/predict",
+  "app_revision": "e3dd8174ffc0f911",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "ordered_scores": 177,
+  "predictions_preexisting": true,
+  "case_source": "PlantCity saved evaluation examples",
+  "cases": {
+    "late_blight_correct": {
+      "image_id": "sha256:e4faa9f9535de111d0961eaecd86a8dd9a43e2b9faefab97946b1264dd8a10ef",
+      "source_locator": "test/tomato_late_blight/192.JPG",
+      "file_sha256": "e4faa9f9535de111d0961eaecd86a8dd9a43e2b9faefab97946b1264dd8a10ef",
+      "source_label": "tomato__late_blight",
+      "api_label": "tomato__late_blight",
+      "score": 0.14407537877559662,
+      "decision": "uncertain",
+      "max_ordered_score_error": 0.0
+    },
+    "late_blight_predicted_early": {
+      "image_id": "sha256:a8fabdc4f29afaca1c53e1bc2c87fe8f8d35818a0d5815a2bdb86d833bb09949",
+      "source_locator": "test/tomato_late_blight/146.JPG",
+      "file_sha256": "a8fabdc4f29afaca1c53e1bc2c87fe8f8d35818a0d5815a2bdb86d833bb09949",
+      "source_label": "tomato__late_blight",
+      "api_label": "tomato__early_blight",
+      "score": 0.2914234399795532,
+      "decision": "uncertain",
+      "max_ordered_score_error": 0.0
+    },
+    "late_blight_predicted_other_crop": {
+      "image_id": "sha256:3a498586b69ec2440fe81f0bc49df90c546ff85db4ed20257b5ecab478679e18",
+      "source_locator": "test/tomato_late_blight/172.JPG",
+      "file_sha256": "3a498586b69ec2440fe81f0bc49df90c546ff85db4ed20257b5ecab478679e18",
+      "source_label": "tomato__late_blight",
+      "api_label": "cherry__leaf_spot",
+      "score": 0.22574496269226074,
+      "decision": "uncertain",
+      "max_ordered_score_error": 0.0
+    }
+  },
+  "purpose": "Application and standalone parity on documented examples of late-blight predictions and errors. Excluded from selection."
+}

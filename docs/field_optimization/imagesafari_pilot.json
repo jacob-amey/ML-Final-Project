@@ -1,0 +1,1091 @@
+{
+  "decision_sha256": "e35696723ba7613714da94f25bf371739ca129c3a207c44fc6bc6f12bfdb62f2",
+  "completed": "2026-11-25T18:41:47.411008+00:00",
+  "run": {
+    "config": {
+      "hypothesis": "Broad Image Safari photo framing can improve joint crop routing and crop recognition on separate capture sites.",
+      "control": "Both scratch arms receive the earlier screened field training. Match the additional crop occurrence counts using either frozen master draws or Image Safari originals.",
+      "reference_checkpoint": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+      "master_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+      "known_development": [
+        "sheikh",
+        "mduma",
+        "pakistan"
+      ],
+      "seed_plan": [
+        434,
+        435
+      ],
+      "master_per_crop_cap": 512,
+      "input_size": 128,
+      "channels": [
+        16,
+        32,
+        64,
+        96
+      ],
+      "batch_size": 128,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0005,
+      "min_epochs": 6,
+      "max_epochs": 6,
+      "patience": 6,
+      "crop_inference": "single_view",
+      "crop_blend": 0.5,
+      "selection": {
+        "master_max_macro_f1_drop_per_seed": 0.005,
+        "master_max_accuracy_drop_per_seed": 0.0025,
+        "field_min_macro_f1_gain": 0.02,
+        "field_min_gain_vs_control": 0.01,
+        "field_max_per_source_drop": 0.02,
+        "field_min_wrong_crop_rate_reduction": 0.05
+      },
+      "stopping": "Use a fixed six-epoch matched screen. Repeat at seed 435 only if master guard and both the site-held crop-only and real-condition validation guards pass. All previous independent confirmations stay outside the experiment.",
+      "inherits": "leafcheck_crop_head_v1.json",
+      "imagesafari_fingerprint": "82e42e785911bf00b52d44c3c26d88f715407c0238033ca79fa62fd8fe3f9c28",
+      "imagesafari_train_occurrences_per_original": 6,
+      "min_imagesafari_crop_macro_f1_gain_vs_control": 0.03,
+      "min_imagesafari_crop_macro_f1_gain_vs_joint_reference": 0.03,
+      "max_joint_field_drop_vs_control": 0.01,
+      "labels": [
+        "apple",
+        "banana",
+        "basil",
+        "bean",
+        "bell_pepper",
+        "blueberry",
+        "broccoli",
+        "cabbage",
+        "carrot",
+        "cassava",
+        "cauliflower",
+        "celery",
+        "cherry",
+        "chili",
+        "citrus",
+        "coffee",
+        "corn",
+        "cucumber",
+        "eggplant",
+        "garlic",
+        "ginger",
+        "grape",
+        "guava",
+        "jamun",
+        "lemon",
+        "lettuce",
+        "mango",
+        "maple",
+        "peach",
+        "plum",
+        "pomegranate",
+        "potato",
+        "raspberry",
+        "rice",
+        "soybean",
+        "squash",
+        "strawberry",
+        "sugarcane",
+        "tea",
+        "tobacco",
+        "tomato",
+        "wheat",
+        "zucchini"
+      ]
+    },
+    "seed": 434,
+    "releases": {
+      "leafcheck_field_v2_sampled": "94a9489fce692e2b8d21adc312fc882ae42de23686f26319cecc51d07150b781",
+      "leafcheck_tom2024_v1": "b7ffad9c9287f71fd8a4171c0f819e787dc04bef208cbb3a05a5728762b11f2f",
+      "leafcheck_pakistan_tomato_dev_v1": "61cf3f0df4c82f6f3d5f1998de98299900bb40ac01bfd7d3e1431d3f9f432ee6",
+      "leafcheck_ccmt_crop_v1": "ec89c3b982dd3278bace72ef6eee057dbfae8a16b3df9b32c4636f282e80c1e1",
+      "leafcheck_imagesafari_crop_v1": "82e42e785911bf00b52d44c3c26d88f715407c0238033ca79fa62fd8fe3f9c28"
+    },
+    "reference_spec": {
+      "version": "exif_rgb_letterbox_bilinear_v1",
+      "input_size": 224,
+      "mean": [
+        0.4784016648304472,
+        0.5105523029653197,
+        0.4226283058778863
+      ],
+      "std": [
+        0.21336004335832504,
+        0.19522565407254905,
+        0.2335556113898882
+      ],
+      "statistics_split": "train",
+      "statistics_images": 59008,
+      "resize": "Pillow ImageOps.pad bilinear, RGB padding 128",
+      "orientation": "EXIF transpose",
+      "channels": "RGB",
+      "frame": 0,
+      "scaling": "uint8 / 255, then (x - mean) / std",
+      "tensor_layout": "NCHW"
+    },
+    "crop_spec": {
+      "version": "exif_rgb_letterbox_bilinear_v1",
+      "input_size": 128,
+      "mean": [
+        0.47854209032958844,
+        0.5106936669477582,
+        0.4227711234017792
+      ],
+      "std": [
+        0.20955548763908846,
+        0.19110100749812656,
+        0.23022600802521317
+      ],
+      "statistics_split": "train",
+      "statistics_images": 59008,
+      "resize": "Pillow ImageOps.pad bilinear, RGB padding 128",
+      "orientation": "EXIF transpose",
+      "channels": "RGB",
+      "frame": 0,
+      "scaling": "uint8 / 255, then (x - mean) / std",
+      "tensor_layout": "NCHW"
+    },
+    "training_order_sha256": "4b43f8238a5b659961d77aa28dd9f60507bf97962fdee0efb839c5ec9b096630",
+    "trainer": "a6357aded411a17351f16c7b84377575983cec93eae85f4db2fe17e815ebaec9",
+    "helper": "1526d8a42ce2848fc681cc8e6238fac8251deef5f91e008881997ca93396ae71",
+    "training": {
+      "master": 13194,
+      "shared_field": 4082,
+      "field": 774,
+      "unique_new_field": 129,
+      "by_field_crop": {
+        "banana": 102,
+        "cassava": 96,
+        "corn": 144,
+        "potato": 102,
+        "bean": 48,
+        "rice": 144,
+        "wheat": 138
+      }
+    }
+  },
+  "baseline": {
+    "site_held_crop": {
+      "macro_f1": 0.15014492753623188,
+      "accuracy": 0.1232876712328767,
+      "correct": 18,
+      "sample_count": 146,
+      "per_crop": [
+        {
+          "class_index": 1,
+          "class_name": "banana",
+          "precision": 0.6153846153846154,
+          "recall": 0.42105263157894735,
+          "f1": 0.5,
+          "support": 19
+        },
+        {
+          "class_index": 3,
+          "class_name": "bean",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 11
+        },
+        {
+          "class_index": 9,
+          "class_name": "cassava",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 24
+        },
+        {
+          "class_index": 16,
+          "class_name": "corn",
+          "precision": 0.5,
+          "recall": 0.1,
+          "f1": 0.16666666666666669,
+          "support": 20
+        },
+        {
+          "class_index": 31,
+          "class_name": "potato",
+          "precision": 1.0,
+          "recall": 0.041666666666666664,
+          "f1": 0.07999999999999999,
+          "support": 24
+        },
+        {
+          "class_index": 33,
+          "class_name": "rice",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 24
+        },
+        {
+          "class_index": 41,
+          "class_name": "wheat",
+          "precision": 0.3181818181818182,
+          "recall": 0.2916666666666667,
+          "f1": 0.30434782608695654,
+          "support": 24
+        }
+      ]
+    },
+    "field": {
+      "macro_f1": 0.05001571965340081,
+      "accuracy": 0.027490376699374763,
+      "loss": 8.664169788360596,
+      "confusion_matrix": {
+        "sheikh": [
+          [
+            154,
+            117,
+            8
+          ],
+          [
+            154,
+            120,
+            46
+          ],
+          [
+            154,
+            123,
+            2
+          ],
+          [
+            155,
+            1,
+            40
+          ],
+          [
+            155,
+            4,
+            2
+          ],
+          [
+            155,
+            15,
+            4
+          ],
+          [
+            155,
+            43,
+            2
+          ],
+          [
+            155,
+            47,
+            1
+          ],
+          [
+            155,
+            105,
+            3
+          ],
+          [
+            155,
+            111,
+            1
+          ],
+          [
+            155,
+            118,
+            16
+          ],
+          [
+            155,
+            119,
+            40
+          ],
+          [
+            155,
+            120,
+            1
+          ],
+          [
+            155,
+            127,
+            30
+          ],
+          [
+            155,
+            129,
+            26
+          ],
+          [
+            155,
+            130,
+            6
+          ],
+          [
+            155,
+            147,
+            1
+          ],
+          [
+            155,
+            156,
+            3
+          ],
+          [
+            155,
+            157,
+            1
+          ]
+        ],
+        "mduma": [
+          [
+            109,
+            4,
+            7
+          ],
+          [
+            109,
+            6,
+            1
+          ],
+          [
+            109,
+            11,
+            4
+          ],
+          [
+            109,
+            28,
+            1
+          ],
+          [
+            109,
+            34,
+            1
+          ],
+          [
+            109,
+            42,
+            1
+          ],
+          [
+            109,
+            44,
+            2
+          ],
+          [
+            109,
+            69,
+            1
+          ],
+          [
+            109,
+            70,
+            2
+          ],
+          [
+            109,
+            80,
+            2
+          ],
+          [
+            109,
+            109,
+            2
+          ],
+          [
+            109,
+            159,
+            35
+          ],
+          [
+            109,
+            162,
+            2
+          ],
+          [
+            110,
+            13,
+            1
+          ],
+          [
+            110,
+            18,
+            1
+          ],
+          [
+            110,
+            49,
+            4
+          ],
+          [
+            110,
+            61,
+            1
+          ],
+          [
+            110,
+            65,
+            1
+          ],
+          [
+            110,
+            69,
+            14
+          ],
+          [
+            110,
+            90,
+            3
+          ],
+          [
+            110,
+            91,
+            8
+          ],
+          [
+            110,
+            127,
+            5
+          ],
+          [
+            110,
+            134,
+            2
+          ],
+          [
+            110,
+            149,
+            2
+          ],
+          [
+            110,
+            152,
+            4
+          ],
+          [
+            110,
+            168,
+            1
+          ],
+          [
+            110,
+            174,
+            1
+          ],
+          [
+            110,
+            176,
+            2
+          ],
+          [
+            111,
+            3,
+            3
+          ],
+          [
+            111,
+            4,
+            1
+          ],
+          [
+            111,
+            11,
+            3
+          ],
+          [
+            111,
+            12,
+            1
+          ],
+          [
+            111,
+            13,
+            2
+          ],
+          [
+            111,
+            14,
+            3
+          ],
+          [
+            111,
+            23,
+            2
+          ],
+          [
+            111,
+            28,
+            1
+          ],
+          [
+            111,
+            44,
+            1
+          ],
+          [
+            111,
+            65,
+            2
+          ],
+          [
+            111,
+            70,
+            16
+          ],
+          [
+            111,
+            79,
+            1
+          ],
+          [
+            111,
+            82,
+            15
+          ],
+          [
+            111,
+            90,
+            2
+          ],
+          [
+            111,
+            91,
+            2
+          ],
+          [
+            111,
+            109,
+            9
+          ],
+          [
+            111,
+            111,
+            5
+          ],
+          [
+            111,
+            132,
+            1
+          ],
+          [
+            111,
+            149,
+            1
+          ],
+          [
+            111,
+            150,
+            9
+          ],
+          [
+            111,
+            156,
+            11
+          ],
+          [
+            111,
+            159,
+            3
+          ],
+          [
+            111,
+            174,
+            3
+          ],
+          [
+            111,
+            176,
+            3
+          ]
+        ],
+        "pakistan": [
+          [
+            154,
+            3,
+            1
+          ],
+          [
+            154,
+            64,
+            5
+          ],
+          [
+            154,
+            66,
+            6
+          ],
+          [
+            154,
+            73,
+            3
+          ],
+          [
+            154,
+            79,
+            3
+          ],
+          [
+            154,
+            97,
+            1
+          ],
+          [
+            154,
+            99,
+            1
+          ],
+          [
+            154,
+            109,
+            1
+          ],
+          [
+            154,
+            111,
+            1
+          ],
+          [
+            154,
+            130,
+            1
+          ],
+          [
+            154,
+            149,
+            2
+          ],
+          [
+            154,
+            154,
+            4
+          ],
+          [
+            154,
+            156,
+            3
+          ],
+          [
+            154,
+            157,
+            1
+          ],
+          [
+            155,
+            0,
+            1
+          ],
+          [
+            155,
+            2,
+            2
+          ],
+          [
+            155,
+            7,
+            5
+          ],
+          [
+            155,
+            18,
+            1
+          ],
+          [
+            155,
+            43,
+            2
+          ],
+          [
+            155,
+            45,
+            1
+          ],
+          [
+            155,
+            66,
+            17
+          ],
+          [
+            155,
+            72,
+            1
+          ],
+          [
+            155,
+            73,
+            2
+          ],
+          [
+            155,
+            75,
+            1
+          ],
+          [
+            155,
+            79,
+            3
+          ],
+          [
+            155,
+            94,
+            2
+          ],
+          [
+            155,
+            109,
+            8
+          ],
+          [
+            155,
+            111,
+            2
+          ],
+          [
+            155,
+            134,
+            7
+          ],
+          [
+            155,
+            154,
+            1
+          ],
+          [
+            155,
+            156,
+            1
+          ],
+          [
+            155,
+            157,
+            1
+          ],
+          [
+            155,
+            158,
+            1
+          ],
+          [
+            155,
+            176,
+            3
+          ],
+          [
+            156,
+            64,
+            1
+          ],
+          [
+            156,
+            66,
+            1
+          ],
+          [
+            156,
+            111,
+            1
+          ],
+          [
+            156,
+            154,
+            2
+          ],
+          [
+            156,
+            156,
+            1
+          ],
+          [
+            156,
+            168,
+            1
+          ],
+          [
+            157,
+            29,
+            1
+          ],
+          [
+            157,
+            52,
+            1
+          ],
+          [
+            157,
+            58,
+            1
+          ],
+          [
+            157,
+            66,
+            2
+          ],
+          [
+            157,
+            74,
+            1
+          ],
+          [
+            157,
+            97,
+            1
+          ],
+          [
+            157,
+            99,
+            1
+          ],
+          [
+            157,
+            149,
+            1
+          ],
+          [
+            157,
+            156,
+            1
+          ],
+          [
+            157,
+            157,
+            1
+          ],
+          [
+            162,
+            18,
+            1
+          ],
+          [
+            162,
+            41,
+            1
+          ],
+          [
+            162,
+            66,
+            2
+          ],
+          [
+            162,
+            73,
+            3
+          ],
+          [
+            162,
+            134,
+            1
+          ],
+          [
+            162,
+            154,
+            6
+          ],
+          [
+            162,
+            156,
+            2
+          ],
+          [
+            162,
+            157,
+            2
+          ],
+          [
+            162,
+            162,
+            1
+          ],
+          [
+            162,
+            167,
+            1
+          ],
+          [
+            162,
+            168,
+            3
+          ],
+          [
+            162,
+            176,
+            6
+          ]
+        ]
+      }
+    }
+  },
+  "selected": {
+    "control": {
+      "epoch": 1,
+      "train_loss": 2.8799291682573567,
+      "seconds": 5.991600082998048,
+      "checkpoint": "runs/field_v7/safari-434/control/epoch-001.pt",
+      "sha256": "7bbc8f28f456cd9b37df386406cb25ff2062c619b3d580d582ca98b4487cb290",
+      "completed_epochs": 6,
+      "passed_master_limits": true,
+      "seed": 434,
+      "checkpoint_reload_verified": true,
+      "scores": {
+        "site_held_crop": {
+          "macro_f1": 0.150224558050645,
+          "accuracy": 0.136986301369863,
+          "correct": 20,
+          "sample_count": 146,
+          "per_crop": [
+            {
+              "class_index": 1,
+              "class_name": "banana",
+              "precision": 0.6153846153846154,
+              "recall": 0.42105263157894735,
+              "f1": 0.5,
+              "support": 19
+            },
+            {
+              "class_index": 3,
+              "class_name": "bean",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 11
+            },
+            {
+              "class_index": 9,
+              "class_name": "cassava",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 24
+            },
+            {
+              "class_index": 16,
+              "class_name": "corn",
+              "precision": 0.3333333333333333,
+              "recall": 0.05,
+              "f1": 0.08695652173913045,
+              "support": 20
+            },
+            {
+              "class_index": 31,
+              "class_name": "potato",
+              "precision": 1.0,
+              "recall": 0.041666666666666664,
+              "f1": 0.07999999999999999,
+              "support": 24
+            },
+            {
+              "class_index": 33,
+              "class_name": "rice",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 24
+            },
+            {
+              "class_index": 41,
+              "class_name": "wheat",
+              "precision": 0.35714285714285715,
+              "recall": 0.4166666666666667,
+              "f1": 0.3846153846153846,
+              "support": 24
+            }
+          ]
+        },
+        "field_macro_f1": 0.08070867326894328,
+        "master": {
+          "sample_count": 16836,
+          "accuracy": 0.8969470182941316,
+          "macro_f1": 0.6471496782920462,
+          "correct": 15101,
+          "loss": 0.9159572124481201
+        }
+      }
+    },
+    "field": {
+      "epoch": 1,
+      "train_loss": 2.906641497096857,
+      "seconds": 4.328186250000726,
+      "checkpoint": "runs/field_v7/safari-434/field/epoch-001.pt",
+      "sha256": "69c67b361c2c698d2d0e52bfe7d4da8ce190365cf16fa76606aba9bc00d68e1a",
+      "completed_epochs": 6,
+      "passed_master_limits": true,
+      "seed": 434,
+      "checkpoint_reload_verified": true,
+      "scores": {
+        "site_held_crop": {
+          "macro_f1": 0.16497570456754132,
+          "accuracy": 0.14383561643835616,
+          "correct": 21,
+          "sample_count": 146,
+          "per_crop": [
+            {
+              "class_index": 1,
+              "class_name": "banana",
+              "precision": 0.6153846153846154,
+              "recall": 0.42105263157894735,
+              "f1": 0.5,
+              "support": 19
+            },
+            {
+              "class_index": 3,
+              "class_name": "bean",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 11
+            },
+            {
+              "class_index": 9,
+              "class_name": "cassava",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 24
+            },
+            {
+              "class_index": 16,
+              "class_name": "corn",
+              "precision": 0.5,
+              "recall": 0.1,
+              "f1": 0.16666666666666669,
+              "support": 20
+            },
+            {
+              "class_index": 31,
+              "class_name": "potato",
+              "precision": 1.0,
+              "recall": 0.041666666666666664,
+              "f1": 0.07999999999999999,
+              "support": 24
+            },
+            {
+              "class_index": 33,
+              "class_name": "rice",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 24
+            },
+            {
+              "class_index": 41,
+              "class_name": "wheat",
+              "precision": 0.4,
+              "recall": 0.4166666666666667,
+              "f1": 0.4081632653061225,
+              "support": 24
+            }
+          ]
+        },
+        "field_macro_f1": 0.08867195767195768,
+        "master": {
+          "sample_count": 16836,
+          "accuracy": 0.8965312425754336,
+          "macro_f1": 0.645754585651784,
+          "correct": 15094,
+          "loss": 0.9210022687911987
+        }
+      }
+    }
+  },
+  "site_held_crop_decision": {
+    "gain_over_reference": 0.014830777031309444,
+    "gain_over_control": 0.014751146516896324
+  },
+  "passed_screen": false,
+  "test_opened": false,
+  "image_release_rebuilt_exactly": true,
+  "original_checkpoint_retained": true
+}

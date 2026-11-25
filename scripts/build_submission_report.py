@@ -112,7 +112,7 @@ def add_link(paragraph, label, url):
     paragraph._p.append(link)
 
 
-def field_followup(doc, docs, freeze):
+def field_followup(doc, docs, freeze, include_site_audit=False):
     evidence = docs / "potato_context"
     okara = read(evidence / "okara_metrics.json")["methods"]
     tomato = read(evidence / "bangladesh_tomato_metrics.json")["methods"]
@@ -164,6 +164,22 @@ def field_followup(doc, docs, freeze):
         f"and all {shown['accepted']} suggestions shown by the existing score screen were wrong. "
         "The session uses publisher visual labels and covers one capture day."
     )
+    if include_site_audit:
+        safari = read(docs / "field_optimization/imagesafari_baseline.json")
+        automatic = safari["metrics"]["automatic_model"]
+        framing = safari["framing_visual_review"]["by_framing"]
+        foreground = framing["foreground_visible"]
+        pilot = read(docs / "field_optimization/imagesafari_pilot.json")
+        assert not pilot["passed_screen"] and not pilot["test_opened"]
+        transfer = pilot["site_held_crop_decision"]["gain_over_control"]
+        doc.add_paragraph(
+            f"Image Safari [16] added site-held crop data. Automatic inference named the right crop "
+            f"on {automatic['correct']} of {automatic['sample_count']} validation views and on "
+            f"{foreground['automatic_crop_correct']} of {foreground['count']} views rated as having "
+            "visible foreground plant detail. The framing audit was exploratory and the photos "
+            "lack condition labels. A matched training pilot gained "
+            f"{transfer:.4f} crop macro-F1 over its control and missed the 0.0300 gate."
+        )
 
 
 def tomato_transfer(doc, docs, freeze, include_crop_head=False):
@@ -324,7 +340,7 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
     doc.add_paragraph("The gap between accuracy and macro-F1 matters for rare conditions. Some inherited labels describe broad symptoms, and predictions can be sensitive to background and camera conditions. The score ranks supported categories and is uncalibrated. LeafCheck produces one label per photo and cannot establish a diagnosis or reliably identify unfamiliar inputs. Add independently collected, verified photos with specimen and session IDs for rare and poorly represented categories before making stronger field claims.")
 
     if include_field_followup:
-        field_followup(doc, docs, freeze)
+        field_followup(doc, docs, freeze, include_crop_head)
     if include_tomato_transfer:
         tomato_transfer(doc, docs, freeze, include_crop_head)
 
@@ -382,6 +398,7 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             "[13] P. M. Kwabena et al., “Dataset for Crop Pest and Disease Detection,” Mendeley Data, v1, 2023. doi: 10.17632/bwh3zbpkpv.1.",
             "[14] N. Tilahun, “Potato Leaf (Healthy and Late Blight),” Mendeley Data, v1, 2020. doi: 10.17632/v4w72bsts5.1.",
             "[15] M. Pellenz, G. B. Zimmermann, A. S. Britto Jr., and Y. M. G. Costa, “Tomato Leaf Image Dataset (TLID/PTLID),” Mendeley Data, v1, 2025. doi: 10.17632/kt64b2kh89.1.",
+            "[16] S. Mutuvi et al., “Artemis and Image Safari: Crop imagery datasets spanning globally critical crop species,” agriRxiv, 2026. doi: 10.31220/agriRxiv.2026.00491.",
         ]:
             doc.add_paragraph(ref)
     output.parent.mkdir(parents=True, exist_ok=True)

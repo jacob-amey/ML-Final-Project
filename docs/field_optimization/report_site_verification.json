@@ -1,0 +1,19 @@
+{
+  "report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev3.docx",
+  "sha256": "243be89327fb8715ab94bf9b6bcf66dcd49f744e004d7f420faa635f77bc094c",
+  "pages": 10,
+  "body_font_pt": 11,
+  "normal_line_spacing": 1.15,
+  "margin_inches": 1,
+  "page_numbers": "bottom right",
+  "visual_check": "All pages reviewed or pixel-matched to prior reviewed pages. Latest site-held evidence and references reviewed.",
+  "frozen_submission_replaced": false,
+  "checks": {
+    "imagesafari_baseline.json": "79c9f4ed9dcd82999abb6abfd09fc788f3a345d6a8bedde680dd3fc713cd9b60",
+    "imagesafari_pilot.json": "446ecc9591a971a859d78a2705805e1bb503235130c69a9ef2f0da37969ccdf2",
+    "report_crop_verification.json": "2b6ca6ac1d642939a718c416fb8ee1be076ebfdca01e2c941eb0af6048344c94",
+    "plantcity_upload_replay.json": "d5cd64307b20bbc631acc4af705a8361d04d2330c6cac24e5c4eac566ad6fb59"
+  },
+  "pipeline_tests": 9,
+  "website_tests": 19
+}

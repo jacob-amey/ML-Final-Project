@@ -574,3 +574,18 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   The crop/site composition differs by framing. Treat these as diagnostic
   counts and preserve the full cohort. Disease labels are unavailable.
   [Crop metrics and framing rubric](field_optimization/imagesafari_baseline.json)
+- Completed a matched Image Safari scratch pilot with 129 new unique
+  training views and six occurrences per view per epoch, matched
+  by crop in the control. Both arms completed six epochs and reloaded
+  the selected checkpoints. The site-held crop score rose from
+  0.150225 to 0.164976 macro-F1, a 0.014751 gain over control.
+  The target of 0.030 was missed. The registered rule stopped the trial
+  after the first seed. The 275-source release reproduced its hashes
+  and site assignments in a separate build. [Evidence](field_optimization/imagesafari_pilot.json)
+- Replayed the original bytes of three labeled PlantCity late-blight
+  photos through the four-model local upload API. The frozen model
+  produced one late-blight result, one early-blight result and one
+  wrong-crop result, cherry leaf spot. All 177 scores matched standalone
+  exactly for every upload. These cases demonstrate model errors on
+  publisher-labeled examples. The team's original photos are unverified.
+  [Upload replay](field_optimization/plantcity_upload_replay.json)
