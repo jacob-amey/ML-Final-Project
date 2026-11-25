@@ -1,0 +1,29 @@
+{
+  "version": "leafcheck_imagesafari_crop_v1",
+  "source": "https://registry.opendata.aws/artemis-image-safari/",
+  "descriptor": "https://doi.org/10.31220/agriRxiv.2026.00491",
+  "license": "CC BY-SA 4.0",
+  "bucket": "https://alliance-artemis-imagesafari.s3.us-west-2.amazonaws.com/",
+  "role": "crop_only_grouped_development",
+  "groups": [
+    ["banana", "banana", "banana", "iita-kampala", "train"],
+    ["banana", "banana", "banana", "iita-nambala", "val"],
+    ["cassava", "cassava", "cassava", "iita-osogbo", "train"],
+    ["cassava", "cassava", "cassava", "qed-lilongwe", "val"],
+    ["maize", "maize", "corn", "ciat-arusha", "train"],
+    ["maize", "maize", "corn", "cimmyt-kiboko", "val"],
+    ["potato", "potato", "potato", "ciat-arusha", "train"],
+    ["potato", "potato", "potato", "cip-nairobi", "val"],
+    ["common-bean", "common_bean", "bean", "ciat-arusha", "train"],
+    ["common-bean", "common_bean", "bean", "cip-nairobi", "val"],
+    ["rice", "rice", "rice", "africa-rice-ibadan", "train"],
+    ["rice", "rice", "rice", "africa-rice-sn", "val"],
+    ["wheat", "wheat", "wheat", "ciat-arusha", "train"],
+    ["wheat", "wheat", "wheat", "cimmyt-njoro", "val"]
+  ],
+  "days_per_site_and_crop": 3,
+  "views_per_day": 8,
+  "max_site_days_listed": 100,
+  "max_sidecars_listed_per_day": 100,
+  "selection": "Select earliest listed capture dates up to the quota, then sort their sidecars by SHA-256 of public object key. Use paired originals with an agreeing crop_type. Assign complete sites to one split across all crops. Smaller site folders can contribute fewer dates and rows. Claim no condition labels or specimen independence."
+}
