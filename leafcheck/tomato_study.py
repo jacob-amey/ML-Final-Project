@@ -90,7 +90,7 @@ def score_joint(output, config, frozen, incumbent, columns, originals, dev, deci
     full_inputs = {**originals, "master_full": (master_probability, cache.labels)}
     gates = {name: np.flatnonzero(np.isin(values.argmax(1), columns))
              for name, (values, _) in full_inputs.items()}
-    raw_images = {name: dev[name][0][gate] for name, gate in gates.items() if name != "master_full"}
+    raw_images = {name: dev[name][gate] for name, gate in gates.items() if name != "master_full"}
     registry = ROOT / "data/processed/leafcheck177_final"
     master_gate = [dict(cache.rows[i], path=registry / cache.rows[i]["output_relative_path"])
                    for i in gates["master_full"]]
@@ -104,7 +104,10 @@ def score_joint(output, config, frozen, incumbent, columns, originals, dev, deci
     for arm, results in decision["arms"].items():
         effect[arm] = []
         for entry in results:
-            saved = verify_arm(Path(entry["checkpoint"]), config, run)
+            checkpoint = Path(entry["checkpoint"])
+            if sha256(checkpoint) != entry["sha256"]:
+                raise ValueError("The selected checkpoint changed before evaluation")
+            saved = verify_arm(checkpoint, config, run)
             leaf = network(config, device)
             leaf.load_state_dict(saved["weights"], strict=True)
             scorer = PredictionScores(leaf, {"name": "d4_probability_mean"}).eval()
@@ -127,12 +130,12 @@ def score_joint(output, config, frozen, incumbent, columns, originals, dev, deci
                       for row in field)
               and all(candidate["joint_field_gain"] > ref["joint_field_gain"] for candidate, ref in zip(field, control)))
     record = {"baseline": baseline, "matched_arms": effect, "gate_counts": {k: len(v) for k, v in gates.items()},
-              "research_confirmation_eligible": passed, "test_opened": False}
+              "research_confirmation_eligible": passed, "test_opened": False, "evaluator_sha256": sha256(Path(__file__))}
     atomic_json(output / "joint.json", record)
     print("Joint routing", effect, "eligible", passed, flush=True)
 
 
-def run_study(output, config, resume):
+def run_study(output, config, resume, joint_only):
     if (output / "joint.json").exists():
         print("Preserving completed study.", flush=True)
         return
@@ -151,7 +154,15 @@ def run_study(output, config, resume):
            "reference_checkpoint": incumbent.metadata["checkpoint_sha256"], "trainer_sha256": sha256(Path(__file__)),
            "helper_sha256": sha256(Path(__file__).with_name("potato_study.py"))}
     receipt = output / "run.json"
-    if receipt.exists():
+    decision_path = output / "conditional.json"
+    if joint_only:
+        if not receipt.exists() or not decision_path.exists():
+            raise ValueError("Joint-only scoring requires the completed matched training decision")
+        trained_run = read(receipt)["run"]
+        if any(trained_run[key] != run[key] for key in run if key != "trainer_sha256"):
+            raise ValueError("Joint-only inputs differ from the completed training run")
+        run = trained_run
+    elif receipt.exists():
         if not resume or read(receipt)["run"] != run:
             raise ValueError("Use --resume with the unchanged original inputs and recipe")
     else:
@@ -185,7 +196,6 @@ def run_study(output, config, resume):
 
     signal.signal(signal.SIGINT, request_stop)
     signal.signal(signal.SIGTERM, request_stop)
-    decision_path = output / "conditional.json"
     if decision_path.exists():
         decision = read(decision_path)
     else:
@@ -228,8 +238,9 @@ if __name__ == "__main__":
     parser.add_argument("--config", type=Path, default=PLAN)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--joint-only", action="store_true", help="Score an already completed matched run without training")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     with (args.output / ".train.lock").open("a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        run_study(args.output, read(args.config), args.resume)
+        run_study(args.output, read(args.config), args.resume, args.joint_only)
