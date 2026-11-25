@@ -1,0 +1,12 @@
+{
+  "purpose": "Test an explicit, user-provided tomato option after the scratch specialists lost master accuracy. Preserve automatic 177-label scoring and compare the same fractions for the matched no-field control.",
+  "fractions": [0.125, 0.25, 0.5],
+  "min_gain_vs_incumbent": 0.04,
+  "min_gain_vs_control": 0.02,
+  "max_master_macro_f1_drop": 0.01,
+  "max_master_accuracy_drop": 0.01,
+  "max_development_source_drop": 0.02,
+  "sample_support": "All ten tomato conditions eligible. Checkpoint and policy screening uses only master, Pakistan and Sheikh validation. Macro-F1 on each field source averages represented labels. Banu is diagnostic. Passing only licenses a frozen independent confirmation.",
+  "selection": "A fraction must satisfy master and source guards on each seed, improve versus the same-fraction matched arm on both seeds, and pass mean gain thresholds. Take highest mean source gain, breaking ties for smaller fractions. Freeze the seed with higher mean field F1, breaking a tie for lower seed.",
+  "confirmation": "Evaluate the frozen treatment and incumbent with tomato supplied on PlantCity tomato labels once. Require 0.03 or greater macro-F1 improvement, accuracy loss at most 0.01, and late/early/healthy recall loss no greater than 0.05 each. Report joint automatic scope separately. No threshold fitting on the confirmation source."
+}
