@@ -1,0 +1,24 @@
+[
+  {
+    "name": "rimi",
+    "publisher": "https://data.mendeley.com/datasets/kx9rx8p2mz/1",
+    "license": "CC BY 4.0",
+    "archive_filename": "Original Images.zip",
+    "archive_size": 497906237,
+    "archive_sha256": "3280cc176c2ee9f6ee4386e5728623fc7e8f9204b31c50f4ebb303edc52d9c83",
+    "archive_url": "https://data.mendeley.com/public-files/datasets/kx9rx8p2mz/files/fdab2bd9-ed8b-4156-8d96-0b5d8f18f4ed/file_downloaded",
+    "directory_bytes": 2000000,
+    "directory_sha256": "5ddb1ffaffa33fbc49f3331c0c88de464718307f1a4b0596266ac59e665ffdf7"
+  },
+  {
+    "name": "hasan",
+    "publisher": "https://data.mendeley.com/datasets/hx6f852hw4/1",
+    "license": "CC BY 4.0",
+    "archive_filename": "Rice leaf disease.zip",
+    "archive_size": 1911028292,
+    "archive_sha256": "6c2b3de0c0929465dce86c6d9e24271961fbc251aafe555dcfdd29c6437e3893",
+    "archive_url": "https://data.mendeley.com/public-files/datasets/hx6f852hw4/files/482181c7-57d6-4710-9f5c-be059ed382ca/file_downloaded",
+    "directory_bytes": 2000000,
+    "directory_sha256": "6c6bdf3a1a27c0e837e8e35091811b20bc6e95aa7977d38747f858f3b14f17a9"
+  }
+]

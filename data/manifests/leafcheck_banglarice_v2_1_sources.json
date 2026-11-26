@@ -1,0 +1,24 @@
+{
+  "publisher": "https://doi.org/10.7910/DVN/XAOBYW",
+  "paper": "https://doi.org/10.1016/j.dib.2026.113050",
+  "release": "2.1",
+  "dataset_license": "CC0 1.0",
+  "files": [
+    {
+      "file": "banglarice-healthy.rar",
+      "publisher_name": "Healthy Leaf.rar",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13461687",
+      "bytes": 51808843,
+      "md5": "3300707b4e80f4fc618073fdb65dc10e",
+      "sha256": "67d80e473c4a1832c86c2572e3771be479220365c0ef61383c8e4bb9836a2062"
+    },
+    {
+      "file": "banglarice-sheath.rar",
+      "publisher_name": "Sheath Blight.rar",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13461689",
+      "bytes": 52508129,
+      "md5": "563fb00315541ab0170643e15522687e",
+      "sha256": "fc4add96fd0017b0a817925fc4422297cc1c46944b6192478d42fdb4ce3f1669"
+    }
+  ]
+}

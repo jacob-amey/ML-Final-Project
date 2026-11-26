@@ -138,6 +138,26 @@ class FinalPipelineTests(unittest.TestCase):
                 self.assertTrue(torch.equal(repeat_images[1:], field_images[1:]))
                 self.assertTrue(torch.equal(field_images[0], torch.full((8, 8, 3), 100, dtype=torch.uint8)))
                 self.assertFalse(torch.equal(repeat_images[0], field_images[0]))
+                other = BytesIO()
+                Image.new("RGB", (8, 8), (150, 150, 150)).save(other, format="JPEG")
+                second_member = "train/other/second.jpg"
+                with ZipFile(archive_path, "a") as archive:
+                    archive.writestr(second_member, other.getvalue())
+                release.pop("class_name")
+                release["class_names"] = ["bean__rust", "other__healthy"]
+                release["archive"]["sha256"] = sha256(archive_path)
+                release["members"].insert(0, {"member": second_member, "class_name": "other__healthy",
+                                               "sha256": sha256_bytes(other.getvalue()).hexdigest()})
+                manifest.write_text(json.dumps(release))
+                options["sha256"] = sha256(manifest)
+                frozen["class_to_idx"]["other__healthy"] = 1
+                repeat = PairedTrainingAddition(Base(), dict(options, arm="matched_repeat"), frozen, 8, 434)
+                field = PairedTrainingAddition(Base(), dict(options, arm="new_field"), frozen, 8, 434)
+                np.testing.assert_array_equal(repeat.labels, [1, 2, 2, 1, 2])
+                np.testing.assert_array_equal(field.labels, repeat.labels)
+                self.assertTrue(np.all(repeat.extra[0] == 9))
+                self.assertTrue(np.all(field.extra[0] == 150))
+                self.assertTrue(np.all(field.extra[1] == 100))
                 archive_path.write_bytes(b"changed")
                 with self.assertRaisesRegex(ValueError, "archive changed"):
                     PairedTrainingAddition(Base(), dict(options, arm="new_field"), frozen, 8, 434)

@@ -13,7 +13,7 @@ from .preprocessing import image_bytes
 
 
 class PairedTrainingAddition:
-    """Expose the base cache plus one matching-label suffix in the same batch order."""
+    """Expose the base cache plus a matching-label suffix in the same batch order."""
 
     def __init__(self, base, options, frozen, size, seed):
         self.base = base
@@ -26,18 +26,25 @@ class PairedTrainingAddition:
                 or release["role"] != "experimental training only"):
             raise ValueError("Training addition must match the frozen base and a training-only role")
         members = release["members"]
-        label = release["class_name"]
+        labels = release["class_names"] if "class_names" in release else [release["class_name"]]
         if (not members or len({m["sha256"] for m in members}) != len(members)
                 or len({m["member"] for m in members}) != len(members)
-                or any(m["class_name"] != label or not m["member"].startswith("train/") for m in members)):
+                or not labels or len(set(labels)) != len(labels)
+                or set(labels) != {m["class_name"] for m in members}
+                or not set(labels).issubset(frozen["class_to_idx"])
+                or any(not m["member"].startswith("train/") for m in members)):
             raise ValueError("Invalid training addition membership")
-        target = frozen["class_to_idx"][label]
-        self.labels = np.concatenate((base.labels, np.full(len(members), target, dtype=np.int64)))
+        targets = np.array([frozen["class_to_idx"][row["class_name"]] for row in members], dtype=np.int64)
+        self.labels = np.concatenate((base.labels, targets))
         if options["arm"] == "matched_repeat":
-            available = np.flatnonzero(base.labels == target)
-            if not len(available):
-                raise ValueError("No eligible master rows for the repeat arm")
-            draws = np.random.default_rng([seed, 972]).choice(available, size=len(members), replace=True)
+            rng = np.random.default_rng([seed, 972])
+            draws = np.empty(len(targets), dtype=np.int64)
+            for target in np.unique(targets):
+                available = np.flatnonzero(base.labels == target)
+                if not len(available):
+                    raise ValueError("No eligible master rows for the repeat arm")
+                selected = targets == target
+                draws[selected] = rng.choice(available, size=int(selected.sum()), replace=True)
             self.extra = np.array(base.pixels[draws], copy=True)
         elif options["arm"] == "new_field":
             path = ROOT / release["archive"]["path"]

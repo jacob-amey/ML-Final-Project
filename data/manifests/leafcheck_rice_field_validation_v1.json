@@ -1,0 +1,2063 @@
+{
+  "base_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "role": "source-separated development validation only",
+  "training_sha256": "42da855e02efe933e813569c233712d84d3d09507a455ebc4d841441e4b559b3",
+  "records": [
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "000d163c2d733ab2a0b107a4607bc612f48be1617022b75b42d49bdcdc94a6a2",
+      "group": "banglarice:Healthy Leaf:bin020",
+      "member": "Healthy Leaf/Healthy_0102.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0102.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "0019a5db64f9465a777214108a4f255891146efbc46393ed3a34d789198e5355",
+      "group": "banglarice:Healthy Leaf:bin060",
+      "member": "Healthy Leaf/Healthy_0304.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0304.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "003fb3de36d9a1134d76a3e625b057716134fba8d15bd7bb663095b6f677e07c",
+      "group": "banglarice:Healthy Leaf:bin015",
+      "member": "Healthy Leaf/Healthy_0080.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0080.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "0045232e9ef0ee593284ed572105678e0efd0a18402e5e97610f40c9681a8a83",
+      "group": "banglarice:Healthy Leaf:bin040",
+      "member": "Healthy Leaf/Healthy_0204.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0204.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "01f83b135234d53338b2c59c2ec83db9aa71f6fa3d440c8a3c01f98390ae8bdb",
+      "group": "banglarice:Healthy Leaf:bin008",
+      "member": "Healthy Leaf/Healthy_0044.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0044.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "023fb9a5be863aecdcf999d8b2631ae3e89deecb49ec741ae94d4f0cc0720987",
+      "group": "banglarice:Healthy Leaf:bin011",
+      "member": "Healthy Leaf/Healthy_0058.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0058.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "02505e234814b1559f4346c1a72f9eaace59f31b5cec52d98c2dae8718c051fe",
+      "group": "banglarice:Healthy Leaf:bin056",
+      "member": "Healthy Leaf/Healthy_0283.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0283.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "081fb0625e12440dcc93f357e500b5a1f0b4d738d26e01f831ba6a5d6bdb8e02",
+      "group": "banglarice:Healthy Leaf:bin047",
+      "member": "Healthy Leaf/Healthy_0239.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0239.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "0853a6da01f81c3c699be98ec5ad58a445f6318e9c8ec68cef8bb7cf08fa6369",
+      "group": "banglarice:Healthy Leaf:bin001",
+      "member": "Healthy Leaf/Healthy_0007.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0007.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "0856bf434e7e740ea4acdaa31052cc59ad5579e4c892486b64d5b5225d80a548",
+      "group": "banglarice:Healthy Leaf:bin046",
+      "member": "Healthy Leaf/Healthy_0231.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0231.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "08cc84548c7c990108081b373bb41b279fb923680b04ab6e1dd63b962afeda42",
+      "group": "banglarice:Healthy Leaf:bin065",
+      "member": "Healthy Leaf/Healthy_0330.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0330.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "08d56850c0370cbc0532cb65e5c477b8632a66abbaa26c78dfd8b6abd7a1a6f1",
+      "group": "banglarice:Healthy Leaf:bin013",
+      "member": "Healthy Leaf/Healthy_0069.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0069.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "090c199e3297c4475e2ff0ca2cf51bb1396b69435086196ff4ac85fa5691439d",
+      "group": "banglarice:Healthy Leaf:bin064",
+      "member": "Healthy Leaf/Healthy_0321.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0321.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "09e851567f18b0d9916407a53037dcb68cfd61a9549960e9b48712220f184131",
+      "group": "banglarice:Healthy Leaf:bin050",
+      "member": "Healthy Leaf/Healthy_0254.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0254.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "0bf7e793065540e5b48a82912e840f5eeb66be2d9f7fdc35fdd78878d5c291be",
+      "group": "banglarice:Healthy Leaf:bin061",
+      "member": "Healthy Leaf/Healthy_0309.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0309.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "0de8b85a9b225a7fcf0d2e77e703137bea049e1c0ace192f0ce61330937367e2",
+      "group": "banglarice:Healthy Leaf:bin048",
+      "member": "Healthy Leaf/Healthy_0242.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0242.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "10b9627fd7470d68e949cc0086c6dbf7eabf9516b4b77829889312a24408e72e",
+      "group": "banglarice:Healthy Leaf:bin002",
+      "member": "Healthy Leaf/Healthy_0015.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0015.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "10f8dabb62429d57550663d436ef2a0ced4b354a785265bb87b99ea9dad7d4af",
+      "group": "banglarice:Healthy Leaf:bin006",
+      "member": "Healthy Leaf/Healthy_0033.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0033.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "11517941f5898f87662be475eb01f73b2952eecba5e070729571fed934dd2aea",
+      "group": "banglarice:Healthy Leaf:bin000",
+      "member": "Healthy Leaf/Healthy_0001.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0001.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "11a96c152dce3cc4a695cb95becc69f1ab2e23091f448c02d2a862a5a1232793",
+      "group": "banglarice:Healthy Leaf:bin066",
+      "member": "Healthy Leaf/Healthy_0331.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0331.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "13f99bc7f2fb3b9f1efce12ff49a20b8902c87b178f3131f58c6fb2b69aa74d0",
+      "group": "banglarice:Healthy Leaf:bin017",
+      "member": "Healthy Leaf/Healthy_0088.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0088.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "145a1abccb7dd058e1966ca60dc2f3218a3d4ab089161c1f0f74b89bf956db8f",
+      "group": "banglarice:Healthy Leaf:bin012",
+      "member": "Healthy Leaf/Healthy_0064.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0064.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "14f58def0b9772fd8a7bab66da3130ea5f0e07ea0e9dad0357f37a9589524653",
+      "group": "banglarice:Healthy Leaf:bin063",
+      "member": "Healthy Leaf/Healthy_0319.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0319.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "17aa139a0d10d3cdb89b3697e904cde14541527dba0e616e320885e0caa26dbb",
+      "group": "banglarice:Healthy Leaf:bin069",
+      "member": "Healthy Leaf/Healthy_0349.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0349.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "186e1f4aee8c447f4e67d5f4ed6588118c8b0573c98958c2aca84ff31fb399c0",
+      "group": "banglarice:Healthy Leaf:bin053",
+      "member": "Healthy Leaf/Healthy_0266.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0266.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "1bcab3b09f53e11d4b15643fdf6d9d0200e18f399c309eb3811c2f7e78d30e16",
+      "group": "banglarice:Healthy Leaf:bin045",
+      "member": "Healthy Leaf/Healthy_0229.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0229.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "1c73164c73ef2c8f975846f1a583193e8b1daec743e0aa11727d6585a78ee97e",
+      "group": "banglarice:Healthy Leaf:bin041",
+      "member": "Healthy Leaf/Healthy_0206.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0206.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "1e8f570c541dc8cd6f78c6bf45b2cfde17fbb029de1c415e6410224f3f099bff",
+      "group": "banglarice:Healthy Leaf:bin009",
+      "member": "Healthy Leaf/Healthy_0050.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0050.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "1fca02040d7d0aa9c47da6bcbee3d6c8688241f5d42fc67daf6585a9df0f051c",
+      "group": "banglarice:Healthy Leaf:bin019",
+      "member": "Healthy Leaf/Healthy_0100.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0100.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "214d9666604859d15d2c730ddcc77632fa3776b600825782066a9d47f2c0543c",
+      "group": "banglarice:Healthy Leaf:bin051",
+      "member": "Healthy Leaf/Healthy_0260.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0260.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "22553b9503e465d279d488a55ca35df81ded4d77cb4f56d48280b367ff354951",
+      "group": "banglarice:Healthy Leaf:bin018",
+      "member": "Healthy Leaf/Healthy_0094.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0094.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "22d05464f35284c079702792f84390b08d3328cce587079ed71a928f30545544",
+      "group": "banglarice:Healthy Leaf:bin004",
+      "member": "Healthy Leaf/Healthy_0025.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0025.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "23518e1ebb45a2d50174e4df0c6eaf5e319e9ba8ba9599f954424b9c5169d166",
+      "group": "banglarice:Healthy Leaf:bin042",
+      "member": "Healthy Leaf/Healthy_0212.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0212.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "24a7a60425b7350c7cdd464dbbe86c64e120ad79e7991c9aa30bbc4850d145b8",
+      "group": "banglarice:Healthy Leaf:bin003",
+      "member": "Healthy Leaf/Healthy_0019.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0019.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "25e6bad6f3e496931347b6ba76415eb50da78147696f260c962958c1d12e6dc7",
+      "group": "banglarice:Healthy Leaf:bin059",
+      "member": "Healthy Leaf/Healthy_0297.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0297.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "3152368539769f403ae8069c21ef8eb67c903af7f9e9ef16472d9c3021f56bf3",
+      "group": "banglarice:Healthy Leaf:bin068",
+      "member": "Healthy Leaf/Healthy_0343.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0343.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "348fbd9921b0f40115f6f85a5d5fdb8e9408256cfabd42d10b22a78cb31ac88c",
+      "group": "banglarice:Healthy Leaf:bin044",
+      "member": "Healthy Leaf/Healthy_0222.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0222.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "379a3ecf01ce9044067b54956c0c06f063ccbad2488665ccdc80bddb8fcddeef",
+      "group": "banglarice:Healthy Leaf:bin057",
+      "member": "Healthy Leaf/Healthy_0286.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0286.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "37c03eb29f85fd83dec9c193e6edc488f4bf67048c9af5e0eb60dbfeeefc36ef",
+      "group": "banglarice:Healthy Leaf:bin007",
+      "member": "Healthy Leaf/Healthy_0038.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0038.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "3850a3d6c3a51baf7fd2f6ab19760a8d6fc2983cbaf678165d1e6c7ba762dd33",
+      "group": "banglarice:Healthy Leaf:bin014",
+      "member": "Healthy Leaf/Healthy_0074.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0074.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "3b03bbb7c59fb73a06d47dd5f0c9318d5dc8677ee4f8350d558f9cf8c7327990",
+      "group": "banglarice:Healthy Leaf:bin052",
+      "member": "Healthy Leaf/Healthy_0263.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0263.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "3d1e423168b5d9992aa9feff285b6a5d653ea997fe66fe823e8f3ab156bfac57",
+      "group": "banglarice:Healthy Leaf:bin073",
+      "member": "Healthy Leaf/Healthy_0367.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0367.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "3f21a6c9421707b31cb54d950cce4df53122ec36edd00ebe71fe54797636bf0f",
+      "group": "banglarice:Healthy Leaf:bin062",
+      "member": "Healthy Leaf/Healthy_0314.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0314.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "45c8438d61a11c045434cc078bcb9ae16d2bbe612a3dffd989cb1f53f0342881",
+      "group": "banglarice:Healthy Leaf:bin010",
+      "member": "Healthy Leaf/Healthy_0055.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0055.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "472613e25d728d0e8f68d9c78c5e63ed82b3aa795542c06b4cc6270e7824d5fd",
+      "group": "banglarice:Healthy Leaf:bin067",
+      "member": "Healthy Leaf/Healthy_0340.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0340.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "490625a3a9655a7901c5329503fce9fd4f95ecf4a5d23240fbea7b8534536f25",
+      "group": "banglarice:Healthy Leaf:bin016",
+      "member": "Healthy Leaf/Healthy_0083.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0083.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "4d30369bfd3081e3ceae1c01bca5644defbf3bf487da51761d43950105e6c48c",
+      "group": "banglarice:Healthy Leaf:bin005",
+      "member": "Healthy Leaf/Healthy_0027.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0027.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "508c68126bd7ddf4a35728b9353f852cf11a53ceb084eedc3eb1d67079bd2a61",
+      "group": "banglarice:Healthy Leaf:bin049",
+      "member": "Healthy Leaf/Healthy_0246.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0246.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "526f6ecae0cc77312f1eb4fbf51775234c0f5aa8815054125f40f02b3293247e",
+      "group": "banglarice:Healthy Leaf:bin043",
+      "member": "Healthy Leaf/Healthy_0217.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0217.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "57b9675f74e024edd6982c0eb3fb26f35f2ba89db273e1c6fef6f6de0b603af4",
+      "group": "banglarice:Healthy Leaf:bin070",
+      "member": "Healthy Leaf/Healthy_0355.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0355.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "5aa5ff327faaf016a4147548d3a9f28e3b87f1dc7fa103975e550f2670536e6d",
+      "group": "banglarice:Healthy Leaf:bin055",
+      "member": "Healthy Leaf/Healthy_0276.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0276.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "60bc8e7bf056d27072b8e2383ffd98b64567ba770221e55e7859a97678d72e5e",
+      "group": "banglarice:Healthy Leaf:bin058",
+      "member": "Healthy Leaf/Healthy_0293.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0293.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "73d5bb468159b277f62362912a10cd845fdffb011f15e756b2da0bb1f1274223",
+      "group": "banglarice:Healthy Leaf:bin072",
+      "member": "Healthy Leaf/Healthy_0362.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0362.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__healthy",
+      "sha256": "9682da9089658fabd2a1a4bcb5a053c72b5ca5d98c4a2b47fabd1c59c2c0e6fb",
+      "group": "banglarice:Healthy Leaf:bin071",
+      "member": "Healthy Leaf/Healthy_0360.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-healthy/Healthy Leaf/Healthy_0360.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "004d4a53c033644589ecc789dc6f0fecc6bf4bc3a20638c1bfbf12dc8e5121ef",
+      "group": "banglarice:Sheath Blight:bin062",
+      "member": "Sheath Blight/SB_0313.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0313.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "008ba21eb452b7772c0fad423fe508e9f4997870d665ea0c2e8cc03095894e1e",
+      "group": "banglarice:Sheath Blight:bin054",
+      "member": "Sheath Blight/SB_0273.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0273.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "01d065aa686986f4a5e1462033fe2c9b8334c73892866d7081bf834faa9bd842",
+      "group": "banglarice:Sheath Blight:bin040",
+      "member": "Sheath Blight/SB_0201.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0201.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "031250e51cdb730d8120dcb439482b1c8c73d38d0dbc042efcb404711df83539",
+      "group": "banglarice:Sheath Blight:bin042",
+      "member": "Sheath Blight/SB_0213.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0213.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "03ad8b0642fa73ab4e5caef6d983f5d84fde2c251f6b83addef7ea6f86db8c54",
+      "group": "banglarice:Sheath Blight:bin021",
+      "member": "Sheath Blight/SB_0109.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0109.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "047e8979032fcda5b4b89cb08c2bd691442553bcb146589d9f03013f442727a1",
+      "group": "banglarice:Sheath Blight:bin009",
+      "member": "Sheath Blight/SB_0049.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0049.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0574f1934d91e27e4476e1dc2d969a4d602671cbb5ca26689a54b7f5be3af423",
+      "group": "banglarice:Sheath Blight:bin047",
+      "member": "Sheath Blight/SB_0237.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0237.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "057e22fe01faf18ad743f4cdbf409b2e088a67b3d323be625a4565902a170c7a",
+      "group": "banglarice:Sheath Blight:bin065",
+      "member": "Sheath Blight/SB_0328.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0328.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "05df0c24547caaad123efb9a7df6d6bb235a345976bb66ae47b6cbd71db0af36",
+      "group": "banglarice:Sheath Blight:bin051",
+      "member": "Sheath Blight/SB_0256.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0256.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "06c8ca82b45d4350256f3ae4e700a2b06968903f5875570851e9425613f6e698",
+      "group": "banglarice:Sheath Blight:bin056",
+      "member": "Sheath Blight/SB_0281.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0281.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "07c10db1f2c17c41f32e476f1d9f89147bb07cbd18556467c55fdf37cbdbdeb6",
+      "group": "banglarice:Sheath Blight:bin052",
+      "member": "Sheath Blight/SB_0264.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0264.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "09cd829417b79e1d1ee3d0f95523915d0725528c4527f0d8551e627c28f3a006",
+      "group": "banglarice:Sheath Blight:bin023",
+      "member": "Sheath Blight/SB_0118.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0118.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0b3d284e95feca12182fcd5c3506579ab189e3ae4807a28f6e26bc989dd12ac2",
+      "group": "banglarice:Sheath Blight:bin005",
+      "member": "Sheath Blight/SB_0030.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0030.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0bd7df7a44f92345c596ec86ffe0d54d8dacc37c1a62ccfce57b993aa83a79d6",
+      "group": "banglarice:Sheath Blight:bin001",
+      "member": "Sheath Blight/SB_0009.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0009.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0caa5260b44bbd5046a81872658e80d654eb51e1da46d983c6353faf3d5fe3ba",
+      "group": "banglarice:Sheath Blight:bin079",
+      "member": "Sheath Blight/SB_0399.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0399.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0cf8895d30690b47036248ebbfb37497e4d2d9364eee1c2e1df1e3861a3f8147",
+      "group": "banglarice:Sheath Blight:bin039",
+      "member": "Sheath Blight/SB_0200.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0200.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0da53b3de8fbf4d4305d39257bb65048bf21d24e9e44e1ee1f4f7e7e283af638",
+      "group": "banglarice:Sheath Blight:bin073",
+      "member": "Sheath Blight/SB_0370.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0370.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0f0e2ed5409a0fd190271bc862434e7d620be9f957e2bb5804057b02e53975c8",
+      "group": "banglarice:Sheath Blight:bin022",
+      "member": "Sheath Blight/SB_0113.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0113.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0f5a4d3af7c02183fed39b6e111ff1b095cb33137692fa710c2ec5741eab1de6",
+      "group": "banglarice:Sheath Blight:bin075",
+      "member": "Sheath Blight/SB_0379.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0379.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0f7546a258688ffac302974572ab43705d5d3fae86c61c53be2e931c74b24d58",
+      "group": "banglarice:Sheath Blight:bin011",
+      "member": "Sheath Blight/SB_0060.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0060.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "105adbdc2ed1e31d6099759118588bab3eb7121424e80f3b028e9376c1fb564d",
+      "group": "banglarice:Sheath Blight:bin043",
+      "member": "Sheath Blight/SB_0218.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0218.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "12d3a68be3fdd5a3e13c25d9149a15ce7a327b40d02fd115e092ada69f6add93",
+      "group": "banglarice:Sheath Blight:bin064",
+      "member": "Sheath Blight/SB_0323.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0323.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "13829adc55cda76f24c1aa7aff083678cb4903ca162c967dc6975b3bfb9155bf",
+      "group": "banglarice:Sheath Blight:bin048",
+      "member": "Sheath Blight/SB_0242.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0242.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "13ad255a9dbebfc3cce7ad8648e2fd08489992aeeeac86d06e6ad728b4001d22",
+      "group": "banglarice:Sheath Blight:bin082",
+      "member": "Sheath Blight/SB_0412.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0412.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "13b309b78ef3628ceea015e563c4d83e17d330fdfb344c0499c7728c47e36740",
+      "group": "banglarice:Sheath Blight:bin012",
+      "member": "Sheath Blight/SB_0064.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0064.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "13c612d6a616c4eff3b5cc7da3a4c9b833c4e451a895d74245e846bdc2e05bc8",
+      "group": "banglarice:Sheath Blight:bin030",
+      "member": "Sheath Blight/SB_0155.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0155.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "13e98dc56279a4d30845b1ce67dd2cc8e3a8d6fdbe9f295aa86370e9552da29a",
+      "group": "banglarice:Sheath Blight:bin072",
+      "member": "Sheath Blight/SB_0361.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0361.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "16616938aec40ce58069f336f28230259d210de66fbe531fd633b3def49cc16e",
+      "group": "banglarice:Sheath Blight:bin038",
+      "member": "Sheath Blight/SB_0192.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0192.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "1788d4f5423980639c634853ccec24e920de8875f94f02ad73d1d29aeee5c8c2",
+      "group": "banglarice:Sheath Blight:bin027",
+      "member": "Sheath Blight/SB_0137.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0137.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "17a5f90864d2ca84b6a502786c9133d3dfba2d59e0ffd07cadace458ddc33d35",
+      "group": "banglarice:Sheath Blight:bin032",
+      "member": "Sheath Blight/SB_0161.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0161.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "17ea63df50c78beab758bb6987d7035f18d1f7ee4b467dcdabf89578af11d370",
+      "group": "banglarice:Sheath Blight:bin002",
+      "member": "Sheath Blight/SB_0011.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0011.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "17f3e415e541529ecb913bc8da426534f1fca87e615c1380e4e45d0591e8cdda",
+      "group": "banglarice:Sheath Blight:bin026",
+      "member": "Sheath Blight/SB_0131.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0131.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "17fc59d2bf6166429bcf881cacdfcf1f02ff36a1baccc7076ba7b85a5d756f66",
+      "group": "banglarice:Sheath Blight:bin081",
+      "member": "Sheath Blight/SB_0410.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0410.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "1859a6c40ca22937135936527ba7bd97674cd4bdf3c1095b8bc6a1631d3e4ef7",
+      "group": "banglarice:Sheath Blight:bin000",
+      "member": "Sheath Blight/SB_0001.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0001.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "1959e9e0596d7427402819d42b9781dbd9169d78ceea83f24340a9c045e13995",
+      "group": "banglarice:Sheath Blight:bin034",
+      "member": "Sheath Blight/SB_0173.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0173.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "1963d4edb56648126f50cb2ed50219629df78179942af90327cf4fc1b259beea",
+      "group": "banglarice:Sheath Blight:bin077",
+      "member": "Sheath Blight/SB_0386.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0386.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "1ef313ebfe1bd7baba7d4f267f86d189f99ae7d9da3f9f272eb0e3bce525c821",
+      "group": "banglarice:Sheath Blight:bin066",
+      "member": "Sheath Blight/SB_0332.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0332.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "1f3a33284278fda4dff69f696dfe1f7ae667d6ef823d21be0dd7afd34c0e03d0",
+      "group": "banglarice:Sheath Blight:bin061",
+      "member": "Sheath Blight/SB_0310.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0310.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "201bd429ae3d16cdec0497d52a6e8305c2968f8f06b8b7d58525f0859d992ee9",
+      "group": "banglarice:Sheath Blight:bin037",
+      "member": "Sheath Blight/SB_0190.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0190.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "203055a531496d3c96d1b8e1e21e6e241d488986ce2fd8b1e9c19827699b9563",
+      "group": "banglarice:Sheath Blight:bin078",
+      "member": "Sheath Blight/SB_0395.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0395.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "2071532c829c1b3d45d0e208a42de508f079d1582c2da41d7bcfcd16a52c6c05",
+      "group": "banglarice:Sheath Blight:bin024",
+      "member": "Sheath Blight/SB_0122.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0122.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "2218eea14f82ec0914be10a651e60f5cf94767b83f934558397fbef6a85bda3c",
+      "group": "banglarice:Sheath Blight:bin014",
+      "member": "Sheath Blight/SB_0074.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0074.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "233d6279daa0c98adfc1ebeef8bd635927db2de1b9902956fce0aa6a40d9e122",
+      "group": "banglarice:Sheath Blight:bin080",
+      "member": "Sheath Blight/SB_0403.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0403.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "2363571b706712c35e7708d683722503c52e4787eb3f53d77ac8a00abe997706",
+      "group": "banglarice:Sheath Blight:bin013",
+      "member": "Sheath Blight/SB_0066.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0066.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "2386717f936a9cd3a2d9c87ebeb123ab214951d3ce8d03fcf7d811b797b270ac",
+      "group": "banglarice:Sheath Blight:bin070",
+      "member": "Sheath Blight/SB_0352.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0352.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "23eae95c8074279ef49eb4680faa0402989183d13337f429da85a7646d92fecd",
+      "group": "banglarice:Sheath Blight:bin049",
+      "member": "Sheath Blight/SB_0250.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0250.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "25aaadc7215e30b6fd85dde110c6712c4d5b6a851846ddc1c73767394b744953",
+      "group": "banglarice:Sheath Blight:bin060",
+      "member": "Sheath Blight/SB_0304.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0304.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "26f48813ab63ba61f5832112fe079528314f31607af63f7eeb2bffd9742484db",
+      "group": "banglarice:Sheath Blight:bin068",
+      "member": "Sheath Blight/SB_0345.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0345.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "271dcb91124c588b473a6c5fd2f3057ba8632ba5f2b3cf0e0d2d5293b3e0aa4f",
+      "group": "banglarice:Sheath Blight:bin057",
+      "member": "Sheath Blight/SB_0290.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0290.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "27d491cb21b53257263f7fbf6360af3bdc2ebee33a0ed06e309cd32d26c7ffd1",
+      "group": "banglarice:Sheath Blight:bin053",
+      "member": "Sheath Blight/SB_0270.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0270.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "2b3d97f7e72dae1b433667c61295b0c8a8ad30f94a22ebbcd5e2fefb78f9a20e",
+      "group": "banglarice:Sheath Blight:bin016",
+      "member": "Sheath Blight/SB_0082.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0082.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "2bc416b1757df17edfc881ee80eadb16dcef4928d6f1a0b4f6264a78ecee3a6a",
+      "group": "banglarice:Sheath Blight:bin071",
+      "member": "Sheath Blight/SB_0357.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0357.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "2bd48cb06b51e84c17aef441c451afcafb7e9706d1269cbd9b8f6cc40cc96400",
+      "group": "banglarice:Sheath Blight:bin019",
+      "member": "Sheath Blight/SB_0096.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0096.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "2d3dfbfb0b6004bd929984543e83bb6efcc3cb6890688fd062beff258554508e",
+      "group": "banglarice:Sheath Blight:bin017",
+      "member": "Sheath Blight/SB_0086.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0086.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "2d7e8c184637ca1ab0ec9e5cd65d1195262af85925e9641faf1bae268425d06e",
+      "group": "banglarice:Sheath Blight:bin083",
+      "member": "Sheath Blight/SB_0416.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0416.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "30b9329769cc1ee5402f346a0c95e5917ec15889878607c97dd4cd829984f3af",
+      "group": "banglarice:Sheath Blight:bin028",
+      "member": "Sheath Blight/SB_0142.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0142.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "30eb8acaf44c49747caa2d1b8050821204c7f189789195f71b61ceca5db2d13a",
+      "group": "banglarice:Sheath Blight:bin041",
+      "member": "Sheath Blight/SB_0206.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0206.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "3198e55771b3b7fbefa52e0af50b92b5b308054ce0fccdd1a490776d591f40fb",
+      "group": "banglarice:Sheath Blight:bin033",
+      "member": "Sheath Blight/SB_0167.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0167.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "31d5e72f4f7145ab420f3d94aa8292dad92c503c87535b3810cd39eb390bcb74",
+      "group": "banglarice:Sheath Blight:bin029",
+      "member": "Sheath Blight/SB_0148.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0148.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "333bb1821118e41ffc305c8900a8d70da1b634b7c63de9331c50bda19a4c9691",
+      "group": "banglarice:Sheath Blight:bin046",
+      "member": "Sheath Blight/SB_0235.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0235.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "3480c6c4adecb9d6c0b73f49609fa01cb07dadebeac4567342779cdecd2df214",
+      "group": "banglarice:Sheath Blight:bin004",
+      "member": "Sheath Blight/SB_0025.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0025.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "34c42f99674dd438b41b7aa57f02642c128ac021cbe7fe139e1f003366414ca4",
+      "group": "banglarice:Sheath Blight:bin018",
+      "member": "Sheath Blight/SB_0092.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0092.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "3635cba87367546f9d4a9b426a0c0dde7f0c437fa1c95c77f90a968d33dfef0f",
+      "group": "banglarice:Sheath Blight:bin008",
+      "member": "Sheath Blight/SB_0043.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0043.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "36de325d08b0780d5496b3b2b793877bf64f696b6c9cdbe467d14ecda1f63cbb",
+      "group": "banglarice:Sheath Blight:bin025",
+      "member": "Sheath Blight/SB_0130.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0130.jpg"
+    },
+    {
+      "source": "banglarice",
+      "class_name": "rice__sheath_blight",
+      "sha256": "3bf0fa8fde6787b9b07083a5c299fb18980f22eae91efee5fd6ef5ffb6099fb4",
+      "group": "banglarice:Sheath Blight:bin036",
+      "member": "Sheath Blight/SB_0183.jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/banglarice-sheath/Sheath Blight/SB_0183.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "010fec04442566483faf9321ca310e81bb1edc354994d774447cca1f52660ecf",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (20).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/010fec04442566483faf9321ca310e81bb1edc354994d774447cca1f52660ecf.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "04eb244139d765b130e294b33af51d424b3b1bca35d5c179a0495769f2773c54",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (42).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/04eb244139d765b130e294b33af51d424b3b1bca35d5c179a0495769f2773c54.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "0538bc26258328a434e52be8da56ec7400dfb6b5457d6144c0a667059c499f86",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (6).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/0538bc26258328a434e52be8da56ec7400dfb6b5457d6144c0a667059c499f86.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "059c86a51feec3d299dd0331bd950fec3de5262690a1e8217c5b44f4a8c0b727",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (16).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/059c86a51feec3d299dd0331bd950fec3de5262690a1e8217c5b44f4a8c0b727.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "06354f8b8daf2d1d749f524b628fd7ce26ff2842f7d8d0df771934660d1f23de",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (33).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/06354f8b8daf2d1d749f524b628fd7ce26ff2842f7d8d0df771934660d1f23de.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "13cf39c865239fb738ffdb1f2bf57b0908a0947072c7fbf4c2d18355ac551232",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (44).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/13cf39c865239fb738ffdb1f2bf57b0908a0947072c7fbf4c2d18355ac551232.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "217512d3a5e88589ede376a564e092a9cca7b691a6412d4bf769917e5a3c83d7",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (31).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/217512d3a5e88589ede376a564e092a9cca7b691a6412d4bf769917e5a3c83d7.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "244a9cbf09e36cf92bdae9d2d7b19e0ff468856123e608bf48744b9931f96a26",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (17).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/244a9cbf09e36cf92bdae9d2d7b19e0ff468856123e608bf48744b9931f96a26.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "275c0cbf4e7b65fed88351a87f9edfc0f0b17fa7a0bc70d98b7b0bfe9a72c548",
+      "group": "hasan:2023:10:18",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (54).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/275c0cbf4e7b65fed88351a87f9edfc0f0b17fa7a0bc70d98b7b0bfe9a72c548.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "28182f6f068ea2f392ffdf5817e78cab0f060d0d7b8900c2575a2da038f76909",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (47).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/28182f6f068ea2f392ffdf5817e78cab0f060d0d7b8900c2575a2da038f76909.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "2a1cfa80e5531c8add7df08e2a21dd61ed2dae84a2513abe419fdcbd09a499e2",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (45).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/2a1cfa80e5531c8add7df08e2a21dd61ed2dae84a2513abe419fdcbd09a499e2.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "2c28c9dcbd1a4172c4c3f7a707238e9b1895444e1926c49f5fd774a155434125",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (14).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/2c28c9dcbd1a4172c4c3f7a707238e9b1895444e1926c49f5fd774a155434125.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "3542aa6537a77acd4d8079d1c7ebda75f909128a1255c7349a4cf1cd15ad8cb1",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (12).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/3542aa6537a77acd4d8079d1c7ebda75f909128a1255c7349a4cf1cd15ad8cb1.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "36bc8cb4b89ea437ff6833f4146a5e826ffae6213626628702263bc1ed6e5649",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (4).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/36bc8cb4b89ea437ff6833f4146a5e826ffae6213626628702263bc1ed6e5649.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "3977fad68f6df8a988f9c8f91363cd0b0dff9e1446116a26ea1f33b7682d2e1c",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (22).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/3977fad68f6df8a988f9c8f91363cd0b0dff9e1446116a26ea1f33b7682d2e1c.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "40268bd07bd92ca6c5922b09fee8f7d51e8e3850ab740b8818c04a39521ef7e2",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (26).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/40268bd07bd92ca6c5922b09fee8f7d51e8e3850ab740b8818c04a39521ef7e2.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "45036fa02babad37c0045a74dd472add2b4221b0c31ec03aec9cd2d32bfacd41",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (25).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/45036fa02babad37c0045a74dd472add2b4221b0c31ec03aec9cd2d32bfacd41.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "5c8f27f5e0c3ea8c47659850b2dd3d12914e3927786b4d6d08b4ec50e4b1769d",
+      "group": "hasan:2023:10:18",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (51).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/5c8f27f5e0c3ea8c47659850b2dd3d12914e3927786b4d6d08b4ec50e4b1769d.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "5f2dc17541e36c8217114e218951adccd875c902e35e80c2276aeb6a50989188",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (28).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/5f2dc17541e36c8217114e218951adccd875c902e35e80c2276aeb6a50989188.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "64dd30c8792289027c63470e515ef956a691f61514320e93f813e57823933a50",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (43).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/64dd30c8792289027c63470e515ef956a691f61514320e93f813e57823933a50.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "663497ae366e54fcb5161f2ae4a067326f7d4b6a99a5905594f89d860c635024",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (38).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/663497ae366e54fcb5161f2ae4a067326f7d4b6a99a5905594f89d860c635024.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "6fd474a37442c0725573bd240a9cfcf440751c90e0736429e725dd00adada268",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (19).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/6fd474a37442c0725573bd240a9cfcf440751c90e0736429e725dd00adada268.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "707efe738c77ff7521514f66e01fc94f1ea82b1fc8d3a34028d44a4303793563",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (37).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/707efe738c77ff7521514f66e01fc94f1ea82b1fc8d3a34028d44a4303793563.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "76e605169652fb9229305750e008e95aa837285edca3f79227808a99b617dadd",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (13).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/76e605169652fb9229305750e008e95aa837285edca3f79227808a99b617dadd.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "7c3baa8f9e6531b37729eb89e6bd8ca0971e564e2c375adea1991b764c919107",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (9).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/7c3baa8f9e6531b37729eb89e6bd8ca0971e564e2c375adea1991b764c919107.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "7d656065267c73c5f6b16e2b404c4ed35aedfab8065d85f2992ce24b4d0298f5",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (39).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/7d656065267c73c5f6b16e2b404c4ed35aedfab8065d85f2992ce24b4d0298f5.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "7dcb55e99743da2fd8aef6c2fbb9f2eb0e82c73933b01bc9fb29b1adee34423c",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (30).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/7dcb55e99743da2fd8aef6c2fbb9f2eb0e82c73933b01bc9fb29b1adee34423c.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "7e4c3683b42b9b037616fd1c20ba5eba49590920cba1bdb4cb1b5a8cf22a6dba",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (7).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/7e4c3683b42b9b037616fd1c20ba5eba49590920cba1bdb4cb1b5a8cf22a6dba.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "7e8a55eea769c0d1dc765e9a09a3672126695618563aa39b4f6a2fab6ef4d18b",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (3).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/7e8a55eea769c0d1dc765e9a09a3672126695618563aa39b4f6a2fab6ef4d18b.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "808c677279df980420848aee091262a3dbd490b152dd826df7b7c933ac3a0ce1",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (27).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/808c677279df980420848aee091262a3dbd490b152dd826df7b7c933ac3a0ce1.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "81ed53af8a99a8fd6c2a2d965ea87391b0b5e20bf1be566f19371b1755d04532",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (18).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/81ed53af8a99a8fd6c2a2d965ea87391b0b5e20bf1be566f19371b1755d04532.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "8382c7acbb7cc0ee3daa188c5d61be0b852f4e63dc12624fa77c747d26f5e0bb",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (11).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/8382c7acbb7cc0ee3daa188c5d61be0b852f4e63dc12624fa77c747d26f5e0bb.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "99b91f7b3e01f21dd938b7a22c9c390c6b1d1dab162098225937c74bfa56c51d",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (35).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/99b91f7b3e01f21dd938b7a22c9c390c6b1d1dab162098225937c74bfa56c51d.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "a00852aeb1c0c7f4de5e9456c813ce38460216bb4ac7199757200c01e753b77b",
+      "group": "hasan:2023:10:18",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (53).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/a00852aeb1c0c7f4de5e9456c813ce38460216bb4ac7199757200c01e753b77b.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "a87bdb7494239f27b04a5520b7df1ecbde9b3318f950e9b8c1141f4770c55305",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (10).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/a87bdb7494239f27b04a5520b7df1ecbde9b3318f950e9b8c1141f4770c55305.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "a8f21ac4b566bca4e8a2ee8fd97f35fbdcc296655d1b7ac5bf6e7fc2125b907a",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (32).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/a8f21ac4b566bca4e8a2ee8fd97f35fbdcc296655d1b7ac5bf6e7fc2125b907a.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "ae6cff5cc9a1b315a4e26ede7832c8ecbe76a76abae13c512aa26ac6806abc69",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (15).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/ae6cff5cc9a1b315a4e26ede7832c8ecbe76a76abae13c512aa26ac6806abc69.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "b38a82a40e031651d3e47b79800510f71996e0704e033cf292653ba9769b4c4e",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (36).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/b38a82a40e031651d3e47b79800510f71996e0704e033cf292653ba9769b4c4e.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "b4c92485915bb2b89a84484f96c13c494ab43cdfe664839fcdb556a79c9a2c89",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (23).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/b4c92485915bb2b89a84484f96c13c494ab43cdfe664839fcdb556a79c9a2c89.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "b782b8283d78b1f546f167524fe4ed0d37e4b2d10b7dd9e86a32965dde468a17",
+      "group": "hasan:2023:10:18",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (50).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/b782b8283d78b1f546f167524fe4ed0d37e4b2d10b7dd9e86a32965dde468a17.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "bc40b3dfe62f517940b70e2e7f9b11e1af0151150ca00871183f382807cc1914",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (40).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/bc40b3dfe62f517940b70e2e7f9b11e1af0151150ca00871183f382807cc1914.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "c0ac032592304a1e6c19615a755b8c7f0151616d4928df753d1875796d49b37c",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (1).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/c0ac032592304a1e6c19615a755b8c7f0151616d4928df753d1875796d49b37c.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "c708becb70b4c0d7d67cfda6155c9eefaa5213d6f9489b3e95eb5a5d2b7564e0",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (48).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/c708becb70b4c0d7d67cfda6155c9eefaa5213d6f9489b3e95eb5a5d2b7564e0.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "c96dadc945baf410c91f221d67970fba08f86e8f170ef6f33f104d2d8837a6ef",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (34).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/c96dadc945baf410c91f221d67970fba08f86e8f170ef6f33f104d2d8837a6ef.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "cbd8e8f50f368bf5b4de26828cb82ba6c4f0a07853158ca4963e221bbda94861",
+      "group": "hasan:2023:10:18",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (55).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/cbd8e8f50f368bf5b4de26828cb82ba6c4f0a07853158ca4963e221bbda94861.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "ce150355fa4fbaa6e27cda458396803f4faac33f57dfc2f1dfebcbac2ec5cf07",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (41).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/ce150355fa4fbaa6e27cda458396803f4faac33f57dfc2f1dfebcbac2ec5cf07.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "d798220141c02d24730c0e5fb38b5a0eacd1db010b52067aea2dfb717b05a747",
+      "group": "hasan:2023:10:18",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (49).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/d798220141c02d24730c0e5fb38b5a0eacd1db010b52067aea2dfb717b05a747.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "e13a72512265c05804f9b23f4386cf16238c44191314d1f6ee795c751f1f5a1a",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (46).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/e13a72512265c05804f9b23f4386cf16238c44191314d1f6ee795c751f1f5a1a.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "ee3deb680e25dda6deac1dea87b5cc18ffb4712a4f37e9f9f4a5143a3e1b3d1a",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (5).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/ee3deb680e25dda6deac1dea87b5cc18ffb4712a4f37e9f9f4a5143a3e1b3d1a.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "ee9e1e9a2c6546c66cdef25c31b909ca12fa2eedbd47e1d24b692c76b6bd76b4",
+      "group": "hasan:2023:10:18",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (52).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/ee9e1e9a2c6546c66cdef25c31b909ca12fa2eedbd47e1d24b692c76b6bd76b4.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "f43d394c54be942a507ac891a4f034213963f2aa81110fb3ae3f6f13fc761439",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (21).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/f43d394c54be942a507ac891a4f034213963f2aa81110fb3ae3f6f13fc761439.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__brown_spot",
+      "sha256": "fbec1f674ef7d12b95ec16ac6ad94162dde066d8272520c90bdb90822ebe4edd",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (29).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/fbec1f674ef7d12b95ec16ac6ad94162dde066d8272520c90bdb90822ebe4edd.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "033e302f8b6e1b15c346c10aad31720549350dce7c51e2203fd5788c8087a1f2",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (33).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/033e302f8b6e1b15c346c10aad31720549350dce7c51e2203fd5788c8087a1f2.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "15194ad8768f17e7843df2c1c1c3f7b4d7d94b8d22b8f3c089408ed2d33fff26",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (11).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/15194ad8768f17e7843df2c1c1c3f7b4d7d94b8d22b8f3c089408ed2d33fff26.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "29cde0b2a3897df04bc49a8046521aabf8c0564ef2dc27748694556d3b3861c3",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (24).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/29cde0b2a3897df04bc49a8046521aabf8c0564ef2dc27748694556d3b3861c3.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "2bfe843bf66546940eec3e5efaff6cc147c97c58d1048626c890a1ffc9453fbe",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (1).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/2bfe843bf66546940eec3e5efaff6cc147c97c58d1048626c890a1ffc9453fbe.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "3b6e4c039128d9fb75ab0f4adf67a480d71f3c75e38d705bb74e204432245713",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (22).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/3b6e4c039128d9fb75ab0f4adf67a480d71f3c75e38d705bb74e204432245713.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "47f99515e4c2c748db052a3947276c7cb42fba3d9da3b8efd25eb37b68f83cbb",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (3).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/47f99515e4c2c748db052a3947276c7cb42fba3d9da3b8efd25eb37b68f83cbb.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "4bbef28c2f7d003d4d17b3749aeafabc7cd545db30990016392d64f14d62c37d",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (32).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/4bbef28c2f7d003d4d17b3749aeafabc7cd545db30990016392d64f14d62c37d.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "4f28cddcc42fc162fb1781b90983a4216d1aa1bcee16e78507195720438bed62",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (19).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/4f28cddcc42fc162fb1781b90983a4216d1aa1bcee16e78507195720438bed62.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "67c66bb8cf426fd1d8a5dfe99cce46152295a61a9149d5d7820a9f41698b4b5f",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (39).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/67c66bb8cf426fd1d8a5dfe99cce46152295a61a9149d5d7820a9f41698b4b5f.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "7a06c6bf4f8bd294b3d553def5d7ddab6b2ad0e80a0ef22d0f1bebc665cf94ff",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (41).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/7a06c6bf4f8bd294b3d553def5d7ddab6b2ad0e80a0ef22d0f1bebc665cf94ff.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "8ca418a1a9fd0a2cae0e55c706b7a47a3869ccbfb77a99488b560787af819e17",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (16).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/8ca418a1a9fd0a2cae0e55c706b7a47a3869ccbfb77a99488b560787af819e17.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "944feae805480929dacce2c499eff54fe2aaaf5eddb2efb8ca86e1cd8ecc0bb7",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (36).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/944feae805480929dacce2c499eff54fe2aaaf5eddb2efb8ca86e1cd8ecc0bb7.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "a15664eaacd0670f04196d51362230e6bcf1273fad463b010451f82fb6de387a",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (40).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/a15664eaacd0670f04196d51362230e6bcf1273fad463b010451f82fb6de387a.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "a3846cec722ba24a24262308cf092b7071b31265ad6b5455001bb7a9946f8e57",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (12).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/a3846cec722ba24a24262308cf092b7071b31265ad6b5455001bb7a9946f8e57.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "a9ba5b012d5d854de75cc0e48653fabbfa2a783a702961a7174ede8a4efaa0e9",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (10).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/a9ba5b012d5d854de75cc0e48653fabbfa2a783a702961a7174ede8a4efaa0e9.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "abc8842b644573b1c6466613611a6517533b8e402995217e6185f53cf75eab55",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (29).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/abc8842b644573b1c6466613611a6517533b8e402995217e6185f53cf75eab55.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "abdaf68438b49d3bf4b69aeba77b3fec5d2915ca2d4a89fc8af55a52c2ac06f0",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (7).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/abdaf68438b49d3bf4b69aeba77b3fec5d2915ca2d4a89fc8af55a52c2ac06f0.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "bcf8e6bc11a4f5e50d7d5a383fdc80d2845f0d24c68786c8dc5d476673087013",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (25).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/bcf8e6bc11a4f5e50d7d5a383fdc80d2845f0d24c68786c8dc5d476673087013.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "bd94614881048b4872bcf21010f1628a4697ed2d266cbae214edb2bd90abcfeb",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (20).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/bd94614881048b4872bcf21010f1628a4697ed2d266cbae214edb2bd90abcfeb.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "be123d8b65d7a49fce337c16ff8ef09207fc1b0f6d354687145d5b28d1330e7f",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (27).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/be123d8b65d7a49fce337c16ff8ef09207fc1b0f6d354687145d5b28d1330e7f.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "c0621e4105e0d736cc4b34d50801d06f7cfeb504aab0e4cbd65fd216cee1d622",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (18).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/c0621e4105e0d736cc4b34d50801d06f7cfeb504aab0e4cbd65fd216cee1d622.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "c55c86474662dc61e4e7534627f8e56cdd419ce50bb14ec199ee1fb4609f2674",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (23).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/c55c86474662dc61e4e7534627f8e56cdd419ce50bb14ec199ee1fb4609f2674.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "c7f5691aa82e26ca9cb7b55c134e99baad8661d35ff0c3e39e95d2484f20b944",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (37).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/c7f5691aa82e26ca9cb7b55c134e99baad8661d35ff0c3e39e95d2484f20b944.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "c80fdb55509f29e509cf09c27b5e600991a8f275316b4424ae28407f6a6aec28",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (35).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/c80fdb55509f29e509cf09c27b5e600991a8f275316b4424ae28407f6a6aec28.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "c974cdf22dc557c6e7b64b0de73db2236e0787f6fc89a58fbc60fe072b1dbffe",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (34).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/c974cdf22dc557c6e7b64b0de73db2236e0787f6fc89a58fbc60fe072b1dbffe.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "cb820483528b3566f50f554cce3a0441e6e4b7a1092971ba4c1df12f176f0052",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (30).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/cb820483528b3566f50f554cce3a0441e6e4b7a1092971ba4c1df12f176f0052.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "d22a39cfd56e4b3a5a81224ddd968ef93e3a08918cc33cd2401992dd12557f62",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (21).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/d22a39cfd56e4b3a5a81224ddd968ef93e3a08918cc33cd2401992dd12557f62.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "d3361773b816991e2f9cdd2fe9913d7ff1bc0db2c0770147878781a41f55629d",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (31).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/d3361773b816991e2f9cdd2fe9913d7ff1bc0db2c0770147878781a41f55629d.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "d5e0e47395713d0ecc48969fbc3fd2e69cd43010213108ab2cd0e0a322ae2497",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (38).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/d5e0e47395713d0ecc48969fbc3fd2e69cd43010213108ab2cd0e0a322ae2497.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "efb9a727cc81fcb8bbf9a78d88d390e995eb8e3388c6fa11d3a7ee2185a932e5",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (8).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/efb9a727cc81fcb8bbf9a78d88d390e995eb8e3388c6fa11d3a7ee2185a932e5.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "f57487084f2012d528f3ab289e32116fda9065fa30646630899a025da1885d2e",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (9).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/f57487084f2012d528f3ab289e32116fda9065fa30646630899a025da1885d2e.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "f92606d0395e4c2fa9d75684e30501616c9bcc53ffd317e14f9769db011b9079",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (14).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/f92606d0395e4c2fa9d75684e30501616c9bcc53ffd317e14f9769db011b9079.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "fa4f83a32fb71492c978f1846bd7154932e5a439f8e7b1b5e791819ef3c6e545",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (26).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/fa4f83a32fb71492c978f1846bd7154932e5a439f8e7b1b5e791819ef3c6e545.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__healthy",
+      "sha256": "fc07ebad8dc5330064361901acaae5bf6e81809d090a49286e593f62192f34fa",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (28).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/fc07ebad8dc5330064361901acaae5bf6e81809d090a49286e593f62192f34fa.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "064819c8421702923af12888be4c952a29be34cba67dc91f133affa413eb63ed",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (46).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/064819c8421702923af12888be4c952a29be34cba67dc91f133affa413eb63ed.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0a886b6c5158156ffafeb8e471da0e1ad42b9b54af1bb66cc1a2d179f1ac6f71",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (57).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/0a886b6c5158156ffafeb8e471da0e1ad42b9b54af1bb66cc1a2d179f1ac6f71.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "15856eda0ac4a05d885da0b89bb5342e180be56c9bc77cad15f397e0e015cd01",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (1).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/15856eda0ac4a05d885da0b89bb5342e180be56c9bc77cad15f397e0e015cd01.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "1a1f946ec714c04e49d92dc89a8f81e97cd3717f70256207606eabcd3dedd7e0",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (41).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/1a1f946ec714c04e49d92dc89a8f81e97cd3717f70256207606eabcd3dedd7e0.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "1aac3aa7e1588d12adade57549476d98254ca9bf32391dce3977ba1a1dc0b522",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (58).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/1aac3aa7e1588d12adade57549476d98254ca9bf32391dce3977ba1a1dc0b522.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "1e2545ce29cd471278c08212a12e91badac5212074834ef1c567ddca3decb728",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (66).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/1e2545ce29cd471278c08212a12e91badac5212074834ef1c567ddca3decb728.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "29488bb1bc61d1055c5ecca47382ee55165779ceab2007fe5bf236fe6f1ffa24",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (3).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/29488bb1bc61d1055c5ecca47382ee55165779ceab2007fe5bf236fe6f1ffa24.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "29b3f7501bf9bbd309d2eaba239a7bfca5599132fc67f77db308cf98e4284fa1",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (70).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/29b3f7501bf9bbd309d2eaba239a7bfca5599132fc67f77db308cf98e4284fa1.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "2d44e63d611f32e5990aec8b2a28b601b768170930af564c424f66ccc8123896",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (37).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/2d44e63d611f32e5990aec8b2a28b601b768170930af564c424f66ccc8123896.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "33a1586dddc2af501089bb91cf08331542248c9d2f387b8a8ff2a786692fb88c",
+      "group": "hasan:2023:10:18",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (40).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/33a1586dddc2af501089bb91cf08331542248c9d2f387b8a8ff2a786692fb88c.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "3abd0802c12e23daee9bb0113ec346d8aafaaf267958569c7ee8b637a98ffb70",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (11).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/3abd0802c12e23daee9bb0113ec346d8aafaaf267958569c7ee8b637a98ffb70.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "3f3a3e4cd01717db15c29a758ffaae27a24e443990cc064f8bb42c974e0aca9b",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (56).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/3f3a3e4cd01717db15c29a758ffaae27a24e443990cc064f8bb42c974e0aca9b.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "401741b411c9119f083f890dd95f972a505187229fbd29faf33762370187b0ba",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (34).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/401741b411c9119f083f890dd95f972a505187229fbd29faf33762370187b0ba.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "410bdec00aa24225ba65688b28e81d6abcf6a3c3f0cad6f07aca866f69c0035a",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (48).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/410bdec00aa24225ba65688b28e81d6abcf6a3c3f0cad6f07aca866f69c0035a.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "4bebe786ea0e986df3e6bee4f13ccfdaeb9fe56814fe752b13cfbcedb14cc867",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (62).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/4bebe786ea0e986df3e6bee4f13ccfdaeb9fe56814fe752b13cfbcedb14cc867.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "4f06bc310612337ab65ba661c53003ba697af4ce039176fa574944f992acfa06",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (35).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/4f06bc310612337ab65ba661c53003ba697af4ce039176fa574944f992acfa06.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "4f6f76e025ce0c3e48e2c02049b977ca4b3f136a2fcceaca2bfb27b9ae647d07",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (67).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/4f6f76e025ce0c3e48e2c02049b977ca4b3f136a2fcceaca2bfb27b9ae647d07.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "522becc4b00d517efa7c745da5b0154931506382b30c3066c1ca365e31ad5a47",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (69).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/522becc4b00d517efa7c745da5b0154931506382b30c3066c1ca365e31ad5a47.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "579a24f8c995fd84165b83314829a5976538d258996b40074f456c0ef6f00794",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (32).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/579a24f8c995fd84165b83314829a5976538d258996b40074f456c0ef6f00794.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "693a996a5c6593c7d0c5ccabe392ae3583d8064925bedc01474af31c9bccc813",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (29).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/693a996a5c6593c7d0c5ccabe392ae3583d8064925bedc01474af31c9bccc813.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "73ae71e366dd0c8ad326c7a71bd4a9523d637650aef8c36857b77274af7a1157",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (44).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/73ae71e366dd0c8ad326c7a71bd4a9523d637650aef8c36857b77274af7a1157.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "7c2c46680552846a9678f4123a9fac3e7c6273644fea5cbbb2ff08d7aa25159b",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (71).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/7c2c46680552846a9678f4123a9fac3e7c6273644fea5cbbb2ff08d7aa25159b.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "837232f600a5f81c3094ac048ce2f5430d05af99c4ac9676400621ff3bee3af0",
+      "group": "hasan:2023:10:18",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (39).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/837232f600a5f81c3094ac048ce2f5430d05af99c4ac9676400621ff3bee3af0.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "84c623df663be54b1f1b8071ec3885cb7eeac6c462db72155f7093b45922d8cf",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (61).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/84c623df663be54b1f1b8071ec3885cb7eeac6c462db72155f7093b45922d8cf.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "87d7baca9a96229bb416d3d0d9c397c6aaec1e43dabe5f30609f72429e4cfbb0",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (60).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/87d7baca9a96229bb416d3d0d9c397c6aaec1e43dabe5f30609f72429e4cfbb0.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "88f7e113e021e68aa55a804051c79d88087e401f265189ccfdc781283f31ab95",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (49).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/88f7e113e021e68aa55a804051c79d88087e401f265189ccfdc781283f31ab95.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "8eacd8967a18991be23186c306756c00b163e6b0f0e746a3b2783dd46582c5c8",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (33).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/8eacd8967a18991be23186c306756c00b163e6b0f0e746a3b2783dd46582c5c8.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "966569ace9a6403abb66febc5b621b24131fba1cb17d5f291a287a38c82ef36c",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (28).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/966569ace9a6403abb66febc5b621b24131fba1cb17d5f291a287a38c82ef36c.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "9b14d4406ee0d9d0bfac6c5296d0e4c46c60948ba65d97859b2507dd62c26cdf",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (72).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/9b14d4406ee0d9d0bfac6c5296d0e4c46c60948ba65d97859b2507dd62c26cdf.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "9bffae3161461727d2278a1d8ec9d340dfa15c2193eb12ac0ddb4a2c62d4df68",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (36).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/9bffae3161461727d2278a1d8ec9d340dfa15c2193eb12ac0ddb4a2c62d4df68.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "a0484627560eff80d0fa50d703ddaf219140dbde024ccd53a34adfbbedfdebbf",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (45).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/a0484627560eff80d0fa50d703ddaf219140dbde024ccd53a34adfbbedfdebbf.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "a4e33bcb841fc21cbd9194fd7fa242fac6bf6de07888b15281715eb0843b09c1",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (16).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/a4e33bcb841fc21cbd9194fd7fa242fac6bf6de07888b15281715eb0843b09c1.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "ade28ccc035362e991a1603e977e1e03b510062ea149eb695be33c8d50e18c3b",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (17).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/ade28ccc035362e991a1603e977e1e03b510062ea149eb695be33c8d50e18c3b.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "aebf22506c608fdf2d3723219d462a2d1b3f168542951dac3e0e646abd6b696b",
+      "group": "hasan:2023:10:18",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (38).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/aebf22506c608fdf2d3723219d462a2d1b3f168542951dac3e0e646abd6b696b.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "af1695abbca978b65c37e9a82be0037d70faca34fdb59229316c8e6126db1fd2",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (26).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/af1695abbca978b65c37e9a82be0037d70faca34fdb59229316c8e6126db1fd2.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "b1ca8d188901ba82d3fc2acf1edea5f9f71c9825457f251e9544207cad4b4e06",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (27).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/b1ca8d188901ba82d3fc2acf1edea5f9f71c9825457f251e9544207cad4b4e06.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "b3a0cdb6a5971a69d861d492a0e01c994f52d8587f1b652f161e1bb4788dec56",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (13).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/b3a0cdb6a5971a69d861d492a0e01c994f52d8587f1b652f161e1bb4788dec56.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "b8b492cb563eb9945e46be8cf67bed5c6a5e33e91a1d199ee89c3b5405e3117a",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (15).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/b8b492cb563eb9945e46be8cf67bed5c6a5e33e91a1d199ee89c3b5405e3117a.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "bdbdee5d43c53a36a98bf5933c60a12f8b6ddc0971c9a45ffe93e31d1a10da9e",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (64).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/bdbdee5d43c53a36a98bf5933c60a12f8b6ddc0971c9a45ffe93e31d1a10da9e.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "c02540ed9a22554e304a13adf6be19107dc0e7bfa5606d954c96e479f2531992",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (12).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/c02540ed9a22554e304a13adf6be19107dc0e7bfa5606d954c96e479f2531992.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "c0cd5b33b37c5062778b92fb98332e1d518fb8a7fb322a77cd76aa29274434e6",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (59).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/c0cd5b33b37c5062778b92fb98332e1d518fb8a7fb322a77cd76aa29274434e6.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "c48320a93d0619c7deaafa33e1b4fcd1ff2c92317de3a958782cd7079f496fd1",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (2).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/c48320a93d0619c7deaafa33e1b4fcd1ff2c92317de3a958782cd7079f496fd1.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "c504fa5196acbc5d3b3db0a951bf5f6cf247af2b4c1d315c07bf712f2e591761",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (47).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/c504fa5196acbc5d3b3db0a951bf5f6cf247af2b4c1d315c07bf712f2e591761.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "cbc4cf5e487718eaa2e0771d456ba3fa2475ccb933cce7a89f1f0a57b6b1e688",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (30).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/cbc4cf5e487718eaa2e0771d456ba3fa2475ccb933cce7a89f1f0a57b6b1e688.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "d03a755535454dd10e7b17c4ff117c85ce4fcaa006d62a3c9c09090734e8edca",
+      "group": "hasan:2023:10:06",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (55).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/d03a755535454dd10e7b17c4ff117c85ce4fcaa006d62a3c9c09090734e8edca.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "d5cfa53eea6f262c1590862cb45f4953f0091551bd936c9109fb15b097aa43c2",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (31).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/d5cfa53eea6f262c1590862cb45f4953f0091551bd936c9109fb15b097aa43c2.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "d70b3522d5455b712a945e91033a2a4302f47c2577c178d2eb29f08b254922ef",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (14).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/d70b3522d5455b712a945e91033a2a4302f47c2577c178d2eb29f08b254922ef.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "e1ad7ff10ed4e8ed86228b450f6304aa61f9eee075424b3582577b7be5a7a6db",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (43).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/e1ad7ff10ed4e8ed86228b450f6304aa61f9eee075424b3582577b7be5a7a6db.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "ed8a93d92622af81ec240701b19bec33384d78bcff57f82f6ab9be12e7c9df17",
+      "group": "hasan:2023:10:02",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (68).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/ed8a93d92622af81ec240701b19bec33384d78bcff57f82f6ab9be12e7c9df17.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "f220aa7d7d2bca97585332ce7902a65e80f64d98754b7f96466678552f3cb98d",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (10).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/f220aa7d7d2bca97585332ce7902a65e80f64d98754b7f96466678552f3cb98d.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "f38fae0ca1ecc8180d80d885d6478ba06d9feb979574e47149eab0f7002d5df0",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (4).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/f38fae0ca1ecc8180d80d885d6478ba06d9feb979574e47149eab0f7002d5df0.jpg"
+    },
+    {
+      "source": "hasan",
+      "class_name": "rice__sheath_blight",
+      "sha256": "f6d695d306a691af33ed5e073f402623df7fc37681c3b54db53ba3bdd2c3cf90",
+      "group": "hasan:2023:10:14",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (25).jpg",
+      "path": "data/raw/leafcheck_field_v13/rice/f6d695d306a691af33ed5e073f402623df7fc37681c3b54db53ba3bdd2c3cf90.jpg"
+    }
+  ]
+}

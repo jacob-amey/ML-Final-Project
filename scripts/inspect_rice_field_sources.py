@@ -82,7 +82,7 @@ def choose_members(index_path, source, metadata, source_names):
             path = Path(member.filename)
             category = path.parent.name
             folders[category] += 1
-            if category not in source["conditions"]:
+            if category not in source["conditions"] or member.filename in source.get("excluded_members", ()):
                 continue
             original = metadata.get((category.casefold(), path.name.casefold()))
             if original and source_names[original.casefold()] == 1 and (day := filename_day(original)):
@@ -104,8 +104,15 @@ def choose_members(index_path, source, metadata, source_names):
     return selected, folders
 
 
-def acquire():
+def acquire(expanded=False):
     source = json.loads(PIN.read_text())
+    receipt_name = "riceleafdiseasebd-preflight.json"
+    if expanded:
+        observed = json.loads((PIN.parent / "leafcheck_rice_field_preflight.json").read_text())
+        source.update(media_per_label=140, media_per_capture_day_per_label=22,
+                      excluded_members={row["archive_member"] for row in observed["records"]},
+                      conditions={name: label for name, label in source["conditions"].items() if name != "Blast"})
+        receipt_name = "riceleafdiseasebd-expansion.json"
     metadata, names = read_metadata(source)
     directory = RAW / "riceleafdiseasebd-v3.zip.index"
     stop = source["archive_size"]
@@ -158,7 +165,7 @@ def acquire():
                    "date_is_filename_inference": True, "training_or_evaluation_assigned": False}
         staging = work / "preflight.json"
         staging.write_text(json.dumps(receipt, indent=2) + "\n")
-        staging.replace(RAW / "riceleafdiseasebd-preflight.json")
+        staging.replace(RAW / receipt_name)
         print(f"Downloaded and decoded {len(records)} unmarked intake photos.", flush=True)
 
 
@@ -191,8 +198,11 @@ def screen(output):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--screen", type=Path, help="Check acquired originals against the frozen master and PlantDoc")
+    parser.add_argument("--expanded", action="store_true", help="Acquire an exact-label training intake outside the diagnostic sample")
     options = parser.parse_args()
     if options.screen:
+        if options.expanded:
+            parser.error("--expanded selects acquisitions and cannot be used with --screen")
         screen(options.screen)
     else:
-        acquire()
+        acquire(options.expanded)

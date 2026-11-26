@@ -1,0 +1,2642 @@
+{
+  "base_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "source_split": "train",
+  "role": "experimental training only",
+  "source": "Munna RiceLeafDiseaseBD v3 CC BY 4.0",
+  "class_names": [
+    "rice__brown_spot",
+    "rice__healthy",
+    "rice__sheath_blight"
+  ],
+  "archive": {
+    "path": "data/processed/leafcheck_rice_field_study_v1/training.zip",
+    "sha256": "3d61796e9f0c0aca23d1d34c8051133a2aa1f1ed92b6cc3cbac0e826b6823931"
+  },
+  "members": [
+    {
+      "member": "train/rice__brown_spot/00341a7751840580e89e1bfdff6783fd247463271487f86b0ee4a3f4227fe3ce.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "00341a7751840580e89e1bfdff6783fd247463271487f86b0ee4a3f4227fe3ce",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_170.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/00c858f878b1aedcfb4b851012abf377ce36b0bb1c01ffdea107c85a0eef9ede.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "00c858f878b1aedcfb4b851012abf377ce36b0bb1c01ffdea107c85a0eef9ede",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_612.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/0228d72a09a66ae1505cb59b34a2d20fac3b3e3d96b36c5a39574e0db0f4f800.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "0228d72a09a66ae1505cb59b34a2d20fac3b3e3d96b36c5a39574e0db0f4f800",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_479.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/02e5c74c7d42d502cdaabd781872dcf1c2dd53bd1f698ef5610b3c8d2807047d.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "02e5c74c7d42d502cdaabd781872dcf1c2dd53bd1f698ef5610b3c8d2807047d",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_273.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/06d35af1c32c8af8002091076c73a8ad91d66caa9513d414d1864add62d6e3d7.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "06d35af1c32c8af8002091076c73a8ad91d66caa9513d414d1864add62d6e3d7",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_206.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/0e1190b12bba2d3817b566fb4a16bfa73f71d933971807622acb865cb11e96f3.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "0e1190b12bba2d3817b566fb4a16bfa73f71d933971807622acb865cb11e96f3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_347.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/0e56fa43ad3c9030ff3b463239aa407cdfed173203f7220bcc7e2ae1f18bd9bf.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "0e56fa43ad3c9030ff3b463239aa407cdfed173203f7220bcc7e2ae1f18bd9bf",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_311.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/0fc4c38e1683931e6347d11ec0f6f6843feef33850f47340fba30957d44e372e.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "0fc4c38e1683931e6347d11ec0f6f6843feef33850f47340fba30957d44e372e",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_616.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/12565fcdeec088310ce6e359d8d51d0e5367a41c7c39ae8b98a13803f3b13bd6.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "12565fcdeec088310ce6e359d8d51d0e5367a41c7c39ae8b98a13803f3b13bd6",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_12.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/17c936e0060d46c22342c1f521335d03053976ee73164cb8da65b83b6ec386e0.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "17c936e0060d46c22342c1f521335d03053976ee73164cb8da65b83b6ec386e0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_575.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/1a513a781c17c8a0e1630f221365566eb5da554dc2e1cb3e186f4e921b8c0975.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "1a513a781c17c8a0e1630f221365566eb5da554dc2e1cb3e186f4e921b8c0975",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1937.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/1c71ce0681f8313ba7e82392591721a80a300b4992d3535ea1c12e125509b885.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "1c71ce0681f8313ba7e82392591721a80a300b4992d3535ea1c12e125509b885",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_30.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/1d45b4da7129c5327118d0b41fde94ea38ee12ec2ff9ae3f7e4883e5d3fb821c.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "1d45b4da7129c5327118d0b41fde94ea38ee12ec2ff9ae3f7e4883e5d3fb821c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_165.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/200470a1bf276d446548912d8fbd89405a90ae39c9e43a12c77c316f44665a91.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "200470a1bf276d446548912d8fbd89405a90ae39c9e43a12c77c316f44665a91",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_301.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/233aa995aa5941f1e072865374f3f0267ab6d3cb67ac84c23658ca50f642b192.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "233aa995aa5941f1e072865374f3f0267ab6d3cb67ac84c23658ca50f642b192",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_503.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/23acd8b1580848cb08bce374ca6617892c26d45354abd2a9b0815f14fcf58fad.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "23acd8b1580848cb08bce374ca6617892c26d45354abd2a9b0815f14fcf58fad",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_11.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/2565624b769327c6e6e6482419027a6a5b57ae28bc091fce79cb82183ab6714b.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "2565624b769327c6e6e6482419027a6a5b57ae28bc091fce79cb82183ab6714b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_142.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/25c1314bff72b6da3bbd26239fd4df0b8dda7b0873d1fd501e7e95e3ec5845e1.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "25c1314bff72b6da3bbd26239fd4df0b8dda7b0873d1fd501e7e95e3ec5845e1",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_2050.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/27610161c922cecf4d193c46178b8d8c90b013095b85cb67015590c7a265da01.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "27610161c922cecf4d193c46178b8d8c90b013095b85cb67015590c7a265da01",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_245.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/2b3108e8e1853edb0d07aad42621100df4d5fbdac4755e7fe92d69309348ba5c.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "2b3108e8e1853edb0d07aad42621100df4d5fbdac4755e7fe92d69309348ba5c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_414.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/2c1d6949e97c6a9753c5b97b1c21cbe691195c8a711ac5aa5c16162937d49879.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "2c1d6949e97c6a9753c5b97b1c21cbe691195c8a711ac5aa5c16162937d49879",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1500.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/2c92dc7985d341984a6b54cf902b7ed23847c0b3b16d5ff0c10bbc05742b6fd3.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "2c92dc7985d341984a6b54cf902b7ed23847c0b3b16d5ff0c10bbc05742b6fd3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_2043.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/306aa914c280dcc568376a9e6f877ada8b33570abaa26782b11d4e4b77b3260d.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "306aa914c280dcc568376a9e6f877ada8b33570abaa26782b11d4e4b77b3260d",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_603.jpg",
+      "group": "munna:2025-04-01"
+    },
+    {
+      "member": "train/rice__brown_spot/37a30fa2e6bfadda11506b02384368e5cdc0ca718235db6e9c4e61fd814e3f2c.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "37a30fa2e6bfadda11506b02384368e5cdc0ca718235db6e9c4e61fd814e3f2c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_879.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/38400e29febfc7874c28723ae16a0c723569d10a232659cfb33957f94ddabba3.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "38400e29febfc7874c28723ae16a0c723569d10a232659cfb33957f94ddabba3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_588.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/39f03675c5f348cbc83ecd5ffa32565889f285764360e2da5b3b97442326411f.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "39f03675c5f348cbc83ecd5ffa32565889f285764360e2da5b3b97442326411f",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_229.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/3bd1ad129bcbb049312d5f49521e18fc8c09b875bfa52dcdc5bcd22e9c621f43.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "3bd1ad129bcbb049312d5f49521e18fc8c09b875bfa52dcdc5bcd22e9c621f43",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_812.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/3c2a3fd099023ef6032e9428ed66fa4bd87ef06ee3f15affdac8e8d573ea5542.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "3c2a3fd099023ef6032e9428ed66fa4bd87ef06ee3f15affdac8e8d573ea5542",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_22.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/3c417cc02d702f0da38b7be9ced044c810cb4f9f2dfbe9a4205e167d290b0963.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "3c417cc02d702f0da38b7be9ced044c810cb4f9f2dfbe9a4205e167d290b0963",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_539.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/3d1c093ec7657709ccf7db148a8c35a6717f8b68b957605356f7c41c9af9bcb9.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "3d1c093ec7657709ccf7db148a8c35a6717f8b68b957605356f7c41c9af9bcb9",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_754.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/3d6a70eb38ecc60e377711476f03caaab6dcba31004f5bac7e71e6cc0806c7cf.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "3d6a70eb38ecc60e377711476f03caaab6dcba31004f5bac7e71e6cc0806c7cf",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1192.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/3dc74a199ecffa002cc6ff5eb1bf6cf9daed2c8af26b0484a3fc7f12e87955af.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "3dc74a199ecffa002cc6ff5eb1bf6cf9daed2c8af26b0484a3fc7f12e87955af",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_16.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/3e7c60a13a61d0d9852bfe0c72e87bc3c98bce1f99e832c61ccca92b8b9d5d61.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "3e7c60a13a61d0d9852bfe0c72e87bc3c98bce1f99e832c61ccca92b8b9d5d61",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_201.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/40856deb65eb700e792a487c40ebb0a152d2462f250e1fd5cf77838e37ba2466.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "40856deb65eb700e792a487c40ebb0a152d2462f250e1fd5cf77838e37ba2466",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_733.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/411280eb14238edbf336aadf32e9c55eb6131f29a95a4f8b1133bb772883de90.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "411280eb14238edbf336aadf32e9c55eb6131f29a95a4f8b1133bb772883de90",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_737.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/436cd6dc977dccad8b891a2f1acc78907437a5c29c24dfed6685862e9c3f4697.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "436cd6dc977dccad8b891a2f1acc78907437a5c29c24dfed6685862e9c3f4697",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_107.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/44ef00a0e8182e9a2dd4614f7417c814e8643d1aa31e53c7f46515cb695870c0.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "44ef00a0e8182e9a2dd4614f7417c814e8643d1aa31e53c7f46515cb695870c0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_157.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/4663a6522a6dc09b2ea2687a889f699333e33d45bcfa1f9400aa5d5274c1e163.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "4663a6522a6dc09b2ea2687a889f699333e33d45bcfa1f9400aa5d5274c1e163",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_867.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/46739cc16e20c6d30fe6364df0c3cf6cac526c05b53524d8c659bc163f13e06a.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "46739cc16e20c6d30fe6364df0c3cf6cac526c05b53524d8c659bc163f13e06a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_346.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/46a28118168e1fe63c0820585b6507d7850bbd76a6c238ff96b48e183353ced3.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "46a28118168e1fe63c0820585b6507d7850bbd76a6c238ff96b48e183353ced3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_2.jpg",
+      "group": "munna:2025-04-20"
+    },
+    {
+      "member": "train/rice__brown_spot/46ce619593d336a92d42dbe4a16b508764512508a1f1f0b3bfcf7916f991c8d6.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "46ce619593d336a92d42dbe4a16b508764512508a1f1f0b3bfcf7916f991c8d6",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_732.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/495e3397d8a0e9014637edf8f98e3e4574abb783dc0b27ed6c8b8fe08c7b3f03.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "495e3397d8a0e9014637edf8f98e3e4574abb783dc0b27ed6c8b8fe08c7b3f03",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_935.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/4b580cda8a22d330e834cdf857e6cf02ccca412a154a5a377f67cc3e04dfcc8d.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "4b580cda8a22d330e834cdf857e6cf02ccca412a154a5a377f67cc3e04dfcc8d",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1950.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/4c5a99493650184e67980ae48f3cf1ed49a449f7c7f47b94e03ab802ebdf39a7.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "4c5a99493650184e67980ae48f3cf1ed49a449f7c7f47b94e03ab802ebdf39a7",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_541.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/4cb5c3744929c4a817664807b9720943358d47070a01b5ee4f2f57f026fd7191.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "4cb5c3744929c4a817664807b9720943358d47070a01b5ee4f2f57f026fd7191",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_628.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/5443f23bc1aa713ea3485383210c34e370bf19b0ced991a217d13f1bf15cc871.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "5443f23bc1aa713ea3485383210c34e370bf19b0ced991a217d13f1bf15cc871",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_354.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/54a3ac8eb7cd269ebe2ae791b859fe6308eb7a26192f8dec47704d6069c503c6.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "54a3ac8eb7cd269ebe2ae791b859fe6308eb7a26192f8dec47704d6069c503c6",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_427.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/554c39d5ff1ac7b679277176eccef92d0763b0876ca268effa24f3600828e279.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "554c39d5ff1ac7b679277176eccef92d0763b0876ca268effa24f3600828e279",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_672.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/555a93b9591c47469b83d235d8a255529ea82fd53e42b565a2094e0ab7d39706.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "555a93b9591c47469b83d235d8a255529ea82fd53e42b565a2094e0ab7d39706",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_526.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/5568c887ca3639a322fc3042e45d1b5ac61257fd57a5b0b47f191b4bf7976a37.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "5568c887ca3639a322fc3042e45d1b5ac61257fd57a5b0b47f191b4bf7976a37",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_49.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/565f3eaf68218ece35d711625823e04f75179e04faf2168a9e6a1bead6177345.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "565f3eaf68218ece35d711625823e04f75179e04faf2168a9e6a1bead6177345",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1752.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/567d8ff591fde9322ee94b5beffd3b59fda5f2251aa12a848f7bdd3ac99aae5f.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "567d8ff591fde9322ee94b5beffd3b59fda5f2251aa12a848f7bdd3ac99aae5f",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_682.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/57f55537d38ba88318e48afd11d6c03d12de4471c92e22111d9b8cb185cc72ad.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "57f55537d38ba88318e48afd11d6c03d12de4471c92e22111d9b8cb185cc72ad",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_406.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/5b59066635382c7c980400cb4a92f8c71312ea45bdfb58a980875d3d000afffa.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "5b59066635382c7c980400cb4a92f8c71312ea45bdfb58a980875d3d000afffa",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_901.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/5c072d3c37017b9a5e5fcb033eb70b1a29e58155373ea1df1d06e509f095604a.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "5c072d3c37017b9a5e5fcb033eb70b1a29e58155373ea1df1d06e509f095604a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1811.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/5e1137d8b7b202726ad47863696aacb7c9ec5b44732311836a3ac037a8dbe976.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "5e1137d8b7b202726ad47863696aacb7c9ec5b44732311836a3ac037a8dbe976",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_614.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/5eb92cb5c8677b8cbd444f11646129c483db1297b6af75204badf4d10b62b577.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "5eb92cb5c8677b8cbd444f11646129c483db1297b6af75204badf4d10b62b577",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_493.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/5f892d0ad34e826d0b3f66ae0ed0b38b55e559d7b4a13fab20aac28d85692c3a.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "5f892d0ad34e826d0b3f66ae0ed0b38b55e559d7b4a13fab20aac28d85692c3a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1813.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/5fa271710d80a617ae62c15b555b7bcbe758d26049f24392070b36f533b8670d.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "5fa271710d80a617ae62c15b555b7bcbe758d26049f24392070b36f533b8670d",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1214.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/655af7d382cc3a0cc47ebffdf9015f88f69e77aab35d610e47d8842db86c2b08.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "655af7d382cc3a0cc47ebffdf9015f88f69e77aab35d610e47d8842db86c2b08",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_166.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/664c8bf89ab273fb5dc15b28dfc2f069a6cad2c9f7e7c523b071f67fdc75a643.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "664c8bf89ab273fb5dc15b28dfc2f069a6cad2c9f7e7c523b071f67fdc75a643",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_462.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/6c9e581023c77a94503a92ccf9afd231b06c8f32908f1c82848c5afab6bfe244.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "6c9e581023c77a94503a92ccf9afd231b06c8f32908f1c82848c5afab6bfe244",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_108.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/6e6ab79f800ff10883d9909a7b164cfa03772093a6990c912dedb61ed2ac192b.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "6e6ab79f800ff10883d9909a7b164cfa03772093a6990c912dedb61ed2ac192b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1909.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/710e371cfc37e80fb6bfa92adb02f81ead19087b1fb31d3eb0126681f6144dfe.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "710e371cfc37e80fb6bfa92adb02f81ead19087b1fb31d3eb0126681f6144dfe",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_373.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/710eabc104c204fb75510b3cfb78eadf56378a0d565bdf7431da0aa8711a1d4b.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "710eabc104c204fb75510b3cfb78eadf56378a0d565bdf7431da0aa8711a1d4b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_333.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/75ba1ca7ffded9d629ba88c4c6a1ce1bbca950026f5ebf6cf4bfd122a88aadeb.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "75ba1ca7ffded9d629ba88c4c6a1ce1bbca950026f5ebf6cf4bfd122a88aadeb",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1325.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/7679bd9881c7540ecd89e422cddb221f7297b078179ee56a7b01689fd449e395.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "7679bd9881c7540ecd89e422cddb221f7297b078179ee56a7b01689fd449e395",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1371.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/7767dd9eabec6f034a26388e1df29b1c35dfa22a3eb4b82589377da010c0bf38.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "7767dd9eabec6f034a26388e1df29b1c35dfa22a3eb4b82589377da010c0bf38",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_375.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/7b3ed9a9ee42d81e1fc8dc7674e94ea7b4852c55c0feb5323e8d9930e37ae965.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "7b3ed9a9ee42d81e1fc8dc7674e94ea7b4852c55c0feb5323e8d9930e37ae965",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_8.jpg",
+      "group": "munna:2025-04-20"
+    },
+    {
+      "member": "train/rice__brown_spot/7c0fdf8e5cf5df01defa398da2fd209643ed220ac6663e4b3d608f94ecf4fffa.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "7c0fdf8e5cf5df01defa398da2fd209643ed220ac6663e4b3d608f94ecf4fffa",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_595.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/7e914b5c5779baf789d9dbda0144ab3ae628c56f6ce1e956ee03bf39cf1a7865.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "7e914b5c5779baf789d9dbda0144ab3ae628c56f6ce1e956ee03bf39cf1a7865",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_305.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/7ff71d298e330ee67824d14102a454c81fd1a3c8dc7dafcb7923f1c9fe9363d0.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "7ff71d298e330ee67824d14102a454c81fd1a3c8dc7dafcb7923f1c9fe9363d0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_609.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/815828e9d9318a412793402aea4e9f26edf7076702e14e18e920918bc14643b5.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "815828e9d9318a412793402aea4e9f26edf7076702e14e18e920918bc14643b5",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_610.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/81db4e0f8ac470dc1415a467117695d89537b13c060c406b52f3a53cfb881bdf.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "81db4e0f8ac470dc1415a467117695d89537b13c060c406b52f3a53cfb881bdf",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_655.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/837f413f5e861e783fda2044df8ad3d234b2dfc370af9f67b242fd944746b870.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "837f413f5e861e783fda2044df8ad3d234b2dfc370af9f67b242fd944746b870",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_469.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/8725a820434044a5b6d5c564f1879900f3258847a6959768d5c7aa3ee4fd231b.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "8725a820434044a5b6d5c564f1879900f3258847a6959768d5c7aa3ee4fd231b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_359.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/8849a925eedda567abfb2933347a634541834e4c2e1d370d9dea2692d5a528af.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "8849a925eedda567abfb2933347a634541834e4c2e1d370d9dea2692d5a528af",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_209.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/89112f9cb189354840757890569d63b3f6daec1f5a490dabbe7fda6f8c049419.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "89112f9cb189354840757890569d63b3f6daec1f5a490dabbe7fda6f8c049419",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_15.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/8f962fe6cd1e3bff2ba6651d4b44af0638d98067ccebd05cdc17da8b3f01abc8.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "8f962fe6cd1e3bff2ba6651d4b44af0638d98067ccebd05cdc17da8b3f01abc8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_2126.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/95619ded09f6f0d9d27e49da1eb5d66a72de645fc4aeb88d35fae8c9e759d788.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "95619ded09f6f0d9d27e49da1eb5d66a72de645fc4aeb88d35fae8c9e759d788",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_400.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/9685330f98d9fef8f0c5654e2462bcbc86e9252419cd1c13090550bff36a23c2.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "9685330f98d9fef8f0c5654e2462bcbc86e9252419cd1c13090550bff36a23c2",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_399.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/998b6d3134de55c6eb8ef88f8a2dd78b4aad1940977f32c87f28d2eff6bacee1.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "998b6d3134de55c6eb8ef88f8a2dd78b4aad1940977f32c87f28d2eff6bacee1",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_18.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/9be352f71440dba96755379e393d61ed9c70bb782379bec900c133749610e433.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "9be352f71440dba96755379e393d61ed9c70bb782379bec900c133749610e433",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_611.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/9ef095675f96bc0278756a8ab5057792bde327fa5f3373107967a164ac284a9a.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "9ef095675f96bc0278756a8ab5057792bde327fa5f3373107967a164ac284a9a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_160.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/a175a8e1f4b0cc00f7e71020e4e1c1ba80a6fe96d6e0cf37c7a1ac35e4fa35fe.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "a175a8e1f4b0cc00f7e71020e4e1c1ba80a6fe96d6e0cf37c7a1ac35e4fa35fe",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_298.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/a3ba5b1f5804a74db77436c9e4c563f1abee70fd102a2ec1f352addadd6fed50.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "a3ba5b1f5804a74db77436c9e4c563f1abee70fd102a2ec1f352addadd6fed50",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_608.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/a4c4f7b4a9a279c69716266a763be39f9912bb8ece5f442433a37f5adeeb8aec.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "a4c4f7b4a9a279c69716266a763be39f9912bb8ece5f442433a37f5adeeb8aec",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_281.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/a580267cbc0e30c1cdac21a3afb169f01165589b6e496cca5559f9132115c0c5.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "a580267cbc0e30c1cdac21a3afb169f01165589b6e496cca5559f9132115c0c5",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_220.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/a7a7c1b3de4a19cc00434c52a334b3d8cded1246706916289ed686763a3427fa.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "a7a7c1b3de4a19cc00434c52a334b3d8cded1246706916289ed686763a3427fa",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_387.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/aba3cd33da6da4452da1ff4c935cc72d376f0272a97d0cb58033df08e92141b0.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "aba3cd33da6da4452da1ff4c935cc72d376f0272a97d0cb58033df08e92141b0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_158.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/ad89add73caf54e5c3ea85a334674a7ba97c736eaa1da13d1720f7db1d45fde3.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "ad89add73caf54e5c3ea85a334674a7ba97c736eaa1da13d1720f7db1d45fde3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_2164.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/ad9746cd08811124750c45955edfe783e265c38b84f510caf035bc0d65327ad9.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "ad9746cd08811124750c45955edfe783e265c38b84f510caf035bc0d65327ad9",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_532.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/b0fcf9803e8f4f8008a2b035678f35db965c44c3629acbea794366d18772b590.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "b0fcf9803e8f4f8008a2b035678f35db965c44c3629acbea794366d18772b590",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1878.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/b1c89c84f31bd13274c6613e54ce0e3336fe92cf309ee5ef75c3d14a01b4376f.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "b1c89c84f31bd13274c6613e54ce0e3336fe92cf309ee5ef75c3d14a01b4376f",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_78.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/b2a56ac95b8343ecf06d11758569dc8f250d21c4bc899b7f12ca32ba4c99d95c.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "b2a56ac95b8343ecf06d11758569dc8f250d21c4bc899b7f12ca32ba4c99d95c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_278.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/b495eae111f3c741e52899bf567a01649c5da617dacd8f729b2c8a80c4a2bba0.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "b495eae111f3c741e52899bf567a01649c5da617dacd8f729b2c8a80c4a2bba0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_7.jpg",
+      "group": "munna:2025-04-20"
+    },
+    {
+      "member": "train/rice__brown_spot/b4f6c791cd057a6602ee8aa235e46cd302fa0b0a73cda5fd5735522090675ac8.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "b4f6c791cd057a6602ee8aa235e46cd302fa0b0a73cda5fd5735522090675ac8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1202.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/ba8bdf5dda7485a561e5b89909c63e4c81c6f6c1ebb62a5af407037bff94a8d8.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "ba8bdf5dda7485a561e5b89909c63e4c81c6f6c1ebb62a5af407037bff94a8d8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_146.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/bc67efb9835e78f501f3e744f6eeff372d463049df39c38bbf47721c354391ec.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "bc67efb9835e78f501f3e744f6eeff372d463049df39c38bbf47721c354391ec",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_284.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/bcf8c7b3b2f0544836d758bc52d88c731929465595025d534d9c00f68ecdf424.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "bcf8c7b3b2f0544836d758bc52d88c731929465595025d534d9c00f68ecdf424",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_824.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/be301b7e7b701a24c748df5e553c90528e1a3f76a65fa27f1859db41d82c7fa8.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "be301b7e7b701a24c748df5e553c90528e1a3f76a65fa27f1859db41d82c7fa8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_615.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/c138d6b67e619c0353275b33039cef6825432b0dc5b62104a8103212f075faa3.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "c138d6b67e619c0353275b33039cef6825432b0dc5b62104a8103212f075faa3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_9.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/c18c9cc26a23d975aa9d11954c22a6ea4664d8f57c02df4aaba6ccf4632da2f0.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "c18c9cc26a23d975aa9d11954c22a6ea4664d8f57c02df4aaba6ccf4632da2f0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_139.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/c259799ad64a56aa7dcd314b8261ca1f2ac8f25986a06640bd4738e56ad5c0a2.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "c259799ad64a56aa7dcd314b8261ca1f2ac8f25986a06640bd4738e56ad5c0a2",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1280.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/c3703e6582c4bbdb888bc0bec0c25acfa4921fbc6cda4ad586c7f0a076ba87e0.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "c3703e6582c4bbdb888bc0bec0c25acfa4921fbc6cda4ad586c7f0a076ba87e0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_613.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/c4dfc8fcf9ec3872321dc47305c75e0af670f504f3a74fcaa3b0d0b352c74622.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "c4dfc8fcf9ec3872321dc47305c75e0af670f504f3a74fcaa3b0d0b352c74622",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_37.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__brown_spot/c7452275eaf0759bd703abbb3c738cad06005dea4196907f5b87fe8d215afd48.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "c7452275eaf0759bd703abbb3c738cad06005dea4196907f5b87fe8d215afd48",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1.jpg",
+      "group": "munna:2025-04-20"
+    },
+    {
+      "member": "train/rice__brown_spot/c7cd9899eb19cb68e94bbdc35efa966a8b9d4fd4ca571b825d2070efa6ad70c8.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "c7cd9899eb19cb68e94bbdc35efa966a8b9d4fd4ca571b825d2070efa6ad70c8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1490.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/c7f94a90a481c97a2daa11ff08c943688d7960e2324e35c9918668b4fb0fc121.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "c7f94a90a481c97a2daa11ff08c943688d7960e2324e35c9918668b4fb0fc121",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_5.jpg",
+      "group": "munna:2025-04-20"
+    },
+    {
+      "member": "train/rice__brown_spot/c8bc38ab8dc74d4b221802a8d05d28b039d44eb4a7b4c2160135c53a0d5cafef.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "c8bc38ab8dc74d4b221802a8d05d28b039d44eb4a7b4c2160135c53a0d5cafef",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_527.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/c93209bfc11c68985003872b886d2a37e6703bee71b3d0708a6d33efb22a2861.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "c93209bfc11c68985003872b886d2a37e6703bee71b3d0708a6d33efb22a2861",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_617.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/cc3262859ecb879fe9b45dae693ff42fed855885eb8d2c78ff0a4977889686ab.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "cc3262859ecb879fe9b45dae693ff42fed855885eb8d2c78ff0a4977889686ab",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_566.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__brown_spot/cc536a70b21bca60b248c67b4c26a7765c3b9eead4dd020aba4b17fbf285c046.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "cc536a70b21bca60b248c67b4c26a7765c3b9eead4dd020aba4b17fbf285c046",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1329.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/cdbc8893ab3246c628400f7cf17cdc6c8fc89a07952afb879424eec46ffd9b03.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "cdbc8893ab3246c628400f7cf17cdc6c8fc89a07952afb879424eec46ffd9b03",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_344.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/cfb8751f653b6011813cf10665d84a6d653d8fef1c314c1ff6141c6750e28640.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "cfb8751f653b6011813cf10665d84a6d653d8fef1c314c1ff6141c6750e28640",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_393.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/d1b34b4cc9f8afdda0657c3dea9ed26c63ec83b62386680a23847d72739efbff.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "d1b34b4cc9f8afdda0657c3dea9ed26c63ec83b62386680a23847d72739efbff",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_128.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/d42c80bda113ab0d39b56bee7c52a3821d0c84d7ecc8b13e3fcd329b0ae373eb.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "d42c80bda113ab0d39b56bee7c52a3821d0c84d7ecc8b13e3fcd329b0ae373eb",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_10.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/d8f717af71182550d37675dde9339b2feec1e1e48d038017806dadcb2e52a872.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "d8f717af71182550d37675dde9339b2feec1e1e48d038017806dadcb2e52a872",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_137.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__brown_spot/d99bf72624ae0c75b216611f62cd23b087e0774bf8fc59010ed8acbea7ffb344.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "d99bf72624ae0c75b216611f62cd23b087e0774bf8fc59010ed8acbea7ffb344",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_330.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/dadc1954dc7b1114ae874e1f723e48295a306abdb819fc19126826af271cfd46.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "dadc1954dc7b1114ae874e1f723e48295a306abdb819fc19126826af271cfd46",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_20.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__brown_spot/ddf9739d6f3db187ee0b5f545edd96da2abbdabf8f25ae37fb19dc50f09c9f7a.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "ddf9739d6f3db187ee0b5f545edd96da2abbdabf8f25ae37fb19dc50f09c9f7a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_606.jpg",
+      "group": "munna:2025-04-01"
+    },
+    {
+      "member": "train/rice__brown_spot/de5005bc319c62dc7db7eea9485219f6f95d8efb45456d5357babbef0a85daaa.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "de5005bc319c62dc7db7eea9485219f6f95d8efb45456d5357babbef0a85daaa",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_258.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__brown_spot/df77b7db7cf1ce74a6315497c56afcdfd3ee999392ec98d782220fd9aa772fdc.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "df77b7db7cf1ce74a6315497c56afcdfd3ee999392ec98d782220fd9aa772fdc",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_2045.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/e15e07265c9560649fdf5328f7d83d9903db2623a4b21cc531a3e70ff2aaa9a0.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "e15e07265c9560649fdf5328f7d83d9903db2623a4b21cc531a3e70ff2aaa9a0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1776.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__brown_spot/e17a641ee5c7fdd0699c4a14b04691032107faaea17d66e025346326b2bc3da5.jpg",
+      "class_name": "rice__brown_spot",
+      "sha256": "e17a641ee5c7fdd0699c4a14b04691032107faaea17d66e025346326b2bc3da5",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_54.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/0b8c9b28a98e95707e1478ea6de7570b617d76e1427c48eb80219b3c8e35b6b5.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "0b8c9b28a98e95707e1478ea6de7570b617d76e1427c48eb80219b3c8e35b6b5",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1423.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/0f2bbc6a36614ccfc8d5a61d97917dfd8cd8ba9b83e601a9729f23205baed7e0.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "0f2bbc6a36614ccfc8d5a61d97917dfd8cd8ba9b83e601a9729f23205baed7e0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_583.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/0fab53bd578972e528795aaabfdf1d5fc2237408b68267fb894ebdd6ecc223a9.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "0fab53bd578972e528795aaabfdf1d5fc2237408b68267fb894ebdd6ecc223a9",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_438.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/1059b9b4fdfb2afcffa193a2fd8bb820ebfcdfaaba45b675d79d76656532c5c3.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "1059b9b4fdfb2afcffa193a2fd8bb820ebfcdfaaba45b675d79d76656532c5c3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_603.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/1193b20ffc1b192b9b9e77e74b75130a49d86d50d6b6e40a061fba3ff5a8d4ac.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "1193b20ffc1b192b9b9e77e74b75130a49d86d50d6b6e40a061fba3ff5a8d4ac",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1256.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/13fea6072d3512ec5f906545098e97170cd6bd3869752a8f241b4918c2320b3c.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "13fea6072d3512ec5f906545098e97170cd6bd3869752a8f241b4918c2320b3c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_548.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/1570518578c0be4da6c51a34d0139ea803cf0c7e426a7bb51879187a0e7293e4.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "1570518578c0be4da6c51a34d0139ea803cf0c7e426a7bb51879187a0e7293e4",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_467.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/192fe4b2ba7ae9b6d5b837a1631c60eff6dd70fd9d3ee04c58bdae95ba439a47.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "192fe4b2ba7ae9b6d5b837a1631c60eff6dd70fd9d3ee04c58bdae95ba439a47",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_414.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/19d50a70f67b910c190819cd066a8c9b2f515851e9e583431482fc0764d65ca8.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "19d50a70f67b910c190819cd066a8c9b2f515851e9e583431482fc0764d65ca8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_842.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/1a3873d8eae1339a442ca15a514d72a6ef5232b9d1304d76c836c09d9430b0e1.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "1a3873d8eae1339a442ca15a514d72a6ef5232b9d1304d76c836c09d9430b0e1",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_783.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/1a7c7e58f339facddbdb5834e41fc41ed4add87afbe42598073bbb09be8bab4e.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "1a7c7e58f339facddbdb5834e41fc41ed4add87afbe42598073bbb09be8bab4e",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_631.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/1ac0ce8fed76302767cb17df0477794f434d8d4298d7f8eab51cae738cb4906a.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "1ac0ce8fed76302767cb17df0477794f434d8d4298d7f8eab51cae738cb4906a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_741.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/1aee46cde26406a91d12dfd39d49c0955290bcfcb91dbc68687539f3f4bbfc7e.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "1aee46cde26406a91d12dfd39d49c0955290bcfcb91dbc68687539f3f4bbfc7e",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1085.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/1b32136c4738f414d265888b9fecd12f0d32b133227148e8640235bb7648be29.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "1b32136c4738f414d265888b9fecd12f0d32b133227148e8640235bb7648be29",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1490.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/1b6d933a180abe6f85acfde06c29bf82c086d81d359e304f25799620f4c0be1b.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "1b6d933a180abe6f85acfde06c29bf82c086d81d359e304f25799620f4c0be1b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1273.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/1d27baa5d9b64b00f59770c349ab74091101ab53a283c68a981651114d6d0bef.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "1d27baa5d9b64b00f59770c349ab74091101ab53a283c68a981651114d6d0bef",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_988.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/21c79fe93c01c934faf2ec5086e2dc1d4aaed71aaa220ff38389c64cc64f78cd.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "21c79fe93c01c934faf2ec5086e2dc1d4aaed71aaa220ff38389c64cc64f78cd",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_3.jpg",
+      "group": "munna:2025-04-02"
+    },
+    {
+      "member": "train/rice__healthy/22cde0625e0367c07c3fe0e3291865e80328e2937184f0e3dad663b2c0f2139c.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "22cde0625e0367c07c3fe0e3291865e80328e2937184f0e3dad663b2c0f2139c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_419.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/22d4adf2ff6e1f75a0a9c515ce7aa1ba4a7f64bff9c765be85a8e2a3d71ff0d5.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "22d4adf2ff6e1f75a0a9c515ce7aa1ba4a7f64bff9c765be85a8e2a3d71ff0d5",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_592.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/233ca81d6997f70876018919294e9e3fec4dc8073505795ede2714a7f511b19b.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "233ca81d6997f70876018919294e9e3fec4dc8073505795ede2714a7f511b19b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_955.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/27f125cd3793bb961578e1bccc85ed22ee24ad280f66d1221ea70fc088231797.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "27f125cd3793bb961578e1bccc85ed22ee24ad280f66d1221ea70fc088231797",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1553.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/2ae5cc777e0eccdebae1341169fbc85ad0b64a9d69ada43ad930f6283f904cd2.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "2ae5cc777e0eccdebae1341169fbc85ad0b64a9d69ada43ad930f6283f904cd2",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_153.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/2b69898598c302764d1fa0fbd026301321b291522a07a9273648da52693073b3.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "2b69898598c302764d1fa0fbd026301321b291522a07a9273648da52693073b3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1513.jpg",
+      "group": "munna:2025-04-02"
+    },
+    {
+      "member": "train/rice__healthy/2e7393ae50cdcf71d2613823f6a4a131ab904352cdbc5ca4cd4c81eaf908e79c.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "2e7393ae50cdcf71d2613823f6a4a131ab904352cdbc5ca4cd4c81eaf908e79c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_647.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/2ecc9e3d3949d3567abe5bc2a57db4901bfa6803d6e5497c71c47eede4d850f6.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "2ecc9e3d3949d3567abe5bc2a57db4901bfa6803d6e5497c71c47eede4d850f6",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1368.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/30723d23ae56e80bb7a3389724d30c74363556d23256ed5680bc01e0ad36243f.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "30723d23ae56e80bb7a3389724d30c74363556d23256ed5680bc01e0ad36243f",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1544.jpg",
+      "group": "munna:2025-04-02"
+    },
+    {
+      "member": "train/rice__healthy/30c8d943222204e4e7822236c4f991a6ca5646d98aac585ee48f509bd1a3ffd2.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "30c8d943222204e4e7822236c4f991a6ca5646d98aac585ee48f509bd1a3ffd2",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_757.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/3160cba5e22170fb2a91ec2aa2e8a93d1fe0c4e5e91207d2df1f1cc94e39bf31.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "3160cba5e22170fb2a91ec2aa2e8a93d1fe0c4e5e91207d2df1f1cc94e39bf31",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_76.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__healthy/337f27d8dcfa9b9ea4667af6ed54a51d4fd60c52d8d1e83ae17ac4f3ff08feb1.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "337f27d8dcfa9b9ea4667af6ed54a51d4fd60c52d8d1e83ae17ac4f3ff08feb1",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1569.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/360550edc2ae7f85cb33f333de2bdd5f48a3bf0fca66745990273056816dded8.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "360550edc2ae7f85cb33f333de2bdd5f48a3bf0fca66745990273056816dded8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_504.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/366223d03cb2773600bc14950884c9bf0fcbdc5fbc7385ff2ffcd430b9789ce2.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "366223d03cb2773600bc14950884c9bf0fcbdc5fbc7385ff2ffcd430b9789ce2",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_5.jpg",
+      "group": "munna:2025-04-02"
+    },
+    {
+      "member": "train/rice__healthy/38b96a296b885801e994b543a7c6cfd6bebe232e71ae09f0bf0944797e329602.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "38b96a296b885801e994b543a7c6cfd6bebe232e71ae09f0bf0944797e329602",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_39.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/3f7f35307af97994aa9b8536a90398ac0c3ebeda7d71f3294573228f9783fe97.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "3f7f35307af97994aa9b8536a90398ac0c3ebeda7d71f3294573228f9783fe97",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_33.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/3fac75f4eceafc765c2ac67482279386e8781f029a3001814e149e36e07cc79d.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "3fac75f4eceafc765c2ac67482279386e8781f029a3001814e149e36e07cc79d",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_566.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/3fb827866fbc66e8c2b35f47578132fb9b85959421342fc2f988eba26e4f1368.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "3fb827866fbc66e8c2b35f47578132fb9b85959421342fc2f988eba26e4f1368",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_990.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/408bcf0300ed98caabae0678ca93318b6892e5b34d306a01e226a0e4fda371c2.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "408bcf0300ed98caabae0678ca93318b6892e5b34d306a01e226a0e4fda371c2",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1284.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/42759ddb3cb636d2d775fa0aa18fffce8c8fa5806772063c480f1390b0001890.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "42759ddb3cb636d2d775fa0aa18fffce8c8fa5806772063c480f1390b0001890",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1555.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/47e07f28989ee41f77243152c652d879004a679cfa384cf0c263103677dbeb39.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "47e07f28989ee41f77243152c652d879004a679cfa384cf0c263103677dbeb39",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_96.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__healthy/49abefe327f0865b629c8c677fbc6849d08c813871c076f638a977c411f61bf9.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "49abefe327f0865b629c8c677fbc6849d08c813871c076f638a977c411f61bf9",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_314.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/4ef8be2ad0b7f40b429340c8baa473af5b8704438e89597ea9888fa0227aae1b.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "4ef8be2ad0b7f40b429340c8baa473af5b8704438e89597ea9888fa0227aae1b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1324.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/502aed4c06602cadf81b3d0f0b070f4df0f04bec40f0ef776cd4a6312c66dfd1.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "502aed4c06602cadf81b3d0f0b070f4df0f04bec40f0ef776cd4a6312c66dfd1",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_108.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__healthy/51fe96c99070bf32514248a02c485c9ac70117b7ffd30991934ab0b2f1953e21.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "51fe96c99070bf32514248a02c485c9ac70117b7ffd30991934ab0b2f1953e21",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_55.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/541730622d6bf6170fb3db6ddf03ae508238c9e4bafdbeabd99ce8e34b41b6d4.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "541730622d6bf6170fb3db6ddf03ae508238c9e4bafdbeabd99ce8e34b41b6d4",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_449.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/56df86a6c3d698ebdc19a15d159b8038cde391c613adc7310b7235e5d19e3585.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "56df86a6c3d698ebdc19a15d159b8038cde391c613adc7310b7235e5d19e3585",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_733.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/572c05d5e65353ebab7cf08703e9bd8dc92c380002368e1a98bf14cbde9b1b6c.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "572c05d5e65353ebab7cf08703e9bd8dc92c380002368e1a98bf14cbde9b1b6c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1233.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/57fb8b3032d0775a1e65b576fdb3813a253cc21d5c32b101672341115e6d226e.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "57fb8b3032d0775a1e65b576fdb3813a253cc21d5c32b101672341115e6d226e",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_878.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/5be88a52bf480dbc9476702b6cdbb7f21e03d2003a7891fdd0f5b49fa619aa76.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "5be88a52bf480dbc9476702b6cdbb7f21e03d2003a7891fdd0f5b49fa619aa76",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1487.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/5eea8641d6c81758ecd163eee303519a4cacf8c046baefb9f4e81a54169bd701.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "5eea8641d6c81758ecd163eee303519a4cacf8c046baefb9f4e81a54169bd701",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1036.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/607d4bbbbba05ca82b153d87b8a8d62286e5df1b9eaadb5b39980b9c17a9abfd.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "607d4bbbbba05ca82b153d87b8a8d62286e5df1b9eaadb5b39980b9c17a9abfd",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_248.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/614d5d8f7dc9bdb5b4f1e48ae663172eb71e46e28a222ec1ac5ca60362e089f0.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "614d5d8f7dc9bdb5b4f1e48ae663172eb71e46e28a222ec1ac5ca60362e089f0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_219.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/632f909448084a9885cbe9cb7e5ca9c4c174149c252d3f636bd98ba2b624240b.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "632f909448084a9885cbe9cb7e5ca9c4c174149c252d3f636bd98ba2b624240b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_587.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/63864290bb6734562bedad004751a6c2bc4a3aecad2ace10f1ad71da96801a25.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "63864290bb6734562bedad004751a6c2bc4a3aecad2ace10f1ad71da96801a25",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_683.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/67684a1a0dc24b1ac5e03fc59038403321585018c5341332da20920adbe26153.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "67684a1a0dc24b1ac5e03fc59038403321585018c5341332da20920adbe26153",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_636.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/68187787021dea83251ab05dfa29ac5729f1111aefbd8b65696b1f0a57971c1d.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "68187787021dea83251ab05dfa29ac5729f1111aefbd8b65696b1f0a57971c1d",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1035.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/68b8065206846023ad678def2eef61628b2d17c2fe47cb2c37c432a6226432c8.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "68b8065206846023ad678def2eef61628b2d17c2fe47cb2c37c432a6226432c8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_553.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/6ad4bf4610acd85b94803c93a17219efdf9c62b03a64de24284e939107d95b31.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "6ad4bf4610acd85b94803c93a17219efdf9c62b03a64de24284e939107d95b31",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1449.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/6b8cd4492b4fcafa5f24be7466c630cba3270e1c9eb3626f615e8000322b6994.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "6b8cd4492b4fcafa5f24be7466c630cba3270e1c9eb3626f615e8000322b6994",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_726.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/6fe0f03f583da5c3752c2b7a79caedd4ea784b5c376e19799b49e70243f88c6a.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "6fe0f03f583da5c3752c2b7a79caedd4ea784b5c376e19799b49e70243f88c6a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1474.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/73dc009a3a289b466aed8897925b7d5b5f9ff36c095d1dd7ecca34d8166f5510.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "73dc009a3a289b466aed8897925b7d5b5f9ff36c095d1dd7ecca34d8166f5510",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_573.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/76c103befc9682acec7e53b7c37b176128ed1c553e9a43fbdb189818403f871a.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "76c103befc9682acec7e53b7c37b176128ed1c553e9a43fbdb189818403f871a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_137.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/77831d6f73847f371e0d495e9e952b22fbffee0dae1bf8d3cd05ec81b302670b.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "77831d6f73847f371e0d495e9e952b22fbffee0dae1bf8d3cd05ec81b302670b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_671.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/7ac813e70500cf0cec744f5121a6f6b1d151229f086bdd41886d1b56f937c0b7.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "7ac813e70500cf0cec744f5121a6f6b1d151229f086bdd41886d1b56f937c0b7",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1300.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/7c3569c2364c1cddaf83ae82557ba48cb937db047cd237b0e6ab672fe5c52095.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "7c3569c2364c1cddaf83ae82557ba48cb937db047cd237b0e6ab672fe5c52095",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1548.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/7ee2cd1b084ca76faa7c983ca24a3bc9ec24e0cd2f7c8c67c682c7f482d9680a.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "7ee2cd1b084ca76faa7c983ca24a3bc9ec24e0cd2f7c8c67c682c7f482d9680a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1554.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/7f1f8cc87e573cf870056b39695a62ec548bf8b04fa31bddf94dffa13a485819.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "7f1f8cc87e573cf870056b39695a62ec548bf8b04fa31bddf94dffa13a485819",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_932.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/8257f7b1b0b5b6d8a78badb66a7f5648ddabe0e5c323cca66ae25b03f4193301.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "8257f7b1b0b5b6d8a78badb66a7f5648ddabe0e5c323cca66ae25b03f4193301",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_714.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/82bd07525344100fb213f493f1cd951bcbcd28deae51dca5e29ff3300c686b3c.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "82bd07525344100fb213f493f1cd951bcbcd28deae51dca5e29ff3300c686b3c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1557.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/82f5441b47f6b12490f5faf0299ff7ed480904e9640d90d921c4debbebf28148.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "82f5441b47f6b12490f5faf0299ff7ed480904e9640d90d921c4debbebf28148",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1397.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/838aa7915c547667b7c5aeb75a3128f9ff9f4755391b54a53122f7c293a3eb03.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "838aa7915c547667b7c5aeb75a3128f9ff9f4755391b54a53122f7c293a3eb03",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1439.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/84e208adf868d0610395470b5b5a4bf0a75aa0ee518eaad141c7cdcb32448e59.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "84e208adf868d0610395470b5b5a4bf0a75aa0ee518eaad141c7cdcb32448e59",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1376.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__healthy/873432b7dfda4407204b437aee8bf13c3c68ed71e974bd33d7451f589423e215.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "873432b7dfda4407204b437aee8bf13c3c68ed71e974bd33d7451f589423e215",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1118.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/87833ecddd6c51805860394d830869485d448b4f0065db19dcfe7362a14a4b50.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "87833ecddd6c51805860394d830869485d448b4f0065db19dcfe7362a14a4b50",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_558.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/882385219bc0a715e61f3a53cef06f2b82646a31ffc86220e0403b57e44a3f09.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "882385219bc0a715e61f3a53cef06f2b82646a31ffc86220e0403b57e44a3f09",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_628.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/88ac456b4d2fd13b19c483ba198012130fad70b73c441fadd19eb902f0021830.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "88ac456b4d2fd13b19c483ba198012130fad70b73c441fadd19eb902f0021830",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1351.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/894868f71189636be6ca0c63163fd470712c2df650198bd5e4ce9a99af2df132.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "894868f71189636be6ca0c63163fd470712c2df650198bd5e4ce9a99af2df132",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1467.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/8a0a098a16ed6edbd3300a2cee08ef530ed1bb485f4f906ab38b3ae5467d0a7c.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "8a0a098a16ed6edbd3300a2cee08ef530ed1bb485f4f906ab38b3ae5467d0a7c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1038.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/8a9feb7f150154dab0c367a3519be9f19096abaf98ecb6716137c4962027790c.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "8a9feb7f150154dab0c367a3519be9f19096abaf98ecb6716137c4962027790c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_770.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/8ad5852bfaaa06c7c0bd28eb399b001040f475df013bb76c5353208ff89e130b.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "8ad5852bfaaa06c7c0bd28eb399b001040f475df013bb76c5353208ff89e130b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_663.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/8ffca341de53685f1f4420fd3caf5f45e189ef06205f77666759d96a3b59b095.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "8ffca341de53685f1f4420fd3caf5f45e189ef06205f77666759d96a3b59b095",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_409.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/91cc52bf3e40c2f015a896a78da64f2a75659ff610cfdde299336d31bdba324c.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "91cc52bf3e40c2f015a896a78da64f2a75659ff610cfdde299336d31bdba324c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_761.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/93b4ca893fc00c941cdda056dfd12eeee47150435bc6ecd4caf515c618fe2128.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "93b4ca893fc00c941cdda056dfd12eeee47150435bc6ecd4caf515c618fe2128",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_287.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/97fa716ec06ee5defa064975559c7b1b14abf127130378d5f8c4f2e871c60323.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "97fa716ec06ee5defa064975559c7b1b14abf127130378d5f8c4f2e871c60323",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_478.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/9bf0b5e3dc6f7be43ec7839cb34e956880e21d0720b8eb5c901ec8b2ba51f0cf.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "9bf0b5e3dc6f7be43ec7839cb34e956880e21d0720b8eb5c901ec8b2ba51f0cf",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_775.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/a0d85eb37137751b0540a7f30ee50b50be6ab5652145508062355112e874d309.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "a0d85eb37137751b0540a7f30ee50b50be6ab5652145508062355112e874d309",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1563.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/a3ac43e06cd67f85475b80426d69953a106470b60352e4ba3a11495faba1bbda.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "a3ac43e06cd67f85475b80426d69953a106470b60352e4ba3a11495faba1bbda",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1379.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__healthy/a3fe6067ce1f15d3dc01a41de791248fecdfd0466d66a0e7ba55d88b62c667e7.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "a3fe6067ce1f15d3dc01a41de791248fecdfd0466d66a0e7ba55d88b62c667e7",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1314.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/a42a6c33c55e6b257f932e09856f7a7ce9a631be77c4f83f41cb38cec3f06304.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "a42a6c33c55e6b257f932e09856f7a7ce9a631be77c4f83f41cb38cec3f06304",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1331.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/a56505a8f014e6c5d52c7b6450fc7d0e83f093ebb729ff374ef3b98a2d462048.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "a56505a8f014e6c5d52c7b6450fc7d0e83f093ebb729ff374ef3b98a2d462048",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_788.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/a5cd42950f4506e8016c0bcf0110a1a41ccb3b01857c2db8cce21a730eb46266.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "a5cd42950f4506e8016c0bcf0110a1a41ccb3b01857c2db8cce21a730eb46266",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1568.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/aa24f7cc625ddc177cc5eab05fe4e7c7f18b5b2e78298a5867ab6d7d5d4957c9.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "aa24f7cc625ddc177cc5eab05fe4e7c7f18b5b2e78298a5867ab6d7d5d4957c9",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1470.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/aa3d3635da3a2a04e97f47ecd6f97b75b72277555b078e36aa056dfddcd60623.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "aa3d3635da3a2a04e97f47ecd6f97b75b72277555b078e36aa056dfddcd60623",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1348.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/aaa45748ce7139137b40fc5cded9ee5537c0b98e26c0dcbeba96efc95f4602ec.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "aaa45748ce7139137b40fc5cded9ee5537c0b98e26c0dcbeba96efc95f4602ec",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_557.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/ace856d3340ef1822609d33263a8e365b0c194af5ba41db2ce852d5b3bd1cfd0.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "ace856d3340ef1822609d33263a8e365b0c194af5ba41db2ce852d5b3bd1cfd0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_868.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/ad2cad4afb89dbff6429bf2d4c7b23cec096f8e95f5bc9e838c0418539c7db9c.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "ad2cad4afb89dbff6429bf2d4c7b23cec096f8e95f5bc9e838c0418539c7db9c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_790.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/ae6a244931e0a26deeb32c9ba2fbd1b199a8c6c98c067f57e304f24cee6dd2b0.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "ae6a244931e0a26deeb32c9ba2fbd1b199a8c6c98c067f57e304f24cee6dd2b0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_723.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/b3160789777843e38c624d9b565d9450ad972ca5f635576db811d17e48fcdfdd.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "b3160789777843e38c624d9b565d9450ad972ca5f635576db811d17e48fcdfdd",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_47.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/b5b0718581b8724a02487a943a2e5780c0485bcfa7485b043fd93c074eb8b5d0.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "b5b0718581b8724a02487a943a2e5780c0485bcfa7485b043fd93c074eb8b5d0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_967.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/bae07d251990338d94dff75b18092c4159f249cd92600b1dd700eccd5670dc60.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "bae07d251990338d94dff75b18092c4159f249cd92600b1dd700eccd5670dc60",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_519.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/bb4fd063b88d082e33c68f2be37472a51935bbf060e7f7f60783829345ddb4f3.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "bb4fd063b88d082e33c68f2be37472a51935bbf060e7f7f60783829345ddb4f3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1332.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/bcc429bef5255b5857d75691d185bbd0f31379929511f27848f80d8f73bed66e.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "bcc429bef5255b5857d75691d185bbd0f31379929511f27848f80d8f73bed66e",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1549.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/be3b6a6cb8312dd56e01a895880fc36c54ebd39d891391fb928be7844f9ad263.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "be3b6a6cb8312dd56e01a895880fc36c54ebd39d891391fb928be7844f9ad263",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1088.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/c4451ab61d8ea02ca45ec04a000710f1dae2d82f9f2de0df926a93ce8f18691b.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "c4451ab61d8ea02ca45ec04a000710f1dae2d82f9f2de0df926a93ce8f18691b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_501.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/c733d231e33ed0aa972b9076c0a8e28c4cb76e2654a4b654e9aec113bebc024c.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "c733d231e33ed0aa972b9076c0a8e28c4cb76e2654a4b654e9aec113bebc024c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_280.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/c91ecbe1e8a9f04d95146ae130cf8eddfe94a08adeccabd2b3163e4222ffc9b9.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "c91ecbe1e8a9f04d95146ae130cf8eddfe94a08adeccabd2b3163e4222ffc9b9",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_639.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/c990c66fd8634ca95a8a9bd9a5cf816d603a1085c5a8905342af4886b1324212.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "c990c66fd8634ca95a8a9bd9a5cf816d603a1085c5a8905342af4886b1324212",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_637.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__healthy/cab2aaae783338a2d6a6b9cb3b27d4d5c0a58c9674af9b6b6f1c60309902c476.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "cab2aaae783338a2d6a6b9cb3b27d4d5c0a58c9674af9b6b6f1c60309902c476",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1536.jpg",
+      "group": "munna:2025-04-02"
+    },
+    {
+      "member": "train/rice__healthy/cd0491893e40eedecd366d43b4358a29c773aa156f21ac063f5d681378965726.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "cd0491893e40eedecd366d43b4358a29c773aa156f21ac063f5d681378965726",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_42.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/ce1f0900dc0496f84ba44f5dacb49e5da968d32002856896c721d9edb35d1044.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "ce1f0900dc0496f84ba44f5dacb49e5da968d32002856896c721d9edb35d1044",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_34.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/cf97725c84c54fc7c2b93a130748b73f8ff195c6027c2a341e886a2a00b23c31.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "cf97725c84c54fc7c2b93a130748b73f8ff195c6027c2a341e886a2a00b23c31",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_117.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/cfbc7d237f57ce50db78ecf858e58f9024d2190f0843838f7fa50eb2564d7bf8.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "cfbc7d237f57ce50db78ecf858e58f9024d2190f0843838f7fa50eb2564d7bf8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1033.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/d17d4a034c6751fa624a3a7663c31a08e0d53f00e1eae325b547410c1ccee74f.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "d17d4a034c6751fa624a3a7663c31a08e0d53f00e1eae325b547410c1ccee74f",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1400.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/d23348e22b5b88d6a29b99cd509fa87808742b50d342b547d0b4dfa97cfd65d3.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "d23348e22b5b88d6a29b99cd509fa87808742b50d342b547d0b4dfa97cfd65d3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1131.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/d37a3077894363b993b0d989116df7d6587e4275d5b48267d1c104dbb7a21482.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "d37a3077894363b993b0d989116df7d6587e4275d5b48267d1c104dbb7a21482",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1025.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/d4b74810ae47e228341196bfb4c94a646c33057b38a1355f1279846bfb328536.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "d4b74810ae47e228341196bfb4c94a646c33057b38a1355f1279846bfb328536",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_210.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/d7b85063274c3944b3ad5751b7666215c11cccb19cde6f9eca330076221d88c8.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "d7b85063274c3944b3ad5751b7666215c11cccb19cde6f9eca330076221d88c8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_418.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/d8618212dac2a85a197254b0ecddb8463256994ae79d1a47f753e8133c618f6c.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "d8618212dac2a85a197254b0ecddb8463256994ae79d1a47f753e8133c618f6c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1471.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/d9780d63bcc3a2e8bc7655a7382a8c6d571e7d52bb716ac51dd61b0f21a0aed9.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "d9780d63bcc3a2e8bc7655a7382a8c6d571e7d52bb716ac51dd61b0f21a0aed9",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_111.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__healthy/df7b138f1fd026fb7d3d0946226c949ed33c7940661af49824189dae0e371f45.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "df7b138f1fd026fb7d3d0946226c949ed33c7940661af49824189dae0e371f45",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_691.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__healthy/e0a3ebf0fb6d015d944f92dea29acd608f52c4b0b9cd1220cdc3ec6ed8cb9bf2.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "e0a3ebf0fb6d015d944f92dea29acd608f52c4b0b9cd1220cdc3ec6ed8cb9bf2",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_367.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/e0b50b07ebea85029ae9437c06867fb5fbd9cbe37a159148cfac3a93a614ce1b.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "e0b50b07ebea85029ae9437c06867fb5fbd9cbe37a159148cfac3a93a614ce1b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1321.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__healthy/e129e64451cdfca5e7c05e53ff61f44a5e5e0e280fb9de4334ab785b93effb54.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "e129e64451cdfca5e7c05e53ff61f44a5e5e0e280fb9de4334ab785b93effb54",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1106.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__healthy/e367e299677a1cef82ca3dbd4508faf5681392cdd337afd4c770ac90dbecb35b.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "e367e299677a1cef82ca3dbd4508faf5681392cdd337afd4c770ac90dbecb35b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1508.jpg",
+      "group": "munna:2025-04-01"
+    },
+    {
+      "member": "train/rice__healthy/e5902d66b012198dd22a07510ba1832060df98b43d22efbeb3321c6365331752.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "e5902d66b012198dd22a07510ba1832060df98b43d22efbeb3321c6365331752",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_340.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__healthy/e5a0ca2dedf0036cdabca536897dae4a8e7f9c2c983de4383db3f4281166a82a.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "e5a0ca2dedf0036cdabca536897dae4a8e7f9c2c983de4383db3f4281166a82a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1556.jpg",
+      "group": "munna:2025-04-04"
+    },
+    {
+      "member": "train/rice__healthy/e69343e1dbd500394224ec0dfdbad5345c15f2c021923ea45179dd03ecd9e274.jpg",
+      "class_name": "rice__healthy",
+      "sha256": "e69343e1dbd500394224ec0dfdbad5345c15f2c021923ea45179dd03ecd9e274",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1444.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/0032f2ae0d6a3d7073bb84c118090fab3875933ca37388e22c0454b9fc7006b3.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0032f2ae0d6a3d7073bb84c118090fab3875933ca37388e22c0454b9fc7006b3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_177.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__sheath_blight/03640aeb6f8d71ab44b63f88aca8aa8158a7989780968dad8fcb6cb056a265d4.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "03640aeb6f8d71ab44b63f88aca8aa8158a7989780968dad8fcb6cb056a265d4",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1632.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/072ca1484774691cdec9e01535381047900e009589e422bc9d8fb9647e38835f.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "072ca1484774691cdec9e01535381047900e009589e422bc9d8fb9647e38835f",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_409.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/090cf1f9b3eaa0529f23be250b21ab79d282679241810cffc6bf190754053407.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "090cf1f9b3eaa0529f23be250b21ab79d282679241810cffc6bf190754053407",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1338.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/0ac4969f16a8a622c9792a36e3886eadccedd53e9f72e743b69eb493cc6048c7.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0ac4969f16a8a622c9792a36e3886eadccedd53e9f72e743b69eb493cc6048c7",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1508.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/0f3bf072132cb348c33fb3b4decd5dacdbc916bd9e1e79f4526ced3c1a6feab6.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "0f3bf072132cb348c33fb3b4decd5dacdbc916bd9e1e79f4526ced3c1a6feab6",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_221.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/13e5a9ce28c2f42500ef2766fa1b33f956823a174b484a29025b696f69e7f836.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "13e5a9ce28c2f42500ef2766fa1b33f956823a174b484a29025b696f69e7f836",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_453.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/146b8cf6a21b7341491f39cbd84371d276002ef75e38f158b20108a70f7e1bed.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "146b8cf6a21b7341491f39cbd84371d276002ef75e38f158b20108a70f7e1bed",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1174.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/149d639345c1c74f4c87a061dbf4138f0e21b0fe7960d66b48a79983889250f4.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "149d639345c1c74f4c87a061dbf4138f0e21b0fe7960d66b48a79983889250f4",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_315.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/1b2361b91c2335ca1c1143f939ffc4b3e8dcd1d9cf8b25310b3bb7390153d7ef.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "1b2361b91c2335ca1c1143f939ffc4b3e8dcd1d9cf8b25310b3bb7390153d7ef",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_59.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/1bff3b12c73bf30173e62faadf18cf29dfba0c2a6c568ab375706ef3a762d190.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "1bff3b12c73bf30173e62faadf18cf29dfba0c2a6c568ab375706ef3a762d190",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1552.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/1e2d6f0c917008eb01b5dc13c34502f6079974200777fe7b1931398b4e37fcd4.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "1e2d6f0c917008eb01b5dc13c34502f6079974200777fe7b1931398b4e37fcd4",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_123.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__sheath_blight/219ceced08af76b0823a0e46b9476f58c7492f3d80ec392ad608bd03ad2ea436.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "219ceced08af76b0823a0e46b9476f58c7492f3d80ec392ad608bd03ad2ea436",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1688.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/23afb3af8b9d1673ff5b2cda23eb264283b50161771cd6d2efa2c4e9441c5337.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "23afb3af8b9d1673ff5b2cda23eb264283b50161771cd6d2efa2c4e9441c5337",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1098.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/24617bdcf332bc683d2c8ebb74575cd39202bf5699a287587097aa3c6e1d75b0.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "24617bdcf332bc683d2c8ebb74575cd39202bf5699a287587097aa3c6e1d75b0",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_415.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/27b807eaeefc8bee6cff0b488d453559dcf0d452a8a74af7830f9be5918eefdc.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "27b807eaeefc8bee6cff0b488d453559dcf0d452a8a74af7830f9be5918eefdc",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_370.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/2cb8fcc8e80bddc60b8f9685d3b889a05f6cefd515fb7eaf119fdbecdcde76f8.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "2cb8fcc8e80bddc60b8f9685d3b889a05f6cefd515fb7eaf119fdbecdcde76f8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1556.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/309a25ad8e877fb3adfc339e1a268af9311f195a43f3c1bc4f46e2bcfe679f31.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "309a25ad8e877fb3adfc339e1a268af9311f195a43f3c1bc4f46e2bcfe679f31",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_480.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/30e3b2d97f5b3faa480fc09b52776776b319cca827849995555e6bf39923b85c.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "30e3b2d97f5b3faa480fc09b52776776b319cca827849995555e6bf39923b85c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1608.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/318b3124f19bc188db33076ee5fcdf16826a53c92a8da3cd83117d61be111511.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "318b3124f19bc188db33076ee5fcdf16826a53c92a8da3cd83117d61be111511",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_483.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/31d351d078a92ab6056073612ee2e81e799ac2c9212c9aed1b6f6add20d45485.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "31d351d078a92ab6056073612ee2e81e799ac2c9212c9aed1b6f6add20d45485",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1574.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/34cba14d0d7768ad33fdf17dce90e2becc01b7eae562564f534cd29d521ec0e9.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "34cba14d0d7768ad33fdf17dce90e2becc01b7eae562564f534cd29d521ec0e9",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_992.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/3c040945cca618f931d162adbff8d00304f0644c97016891135b6855bba30e6a.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "3c040945cca618f931d162adbff8d00304f0644c97016891135b6855bba30e6a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_213.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/3f02d0029aae41ef6842dbcee3023bc51bfe40447cf5ba1abae712abd3804af9.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "3f02d0029aae41ef6842dbcee3023bc51bfe40447cf5ba1abae712abd3804af9",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_394.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/4229ef84a00f1601e85ef02a271943a01b168ed3bcb141b33c1ec8c59dac3e31.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "4229ef84a00f1601e85ef02a271943a01b168ed3bcb141b33c1ec8c59dac3e31",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_278.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/426759831a13bae4735edb00ea67d33a4c85e973c2e6696f696625757f8fddd7.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "426759831a13bae4735edb00ea67d33a4c85e973c2e6696f696625757f8fddd7",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_372.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/42b0ad6c02ede1b1837b839175e2c4c473fee77a132c8d6dac4981c35c8df245.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "42b0ad6c02ede1b1837b839175e2c4c473fee77a132c8d6dac4981c35c8df245",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1298.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/42d1d6f1b6d73b2978e2d85d0d8264b3e619eccced6d31c1887c122594275d3e.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "42d1d6f1b6d73b2978e2d85d0d8264b3e619eccced6d31c1887c122594275d3e",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1674.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/4613a3542248509fce9ad2687460c0aa9be9fd776e21381fb804cacbb3e62a12.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "4613a3542248509fce9ad2687460c0aa9be9fd776e21381fb804cacbb3e62a12",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_62.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/46bfbda30db1c5fd215ab1680d0d759b34f0a387a92ed2d9e3971e59768994d8.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "46bfbda30db1c5fd215ab1680d0d759b34f0a387a92ed2d9e3971e59768994d8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1226.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/497902c91e17d39c008dc14bce3932c4fba4aefe9632d962083e18b6195716cf.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "497902c91e17d39c008dc14bce3932c4fba4aefe9632d962083e18b6195716cf",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_147.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__sheath_blight/4d5ddfaf03c413c4a88d868d643d223c617754e5b17f57d31b61f73d0abcbac2.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "4d5ddfaf03c413c4a88d868d643d223c617754e5b17f57d31b61f73d0abcbac2",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_379.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/4db62acc8a588308044852e0eaffb3d683ff536c1d2df77e2912cf97a197db0c.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "4db62acc8a588308044852e0eaffb3d683ff536c1d2df77e2912cf97a197db0c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_712.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/4dd67ea09c465845f127a8ae3a617c1ffd54128d69514a59ba76e0c990002b9b.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "4dd67ea09c465845f127a8ae3a617c1ffd54128d69514a59ba76e0c990002b9b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_51.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/502bfcd1f6501c6f99437218f8e750363ba5322af7395470a2ede9148a86c2d5.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "502bfcd1f6501c6f99437218f8e750363ba5322af7395470a2ede9148a86c2d5",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1625.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/51cbd9799c8bdce38089b2decef8eaa25bf78ffa9b5c7fff074f433b0f24353e.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "51cbd9799c8bdce38089b2decef8eaa25bf78ffa9b5c7fff074f433b0f24353e",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_349.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/5306d15f59ae1f99aced03bd5bdf7324a20cd823536fb51f1390f59aeb89c6cc.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "5306d15f59ae1f99aced03bd5bdf7324a20cd823536fb51f1390f59aeb89c6cc",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1514.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/5693bc709307cb943bd95206608e60ff66432a33a6bcc1ee3f2091b01970f784.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "5693bc709307cb943bd95206608e60ff66432a33a6bcc1ee3f2091b01970f784",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_326.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/579ffd741fa0ad962006061e7523ac884c05ed70bafda837039d21572ac4fcc3.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "579ffd741fa0ad962006061e7523ac884c05ed70bafda837039d21572ac4fcc3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1647.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/597e90a17872b54aa0ec4890b372c2fa3b532fe73a416f7c9dc843e900a4d934.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "597e90a17872b54aa0ec4890b372c2fa3b532fe73a416f7c9dc843e900a4d934",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_384.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/599510d9a1aaa9a9c5835dabb6a8846326bb631e3e678fd1d9531c300002d2ae.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "599510d9a1aaa9a9c5835dabb6a8846326bb631e3e678fd1d9531c300002d2ae",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1665.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/59a81cbcb14e5f7cc47e1df6a7f5eaa16e107321a42ebbd7aaf46d8d2752602a.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "59a81cbcb14e5f7cc47e1df6a7f5eaa16e107321a42ebbd7aaf46d8d2752602a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_76.jpg",
+      "group": "munna:2025-04-12"
+    },
+    {
+      "member": "train/rice__sheath_blight/5a75acc274a908f6a2924593156751ac98ddcf59f8f9a6f2a10c7b89b1e9c219.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "5a75acc274a908f6a2924593156751ac98ddcf59f8f9a6f2a10c7b89b1e9c219",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1601.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/5c1889d838fc959f7f501ba0b42de68c2546a4b247ad6ebc74f3ed537379fe5c.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "5c1889d838fc959f7f501ba0b42de68c2546a4b247ad6ebc74f3ed537379fe5c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1592.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/5f9c6ac60eea91837d29c7d9e4a875db65d742d0095f1dba14bc4e99b7eca0af.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "5f9c6ac60eea91837d29c7d9e4a875db65d742d0095f1dba14bc4e99b7eca0af",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_175.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__sheath_blight/60ec91cee2f8b5c44d842bf171adf2f26c2c25e8b6bcc7c9abb7fbd95c64beff.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "60ec91cee2f8b5c44d842bf171adf2f26c2c25e8b6bcc7c9abb7fbd95c64beff",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1623.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/634491569c0f46061d74d9f3ef41b684b9e4375f59e6de9225b40a5926c87a90.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "634491569c0f46061d74d9f3ef41b684b9e4375f59e6de9225b40a5926c87a90",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_363.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/665ac090e8eb40083c9d7bda4d13a0aba957ed689d9f3cdb34014ad1eff3357d.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "665ac090e8eb40083c9d7bda4d13a0aba957ed689d9f3cdb34014ad1eff3357d",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1563.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/672ec51d381370b29aad0bafbe7ae0478a2746ff4dc598016c9911da5c185aa7.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "672ec51d381370b29aad0bafbe7ae0478a2746ff4dc598016c9911da5c185aa7",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1496.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/6819065357fc0edbecbbe543635326b81fb89973e475764bd064e7ba1b1c54f4.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "6819065357fc0edbecbbe543635326b81fb89973e475764bd064e7ba1b1c54f4",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_142.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__sheath_blight/6d9aaa50ce0d0d370e9844658a72abae5229394b0b71ecba051412f01623f90e.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "6d9aaa50ce0d0d370e9844658a72abae5229394b0b71ecba051412f01623f90e",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1710.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__sheath_blight/6e235373fdf2789d353da58b37c2c8641060aa623c9fb343669f927645153fd6.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "6e235373fdf2789d353da58b37c2c8641060aa623c9fb343669f927645153fd6",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_418.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/6f5c9435ad72aad055f9c4b3c819b90f31ad786d353e215d17d2459cea12db91.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "6f5c9435ad72aad055f9c4b3c819b90f31ad786d353e215d17d2459cea12db91",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_242.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/714282e7611aec940a38251ed81ccf0236a32c744e9eecd9f7436eefc1ed4a47.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "714282e7611aec940a38251ed81ccf0236a32c744e9eecd9f7436eefc1ed4a47",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1216.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/74424fa27eeb1bf03498b5c0483f1a24b52300fb94774fbf41fd6e3dd6a66d31.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "74424fa27eeb1bf03498b5c0483f1a24b52300fb94774fbf41fd6e3dd6a66d31",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_257.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/74bf024169a7e9cd05c1f4004478105a3f71bcf8e48b4b64109ac93d94ad028a.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "74bf024169a7e9cd05c1f4004478105a3f71bcf8e48b4b64109ac93d94ad028a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1498.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/77649b1143fb802a1bcb657b04ba61335096073158e6ee654131e6396bd3ac4e.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "77649b1143fb802a1bcb657b04ba61335096073158e6ee654131e6396bd3ac4e",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_67.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/79b57acde5a701277c2762644347a268684512edf7bcfb88e941e0e262c3d265.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "79b57acde5a701277c2762644347a268684512edf7bcfb88e941e0e262c3d265",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1602.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/79c4c128e834d26818f31dd9af816752aec7834e3714407d749b80fed3481e30.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "79c4c128e834d26818f31dd9af816752aec7834e3714407d749b80fed3481e30",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1621.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/7b742e358d7caf063a8c60df53d0af1199329b356b5c1ab57a9650a79002a761.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "7b742e358d7caf063a8c60df53d0af1199329b356b5c1ab57a9650a79002a761",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_53.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/7c56a1ee90a100d8c5227e0ae8f27898104a46f0ec0eb3f05c99392f60d69926.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "7c56a1ee90a100d8c5227e0ae8f27898104a46f0ec0eb3f05c99392f60d69926",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_281.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/7efb5ab417ed9a227e49e0de4068c18d2cd1241d53a498f595b71170a427b378.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "7efb5ab417ed9a227e49e0de4068c18d2cd1241d53a498f595b71170a427b378",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1701.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__sheath_blight/8460d46714edda22d0cae69be285c21788b2a3f8e73d624a7be25bd265820c01.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "8460d46714edda22d0cae69be285c21788b2a3f8e73d624a7be25bd265820c01",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_7.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/85fff8d79a9e3e2299f47854feba8adeda54f7d963caffdda1f6a3b32a2d28a3.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "85fff8d79a9e3e2299f47854feba8adeda54f7d963caffdda1f6a3b32a2d28a3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_307.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/884f52f0656ea3dc6008c1f346b1c3ae09d19babbf6ad6722279e3981b4233f6.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "884f52f0656ea3dc6008c1f346b1c3ae09d19babbf6ad6722279e3981b4233f6",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_157.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__sheath_blight/8f1a45983d6b787ce95557ecf8d5a1034c82e8a1ea9a639eeed1e2396d91895e.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "8f1a45983d6b787ce95557ecf8d5a1034c82e8a1ea9a639eeed1e2396d91895e",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_748.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/901110cf75d8dcca292409397f26907db6bc96d00e13d1c391c7f9c23a353c3d.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "901110cf75d8dcca292409397f26907db6bc96d00e13d1c391c7f9c23a353c3d",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1631.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/9034acf290ad700bb88ac73c35bff14a22b4168abd0411303393f558b347b6aa.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "9034acf290ad700bb88ac73c35bff14a22b4168abd0411303393f558b347b6aa",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_11.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/90b03563b7e835e8273ce9b78dab274d2b72b1e3bf34589f0da9a943462f5bcf.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "90b03563b7e835e8273ce9b78dab274d2b72b1e3bf34589f0da9a943462f5bcf",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_103.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__sheath_blight/9452456a5181931973d0852ba0d735f9d6d286e50be5a75a24362cbdb39be8f9.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "9452456a5181931973d0852ba0d735f9d6d286e50be5a75a24362cbdb39be8f9",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_131.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__sheath_blight/95329d68c5c59d3daee1d79d9b482eca7ec352d1ecd235c28c0e722d5e856520.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "95329d68c5c59d3daee1d79d9b482eca7ec352d1ecd235c28c0e722d5e856520",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_272.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/9552b10e5a4164ba756e5fc2d29737e9a2cf196a843962098ed97691a4fd4ae9.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "9552b10e5a4164ba756e5fc2d29737e9a2cf196a843962098ed97691a4fd4ae9",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_338.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/96cb2173574d51e6fb6212b42bb2bdb22b5f09abca605ab780885b794b648424.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "96cb2173574d51e6fb6212b42bb2bdb22b5f09abca605ab780885b794b648424",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1590.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/97f894322ae88cc855e5f78f28fe953802de5df82950a0a5373d9dddcdf61232.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "97f894322ae88cc855e5f78f28fe953802de5df82950a0a5373d9dddcdf61232",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_91.jpg",
+      "group": "munna:2025-04-20"
+    },
+    {
+      "member": "train/rice__sheath_blight/995d8abb4c46ef2becea7eee542eca591829eaa715acd1090d5a61d8d0eeb984.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "995d8abb4c46ef2becea7eee542eca591829eaa715acd1090d5a61d8d0eeb984",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_334.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/9ca0686a667863057c7eaa7d99e582cd6c5293a89996ae317929bdd5842afc25.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "9ca0686a667863057c7eaa7d99e582cd6c5293a89996ae317929bdd5842afc25",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_362.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/9e218eeba0f2a66dbfbe94a283eef9c30b71195f90dc1ba0206431ac28d8b83d.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "9e218eeba0f2a66dbfbe94a283eef9c30b71195f90dc1ba0206431ac28d8b83d",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_368.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/a2dd802c1e4f48db732e8c51ca6d8a331002177fb8fef45558de979dd43bf402.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "a2dd802c1e4f48db732e8c51ca6d8a331002177fb8fef45558de979dd43bf402",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1597.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/a6097e7d5c62220fe76df6ebec43517115e09c58de935ab5ffaaf5709f48a2e8.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "a6097e7d5c62220fe76df6ebec43517115e09c58de935ab5ffaaf5709f48a2e8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1209.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/a64558701f94499516874768275eeaab2cb0632e87e66eb1dd050c8d2ce0a46e.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "a64558701f94499516874768275eeaab2cb0632e87e66eb1dd050c8d2ce0a46e",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1187.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/a799db1956b0806eaaed6cdf45035dbbce588feb8973f6e9445de10de57d215a.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "a799db1956b0806eaaed6cdf45035dbbce588feb8973f6e9445de10de57d215a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_115.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__sheath_blight/a9587ad4603a775e4c2d91b4764a60b36d2b9971ed3b71369b46328b3d56e369.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "a9587ad4603a775e4c2d91b4764a60b36d2b9971ed3b71369b46328b3d56e369",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1232.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/a9d8d420c034c4030bc58df6dae6e20564f4c5090407fbf82bbccbee01856e0a.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "a9d8d420c034c4030bc58df6dae6e20564f4c5090407fbf82bbccbee01856e0a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_321.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/afbf77d559d56046b82690665af52f9ec999085dea7a0495a009125d9dc0dc40.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "afbf77d559d56046b82690665af52f9ec999085dea7a0495a009125d9dc0dc40",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1531.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/b15244448e079f36e36129f06443563c1ff3285109261480f217d98991707e8b.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "b15244448e079f36e36129f06443563c1ff3285109261480f217d98991707e8b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1503.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/b1bb017b1c671702eaec92daccdf83441442d048086863d4daed1fb33298e332.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "b1bb017b1c671702eaec92daccdf83441442d048086863d4daed1fb33298e332",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_980.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/b21267fd82cc40ee8661ac4416ecf7e455c782badceabdd79e4b75b46bc044c5.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "b21267fd82cc40ee8661ac4416ecf7e455c782badceabdd79e4b75b46bc044c5",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1269.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/b30f94674ad6ad6422c0cfe50945f5a49f78634f4221ffa28c67a144c362de45.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "b30f94674ad6ad6422c0cfe50945f5a49f78634f4221ffa28c67a144c362de45",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_386.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/b622ced7dc638af7b38a9060f6801b85312e8da15f7768ad2337ec7ff0fc4ae5.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "b622ced7dc638af7b38a9060f6801b85312e8da15f7768ad2337ec7ff0fc4ae5",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1282.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/b681bc87f46550d5cd8853438be9bcbc3bd04b19a9f30de693e5c2db301fc943.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "b681bc87f46550d5cd8853438be9bcbc3bd04b19a9f30de693e5c2db301fc943",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1637.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/b7c7d6e73f528cf225e1a58c84bceacb19f2d554fcd27284ab0ddc4b22b2009c.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "b7c7d6e73f528cf225e1a58c84bceacb19f2d554fcd27284ab0ddc4b22b2009c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1285.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/b8d278f72c172b55745fd6e697d66defdc0ba0fa4eef5354ab9212d01c00d70c.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "b8d278f72c172b55745fd6e697d66defdc0ba0fa4eef5354ab9212d01c00d70c",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_789.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/ba8f1af35d0fea8fd03af4db6c84069f46820528aea5d9b86e4235a69e6f604a.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "ba8f1af35d0fea8fd03af4db6c84069f46820528aea5d9b86e4235a69e6f604a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_151.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__sheath_blight/bac19c64720e8605d4e787513fc1b12c2b770e260618d7102237d5cf0340db9b.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "bac19c64720e8605d4e787513fc1b12c2b770e260618d7102237d5cf0340db9b",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_489.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/bbb89b86d49b8f58eacb2848e6e4c1df80ddb479ee802bcbd6a2d4d233907d3d.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "bbb89b86d49b8f58eacb2848e6e4c1df80ddb479ee802bcbd6a2d4d233907d3d",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1706.jpg",
+      "group": "munna:2025-05-02"
+    },
+    {
+      "member": "train/rice__sheath_blight/bcb53c5505379626316108bf4bcec63e2449e7a3bc774267f9abc388a296f83d.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "bcb53c5505379626316108bf4bcec63e2449e7a3bc774267f9abc388a296f83d",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_176.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__sheath_blight/be6c60da0481216b82ff71555221b7144bd791e00f29313d3fe160285217a3b7.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "be6c60da0481216b82ff71555221b7144bd791e00f29313d3fe160285217a3b7",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_70.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/bf859e9becb8cd240073d3fb6b74be7e1c357d036f69e1bd908f5f2b658a52c3.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "bf859e9becb8cd240073d3fb6b74be7e1c357d036f69e1bd908f5f2b658a52c3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1675.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/c10a1cdfad116fd5c9f48238572c3a032ff8ad005031c05ad5578275d1ff7087.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "c10a1cdfad116fd5c9f48238572c3a032ff8ad005031c05ad5578275d1ff7087",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1517.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/c709da0ff62c5848dea1b717f4e18f2aa9c4c7060e539eac981c9709f86a6fe9.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "c709da0ff62c5848dea1b717f4e18f2aa9c4c7060e539eac981c9709f86a6fe9",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_65.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/c7c9bb65105e0dfe193d4961ba1e95229a2da84124aa5a0130317e464df6962d.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "c7c9bb65105e0dfe193d4961ba1e95229a2da84124aa5a0130317e464df6962d",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_226.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/cc796a9c51f4a7cba622d1a36de6b66724bf6fbbb8bced40db4f82a063c5ca7a.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "cc796a9c51f4a7cba622d1a36de6b66724bf6fbbb8bced40db4f82a063c5ca7a",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1641.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/ce308bbcba4756a70d0228ae48a434f4063cdc2c9ff7b627e608c397cb512c23.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "ce308bbcba4756a70d0228ae48a434f4063cdc2c9ff7b627e608c397cb512c23",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_986.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/ce3c1a44372b7335145add68fa33e17dc0c3e55f4dacbe47edabe89762bf7553.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "ce3c1a44372b7335145add68fa33e17dc0c3e55f4dacbe47edabe89762bf7553",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_37.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/ce4bd877256ff4ec5c145a59bc835df92093f806fe8516e004abc1eb62919f55.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "ce4bd877256ff4ec5c145a59bc835df92093f806fe8516e004abc1eb62919f55",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1644.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/d807226986cac5c9d7c187c181e16ee45b5555ec792cad13996b1033e5d143ef.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "d807226986cac5c9d7c187c181e16ee45b5555ec792cad13996b1033e5d143ef",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1223.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/d82429964eaef7030c98a7f6975ca52df1616b4d5b24b11a82a13541d3a433d8.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "d82429964eaef7030c98a7f6975ca52df1616b4d5b24b11a82a13541d3a433d8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_146.jpg",
+      "group": "munna:2025-04-26"
+    },
+    {
+      "member": "train/rice__sheath_blight/d8971f42ccc1c0bac13cf0c201ad3fe1e00ad419a21b93d2c3680f3c3f3380c8.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "d8971f42ccc1c0bac13cf0c201ad3fe1e00ad419a21b93d2c3680f3c3f3380c8",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_488.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/d8c27d46ca4951f22e0382c949e876b547b33fb3d46f6e445bdf8d9a1bd3eeb3.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "d8c27d46ca4951f22e0382c949e876b547b33fb3d46f6e445bdf8d9a1bd3eeb3",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_283.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/d9867e011a5495ddba5c85a847c57627ccd1dae279ca5e34ad78d230438bc117.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "d9867e011a5495ddba5c85a847c57627ccd1dae279ca5e34ad78d230438bc117",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1571.jpg",
+      "group": "munna:2025-04-23"
+    },
+    {
+      "member": "train/rice__sheath_blight/dbfa40305e27671f3e5e50c5636906605735a889a3d56e80d88887550383422f.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "dbfa40305e27671f3e5e50c5636906605735a889a3d56e80d88887550383422f",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1622.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/de3592447c2b6bcb71509e1131ad2a2a08c7f4af2f82a3a7e8031f4067ea5ff2.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "de3592447c2b6bcb71509e1131ad2a2a08c7f4af2f82a3a7e8031f4067ea5ff2",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_269.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/de39fe68559fd86c07c486810e9f2420f209276745a63f073db0da6ea70ed6bc.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "de39fe68559fd86c07c486810e9f2420f209276745a63f073db0da6ea70ed6bc",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_86.jpg",
+      "group": "munna:2025-04-20"
+    },
+    {
+      "member": "train/rice__sheath_blight/df22229e31b98a55fcc569aa4b13983d5792914e2d4bf97a0fb47e9a161cbab5.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "df22229e31b98a55fcc569aa4b13983d5792914e2d4bf97a0fb47e9a161cbab5",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_46.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/e1fcb45efa76fe440927604115f610eeb952faa4b6c4fb0df0ddd0d605236189.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "e1fcb45efa76fe440927604115f610eeb952faa4b6c4fb0df0ddd0d605236189",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_245.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/e2b16b2c6a007a7dce24640b88ef93075dbe4cd7d02c48b3bc2d08488cebd135.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "e2b16b2c6a007a7dce24640b88ef93075dbe4cd7d02c48b3bc2d08488cebd135",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_40.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/e434338cd56f3b98951a7da73d8fe2fd3c2caa424ff792cea9455b795388c4c4.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "e434338cd56f3b98951a7da73d8fe2fd3c2caa424ff792cea9455b795388c4c4",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_215.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/e45e131d4aa48771c136ea4a251dfab3069d701b44168577aa0431bb779a3ccc.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "e45e131d4aa48771c136ea4a251dfab3069d701b44168577aa0431bb779a3ccc",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_484.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/e678f1b99d76f2ab6fa9d9a6a16350bf9a3f8297f30674b45139e4186ac84221.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "e678f1b99d76f2ab6fa9d9a6a16350bf9a3f8297f30674b45139e4186ac84221",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_47.jpg",
+      "group": "munna:2025-04-09"
+    },
+    {
+      "member": "train/rice__sheath_blight/e698055a1ba9f14db6ce91246aad4e257ee9c83e06c7ebd695a62d8114fb2e89.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "e698055a1ba9f14db6ce91246aad4e257ee9c83e06c7ebd695a62d8114fb2e89",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_436.jpg",
+      "group": "munna:2025-04-30"
+    },
+    {
+      "member": "train/rice__sheath_blight/e6ef0c637f3560c5e97cbaac5902542bf254deacacf1c90b0ec51501eb5c7c42.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "e6ef0c637f3560c5e97cbaac5902542bf254deacacf1c90b0ec51501eb5c7c42",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_309.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/e80def8844394f3c9a3a71b79f85b4d8d408390fa59617404427c4454110cfdb.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "e80def8844394f3c9a3a71b79f85b4d8d408390fa59617404427c4454110cfdb",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_297.jpg",
+      "group": "munna:2025-04-29"
+    },
+    {
+      "member": "train/rice__sheath_blight/e88b67eaab8171cd815c103f578faf42a29064e235f2014823aa8dafd6014358.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "e88b67eaab8171cd815c103f578faf42a29064e235f2014823aa8dafd6014358",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_98.jpg",
+      "group": "munna:2025-04-25"
+    },
+    {
+      "member": "train/rice__sheath_blight/e923fe03ea460cd572705aee1f03c722ee0dcc7457a054f147969efb8bfa0b15.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "e923fe03ea460cd572705aee1f03c722ee0dcc7457a054f147969efb8bfa0b15",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_664.jpg",
+      "group": "munna:2025-05-03"
+    },
+    {
+      "member": "train/rice__sheath_blight/ea02b3e2ee34e4481302c6109c78dab7ab6d0efb22925dc34015662b965787db.jpg",
+      "class_name": "rice__sheath_blight",
+      "sha256": "ea02b3e2ee34e4481302c6109c78dab7ab6d0efb22925dc34015662b965787db",
+      "source_locator": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1090.jpg",
+      "group": "munna:2025-05-03"
+    }
+  ]
+}
