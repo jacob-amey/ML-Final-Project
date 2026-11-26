@@ -1,0 +1,1020 @@
+{
+  "run": {
+    "recipe_sha256": "a4f70d6e4fd004cffaeeb0f354fd8158061002c92785fdfa6da04c02f3d122a6",
+    "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+    "training_addition_fingerprint": "73351dacfd90b481a825dffd65cb2e390078375343f375967a9fc8f5151aaafc",
+    "pretoria_sha256": "48b736fb42c333debc54b86be4aa5c6c5a7812e22e0c4b9e62507e5dd201da15",
+    "reference_checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+    "training_code_sha256": "b72cf768594b3e676e90777c934a4b136882199de6278731f4bc592f142c98f8",
+    "checkpoint_loop_sha256": "b5915d348c27a57c8397efce32839ca4367cd549dac029e4dc561abe7079b758",
+    "preprocessing": {
+      "version": "exif_rgb_letterbox_bilinear_v1",
+      "input_size": 128,
+      "mean": [
+        0.47854209032958844,
+        0.5106936669477582,
+        0.4227711234017792
+      ],
+      "std": [
+        0.20955548763908846,
+        0.19110100749812656,
+        0.23022600802521317
+      ],
+      "statistics_split": "train",
+      "statistics_images": 59008,
+      "resize": "Pillow ImageOps.pad bilinear, RGB padding 128",
+      "orientation": "EXIF transpose",
+      "channels": "RGB",
+      "frame": 0,
+      "scaling": "uint8 / 255, then (x - mean) / std",
+      "tensor_layout": "NCHW"
+    }
+  },
+  "completed_utc": "2026-11-26T01:04:23.033489+00:00",
+  "masked_incumbent": {
+    "master": {
+      "accuracy": 0.9447340980187695,
+      "macro_f1": 0.9132122682934748,
+      "correct": 906,
+      "sample_count": 959,
+      "loss": 0.1485954225063324,
+      "confusion_matrix": [
+        [
+          242,
+          3,
+          0,
+          3,
+          8,
+          0
+        ],
+        [
+          0,
+          120,
+          0,
+          12,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          232,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          14,
+          0,
+          247,
+          4,
+          2
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          25,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          40
+        ]
+      ],
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "corn__common_rust",
+          "precision": 0.9877551020408163,
+          "recall": 0.9453125,
+          "f1": 0.9660678642714572,
+          "support": 256
+        },
+        {
+          "class_index": 1,
+          "class_name": "corn__gray_leaf_spot",
+          "precision": 0.8633093525179856,
+          "recall": 0.8955223880597015,
+          "f1": 0.8791208791208792,
+          "support": 134
+        },
+        {
+          "class_index": 2,
+          "class_name": "corn__healthy",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 232
+        },
+        {
+          "class_index": 3,
+          "class_name": "corn__northern_leaf_blight",
+          "precision": 0.9427480916030534,
+          "recall": 0.9250936329588015,
+          "f1": 0.9338374291115313,
+          "support": 267
+        },
+        {
+          "class_index": 4,
+          "class_name": "corn__rust",
+          "precision": 0.6410256410256411,
+          "recall": 0.8333333333333334,
+          "f1": 0.7246376811594204,
+          "support": 30
+        },
+        {
+          "class_index": 5,
+          "class_name": "corn__smut",
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "f1": 0.975609756097561,
+          "support": 40
+        }
+      ]
+    },
+    "field": {
+      "accuracy": 0.2765957446808511,
+      "macro_f1": 0.2027777777777778,
+      "correct": 26,
+      "sample_count": 94,
+      "loss": 5.516782283782959,
+      "confusion_matrix": [
+        [
+          0,
+          9,
+          0,
+          7,
+          8,
+          0
+        ],
+        [
+          1,
+          7,
+          0,
+          11,
+          3,
+          2
+        ],
+        [
+          0,
+          2,
+          0,
+          17,
+          5,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          19,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "corn__common_rust",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 24
+        },
+        {
+          "class_index": 1,
+          "class_name": "corn__gray_leaf_spot",
+          "precision": 0.3333333333333333,
+          "recall": 0.2916666666666667,
+          "f1": 0.3111111111111111,
+          "support": 24
+        },
+        {
+          "class_index": 2,
+          "class_name": "corn__healthy",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 24
+        },
+        {
+          "class_index": 3,
+          "class_name": "corn__northern_leaf_blight",
+          "precision": 0.35185185185185186,
+          "recall": 0.8636363636363636,
+          "f1": 0.5000000000000001,
+          "support": 22
+        },
+        {
+          "class_index": 4,
+          "class_name": "corn__rust",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        },
+        {
+          "class_index": 5,
+          "class_name": "corn__smut",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      ]
+    }
+  },
+  "arms": {
+    "control": {
+      "epoch": 10,
+      "scores": {
+        "master": {
+          "accuracy": 0.8269030239833159,
+          "macro_f1": 0.7064256864467726,
+          "correct": 793,
+          "sample_count": 959,
+          "loss": 0.4188942611217499,
+          "confusion_matrix": [
+            [
+              240,
+              3,
+              0,
+              4,
+              8,
+              1
+            ],
+            [
+              0,
+              88,
+              0,
+              35,
+              10,
+              1
+            ],
+            [
+              0,
+              0,
+              232,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              43,
+              3,
+              199,
+              16,
+              3
+            ],
+            [
+              0,
+              7,
+              0,
+              3,
+              19,
+              1
+            ],
+            [
+              0,
+              3,
+              0,
+              6,
+              16,
+              15
+            ]
+          ],
+          "per_class": [
+            {
+              "class_index": 0,
+              "class_name": "corn__common_rust",
+              "precision": 0.9876543209876543,
+              "recall": 0.9375,
+              "f1": 0.9619238476953907,
+              "support": 256
+            },
+            {
+              "class_index": 1,
+              "class_name": "corn__gray_leaf_spot",
+              "precision": 0.6111111111111112,
+              "recall": 0.6567164179104478,
+              "f1": 0.6330935251798562,
+              "support": 134
+            },
+            {
+              "class_index": 2,
+              "class_name": "corn__healthy",
+              "precision": 0.9872340425531915,
+              "recall": 1.0,
+              "f1": 0.9935760171306209,
+              "support": 232
+            },
+            {
+              "class_index": 3,
+              "class_name": "corn__northern_leaf_blight",
+              "precision": 0.805668016194332,
+              "recall": 0.7453183520599251,
+              "f1": 0.77431906614786,
+              "support": 267
+            },
+            {
+              "class_index": 4,
+              "class_name": "corn__rust",
+              "precision": 0.2753623188405797,
+              "recall": 0.6333333333333333,
+              "f1": 0.3838383838383838,
+              "support": 30
+            },
+            {
+              "class_index": 5,
+              "class_name": "corn__smut",
+              "precision": 0.7142857142857143,
+              "recall": 0.375,
+              "f1": 0.4918032786885245,
+              "support": 40
+            }
+          ]
+        },
+        "field": {
+          "accuracy": 0.2765957446808511,
+          "macro_f1": 0.23812643301670489,
+          "correct": 26,
+          "sample_count": 94,
+          "loss": 3.008521318435669,
+          "confusion_matrix": [
+            [
+              0,
+              1,
+              0,
+              15,
+              6,
+              2
+            ],
+            [
+              0,
+              12,
+              0,
+              6,
+              5,
+              1
+            ],
+            [
+              0,
+              2,
+              0,
+              14,
+              8,
+              0
+            ],
+            [
+              0,
+              4,
+              0,
+              14,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "per_class": [
+            {
+              "class_index": 0,
+              "class_name": "corn__common_rust",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 24
+            },
+            {
+              "class_index": 1,
+              "class_name": "corn__gray_leaf_spot",
+              "precision": 0.631578947368421,
+              "recall": 0.5,
+              "f1": 0.5581395348837209,
+              "support": 24
+            },
+            {
+              "class_index": 2,
+              "class_name": "corn__healthy",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 24
+            },
+            {
+              "class_index": 3,
+              "class_name": "corn__northern_leaf_blight",
+              "precision": 0.2857142857142857,
+              "recall": 0.6363636363636364,
+              "f1": 0.39436619718309857,
+              "support": 22
+            },
+            {
+              "class_index": 4,
+              "class_name": "corn__rust",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            {
+              "class_index": 5,
+              "class_name": "corn__smut",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          ]
+        }
+      },
+      "train_loss": 0.4996542779065795,
+      "seconds": 0.9913994999951683,
+      "checkpoint": "runs/field_v10/corn-seasonal-seed434/control/epoch-010.pt",
+      "sha256": "969b00a241520af12923fecdb2d32f3064bdd0bec7c2efdfcc4da153176ab8c9",
+      "completed_epochs": 15,
+      "passed_master_limits": false,
+      "seed": 434,
+      "checkpoint_reload_verified": true
+    },
+    "field": {
+      "epoch": 6,
+      "scores": {
+        "master": {
+          "accuracy": 0.8248175182481752,
+          "macro_f1": 0.7152077379397678,
+          "correct": 791,
+          "sample_count": 959,
+          "loss": 0.4720831513404846,
+          "confusion_matrix": [
+            [
+              242,
+              5,
+              0,
+              3,
+              4,
+              2
+            ],
+            [
+              2,
+              78,
+              0,
+              42,
+              7,
+              5
+            ],
+            [
+              2,
+              0,
+              230,
+              0,
+              0,
+              0
+            ],
+            [
+              7,
+              30,
+              3,
+              197,
+              11,
+              19
+            ],
+            [
+              1,
+              7,
+              0,
+              0,
+              14,
+              8
+            ],
+            [
+              4,
+              2,
+              0,
+              0,
+              4,
+              30
+            ]
+          ],
+          "per_class": [
+            {
+              "class_index": 0,
+              "class_name": "corn__common_rust",
+              "precision": 0.937984496124031,
+              "recall": 0.9453125,
+              "f1": 0.9416342412451363,
+              "support": 256
+            },
+            {
+              "class_index": 1,
+              "class_name": "corn__gray_leaf_spot",
+              "precision": 0.639344262295082,
+              "recall": 0.582089552238806,
+              "f1": 0.609375,
+              "support": 134
+            },
+            {
+              "class_index": 2,
+              "class_name": "corn__healthy",
+              "precision": 0.9871244635193133,
+              "recall": 0.9913793103448276,
+              "f1": 0.989247311827957,
+              "support": 232
+            },
+            {
+              "class_index": 3,
+              "class_name": "corn__northern_leaf_blight",
+              "precision": 0.8140495867768595,
+              "recall": 0.7378277153558053,
+              "f1": 0.774066797642436,
+              "support": 267
+            },
+            {
+              "class_index": 4,
+              "class_name": "corn__rust",
+              "precision": 0.35,
+              "recall": 0.4666666666666667,
+              "f1": 0.4,
+              "support": 30
+            },
+            {
+              "class_index": 5,
+              "class_name": "corn__smut",
+              "precision": 0.46875,
+              "recall": 0.75,
+              "f1": 0.5769230769230769,
+              "support": 40
+            }
+          ]
+        },
+        "field": {
+          "accuracy": 0.23404255319148937,
+          "macro_f1": 0.22141938729874772,
+          "correct": 22,
+          "sample_count": 94,
+          "loss": 2.552989959716797,
+          "confusion_matrix": [
+            [
+              2,
+              12,
+              0,
+              6,
+              4,
+              0
+            ],
+            [
+              0,
+              13,
+              0,
+              4,
+              1,
+              6
+            ],
+            [
+              0,
+              8,
+              0,
+              4,
+              10,
+              2
+            ],
+            [
+              0,
+              7,
+              0,
+              7,
+              4,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "per_class": [
+            {
+              "class_index": 0,
+              "class_name": "corn__common_rust",
+              "precision": 1.0,
+              "recall": 0.08333333333333333,
+              "f1": 0.15384615384615385,
+              "support": 24
+            },
+            {
+              "class_index": 1,
+              "class_name": "corn__gray_leaf_spot",
+              "precision": 0.325,
+              "recall": 0.5416666666666666,
+              "f1": 0.40624999999999994,
+              "support": 24
+            },
+            {
+              "class_index": 2,
+              "class_name": "corn__healthy",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 24
+            },
+            {
+              "class_index": 3,
+              "class_name": "corn__northern_leaf_blight",
+              "precision": 0.3333333333333333,
+              "recall": 0.3181818181818182,
+              "f1": 0.3255813953488372,
+              "support": 22
+            },
+            {
+              "class_index": 4,
+              "class_name": "corn__rust",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            },
+            {
+              "class_index": 5,
+              "class_name": "corn__smut",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0
+            }
+          ]
+        }
+      },
+      "train_loss": 0.6343973746239129,
+      "seconds": 0.9887260000105016,
+      "checkpoint": "runs/field_v10/corn-seasonal-seed434/field/epoch-006.pt",
+      "sha256": "342ae1597d3341cb5350edab2ac95bc471d14e582cf75107cade26f9613a5c81",
+      "completed_epochs": 11,
+      "passed_master_limits": false,
+      "seed": 434,
+      "checkpoint_reload_verified": true
+    }
+  },
+  "training": {
+    "master": 3364,
+    "supplement": {
+      "corn__common_rust": 126,
+      "corn__gray_leaf_spot": 144,
+      "corn__healthy": 142
+    }
+  },
+  "field_gain_vs_control": -0.01670704571795717,
+  "field_gain_vs_original_given_corn": 0.01864160952096991,
+  "passed_screen": false,
+  "test_used": false,
+  "deployment_changed": false,
+  "history": {
+    "control": [
+      {
+        "epoch": 1,
+        "train_loss": 0.9509889993627193,
+        "seconds": 1.5226763329992536,
+        "master_accuracy": 0.7612095933263816,
+        "master_macro_f1": 0.5100406722196426,
+        "master_loss": 0.6696977615356445,
+        "field_accuracy": 0.1702127659574468,
+        "field_macro_f1": 0.13929146537842188,
+        "field_loss": 2.020822525024414
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.7207916313308781,
+        "seconds": 0.988144665985601,
+        "master_accuracy": 0.7872784150156413,
+        "master_macro_f1": 0.6164529195808774,
+        "master_loss": 0.5492321848869324,
+        "field_accuracy": 0.1702127659574468,
+        "field_macro_f1": 0.09817813765182185,
+        "field_loss": 2.5591137409210205
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.6388782093585548,
+        "seconds": 0.9821348749974277,
+        "master_accuracy": 0.7851929092805006,
+        "master_macro_f1": 0.6086492372631513,
+        "master_loss": 0.4825333058834076,
+        "field_accuracy": 0.22340425531914893,
+        "field_macro_f1": 0.1955702600863891,
+        "field_loss": 2.3435122966766357
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.6041915103540583,
+        "seconds": 0.9791168750089128,
+        "master_accuracy": 0.8102189781021898,
+        "master_macro_f1": 0.698307975976872,
+        "master_loss": 0.46181127429008484,
+        "field_accuracy": 0.10638297872340426,
+        "field_macro_f1": 0.1389059934318555,
+        "field_loss": 2.6122210025787354
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.5757291541766312,
+        "seconds": 0.9781293339910917,
+        "master_accuracy": 0.8102189781021898,
+        "master_macro_f1": 0.6901246078704538,
+        "master_loss": 0.46832287311553955,
+        "field_accuracy": 0.1595744680851064,
+        "field_macro_f1": 0.19960317460317462,
+        "field_loss": 2.5207912921905518
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.5652454879324315,
+        "seconds": 0.982961833011359,
+        "master_accuracy": 0.8196037539103233,
+        "master_macro_f1": 0.7089066675692869,
+        "master_loss": 0.4578411281108856,
+        "field_accuracy": 0.1702127659574468,
+        "field_macro_f1": 0.17914438502673796,
+        "field_loss": 2.9185192584991455
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.5459049237986743,
+        "seconds": 0.9842091670143418,
+        "master_accuracy": 0.8175182481751825,
+        "master_macro_f1": 0.7011925207228317,
+        "master_loss": 0.4526636600494385,
+        "field_accuracy": 0.10638297872340426,
+        "field_macro_f1": 0.13798701298701296,
+        "field_loss": 2.797654390335083
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.5355275111683344,
+        "seconds": 0.9873360000201501,
+        "master_accuracy": 0.8039624608967675,
+        "master_macro_f1": 0.5980938958816971,
+        "master_loss": 0.5279819369316101,
+        "field_accuracy": 0.2765957446808511,
+        "field_macro_f1": 0.1953216374269006,
+        "field_loss": 2.956651449203491
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.5335832985781007,
+        "seconds": 0.9838521660130937,
+        "master_accuracy": 0.8123044838373306,
+        "master_macro_f1": 0.6813083691441667,
+        "master_loss": 0.46899518370628357,
+        "field_accuracy": 0.2553191489361702,
+        "field_macro_f1": 0.18333333333333335,
+        "field_loss": 3.1926214694976807
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.4996542779065795,
+        "seconds": 0.9913994999951683,
+        "master_accuracy": 0.8269030239833159,
+        "master_macro_f1": 0.7064256864467726,
+        "master_loss": 0.4188942611217499,
+        "field_accuracy": 0.2765957446808511,
+        "field_macro_f1": 0.23812643301670489,
+        "field_loss": 3.008521318435669
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.5010748876858566,
+        "seconds": 0.9899242499959655,
+        "master_accuracy": 0.8362877997914494,
+        "master_macro_f1": 0.7053872307756818,
+        "master_loss": 0.417711466550827,
+        "field_accuracy": 0.23404255319148937,
+        "field_macro_f1": 0.23172606568832982,
+        "field_loss": 3.154872179031372
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.4939105106612383,
+        "seconds": 0.9841308749746531,
+        "master_accuracy": 0.8175182481751825,
+        "master_macro_f1": 0.7286777001784691,
+        "master_loss": 0.4993956387042999,
+        "field_accuracy": 0.07446808510638298,
+        "field_macro_f1": 0.10801217038539554,
+        "field_loss": 3.5825023651123047
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.4837635768167043,
+        "seconds": 1.0455182919977233,
+        "master_accuracy": 0.8164754953076121,
+        "master_macro_f1": 0.7247350023310268,
+        "master_loss": 0.4179578721523285,
+        "field_accuracy": 0.26595744680851063,
+        "field_macro_f1": 0.23566534439235487,
+        "field_loss": 3.4069297313690186
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.46787703567642275,
+        "seconds": 0.9881161669909488,
+        "master_accuracy": 0.8759124087591241,
+        "master_macro_f1": 0.7840559646232429,
+        "master_loss": 0.359356552362442,
+        "field_accuracy": 0.23404255319148937,
+        "field_macro_f1": 0.16916416916416915,
+        "field_loss": 3.5477750301361084
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.4630130511724343,
+        "seconds": 0.9912414160207845,
+        "master_accuracy": 0.8633993743482794,
+        "master_macro_f1": 0.7785275243997187,
+        "master_loss": 0.36385577917099,
+        "field_accuracy": 0.1595744680851064,
+        "field_macro_f1": 0.20733590733590732,
+        "field_loss": 3.2792208194732666
+      }
+    ],
+    "field": [
+      {
+        "epoch": 1,
+        "train_loss": 1.0506828932438868,
+        "seconds": 0.998896999983117,
+        "master_accuracy": 0.7559958289885297,
+        "master_macro_f1": 0.4941499193641084,
+        "master_loss": 0.6642171144485474,
+        "field_accuracy": 0.2127659574468085,
+        "field_macro_f1": 0.14984126984126983,
+        "field_loss": 2.0013339519500732
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.819454578524929,
+        "seconds": 0.9945873749966267,
+        "master_accuracy": 0.7466110531803962,
+        "master_macro_f1": 0.6315521231132389,
+        "master_loss": 0.6812602877616882,
+        "field_accuracy": 0.07446808510638298,
+        "field_macro_f1": 0.09054054054054053,
+        "field_loss": 2.5712313652038574
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.7346553979283672,
+        "seconds": 0.9929485000029672,
+        "master_accuracy": 0.7612095933263816,
+        "master_macro_f1": 0.5592364117567784,
+        "master_loss": 0.5440723299980164,
+        "field_accuracy": 0.20212765957446807,
+        "field_macro_f1": 0.1633903133903134,
+        "field_loss": 2.4958531856536865
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.7002223361346681,
+        "seconds": 0.9943595409858972,
+        "master_accuracy": 0.8008342022940563,
+        "master_macro_f1": 0.6735588857516986,
+        "master_loss": 0.5147371888160706,
+        "field_accuracy": 0.18085106382978725,
+        "field_macro_f1": 0.18357974910394265,
+        "field_loss": 2.481517791748047
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.6770875393334082,
+        "seconds": 0.9890295829973184,
+        "master_accuracy": 0.8175182481751825,
+        "master_macro_f1": 0.6812695752561408,
+        "master_loss": 0.4726032018661499,
+        "field_accuracy": 0.22340425531914893,
+        "field_macro_f1": 0.17902313735647069,
+        "field_loss": 2.3995144367218018
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.6343973746239129,
+        "seconds": 0.9887260000105016,
+        "master_accuracy": 0.8248175182481752,
+        "master_macro_f1": 0.7152077379397678,
+        "master_loss": 0.4720831513404846,
+        "field_accuracy": 0.23404255319148937,
+        "field_macro_f1": 0.22141938729874772,
+        "field_loss": 2.552989959716797
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.6280928463754007,
+        "seconds": 0.9938162500038743,
+        "master_accuracy": 0.8018769551616267,
+        "master_macro_f1": 0.6963444935705114,
+        "master_loss": 0.4782526195049286,
+        "field_accuracy": 0.1276595744680851,
+        "field_macro_f1": 0.10948477751756441,
+        "field_loss": 2.836587429046631
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.6122769084522279,
+        "seconds": 0.9929580829921179,
+        "master_accuracy": 0.7883211678832117,
+        "master_macro_f1": 0.6030085629912448,
+        "master_loss": 0.5034820437431335,
+        "field_accuracy": 0.22340425531914893,
+        "field_macro_f1": 0.13999542124542125,
+        "field_loss": 2.4369044303894043
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.5895662982079942,
+        "seconds": 0.9912319999712054,
+        "master_accuracy": 0.799791449426486,
+        "master_macro_f1": 0.7001355901018012,
+        "master_loss": 0.5211796164512634,
+        "field_accuracy": 0.2765957446808511,
+        "field_macro_f1": 0.19997143945163748,
+        "field_loss": 2.795919179916382
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.5757997328952208,
+        "seconds": 0.997169042006135,
+        "master_accuracy": 0.8206465067778936,
+        "master_macro_f1": 0.6791408560787094,
+        "master_loss": 0.43736740946769714,
+        "field_accuracy": 0.23404255319148937,
+        "field_macro_f1": 0.18203596037898362,
+        "field_loss": 3.032581090927124
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.5577195145316043,
+        "seconds": 0.9907892500050366,
+        "master_accuracy": 0.8289885297184567,
+        "master_macro_f1": 0.7271830210057001,
+        "master_loss": 0.43982258439064026,
+        "field_accuracy": 0.2553191489361702,
+        "field_macro_f1": 0.21456762749445674,
+        "field_loss": 2.566066265106201
+      }
+    ]
+  },
+  "gate_disposition": "The registered field gain and master guards did not pass. Stop after seed 434.",
+  "archive_source_checks": {
+    "decoded_candidates": 429,
+    "included": 412,
+    "shared_master_train": 3364,
+    "field_development": 94,
+    "master_development": 959,
+    "test_used": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": "leafcheck_seasonal_corn_v1",
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "candidates": 429,
+  "files_sha256": {
+    "manifest.csv": "7b957b766504aab5c1b320e286f9cded441b691d85c1dff838c054371dcf4058",
+    "source.json": "d51cac7932f92c030b493a67d7dff29c18d61a0cda4fedf3d6fb9d2347fc34bb",
+    "source_files.csv": "7be5781e10a2c45dc7c8afd013fbe70d3e229d036e194953ceaa595611c704fd"
+  },
+  "train_only_counts": {
+    "corn__common_rust": 126,
+    "corn__gray_leaf_spot": 144,
+    "corn__healthy": 142
+  },
+  "exclusions": {
+    "new_cluster_repeated_view": 17
+  },
+  "fingerprint": "73351dacfd90b481a825dffd65cb2e390078375343f375967a9fc8f5151aaafc"
+}

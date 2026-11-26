@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-26T00:58:20.849476+00:00",
+  "updated_utc": "2026-11-26T05:19:26.253539+00:00",
   "frozen_model": "artifacts/leafcheck177-v1/model.pt",
   "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
   "deployment_decision": "Retain the frozen 177-label full-image checkpoint and verified optional potato context. Use the app with the crop coverage and score explanation.",
@@ -10,11 +10,12 @@
     "runs/field_v8/support-probe-repro",
     "runs/field_v9/potato-partial-seed434",
     "runs/field_v10/pretoria-baseline",
-    "runs/field_v10/corn-gate-check"
+    "runs/field_v10/corn-gate-check",
+    "runs/field_v10/corn-seasonal-seed434"
   ],
-  "active_training": false,
-  "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev6.docx",
-  "report_sha256": "d4b5edb444fe37cffe59b16727aed8e47d5851a93a045b8c905cd8eedd0edffe",
+  "active_training": true,
+  "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev7.docx",
+  "report_sha256": "19a62459a9213f1088831e1797752bd43bfa9c38200bb498c92d54aaa5688e71",
   "protected_confirmations": [
     "course holdout",
     "PlantDoc",
@@ -26,8 +27,8 @@
     "Holeta and TLID",
     "Hossain"
   ],
-  "best_next_question": "Can independent source and capture evidence supply corn condition coverage that the repeated-view intake lacked?",
-  "next_action": "Verify original seasonal corn source bytes and repeat-view groups before considering a distinct corn-training experiment. Its catalog shows 127 common-rust filenames dated to one day.",
+  "best_next_question": "Can mixable early CNN feature statistics improve joint classification across the four development sources?",
+  "next_action": "Finish the registered eight-epoch control, run the style arm sequentially, and compare both under the same D4 policy.",
   "latest_demo": "artifacts/LeafCheck-field-guidance-demo.zip",
   "demo_sha256": "000443dad48f0740e5f015282dd43c5d97f7d6e8967e3d883b484a59bc3091cc",
   "latest_potato_result": {
@@ -43,5 +44,16 @@
     "new_source_eligible": false,
     "automatic_wrong_crop": 22,
     "automatic_correct_crop_wrong_condition": 51
+  },
+  "active_run": {
+    "path": "runs/field_v11/control",
+    "log": "runs/field_v11/control.log",
+    "protocol": "configs/leafcheck_feature_style_v1.json"
+  },
+  "latest_seasonal_result": {
+    "control_field_macro_f1": 0.23812643301670489,
+    "treatment_field_macro_f1": 0.22141938729874772,
+    "eligible": false,
+    "evidence": "docs/field_optimization/corn_seasonal_study.json"
   }
 }

@@ -108,3 +108,42 @@ The intake failed in two classes. The training entry point confirmed the
 gate before creating a run or checkpoint. The release is available for
 reproduction and remains unused in training or scoring. See the
 [screening decision](bangladesh_corn_intake.json).
+
+### Seasonal corn training comparison
+
+The separate [seasonal corn release](https://data.mendeley.com/datasets/vy629dngm8/1)
+contains 2,943 originals in its pinned archive. The reviewed sample of
+36 shows leaves in place. The common-rust catalog includes 127 filenames
+on one day and two without a recorded date. The intake kept the source
+together in training to avoid inferring site or specimen independence.
+A seed-independent archive-path hash chose 429 original files, including
+all 129 common-rust records. The overlap audit retained 412 images.
+It excluded 17 possible repeated views. The release contains 126
+common-rust, 144 gray-leaf-spot and 142 healthy photos.
+
+Both random-initialization arms used 3,364 master corn training images
+and 412 extra occurrences. The control used matched class occurrences
+from the master. The treatment used the distinct source originals.
+The independent Pretoria development set supplied the four-label
+macro-F1 objective. All six corn condition outputs were eligible.
+The master guard used all six classes over 959 validation images.
+
+| Method with corn supplied | Pretoria correct | Pretoria macro-F1 | Master correct | Master macro-F1 |
+| --- | ---: | ---: | ---: | ---: |
+| Deployed CNN restricted to corn labels | 26/94 | 0.202778 | 906/959 | 0.913212 |
+| Matched scratch control | 26/94 | 0.238126 | 793/959 | 0.706426 |
+| Scratch candidate with the seasonal photos | 22/94 | 0.221419 | 791/959 | 0.715208 |
+
+The control stopped after epoch 15 and selected epoch 10. The treatment
+stopped after epoch 11 and selected epoch 6. Both met the registered
+patience stopping rule and reloaded the selected checkpoints. The
+treatment gave −0.016707 macro-F1 against the matched control and
++0.018642 against the frozen CNN given corn. It missed both minimum
+gains and the master limits. It correctly named 2/24 common-rust photos
+against the control's 0/24, while northern-leaf-blight recall was 7/22
+against 14/22. The experiment ended after one seed. The 177-label
+deployment and the course and supplementary evaluations remain fixed.
+
+[Selection, per-class results and training curves](corn_seasonal_study.json).
+Restore the [source and training instructions](../../data/README.md#seasonal-corn-training-study)
+to rerun the matched comparison.

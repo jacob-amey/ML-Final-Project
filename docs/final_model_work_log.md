@@ -669,3 +669,18 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   additional RAW_Image JPEGs from Bangladesh. The other public folders
   contain derivative views or labels without an exact mapping. The
   full 177-label deployment remains independent of this diagnostic.
+
+### Seasonal corn data comparison
+
+- Verified 429 original archive images and admitted 412 from the seasonal
+  corn source after overlap screening. Photos remained training-only.
+  Common-rust filenames were concentrated on one capture day.
+- Completed the matched scratch trial. On Pretoria, the treatment
+  scored 22/94 and 0.221419 macro-F1 against 26/94 and 0.238126 for the
+  control. It correctly identified two common-rust cases, and recall
+  for northern leaf blight fell from 14/22 to 7/22. Both runs reloaded
+  their selected checkpoints and missed the master guard. The frozen
+  177-label deployment stayed in service.
+- Added the result to the editable ten-page report and verified its
+  rendered pages. [Evidence](field_optimization/corn_seasonal_study.json) ·
+  [Report verification](field_optimization/report_seasonal_verification.json)

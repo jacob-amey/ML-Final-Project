@@ -1,0 +1,19 @@
+{
+  "report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev7.docx",
+  "sha256": "19a62459a9213f1088831e1797752bd43bfa9c38200bb498c92d54aaa5688e71",
+  "pages": 10,
+  "body_font_pt": 11,
+  "normal_line_spacing": 1.15,
+  "references_line_spacing": 1.06,
+  "margin_inches": 1,
+  "page_numbers": "bottom right",
+  "visual_check": "Pages 1\u20138 pixel match Rev6. Pages 9\u201310 inspected after rendering.",
+  "frozen_submission_replaced": false,
+  "checks": {
+    "corn_seasonal_study.json": "f0d767253f37a2ae0d35761e722b5fe427048d9488c070f161f0527309cac0bc",
+    "pretoria_baseline.json": "a93dace1750958fb3c2a8d0d243cd7f9cfbf98e85eebea892fc6b089bfaffa63",
+    "report_field_v10_verification.json": "01157a86da6286413efaff2e63ada2a2e87d69f72b2751f3c7342a065d022a38"
+  },
+  "pipeline_tests": 9,
+  "website_tests": 19
+}

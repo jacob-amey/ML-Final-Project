@@ -342,3 +342,22 @@ stay fixed.
 .venv/bin/python -m leafcheck.potato_partial_study \
   --audit runs/field_v9/iit-potato --output runs/field_v9/potato-partial-replay
 ```
+
+### Seasonal corn training study
+
+The [seasonal corn archive](https://data.mendeley.com/datasets/vy629dngm8/1)
+uses CC BY 4.0. The [release seal](manifests/leafcheck_seasonal_corn_v1_release.json)
+and [manifest](manifests/leafcheck_seasonal_corn_v1_manifest.csv) record 412
+admitted photos and 17 possible repeat views excluded. The original
+source is training-only for this comparison. Pretoria is a separate
+frozen development cohort and was checked for overlap before admitting
+training photos.
+
+```bash
+.venv/bin/python scripts/audit_pretoria_intake.py --expanded --output runs/pretoria-restore
+.venv/bin/python scripts/prepare_seasonal_corn.py
+.venv/bin/python -m leafcheck.corn_field_study \
+  --recipe configs/leafcheck_corn_seasonal_v1.json \
+  --training-addition data/processed/leafcheck_seasonal_corn_v1 \
+  --output runs/corn-seasonal-replay
+```
