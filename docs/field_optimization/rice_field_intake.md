@@ -36,3 +36,10 @@ The extracted comparison app replayed two original blast JPEGs. One matched
 the blast family at a 68.6% model score. The other received sugarcane red rot
 at 99.3%. Both produced suggestions and all 177 scores matched standalone
 inference exactly. [Packaged upload replay](rice_upload_replay.json).
+
+On the frozen master validation rows, the same checkpoint chose the wrong
+crop on 15 of 968 rice photos and got the exact joint label right on 782.
+On RiceLeafDiseaseBD, it chose wheat for 23 and sugarcane for 18 of the 60
+photos. The field setting changes much more than class frequency. Framing,
+background and capture conditions can vary by source, and this comparison
+does not distinguish their individual effects.
