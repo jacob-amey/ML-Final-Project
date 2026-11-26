@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-26T06:07:39.359938+00:00",
+  "updated_utc": "2026-11-26T18:00:29.205327+00:00",
   "frozen_model": "artifacts/leafcheck177-v1/model.pt",
   "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
   "deployment_decision": "Retain the frozen 177-label checkpoint and optional potato context. The packaged app lists the exact conditions by crop.",
@@ -33,7 +33,7 @@
     "CoffeeLeaf-CO v2"
   ],
   "best_next_question": "Can multi-condition field training address both crop identity and healthy-versus-disease errors without reducing full-label validation performance?",
-  "next_action": "Verify dates, exact label compatibility and repeated views in a separate rice collection before proposing a matched training recipe. Keep current diagnosis and deployment scopes fixed.",
+  "next_action": "Seek a separate rice collection with mixed healthy and brown-spot capture groups. After checking exact label mapping and overlap, use source-separated training and validation with the frozen 177-output model as reference.",
   "latest_demo": "artifacts/LeafCheck-condition-coverage-demo.zip",
   "demo_sha256": "4af7aa952534a92beaa8c0964ba7515b1985398d1e23ed4e50176549dad5e462",
   "latest_potato_result": {
@@ -104,5 +104,12 @@
     "given_rice_correct": 15,
     "support": 60,
     "evidence": "docs/field_optimization/rice_field_diagnostic.json"
+  },
+  "latest_rice_source": {
+    "candidate_files": 784,
+    "master_screened_sample_files": 24,
+    "dated_healthy_groups": 1,
+    "roles_assigned": false,
+    "evidence": "docs/field_optimization/rice_2026_preflight.json"
   }
 }

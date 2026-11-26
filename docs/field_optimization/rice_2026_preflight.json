@@ -1,0 +1,382 @@
+{
+  "publisher": "https://data.mendeley.com/datasets/4sdw6gstgs/1",
+  "role": "candidate intake only",
+  "license": "CC BY 4.0",
+  "selection": "12 smallest SHA-256 values of archive member paths per label",
+  "master_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "sampled": {
+    "rice__brown_spot": 12,
+    "rice__healthy": 12
+  },
+  "full_archive_header_capture_days": {
+    "rice__brown_spot": {
+      "2026:02:25": 35,
+      "unknown": 146,
+      "2026:02:18": 90,
+      "2026:02:27": 143,
+      "2026:02:28": 9,
+      "2026:03:18": 1,
+      "2026:03:23": 54,
+      "2026:03:26": 3,
+      "2026:03:28": 5,
+      "2026:03:29": 12,
+      "2026:03:30": 18,
+      "2026:03:31": 1
+    },
+    "rice__healthy": {
+      "unknown": 88,
+      "2026:03:04": 179
+    }
+  },
+  "capture_groups": {
+    "2026:03:23": 2,
+    "2026:02:27": 6,
+    "2026:03:28": 1,
+    "2026:02:18": 1,
+    "unknown": 2,
+    "2026:03:26": 1,
+    "2026:03:04": 11
+  },
+  "dispositions": {
+    "unassigned": 24
+  },
+  "records": [
+    {
+      "archive": "brown spot.zip",
+      "member": "brown spot/brown spot (448).jpg",
+      "label": "rice__brown_spot",
+      "capture_time": "2026:03:23 09:09:51",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "615f27fe79fc17333844ed64cc520de243e279272e4c614fe9cf6aa9b68ed4cf",
+      "dimensions": [
+        1840,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "brown spot.zip",
+      "member": "brown spot/brown spot (314).jpg",
+      "label": "rice__brown_spot",
+      "capture_time": "2026:02:27 11:41:16",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "b873a2fcaa0cd100da3fed2c811f7a2fe172401d303b9ae92799d621e9fae3d4",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "brown spot.zip",
+      "member": "brown spot/brown spot (322).jpg",
+      "label": "rice__brown_spot",
+      "capture_time": "2026:02:27 11:43:45",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "2d24bf0dfe1bc17601599eb16b00cfe1b9d8195072104610cc7c13cbfa2b9369",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "brown spot.zip",
+      "member": "brown spot/brown spot (482).jpg",
+      "label": "rice__brown_spot",
+      "capture_time": "2026:03:28 08:59:44",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "185fe4c324d4cfff04026e5d2be5ccf23212a2cfb5a0f0ca496f58df7253c8ac",
+      "dimensions": [
+        3072,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "brown spot.zip",
+      "member": "brown spot/brown spot (101).jpg",
+      "label": "rice__brown_spot",
+      "capture_time": "2026:02:18 08:28:35",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "94515fed8479f2f0442d27d082241c9b45e792c260781c02c0198bf1de0c3388",
+      "dimensions": [
+        1840,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "brown spot.zip",
+      "member": "brown spot/brown spot (449).jpg",
+      "label": "rice__brown_spot",
+      "capture_time": "2026:03:23 09:09:57",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "901872bbe3aafff6b38c8def2cdc566be76f019b2005f22d5f9de9f17e9dc4c1",
+      "dimensions": [
+        1840,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "brown spot.zip",
+      "member": "brown spot/brown spot (262).jpg",
+      "label": "rice__brown_spot",
+      "capture_time": "2026:02:27 11:26:43",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "f4d3b474406b2911949dfd228cc22792e15b39d98536f3c21cfc20a44f6004c9",
+      "dimensions": [
+        1437,
+        4000
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "brown spot.zip",
+      "member": "brown spot/brown spot (33).jpg",
+      "label": "rice__brown_spot",
+      "capture_time": "",
+      "camera": "",
+      "sha256": "0f171377cbc5db2ebdc3f52f381760d4e252a1e62a63fb749e548c15fa55a327",
+      "dimensions": [
+        567,
+        1280
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "brown spot.zip",
+      "member": "brown spot/brown spot (479).jpg",
+      "label": "rice__brown_spot",
+      "capture_time": "2026:03:26 09:07:30",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "76bba31711086643f00d90ca2afaacdcf6e878e8ceac7b62bda89216291bd0fe",
+      "dimensions": [
+        3072,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "brown spot.zip",
+      "member": "brown spot/brown spot (280).jpg",
+      "label": "rice__brown_spot",
+      "capture_time": "2026:02:27 11:31:38",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "58820387de032b47a5617b866b519f77fbddcb1a3c77e6a06044358b889fdfa0",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "brown spot.zip",
+      "member": "brown spot/brown spot (276).jpg",
+      "label": "rice__brown_spot",
+      "capture_time": "2026:02:27 11:30:13",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "fef6bc7f30724cb00928358e2dacbc42257da6aeed1e7d3b72aa9ed87e2adb03",
+      "dimensions": [
+        2286,
+        3429
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "brown spot.zip",
+      "member": "brown spot/brown spot (306).jpg",
+      "label": "rice__brown_spot",
+      "capture_time": "2026:02:27 11:39:01",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "b7a441091a1c0b7e3cd5a380348bb30bee30715aa2226e581d087ed929810041",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "healthy.zip",
+      "member": "healthy/healthy (220).jpg",
+      "label": "rice__healthy",
+      "capture_time": "2026:03:04 12:33:49",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "13f6a68c646613ebe20ef6b9c947725f11362b2cb9cd01b6a3cc3ef16f97ec5d",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "healthy.zip",
+      "member": "healthy/healthy (97).jpg",
+      "label": "rice__healthy",
+      "capture_time": "2026:03:04 12:10:29",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "ee553d07f20715300e31005abd789809710bf736ebc04f81690398566f2c6c7c",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "healthy.zip",
+      "member": "healthy/healthy (151).jpg",
+      "label": "rice__healthy",
+      "capture_time": "2026:03:04 12:24:05",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "e0b807056761b1951aa44e93d5280c1a4ebda3912e057585f5445ec0f95f7346",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "healthy.zip",
+      "member": "healthy/healthy (261).jpg",
+      "label": "rice__healthy",
+      "capture_time": "2026:03:04 12:42:29",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "c65c506daa4197be986136565749851af56cf9b765b4e003178e1f78f86cc318",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "healthy.zip",
+      "member": "healthy/healthy (196).jpg",
+      "label": "rice__healthy",
+      "capture_time": "2026:03:04 12:30:16",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "d8a19cab4b40fcced809f3dfa1db0d16c80c2ad22f1cd93b803b3aa83c192dbd",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "healthy.zip",
+      "member": "healthy/healthy (15).jpg",
+      "label": "rice__healthy",
+      "capture_time": "",
+      "camera": "",
+      "sha256": "23517f597d10bd17043984837aeaa08f324adf52121cfdaea0ded475ed64ddb2",
+      "dimensions": [
+        709,
+        1599
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "healthy.zip",
+      "member": "healthy/healthy (256).jpg",
+      "label": "rice__healthy",
+      "capture_time": "2026:03:04 12:40:36",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "ab4aca585db15b47a446194ce42f15ceedf8db149516826fd9836cba05921c44",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "healthy.zip",
+      "member": "healthy/healthy (232).jpg",
+      "label": "rice__healthy",
+      "capture_time": "2026:03:04 12:36:01",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "10a0bcc25aec56aa896a593483ccb94d21a93288a4c286b9bac10d001f925fc1",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "healthy.zip",
+      "member": "healthy/healthy (167).jpg",
+      "label": "rice__healthy",
+      "capture_time": "2026:03:04 12:27:05",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "46db32ebde19fbcd5560bfc4a3073dca6b2b7edfdcb50798d020fc564fd01847",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "healthy.zip",
+      "member": "healthy/healthy (153).jpg",
+      "label": "rice__healthy",
+      "capture_time": "2026:03:04 12:24:17",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "be124697625c5bed95a6769da112ffdfcc827430ba8cf1952314cdd55f658ebe",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "healthy.zip",
+      "member": "healthy/healthy (194).jpg",
+      "label": "rice__healthy",
+      "capture_time": "2026:03:04 12:30:04",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "63e0d92fe0be4956de6099d8db47f44fd908205807f79629186d6d717ba78eff",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    },
+    {
+      "archive": "healthy.zip",
+      "member": "healthy/healthy (149).jpg",
+      "label": "rice__healthy",
+      "capture_time": "2026:03:04 12:23:50",
+      "camera": "OnePlus Nord N30 SE 5G",
+      "sha256": "1bc6b01d7dbec5fea2197674192e5663ce3581d7e361e886257ce89707afd17f",
+      "dimensions": [
+        2296,
+        4080
+      ],
+      "screen": "unassigned",
+      "possible_match": ""
+    }
+  ],
+  "training_or_evaluation_run": false
+}

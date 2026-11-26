@@ -1,0 +1,27 @@
+{
+  "publisher": "https://data.mendeley.com/datasets/4sdw6gstgs/1",
+  "license": "CC BY 4.0",
+  "archive_provenance": [
+    {
+      "filename": "brown spot.zip",
+      "label": "rice__brown_spot",
+      "archive_size": 700969950,
+      "publisher_archive_sha256": "c09bc098af3107e4c366a2af8e7adfa8ad192e05d6a7cc3a8403786ea362ddc5",
+      "directory_bytes": 1000000,
+      "archive_url": "https://data.mendeley.com/public-files/datasets/4sdw6gstgs/files/d38504ba-ea74-47ad-89a3-8cd632e751b2/file_downloaded",
+      "directory_sha256": "601a2b83ff34ebfcc4a2e56b105ae41354df14adfbd14b7a5f61cf714d165db9",
+      "publisher_count": 517
+    },
+    {
+      "filename": "healthy.zip",
+      "label": "rice__healthy",
+      "archive_size": 299834985,
+      "publisher_archive_sha256": "20ee24e163b7d1151af3d1718661b4509f4cba20ba0773a42eb4d40fc947211b",
+      "directory_bytes": 1000000,
+      "archive_url": "https://data.mendeley.com/public-files/datasets/4sdw6gstgs/files/3fbd26b3-37f5-4eb1-a1be-ee1c82a4c0d7/file_downloaded",
+      "directory_sha256": "01c5b4b2872fab582ae770d09f329147dc57b7be0a84cd12bc9872ad9cc24936",
+      "publisher_count": 267
+    }
+  ],
+  "role": "candidate intake only"
+}
