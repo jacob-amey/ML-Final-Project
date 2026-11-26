@@ -1,0 +1,35 @@
+{
+  "hypothesis": "New, independently sourced in-place field photos improve corn condition recognition on the Pretoria field cohort compared with label-matched master image occurrences.",
+  "labels": [
+    "corn__common_rust",
+    "corn__gray_leaf_spot",
+    "corn__healthy",
+    "corn__northern_leaf_blight",
+    "corn__rust",
+    "corn__smut"
+  ],
+  "seed": 434,
+  "channels": [
+    16,
+    32,
+    64,
+    96
+  ],
+  "input_size": 128,
+  "batch_size": 96,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "min_epochs": 9,
+  "max_epochs": 18,
+  "patience": 5,
+  "selection": {
+    "master_max_macro_f1_drop_per_seed": 0.03,
+    "master_max_accuracy_drop_per_seed": 0.02,
+    "field_min_gain_vs_control": 0.03,
+    "field_min_gain_vs_original_given_corn": 0.03,
+    "minimum_source_per_class": 50
+  },
+  "procedure": "Train from random initialization with the same seed, architecture and batch schedule. The fixed master corn training split is present in both runs. Each seasonal training original adds one slot per epoch. Replace the slots in the control with sampled same-label master training images. Select checkpoints by four-label Pretoria development macro-F1, using the existing master guard and same checkpoint rules for both arms.",
+  "pretraining_intake_amendment": "The seasonal catalog has an in-place outdoor sample across all three selected labels. The common-rust filename dates are concentrated on one day. Keep the source together in training and preserve the predeclared master and field advancement limits.",
+  "decision": "If the new-source model misses a gain threshold or the master limits, stop after seed 434. Otherwise preregister a repeat and an independent confirmation. Scope is diagnostic corn supplied, with all six original corn outputs still eligible. Course 177-label selection and all sealed tests remain separate. This experiment cannot change the deployed model on its own."
+}

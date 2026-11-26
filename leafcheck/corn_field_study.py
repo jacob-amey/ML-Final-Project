@@ -27,12 +27,12 @@ def with_supported_average(result):
     return result
 
 
-def train(output, resume):
+def train(output, resume, recipe=PLAN, training_addition=ADDITION):
     if (output / "decision.json").exists():
         print("Preserving the completed run", flush=True)
         return
-    config, field_plan = read(PLAN), read(DEVELOPMENT_PLAN)
-    frozen, release, _, addition = load_inputs(ADDITION, {"initial_weights": field_plan["checkpoint_sha256"]})
+    config, field_plan = read(recipe), read(DEVELOPMENT_PLAN)
+    frozen, release, _, addition = load_inputs(training_addition, {"initial_weights": field_plan["checkpoint_sha256"]})
     _, master, _ = load_study(read(ROOT / "configs/upload_blight_v1.json"))
     if any(r["split"] != "train" for r in addition):
         raise ValueError("Expected a training-only source")
@@ -60,7 +60,7 @@ def train(output, resume):
     device = device_for("auto")
     torch.set_num_threads(4)
     spec = read(cache_path(config["input_size"], frozen["fingerprint"]) / "preprocessing.json")
-    run = {"recipe_sha256": sha256(PLAN), "dataset_fingerprint": frozen["fingerprint"],
+    run = {"recipe_sha256": sha256(recipe), "dataset_fingerprint": frozen["fingerprint"],
            "training_addition_fingerprint": release["fingerprint"], "pretoria_sha256": sha256(manifest),
            "reference_checkpoint_sha256": field_plan["checkpoint_sha256"],
            "training_code_sha256": sha256(Path(__file__)),
@@ -131,9 +131,11 @@ def train(output, resume):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--recipe", type=Path, default=PLAN)
+    parser.add_argument("--training-addition", type=Path, default=ADDITION)
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     with (args.output / ".train.lock").open("a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        train(args.output, args.resume)
+        train(args.output, args.resume, args.recipe, args.training_addition)

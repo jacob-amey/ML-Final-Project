@@ -1,0 +1,17 @@
+{
+  "version": "leafcheck_seasonal_corn_v1",
+  "source": "https://data.mendeley.com/datasets/vy629dngm8/1",
+  "license": "CC BY 4.0",
+  "role": "training-only source",
+  "source_policy": "Use the single-label original image archive. Take all 129 Common_rust records and the first 150 records each from Gray_leaf_spot and Healthy by a stable hash of the source archive path. Hold the entire source in training. Screen against the master, previous included sources and all Pretoria development images.",
+  "class_map": {
+    "Common_rust": "corn__common_rust",
+    "Gray_leaf_spot": "corn__gray_leaf_spot",
+    "Healthy": "corn__healthy"
+  },
+  "source_counts": {
+    "Common_rust": 129,
+    "Gray_leaf_spot": 150,
+    "Healthy": 150
+  }
+}

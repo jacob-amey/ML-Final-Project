@@ -1,0 +1,12 @@
+{
+  "source": "https://data.mendeley.com/datasets/vy629dngm8/1",
+  "license": "CC BY 4.0",
+  "archive_url": "https://data.mendeley.com/public-files/datasets/vy629dngm8/files/e086f779-470a-4c7c-ba81-97734e9f8dd6/file_downloaded",
+  "archive_sha256": "575628df92e69c169fa82c8506253d7d5886a8931605bf765f0e2577022dc479",
+  "archive_size": 4599036050,
+  "directory_bytes": 2000000,
+  "directory_sha256": "724d262515ef427fd3d5d7a4ae7be529858a4bc6b35b9da1af1bfa1fd684a530",
+  "candidate_counts": {"Common_rust": 129, "Gray_leaf_spot": 1497, "Healthy": 1038},
+  "sample_per_class": 12,
+  "role": "Audit-only. Test archive membership, image framing, date evidence and potential repeat views before considering a new release. Keep the sample out of training and inference."
+}

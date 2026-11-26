@@ -1,0 +1,41 @@
+{
+  "plan_sha256": "94ca81a4a816e8481eefcf2066bd2931c27529ceb8c73d0dacf6d40f4fe25f4c",
+  "sample_sha256": "544cb1dcc868730699e35cdde9ea205e877f96e38e9bdb4fad3362f7f6dccd76",
+  "catalog_class_counts": {
+    "Common_rust": 129,
+    "Gray_leaf_spot": 1497,
+    "Healthy": 1038
+  },
+  "catalog_filename_dates": {
+    "Common_rust": {
+      "20230429": 127,
+      "unrecorded": 2
+    },
+    "Gray_leaf_spot": {
+      "unrecorded": 1106,
+      "20221227": 157,
+      "20221230": 5,
+      "20230429": 34,
+      "20240210": 195
+    },
+    "Healthy": {
+      "unrecorded": 94,
+      "20230102": 50,
+      "20230429": 30,
+      "20240210": 864
+    }
+  },
+  "sample_counts": {
+    "Common_rust": {
+      "no_candidate": 12
+    },
+    "Gray_leaf_spot": {
+      "no_candidate": 12
+    },
+    "Healthy": {
+      "no_candidate": 12
+    }
+  },
+  "photos_admitted": 0,
+  "inference_used": false
+}
