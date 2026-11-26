@@ -1,0 +1,16 @@
+{
+  "hypothesis": "Replacing a matched dose of repeated training images with independently acquired field photos labeled as healthy or blight improves date-held potato classification.",
+  "source": "https://data.mendeley.com/datasets/pbnw43s6kt/1",
+  "annotation_reference": "https://doi.org/10.34133/2021/9835724",
+  "base_recipe": "leafcheck_potato_v1.json",
+  "seed": 434,
+  "min_epochs": 9,
+  "max_epochs": 18,
+  "minimum_source_views": {"healthy": 30, "blight_unspecified": 70},
+  "min_gain_field_macro_f1": 0.03,
+  "max_drop_field_recall_per_label": 0.05,
+  "max_drop_master_macro_f1": 0.02,
+  "max_drop_master_accuracy": 0.02,
+  "procedure": "Keep the original master potato and Mduma training photos in both arms. Each new healthy image has the original healthy target. Each new blight image gets the union of early and late blight. The control replaces these additions with sampled source-independent training images given the same exact or union labels. Use one pass of additions per epoch in each arm. Compute master and date-held Mduma validation with all three outputs using the same checkpoint-selection rule. Use equal training settings and a random initialization in each arm.",
+  "decision": "This is a matched validation screen in the known-potato task, with the 177-label demo and course test outside the decision. A pass can justify a seed repeat and a separately frozen independent evaluation. It cannot authorize deployment. A fail ends this trial. Whole sources stay separate and no published test or prior confirmation supplies fitting data."
+}
