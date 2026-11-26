@@ -1,0 +1,48 @@
+{
+  "config_sha256": "0c92182a7873cfb921c702ec87580734167ac4829300d7a1d4e46eb18a09bf06",
+  "reference_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "development_only": true,
+  "metrics_provenance": {
+    "conditional": "1df388f0bf5d304108bc33bdb1fce6d2d1650f3e1c21d78d5fb46b0b92401ecb",
+    "joint": "df2ce1a864bf42728cb4a7bf5f9c1e59317d670f4724e5136333efe9fe35d542"
+  },
+  "per_source": {
+    "sheikh": {
+      "automatic": {
+        "macro_f1": 0.0,
+        "accuracy": 0.0,
+        "correct": 0,
+        "sample_count": 233,
+        "wrong_crop": 229,
+        "right_crop_wrong_condition": 4
+      },
+      "given_tomato": {
+        "correct": 15,
+        "sample_count": 233,
+        "macro_f1": 0.19688747007182758,
+        "accuracy": 0.06437768240343347
+      },
+      "macro_f1_gain": 0.19688747007182758
+    },
+    "pakistan": {
+      "automatic": {
+        "macro_f1": 0.09978260869565217,
+        "accuracy": 0.04929577464788732,
+        "correct": 7,
+        "sample_count": 142,
+        "wrong_crop": 114,
+        "right_crop_wrong_condition": 21
+      },
+      "given_tomato": {
+        "correct": 27,
+        "sample_count": 142,
+        "macro_f1": 0.17760825341470504,
+        "accuracy": 0.19014084507042253
+      },
+      "macro_f1_gain": 0.07782564471905287
+    }
+  },
+  "qualified_for_confirmation": true,
+  "independent_confirmation_complete": false,
+  "deployed": false
+}

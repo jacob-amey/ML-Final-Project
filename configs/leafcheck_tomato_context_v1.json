@@ -1,0 +1,15 @@
+{
+  "candidate": "User-supplied tomato context reuses the frozen 177-label network and normalizes its scores over all ten ordered tomato conditions.",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "validation_sources": ["sheikh", "pakistan"],
+  "development_min_macro_f1_gain_each_source": 0.03,
+  "confirmation": {
+    "data": "Use a newly registered source with screened original single-label photos. Require at least 25 compatible reference photos for each of early blight, late blight, and healthy. All ten tomato outputs stay eligible in the context policy.",
+    "compare": "Compute automatic and user-supplied macro-F1 on identical photo IDs, averaging the represented classes. Track correctness, early-to-late and late-to-early errors, and all crop errors separately.",
+    "min_joint_macro_f1_gain": 0.03,
+    "min_joint_accuracy_gain": 0.05,
+    "max_late_blight_recall_drop": 0.03
+  },
+  "activation": "Keep automatic 177-label mode and the deployed confidence display unchanged. Tomato requires explicit confirmation. Display context scores as uncalibrated conditional scores. Preserve the existing behavior for all other models.",
+  "restriction": "An already opened course or follow-up evaluation may not select this candidate or qualify it for deployment."
+}
