@@ -1,0 +1,20 @@
+{
+  "report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev4.docx",
+  "sha256": "35dbbdcd50e1e470a75ac2ab9f236cfbe758f37c035d8a262a23688e074b5256",
+  "pages": 10,
+  "body_font_pt": 11,
+  "normal_line_spacing": 1.15,
+  "margin_inches": 1,
+  "page_numbers": "bottom right",
+  "visual_check": "Pages 1\u20138 pixel match the reviewed Rev3. Pages 9\u201310 inspected visually after the final render.",
+  "frozen_submission_replaced": false,
+  "checks": {
+    "tomato_context_confirmation.json": "3aceba933034ed6554702f1db806f217a4d661f801b97890be7730db59f09550",
+    "crop_loss_pilot.json": "34bad756a748b8314d383fcbdc96ae5498457a9574c0c9e55a37be78fcd58f48",
+    "unsupported_energy.json": "70e9c083a31242145fd001804ac40a3f771a3ec36491519a032ee4d080e420fd",
+    "field_guidance_browser.json": "23bf773bebd6b8c308ef0c0693d400f060a3e6a1070034721da0f8dc22a3b4c5",
+    "field_guidance_archive_verification.json": "82cadb5546e43b4e2d7afd5c84b80bbee7677fc768982a5bb02af6a1f85691a9"
+  },
+  "pipeline_tests": 9,
+  "website_tests": 19
+}

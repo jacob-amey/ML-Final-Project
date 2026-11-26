@@ -610,3 +610,26 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   zero. The accuracy gain missed the five-point gate, so the app stays
   with the frozen 177-label checkpoint and existing potato option.
   [Study](field_optimization/tomato_transfer.md#explicit-tomato-context-on-a-new-source)
+
+### Matched crop loss and unsupported uploads
+
+- Completed both six-epoch scratch runs with 59,008 training images
+  per epoch. The candidate improved field macro-F1 by 0.017231 and
+  reduced wrong-crop rate by 2.64 points relative to the matched control.
+  Both gains missed the registered advancement criteria.
+- Restored and screened 48 Open Images photos for development.
+  The current threshold suggested labels on 13 of the 45 admitted
+  unsupported photos. Fixed probability or raw-logit signals provided
+  insufficient separation.
+- A source-held linear probe improved mean AUROC from 0.570 to 0.770
+  for nonplants and from 0.461 to 0.622 for unsupported plants. The
+  unsupported-plant result missed 0.65 and the result varied by source.
+  Fold scores reproduced exactly and were recalculated from the
+  prediction records. Kept the existing checkpoint and upload policy.
+- Verified normal browser uploads in a fresh extraction of the updated
+  demo. Confirmed the 43-crop list, score explanation, healthy tomato
+  fixture and high-scoring typewriter mistake. Separate HTTP checks
+  verified model readiness and both invalid-image responses.
+- Rendered and inspected the ten-page editable Rev4 report. The original
+  frozen course archive remains separately available.
+  [Methods and delivery evidence](field_optimization/field_v8_study.md)

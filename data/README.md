@@ -309,3 +309,20 @@ The 22 exclusions covered 10 repeated or closely related views, four comparison 
 Use only manifest rows with `status=included`. `image_path` is relative to the repository root, `source_path` is relative to the named release or local bundle, and `source_split` is the publisher's split where available. `split` is the assignment for this project. External working filenames use the first 16 characters of the SHA-256 digest for portability. The copied bytes are unchanged.
 
 The repository ignores `data/processed/`. To restore it in another checkout, retrieve each included `source_path` from the pinned source, verify its SHA-256 against the inventory, and place it at the corresponding `image_path`. The verified local PlantVillage copy can also supply those images. Its folders are named `Tomato__early_blight`, `Tomato__healthy`, and `Tomato__late_blight`. Match both the filename and hash. Review each source's attribution and reuse terms before redistributing image files. [PlantVillage dataset card](https://huggingface.co/datasets/mohanty/PlantVillage), [PlantDoc repository license](https://github.com/pratikkayal/PlantDoc-Dataset/blob/5467f6012d78d1c446145d5f582da6096f852ae8/LICENSE.txt)
+
+### Unsupported upload development photos
+
+The [Open Images V7](https://storage.googleapis.com/openimages/web/download_v7.html)
+sampling registry `manifests/leafcheck_unsupported_openimages_v1_files.csv`
+pins the image IDs, asset links and per-image attribution records. The
+screened manifest `manifests/leafcheck_unsupported_openimages_v1_manifest.csv`
+preserves the 45 included photos, three exclusions and exact hashes.
+Restore with `.venv/bin/python scripts/prepare_unsupported_openimages.py fetch`.
+The restore checks the mirror bytes against the manifest. The project keeps
+the photo bytes local. These photos are a development challenge for
+unsupported-input checks.
+
+```bash
+.venv/bin/python -m leafcheck.unsupported_screen --energy --output runs/unsupported-replay
+.venv/bin/python -m leafcheck.upload_support_probe --output runs/support-probe-replay
+```

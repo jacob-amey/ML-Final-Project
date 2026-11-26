@@ -1,0 +1,30 @@
+{
+  "observed_utc": "2026-11-26T00:18:33.714898+00:00",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "app_revision": "e3dd8174ffc0f911",
+  "api": "POST /api/predict",
+  "ordered_scores": 177,
+  "cases": [
+    {
+      "photo_sha256": "c929074f11cc0af15f38e59da1bf32d1ca5b52ac3b4e6ae8c61baeeb801f157a",
+      "image_id": "d31f9c2a20db566f",
+      "reference_category": "Typewriter",
+      "group": "nonplant",
+      "api_label": "raspberry__fire_blight",
+      "score": 0.9379412531852722,
+      "max_score_error": 0.0,
+      "decision": "suggestion"
+    },
+    {
+      "photo_sha256": "85237a3a6993afaa4dce4b69d38701e9a445214c9ee23f6ca12ba27ceb0f50e0",
+      "image_id": "2d13c5f0eef4cc1b",
+      "reference_category": "Spruce",
+      "group": "unsupported_plant",
+      "api_label": "corn__smut",
+      "score": 0.9249999523162842,
+      "max_score_error": 0.0,
+      "decision": "suggestion"
+    }
+  ],
+  "browser_claim": false
+}

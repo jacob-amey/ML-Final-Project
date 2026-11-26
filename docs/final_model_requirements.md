@@ -153,8 +153,8 @@ The original combined submission remains the archived course snapshot.
 | Introduction, related work and original contributions | Page 1 gives the task, prior literature and delivered contribution. |
 | Methods, source integrity, training and selection | Pages 2–4 give the frozen split design, architecture and train-only preprocessing, and explain seed and recipe comparisons. |
 | Results, figures and comparative validation/testing | Pages 4–8 show learning curves, directed confusions, paired validation, three methods on the same reserved test, the PlantCity and crop-classifier checks, and the central-view comparison. |
-| Discussion, conclusion and future improvement | Pages 6–9 explain sparse support, dataset shift, uncalibrated scores and the need for independent field data. |
+| Discussion, conclusion and future improvement | Pages 6–9 explain sparse support, dataset shift, uncalibrated scores, the crop-loss result and the unsupported-upload challenge. |
 | Project management and individual contributions | Page 9 distinguishes assigned roles, evidenced decisions and assistance. Student implementation details and meeting activities still require confirmation. |
 | IEEE references, repository link, dataset and source links | Pages 9–10 give the GitHub link, source and restoration pointers, dataset version, weights hash and numbered references. Independent access to the full merged master remains unverified. |
-| Length and formatting | The [verification record](field_optimization/report_site_verification.json) covers ten rendered pages, 11-point body, 1.15 line spacing, one-inch margins and bottom-right page numbering. |
+| Length and formatting | The [Rev4 verification record](field_optimization/report_field_v8_verification.json) covers ten rendered pages, 11-point body, 1.15 line spacing, one-inch margins and bottom-right page numbering. |
 | Single team BrightSpace submission | The team owns submission and confirmation. The separate field update is a local editable report. |

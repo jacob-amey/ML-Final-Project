@@ -1,0 +1,53 @@
+{
+  "completed_utc": "2026-11-26T00:17:53.592609+00:00",
+  "plan_sha256": "92b12e9cde50694903e4c1881a031df136a8bee84d0f44fd6bbd150eccebeb28",
+  "model_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "manifest_sha256": "a32f4d1b10b0cdd7bcea629380451e522689998bcd6a10e045faa8c0614efccc",
+  "predictions_sha256": "0ffcbb2a991f74a61e30c3ae7d6b85c8a0333873e8313943a47fbe60ec00d271",
+  "threshold": 0.5857925415039062,
+  "supported_fingerprints": [
+    "94a9489fce692e2b8d21adc312fc882ae42de23686f26319cecc51d07150b781",
+    "61cf3f0df4c82f6f3d5f1998de98299900bb40ac01bfd7d3e1431d3f9f432ee6"
+  ],
+  "supported": {
+    "sheikh": {
+      "count": 233,
+      "accepted": 118,
+      "accepted_correct": 0
+    },
+    "mduma": {
+      "count": 211,
+      "accepted": 56,
+      "accepted_correct": 1
+    },
+    "pakistan": {
+      "count": 142,
+      "accepted": 12,
+      "accepted_correct": 0
+    }
+  },
+  "unsupported": {
+    "nonplant": {
+      "count": 22,
+      "accepted": 6,
+      "auroc_supported_vs_group": {
+        "max_softmax": 0.6024666459820044,
+        "margin": 0.5701985727582998,
+        "negative_entropy": 0.6372168786844554,
+        "max_crop_mass": 0.6059571827489916
+      }
+    },
+    "unsupported_plant": {
+      "count": 23,
+      "accepted": 7,
+      "auroc_supported_vs_group": {
+        "max_softmax": 0.4843448582875798,
+        "margin": 0.47492209526636,
+        "negative_entropy": 0.493025671464609,
+        "max_crop_mass": 0.476331799970322
+      }
+    }
+  },
+  "test_opened": false,
+  "policy_changed": false
+}

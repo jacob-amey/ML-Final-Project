@@ -1,0 +1,100 @@
+{
+  "evaluated_utc": "2026-11-26T00:28:16.150846+00:00",
+  "plan_sha256": "813789cbd7b213120dfe652d3a6408fbfb3b82cdf395d0bad2a11527c6f72bab",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "negative_manifest_sha256": "a32f4d1b10b0cdd7bcea629380451e522689998bcd6a10e045faa8c0614efccc",
+  "predictions_sha256": "b7420706aac352db7d777f0cc9992c6507141b891c68e819c2e6cfad332c62ec",
+  "supported_fingerprints": [
+    "94a9489fce692e2b8d21adc312fc882ae42de23686f26319cecc51d07150b781",
+    "61cf3f0df4c82f6f3d5f1998de98299900bb40ac01bfd7d3e1431d3f9f432ee6"
+  ],
+  "folds": [
+    {
+      "held_out": {
+        "supported": "sheikh",
+        "nonplant": "Bicycle",
+        "unsupported_plant": "Cactus"
+      },
+      "supported_count": 233,
+      "metrics": {
+        "nonplant": {
+          "count": 6,
+          "max_softmax_auroc": 0.6809728183118741,
+          "feature_auroc": 0.5050071530758226,
+          "gain": -0.1759656652360515
+        },
+        "unsupported_plant": {
+          "count": 8,
+          "max_softmax_auroc": 0.6223175965665236,
+          "feature_auroc": 0.30579399141630903,
+          "gain": -0.3165236051502146
+        }
+      }
+    },
+    {
+      "held_out": {
+        "supported": "mduma",
+        "nonplant": "Dog",
+        "unsupported_plant": "Orchid"
+      },
+      "supported_count": 211,
+      "metrics": {
+        "nonplant": {
+          "count": 8,
+          "max_softmax_auroc": 0.7470379146919431,
+          "feature_auroc": 0.8838862559241706,
+          "gain": 0.13684834123222744
+        },
+        "unsupported_plant": {
+          "count": 8,
+          "max_softmax_auroc": 0.518957345971564,
+          "feature_auroc": 0.8625592417061612,
+          "gain": 0.3436018957345972
+        }
+      }
+    },
+    {
+      "held_out": {
+        "supported": "pakistan",
+        "nonplant": "Typewriter",
+        "unsupported_plant": "Spruce"
+      },
+      "supported_count": 142,
+      "metrics": {
+        "nonplant": {
+          "count": 8,
+          "max_softmax_auroc": 0.2834507042253521,
+          "feature_auroc": 0.9216549295774648,
+          "gain": 0.6382042253521126
+        },
+        "unsupported_plant": {
+          "count": 7,
+          "max_softmax_auroc": 0.24245472837022133,
+          "feature_auroc": 0.6961770623742455,
+          "gain": 0.4537223340040242
+        }
+      }
+    }
+  ],
+  "macro_by_unsupported_type": {
+    "nonplant": {
+      "max_softmax_auroc": 0.5704871457430564,
+      "feature_auroc": 0.7701827795258193,
+      "gain": 0.19969563378276287
+    },
+    "unsupported_plant": {
+      "max_softmax_auroc": 0.46124322363610304,
+      "feature_auroc": 0.6215100984989053,
+      "gain": 0.16026687486280225
+    }
+  },
+  "passed_development_gate": false,
+  "threshold_fit": false,
+  "deployment_changed": false,
+  "heldout_used": false,
+  "independent_recheck": {
+    "prediction_rows": 631,
+    "included_negative_score_max_absolute_delta": 4.473937987858889e-07,
+    "recomputed_fold_aurocs": true
+  }
+}

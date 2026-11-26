@@ -253,7 +253,8 @@ def tomato_transfer(doc, docs, freeze, include_crop_head=False):
         )
 
 
-def build(artifact, output, include_field_followup=False, include_tomato_transfer=False, include_crop_head=False):
+def build(artifact, output, include_field_followup=False, include_tomato_transfer=False,
+          include_crop_head=False, include_field_v8=False):
     freeze = read(artifact / "freeze.json")
     manifest = read(artifact / "artifact.json")
     assert all(manifest[key] for key in ("final_evaluation_complete", "reference_evaluation_complete", "supplementary_evaluation_complete"))
@@ -346,12 +347,29 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
 
     heading(doc, "Conclusion and Project Management")
     doc.add_paragraph("The custom CNN outscored both primary test references in accuracy and macro-F1. Its lower supplementary accuracy than the conditional frequency rule shows the need for verified, independently collected photos before drawing field-performance conclusions.")
+    if include_field_v8:
+        pilot = read(docs / "field_optimization/crop_loss_pilot.json")
+        unsupported = read(docs / "field_optimization/unsupported_energy.json")["unsupported"]
+        accepted = sum(group["accepted"] for group in unsupported.values())
+        count = sum(group["count"] for group in unsupported.values())
+        doc.add_paragraph(
+            "Explicit tomato context correctly classified 15 of 385 screened Hossain photos [17], "
+            "compared with zero in automatic mode. The 3.90-point gain missed the five-point target. "
+            f"A matched six-epoch crop-loss pilot [18] gained {pilot['field_joint_f1_gain']:.4f} "
+            "field macro-F1 and missed its advancement criteria."
+        )
+        doc.add_paragraph(
+            f"The upload rule suggested a label for {accepted} of {count} unsupported Open Images photos [19]. "
+            "The demo now lists the covered crops and explains that unfamiliar subjects can receive high scores. "
+            "The deployed checkpoint and decision threshold stayed fixed."
+        )
     doc.add_heading("Project Management", level=2)
     doc.add_paragraph("Jacob Amey’s assigned role covers data, training, evaluation and model integration. Jacob defined the final scope and authorized the delivery. Demetre’s assigned role covers the frontend and upload interface. The planning decks establish these roles. The contribution record documents available evidence and flags individual implementation and meeting claims for team confirmation. Codex assisted with data preparation, training experiments, evaluation, integration, writing and delivery verification.")
     doc.add_heading("Reproduction and Appendix", level=2)
     doc.add_paragraph("The archive identifies its exact runnable source revision in START_HERE.md. Its demo uses bundled weights. The saved metrics can be recomputed from the archived membership and predictions. Retraining also requires permitted access to the exact original master or frozen images. Follow the restore, verification, cache and pinned training commands in the archived README and data guide.")
     if include_field_followup:
-        doc.add_paragraph("The follow-up study and its manifests are recorded in docs/potato_context_study.md and docs/field_optimization. The potato-context demo was packaged separately from the original course archive.")
+        demo = "field-guidance demo" if include_field_v8 else "potato-context demo"
+        doc.add_paragraph("The follow-up study and its manifests are recorded in docs/potato_context_study.md and docs/field_optimization. The " + demo + " was packaged separately from the original course archive.")
     if include_tomato_transfer:
         transfer_location = (
             "Tomato transfer and crop classifier records are in docs/field_optimization."
@@ -373,6 +391,7 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
     doc.add_paragraph("Dataset SHA-256: " + freeze["dataset_fingerprint"])
     doc.add_paragraph("Selected weights SHA-256: " + freeze["checkpoint_sha256"])
     heading(doc, "References")
+    reference_start = len(doc.paragraphs)
     for ref in [
         "[1] S. P. Mohanty, D. P. Hughes, and M. Salathé, ‘Using deep learning for image-based plant disease detection,’ Front. Plant Sci., vol. 7, art. 1419, 2016. doi: 10.3389/fpls.2016.01419.",
         "[2] D. Singh, N. Jain, P. Jain, P. Kayal, S. Kumawat, and N. Batra, ‘PlantDoc: A dataset for visual plant disease detection,’ Proc. CoDS-COMAD, pp. 249–253, 2020. doi: 10.1145/3371158.3371196.",
@@ -401,6 +420,15 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             "[16] S. Mutuvi et al., “Artemis and Image Safari: Crop imagery datasets spanning globally critical crop species,” agriRxiv, 2026. doi: 10.31220/agriRxiv.2026.00491.",
         ]:
             doc.add_paragraph(ref)
+    if include_field_v8:
+        for ref in [
+            "[17] Hossain et al., “Tomato leaf diseases,” Mendeley Data, v1. doi: 10.17632/93h9p62kg4.1.",
+            "[18] L. Bertinetto et al., “Making better mistakes: Leveraging class hierarchies with deep networks,” Proc. CVPR, pp. 12506–12515, 2020.",
+            "[19] Google, “Open Images V7,” dataset and image metadata. [Online]. Available: https://storage.googleapis.com/openimages/web/download_v7.html",
+        ]:
+            doc.add_paragraph(ref)
+        for paragraph in doc.paragraphs[reference_start:]:
+            paragraph.paragraph_format.space_after = Pt(4)
     output.parent.mkdir(parents=True, exist_ok=True)
     doc.save(output)
 
@@ -412,8 +440,9 @@ if __name__ == "__main__":
     parser.add_argument("--include-field-followup", action="store_true")
     parser.add_argument("--include-tomato-transfer", action="store_true")
     parser.add_argument("--include-crop-head", action="store_true")
+    parser.add_argument("--include-field-v8", action="store_true")
     arguments = parser.parse_args()
+    crop_head = arguments.include_crop_head or arguments.include_field_v8
+    tomato = arguments.include_tomato_transfer or crop_head
     build(arguments.artifact, arguments.output,
-          arguments.include_field_followup or arguments.include_tomato_transfer or arguments.include_crop_head,
-          arguments.include_tomato_transfer or arguments.include_crop_head,
-          arguments.include_crop_head)
+          arguments.include_field_followup or tomato, tomato, crop_head, arguments.include_field_v8)

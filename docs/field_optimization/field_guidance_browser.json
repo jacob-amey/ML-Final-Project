@@ -1,0 +1,34 @@
+{
+  "observed_utc": "2026-11-26T00:23:50.905060+00:00",
+  "source_revision": "2673958efe0c3fdaa147701ae4a537dd55123e61",
+  "archive_sha256": "000443dad48f0740e5f015282dd43c5d97f7d6e8967e3d883b484a59bc3091cc",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "url": "http://127.0.0.1:8788/",
+  "fresh_extraction": true,
+  "crop_coverage": {
+    "count": 43,
+    "includes": [
+      "Tomato",
+      "Potato"
+    ],
+    "omits": [
+      "Spruce"
+    ]
+  },
+  "browser_uploads": [
+    {
+      "file": "d31f9c2a20db566f.jpg",
+      "cohort": "Open Images unsupported development",
+      "known_subject": "typewriter",
+      "displayed_class": "raspberry__fire_blight",
+      "displayed_score": "93.8%"
+    },
+    {
+      "file": "final_success.jpg",
+      "cohort": "existing packaged test fixture",
+      "displayed_class": "tomato__healthy"
+    }
+  ],
+  "observed_score_copy": "Scores rank the saved labels. LeafCheck can give a high score to an unfamiliar plant or an unrelated object. For a diagnosis, consult a plant specialist.",
+  "invalid_upload_verified_by": "separate fresh-extraction HTTP archive verifier"
+}

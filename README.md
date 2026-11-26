@@ -67,6 +67,9 @@ Read `docs/final_model_selection.json` for the pre-test decision,
 - [Crop classifier study](docs/field_optimization/crop_head_study.md):
   two matched seed comparisons, the CCMT training release, and independent
   confirmation on Holeta potato and TLID tomato.
+- [Crop loss and unsupported uploads](docs/field_optimization/field_v8_study.md):
+  matched scratch-training results, a grouped feature probe, and browser
+  verification of the current demo.
 
 ## Run the delivered study
 
