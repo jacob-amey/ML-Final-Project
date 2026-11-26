@@ -11,6 +11,7 @@ import subprocess
 import tempfile
 from zipfile import ZipFile
 
+from audit_field_preflight import protected_field_sources
 from inspect_pakistan_tomato import fetch_range
 from prepare_blight_dataset import Photo, deduplicate, filter_protected, inspect, protected_hashes
 from prepare_final_dataset import file_sha256, write_csv
@@ -22,7 +23,7 @@ RAW = ROOT / "data/raw/leafcheck_field_v9/pretoria"
 COLUMNS = ("GLS", "NCLB", "PLS", "CR", "SR", "NoFoliarSymptoms", "Other", "UnidentifiedDisease")
 
 
-def prepare(output):
+def prepare(output, expanded=False):
     source = json.loads(PLAN.read_text())
     RAW.mkdir(parents=True, exist_ok=True)
     size = source["archive_size"]
@@ -62,8 +63,9 @@ def prepare(output):
             mixed += len(positive) > 1
             if len(matching) == len(positive) == 1 and positive[0] in source["mapping"]:
                 candidates[positive[0]].append((row["imgID_id"], matching[0], positive[0]))
+        per_class = 24 if expanded else 4
         queue = [value for group in candidates.values() for value in sorted(group, key=lambda r:
-                 sha256(("leafcheck-pretoria-intake-v1:" + r[0]).encode()).hexdigest())[:4]]
+                 sha256(("leafcheck-pretoria-intake-v1:" + r[0]).encode()).hexdigest())[:per_class]]
         ranges = RAW / "ranges"
         ranges.mkdir(exist_ok=True)
 
@@ -91,7 +93,7 @@ def prepare(output):
                 (RAW / f"{int(identifier)}.jpg").write_bytes(raw)
                 photo.content = b""
                 photos.append(photo)
-    filter_protected(photos, protected_hashes())
+    filter_protected(photos, protected_field_sources() if expanded else protected_hashes())
     deduplicate(photos)
     output.mkdir(parents=True, exist_ok=True)
     prediction_path = output / "sample.csv"
@@ -110,6 +112,13 @@ def prepare(output):
         "exif_capture_days": Counter(p.date.split()[0] for p in photos if p.date),
         "split_assigned": False, "photos_admitted": 0, "inference_run": False,
     }
+    if expanded:
+        result["overlap_scope"] = "Frozen master and registered prior field releases"
+        result["capture_days_by_compatible_label"] = {
+            label: Counter(p.date.split()[0] for p in photos if p.class_name == label and p.date and not p.reason)
+            for label in source["mapping"].values()
+        }
+        result["unknown_capture_date"] = sum(not p.date for p in photos)
     (output / "receipt.json").write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result, indent=2), flush=True)
 
@@ -117,4 +126,6 @@ def prepare(output):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
-    prepare(parser.parse_args().output)
+    parser.add_argument("--expanded", action="store_true")
+    args = parser.parse_args()
+    prepare(args.output, args.expanded)

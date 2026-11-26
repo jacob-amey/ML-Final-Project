@@ -20,6 +20,18 @@ PIN = MANIFESTS / "leafcheck_field_v9_preflight_files.csv"
 IIT = MANIFESTS / "leafcheck_iit_potato_intake_files.csv"
 
 
+def protected_field_sources():
+    protection = protect_previous()
+    for name in (
+        "leafcheck_pakistan_tomato_dev_v1", "leafcheck_plantcity_holdout_v1",
+        "leafcheck_ccmt_crop_v1", "leafcheck_crop_confirmation_v1",
+        "leafcheck_imagesafari_crop_v1", "leafcheck_hossain_tomato_v1",
+    ):
+        protection = extend_protected(protection, ROOT / "data/processed" / name,
+                                      MANIFESTS / f"{name}_release.json")
+    return protection
+
+
 def audit(output, registry, raw):
     records = read_csv(registry)
     expected = 305 if registry == IIT else 72
@@ -39,15 +51,7 @@ def audit(output, registry, raw):
 
     with ThreadPoolExecutor(6) as pool:
         photos = list(pool.map(collect, records))
-    protection = protected_hashes() if registry != IIT else protect_previous()
-    if registry == IIT:
-        for name in (
-            "leafcheck_pakistan_tomato_dev_v1", "leafcheck_plantcity_holdout_v1",
-            "leafcheck_ccmt_crop_v1", "leafcheck_crop_confirmation_v1",
-            "leafcheck_imagesafari_crop_v1", "leafcheck_hossain_tomato_v1",
-        ):
-            protection = extend_protected(protection, ROOT / "data/processed" / name,
-                                          MANIFESTS / f"{name}_release.json")
+    protection = protected_hashes() if registry != IIT else protected_field_sources()
     filter_protected(photos, protection)
     for source in sorted({photo.source for photo in photos}):
         deduplicate([photo for photo in photos if photo.source == source])

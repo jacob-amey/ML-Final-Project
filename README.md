@@ -81,9 +81,11 @@ and source snapshot are included. The [GitHub repository](https://github.com/jac
 has the published project history. Use the exact revision in the archive for
 this delivery.
 
-1. **Run the demo.** Extract the nested `LeafCheck-final-demo.zip`. On the
-   tested Apple silicon Mac with Python 3.14 and Apple Swift tools, run the
-   following from its `LeafCheck/` folder:
+1. **Run the demo.** The latest local package is
+   `artifacts/LeafCheck-field-guidance-demo.zip`. The original course archive
+   contains `LeafCheck-final-demo.zip`. On the tested Apple silicon Mac with
+   Python 3.14 and Apple Swift tools, run the following from the extracted
+   `LeafCheck/` folder:
 
    ```sh
    xcrun --find swiftc

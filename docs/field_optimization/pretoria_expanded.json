@@ -1,0 +1,60 @@
+{
+  "source_plan_sha256": "7153f601ce948e67999942cb8fd6ed226ab88b4368ed72e963faf337836c1410",
+  "audited_sample_sha256": "48b736fb42c333debc54b86be4aa5c6c5a7812e22e0c4b9e62507e5dd201da15",
+  "published_members": 2355,
+  "multiple_condition_records": 891,
+  "compatible_single_label_candidate_counts": {
+    "corn__gray_leaf_spot": 630,
+    "corn__healthy": 232,
+    "corn__northern_leaf_blight": 140,
+    "corn__common_rust": 107
+  },
+  "sample_photos": 96,
+  "sample_screen_counts": {
+    "no_candidate": 94,
+    "new_cluster_repeated_view": 2
+  },
+  "exif_capture_days": {
+    "2019:03:13": 40,
+    "2009:03:24": 6,
+    "2020:02:26": 2,
+    "2020:03:09": 14,
+    "2012:03:27": 5,
+    "2012:03:28": 3,
+    "2019:03:16": 23,
+    "2012:03:29": 1,
+    "2020:03:02": 2
+  },
+  "split_assigned": false,
+  "photos_admitted": 0,
+  "inference_run": false,
+  "overlap_scope": "Frozen master and registered prior field releases",
+  "capture_days_by_compatible_label": {
+    "corn__gray_leaf_spot": {
+      "2019:03:13": 7,
+      "2009:03:24": 6,
+      "2020:02:26": 2,
+      "2020:03:09": 5,
+      "2012:03:27": 4
+    },
+    "corn__northern_leaf_blight": {
+      "2019:03:16": 5,
+      "2019:03:13": 12,
+      "2020:03:02": 2,
+      "2020:03:09": 3
+    },
+    "corn__common_rust": {
+      "2019:03:16": 16,
+      "2019:03:13": 8
+    },
+    "corn__healthy": {
+      "2020:03:09": 6,
+      "2019:03:13": 11,
+      "2012:03:28": 3,
+      "2019:03:16": 2,
+      "2012:03:29": 1,
+      "2012:03:27": 1
+    }
+  },
+  "unknown_capture_date": 0
+}
