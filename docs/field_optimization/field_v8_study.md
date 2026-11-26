@@ -10,7 +10,7 @@ Both seed-434 runs started with randomly initialized weights. Each epoch used th
 
 | Model | Master validation macro-F1 | Master accuracy | Field macro-F1 | Field correct |
 | --- | ---: | ---: | ---: | ---: |
-| Existing deployed 224-pixel model | 0.649221 | 15,111/16,836 | 0.050016 | See per-source results |
+| Existing deployed 224-pixel model | 0.649221 | 15,111/16,836 | 0.050016 | 14/586 |
 | Matched six-epoch control | 0.369417 | 12,380/16,836 | 0.000000 | 0/586 |
 | Matched six-epoch crop loss | 0.379271 | 12,362/16,836 | 0.017231 | 6/586 |
 

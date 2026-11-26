@@ -1,0 +1,60 @@
+{
+  "source_files_sha256": "4c08450d001f4a9b80fd31dfe958bb4fe9472df956d3451b4e44288e273240c3",
+  "audit_sha256": "e3fff6858b99747375872da38fa43b16cc09ba05c5c70f4a89a5d8255124bd95",
+  "master_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "preflight": {
+    "iit_potato/blight_unspecified": {
+      "sample_count": 18,
+      "screens": {
+        "no_candidate": 18
+      },
+      "exif_days": {
+        "2018:07:20": 9,
+        "2018:06:18": 4,
+        "2018:07:19": 1,
+        "2018:07:21": 2,
+        "2018:07:11": 1
+      },
+      "exif_devices": {
+        "GIONEE A1": 2,
+        "E5533": 4,
+        "ANE-AL00": 1,
+        "LLD-AL10": 7,
+        "Moto G (4)": 2,
+        "iPhone 7": 1
+      }
+    },
+    "iit_potato/healthy": {
+      "sample_count": 18,
+      "screens": {
+        "no_candidate": 18
+      },
+      "exif_days": {
+        "2018:06:19": 18
+      },
+      "exif_devices": {
+        "E5533": 18
+      }
+    },
+    "ngld_grape/downy_mildew": {
+      "sample_count": 18,
+      "screens": {
+        "no_candidate": 18
+      },
+      "exif_days": {},
+      "exif_devices": {}
+    },
+    "ngld_grape/healthy": {
+      "sample_count": 18,
+      "screens": {
+        "no_candidate": 18
+      },
+      "exif_days": {},
+      "exif_devices": {}
+    }
+  },
+  "scope": "Master and PlantDoc raw bytes, orientation-invariant decoded bytes and perceptual screening of the published sample, plus within-source grouping.",
+  "split_assigned": false,
+  "photos_admitted": 0,
+  "inference_run": false
+}

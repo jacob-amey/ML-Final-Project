@@ -64,7 +64,8 @@ def verify_arm(path, config, run):
     return state
 
 
-def run_arm(directory, config, arm, seed, train, val, baseline, spec, device, stop, run, assess=None):
+def run_arm(directory, config, arm, seed, train, val, baseline, spec, device, stop, run, assess=None,
+            train_epoch=run_epoch):
     directory.mkdir(parents=True, exist_ok=True)
     seed_everything(seed)
     model = network(config, device)
@@ -94,7 +95,7 @@ def run_arm(directory, config, arm, seed, train, val, baseline, spec, device, st
         if epoch > config["min_epochs"] and chosen and epoch - chosen["epoch"] > config["patience"]:
             break
         started = time.monotonic()
-        loss = run_epoch(model, optimizer, raw, labels, spec, device, config, epoch, seed, weights)
+        loss = train_epoch(model, optimizer, raw, labels, spec, device, config, epoch, seed, weights)
         measures = assess(scorer)
         result = {"epoch": epoch, "scores": measures, "train_loss": loss, "seconds": time.monotonic() - started}
         history.append(result)

@@ -1,0 +1,68 @@
+{
+  "archive_sha256": "3c867ee21e799fc6a695917a1281e3e7190ed49ac7c74f8fcb98308091eaa76f",
+  "metadata_sha256": "2997b40c35c794d17e382e61f77bf8c263ec700ebdd84997215df71f1802ec34",
+  "audit_csv_sha256": "c452d35d79ba210b5020a5583df67c59ee634cbf641f4e753fb4247fcca52278",
+  "master_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "photos": 3477,
+  "missing_metadata": 0,
+  "extra_metadata": 0,
+  "publisher_metadata_dates": {
+    "2023-06-15": 3477
+  },
+  "publisher_metadata_vineyards": 28,
+  "publisher_metadata_devices": {
+    "Redmi Note 10 5G": 3477
+  },
+  "exif_date_count": 1070,
+  "exif_days": {
+    "2024:10:27": 1070
+  },
+  "exif_devices": {
+    "M2101K6I": 172,
+    "SM-A037F": 912
+  },
+  "by_source_class": {
+    "Black rot": {
+      "no_candidate": 96,
+      "new_cluster_repeated_view": 688,
+      "new_cluster_label_conflict": 24
+    },
+    "esca": {
+      "new_cluster_label_conflict": 181,
+      "no_candidate": 707
+    },
+    "healthy": {
+      "new_cluster_label_conflict": 1,
+      "no_candidate": 1091,
+      "new_cluster_repeated_view": 17
+    },
+    "leaf blight": {
+      "no_candidate": 151,
+      "new_cluster_repeated_view": 155,
+      "new_cluster_label_conflict": 366
+    }
+  },
+  "image_folder_vs_metadata": {
+    "Black rot": {
+      "Black Rot": 808
+    },
+    "esca": {
+      "Black Rot": 1,
+      "Esca": 887
+    },
+    "healthy": {
+      "Healthy": 438,
+      "Leaf Blight": 671
+    },
+    "leaf blight": {
+      "Esca": 1,
+      "Healthy": 671
+    }
+  },
+  "folder_metadata_disagreements": 1344,
+  "exact_decoded_groups_with_conflicting_folders": 2,
+  "scope": "Master and PlantDoc raw-byte, decoded D4 and perceptual screening; within-source duplicate grouping. Visual candidates are heuristic.",
+  "split_assigned": false,
+  "photos_admitted": 0,
+  "inference_run": false
+}

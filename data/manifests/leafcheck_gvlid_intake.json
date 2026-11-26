@@ -1,0 +1,11 @@
+{
+  "publisher": "https://data.mendeley.com/datasets/wkymf8bhcg/5",
+  "data_descriptor": "https://doi.org/10.1038/s41597-026-07431-9",
+  "license": "CC BY 4.0",
+  "url": "https://data.mendeley.com/public-files/datasets/wkymf8bhcg/files/7aa4663b-c462-4283-b280-2f3df0be9472/file_downloaded",
+  "sha256": "3c867ee21e799fc6a695917a1281e3e7190ed49ac7c74f8fcb98308091eaa76f",
+  "bytes": 902251054,
+  "path": "data/raw/leafcheck_field_v9/gvlid/GVLiD.rar",
+  "expected_jpeg_count": 3477,
+  "use": "Provenance and overlap audit only. Admit no rows, make no predictions, and create no split before validating capture metadata and class compatibility."
+}
