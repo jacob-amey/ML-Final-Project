@@ -1,0 +1,24 @@
+{
+  "hypothesis": "New field images improve bean rust transfer beyond scheduling the same number of repeat master rust images.",
+  "intervention": "348 Makerere publisher-training bean rust originals versus 348 seeded draws from the 76 frozen training bean rust rows. Both use the full original training split, identical 177-label mapping, training-only original normalization and randomly initialized residual CNN.",
+  "seed": 434,
+  "input_size": 128,
+  "epochs": 8,
+  "checkpoint_selection": "Original master 177-class validation macro F1, then validation loss within 1e-6, then earlier epoch.",
+  "comparison": "Use eight-view probability averaging for both best checkpoints. Primary metric is fixed master validation macro F1 across 177 labels. Compare Tanzania expansion rust top-1 recall beside counts of cross-crop mistakes using all 177 outputs. Keep the original Tanzania 24-file preflight separate because its predictions informed source selection.",
+  "advance_if_all": {
+    "master_macro_f1_delta_at_least": 0.0,
+    "master_accuracy_delta_at_least": -0.005,
+    "tanzania_rust_recall_delta_at_least": 0.1,
+    "master_halo_blight_and_mosaic_virus_correct_drop_at_most": 1
+  },
+  "decision": "A qualifying result merits a second matched seed and adequate-budget confirmation with a more complete independent bean collection. Single-source rust recall says nothing about specificity against unsupported conditions. Both eight-epoch pilots are ineligible for deployment. Leave course test and reserved confirmations sealed. Skip a second seed if either arm fails the declared guard.",
+  "training_edition": {
+    "path": "data/manifests/leafcheck_makerere_bean_rust_train.json",
+    "sha256": "6de37a7f5a84ab73cbcf5e1a60d4493f419b342065148b9001b42eb2d96de97f"
+  },
+  "field_validation": {
+    "path": "data/manifests/leafcheck_tanzania_bean_rust_validation.json",
+    "sha256": "b9f5788a70426f6fb661d77277990f1cc8db8cf66d5ba692dcbd167a988858ed"
+  }
+}

@@ -1,0 +1,1757 @@
+{
+  "source": "https://github.com/AI-Lab-Makerere/ibean",
+  "license": "MIT, dataset release 20 January 2020",
+  "base_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "archive": {
+    "path": "data/raw/leafcheck_field_v12/makerere-beans/train.zip",
+    "download_url": "https://huggingface.co/datasets/AI-Lab-Makerere/beans/resolve/27aa014ce09b193e1a6f58112d4a66e0eddb69c5/data/train.zip?download=true",
+    "sha256": "284fe8456ce20687f4367ae7ad94a64577e7f9fde2c2c6b1c74340ab5dc82715",
+    "jpeg_count": 1034
+  },
+  "group_id": "makerere-ibean-2020",
+  "source_split": "train",
+  "role": "experimental training only",
+  "class_name": "bean__rust",
+  "members": [
+    {
+      "member": "train/bean_rust/bean_rust_train.0.jpg",
+      "sha256": "7983f1e3f538a1aeac96a07618511e742c367e52135438f24d538f69e893c651",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.1.jpg",
+      "sha256": "b401ee27883b561651ee3d5d00e16a779b4cdfc4656a2b237a91148fb4367a55",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.10.jpg",
+      "sha256": "8d69365cf9bb36c809c30f006692499abacc3e8a87b3fad614ea8b544b399531",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.100.jpg",
+      "sha256": "7a04f2c0f28bcc7458fa11c1b500a5e2bec9a6a92223e89052318e3f2cdea630",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.101.jpg",
+      "sha256": "cddb4a83833fe6a31b0dbc17297b44ee266a7f049f57999888293853d4da4229",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.102.jpg",
+      "sha256": "a23f5a13240867d08d7ac3e3234b1427390bbd91fd0603038ddfcfecf70f2289",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.103.jpg",
+      "sha256": "f8f3ff9d5153e9aa8ad14a2ebb9787393d8ff2502379319fdb69db0a7f41519c",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.104.jpg",
+      "sha256": "2c5b2b94fd923c8186835f1c668e1e64b41f64f773a7b45f77effdaf71a076c6",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.105.jpg",
+      "sha256": "4134e36300d7fa8a28a287842da28add0c82b95f3b710e9b51205c8d8b648bc5",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.106.jpg",
+      "sha256": "1246dca980ccf1d7d6657b5b806a8b31887c5c457a663adb2a852232125d090e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.107.jpg",
+      "sha256": "4ac2a92d7fa2f12648e51ca6e71e1c8e70d7f25274fb0ac81888113a11147354",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.108.jpg",
+      "sha256": "970f1cb33a8fee13268ffac06a142a83ae78af578564699d88c81458b833f637",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.109.jpg",
+      "sha256": "7fdc1914c3d3e48bc1a00ea44838f4b6ce7bb986d169226b8ffc68800478229a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.11.jpg",
+      "sha256": "e8f7cb6d1ca8ce6b2d71dfe1d21c47778a4c700caa882f7862aeafee5c88a48d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.110.jpg",
+      "sha256": "3829a90875af26899ce32fccf55e8da0a2bc3bbc5cd6cc12e563e199d01a3e2e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.111.jpg",
+      "sha256": "7570cd256bc22011dcac8d780d099a178ec2b29196ac3541c5bfe4219ef700a7",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.112.jpg",
+      "sha256": "9cafa337e54d7846d74132423e633721617c2bc3df1dacd91783579125733c1a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.113.jpg",
+      "sha256": "84b20edc3000872f4e5d6e1c35f6b1d71bdfab5275e3f7559496ad61b9a7bd89",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.114.jpg",
+      "sha256": "9eee3eeb3408db2966526b1735a61c46395446cd61bd65f51b08b5ada01ca9cf",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.115.jpg",
+      "sha256": "bfdd0f7375e11b7a0e2a84ace3308233dbc7df0cf0ea35a564791fd9c5a8fafa",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.116.jpg",
+      "sha256": "276178e4aa47177ad75066ab05a5c085727cf1dacd23a9f20395c88cf5d58da8",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.117.jpg",
+      "sha256": "11024c9d861f7cacd24554c59dda1d325944189969aad81d39acf2b2ce3096a3",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.118.jpg",
+      "sha256": "c1f8bfdca8774b212b45d4badcf48a5afcb15b15ad59f5c8314eccdafc86018e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.119.jpg",
+      "sha256": "4683d0b5db53794384a0a0226a4a58aa8a1dc43819f3d0fd1071ce7a46741cb4",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.12.jpg",
+      "sha256": "17042f49ac07cbdb9107481bac3f3d8a2a6922a2e6e67b8b85d544b5f2f2a9d9",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.120.jpg",
+      "sha256": "8f33f22e529b4c9b5769c7a963215973f9a668907f1802f312b16805edb63dec",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.121.jpg",
+      "sha256": "4c5ed9cca6060c98eb88254ac1250184f9f26991e13d839556ad16c67b603e96",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.122.jpg",
+      "sha256": "75f302400d454228207f1701be5e75573b87791c7e328972cff5d83d64919e77",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.123.jpg",
+      "sha256": "f0515dfcf223cfb29de89261b185f426bd0913a46bd5ed1bb6bab55825878ed4",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.124.jpg",
+      "sha256": "05fc0b805f115bc1133d17ee7477aa2305f1f728a23dd9962af1e5c5f9f46605",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.125.jpg",
+      "sha256": "bcfcd6e0130c1bf287013e9a41c9cf3e3547fa51004e1f87f9ef26047b74dad0",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.126.jpg",
+      "sha256": "95c6165a78ec17b40188c38562620029ceefb38e985e214689e9739b4cf09858",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.127.jpg",
+      "sha256": "8f275eccdece31e6acbb125ed8563acf2408f6068c13d77a838c1a33a808d84a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.128.jpg",
+      "sha256": "793fbf15dbd4fa352aaaa564fff015e260810f78c8767bfdb015ee929b126478",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.129.jpg",
+      "sha256": "231ebe92c4192afea8cc464250ac5092cc124615fbe576edfd2e6e1054984d07",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.13.jpg",
+      "sha256": "1d75b16a2a30d9a5e8765b2f62e28e6324873a0aac45cca61fbe4f521ca72f68",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.130.jpg",
+      "sha256": "d4bc10120f9f25522afd923481c2b1b95faf27380a5a165e9028111bd68a0c69",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.131.jpg",
+      "sha256": "39397b90b6d984e967d83cddbe777dd45146d14fb32a5d095b1a38991e75b41e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.132.jpg",
+      "sha256": "952a9824f6816dd7bc09e84d7c56a3e617e620fade90a3dc34afe3854e12d30e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.133.jpg",
+      "sha256": "2c9d05a99c656735bd44d8be9659f7d4831e1b71fdd103b5e8727cc3904883ea",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.134.jpg",
+      "sha256": "74069ece5c32d8633a7640492613ccb97a6d1dbbc24000ec69a90532a9f34df2",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.135.jpg",
+      "sha256": "441e530c6bc9c49e35c75940a2bdba3753671c37f97acc29950a613eb4f03457",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.136.jpg",
+      "sha256": "e977524fa000e8495a8c6175e3e6536ea49f648b0e37c15c24451eafe0dffb12",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.137.jpg",
+      "sha256": "b87ffb26127db8514911bd515027e1764938447dcd39399ad2d8702e7c3a7cb7",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.138.jpg",
+      "sha256": "d0b577b8de271b8f1042bd6ead0dc7d33d72d9d983e5d99cc79ed5d5f6690ee4",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.139.jpg",
+      "sha256": "bfd1bb650fe3a8d408c075a222846f151707a6a3e352a371a20c6efed34af806",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.14.jpg",
+      "sha256": "34769d1811771d5c1a4d8ad44bfed21727fbf6d5bddc9d9c5864e14c2cae0c57",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.140.jpg",
+      "sha256": "444c9a0a5198ad610bb88df1a33564b4b9edeb9da6dc0757c904179b54b8c341",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.141.jpg",
+      "sha256": "d34eb6f32fb83bad6e368778a7d7718b6ddc002991714aa0245fd37d1941a871",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.142.jpg",
+      "sha256": "516f2c2cbc78e8d52cbf5a550bfb4359a1a50cccf4e37e902322b2e0a5796613",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.143.jpg",
+      "sha256": "bdb0efef904c046f2839a9be36fd76fcf138a25ba5f461c1753b6284fb9c37d0",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.144.jpg",
+      "sha256": "b510f0668810452c19a2b657d7ab6af7801b7c457ce2f975b0853a662b3ff475",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.145.jpg",
+      "sha256": "5d40e18ee3a5ef807e07611bde16c2ac93c12c4d9c69f5921cdb5d935e4fbde9",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.146.jpg",
+      "sha256": "c00c5c52e5632feeab1e32618bbfee18d64ac1c609d0c6d0a852a2904c7b6508",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.147.jpg",
+      "sha256": "a10ac7ed12ab27881af258362a67113cf34b57b8324d16ddf1d4e682bc1d9928",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.148.jpg",
+      "sha256": "49845ab3a918783536b68f7e8b77ccd929eabc66451b9efc8e1f41bfa2a91016",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.149.jpg",
+      "sha256": "b6596f284bdd8bbfe2f8a1aaa3b0d69ace129ed11ee5af6480abab46b87ff5c1",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.15.jpg",
+      "sha256": "fa3ad5def765d97f8cfaf904e158bdec154c35bbf239f1f328192c31cf239634",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.150.jpg",
+      "sha256": "84aa03b2dddbeb907a8d3ca12859efac2f36021eab6e75d5c3cf9baf9ec1a4d9",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.151.jpg",
+      "sha256": "81d222c703eae75b9f44e16486c88cf3f05df59b4e47ba72d78bff779ac1ab74",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.152.jpg",
+      "sha256": "3c0761fda17cd8108f0ec2c23517874d61a4082d9f5e9c43f748b3f7894bda6e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.153.jpg",
+      "sha256": "a6ce4fad5fb02dc44649cb9a9f07fae0e6491a8d580a5d7b5f589aa2d4ed2dfc",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.154.jpg",
+      "sha256": "0fdf35efceacc036b7294bc86d8a2cff35507078c48852489d0f374c684faaa1",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.155.jpg",
+      "sha256": "5e66d79c7d85f8b0110978e0362f424809d1f79e2ebc4a08a441de838c54eab7",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.156.jpg",
+      "sha256": "3e0fb64af0e32a35422b1043a22b93d076a501845753a8d6aa0d97dfd6253d30",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.157.jpg",
+      "sha256": "a31889cc21693249efece1c8ec3473c36fcc00153b6665e1c3f0286c3a08b75d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.158.jpg",
+      "sha256": "89fe227bd2390674c8818f1634dda110a095da1c9c67ca1cde34fcbf00571f11",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.159.jpg",
+      "sha256": "81c3cdd8d4149ab399856888cade505a98ed069a0816de8b69d488ec8b689d16",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.16.jpg",
+      "sha256": "f0d4ece47224e3d8b6df471e742d198f8fa71390000e34420a7e9714b32b14dc",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.160.jpg",
+      "sha256": "ee23cea9a24f8c7e12da5f161e81cbe12d809b0318539fd39d2d0e4697675b84",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.161.jpg",
+      "sha256": "ae4caf9533fa2f913bebaad98adc879a322adba38b46bed10e8bfc3f2cb4d2c1",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.162.jpg",
+      "sha256": "dcd378dae63a9141961c1280191d32fe2df0a0cc4cd60ad3c2a37cddfe67c10b",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.163.jpg",
+      "sha256": "6af9ce12ec2399ecbf83a6dfd56ef3cf0fde45e26f51a9b827308a1fdaa7c4a0",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.164.jpg",
+      "sha256": "dbbbbc11fc2088aecd7fab61fd7e3803bc260fc05fff6120716e1bba20f86398",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.165.jpg",
+      "sha256": "29a98c5b1f49e20568029eccd1da0bb1a053023b0532b0feff492762b237f496",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.166.jpg",
+      "sha256": "5f3e20aac1cc879121b94d4338a343fd671f778ea14f858fc547f632e03ba9ea",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.167.jpg",
+      "sha256": "cf54d8373fd0e2991d699a480587a96511c3c863f9186c7b0023f79bbfb005bd",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.168.jpg",
+      "sha256": "345476872fc42445221b733860a97edb52d5015b077a60ac9b16835e30b89003",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.169.jpg",
+      "sha256": "8d7147ee4712f8ae69a2920f31de4bffdc86e92cdc27c01b37f57d8766dfbe4e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.17.jpg",
+      "sha256": "97c28d007db6da28eadd6f8ab303db571578f73cf57752e88f57509c0270fe72",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.170.jpg",
+      "sha256": "f11e27e7ebd5a4c8ca7ebcf047628ee47cbd1ba81d912ec739dfad25f1727f69",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.171.jpg",
+      "sha256": "a86b02d1281633cca0736d0492740f23f77c1ff4a770bab815b64006a668066b",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.172.jpg",
+      "sha256": "645114e366bf94a480a69bc8283378161be4ea6209f1cc2fa1aa006080846298",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.173.jpg",
+      "sha256": "bf5014469e849d781ca8fd6c57d46ef17cfb01e13bedc84ed117de474ea644e1",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.174.jpg",
+      "sha256": "f1c758e8ebd30891dea29dd3f5d178e6d293650f874e39c2d8b1a0194cba10da",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.175.jpg",
+      "sha256": "f823d861c38c81be67c9a56b627d6f2ad56a71507a1b94028ea9430b190305b2",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.176.jpg",
+      "sha256": "50189bbcdb0a970a37c3fa6463a530663c1eb73877e57b9bb48dcdbc9ee51fe9",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.177.jpg",
+      "sha256": "fa44fe2e5427e8b7403d54f9896c4361bb114415887df009c9987a93bb1a81e3",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.178.jpg",
+      "sha256": "ceda04ff2a6d4a47f7b3ed0be2d7aea880fc55272b72b8b67afb6cdc61ad390a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.179.jpg",
+      "sha256": "052af9eff2934bf84f04fa7399e2f4dcc3952e50939647f12d6a3d958b810c1a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.18.jpg",
+      "sha256": "a374663477298c7dd206b885f7a11921fcabdddd17328a5766c0c6d9daee8081",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.180.jpg",
+      "sha256": "a1cfdd8e5463e9256c04ee2d617a82f6ee8715a13ab01a0e260ed3f582268580",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.181.jpg",
+      "sha256": "c86b0b6f521b5dfa6a6cb78751cd4af8495a17d900c70f7447b56312c410d491",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.182.jpg",
+      "sha256": "c5b619a8e747222f87bf6946bef610a205e70d4588c739114bc14c181406ed8b",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.183.jpg",
+      "sha256": "70c1f941b8ef8021cd33a7a2eecc660dc9f742d6907f93b7bddc7ce4df54aa72",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.184.jpg",
+      "sha256": "ea19689f22e4499aa47c032c972a1ab8afb696ce3032ba545b7a899bd8a7fc2c",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.185.jpg",
+      "sha256": "5633f8dc2bd006aa3b9f249291ce2cfecaf4ec05dc8bfa5fc2bf3af7799d969c",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.186.jpg",
+      "sha256": "fdb2a20b6829ea7ae24f7509026e0c9e6643faf6a26440d8d21de29b4a11dcb2",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.187.jpg",
+      "sha256": "0e08d90d42539d4e8faa06e041c217e966b191cd1e4015fde8ca52a4f03ed74d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.188.jpg",
+      "sha256": "10ff7901b5f9fdc1b086f8a72b988b5372bfd0222c6bb7cb23d5e0ec5f4e1589",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.189.jpg",
+      "sha256": "fac970cb07001688575b504a6ab2093ac0cfe9334a3f4fd16fce8d33dcad92da",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.19.jpg",
+      "sha256": "d2eceeaa3d20c56ecce71b92e84a3eb8a775122dfb88eee9dc55e3afbe71231f",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.190.jpg",
+      "sha256": "531f206362aa84da03855f75749f7db421337f7ba429dcdf0c0d0c88795f171e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.191.jpg",
+      "sha256": "590913e325c3219ed0bb7d2f5c8428419cce0254a362ae50b4117e1c95e7591e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.192.jpg",
+      "sha256": "60a591ffef7e9257e594e1f40355d83d2ce8e7edb5cb12c97ddebbc467f76790",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.193.jpg",
+      "sha256": "61a150dba73475802fb045f18a7d90fe79e2cae50bfbe207882869055fbe1dc7",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.194.jpg",
+      "sha256": "eb88fa4a8cc2bf38ecee3d15eda7f4aa7b7cea39ae01e0e5b28613ea426429fc",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.195.jpg",
+      "sha256": "3d9a060f91c1f3d0c9bed12cb1a4053bf94b6b477b51d1f8695b6143c1bc1f01",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.196.jpg",
+      "sha256": "6ef7b25214337c40f51f48ed71c40337bd61973c8218372b3b045695e538fca2",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.197.jpg",
+      "sha256": "1348f697e30a68f0c4217c7542e1230d6c62c9629149b4248aabda24715502db",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.198.jpg",
+      "sha256": "fbcd6f6446785c8aca87ec63fb071566215e28a5e54b22e554afee94b262eceb",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.199.jpg",
+      "sha256": "4202e6d3f7f792ba56576f5f67838366a6ca84a7fd1909ef61a07bd4b2872629",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.2.jpg",
+      "sha256": "288a9ddb5d5b1519dee26c7532003d63bfbef0469097b86010ea7dbc9da77ede",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.20.jpg",
+      "sha256": "bb64bc6c7ae94dc0c7fc2a1170316a36ea59b9833dfc993e24ebdaf2ff6ec443",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.200.jpg",
+      "sha256": "4f69983d2b23b8629a827e13348d5c9a8e5e17ccba963e2c598adccec0d36f3d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.201.jpg",
+      "sha256": "bfd434823c27e2e26e52e93297cf85cc1121b106e87fa00328a7d07d3deac4ba",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.202.jpg",
+      "sha256": "9aea4b559bdabe9c9cb811d13e56c15284535c60dee36163b960b02623092a0e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.203.jpg",
+      "sha256": "bef36a2f551a60c8443403029814af0589dc301d206925082c0f78353ac0f94c",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.204.jpg",
+      "sha256": "181dc9d5114226592c25068690c67be3ec76801e6699f9832c48f7995e2a4363",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.205.jpg",
+      "sha256": "53c533f4099bbca26ad2497c510ac7a8c9859bc5859dc3ce1902ba136414f8ac",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.206.jpg",
+      "sha256": "21fe46e58831c7bb9a14d5efa369cdc5b1c96fed06300884fd87904ab65457fa",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.207.jpg",
+      "sha256": "919bb5d15eb4f9d0ad58a5e7ac3ff809adbeb0375e03a26dd3974337a697c791",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.208.jpg",
+      "sha256": "0022cf857530773b61252e66d81133f34dc801fa293bb7c48536f4821e6a07f8",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.209.jpg",
+      "sha256": "fbaa543a47783df25aa8b7132ba25958fa0ccc30212e56df656dd9b6c77ee410",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.21.jpg",
+      "sha256": "246c2213152969d4b29c6ad507adea33a48f67462e7c5af16b5153ba6f889607",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.210.jpg",
+      "sha256": "306be2b796baf5e424243f4b960b76cac5be3d055ad7a52f71a0d45dc1052177",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.211.jpg",
+      "sha256": "7828fc6b24e09ab6a1c20ec9cd73ab684f6d80f1ec9fcbc25756ea1e974e41e4",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.212.jpg",
+      "sha256": "eb2a8bcb092c2e0d5f6075947c36318ede33c8f462ce6a047c0bd5e197cadec5",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.213.jpg",
+      "sha256": "de15f32695186a9b4199a69099095d124e75879a5dfc1d8324203ed02378a3cd",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.214.jpg",
+      "sha256": "8a0aaa202333f30c26eac1cde45e82af862f9372078469b2a754e861da11a78d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.215.jpg",
+      "sha256": "f5d3a10ebb1e1a3dbc75c866a2fb82fa6fd7882b28e83634ac3b10c65064984f",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.216.jpg",
+      "sha256": "c2a97ea6a7c8b602ae7034772b4f692db804e652226e7c7154be7d3c58c395af",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.217.jpg",
+      "sha256": "c75d7009e0361514d519ab51d718b607bfd9a30ba4ec24977af9bef9ec1184f7",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.218.jpg",
+      "sha256": "20ccb2b3c5b67b9fd7f91d60b4c06982dea1f4fa0908906f95bfe3ffb76d8cec",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.219.jpg",
+      "sha256": "2b1c9601a7df536e11573145c42aa51221101b45624966ea7f257dfa7bce568d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.22.jpg",
+      "sha256": "65e9c994e5432e33bb6b92068885c3e4dd2b95b281bcca06ee5ece6c21d50ffa",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.220.jpg",
+      "sha256": "e0ba75e6c1536866d57891bc6afce70105bb7217c873c0aaa96be78c1b9d0e09",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.221.jpg",
+      "sha256": "2e63e157e66281f3014ba23115816acb1949e6419af1b4d8cfcc7f4f9b503342",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.222.jpg",
+      "sha256": "d23b8d1ed179ee72ed674648fe8e7cf04c67ccf1f396d862d916df9bb9fb97b3",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.223.jpg",
+      "sha256": "a3fa75a3575e33a918cded4c954bc9726b557a737ff33a28124d6114a32ee36f",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.224.jpg",
+      "sha256": "322dc167f758008cefd10904cc0b266f43fe522b225f14215b2de5f96d72dd1b",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.225.jpg",
+      "sha256": "63846673c468e8b23463a51c9b61cb1d20fae60c1a86af247972f42fe9beff68",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.226.jpg",
+      "sha256": "f8b9eea1ace4aa0645df97007b2616b8a3f03ed87d21f3980efcd02031747424",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.227.jpg",
+      "sha256": "ea1c614cd43babf6a79ee5fffcbd79cc32b65a3d9c19534b93f6416014757f16",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.228.jpg",
+      "sha256": "60dbaa0b1ba3f6de5e75ccbf89e7cc0ac8dd2185b9f2f7f492a3bdf5b8ec8fc9",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.229.jpg",
+      "sha256": "273becbaa21de41d6fff75216b8efe9d6cf155e749b4276b7c336d6d5223401e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.23.jpg",
+      "sha256": "94f3b2a192fdc81a441117c515fae7332d2ae03ae40253561384f0c758e15075",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.230.jpg",
+      "sha256": "d2f97cb6737ea88e611a4968305cff38efa78ce66cef7e76639ff20447c32c62",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.231.jpg",
+      "sha256": "36c0dd2233a45d085a6d7af4d5d8a8e1d3910c012b1d09c753abd447d0fae92c",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.232.jpg",
+      "sha256": "d4c9304e74a8b8ad9a658aff34a850916d93f5b4cd8bb5835215239e5c730556",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.233.jpg",
+      "sha256": "9bdf8c528e51906a156d895bf3fb257aeab4495a1773cd6d8c1858683fca2220",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.234.jpg",
+      "sha256": "4d42892507a3b060a2faacd8410e586252e0d9eb0d50a44ef341884c0cfe0aca",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.235.jpg",
+      "sha256": "91c1fa16436fb790a4bd8c9657ab1b9da47861b764b11d9cd08106acdb958143",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.236.jpg",
+      "sha256": "4fe9175860a1e7c9be90a2f2593f5b6d2d315cb9730827c43115cb62e49a4687",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.237.jpg",
+      "sha256": "62964c4635ca8e021d4fddcc132149b2ea876bffb5a543f3509cc104e92c3d28",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.238.jpg",
+      "sha256": "f8705bb904d9db33b03c30d2ee1c7c50ed1556338e86fd1e889fb0ea855a0fc8",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.239.jpg",
+      "sha256": "0ed6d7c888ce3d890f76d8313aa28a97b8613d0e905b3b00498489bd100d05d2",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.24.jpg",
+      "sha256": "b6673dd3075c2b16e8b474c5516250be1a0e14a407deffa5645a506edf532c7d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.240.jpg",
+      "sha256": "04072b5a7a5f3d0737708c100daa8f77c49ee6ab264679f15ef554d17b39f7b2",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.241.jpg",
+      "sha256": "c922175dad44ab1feec63e6e6cc7b72f30e56fec8209448cba42066f463cc9fc",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.242.jpg",
+      "sha256": "6232a7a69ef58306600af65eb663b8ae7e33efa116a969774e236744f4029bf9",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.243.jpg",
+      "sha256": "d3d72a249ded569db46dc8118b929d48aa3382b4046e8b9aaad832066f3118d5",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.244.jpg",
+      "sha256": "1975208b79d346c2777bf3eba17bee4b772373f88254bf2cfeefebc441d8405b",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.245.jpg",
+      "sha256": "2a92eb9161214bea53e896bcdbbea8cff1519a405c41062608454da013ca9261",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.246.jpg",
+      "sha256": "cebf0ea279b3e2b0e9c6ae6a27d6b0a06fc836f1287f70019f3dd7ebd28f4dcd",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.247.jpg",
+      "sha256": "10f53015111fe858b921298664dc85807caf3f8079dde3554ab7f1a7def2faf3",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.248.jpg",
+      "sha256": "233d24afe99086f94f73d7e4a9179fdcd79b1cb95456e6007995f14a472d60e5",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.249.jpg",
+      "sha256": "2fe1eed613478b91a30e36fe9fba68761c6c17287f97e5d1890e298789a4a8e6",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.25.jpg",
+      "sha256": "8cfdfa0b3ffdd9310dd4cfd1a9666d84fb4e94cdcf270441c7b863223fa44178",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.250.jpg",
+      "sha256": "2a532741ebf14fa90eec252cb87d127ad947e2f5ee2c7db49c370e612bab4e0f",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.251.jpg",
+      "sha256": "915e3faf187ed75877788fdf2ced8b3f08262e81557482ddc21cbf2047b69c20",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.252.jpg",
+      "sha256": "4f12e8c5b5ba17f965e84f17a883a5abd2c327d051cdd3a439ebb2fb45bc64a1",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.253.jpg",
+      "sha256": "18e91450b2a4af489d6c647d7581ae494d25d670b4b334d3af31c1af90d8d6da",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.254.jpg",
+      "sha256": "17a50760dd11bc2f808396a2ba4b5ed6c7c4c2cdd4e9677611f1dcc63899aa9a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.255.jpg",
+      "sha256": "49a889b746ed4f0309e87a00266fa4d5fcb05f1ffd4c586a944f41f684675644",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.256.jpg",
+      "sha256": "2c1b028b98e54a9e8987966f54405e44edcc361ba0826a5f468da659d05c10a9",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.257.jpg",
+      "sha256": "801eba832ca1060110cf1d0456c0c0aae425264872f4d18256bd3ba3fcd7397c",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.258.jpg",
+      "sha256": "d1c9a5880041213041ef1b2e6d8b0a9d907faab7f7b2dbcde1fa8f4ff6d2332e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.259.jpg",
+      "sha256": "ca74c1e4785e011b0ffa3f7fb93fc2210d9ea3999d93c7e75416729cde676ccd",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.26.jpg",
+      "sha256": "f1be7a6a23f2a6f2cbf83d852b176b9ec7cd11307091577cb9316af501083cf2",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.260.jpg",
+      "sha256": "c8f29a650ac05a7afe122ea4282d110bd882d6b8014905c0826be859c641a248",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.261.jpg",
+      "sha256": "9fce2b5c4a686480be6f8f9675f2f6ab227c69d71190ff88efe17cb3d3389ea9",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.262.jpg",
+      "sha256": "5c1ab97889316e564f1a02c4d60be9cda2d4c39af160bbb4ef26bf95c233a7e6",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.263.jpg",
+      "sha256": "e861a1fc0654da9ac464e08d537715589841fe7ec557643c450e984034a921c5",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.264.jpg",
+      "sha256": "664b5d114f056f85fdbc59c09ade818a695c7ba83c553eff4bd5c01700ca2a00",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.265.jpg",
+      "sha256": "f06cdbc75cd090226d1a5c5da4234075212f7ce1bdcecfef79d50dea325325b2",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.266.jpg",
+      "sha256": "a581eacc6ee515a98dcc1764580922b0efd15e89984c3b6464b9f3fef789291d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.267.jpg",
+      "sha256": "fd729c0668aec34ce7f965161faee7302ac683e8cb788b1f68bb2a38e412df43",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.268.jpg",
+      "sha256": "c384f0b5ec0ffe93127c5a9ed115e1fe47dc3c6624e4276a9d954a39e02e7915",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.269.jpg",
+      "sha256": "06fd1e5a679447284f601c218ff604b1d7b889cb94bc8b272053b4afeeb2bcbc",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.27.jpg",
+      "sha256": "8662c34629a815d34d24b7cbb37851a755ea6cd3472c315037d23f7d446c45bc",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.270.jpg",
+      "sha256": "4b0b9533e5c5ea1dc8f7c6bfa1d885eeb264c3097c1da8b5a1afd44f5a199f9c",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.271.jpg",
+      "sha256": "a76f18c4d60130b23d4a80c7e891947812ccd8c70e48107f650324e516338db1",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.272.jpg",
+      "sha256": "022ae2aef2701d809e94cdedc0349ea3e273e9c7397dab40372c6f897cc3acaa",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.273.jpg",
+      "sha256": "7b684e0bd656418f82180cd694050a844d6398533ac22ddea94728251860cade",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.274.jpg",
+      "sha256": "6b9b5594acde9f3e030cd30db3f6c0d21067aefeda929a1a6333a18d7ca8b25c",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.275.jpg",
+      "sha256": "fddcf604efd3ccb4a6e5c3e568871d9b8a9940f4a1e98bb128d5a28a9cc1abef",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.276.jpg",
+      "sha256": "694dcf93f7521ec9e7a71c09aa2560cccb0fceb9e6e2d230c9b179e0dee27e7b",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.277.jpg",
+      "sha256": "9a66aff8bb957f1deeccf9dbcc13df3d2649c14b80564dab66e7ce61ea136a94",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.278.jpg",
+      "sha256": "fbc1d0b100f39bcf7930350ba5158f6c4b8884ae0b1adf60153280a0150104e7",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.279.jpg",
+      "sha256": "dbfe0b9266da886ac655fdf073e73e31b7c9c62de1d30ae9c154c547eda7ac30",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.28.jpg",
+      "sha256": "eb3a518ad02ca5a74f541be7ee2cb1984a912b50139685c80f0f2fa9654b2dd3",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.280.jpg",
+      "sha256": "366e7733c4a7e173b40d083b0a6de87e559b66e7661fb952e301a3257d6f5946",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.281.jpg",
+      "sha256": "126219faf1a5783968c4bd040b11f67f564a4b6bd1f098dde7ed36c331265250",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.282.jpg",
+      "sha256": "2e3ed5c6a69638596169831f9946dff7b06cbd8060f626050a2cce9e9a602871",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.283.jpg",
+      "sha256": "866182f73d969d9843caa5c36eb1f3a6bd407c998a90c7f324273c924c4ea9d1",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.284.jpg",
+      "sha256": "a474a2de5d7821d21187755e51afeeaa0ee170ba6bc3e4106f435fec24c5abcb",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.285.jpg",
+      "sha256": "192a0ec3db2ffb16277a330ccf80456c5d2907b74f703c09eb93f2c75abe4dda",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.286.jpg",
+      "sha256": "fd0235dc622e3f67ffd5f617d2853e691a77879720e943bfb891bf227fe73fb1",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.287.jpg",
+      "sha256": "c16fede36c67e381115f629cd0efa3dee944aa2dc071a36865a0a9c350adf479",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.288.jpg",
+      "sha256": "de8c9df890e2917a36721fb3b6ba730f06fd4c78d462a2941171018b6a1f336f",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.289.jpg",
+      "sha256": "76829d0fc5672fe796f0570bba027b97a59a89f67b0d251aac924d84ad3f2aa1",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.29.jpg",
+      "sha256": "9ccc1be4f088513d1ddc3a11514b06f44dd2500e4b6d835e90e5149d5b068eae",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.290.jpg",
+      "sha256": "157b18e08757237af06c89ded51d13f8aebcc11bd9927546b961d8861ccfba84",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.291.jpg",
+      "sha256": "45e983c8f9a5925bc00663e38681fccc5d7932fff3394fbda2017ff90431ff98",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.292.jpg",
+      "sha256": "2eef909d68b6e93a660879743af4c8018cc43b36a8a0c134ed0a614dd072d8db",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.293.jpg",
+      "sha256": "9994e824ca129fb40661fa67c775b75ba989881a168a0d527f4ffb0a56950fcc",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.294.jpg",
+      "sha256": "230c816837fd37fe096f8d0d5bd5827831efb63f736ef8cbaf39c09394134114",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.295.jpg",
+      "sha256": "835c02d21fb13f3434e73dbddc303ca4f84216c70fcbdb45c8ebcd07c3df66c3",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.296.jpg",
+      "sha256": "104f573dcbf7baab3726b4c3b74f6a9448a159f8a8beed74c90748fd000ce1fe",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.297.jpg",
+      "sha256": "bf642c4890dabebf288f8e46916f636730ac33e4605683e4d10fcb1d3836daf2",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.298.jpg",
+      "sha256": "4c1b599814ce5104c1535ec103a557b9a36bec62e62588426d70b10c4b6bcb70",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.299.jpg",
+      "sha256": "8de174446eba73912d7bf8460268e0b2cded4bc8bb3d324b36c2f1bc0f41dc70",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.3.jpg",
+      "sha256": "18dc479cb7b96982bff13536a948c410066773e5df6e0ae22eb901a759e1b94d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.30.jpg",
+      "sha256": "0365f72a067e356dadb62dfedae4db847ef03c040a19a284937cae89723aa192",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.300.jpg",
+      "sha256": "7ec929c7bd8bbaec0b750755c95ced555be703ded2ecbe3fb05163334cb3a775",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.301.jpg",
+      "sha256": "eed0d1fe49db3b3257cd1895bae50cce98752944185604c83bcd9274c694af9d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.302.jpg",
+      "sha256": "5b0f0bc7ec9ca46c9b002f65897cf53334d6ef6ba26ef5546f2f8c81574f9537",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.303.jpg",
+      "sha256": "e402a3c0a3134ce802cea9e0819a3fc1e700fa426af458fd31f6e31ecea7e910",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.304.jpg",
+      "sha256": "69afec19b069046172b744e7b2182af7223d38f64cf7e5534ac336761887fa10",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.305.jpg",
+      "sha256": "e23a1ea51894bd1263f354c51d8b8044e9087d5e37763d2ddafefc541dde384d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.306.jpg",
+      "sha256": "dc4bd04f7eba699466979956fcae83392cc4b9416d5d3013448adad5ad604493",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.307.jpg",
+      "sha256": "35322d38b454ba693c0e2a18927e1f6bc0524377fe07a2aa53afbfe1ab0f58e9",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.308.jpg",
+      "sha256": "4247f2caade10d731bab4b9627c680aa3d1da424f55b62c0fda0b4b86c65da61",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.309.jpg",
+      "sha256": "637f00aca336990e33a00139adf7e734a7c884a8490f2164fcca137a750dc89e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.31.jpg",
+      "sha256": "46e584abddecfb935da5bf0649a231443b4ac234310b369d1eae1f1b6caa9cbe",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.310.jpg",
+      "sha256": "f9ac3f6557267115ab97e96c2f2127ea04bd98e93360339c81e0cae5809507c0",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.311.jpg",
+      "sha256": "a0831aca8a2c48e6d56f9316f9bc1970792e0b21b06a8cc1a38b7c0fd39467b2",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.312.jpg",
+      "sha256": "45ae1938e0b22a1301ade726a801070c9b533939691fd4476c258261ab43d1f9",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.313.jpg",
+      "sha256": "0c37cac68b2aa0af28d44d035a63b1b770f0ee6d087441f5947fa72068464026",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.314.jpg",
+      "sha256": "76addd7f0ff392996eb957cc33335c65bdbd36a434a1e979d831db7662bfe67e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.315.jpg",
+      "sha256": "c178f670e21b5a5097289fafafaee290209084087ed18bc650993df4d4e0679d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.316.jpg",
+      "sha256": "71d554dfabf8e6056bc34e6ec04fddd4c279d77cf7d3350411b47e3a020e179d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.317.jpg",
+      "sha256": "d072f51460d6f9d9b8e6275ef73c49a79349c32fc5fa6006104d9f7353affefe",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.318.jpg",
+      "sha256": "1a25c105457bb29bf6b8d7c6e100fea4571396bcf1d496ce4bd06d6d463434b6",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.319.jpg",
+      "sha256": "69223e321ece4e4eaafba91ec2d45f881ea90e53e0a5e44a46d92638627bab9a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.32.jpg",
+      "sha256": "8d881055fab4a5240bba11e27147a5501a9f835b02e4b006390e16efc830217d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.320.jpg",
+      "sha256": "df90d636f4610e82a4198e3020789e4645f17ebd40b372f2d0f02ebaa76010dc",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.321.jpg",
+      "sha256": "7cbb79e70f37d6e32e1b81cd9d5b846b8c4af79a004b1a25a8347143cdea8693",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.322.jpg",
+      "sha256": "76b700aaa0f56b6fc1f506cb95878e4542810bdc16fca879d91b13743a0412df",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.323.jpg",
+      "sha256": "858ef4eff08d56faab084c782ff4e1d66bc3721f0af2446ad7a91ce28a49be33",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.324.jpg",
+      "sha256": "5a89da6ef8ce78dc89f97673e117a6421645dbf9f7f8f4cc79955f0fab0c6cde",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.325.jpg",
+      "sha256": "4c038947298b755956273e416405314d0d4fd4ee45e6084e3bff463b544633ee",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.326.jpg",
+      "sha256": "04bc46bf98b54d3fbd91d6c044073e27219a1bffdc310256c25bd2de8ee6eec3",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.327.jpg",
+      "sha256": "b323b13204104cbcfb090b0cc67bf0a630808b51804b1af69f4256013ba125c6",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.328.jpg",
+      "sha256": "3612bd5f737ad22ba342712fed90981aa8e4854ed192714e95fa87fe40c84f6a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.329.jpg",
+      "sha256": "898210f23b76271b3e0ca8bb6524f3df786c93ea0651b45451e664e042abc8ef",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.33.jpg",
+      "sha256": "b66564be449b108e8158c71ec8c61cdff7e83f6f5d8fbcea040762d3f03d0d03",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.330.jpg",
+      "sha256": "c3b0d5e10f7b24edad503e483d1911a1bd0caa7fbcf3a7ae30251cc6be0218cd",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.331.jpg",
+      "sha256": "69d6ab954b54ad18c3bc64ff65b67d5dde3c2b68ce0df4410b1ddb4f7daae98a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.332.jpg",
+      "sha256": "39907ff4bf7c689c152dde84d58cfbb96798c174e8fff68c95cefb1145475374",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.333.jpg",
+      "sha256": "03b3e56fbe7e5751fd6ab2fad6fb4c0c35a08756c1a5ab1389bb006b2a01607d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.334.jpg",
+      "sha256": "4fe7f22e167dcc2a45dfab9cf8d17ee74c175c01018f3284cd9fa3f241867057",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.335.jpg",
+      "sha256": "ee3612ff082f2f30caa5665bb9888870ddcb93be115fb441fd6817e690a6c642",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.336.jpg",
+      "sha256": "f48074b508cc0b076792415deae4dcf8d87a1e360a8d8a3383f88c12dcaa5085",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.337.jpg",
+      "sha256": "b0d6e2da5931a57172e107d3db6cb2bcc81acf3e461c64d503b2e3a3c3397d49",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.338.jpg",
+      "sha256": "8b1115b956cae7f46c47028eb470fe51c3d8bb48a0690f544e21627dcb953389",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.339.jpg",
+      "sha256": "5b7c6c8c682cd727050a5bfbd2a0bc22a56e43620e34063ea2d7bfe64cfcc9f1",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.34.jpg",
+      "sha256": "d09b19ef2b27bca7da523c368e914b824ddfb77f41fc80616cf49bc297521d10",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.340.jpg",
+      "sha256": "ca1a4d28dd27ab822e9025577e0882c5333ba1606a9382bef0eec19a537b09d4",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.341.jpg",
+      "sha256": "ca08cac7570ee9f68720a793fef9ced9b01f79c03465324612cfcc15ec7f0546",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.342.jpg",
+      "sha256": "5206f215bd10680d832c1ff8e5e45ec9db030d27a944582e0a82f28541448077",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.343.jpg",
+      "sha256": "17bfdac52228d5880c099c81ed92a39aa89c2bbd357ac52e85321ffdb14d4a2f",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.344.jpg",
+      "sha256": "9755507cfb97afb66a8ae39d39631f58fa236b7e2b130c55161d3795e8d6ad47",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.345.jpg",
+      "sha256": "31461eb2b401b78891cc7d9cb671b50d02a9881ef066d97178b8a6e8fd4f48af",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.346.jpg",
+      "sha256": "711a57bc8277f9d0ca20d18a9f66c828dd4ab61255e24bce22bc5df9a6aaa4f1",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.347.jpg",
+      "sha256": "c03398ac6dfb111cc31630488a98cbd2103364a2e993ffbeca1273442a65eec7",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.35.jpg",
+      "sha256": "1d9cb6a3592c13d431e83d0c86431ea33c0b8bff2cbefb0c660c54f099d01295",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.36.jpg",
+      "sha256": "f248cdc7da9113633dc75ef0896c4039ce715f4dad5bd36f59321043e9583a37",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.37.jpg",
+      "sha256": "8158541fe6c92abf544f135586e935b7c43da7071d29d1e7ff59965f87e2ddfa",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.38.jpg",
+      "sha256": "f51ea1ed59a57df673990d2106a4e13ccee8a537af591ab3200b56f5cda480b4",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.39.jpg",
+      "sha256": "4ee25e069b466ffd0c3135c0ed99fdfd2a29a24fbc2211f0c5b0dfc24762e364",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.4.jpg",
+      "sha256": "f564475dc4181a66a07300a16e20620ec340e06962e56bd8750303d610d14cb9",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.40.jpg",
+      "sha256": "9922cb1731c661fc6f888f303add9a04166b0b997868ecdde32df14f6e4059c6",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.41.jpg",
+      "sha256": "59171d6727c9fef86c9e0c006afbc0d9b1d2fa111a923ff189fc300c383f0c44",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.42.jpg",
+      "sha256": "c22b125a008cd0516e6183bbf95ead01f45526d9641e2bee22fb5b3e2a9bb2d8",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.43.jpg",
+      "sha256": "876c4b9903f374b261912350009926adf9158bc6b11959ba8181333520a022c7",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.44.jpg",
+      "sha256": "f96429221e5cd33bf9e8e320ff08f7f13fe06e543d2c24ef4dc3ff6fa6ed15b6",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.45.jpg",
+      "sha256": "7950231dd58ac3b55723cd6298e9a44d5756d645f25655a978d2341f4308609d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.46.jpg",
+      "sha256": "ca082b7f25749d238da861dc26c00a7b00d08a15669c9df1596c762107a66f52",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.47.jpg",
+      "sha256": "19f25ae107726f6d7acb76403c99c1e732c9786a3af50393d6d8d17c3f82ee34",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.48.jpg",
+      "sha256": "45e9d6c1124f8782fca476adb64f63c8d4c7ef3385e4403d9c4e82b2617b751b",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.49.jpg",
+      "sha256": "002b56e1535db6993025a8787fdaf57eb32d61625dd918132f4a57a3916c090c",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.5.jpg",
+      "sha256": "12d7c69ded584462ac4e7c6e6a882a2559bb20e1a0f748492d00faf1b280e7e8",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.50.jpg",
+      "sha256": "f79109f089ecfa089ec1dad5f71747da7c892ae1450723be17332160fb65152f",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.51.jpg",
+      "sha256": "eca135cd6a4633281703809d60b5dd4f2852c534206e6aa8d1790a96595c0cc4",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.52.jpg",
+      "sha256": "9221c48d19aa6780e0fe87a8fadb70bf927bfeae49330d7566a106f7cc24ac80",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.53.jpg",
+      "sha256": "efb52957602f1f47496c51701959852adac49a8a1e448fed9860feb4d124cc5b",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.54.jpg",
+      "sha256": "5793d3cd553d847e80968e26ed5c975821747329201e3fce97cd23631da1d7fa",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.55.jpg",
+      "sha256": "eece6b7853f5a99e55993380bbaf166e6bc5193a359e81c4e9fa7332cffe402e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.56.jpg",
+      "sha256": "826ea87958ea5ab5d31100bbacda8d590862822f369bec5843399b48bcf6b6ea",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.57.jpg",
+      "sha256": "ce99cc13bdb4bb5e54e8ee23446cc41218b81ee3590eb68692b5f1baa230120f",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.58.jpg",
+      "sha256": "f083ff1c51d60946cd7bc2973566130508a79b67714d8d691202e45a54e13122",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.59.jpg",
+      "sha256": "ac942f5c863ede367dfcaa04de378c4045e424d7621c85151f0f355156aedd4a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.6.jpg",
+      "sha256": "1f287cfa1a810efc05a5d6c562831a57e9ad26c4ce89ce6531c454dd4079711e",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.60.jpg",
+      "sha256": "6d1b69ce23752745d44894ead0f5a0734b36bde0ba065ea565fd48e755d6b4c3",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.61.jpg",
+      "sha256": "2709a36c1683eec72961e13e1a2ff78a8667e5546b17875c475344a256d75603",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.62.jpg",
+      "sha256": "4edce5a80ff0e36ee0afe93df36ef1b157d8a9c373f0b229444a674f6407d1a0",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.63.jpg",
+      "sha256": "cfde120d3aa1777b14f20a3e661b9570b4fca3075cf78ee1549a8b981bda96cb",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.64.jpg",
+      "sha256": "23c878b2b0dd18a67963fc14f49f1a18c43ca043db5d57b5d8cf2d30810f287b",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.65.jpg",
+      "sha256": "d33da5240affb86e0c6e83e1a7a48976066c9cce26387874d225dc163a59af8a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.66.jpg",
+      "sha256": "9a3d00eb7c7e0c33a59e82d957f538d375c28bcdd40989c17aebca414121fa92",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.67.jpg",
+      "sha256": "245042d772087fcb6e1d9f5ec638d99125f269585db61ee6b24f7991ddba690a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.68.jpg",
+      "sha256": "c85a9c340cd2d872dd7d5fe557f1b9b91af121e8eac7921bee7599ea7afb38d5",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.69.jpg",
+      "sha256": "c9ae666f68bc94c5950f36b533508c2386c36ad68d12f0ab73ab8e8528a782c4",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.7.jpg",
+      "sha256": "15c64aa7a2330b16e44d61542020400f2e9e9558cf2093463e2f6a164e7c56b3",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.70.jpg",
+      "sha256": "63659893b278cd812f20e1fd04c02c5bda3683c5151abacf00a754ae744d6067",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.71.jpg",
+      "sha256": "2e3cf3529e1c2cad33cd87461c1fbfe91b8ce7a284d613de2128b1d088f36257",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.72.jpg",
+      "sha256": "ebce56ada342f22eff40822aeabdeea11efe0529c55c3b1ea399b0ffaf23c09b",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.73.jpg",
+      "sha256": "63f5c28d51137fc57bda9ea1036c8e27f7326d52e5f795b1d5626f52fe2c7598",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.74.jpg",
+      "sha256": "04fbf60f1dba9f152370c17d10c8d99f91250122f1d424b532a1c6acc6f34a63",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.75.jpg",
+      "sha256": "8f9d4ee3166f2df4a2072e9dd76e50c76fe72d91a8abd932094deae9a9948440",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.76.jpg",
+      "sha256": "65e473cb0eccd921aa77e22c2ab65d879761d84770add7a86c63d13c7154c34d",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.77.jpg",
+      "sha256": "3c1835ab8ebf3f9624dd1ed0a109093692c8250fc8a5c55cb1023e490c509b35",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.78.jpg",
+      "sha256": "41a3c87cb3e30dd8e77780b60e85ce8eddf3bcd412ea9052a22757bce1b99245",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.79.jpg",
+      "sha256": "41e8a486e2d1f1faf8488af4d5477ebabc812a326dc6be42141f83e2943dd5a8",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.8.jpg",
+      "sha256": "9a6729cd890da11b7a4de28cfa2bb1335f95fd70d4eec40432ab91ee1ab945ef",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.80.jpg",
+      "sha256": "80ba13d37f21bd8cf9ec1d528ae6dbf91e64456f9afff153d090ba564b6423a1",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.81.jpg",
+      "sha256": "879608edf2680254956d692cb8f6e17b50beef7eb4bdd55a62d1a74f4ab2c430",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.82.jpg",
+      "sha256": "2bde22b269539478f4d6eff6bb296734e35e3470a8ceaca89f0db480ed9b4a72",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.83.jpg",
+      "sha256": "e5fb72240ffd433627d8702f77931fc6a6799b0576faab4e61c39fd477009514",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.84.jpg",
+      "sha256": "db57c0d0698e6fd520e4f7cdbda896ad9a0f381eb4c892a41b65f5f51ff447af",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.85.jpg",
+      "sha256": "6413143d911ddc901b5b1b850ffb88c906e2f5d6bc70f273cc79908e1d287aec",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.86.jpg",
+      "sha256": "75a4a462af22a3441ce615b00bb7e4e36f0fbe7038b5f9aa5c09630996f0a759",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.87.jpg",
+      "sha256": "2815829d2a02ac36731cfa92243f430c0b6940d71db3a4230d0a8f1ea78219ec",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.88.jpg",
+      "sha256": "3f766dd78e4fc60989ebe36c5792db4e5f0c82e0d3db01be3c9dba34ee88a08a",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.89.jpg",
+      "sha256": "58fbe1a8ac6cf66deba13baab4703b1d3d728e1083f6ce7e2c9f33e66b0355e4",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.9.jpg",
+      "sha256": "598e4083929ea6ec2b15d1412a2598377816943d128fdf2907ea40d8a3acadf7",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.90.jpg",
+      "sha256": "305c4658a2d739bfa4f3262894a2d85d0750bef80ca5530a95ece2d8b09e0037",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.91.jpg",
+      "sha256": "a985b0227f38d8b63df415b90dfd685bf6edb8bc48c39e7ebf9c58ca0a9657f4",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.92.jpg",
+      "sha256": "55c7e6f375117c127d8e8be16df38fcde2aacdb479e4c5fce8b58c82c656b231",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.93.jpg",
+      "sha256": "d92c8a46b5b883826b1f37554f812ada1bfc8ae38e7790192c0c0546071a06cd",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.94.jpg",
+      "sha256": "a166e253b753af5f4a3826f15f8ab9b966e538ec798e42b51facb5d1c9401c75",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.95.jpg",
+      "sha256": "a3075452ba316737a752d37baa8bcf2f883fc76928f93857c58beea2b21af232",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.96.jpg",
+      "sha256": "ac59b2696f079718ba14b67ff7c43fc45efb567772de26546d828a0b338d3cc7",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.97.jpg",
+      "sha256": "0ded84c944dc5398400f347b3f46ecac8347a8a755d416115f43a09749b94458",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.98.jpg",
+      "sha256": "fb3a3d7c8bdbbd6f8f08eb3267c3d046f8e8d6a6389289cf45c87a84c9ce96ad",
+      "class_name": "bean__rust"
+    },
+    {
+      "member": "train/bean_rust/bean_rust_train.99.jpg",
+      "sha256": "b0f3335afa1296fbdbf5a6aa2177a00a17533218333310f0ef67e2d33a75f711",
+      "class_name": "bean__rust"
+    }
+  ]
+}

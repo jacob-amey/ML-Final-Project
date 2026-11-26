@@ -1,0 +1,59 @@
+{
+  "publisher": "https://github.com/AI-Lab-Makerere/ibean",
+  "license": "MIT, dataset release 20 January 2020",
+  "archives": {
+    "train": {
+      "download_url": "https://huggingface.co/datasets/AI-Lab-Makerere/beans/resolve/27aa014ce09b193e1a6f58112d4a66e0eddb69c5/data/train.zip?download=true",
+      "sha256": "284fe8456ce20687f4367ae7ad94a64577e7f9fde2c2c6b1c74340ab5dc82715",
+      "jpeg_count": 1034
+    },
+    "validation": {
+      "download_url": "https://huggingface.co/datasets/AI-Lab-Makerere/beans/resolve/27aa014ce09b193e1a6f58112d4a66e0eddb69c5/data/validation.zip?download=true",
+      "sha256": "90b7aa1c26d91d9afff07a30bbc67a5ea34f1f1397f068d8675be09d7d0c602d",
+      "jpeg_count": 133
+    },
+    "test": {
+      "download_url": "https://huggingface.co/datasets/AI-Lab-Makerere/beans/resolve/27aa014ce09b193e1a6f58112d4a66e0eddb69c5/data/test.zip?download=true",
+      "sha256": "ca67b15d960d1e2fd9d23fd8498ce86818ead90755c630a43baf19ec4af09312",
+      "jpeg_count": 128
+    }
+  },
+  "candidate_count": 1295,
+  "frozen_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "manifest_sha256": "a56cbbf4c48f846a23b5e73f6cbfba961b391905abf0207d770af98f7d5a76d5",
+  "visual_distance": 4,
+  "by_publisher_split_and_label": {
+    "train/angular_leaf_spot": {
+      "unassigned": 344,
+      "existing_visual_candidate": 1
+    },
+    "train/bean_rust": {
+      "unassigned": 348
+    },
+    "train/healthy": {
+      "unassigned": 341
+    },
+    "validation/angular_leaf_spot": {
+      "unassigned": 44
+    },
+    "validation/bean_rust": {
+      "unassigned": 45
+    },
+    "validation/healthy": {
+      "unassigned": 44
+    },
+    "test/angular_leaf_spot": {
+      "unassigned": 43
+    },
+    "test/bean_rust": {
+      "unassigned": 41,
+      "existing_visual_candidate": 2
+    },
+    "test/healthy": {
+      "unassigned": 42
+    }
+  },
+  "capture_time_present": 0,
+  "roles_assigned": false,
+  "evaluation_run": false
+}

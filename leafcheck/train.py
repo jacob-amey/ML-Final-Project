@@ -94,6 +94,10 @@ def train(config, run_dir, resume=False, max_updates=None):
     spec = json.loads((cache_path(size, frozen["fingerprint"]) / "preprocessing.json").read_text())
     train_data = PixelCache("train", size, frozen); validation = PixelCache("val", size, frozen)
     assert len(train_data) == 59008 and len(validation) == 16836
+    if "training_addition" in config:
+        from .training_addition import PairedTrainingAddition
+
+        train_data = PairedTrainingAddition(train_data, config["training_addition"], frozen, size, config["seed"])
     seed_everything(config["seed"])
     model_config = config["model"]
     model = LeafCNN(**model_config).to(device=device, memory_format=torch.channels_last)

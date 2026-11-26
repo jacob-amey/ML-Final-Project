@@ -1,0 +1,788 @@
+{
+  "source": "https://zenodo.org/records/15685315",
+  "license": "CC BY 4.0",
+  "archives": {
+    "rust1.zip": {
+      "label": "rust",
+      "archive_size": 1134254897,
+      "publisher_md5": "3147aecedfcb5a4ff85b899c9882c817",
+      "directory_sha256": "7ef2bca75c1bd4d1101b30e19c2f3df4f7604ed33d6695499e0bbac6e8408ed1"
+    }
+  },
+  "sampling": "Ranks 9\u201372 by SHA-256 digest of each UTF-8 member path in rust1.zip",
+  "role": "quarantined preflight",
+  "evaluation_run": false,
+  "counts": {
+    "rust": 64
+  },
+  "records": [
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust18213.jpg",
+      "label": "rust",
+      "sha256": "bb860c53dc26363612ee55517933f9a074451adcf29b4dad9a0ea8fd9e0c76e0",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:17 16:21:36"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust13858.jpg",
+      "label": "rust",
+      "sha256": "104f4af5a40b9975e345f8145d25e27c624026b46caedd09603a79e837d90c2e",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:09 11:42:18"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust16879.jpg",
+      "label": "rust",
+      "sha256": "d930cf5c57a837cce2db149ce8047c0685ad08b8357c94ad9905007ee36478e0",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:17 09:12:04"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/1716369768338.jpg",
+      "label": "rust",
+      "sha256": "6edb4021d73b701ceb44c8bea9d1e2f5114a9177be7597753a80b6d87b6a2c40",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2024:05:22 11:38:59"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust12667.jpg",
+      "label": "rust",
+      "sha256": "856b6bbbdb5c93532615cc5b21b12b769ea0ff83ca4916a2ef4fe9058bb56b73",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:11 09:03:28"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust13360.jpg",
+      "label": "rust",
+      "sha256": "1524dc81790c69684cd4e138ebb9e80fe60060f678f4645f92eba89e193b520d",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:10 18:39:46"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust11323.jpg",
+      "label": "rust",
+      "sha256": "55c3db13dd7eb4618ce50b9b89c118f0e44c6bda391d15cdf63451258152fc47",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:11 16:02:51"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust13739.jpg",
+      "label": "rust",
+      "sha256": "06f55d7004a2b118929769814d97714f05b76767211dc27d9f3d3bdab616576f",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:09 11:44:09"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust11905.jpg",
+      "label": "rust",
+      "sha256": "7244fa8370e3e44f706d7281f81d4210a418a7128c24b10573f62e67b1b5e106",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:11 15:56:11"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust17587.jpg",
+      "label": "rust",
+      "sha256": "de1ecdcd0d7096f2c1d822854b1cbc5eab6ef32fbd6486ada038923bbf62ba68",
+      "dimensions": [
+        861,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:16 15:54:37"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust1510.jpg",
+      "label": "rust",
+      "sha256": "0f4d54a9436d5ab1b194d91678f7c84db377dee20591e50f62bf5524ed60342d",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:02 11:03:13"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust13565.jpg",
+      "label": "rust",
+      "sha256": "51384581719633404273475340802e9822b70123f9f03bc392eb52be01c64bde",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:10 18:40:13"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust13099.jpg",
+      "label": "rust",
+      "sha256": "d6b320b954964d0ebff3d7a3f80de657066f639bbf5b7f7c2ed19ad79921e39e",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:09 11:47:57"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust1419.jpg",
+      "label": "rust",
+      "sha256": "f0ca34e5d7a423ec3fcae3fcc3921a3bd9af5b848227e4ff7d4709a4d8ceb7f4",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:02 10:54:32"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust13771.jpg",
+      "label": "rust",
+      "sha256": "8d15a32a8e25de5e3b62f233f1810a82ecbfe04884137bd3e074d9052fc3cb4a",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:09 11:43:33"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust11889.jpg",
+      "label": "rust",
+      "sha256": "1c96b62dca696391f54eb28fcc2fa61006f601578ec2e5d6250ed4e18b2af216",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:11 16:02:10"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust1918.jpg",
+      "label": "rust",
+      "sha256": "b766e67dd0bb7a277ab1362f4f76e891b7bf2743cc6cccab4c489aef93792def",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:02 10:51:53"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust15369.jpg",
+      "label": "rust",
+      "sha256": "4c421b56cf7a7e00897a6f8f44fa741d3c0e0a0d521095c556330fdf9b3ef5a5",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:17 09:14:59"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust12380.jpg",
+      "label": "rust",
+      "sha256": "77086461a7f84a9e6bfdb4252a70025447a4ca0edad2ea983e63b213fca32785",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:16 16:01:23"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust12090.jpg",
+      "label": "rust",
+      "sha256": "6b65c28d950adfe4f0327c24b9592476df2251dadd644d738bcb358ae73fc350",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:10 11:56:59"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust1652.jpg",
+      "label": "rust",
+      "sha256": "f11f9eddc5924dd8931c59c1983a292352f2aa686b21e80d80e8c35a9e9854f2",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:02 11:02:58"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust16996.jpg",
+      "label": "rust",
+      "sha256": "612b18f97c2a81fff1def1734429b6e1f59e525c227af66652085f8cb96b1db3",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:10 07:41:50"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust16902.jpg",
+      "label": "rust",
+      "sha256": "f6fda0bc8ba701e68551f43f1fc66a8aa52fb03de810f0b0d76b0a98339aaf33",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:17 09:12:02"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust17264.jpg",
+      "label": "rust",
+      "sha256": "bccd6e3eb1e9b5fa1113d0af7191ec43cbcee60ab8644877f4965c317e6449a8",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:17 15:54:31"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust11191.jpg",
+      "label": "rust",
+      "sha256": "6934e424fcfab83a29931e5b8643f02a480bbb06ea81940e498b3bd5f467ccbc",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:11 16:05:45"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust18915.jpg",
+      "label": "rust",
+      "sha256": "6e36ad07b2950f2dc6494bffad030bfe3e8d6eef4ab4abcddcd7ec9238a16e9f",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:17 16:08:56"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust19234.jpg",
+      "label": "rust",
+      "sha256": "a05469f6005b4578e84e3e5c76fc4fd6e95b01b221e3e3c442e747098e3ccf74",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:17 16:01:32"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust17507.jpg",
+      "label": "rust",
+      "sha256": "113c3091b40278db9a0b42e1e385d8d95da2bd853eaa95924267d72786405de7",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:16 15:55:32"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust13927.jpg",
+      "label": "rust",
+      "sha256": "34f475b56eb94b990c9a838498a1d99b7b858e0f4fae8bbd6516cb318d7f1564",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:09 11:42:16"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust15517.jpg",
+      "label": "rust",
+      "sha256": "8dd1c83b67670249f8b84e4df5e8ce986cac62c8d16be211c38b7a112fa95a4c",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:17 09:16:15"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust16885.jpg",
+      "label": "rust",
+      "sha256": "0fd9edf2f4265d59fc980c2e892292f51c28eaafd1f849f8a9113ec6674f93c9",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:17 09:14:40"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust1500.jpg",
+      "label": "rust",
+      "sha256": "315fec5c734f711318d36554bc932c6d059750b0e7982c1cffb169e8d9d27648",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:02 10:54:38"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust14539.jpg",
+      "label": "rust",
+      "sha256": "6a43536a253390a6fb8d6d31e6a36fd39688a2993ffa5317c1ac07bb30c32316",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:15 10:01:59"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust16952.jpg",
+      "label": "rust",
+      "sha256": "dae73ce3659be4997417e11b003e97667dd1b503098bb30abce791d77529b5a1",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:10 07:46:52"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust17809.jpg",
+      "label": "rust",
+      "sha256": "025686dc5426c85d10ac1c8ea215cfc3f72b5edee3a40caf08bae356d8cbf221",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:16 15:53:45"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust16556.jpg",
+      "label": "rust",
+      "sha256": "3c71c926978f4cef781cac6fe599cc4e4df3dd8becd2a7712aaf03c44c11eb99",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:09 11:42:37"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust14918.jpg",
+      "label": "rust",
+      "sha256": "57234d815ae01e720a6bdc105ed377a49d48b6c2a1ddb07fd60891f17abc8324",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:06 08:01:47"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust15079.jpg",
+      "label": "rust",
+      "sha256": "b8fea42f2d1478df1549bb24eb2e349be3e500e730659b444062da4ac07fb227",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:06 08:03:41"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust15921.jpg",
+      "label": "rust",
+      "sha256": "282d07c44cef2f1b4dea50571b9f17beb825739c7c7ebf5c5a0b7a474b373518",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:06 08:10:11"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust1777.jpg",
+      "label": "rust",
+      "sha256": "de477193e2ec404512ca84bda0f3986af131b40e10dfcce3ed7871d2f6a2ee2a",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:02 11:01:56"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust12104.jpg",
+      "label": "rust",
+      "sha256": "906da1964cd95abe7dbb9a05f34c52e0e9f1ba4f406bbee0eb893991c1b4cfaf",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:10 11:56:23"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust13008.jpg",
+      "label": "rust",
+      "sha256": "b0b3e8b7ab9aa262389d7a2fb18485d922f226d9499d8cdaa7567129be305aee",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:11 09:04:57"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust16342.jpg",
+      "label": "rust",
+      "sha256": "926f39ce799510dc6d24ae204ac7c5c1966074376f1e0056c22079f32132cee4",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:09 11:42:40"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust13559.jpg",
+      "label": "rust",
+      "sha256": "a4db697a9e98ee26624ba288e8be8838148fb8f7ebd15160b5426be56562c4ba",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:10 18:40:23"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust15882.jpg",
+      "label": "rust",
+      "sha256": "039eb0fb4ec0cf595eda3805045cfaf805fcfdafe3f14de384020930727b5d5f",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:06 08:05:05"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust18544.jpg",
+      "label": "rust",
+      "sha256": "9eb0046ff6e165198584d4dc9bd58d4aca52d1d6bf4ba5b4d969b60b36fce6b9",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:17 16:14:56"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust16991.jpg",
+      "label": "rust",
+      "sha256": "b16601e8ed2a58b6f49dc64f94d788208af1dfefcad773979d11cac1a4f29be9",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:10 07:43:03"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust10649.jpg",
+      "label": "rust",
+      "sha256": "fa1016f11be54f8b29147dc9f564e852bbfedff3bd25ceb843d3449b917e10e1",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:15 12:38:54"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust10870.jpg",
+      "label": "rust",
+      "sha256": "70be55e7a5980eca0489e98a16b9ca3d1f5f9a70f5178627398b67f5a5a20f51",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:15 12:29:35"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust11208.jpg",
+      "label": "rust",
+      "sha256": "2e8343423d891e5c688866106470ab92d7105ddc62adc28b33f5767229127b8e",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:11 16:05:48"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust13688.jpg",
+      "label": "rust",
+      "sha256": "8ece7a9e021db90c61269d947b367aba329ed6ce2c25da9be4cddec822c2a41d",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:09 11:45:06"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust11750.jpg",
+      "label": "rust",
+      "sha256": "cd2002298fd0bcfceda590c5b130fe6cf26bed5dd9f830a96aa34be376f98d65",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:11 15:51:47"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust17965.jpg",
+      "label": "rust",
+      "sha256": "90cb6cc4c5fd704b3a5fc68a62e2cb82068e3c1101ffcd8a5116eb6c62aceae6",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:16 15:14:46"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust125.jpg",
+      "label": "rust",
+      "sha256": "162437d557c05b05ea51ea07313bf009049a04ac12ff2af0a8f466d019686a93",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:02 11:12:18"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust17631.jpg",
+      "label": "rust",
+      "sha256": "9c8f7293fd60bcbc81826ed0c9a86afb8fe0ec3b89a5c48b9a60f317bb9317c2",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:16 15:55:13"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust1448.jpg",
+      "label": "rust",
+      "sha256": "ae046d0c47f2ffdc44ca576db665a0f293da1fd80be40b3d9b974f58ea56309c",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:05 15:39:46"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust15233.jpg",
+      "label": "rust",
+      "sha256": "dd053a74ba47b49fc4db317106d41f2a527816f5796577bd85e716753cef17b4",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:17 09:15:02"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust11891.jpg",
+      "label": "rust",
+      "sha256": "c9e9b9ee7d7ee3e62b86f7905a79dbaa524023944065bd4d69b87cf3ae902607",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:11 16:02:03"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust1526.jpg",
+      "label": "rust",
+      "sha256": "2366f9ed98c152400c196e47f61b764bb6e5779a498904f63e21774d389c6253",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:02 10:52:31"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust16142.jpg",
+      "label": "rust",
+      "sha256": "73ce0fc852779bf67b89c6504d8fda0e9f2ed8e0e53b16eca338f24b06d69a97",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:06 08:05:34"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust17018.jpg",
+      "label": "rust",
+      "sha256": "d450b64e4126f1f25e2272bf6b3f11c85d01cb0cf2704c53f768bc2715200d25",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:10 07:42:45"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust1386.jpg",
+      "label": "rust",
+      "sha256": "aea5cf89582ac405544024782f61dd8ff94890caf34bc1630ebcc07282b2dac5",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:02 10:51:42"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust12525.jpg",
+      "label": "rust",
+      "sha256": "f52383fe1d67d330a85c1b385ff7c95c696d54a47766394b2518193e810ae6ce",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:06 08:10:10"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust12646.jpg",
+      "label": "rust",
+      "sha256": "43d6b3330f401b5d1c4223cc96951a4e3625712083e90ffc0940af9d661a610b",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:16 15:58:48"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "experiment": "bean-rust-transfer-matched_repeat",
+  "hypothesis": "Field rust photos provide more transferable signal than additional draws of the original rust images.",
+  "reference": "Matched source-addition comparison. Same master split, class draw counts, steps, seed and scratch architecture.",
+  "seed": 434,
+  "device": "auto",
+  "cpu_threads": 4,
+  "input_size": 128,
+  "model": {
+    "architecture": "residual_v1",
+    "channels": [
+      24,
+      48,
+      96,
+      192
+    ],
+    "num_classes": 177,
+    "dropout": 0.2
+  },
+  "batch_size": 128,
+  "validation_batch_size": 256,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5.0,
+  "augmentation": "dihedral_color",
+  "class_weight_power": 0.5,
+  "label_smoothing": 0.0,
+  "max_epochs": 8,
+  "min_epochs": 8,
+  "patience": 10,
+  "early_min_delta": 0.001,
+  "training_addition": {
+    "arm": "matched_repeat",
+    "manifest": "data/manifests/leafcheck_makerere_bean_rust_train.json",
+    "sha256": "6de37a7f5a84ab73cbcf5e1a60d4493f419b342065148b9001b42eb2d96de97f"
+  }
+}

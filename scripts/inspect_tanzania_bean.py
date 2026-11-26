@@ -22,6 +22,7 @@ OUTPUT = ROOT / "data/raw/leafcheck_field_v12/tanzania-bean"
 PUBLISHER = "https://zenodo.org/records/15685315"
 DIRECTORY_BYTES = 2_000_000
 SAMPLE_PER_LABEL = 8
+RUST_EXPANSION = 64
 REVIEW_EXCLUSIONS = {
     "d448a935cb449b099ed0359eaa36a0ca2348750ebda86aa967a603f891216c63": "suspected_non_bean_leaf",
 }
@@ -47,7 +48,7 @@ SOURCES = {
 }
 
 
-def sample_archive(key, metadata, work):
+def sample_archive(key, metadata, work, offset=0, count=SAMPLE_PER_LABEL):
     source = dict(metadata, archive_url=f"{PUBLISHER}/files/{key}?download=1")
     total = source["archive_size"]
     start = total - DIRECTORY_BYTES
@@ -71,7 +72,10 @@ def sample_archive(key, metadata, work):
         candidates = [entry for entry in members if entry.filename.lower().endswith(".jpg")]
         if len({entry.filename for entry in candidates}) != len(candidates):
             raise ValueError(f"{key} contains repeated JPEG member names")
-        selected = sorted(candidates, key=lambda entry: sha256(entry.filename.encode()).digest())[:SAMPLE_PER_LABEL]
+        ranked = sorted(candidates, key=lambda entry: sha256(entry.filename.encode()).digest())
+        selected = ranked[offset:offset + count]
+        if len(selected) != count:
+            raise ValueError(f"Insufficient JPEG candidates in {key}")
 
     def fetch_member(member):
         offset = member.header_offset
@@ -105,20 +109,29 @@ def sample_archive(key, metadata, work):
     return records
 
 
-def acquire():
+def acquire(expand_rust):
     OUTPUT.mkdir(parents=True, exist_ok=True)
     with (OUTPUT / ".intake.lock").open("a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         with TemporaryDirectory(dir=OUTPUT) as temporary:
             work = Path(temporary)
-            records = [row for key, source in SOURCES.items() for row in sample_archive(key, source, work)]
-            receipt = {"source": PUBLISHER, "license": "CC BY 4.0", "archives": SOURCES,
-                       "sampling": "Eight smallest SHA-256 digests of UTF-8 member paths per archive",
+            if expand_rust:
+                archives = {"rust1.zip": SOURCES["rust1.zip"]}
+                records = sample_archive("rust1.zip", archives["rust1.zip"], work, SAMPLE_PER_LABEL, RUST_EXPANSION)
+                receipt_name = "intake-rust-expansion.json"
+                sampling = "Ranks 9–72 by SHA-256 digest of each UTF-8 member path in rust1.zip"
+            else:
+                archives = SOURCES
+                records = [row for key, source in archives.items() for row in sample_archive(key, source, work)]
+                receipt_name = "intake.json"
+                sampling = "Eight smallest SHA-256 digests of UTF-8 member paths per archive"
+            receipt = {"source": PUBLISHER, "license": "CC BY 4.0", "archives": archives,
+                       "sampling": sampling,
                        "role": "quarantined preflight", "evaluation_run": False,
                        "counts": dict(Counter(row["label"] for row in records)), "records": records}
             staged = work / "intake.json"
             staged.write_text(json.dumps(receipt, indent=2) + "\n")
-            staged.replace(OUTPUT / "intake.json")
+            staged.replace(OUTPUT / receipt_name)
 
 
 def screen():
@@ -187,13 +200,16 @@ def verify_uploads(evidence, url):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--expand-rust", action="store_true", help="Acquire the next 64 candidates from the same rust archive")
     parser.add_argument("--screen", type=Path, help="Write a local overlap and annotation screening record")
     parser.add_argument("--verify-url", help="Also replay admitted original bytes against a local app")
     args = parser.parse_args()
     if args.verify_url and args.screen is None:
         parser.error("--verify-url requires --screen")
+    if args.expand_rust and args.screen:
+        parser.error("--expand-rust is a separate acquisition operation")
     if args.screen is None:
-        acquire()
+        acquire(args.expand_rust)
         return
     evidence = screen()
     if args.verify_url:
