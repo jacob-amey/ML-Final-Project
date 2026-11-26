@@ -254,7 +254,7 @@ def tomato_transfer(doc, docs, freeze, include_crop_head=False):
 
 
 def build(artifact, output, include_field_followup=False, include_tomato_transfer=False,
-          include_crop_head=False, include_field_v8=False, include_field_v9=False):
+          include_crop_head=False, include_field_v8=False, include_field_v9=False, include_field_v10=False):
     freeze = read(artifact / "freeze.json")
     manifest = read(artifact / "artifact.json")
     assert all(manifest[key] for key in ("final_evaluation_complete", "reference_evaluation_complete", "supplementary_evaluation_complete"))
@@ -375,14 +375,25 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             f"macro-F1 and lost {-trial['master_deltas']['macro_f1']:.4f} on master potato validation. "
             "The candidate missed the registered limits."
         )
+    if include_field_v10:
+        corn = read(docs / "field_optimization/pretoria_baseline.json")["measurements"]
+        before, after = corn["automatic"], corn["supplied_corn"]
+        doc.add_paragraph(
+            f"On {before['sample_count']} Pretoria field photos [21], automatic corn condition accuracy "
+            f"was {before['correct']}/{before['sample_count']}. Supplying corn gave "
+            f"{after['correct']}/{after['sample_count']}. "
+            f"The automatic workflow had {before['right_crop_wrong_condition']} correct-crop condition errors."
+        )
     doc.add_heading("Project Management", level=2)
     doc.add_paragraph("Jacob Amey’s assigned role covers data, training, evaluation and model integration. Jacob defined the final scope and authorized the delivery. Demetre’s assigned role covers the frontend and upload interface. The planning decks establish these roles. The contribution record documents available evidence and flags individual implementation and meeting claims for team confirmation. Codex assisted with data preparation, training experiments, evaluation, integration, writing and delivery verification.")
     doc.add_heading("Reproduction and Appendix", level=2)
     doc.add_paragraph("The archive identifies its exact runnable source revision in START_HERE.md. Its demo uses bundled weights. The saved metrics can be recomputed from the archived membership and predictions. Retraining also requires permitted access to the exact original master or frozen images. Follow the restore, verification, cache and pinned training commands in the archived README and data guide.")
-    if include_field_followup:
+    if include_field_v10:
+        doc.add_paragraph("The manifests, follow-up evaluations and matched training records are in docs/field_optimization. The field-guidance demo has its own archive.")
+    elif include_field_followup:
         demo = "field-guidance demo" if include_field_v8 else "potato-context demo"
         doc.add_paragraph("The follow-up study and its manifests are recorded in docs/potato_context_study.md and docs/field_optimization. The " + demo + " was packaged separately from the original course archive.")
-    if include_tomato_transfer:
+    if include_tomato_transfer and not include_field_v10:
         transfer_location = (
             "Tomato transfer and crop classifier records are in docs/field_optimization."
             if include_crop_head else
@@ -441,8 +452,12 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             doc.add_paragraph(ref)
         if include_field_v9:
             doc.add_paragraph("[20] J. Johnson, “Sample dataset for enhanced field-based detection of potato blight,” Mendeley Data, v1, 2025. doi: 10.17632/pbnw43s6kt.1.")
+        if include_field_v10:
+            doc.add_paragraph("[21] H. Craze, “Diseases of maize in the field,” Univ. Pretoria, 2022. doi: 10.25403/UPresearchdata.20237613.v1.")
         for paragraph in doc.paragraphs[reference_start:]:
-            paragraph.paragraph_format.space_after = Pt(1.5 if include_field_v9 else 4)
+            paragraph.paragraph_format.space_after = Pt(1 if include_field_v10 else 1.5 if include_field_v9 else 4)
+            if include_field_v10:
+                paragraph.paragraph_format.line_spacing = 1.10
     output.parent.mkdir(parents=True, exist_ok=True)
     doc.save(output)
 
@@ -456,9 +471,11 @@ if __name__ == "__main__":
     parser.add_argument("--include-crop-head", action="store_true")
     parser.add_argument("--include-field-v8", action="store_true")
     parser.add_argument("--include-field-v9", action="store_true")
+    parser.add_argument("--include-field-v10", action="store_true")
     arguments = parser.parse_args()
-    field_v8 = arguments.include_field_v8 or arguments.include_field_v9
+    field_v9 = arguments.include_field_v9 or arguments.include_field_v10
+    field_v8 = arguments.include_field_v8 or field_v9
     crop_head = arguments.include_crop_head or field_v8
     tomato = arguments.include_tomato_transfer or crop_head
     build(arguments.artifact, arguments.output,
-          arguments.include_field_followup or tomato, tomato, crop_head, field_v8, arguments.include_field_v9)
+          arguments.include_field_followup or tomato, tomato, crop_head, field_v8, field_v9, arguments.include_field_v10)

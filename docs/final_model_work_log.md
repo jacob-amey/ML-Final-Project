@@ -652,3 +652,20 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   and verified model reload and exact training membership.
 - Updated and rendered the ten-page editable Rev5 report with the matched
   potato result. [Data and model evidence](field_optimization/field_v9_intake.md)
+
+### Corn field validation and source matching
+
+- Expanded the Pretoria intake to 96 publisher originals from four
+  compatible single-label folders. Removed two possible repeat views.
+  The 94 date-recorded photos remain in development. Automatic mode
+  got 21 right, selected the wrong crop 22 times, and made 51 condition
+  errors with the right crop. Supplying corn gave 26 correct. The separate
+  inherited generic rust class accounted for eight common-rust errors.
+- Preserved the frozen labels and confirmed the source support of the two
+  rust names independently of the test results. Recorded the 94 verified
+  predictions and four-label scores in the updated, ten-page report.
+  [Methods](field_optimization/field_v9_intake.md#expanded-corn-field-validation)
+- Registered a matched, label-preserving intake and comparison using
+  additional RAW_Image JPEGs from Bangladesh. The other public folders
+  contain derivative views or labels without an exact mapping. The
+  full 177-label deployment remains independent of this diagnostic.

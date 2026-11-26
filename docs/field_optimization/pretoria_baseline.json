@@ -1,0 +1,364 @@
+{
+  "protocol_sha256": "0bb1db7510b93431f6ddcb3224c85a182893ebd52fd3a55097eee0d6a894c7cf",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "manifest_sha256": "48b736fb42c333debc54b86be4aa5c6c5a7812e22e0c4b9e62507e5dd201da15",
+  "predictions_sha256": "9abcda61c654be3d87220afd45fb160b55f12721ddfd697857d5cc05f117b8c1",
+  "automatic_eligible_classes": 177,
+  "conditional_classes": [
+    "corn__common_rust",
+    "corn__gray_leaf_spot",
+    "corn__healthy",
+    "corn__northern_leaf_blight",
+    "corn__rust",
+    "corn__smut"
+  ],
+  "macro_average_classes": [
+    "corn__common_rust",
+    "corn__gray_leaf_spot",
+    "corn__healthy",
+    "corn__northern_leaf_blight"
+  ],
+  "measurements": {
+    "automatic": {
+      "macro_f1": 0.19806201550387598,
+      "accuracy": 0.22340425531914893,
+      "correct": 21,
+      "sample_count": 94,
+      "wrong_crop": 22,
+      "right_crop_wrong_condition": 51,
+      "largest_errors": [
+        {
+          "truth": "corn__healthy",
+          "prediction": "corn__northern_leaf_blight",
+          "count": 9
+        },
+        {
+          "truth": "corn__gray_leaf_spot",
+          "prediction": "corn__northern_leaf_blight",
+          "count": 9
+        },
+        {
+          "truth": "corn__common_rust",
+          "prediction": "corn__gray_leaf_spot",
+          "count": 9
+        },
+        {
+          "truth": "corn__common_rust",
+          "prediction": "corn__rust",
+          "count": 8
+        },
+        {
+          "truth": "corn__common_rust",
+          "prediction": "corn__northern_leaf_blight",
+          "count": 6
+        },
+        {
+          "truth": "corn__northern_leaf_blight",
+          "prediction": "wheat__septoria_blotch",
+          "count": 3
+        },
+        {
+          "truth": "corn__healthy",
+          "prediction": "sugarcane__healthy",
+          "count": 3
+        },
+        {
+          "truth": "corn__healthy",
+          "prediction": "banana__cordana_leaf_spot",
+          "count": 3
+        },
+        {
+          "truth": "corn__gray_leaf_spot",
+          "prediction": "corn__rust",
+          "count": 3
+        },
+        {
+          "truth": "corn__healthy",
+          "prediction": "corn__rust",
+          "count": 2
+        },
+        {
+          "truth": "corn__healthy",
+          "prediction": "corn__gray_leaf_spot",
+          "count": 2
+        },
+        {
+          "truth": "corn__northern_leaf_blight",
+          "prediction": "sugarcane__red_rot",
+          "count": 1
+        },
+        {
+          "truth": "corn__northern_leaf_blight",
+          "prediction": "sugarcane__healthy",
+          "count": 1
+        },
+        {
+          "truth": "corn__northern_leaf_blight",
+          "prediction": "rice__blast",
+          "count": 1
+        },
+        {
+          "truth": "corn__northern_leaf_blight",
+          "prediction": "garlic__rust",
+          "count": 1
+        }
+      ],
+      "per_class": [
+        {
+          "class_index": 59,
+          "class_name": "corn__common_rust",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 24
+        },
+        {
+          "class_index": 60,
+          "class_name": "corn__gray_leaf_spot",
+          "precision": 0.3684210526315789,
+          "recall": 0.2916666666666667,
+          "f1": 0.32558139534883723,
+          "support": 24
+        },
+        {
+          "class_index": 61,
+          "class_name": "corn__healthy",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 24
+        },
+        {
+          "class_index": 62,
+          "class_name": "corn__northern_leaf_blight",
+          "precision": 0.3684210526315789,
+          "recall": 0.6363636363636364,
+          "f1": 0.4666666666666667,
+          "support": 22
+        }
+      ],
+      "capture_days": {
+        "2009:03:24": {
+          "count": 6,
+          "correct": 1,
+          "predicted_corn": 6
+        },
+        "2012:03:27": {
+          "count": 5,
+          "correct": 2,
+          "predicted_corn": 5
+        },
+        "2012:03:28": {
+          "count": 3,
+          "correct": 0,
+          "predicted_corn": 2
+        },
+        "2012:03:29": {
+          "count": 1,
+          "correct": 0,
+          "predicted_corn": 1
+        },
+        "2019:03:13": {
+          "count": 38,
+          "correct": 12,
+          "predicted_corn": 28
+        },
+        "2019:03:16": {
+          "count": 23,
+          "correct": 3,
+          "predicted_corn": 21
+        },
+        "2020:02:26": {
+          "count": 2,
+          "correct": 0,
+          "predicted_corn": 1
+        },
+        "2020:03:02": {
+          "count": 2,
+          "correct": 2,
+          "predicted_corn": 2
+        },
+        "2020:03:09": {
+          "count": 14,
+          "correct": 1,
+          "predicted_corn": 6
+        }
+      }
+    },
+    "supplied_corn": {
+      "macro_f1": 0.2027777777777778,
+      "accuracy": 0.2765957446808511,
+      "correct": 26,
+      "sample_count": 94,
+      "wrong_crop": 0,
+      "right_crop_wrong_condition": 68,
+      "largest_errors": [
+        {
+          "truth": "corn__healthy",
+          "prediction": "corn__northern_leaf_blight",
+          "count": 17
+        },
+        {
+          "truth": "corn__gray_leaf_spot",
+          "prediction": "corn__northern_leaf_blight",
+          "count": 11
+        },
+        {
+          "truth": "corn__common_rust",
+          "prediction": "corn__gray_leaf_spot",
+          "count": 9
+        },
+        {
+          "truth": "corn__common_rust",
+          "prediction": "corn__rust",
+          "count": 8
+        },
+        {
+          "truth": "corn__common_rust",
+          "prediction": "corn__northern_leaf_blight",
+          "count": 7
+        },
+        {
+          "truth": "corn__healthy",
+          "prediction": "corn__rust",
+          "count": 5
+        },
+        {
+          "truth": "corn__northern_leaf_blight",
+          "prediction": "corn__gray_leaf_spot",
+          "count": 3
+        },
+        {
+          "truth": "corn__gray_leaf_spot",
+          "prediction": "corn__rust",
+          "count": 3
+        },
+        {
+          "truth": "corn__healthy",
+          "prediction": "corn__gray_leaf_spot",
+          "count": 2
+        },
+        {
+          "truth": "corn__gray_leaf_spot",
+          "prediction": "corn__smut",
+          "count": 2
+        },
+        {
+          "truth": "corn__gray_leaf_spot",
+          "prediction": "corn__common_rust",
+          "count": 1
+        }
+      ],
+      "per_class": [
+        {
+          "class_index": 59,
+          "class_name": "corn__common_rust",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 24
+        },
+        {
+          "class_index": 60,
+          "class_name": "corn__gray_leaf_spot",
+          "precision": 0.3333333333333333,
+          "recall": 0.2916666666666667,
+          "f1": 0.3111111111111111,
+          "support": 24
+        },
+        {
+          "class_index": 61,
+          "class_name": "corn__healthy",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 24
+        },
+        {
+          "class_index": 62,
+          "class_name": "corn__northern_leaf_blight",
+          "precision": 0.35185185185185186,
+          "recall": 0.8636363636363636,
+          "f1": 0.5000000000000001,
+          "support": 22
+        }
+      ],
+      "capture_days": {
+        "2009:03:24": {
+          "count": 6,
+          "correct": 1,
+          "predicted_corn": 6
+        },
+        "2012:03:27": {
+          "count": 5,
+          "correct": 2,
+          "predicted_corn": 5
+        },
+        "2012:03:28": {
+          "count": 3,
+          "correct": 0,
+          "predicted_corn": 3
+        },
+        "2012:03:29": {
+          "count": 1,
+          "correct": 0,
+          "predicted_corn": 1
+        },
+        "2019:03:13": {
+          "count": 38,
+          "correct": 15,
+          "predicted_corn": 38
+        },
+        "2019:03:16": {
+          "count": 23,
+          "correct": 3,
+          "predicted_corn": 23
+        },
+        "2020:02:26": {
+          "count": 2,
+          "correct": 0,
+          "predicted_corn": 2
+        },
+        "2020:03:02": {
+          "count": 2,
+          "correct": 2,
+          "predicted_corn": 2
+        },
+        "2020:03:09": {
+          "count": 14,
+          "correct": 3,
+          "predicted_corn": 14
+        }
+      }
+    }
+  },
+  "test_used": false,
+  "app_changed": false,
+  "completed_utc": "2026-11-26T00:49:23.717639+00:00",
+  "reconciliation": {
+    "manifest_truth_and_exact_bytes_match": true,
+    "score_counts_recomputed": true
+  },
+  "corn_rust_label_audit": {
+    "corn__common_rust": {
+      "train": 897,
+      "validation": 256,
+      "recorded_training_groups": 897,
+      "documented_training_leaf_ids": 0,
+      "plantdoc_marked_training": 68,
+      "inherited_source_label": {
+        "Corn__common_rust": 897
+      }
+    },
+    "corn__rust": {
+      "train": 107,
+      "validation": 30,
+      "recorded_training_groups": 107,
+      "documented_training_leaf_ids": 0,
+      "plantdoc_marked_training": 0,
+      "inherited_source_label": {
+        "corn rust": 107
+      }
+    }
+  }
+}

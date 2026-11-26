@@ -1,0 +1,20 @@
+{
+  "report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev6.docx",
+  "sha256": "d4b5edb444fe37cffe59b16727aed8e47d5851a93a045b8c905cd8eedd0edffe",
+  "pages": 10,
+  "body_font_pt": 11,
+  "normal_line_spacing": 1.15,
+  "references_line_spacing": 1.1,
+  "margin_inches": 1,
+  "page_numbers": "bottom right",
+  "visual_check": "Pages 1\u20138 pixel match the reviewed Rev5. Pages 9\u201310 inspected visually after the final render.",
+  "frozen_submission_replaced": false,
+  "checks": {
+    "pretoria_baseline.json": "a93dace1750958fb3c2a8d0d243cd7f9cfbf98e85eebea892fc6b089bfaffa63",
+    "pretoria_expanded.json": "0a3280a9956b8b054274ffe3776f881059dcdde344e1bdf8f724165c158514ba",
+    "report_field_v9_verification.json": "686a0bce56d37bc5ebf7587c8716025173424aab5932ec9f5acf973a4dce8b2d",
+    "field_guidance_browser.json": "23bf773bebd6b8c308ef0c0693d400f060a3e6a1070034721da0f8dc22a3b4c5"
+  },
+  "pipeline_tests": 9,
+  "website_tests": 19
+}

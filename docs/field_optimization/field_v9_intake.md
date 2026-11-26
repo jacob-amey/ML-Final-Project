@@ -53,3 +53,40 @@ The [receipt](pretoria_preflight.json) and [sample manifest](../../data/manifest
 preserve those observations. No sample entered training or evaluation.
 If expanded, screen all protected releases before using the source and
 keep repeated views grouped across development splits.
+
+## Expanded corn field validation
+
+The same content-independent ID rule took up to 24 original photos from
+each of the four compatible Pretoria labels. All 96 originals decoded,
+and two candidate repeated views were excluded. The 94 development
+images span nine EXIF days. Common rust appears on two dates, limiting
+the number of genuinely separate captures. Keep the entire Pretoria
+source in development. The [expanded checklist](pretoria_expanded.json)
+records the exact byte and grouping evidence.
+
+The [protocol](../../configs/leafcheck_pretoria_baseline_v1.json) pinned
+bytes, class order and the deployed checkpoint before the first score.
+Automatic mode retained all 177 outputs. The supplied-corn diagnostic
+retained all six existing corn outputs, including labels absent from
+these photos.
+
+| Method | Top-1 correct | Macro-F1 across four represented labels | Wrong crop | Right crop, wrong condition |
+| --- | ---: | ---: | ---: | ---: |
+| Automatic | 21/94 | 0.198062 | 22 | 51 |
+| Supplied corn | 26/94 | 0.202778 | 0 | 68 |
+
+Both modes got zero of 24 reference common-rust images and zero of 24
+healthy-proxy images right. Each returned the separate inherited
+`corn__rust` label for eight common-rust images. Master training contains
+897 `corn__common_rust` and 107 `corn__rust` examples. The master preserves
+them under different source folder names. The 68 PlantDoc-linked common-rust
+training rows and the family labels do not establish how the generic rust
+class differs biologically. Keep both frozen labels during this study.
+The study shows that supplying a crop alone leaves substantial condition
+errors. It provides no estimate of general reliability across all crops.
+
+[Per-class and date-level results](pretoria_baseline.json) ·
+[Exact prediction records](pretoria_predictions.csv). Reproduce with
+`.venv/bin/python -m leafcheck.pretoria_baseline --output runs/field_v10/pretoria-baseline-replay`
+after restoring the expanded intake. The course and supplementary evaluation
+images were outside this comparison.
