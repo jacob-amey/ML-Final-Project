@@ -21,6 +21,7 @@ ARMS = ("matched_repeat", "new_field")
 LABEL = "bean__rust"
 BEAN_LABELS = ("bean__halo_blight", "bean__mosaic_virus", LABEL)
 POLICY = {"name": "d4_probability_mean"}
+ORIGINAL_DIAGNOSTIC = ROOT / "docs/field_optimization/tanzania_bean_uploads.json"
 
 
 def registered_members(plan, frozen):
@@ -89,6 +90,21 @@ def field_summary(rows):
                                           "correct": sum(row["correct"] for row in representatives)}}
 
 
+def original_nonrust_diagnostic(predictor):
+    members = read(ORIGINAL_DIAGNOSTIC)["records"]
+    outcomes = {}
+    for label in ("healthy", "anthracnose"):
+        selected = [row for row in members if row["disposition"] == "diagnostic" and row["label"] == label]
+        scores = []
+        for row in selected:
+            path = RAW / (row["sha256"] + ".jpg")
+            if sha256(path) != row["sha256"]:
+                raise ValueError(f"Changed original preflight sample: {row['member']}")
+            scores.append(predictor.predict(path)["label"] == LABEL)
+        outcomes[label] = {"support": len(selected), "predicted_bean_rust": sum(scores)}
+    return outcomes
+
+
 def compare(run, output):
     output.mkdir(parents=True, exist_ok=True)
     result_file = output / "result.json"
@@ -126,6 +142,7 @@ def compare(run, output):
         field = field_summary(rows)
         results[name] = {"checkpoint_sha256": sha256(predictor.path), "epoch": predictor.metadata["selected_epoch"],
                          "resolution": predictor.spec["input_size"], "field_validation": field,
+                         "already_seen_nonrust_diagnostic": original_nonrust_diagnostic(predictor),
                          "master_validation": recorded_validation, "training_terminal_state": receipts.get(name)}
         print(name, f"rust {field['correct']}/{field['support']}", f"wrong crop {field['wrong_crop']}",
               "master macro F1", recorded_validation and recorded_validation["macro_f1"], flush=True)
@@ -142,6 +159,7 @@ def compare(run, output):
     atomic_json(result_file, {"measured_utc": utc_now(), "device": str(device), "plan_sha256": sha256(PLAN),
                               "dataset_fingerprint": frozen["fingerprint"], "training_addition": plan["training_edition"],
                               "field_validation": plan["field_validation"], "results": results, "deltas": changes,
+                              "descriptive_nonrust_diagnostic_sha256": sha256(ORIGINAL_DIAGNOSTIC),
                               "advance": passed, "deployment_changed": False, "test_opened": False})
     print("Changes", changes, "advance", passed, flush=True)
 
