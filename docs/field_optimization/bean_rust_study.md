@@ -31,3 +31,19 @@ Train to new run directories when recreating the comparison. Use the original tr
 ```
 
 For an interrupted arm use `--resume --run <run-directory>` with its saved configuration and checkpoint. Check the running process and its configured output path before starting a second job. The training code revalidates the manifest and original archive on resume. Full-data training starts from randomly initialized weights in both arms.
+
+## Measured comparison
+
+Both runs finished all eight epochs and 3,712 updates on MPS. Both selected epoch 8 and passed checkpoint reload. Eight-view inference gave the following results.
+
+| Model | Master validation accuracy | Master validation macro-F1 | Tanzania rust correct | Tanzania wrong crop |
+| --- | ---: | ---: | ---: | ---: |
+| Deployed 224-pixel reference | 89.7541% | 0.649221 | 1/63 | 60/63 |
+| 128-pixel repeat-draw control | 79.2825% | 0.436075 | 0/63 | 63/63 |
+| 128-pixel Makerere photo addition | 76.6631% | 0.423678 | 0/63 | 62/63 |
+
+The treatment lost 0.012397 master macro-F1 and 2.6194 accuracy points. Master rust recall fell from 5/22 to 2/22. The full source, equal-date and one-file-per-date summaries produced zero correct rust predictions for either pilot. The treated model labeled one field leaf as bean with the wrong condition. Both other bean labels together gained one correct master prediction. The original nonrust preflight is a descriptive replay. The deployed model labeled five anthracnose uploads as bean rust, the control labeled one, and the treatment labeled zero.
+
+The treatment failed the full-label accuracy and macro-F1 limits and produced zero field recall gain. Skip a second seed under the registered rule. The two short pilots cannot establish whether a longer recipe or more independently sampled sources would help. The prevalence of incorrect crop predictions and photographed close-ups both support investigating camera distance and ordinary crop cues. The evidence does not identify a causal reason for the errors. Retain the verified frozen checkpoint in the app.
+
+[Full metrics, hashes, timings and group counts](bean_rust_result.json).

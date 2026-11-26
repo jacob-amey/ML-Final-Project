@@ -1,0 +1,17 @@
+{
+  "report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev9.docx",
+  "sha256": "f4f4d4047889baa462b7cdc8d3ba4bbcb958175e81b1a144bb09a6039dea320e",
+  "pages": 10,
+  "body_font_pt": 11,
+  "normal_line_spacing": 1.15,
+  "references_line_spacing": 1.0,
+  "margin_inches": 1,
+  "page_numbers": "bottom right",
+  "visual_check": "Pages 1\u20138 pixel match Rev8. Page 9 inspected in the final render. Page 10 matches the reviewed Rev9 reference page.",
+  "frozen_submission_replaced": false,
+  "result_sha256": "0b5bcd3ee4c88077246e18fb6f04c6ad5ca178ed1e63f12119049e0a1f7e83b9",
+  "pipeline_tests": 12,
+  "pipeline_log_sha256": "f30b3c61296147f1798f91b3ff48624fad39c83cf401a47c157250f47d5f1129",
+  "website_tests": 19,
+  "browser_receipt_sha256": "c735c9c9d129d3cae8214924b4494751f7a7a9a57247559a5230857c823cece5"
+}

@@ -156,5 +156,5 @@ The original combined submission remains the archived course snapshot.
 | Discussion, conclusion and future improvement | Pages 6–9 explain sparse support, dataset shift, uncalibrated scores, the crop-loss result and the unsupported-upload challenge. |
 | Project management and individual contributions | Page 9 distinguishes assigned roles, evidenced decisions and assistance. Student implementation details and meeting activities still require confirmation. |
 | IEEE references, repository link, dataset and source links | Pages 9–10 give the GitHub link, source and restoration pointers, dataset version, weights hash and numbered references. Independent access to the full merged master remains unverified. |
-| Length and formatting | The [Rev8 verification record](field_optimization/report_feature_style_verification.json) covers ten rendered pages, 11-point body, line spacing at or below 1.15, one-inch margins and bottom-right page numbering. |
+| Length and formatting | The [Rev9 verification record](field_optimization/report_bean_rust_verification.json) covers ten rendered pages, 11-point body, line spacing at or below 1.15, one-inch margins and bottom-right page numbering. |
 | Single team BrightSpace submission | The team owns submission and confirmation. The separate field update is a local editable report. |

@@ -712,3 +712,16 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   invalid image and 19 passing website tests on the extracted archive.
   [Bean diagnostic](field_optimization/tanzania_bean_preflight.md) ·
   [Browser verification](field_optimization/condition_coverage_browser.json)
+
+### Matched addition of field bean rust photos
+
+- Downloaded and verified all three publisher-pinned Makerere ZIPs. Registered
+  348 cleared rust training files and a separate 63-photo Tanzanian rust
+  development cohort. Both 128-pixel arms completed 3,712 updates.
+- New-field and repeat-draw arms both scored 0/63 on Tanzania. Master
+  validation macro-F1 fell by 0.012397 with new photos. The field addition
+  missed the preregistered advancement gate.
+- Screened the independent brassica source candidates for exact and visual
+  overlaps. Short capture blocks and shared imagery limited the coverage.
+  [Bean study](field_optimization/bean_rust_study.md) ·
+  [Brassica intake](field_optimization/brassica_intake.md)

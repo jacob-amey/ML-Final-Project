@@ -26,3 +26,10 @@ Student review, independent code authorship and meeting attendance require
 task records or teammate confirmation. The course-specific AI policy,
 scope approval and personal rehearsal remain pending confirmation.
 See `docs/scope_reconciliation.md` for other administrative confirmations.
+
+In the November 26 follow-up, Codex performed the matched feature-style and
+bean rust training studies, source screening, archive verification, and report
+revision. Codex implemented the model-label coverage lookup using the existing
+interface and verified the browser upload workflow on an extracted copy.
+Relevant commits include `25e449f`, `06eadda`, `8362ddc`, `fe56077` and `9f1f598`.
+The [work log](final_model_work_log.md) records this assistance.

@@ -255,7 +255,7 @@ def tomato_transfer(doc, docs, freeze, include_crop_head=False):
 
 def build(artifact, output, include_field_followup=False, include_tomato_transfer=False,
           include_crop_head=False, include_field_v8=False, include_field_v9=False, include_field_v10=False,
-          include_seasonal_corn=False, include_feature_style=False):
+          include_seasonal_corn=False, include_feature_style=False, include_bean_rust=False):
     freeze = read(artifact / "freeze.json")
     manifest = read(artifact / "artifact.json")
     assert all(manifest[key] for key in ("final_evaluation_complete", "reference_evaluation_complete", "supplementary_evaluation_complete"))
@@ -347,7 +347,10 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
         tomato_transfer(doc, docs, freeze, include_crop_head)
 
     heading(doc, "Conclusion and Project Management")
-    doc.add_paragraph("The custom CNN outscored both primary test references in accuracy and macro-F1. Its lower supplementary accuracy than the conditional frequency rule shows the need for verified, independently collected photos before drawing field-performance conclusions.")
+    if include_bean_rust:
+        doc.add_paragraph("The CNN outscored both references on the primary test. On the PlantDoc supplement, it trailed the frequency rule in accuracy.")
+    else:
+        doc.add_paragraph("The custom CNN outscored both primary test references in accuracy and macro-F1. Its lower supplementary accuracy than the conditional frequency rule shows the need for verified, independently collected photos before drawing field-performance conclusions.")
     if include_field_v8:
         pilot = read(docs / "field_optimization/crop_loss_pilot.json")
         unsupported = read(docs / "field_optimization/unsupported_energy.json")["unsupported"]
@@ -359,11 +362,11 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             f"A matched six-epoch crop-loss pilot [18] gained {pilot['field_joint_f1_gain']:.4f} "
             "field macro-F1 and missed its advancement criteria."
         )
-        doc.add_paragraph(
-            f"The upload rule suggested a label for {accepted} of {count} unsupported Open Images photos [19]. "
-            "The demo now lists the covered crops and explains that unfamiliar subjects can receive high scores. "
-            "The deployed checkpoint and decision threshold stayed fixed."
-        )
+        unsupported_copy = f"The upload rule suggested a label for {accepted} of {count} unsupported Open Images photos [19]."
+        if not include_bean_rust:
+            unsupported_copy += (" The demo now lists the covered crops and explains that unfamiliar subjects can receive high scores. "
+                                 "The deployed checkpoint and decision threshold stayed fixed.")
+        doc.add_paragraph(unsupported_copy)
     if include_field_v9:
         trial = read(docs / "field_optimization/potato_partial_study.json")
         before = trial["arms"]["control"]["scores"]["field"]
@@ -402,17 +405,32 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             f"The Pretoria decrease of {-style['source_gains']['pretoria']:.4f} exceeded the study limit. "
             f"An inference-only spatial pooling probe [24] lost {-spatial['mean_field_macro_f1_gain']:.4f} mean field macro-F1."
         )
+    if include_bean_rust:
+        bean = read(docs / "field_optimization/bean_rust_result.json")
+        control = bean["results"]["matched_repeat"]["field_validation"]
+        addition = bean["results"]["new_field"]["field_validation"]
+        count = addition["support"]
+        decision = "The trial earned a second seed." if bean["advance"] else "The trial missed its advancement criteria."
+        doc.add_paragraph(
+            f"Adding 348 Makerere rust photos [25] yielded {addition['correct']}/{count} correct on Tanzania rust [26] "
+            f"versus {control['correct']}/{count} with repeat draws. Master validation macro-F1 changed by "
+            f"{bean['deltas']['macro_f1']:+.4f}. {decision} The app lists its supported conditions by crop."
+        )
     doc.add_heading("Project Management", level=2)
     if include_feature_style:
         doc.add_paragraph("The planning decks assign Jacob Amey data, training, evaluation and integration. They assign Demetre the frontend and uploads. Jacob defined the final scope and authorized delivery. The contribution record flags claims that need team confirmation. Codex assisted with data, experiments, integration, writing and verification.")
     else:
         doc.add_paragraph("Jacob Amey’s assigned role covers data, training, evaluation and model integration. Jacob defined the final scope and authorized the delivery. Demetre’s assigned role covers the frontend and upload interface. The planning decks establish these roles. The contribution record documents available evidence and flags individual implementation and meeting claims for team confirmation. Codex assisted with data preparation, training experiments, evaluation, integration, writing and delivery verification.")
     doc.add_heading("Reproduction and Appendix", level=2)
-    if include_feature_style:
+    if include_bean_rust:
+        doc.add_paragraph("START_HERE.md identifies the executable source, weights and metric records. For retraining, use the exact frozen images and the restore and training instructions in the archived README.")
+    elif include_feature_style:
         doc.add_paragraph("START_HERE.md identifies the runnable source revision and bundled weights. The archived membership and predictions reproduce the saved metrics. Retraining requires access to the exact master or frozen images. The archived README and data guide give restore, validation and training commands.")
     else:
         doc.add_paragraph("The archive identifies its exact runnable source revision in START_HERE.md. Its demo uses bundled weights. The saved metrics can be recomputed from the archived membership and predictions. Retraining also requires permitted access to the exact original master or frozen images. Follow the restore, verification, cache and pinned training commands in the archived README and data guide.")
-    if include_field_v10:
+    if include_bean_rust:
+        doc.add_paragraph("See docs/field_optimization for follow-up data and experiments. The condition lookup demo has its own archive.")
+    elif include_field_v10:
         doc.add_paragraph("The manifests, follow-up evaluations and matched training records are in docs/field_optimization. The field-guidance demo has its own archive.")
     elif include_field_followup:
         demo = "field-guidance demo" if include_field_v8 else "potato-context demo"
@@ -476,9 +494,13 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
         for ref in [
             "[17] Hossain et al., “Tomato leaf diseases,” Mendeley Data, v1. doi: 10.17632/93h9p62kg4.1.",
             "[18] L. Bertinetto et al., “Making better mistakes: Leveraging class hierarchies with deep networks,” Proc. CVPR, pp. 12506–12515, 2020.",
-            "[19] Google, “Open Images V7,” dataset and image metadata. [Online]. Available: https://storage.googleapis.com/openimages/web/download_v7.html",
         ]:
             doc.add_paragraph(ref)
+        if include_bean_rust:
+            reference = doc.add_paragraph("[19] Google, “Open Images V7,” dataset and image metadata. ")
+            add_link(reference, "Dataset page", "https://storage.googleapis.com/openimages/web/download_v7.html")
+        else:
+            doc.add_paragraph("[19] Google, “Open Images V7,” dataset and image metadata. [Online]. Available: https://storage.googleapis.com/openimages/web/download_v7.html")
         if include_field_v9:
             doc.add_paragraph("[20] J. Johnson, “Sample dataset for enhanced field-based detection of potato blight,” Mendeley Data, v1, 2025. doi: 10.17632/pbnw43s6kt.1.")
         if include_field_v10:
@@ -487,7 +509,14 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             doc.add_paragraph("[22] M. H. Ahmad, “Seasonal corn leaf disease dataset,” Mendeley Data, 2025. doi: 10.17632/vy629dngm8.1.")
         if include_feature_style:
             doc.add_paragraph("[23] K. Zhou et al., “Domain generalization with MixStyle,” ICLR, 2021. https://arxiv.org/abs/2104.02008")
-            doc.add_paragraph("[24] F. Radenović, G. Tolias, and O. Chum, “Fine-tuning CNN image retrieval with no human annotation,” IEEE TPAMI, 2019. https://arxiv.org/abs/1711.02512")
+            if include_bean_rust:
+                reference = doc.add_paragraph("[24] F. Radenović et al., “Fine-tuning CNN image retrieval with no human annotation,” ")
+                add_link(reference, "arXiv:1711.02512", "https://arxiv.org/abs/1711.02512")
+            else:
+                doc.add_paragraph("[24] F. Radenović, G. Tolias, and O. Chum, “Fine-tuning CNN image retrieval with no human annotation,” IEEE TPAMI, 2019. https://arxiv.org/abs/1711.02512")
+        if include_bean_rust:
+            doc.add_paragraph("[25] Makerere AI Lab, “Bean disease dataset,” 2020. https://github.com/AI-Lab-Makerere/ibean")
+            doc.add_paragraph("[26] N. Mduma et al., “A labeled dataset of healthy and diseased common beans from Tanzania,” Zenodo, 2025. doi: 10.5281/zenodo.15685315.")
         for paragraph in doc.paragraphs[reference_start:]:
             paragraph.paragraph_format.space_after = Pt(0 if include_feature_style else 1 if include_field_v10 else 1.5 if include_field_v9 else 4)
             if include_field_v10:
@@ -508,8 +537,10 @@ if __name__ == "__main__":
     parser.add_argument("--include-field-v10", action="store_true")
     parser.add_argument("--include-seasonal-corn", action="store_true")
     parser.add_argument("--include-feature-style", action="store_true")
+    parser.add_argument("--include-bean-rust", action="store_true")
     arguments = parser.parse_args()
-    seasonal = arguments.include_seasonal_corn or arguments.include_feature_style
+    feature_style = arguments.include_feature_style or arguments.include_bean_rust
+    seasonal = arguments.include_seasonal_corn or feature_style
     field_v10 = arguments.include_field_v10 or seasonal
     field_v9 = arguments.include_field_v9 or field_v10
     field_v8 = arguments.include_field_v8 or field_v9
@@ -517,4 +548,4 @@ if __name__ == "__main__":
     tomato = arguments.include_tomato_transfer or crop_head
     build(arguments.artifact, arguments.output,
           arguments.include_field_followup or tomato, tomato, crop_head, field_v8, field_v9, field_v10,
-          seasonal, arguments.include_feature_style)
+          seasonal, feature_style, arguments.include_bean_rust)

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-26T05:49:50.275463+00:00",
+  "updated_utc": "2026-11-26T06:07:02.846769+00:00",
   "frozen_model": "artifacts/leafcheck177-v1/model.pt",
   "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
   "deployment_decision": "Retain the frozen 177-label checkpoint and optional potato context. The packaged app lists the exact conditions by crop.",
@@ -14,11 +14,12 @@
     "runs/field_v10/corn-seasonal-seed434",
     "runs/field_v11/control",
     "runs/field_v11/feature_style",
-    "runs/field_v12/spatial-pool"
+    "runs/field_v12/spatial-pool",
+    "runs/field_v12/bean-study"
   ],
-  "active_training": true,
-  "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev8.docx",
-  "report_sha256": "924b8f6f2f27bfd409513bc4e618a4414cc5071576bbc8d922a24c10a2fed9b0",
+  "active_training": false,
+  "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev9.docx",
+  "report_sha256": "f4f4d4047889baa462b7cdc8d3ba4bbcb958175e81b1a144bb09a6039dea320e",
   "protected_confirmations": [
     "course holdout",
     "PlantDoc",
@@ -31,8 +32,8 @@
     "Hossain",
     "CoffeeLeaf-CO v2"
   ],
-  "best_next_question": "Do screened field bean rust photos improve transfer more than repeat draws, while preserving master validation?",
-  "next_action": "Monitor both sequential eight-epoch runs and compare their reloaded best checkpoints under the registered validation rules.",
+  "best_next_question": "Are rice field mistakes driven more by wrong crop identity or by confusing supported conditions?",
+  "next_action": "Score the fixed 60-photo RiceLeafDiseaseBD source diagnostic and verify its counts. Keep blast-family results separate from exact-label evaluation.",
   "latest_demo": "artifacts/LeafCheck-condition-coverage-demo.zip",
   "demo_sha256": "4af7aa952534a92beaa8c0964ba7515b1985398d1e23ed4e50176549dad5e462",
   "latest_potato_result": {
@@ -80,21 +81,21 @@
     "unsupported_photos": 15,
     "evidence": "docs/field_optimization/tanzania_bean_uploads.json"
   },
-  "active_run": {
-    "path": "runs/field_v12/bean-study",
-    "protocol": "configs/leafcheck_bean_rust_study.json",
-    "ordered_arms": [
-      "matched_repeat",
-      "new_field"
-    ],
-    "train_images_per_epoch": 59356,
-    "completed_epochs_required": 8
-  },
   "latest_bean_intake": {
     "candidate_train_rust": 348,
     "field_validation_rust": 63,
     "field_date_groups": 10,
     "makerere": "docs/field_optimization/makerere_beans_audit.json",
     "tanzania": "data/manifests/leafcheck_tanzania_bean_rust_validation.json"
+  },
+  "latest_bean_rust_result": {
+    "master_macro_f1_delta": -0.012396984154737833,
+    "field_correct": [
+      0,
+      0
+    ],
+    "field_support": 63,
+    "eligible": false,
+    "evidence": "docs/field_optimization/bean_rust_result.json"
   }
 }
