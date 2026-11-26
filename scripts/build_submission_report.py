@@ -255,7 +255,7 @@ def tomato_transfer(doc, docs, freeze, include_crop_head=False):
 
 def build(artifact, output, include_field_followup=False, include_tomato_transfer=False,
           include_crop_head=False, include_field_v8=False, include_field_v9=False, include_field_v10=False,
-          include_seasonal_corn=False):
+          include_seasonal_corn=False, include_feature_style=False):
     freeze = read(artifact / "freeze.json")
     manifest = read(artifact / "artifact.json")
     assert all(manifest[key] for key in ("final_evaluation_complete", "reference_evaluation_complete", "supplementary_evaluation_complete"))
@@ -394,10 +394,24 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             f"Adding {count} outdoor corn photos [22] yielded {field['macro_f1']:.3f} field macro-F1 "
             f"versus {control['macro_f1']:.3f} for the matched control. Both specialists missed the master validation limits."
         )
+    if include_feature_style:
+        style = read(docs / "field_optimization/feature_style_study.json")
+        spatial = read(docs / "field_optimization/spatial_pool_probe.json")
+        doc.add_paragraph(
+            f"Mixing early feature statistics [23] gained {style['field_macro_f1_gain']:.4f} mean field macro-F1. "
+            f"The Pretoria decrease of {-style['source_gains']['pretoria']:.4f} exceeded the study limit. "
+            f"An inference-only spatial pooling probe [24] lost {-spatial['mean_field_macro_f1_gain']:.4f} mean field macro-F1."
+        )
     doc.add_heading("Project Management", level=2)
-    doc.add_paragraph("Jacob Amey’s assigned role covers data, training, evaluation and model integration. Jacob defined the final scope and authorized the delivery. Demetre’s assigned role covers the frontend and upload interface. The planning decks establish these roles. The contribution record documents available evidence and flags individual implementation and meeting claims for team confirmation. Codex assisted with data preparation, training experiments, evaluation, integration, writing and delivery verification.")
+    if include_feature_style:
+        doc.add_paragraph("The planning decks assign Jacob Amey data, training, evaluation and integration. They assign Demetre the frontend and uploads. Jacob defined the final scope and authorized delivery. The contribution record flags claims that need team confirmation. Codex assisted with data, experiments, integration, writing and verification.")
+    else:
+        doc.add_paragraph("Jacob Amey’s assigned role covers data, training, evaluation and model integration. Jacob defined the final scope and authorized the delivery. Demetre’s assigned role covers the frontend and upload interface. The planning decks establish these roles. The contribution record documents available evidence and flags individual implementation and meeting claims for team confirmation. Codex assisted with data preparation, training experiments, evaluation, integration, writing and delivery verification.")
     doc.add_heading("Reproduction and Appendix", level=2)
-    doc.add_paragraph("The archive identifies its exact runnable source revision in START_HERE.md. Its demo uses bundled weights. The saved metrics can be recomputed from the archived membership and predictions. Retraining also requires permitted access to the exact original master or frozen images. Follow the restore, verification, cache and pinned training commands in the archived README and data guide.")
+    if include_feature_style:
+        doc.add_paragraph("START_HERE.md identifies the runnable source revision and bundled weights. The archived membership and predictions reproduce the saved metrics. Retraining requires access to the exact master or frozen images. The archived README and data guide give restore, validation and training commands.")
+    else:
+        doc.add_paragraph("The archive identifies its exact runnable source revision in START_HERE.md. Its demo uses bundled weights. The saved metrics can be recomputed from the archived membership and predictions. Retraining also requires permitted access to the exact original master or frozen images. Follow the restore, verification, cache and pinned training commands in the archived README and data guide.")
     if include_field_v10:
         doc.add_paragraph("The manifests, follow-up evaluations and matched training records are in docs/field_optimization. The field-guidance demo has its own archive.")
     elif include_field_followup:
@@ -423,7 +437,12 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
         add_link(paragraph, name, url)
     doc.add_paragraph("Dataset SHA-256: " + freeze["dataset_fingerprint"])
     doc.add_paragraph("Selected weights SHA-256: " + freeze["checkpoint_sha256"])
-    heading(doc, "References")
+    if include_feature_style:
+        references = doc.add_heading("References", level=1)
+        references.paragraph_format.page_break_before = True
+        references.paragraph_format.space_before = Pt(0)
+    else:
+        heading(doc, "References")
     reference_start = len(doc.paragraphs)
     for ref in [
         "[1] S. P. Mohanty, D. P. Hughes, and M. Salathé, ‘Using deep learning for image-based plant disease detection,’ Front. Plant Sci., vol. 7, art. 1419, 2016. doi: 10.3389/fpls.2016.01419.",
@@ -466,10 +485,13 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             doc.add_paragraph("[21] H. Craze, “Diseases of maize in the field,” Univ. Pretoria, 2022. doi: 10.25403/UPresearchdata.20237613.v1.")
         if include_seasonal_corn:
             doc.add_paragraph("[22] M. H. Ahmad, “Seasonal corn leaf disease dataset,” Mendeley Data, 2025. doi: 10.17632/vy629dngm8.1.")
+        if include_feature_style:
+            doc.add_paragraph("[23] K. Zhou et al., “Domain generalization with MixStyle,” ICLR, 2021. https://arxiv.org/abs/2104.02008")
+            doc.add_paragraph("[24] F. Radenović, G. Tolias, and O. Chum, “Fine-tuning CNN image retrieval with no human annotation,” IEEE TPAMI, 2019. https://arxiv.org/abs/1711.02512")
         for paragraph in doc.paragraphs[reference_start:]:
-            paragraph.paragraph_format.space_after = Pt(1 if include_field_v10 else 1.5 if include_field_v9 else 4)
+            paragraph.paragraph_format.space_after = Pt(0 if include_feature_style else 1 if include_field_v10 else 1.5 if include_field_v9 else 4)
             if include_field_v10:
-                paragraph.paragraph_format.line_spacing = 1.06 if include_seasonal_corn else 1.10
+                paragraph.paragraph_format.line_spacing = 1.0 if include_feature_style else 1.06 if include_seasonal_corn else 1.10
     output.parent.mkdir(parents=True, exist_ok=True)
     doc.save(output)
 
@@ -485,12 +507,14 @@ if __name__ == "__main__":
     parser.add_argument("--include-field-v9", action="store_true")
     parser.add_argument("--include-field-v10", action="store_true")
     parser.add_argument("--include-seasonal-corn", action="store_true")
+    parser.add_argument("--include-feature-style", action="store_true")
     arguments = parser.parse_args()
-    field_v10 = arguments.include_field_v10 or arguments.include_seasonal_corn
+    seasonal = arguments.include_seasonal_corn or arguments.include_feature_style
+    field_v10 = arguments.include_field_v10 or seasonal
     field_v9 = arguments.include_field_v9 or field_v10
     field_v8 = arguments.include_field_v8 or field_v9
     crop_head = arguments.include_crop_head or field_v8
     tomato = arguments.include_tomato_transfer or crop_head
     build(arguments.artifact, arguments.output,
           arguments.include_field_followup or tomato, tomato, crop_head, field_v8, field_v9, field_v10,
-          arguments.include_seasonal_corn)
+          seasonal, arguments.include_feature_style)

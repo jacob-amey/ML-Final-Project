@@ -1,0 +1,855 @@
+{
+  "evaluated_utc": "2026-11-26T05:31:47.918976+00:00",
+  "plan_sha256": "7d465493aa66477e8d5579e5d7cf2857012057128065008695f318f8356377bb",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "development_fingerprints": [
+    "94a9489fce692e2b8d21adc312fc882ae42de23686f26319cecc51d07150b781",
+    "61cf3f0df4c82f6f3d5f1998de98299900bb40ac01bfd7d3e1431d3f9f432ee6",
+    "48b736fb42c333debc54b86be4aa5c6c5a7812e22e0c4b9e62507e5dd201da15"
+  ],
+  "results": {
+    "average": {
+      "sheikh": {
+        "macro_f1": 0.0,
+        "accuracy": 0.0,
+        "correct": 0,
+        "sample_count": 233,
+        "wrong_crop": 229,
+        "right_crop_wrong_condition": 4,
+        "blight": [
+          {
+            "true": "tomato__early_blight",
+            "opposite_label": "tomato__late_blight",
+            "opposite_count": 0,
+            "total": 56,
+            "correct": 0,
+            "wrong_crop": 56,
+            "right_crop_wrong_condition": 0
+          }
+        ],
+        "largest_errors": [
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "rice__leaf_blast",
+            "count": 46
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "rice__hispa",
+            "count": 40
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "apple__healthy",
+            "count": 40
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "soybean__downy_mildew",
+            "count": 30
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "soybean__healthy",
+            "count": 26
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "rice__healthy",
+            "count": 16
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "rice__brown_spot",
+            "count": 8
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "soybean__mosaic_virus",
+            "count": 6
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "bell_pepper__bacterial_spot",
+            "count": 4
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "tomato__late_blight",
+            "count": 3
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "plum__pox_virus",
+            "count": 3
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "cherry__healthy",
+            "count": 2
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "apple__scab",
+            "count": 2
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "soybean__bacterial_blight",
+            "count": 2
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "tomato__leaf_mold",
+            "count": 1
+          }
+        ],
+        "support": {
+          "tomato__early_blight": 56,
+          "tomato__healthy": 177
+        }
+      },
+      "mduma": {
+        "macro_f1": 0.05026455026455026,
+        "accuracy": 0.03317535545023697,
+        "correct": 7,
+        "sample_count": 211,
+        "wrong_crop": 195,
+        "right_crop_wrong_condition": 9,
+        "blight": [
+          {
+            "true": "potato__early_blight",
+            "opposite_label": "potato__late_blight",
+            "opposite_count": 0,
+            "total": 61,
+            "correct": 2,
+            "wrong_crop": 59,
+            "right_crop_wrong_condition": 0
+          },
+          {
+            "true": "potato__late_blight",
+            "opposite_label": "potato__early_blight",
+            "opposite_count": 9,
+            "total": 100,
+            "correct": 5,
+            "wrong_crop": 86,
+            "right_crop_wrong_condition": 9
+          }
+        ],
+        "largest_errors": [
+          {
+            "truth": "potato__early_blight",
+            "prediction": "tomato__septoria_leaf_spot",
+            "count": 35
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "eggplant__cercospora_leaf_spot",
+            "count": 16
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "grape__leaf_spot",
+            "count": 15
+          },
+          {
+            "truth": "potato__healthy",
+            "prediction": "cucumber__powdery_mildew",
+            "count": 14
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "tomato__late_blight",
+            "count": 11
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "tobacco__brown_spot",
+            "count": 9
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "potato__early_blight",
+            "count": 9
+          },
+          {
+            "truth": "potato__healthy",
+            "prediction": "lettuce__mosaic_virus",
+            "count": 8
+          },
+          {
+            "truth": "potato__early_blight",
+            "prediction": "apple__scab",
+            "count": 7
+          },
+          {
+            "truth": "potato__healthy",
+            "prediction": "soybean__downy_mildew",
+            "count": 5
+          },
+          {
+            "truth": "potato__healthy",
+            "prediction": "tobacco__mosaic_virus",
+            "count": 4
+          },
+          {
+            "truth": "potato__healthy",
+            "prediction": "chili__whitefly",
+            "count": 4
+          },
+          {
+            "truth": "potato__early_blight",
+            "prediction": "basil__downy_mildew",
+            "count": 4
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "zucchini__yellow_mosaic_virus",
+            "count": 3
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "zucchini__downy_mildew",
+            "count": 3
+          }
+        ],
+        "support": {
+          "potato__early_blight": 61,
+          "potato__healthy": 50,
+          "potato__late_blight": 100
+        }
+      },
+      "pakistan": {
+        "macro_f1": 0.09978260869565217,
+        "accuracy": 0.04929577464788732,
+        "correct": 7,
+        "sample_count": 142,
+        "wrong_crop": 114,
+        "right_crop_wrong_condition": 21,
+        "blight": [
+          {
+            "true": "tomato__early_blight",
+            "opposite_label": "tomato__late_blight",
+            "opposite_count": 3,
+            "total": 33,
+            "correct": 4,
+            "wrong_crop": 25,
+            "right_crop_wrong_condition": 4
+          },
+          {
+            "true": "tomato__late_blight",
+            "opposite_label": "tomato__early_blight",
+            "opposite_count": 2,
+            "total": 7,
+            "correct": 1,
+            "wrong_crop": 4,
+            "right_crop_wrong_condition": 2
+          }
+        ],
+        "largest_errors": [
+          {
+            "truth": "tomato__healthy",
+            "prediction": "cucumber__bacterial_wilt",
+            "count": 17
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "potato__early_blight",
+            "count": 8
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "squash__powdery_mildew",
+            "count": 7
+          },
+          {
+            "truth": "tomato__yellow_leaf_curl_virus",
+            "prediction": "zucchini__yellow_mosaic_virus",
+            "count": 6
+          },
+          {
+            "truth": "tomato__yellow_leaf_curl_virus",
+            "prediction": "tomato__early_blight",
+            "count": 6
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "cucumber__bacterial_wilt",
+            "count": 6
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "banana__bunchy_top",
+            "count": 5
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "corn__smut",
+            "count": 5
+          },
+          {
+            "truth": "tomato__yellow_leaf_curl_virus",
+            "prediction": "wheat__powdery_mildew",
+            "count": 3
+          },
+          {
+            "truth": "tomato__yellow_leaf_curl_virus",
+            "prediction": "garlic__leaf_blight",
+            "count": 3
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "zucchini__yellow_mosaic_virus",
+            "count": 3
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "grape__downy_mildew",
+            "count": 3
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "tomato__late_blight",
+            "count": 3
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "grape__downy_mildew",
+            "count": 3
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "garlic__leaf_blight",
+            "count": 3
+          }
+        ],
+        "support": {
+          "tomato__early_blight": 33,
+          "tomato__healthy": 62,
+          "tomato__late_blight": 7,
+          "tomato__leaf_mold": 11,
+          "tomato__yellow_leaf_curl_virus": 29
+        }
+      },
+      "pretoria": {
+        "macro_f1": 0.19806201550387598,
+        "accuracy": 0.22340425531914893,
+        "correct": 21,
+        "sample_count": 94,
+        "wrong_crop": 22,
+        "right_crop_wrong_condition": 51,
+        "blight": [],
+        "largest_errors": [
+          {
+            "truth": "corn__healthy",
+            "prediction": "corn__northern_leaf_blight",
+            "count": 9
+          },
+          {
+            "truth": "corn__gray_leaf_spot",
+            "prediction": "corn__northern_leaf_blight",
+            "count": 9
+          },
+          {
+            "truth": "corn__common_rust",
+            "prediction": "corn__gray_leaf_spot",
+            "count": 9
+          },
+          {
+            "truth": "corn__common_rust",
+            "prediction": "corn__rust",
+            "count": 8
+          },
+          {
+            "truth": "corn__common_rust",
+            "prediction": "corn__northern_leaf_blight",
+            "count": 6
+          },
+          {
+            "truth": "corn__northern_leaf_blight",
+            "prediction": "wheat__septoria_blotch",
+            "count": 3
+          },
+          {
+            "truth": "corn__healthy",
+            "prediction": "sugarcane__healthy",
+            "count": 3
+          },
+          {
+            "truth": "corn__healthy",
+            "prediction": "banana__cordana_leaf_spot",
+            "count": 3
+          },
+          {
+            "truth": "corn__gray_leaf_spot",
+            "prediction": "corn__rust",
+            "count": 3
+          },
+          {
+            "truth": "corn__healthy",
+            "prediction": "corn__rust",
+            "count": 2
+          },
+          {
+            "truth": "corn__healthy",
+            "prediction": "corn__gray_leaf_spot",
+            "count": 2
+          },
+          {
+            "truth": "corn__northern_leaf_blight",
+            "prediction": "sugarcane__red_rot",
+            "count": 1
+          },
+          {
+            "truth": "corn__northern_leaf_blight",
+            "prediction": "sugarcane__healthy",
+            "count": 1
+          },
+          {
+            "truth": "corn__northern_leaf_blight",
+            "prediction": "rice__blast",
+            "count": 1
+          },
+          {
+            "truth": "corn__northern_leaf_blight",
+            "prediction": "garlic__rust",
+            "count": 1
+          }
+        ],
+        "support": {
+          "corn__common_rust": 24,
+          "corn__gray_leaf_spot": 24,
+          "corn__healthy": 24,
+          "corn__northern_leaf_blight": 22
+        }
+      }
+    },
+    "spatial_probe": {
+      "sheikh": {
+        "macro_f1": 0.017543859649122806,
+        "accuracy": 0.004291845493562232,
+        "correct": 1,
+        "sample_count": 233,
+        "wrong_crop": 210,
+        "right_crop_wrong_condition": 22,
+        "blight": [
+          {
+            "true": "tomato__early_blight",
+            "opposite_label": "tomato__late_blight",
+            "opposite_count": 0,
+            "total": 56,
+            "correct": 1,
+            "wrong_crop": 44,
+            "right_crop_wrong_condition": 11
+          }
+        ],
+        "largest_errors": [
+          {
+            "truth": "tomato__healthy",
+            "prediction": "soybean__downy_mildew",
+            "count": 61
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "soybean__healthy",
+            "count": 31
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "bell_pepper__bacterial_spot",
+            "count": 20
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "apple__healthy",
+            "count": 19
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "soybean__bacterial_blight",
+            "count": 15
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "soybean__mosaic_virus",
+            "count": 10
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "bell_pepper__bacterial_spot",
+            "count": 10
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "tomato__late_blight",
+            "count": 9
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "tomato__bacterial_spot",
+            "count": 8
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "rice__leaf_blast",
+            "count": 8
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "potato__late_blight",
+            "count": 6
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "cherry__healthy",
+            "count": 5
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "rice__brown_spot",
+            "count": 4
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "tomato__septoria_leaf_spot",
+            "count": 3
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "cucumber__angular_leaf_spot",
+            "count": 2
+          }
+        ],
+        "support": {
+          "tomato__early_blight": 56,
+          "tomato__healthy": 177
+        }
+      },
+      "mduma": {
+        "macro_f1": 0.06092972448112635,
+        "accuracy": 0.04265402843601896,
+        "correct": 9,
+        "sample_count": 211,
+        "wrong_crop": 188,
+        "right_crop_wrong_condition": 14,
+        "blight": [
+          {
+            "true": "potato__early_blight",
+            "opposite_label": "potato__late_blight",
+            "opposite_count": 0,
+            "total": 61,
+            "correct": 2,
+            "wrong_crop": 59,
+            "right_crop_wrong_condition": 0
+          },
+          {
+            "true": "potato__late_blight",
+            "opposite_label": "potato__early_blight",
+            "opposite_count": 14,
+            "total": 100,
+            "correct": 7,
+            "wrong_crop": 79,
+            "right_crop_wrong_condition": 14
+          }
+        ],
+        "largest_errors": [
+          {
+            "truth": "potato__early_blight",
+            "prediction": "tomato__septoria_leaf_spot",
+            "count": 34
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "grape__leaf_spot",
+            "count": 17
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "tomato__late_blight",
+            "count": 16
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "potato__early_blight",
+            "count": 14
+          },
+          {
+            "truth": "potato__healthy",
+            "prediction": "cucumber__powdery_mildew",
+            "count": 14
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "eggplant__cercospora_leaf_spot",
+            "count": 11
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "tobacco__brown_spot",
+            "count": 8
+          },
+          {
+            "truth": "potato__early_blight",
+            "prediction": "apple__scab",
+            "count": 8
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "apple__rust",
+            "count": 6
+          },
+          {
+            "truth": "potato__healthy",
+            "prediction": "soybean__downy_mildew",
+            "count": 6
+          },
+          {
+            "truth": "potato__healthy",
+            "prediction": "tobacco__mosaic_virus",
+            "count": 4
+          },
+          {
+            "truth": "potato__healthy",
+            "prediction": "lettuce__mosaic_virus",
+            "count": 4
+          },
+          {
+            "truth": "potato__early_blight",
+            "prediction": "basil__downy_mildew",
+            "count": 4
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "grape__downy_mildew",
+            "count": 3
+          },
+          {
+            "truth": "potato__late_blight",
+            "prediction": "bean__rust",
+            "count": 3
+          }
+        ],
+        "support": {
+          "potato__early_blight": 61,
+          "potato__healthy": 50,
+          "potato__late_blight": 100
+        }
+      },
+      "pakistan": {
+        "macro_f1": 0.06222910216718267,
+        "accuracy": 0.056338028169014086,
+        "correct": 8,
+        "sample_count": 142,
+        "wrong_crop": 94,
+        "right_crop_wrong_condition": 40,
+        "blight": [
+          {
+            "true": "tomato__early_blight",
+            "opposite_label": "tomato__late_blight",
+            "opposite_count": 5,
+            "total": 33,
+            "correct": 7,
+            "wrong_crop": 21,
+            "right_crop_wrong_condition": 5
+          },
+          {
+            "true": "tomato__late_blight",
+            "opposite_label": "tomato__early_blight",
+            "opposite_count": 1,
+            "total": 7,
+            "correct": 1,
+            "wrong_crop": 5,
+            "right_crop_wrong_condition": 1
+          }
+        ],
+        "largest_errors": [
+          {
+            "truth": "tomato__healthy",
+            "prediction": "tomato__early_blight",
+            "count": 14
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "potato__early_blight",
+            "count": 11
+          },
+          {
+            "truth": "tomato__yellow_leaf_curl_virus",
+            "prediction": "tomato__early_blight",
+            "count": 10
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "cucumber__bacterial_wilt",
+            "count": 9
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "grape__downy_mildew",
+            "count": 6
+          },
+          {
+            "truth": "tomato__yellow_leaf_curl_virus",
+            "prediction": "zucchini__yellow_mosaic_virus",
+            "count": 5
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "squash__powdery_mildew",
+            "count": 5
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "banana__bunchy_top",
+            "count": 5
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "tomato__late_blight",
+            "count": 5
+          },
+          {
+            "truth": "tomato__yellow_leaf_curl_virus",
+            "prediction": "wheat__powdery_mildew",
+            "count": 4
+          },
+          {
+            "truth": "tomato__yellow_leaf_curl_virus",
+            "prediction": "tomato__late_blight",
+            "count": 4
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "zucchini__yellow_mosaic_virus",
+            "count": 4
+          },
+          {
+            "truth": "tomato__healthy",
+            "prediction": "potato__late_blight",
+            "count": 4
+          },
+          {
+            "truth": "tomato__early_blight",
+            "prediction": "corn__smut",
+            "count": 4
+          },
+          {
+            "truth": "tomato__leaf_mold",
+            "prediction": "tomato__early_blight",
+            "count": 3
+          }
+        ],
+        "support": {
+          "tomato__early_blight": 33,
+          "tomato__healthy": 62,
+          "tomato__late_blight": 7,
+          "tomato__leaf_mold": 11,
+          "tomato__yellow_leaf_curl_virus": 29
+        }
+      },
+      "pretoria": {
+        "macro_f1": 0.1614565441429062,
+        "accuracy": 0.2127659574468085,
+        "correct": 20,
+        "sample_count": 94,
+        "wrong_crop": 14,
+        "right_crop_wrong_condition": 60,
+        "blight": [],
+        "largest_errors": [
+          {
+            "truth": "corn__gray_leaf_spot",
+            "prediction": "corn__northern_leaf_blight",
+            "count": 13
+          },
+          {
+            "truth": "corn__healthy",
+            "prediction": "corn__northern_leaf_blight",
+            "count": 11
+          },
+          {
+            "truth": "corn__common_rust",
+            "prediction": "corn__northern_leaf_blight",
+            "count": 9
+          },
+          {
+            "truth": "corn__common_rust",
+            "prediction": "corn__gray_leaf_spot",
+            "count": 8
+          },
+          {
+            "truth": "corn__common_rust",
+            "prediction": "corn__rust",
+            "count": 6
+          },
+          {
+            "truth": "corn__healthy",
+            "prediction": "sugarcane__healthy",
+            "count": 3
+          },
+          {
+            "truth": "corn__healthy",
+            "prediction": "corn__rust",
+            "count": 3
+          },
+          {
+            "truth": "corn__healthy",
+            "prediction": "corn__gray_leaf_spot",
+            "count": 3
+          },
+          {
+            "truth": "corn__northern_leaf_blight",
+            "prediction": "wheat__septoria_blotch",
+            "count": 2
+          },
+          {
+            "truth": "corn__northern_leaf_blight",
+            "prediction": "corn__gray_leaf_spot",
+            "count": 2
+          },
+          {
+            "truth": "corn__gray_leaf_spot",
+            "prediction": "corn__rust",
+            "count": 2
+          },
+          {
+            "truth": "corn__gray_leaf_spot",
+            "prediction": "corn__common_rust",
+            "count": 2
+          },
+          {
+            "truth": "corn__northern_leaf_blight",
+            "prediction": "rice__blast",
+            "count": 1
+          },
+          {
+            "truth": "corn__northern_leaf_blight",
+            "prediction": "garlic__rust",
+            "count": 1
+          },
+          {
+            "truth": "corn__healthy",
+            "prediction": "wheat__septoria_blotch",
+            "count": 1
+          }
+        ],
+        "support": {
+          "corn__common_rust": 24,
+          "corn__gray_leaf_spot": 24,
+          "corn__healthy": 24,
+          "corn__northern_leaf_blight": 22
+        }
+      }
+    }
+  },
+  "source_gains": {
+    "sheikh": 0.017543859649122806,
+    "mduma": 0.01066517421657609,
+    "pakistan": -0.0375535065284695,
+    "pretoria": -0.03660547136096978
+  },
+  "mean_field_macro_f1_gain": -0.011487486005935096,
+  "passed_probe": false,
+  "test_opened": false,
+  "deployment_changed": false,
+  "device": "mps"
+}

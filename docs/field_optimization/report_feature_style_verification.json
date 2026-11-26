@@ -1,0 +1,19 @@
+{
+  "report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev8.docx",
+  "sha256": "924b8f6f2f27bfd409513bc4e618a4414cc5071576bbc8d922a24c10a2fed9b0",
+  "pages": 10,
+  "body_font_pt": 11,
+  "normal_line_spacing": 1.15,
+  "references_line_spacing": 1.0,
+  "margin_inches": 1,
+  "page_numbers": "bottom right",
+  "visual_check": "Rendered pages 1\u20138 are pixel-identical to Rev7. Pages 9\u201310 were visually inspected.",
+  "frozen_submission_replaced": false,
+  "checks": {
+    "feature_style_study.json": "68466ec8dfc1db7c3749bea542a93d98149953f6512b4bc12baf6f4b9d06955a",
+    "spatial_pool_probe.json": "7e89ae873b71c2ab627bf008f4b00f6f0f070838d1d57a0d67ecde5e60cdc57e",
+    "report_seasonal_verification.json": "99485da62312797736adbf369b18dc2d4a060213a802b29070a1a9f738b3b7b8"
+  },
+  "pipeline_tests": 11,
+  "previous_website_tests": 19
+}

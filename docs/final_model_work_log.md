@@ -684,3 +684,20 @@ paired evidence. See nov22_resume_record.json and the selection plan.
 - Added the result to the editable ten-page report and verified its
   rendered pages. [Evidence](field_optimization/corn_seasonal_study.json) ·
   [Report verification](field_optimization/report_seasonal_verification.json)
+
+### Feature style and spatial response probes
+
+- Ran the registered full-label MixStyle-inspired comparison. Each scratch
+  run completed eight epochs and reloaded. The equal-source validation
+  gain was 0.002270, short of 0.020. Pretoria fell by 0.086244 macro-F1.
+  Kept the deployed checkpoint.
+- A fixed, mass-preserving generalized-mean probe reproduced the original
+  field scores and yielded a −0.011487 mean change. It provided no support
+  for replacing deployed pooling or advancing this frozen probe.
+- Replayed high-score corn errors through the packaged upload endpoint.
+  All 177 scores matched standalone inference. On the 94-photo field
+  cohort, the deployed threshold accepted 42 and got nine of them right.
+- Reconstructed and reserved 114 original-source Colombian coffee photos
+  for a future independent comparison. No inference used the cohort.
+  [Field experiments](field_optimization/feature_style_study.md) ·
+  [Coffee data release](field_optimization/coffee_holdout.md)

@@ -38,3 +38,21 @@ conclusions about other ways of mixing features or optimizing longer.
 
 [Exact scores, history and fingerprints](feature_style_study.json).
 Held-out and reserved confirmation images were outside the comparison.
+
+## Spatial pooling probe
+
+A second [registered diagnostic](../../configs/leafcheck_spatial_pool_probe_v1.json)
+gave sparse terminal feature responses more weight in the deployed
+CNN's pooling step. It used fixed order-2 generalized-mean pooling and
+preserved each image's pooled activation mass before the original head.
+The adaptation comes from the [generalized-mean pooling paper](https://arxiv.org/abs/1711.02512).
+Both arms used the original weights and transformed each image eight ways.
+
+The original scores reproduced on all four sources. The mean field
+macro-F1 fell by 0.011487 with the pooled feature change. Sheikh and Mduma
+improved by 0.017544 and 0.010665, while Pakistan and Pretoria fell by
+0.037554 and 0.036605. This frozen diagnostic missed the advance threshold
+and the source bounds. It supplies weak evidence for this change to the
+trained classifier's pooling. It cannot isolate the effects of learning
+a different pooling operation from scratch.
+[Exact diagnostic results](spatial_pool_probe.json)

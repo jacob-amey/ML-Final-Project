@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-26T05:27:02.042571+00:00",
+  "updated_utc": "2026-11-26T05:38:35.290020+00:00",
   "frozen_model": "artifacts/leafcheck177-v1/model.pt",
   "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
   "deployment_decision": "Retain the frozen 177-label full-image checkpoint and verified optional potato context. Use the app with the crop coverage and score explanation.",
@@ -12,11 +12,13 @@
     "runs/field_v10/pretoria-baseline",
     "runs/field_v10/corn-gate-check",
     "runs/field_v10/corn-seasonal-seed434",
-    "runs/field_v11/control"
+    "runs/field_v11/control",
+    "runs/field_v11/feature_style",
+    "runs/field_v12/spatial-pool"
   ],
-  "active_training": true,
-  "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev7.docx",
-  "report_sha256": "19a62459a9213f1088831e1797752bd43bfa9c38200bb498c92d54aaa5688e71",
+  "active_training": false,
+  "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev8.docx",
+  "report_sha256": "924b8f6f2f27bfd409513bc4e618a4414cc5071576bbc8d922a24c10a2fed9b0",
   "protected_confirmations": [
     "course holdout",
     "PlantDoc",
@@ -29,8 +31,8 @@
     "Hossain",
     "CoffeeLeaf-CO v2"
   ],
-  "best_next_question": "Can mixable early CNN feature statistics improve joint classification across the four development sources?",
-  "next_action": "Monitor the feature-style arm, compare both verified checkpoints, and decide under the registered field and master limits.",
+  "best_next_question": "How does the app communicate coverage for bean conditions excluded from the 177 labels?",
+  "next_action": "Screen the fixed Tanzania bean preflight, verify the condition lookup in the packaged upload app, and record the evidence.",
   "latest_demo": "artifacts/LeafCheck-field-guidance-demo.zip",
   "demo_sha256": "000443dad48f0740e5f015282dd43c5d97f7d6e8967e3d883b484a59bc3091cc",
   "latest_potato_result": {
@@ -47,15 +49,6 @@
     "automatic_wrong_crop": 22,
     "automatic_correct_crop_wrong_condition": 51
   },
-  "active_run": {
-    "path": "runs/field_v11/feature_style",
-    "log": "runs/field_v11/feature_style.log",
-    "protocol": "configs/leafcheck_feature_style_v1.json",
-    "resume_verified_at": {
-      "epoch": 1,
-      "completed_batches": 3
-    }
-  },
   "latest_seasonal_result": {
     "control_field_macro_f1": 0.23812643301670489,
     "treatment_field_macro_f1": 0.22141938729874772,
@@ -67,5 +60,16 @@
     "fingerprint": "b8b4288addd3421e52ab1e66edcfab01a601d96f7fd36382c669ac1213f11eef",
     "opened": false,
     "evidence": "docs/field_optimization/coffee_holdout.md"
+  },
+  "latest_feature_style_result": {
+    "validation_macro_f1_delta": -0.003287563341,
+    "field_macro_f1_delta": 0.002270356829,
+    "eligible": false,
+    "evidence": "docs/field_optimization/feature_style_study.json"
+  },
+  "latest_spatial_pool_result": {
+    "field_macro_f1_delta": -0.011487486005935096,
+    "eligible": false,
+    "evidence": "docs/field_optimization/spatial_pool_probe.json"
   }
 }
