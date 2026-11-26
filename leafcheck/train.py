@@ -43,6 +43,12 @@ def restore_rng(state):
         torch.mps.set_rng_state(state["mps"])
 
 
+def crop_marginal_loss(logits, targets, same_crop):
+    """Negative log probability of the target crop under the 177-label distribution."""
+    same_crop_logits = logits.masked_fill(~same_crop[targets], -torch.inf)
+    return torch.logsumexp(logits, dim=1) - torch.logsumexp(same_crop_logits, dim=1)
+
+
 @torch.inference_mode()
 def evaluate(model, cache, spec, device, classes, batch_size=256, keep_predictions=False):
     model.eval()
@@ -99,6 +105,13 @@ def train(config, run_dir, resume=False, max_updates=None):
     weights /= np.sum(weights * counts) / len(train_data)
     loss_fn = nn.CrossEntropyLoss(weight=torch.tensor(weights, dtype=torch.float32, device=device),
                                   reduction="none", label_smoothing=config.get("label_smoothing", 0.0))
+    crop_loss_weight = config.get("crop_loss_weight", 0.0)
+    if not math.isfinite(crop_loss_weight) or crop_loss_weight < 0:
+        raise ValueError("Crop loss weight must be finite and nonnegative")
+    same_crop = None
+    if crop_loss_weight:
+        crops = np.array([label.split("__", 1)[0] for label in classes])
+        same_crop = torch.from_numpy(crops[:, None] == crops).to(device)
     history = []; best = None; epoch = 1; next_batch = 0
     matrix = np.zeros((177, 177), np.int64); loss_sum = 0.0; seen = 0
     early_score = -1.0; meaningful_epoch = 0; total_steps = 0; accumulated_seconds = 0.0; epoch_elapsed = 0.0
@@ -155,7 +168,10 @@ def train(config, run_dir, resume=False, max_updates=None):
             inputs = prepare_batch(raw, spec, device, config["augmentation"])
             optimizer.zero_grad(set_to_none=True)
             logits = model(inputs)
-            loss = loss_fn(logits, labels.to(device)).mean()
+            targets = labels.to(device)
+            loss = loss_fn(logits, targets).mean()
+            if same_crop is not None:
+                loss = loss + crop_loss_weight * crop_marginal_loss(logits, targets, same_crop).mean()
             if not torch.isfinite(loss).item():
                 raise FloatingPointError("Nonfinite training loss; last valid checkpoint is preserved")
             loss.backward()

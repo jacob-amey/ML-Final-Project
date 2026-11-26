@@ -1,0 +1,17 @@
+{
+  "recipe": "residual177_128_color.json",
+  "reference_checkpoint": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "dataset": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "hypothesis": "Joint training can reduce wrong-crop predictions by rewarding the total probability assigned to the labeled crop alongside the ordinary fine-label cross-entropy.",
+  "arms": {"control": 0.0, "crop_loss": 0.5},
+  "epochs": 6,
+  "seed": 434,
+  "selection": "Take each arm's best master validation checkpoint under the existing single-view macro-F1 tie rules. Rescore it with the same D4 policy on master validation and the grouped Sheikh, Mduma and Pakistan development data. Use the mean of the represented joint-label field macro-F1 scores for the screening decision.",
+  "min_field_gain_vs_control": 0.02,
+  "max_master_macro_f1_drop_vs_control": 0.008,
+  "max_master_accuracy_drop_vs_control": 0.005,
+  "max_field_source_macro_f1_drop_vs_control": 0.02,
+  "min_field_wrong_crop_rate_reduction": 0.03,
+  "purpose": "A single-seed, full-training-split mechanistic screen. If it passes, repeat the comparison and investigate full-budget training. A pilot cannot replace the deployed model. Keep all course and follow-up test predictions sealed from this work.",
+  "method_reference": "Bertinetto et al., Making Better Mistakes: Leveraging Class Hierarchies with Deep Networks, CVPR 2020. Competitive probability within the original 177 outputs means no extra classifier head and no inference code changes."
+}
