@@ -1,0 +1,13 @@
+{
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "hypothesis": "Disagreement among already computed rotated and reflected views ranks unreliable uploads better than the mean distribution's top score.",
+  "development_supported": ["sheikh", "mduma", "pakistan", "pretoria"],
+  "development_unsupported": ["nonplant", "unsupported_plant"],
+  "reference_score": "Maximum averaged probability",
+  "primary_signal": "Negative Jensen-Shannon disagreement across eight D4 views",
+  "secondary_signal": "Fraction of eight views whose top label agrees with the averaged top label",
+  "advance": {"minimum_auc_gain_in_each_unsupported_group": 0.02, "minimum_auc_in_each_unsupported_group": 0.65, "minimum_pooled_correctness_auc_gain": 0.02},
+  "evaluation": "Macro-average supported-vs-unsupported AUROC across supported sources for each unsupported group. Compare pooled and source-level AUROC for predicting correctness. Report pair counts and no source-level correctness AUROC when a class is missing. Preserve the deployed labels and scores.",
+  "decision": "No fitting, calibration, threshold change, training or promotion. Advance only if the primary disagreement score meets all listed guards. Independent confirmation is mandatory before any app policy change.",
+  "reference": "Shanmugam et al., Better Aggregation in Test-Time Augmentation, ICCV 2021, https://openaccess.thecvf.com/content/ICCV2021/html/Shanmugam_Better_Aggregation_in_Test-Time_Augmentation_ICCV_2021_paper.html"
+}
