@@ -725,3 +725,15 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   overlaps. Short capture blocks and shared imagery limited the coverage.
   [Bean study](field_optimization/bean_rust_study.md) ·
   [Brassica intake](field_optimization/brassica_intake.md)
+
+### Original rice field photographs
+
+- Restored 60 date-limited unmarked images from the publisher-pinned
+  RiceLeafDiseaseBD v3 archive. All passed the master and PlantDoc overlap
+  screen. The other rice archive had a catalog count discrepancy and just
+  three filename days. It stays outside any assigned split.
+- The frozen automatic model scored 2/60, with 57 wrong-crop outputs.
+  Restricting scores to rice offline yielded 15/60, including zero correct
+  healthy photos. The existing blast labels remain intact and the ambiguous
+  source label is scored only as a diagnostic family.
+  [Rice source and metrics](field_optimization/rice_field_intake.md)

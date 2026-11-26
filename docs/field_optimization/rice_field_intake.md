@@ -11,3 +11,23 @@ The separate [RiceLeafBD v1 archive](https://data.mendeley.com/datasets/sjkptpgv
 For the v3 diagnostic, compare the frozen automatic top label with the highest-scoring rice label when the crop is given. This replay uses the exact three supported condition labels and accepts either leaf-oriented blast label only for the blast family. Report correct/total by condition, wrong-crop counts, date-group sensitivity, and exact top labels including the two blast alternatives. This diagnostic can show which type of error is common. It provides no promotion or calibration evidence and has no effect on the deployment or course split.
 
 [Intake and publisher hashes](../../data/manifests/leafcheck_rice_sources_v1.json) · [Fixed screened membership](../../data/manifests/leafcheck_rice_field_preflight.json).
+
+## Frozen diagnostic results
+
+| Publisher condition | Automatic correct | Automatic wrong crop | Correct given rice |
+| --- | ---: | ---: | ---: |
+| Healthy | 0/15 | 15/15 | 0/15 |
+| Brown spot | 0/15 | 14/15 | 1/15 |
+| Blast family | 1/15 | 14/15 | 5/15 |
+| Sheath blight | 1/15 | 14/15 | 9/15 |
+| Total | 2/60 | 57/60 | 15/60 |
+
+The highest rice score improved leaf-family and sheath-blight predictions. Healthy recall remained zero and the majority of the brown-spot samples still became generic blast. All five correct blast-family conditional predictions used `rice__blast`; `rice__leaf_blast` received none. The original rice cases came from one publisher and can include related field specimens. This study supports separating crop errors from condition errors and collecting representative photos of the exact healthy and brown-spot classes. It does not endorse a new known-rice upload choice.
+
+With the original bytes restored, run:
+
+```sh
+.venv/bin/python -m leafcheck.rice_field_diagnostic --output runs/field_v12/rice-diagnostic-repeat
+```
+
+[Metrics and captured dates](rice_field_diagnostic.json) · [Original top labels and scores](rice_field_predictions.csv).

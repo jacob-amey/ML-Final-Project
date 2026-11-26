@@ -1,0 +1,288 @@
+{
+  "measured_utc": "2026-11-26T06:06:42.028704+00:00",
+  "sample_sha256": "57072ecb6eaeb2206777f882eab2bf146bbc669327287f08b829a8d827ffbc7a",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "predictions_sha256": "bd42609850805c28b7e2899bd433117661fe95744c376e061db668cf746fb562",
+  "automatically_eligible_classes": 177,
+  "rice_classes": [
+    "rice__blast",
+    "rice__brown_spot",
+    "rice__healthy",
+    "rice__hispa",
+    "rice__leaf_blast",
+    "rice__neck_blast",
+    "rice__sheath_blight"
+  ],
+  "blast_family": [
+    "rice__blast",
+    "rice__leaf_blast"
+  ],
+  "by_condition": {
+    "Healthy": {
+      "support": 15,
+      "automatic_correct": 0,
+      "automatic_wrong_crop": 15,
+      "given_rice_correct": 0,
+      "automatic_labels": {
+        "soybean__diabrotica_speciosa": 1,
+        "wheat__bacterial_leaf_streak_black_chaff": 5,
+        "garlic__leaf_blight": 1,
+        "sugarcane__healthy": 2,
+        "sugarcane__red_rot": 4,
+        "soybean__caterpillar": 1,
+        "cassava__green_mottle": 1
+      },
+      "given_rice_labels": {
+        "rice__blast": 10,
+        "rice__sheath_blight": 4,
+        "rice__neck_blast": 1
+      }
+    },
+    "Brown spot": {
+      "support": 15,
+      "automatic_correct": 0,
+      "automatic_wrong_crop": 14,
+      "given_rice_correct": 1,
+      "automatic_labels": {
+        "soybean__caterpillar": 2,
+        "sugarcane__red_rot": 3,
+        "sugarcane__rust": 1,
+        "cassava__bacterial_blight": 1,
+        "wheat__brown_rust": 2,
+        "soybean__diabrotica_speciosa": 2,
+        "wheat__septoria_blotch": 1,
+        "rice__blast": 1,
+        "wheat__powdery_mildew": 1,
+        "wheat__bacterial_leaf_streak_black_chaff": 1
+      },
+      "given_rice_labels": {
+        "rice__blast": 13,
+        "rice__brown_spot": 1,
+        "rice__sheath_blight": 1
+      }
+    },
+    "Blast": {
+      "support": 15,
+      "automatic_correct": 1,
+      "automatic_wrong_crop": 14,
+      "given_rice_correct": 5,
+      "automatic_labels": {
+        "wheat__yellow_rust": 1,
+        "wheat__bacterial_leaf_streak_black_chaff": 5,
+        "sugarcane__red_rot": 3,
+        "wheat__septoria_blotch": 1,
+        "apple__scab": 1,
+        "sugarcane__rust": 2,
+        "garlic__leaf_blight": 1,
+        "rice__blast": 1
+      },
+      "given_rice_labels": {
+        "rice__blast": 5,
+        "rice__sheath_blight": 9,
+        "rice__brown_spot": 1
+      }
+    },
+    "Sheath blight": {
+      "support": 15,
+      "automatic_correct": 1,
+      "automatic_wrong_crop": 14,
+      "given_rice_correct": 9,
+      "automatic_labels": {
+        "sugarcane__red_rot": 2,
+        "wheat__bacterial_leaf_streak_black_chaff": 3,
+        "rice__sheath_blight": 1,
+        "soybean__diabrotica_speciosa": 3,
+        "sugarcane__healthy": 1,
+        "wheat__powdery_mildew": 3,
+        "corn__northern_leaf_blight": 1,
+        "corn__healthy": 1
+      },
+      "given_rice_labels": {
+        "rice__sheath_blight": 9,
+        "rice__blast": 4,
+        "rice__neck_blast": 2
+      }
+    }
+  },
+  "by_filename_day": {
+    "2025-04-01": {
+      "support": 1,
+      "automatic_correct": 0,
+      "automatic_wrong_crop": 1,
+      "given_rice_correct": 0,
+      "automatic_labels": {
+        "wheat__powdery_mildew": 1
+      },
+      "given_rice_labels": {
+        "rice__blast": 1
+      }
+    },
+    "2025-04-02": {
+      "support": 1,
+      "automatic_correct": 0,
+      "automatic_wrong_crop": 1,
+      "given_rice_correct": 0,
+      "automatic_labels": {
+        "sugarcane__healthy": 1
+      },
+      "given_rice_labels": {
+        "rice__blast": 1
+      }
+    },
+    "2025-04-23": {
+      "support": 10,
+      "automatic_correct": 0,
+      "automatic_wrong_crop": 10,
+      "given_rice_correct": 2,
+      "automatic_labels": {
+        "soybean__diabrotica_speciosa": 2,
+        "wheat__bacterial_leaf_streak_black_chaff": 4,
+        "soybean__caterpillar": 1,
+        "cassava__green_mottle": 1,
+        "wheat__powdery_mildew": 2
+      },
+      "given_rice_labels": {
+        "rice__blast": 3,
+        "rice__sheath_blight": 5,
+        "rice__neck_blast": 2
+      }
+    },
+    "2025-04-25": {
+      "support": 8,
+      "automatic_correct": 1,
+      "automatic_wrong_crop": 7,
+      "given_rice_correct": 4,
+      "automatic_labels": {
+        "soybean__diabrotica_speciosa": 4,
+        "wheat__bacterial_leaf_streak_black_chaff": 2,
+        "wheat__yellow_rust": 1,
+        "rice__blast": 1
+      },
+      "given_rice_labels": {
+        "rice__blast": 6,
+        "rice__sheath_blight": 2
+      }
+    },
+    "2025-04-26": {
+      "support": 8,
+      "automatic_correct": 0,
+      "automatic_wrong_crop": 8,
+      "given_rice_correct": 2,
+      "automatic_labels": {
+        "garlic__leaf_blight": 1,
+        "sugarcane__red_rot": 3,
+        "wheat__bacterial_leaf_streak_black_chaff": 1,
+        "apple__scab": 1,
+        "sugarcane__rust": 1,
+        "corn__healthy": 1
+      },
+      "given_rice_labels": {
+        "rice__sheath_blight": 3,
+        "rice__blast": 5
+      }
+    },
+    "2025-04-29": {
+      "support": 10,
+      "automatic_correct": 0,
+      "automatic_wrong_crop": 10,
+      "given_rice_correct": 1,
+      "automatic_labels": {
+        "sugarcane__red_rot": 5,
+        "wheat__bacterial_leaf_streak_black_chaff": 2,
+        "sugarcane__rust": 2,
+        "wheat__powdery_mildew": 1
+      },
+      "given_rice_labels": {
+        "rice__blast": 4,
+        "rice__sheath_blight": 5,
+        "rice__neck_blast": 1
+      }
+    },
+    "2025-04-30": {
+      "support": 4,
+      "automatic_correct": 1,
+      "automatic_wrong_crop": 3,
+      "given_rice_correct": 2,
+      "automatic_labels": {
+        "sugarcane__healthy": 1,
+        "sugarcane__red_rot": 1,
+        "rice__sheath_blight": 1,
+        "corn__northern_leaf_blight": 1
+      },
+      "given_rice_labels": {
+        "rice__blast": 2,
+        "rice__sheath_blight": 2
+      }
+    },
+    "2025-05-02": {
+      "support": 8,
+      "automatic_correct": 0,
+      "automatic_wrong_crop": 8,
+      "given_rice_correct": 2,
+      "automatic_labels": {
+        "soybean__caterpillar": 2,
+        "wheat__brown_rust": 1,
+        "wheat__septoria_blotch": 2,
+        "wheat__bacterial_leaf_streak_black_chaff": 2,
+        "garlic__leaf_blight": 1
+      },
+      "given_rice_labels": {
+        "rice__blast": 4,
+        "rice__brown_spot": 2,
+        "rice__sheath_blight": 2
+      }
+    },
+    "2025-05-03": {
+      "support": 10,
+      "automatic_correct": 0,
+      "automatic_wrong_crop": 9,
+      "given_rice_correct": 2,
+      "automatic_labels": {
+        "wheat__bacterial_leaf_streak_black_chaff": 3,
+        "sugarcane__red_rot": 3,
+        "cassava__bacterial_blight": 1,
+        "wheat__brown_rust": 1,
+        "rice__blast": 1,
+        "sugarcane__healthy": 1
+      },
+      "given_rice_labels": {
+        "rice__sheath_blight": 4,
+        "rice__blast": 6
+      }
+    }
+  },
+  "total": {
+    "support": 60,
+    "automatic_correct": 2,
+    "automatic_wrong_crop": 57,
+    "given_rice_correct": 15,
+    "automatic_labels": {
+      "soybean__diabrotica_speciosa": 6,
+      "wheat__bacterial_leaf_streak_black_chaff": 14,
+      "garlic__leaf_blight": 2,
+      "sugarcane__healthy": 3,
+      "sugarcane__red_rot": 12,
+      "soybean__caterpillar": 3,
+      "cassava__green_mottle": 1,
+      "sugarcane__rust": 3,
+      "cassava__bacterial_blight": 1,
+      "wheat__brown_rust": 2,
+      "wheat__septoria_blotch": 2,
+      "rice__blast": 2,
+      "wheat__powdery_mildew": 4,
+      "wheat__yellow_rust": 1,
+      "apple__scab": 1,
+      "rice__sheath_blight": 1,
+      "corn__northern_leaf_blight": 1,
+      "corn__healthy": 1
+    },
+    "given_rice_labels": {
+      "rice__blast": 32,
+      "rice__sheath_blight": 23,
+      "rice__neck_blast": 3,
+      "rice__brown_spot": 2
+    }
+  },
+  "course_test_opened": false,
+  "deployment_changed": false
+}
