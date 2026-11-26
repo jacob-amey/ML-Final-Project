@@ -1,0 +1,65 @@
+{
+  "archive_record_sha256": "ed572df7c27b9e7fc40757b6285f1788f1f1a9ab1f54c2890969bec32d722efc",
+  "nested_originals_sha256": "ae89e9fb1dc0715383ba0b3e318e5e2509ec842d354480c0e2854ffd99a46350",
+  "manifest_sha256": "504458171c95c8f84595cbfc4ecdd59d2e8dc5bfefe42295aed0a772e4756393",
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "candidate_count": 665,
+  "visual_distance": 4,
+  "by_source_and_label": {
+    "ayawli_cabbage/cabbage__black_rot": {
+      "unassigned": 26,
+      "new_cluster_repeated_view": 10,
+      "new_cluster_label_conflict": 1
+    },
+    "ayawli_cabbage/unsupported:Cabbage - Healthy": {
+      "unassigned": 63,
+      "new_cluster_repeated_view": 5
+    },
+    "ayawli_cabbage/cabbage__downy_mildew": {
+      "existing_visual_candidate": 5,
+      "unassigned": 22,
+      "invalid_or_unsupported_image": 2,
+      "new_cluster_repeated_view": 1
+    },
+    "ayawli_cabbage/cabbage__alternaria_leaf_spot": {
+      "existing_visual_candidate": 16,
+      "unassigned": 52,
+      "new_cluster_repeated_view": 1,
+      "new_cluster_label_conflict": 1
+    },
+    "ikteshad_brassica/broccoli__alternaria_leaf_spot": {
+      "unassigned": 207,
+      "new_cluster_repeated_view": 12
+    },
+    "ikteshad_brassica/cabbage__alternaria_leaf_spot": {
+      "unassigned": 105,
+      "new_cluster_repeated_view": 2
+    },
+    "ikteshad_brassica/cauliflower__alternaria_leaf_spot": {
+      "unassigned": 14,
+      "new_cluster_repeated_view": 42
+    },
+    "ikteshad_brassica/cauliflower__bacterial_soft_rot": {
+      "unassigned": 76,
+      "new_cluster_repeated_view": 2
+    }
+  },
+  "capture_day_support": {
+    "ikteshad_brassica/broccoli__alternaria_leaf_spot": {
+      "2025:02:11": 9,
+      "2025:03:09": 208
+    },
+    "ikteshad_brassica/cabbage__alternaria_leaf_spot": {
+      "2025:02:11": 34,
+      "2025:02:27": 73
+    },
+    "ikteshad_brassica/cauliflower__alternaria_leaf_spot": {
+      "2025:02:11": 56
+    },
+    "ikteshad_brassica/cauliflower__bacterial_soft_rot": {
+      "2025:02:20": 73
+    }
+  },
+  "roles_assigned": false,
+  "evaluation_run": false
+}

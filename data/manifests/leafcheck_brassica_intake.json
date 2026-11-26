@@ -1,0 +1,47 @@
+[
+  {
+    "publisher": "https://data.mendeley.com/datasets/sjmgzhwrxv/1",
+    "license": "CC BY 4.0",
+    "filename": "All-Alt-black_rot-downy_mildew-healthy.zip",
+    "path": "data/raw/leafcheck_field_v12/brassica-intake/sjmgzhwrxv-All-Alt-black_rot-downy_mildew-healthy.zip",
+    "url": "https://data.mendeley.com/public-files/datasets/sjmgzhwrxv/files/15717f20-a822-48c8-b1f1-cdaf53be636d/file_downloaded",
+    "sha256": "4dba5e7a553b02eb28a17ac4ab2d671ee6b48223f3fa38ffd89163736240cd79",
+    "bytes": 140504136
+  },
+  {
+    "publisher": "https://data.mendeley.com/datasets/rh8c5tgg5k/1",
+    "license": "CC BY 4.0",
+    "filename": "Broccoli Alternaria black spot.zip",
+    "path": "data/raw/leafcheck_field_v12/brassica-intake/rh8c5tgg5k-Broccoli Alternaria black spot.zip",
+    "url": "https://data.mendeley.com/public-files/datasets/rh8c5tgg5k/files/312dcd1a-e000-4283-abd2-844255bbe23c/file_downloaded",
+    "sha256": "bb7a0857b57b8bbd84a183b0a1c6974fed27f29a4898e3942fd62a11529b8662",
+    "bytes": 26118151
+  },
+  {
+    "publisher": "https://data.mendeley.com/datasets/rh8c5tgg5k/1",
+    "license": "CC BY 4.0",
+    "filename": "Cabbage Alternaria leaf spot.zip",
+    "path": "data/raw/leafcheck_field_v12/brassica-intake/rh8c5tgg5k-Cabbage Alternaria leaf spot.zip",
+    "url": "https://data.mendeley.com/public-files/datasets/rh8c5tgg5k/files/aefcd180-1492-4ba1-9dcb-8753f1327195/file_downloaded",
+    "sha256": "d7d38c91f2e36d4af4f5ad66275f608e103614487bb7fd02f2fd21e3c0aeb480",
+    "bytes": 22035112
+  },
+  {
+    "publisher": "https://data.mendeley.com/datasets/rh8c5tgg5k/1",
+    "license": "CC BY 4.0",
+    "filename": "Cauliflower Alternaria leaf spot.zip",
+    "path": "data/raw/leafcheck_field_v12/brassica-intake/rh8c5tgg5k-Cauliflower Alternaria leaf spot.zip",
+    "url": "https://data.mendeley.com/public-files/datasets/rh8c5tgg5k/files/9ee71e84-6e90-47c8-a449-c61249fc1bd1/file_downloaded",
+    "sha256": "a61d434da95a8dcc4c358e04f3fc0f5ed403ce033f575015f69f7305bcd7db08",
+    "bytes": 7437344
+  },
+  {
+    "publisher": "https://data.mendeley.com/datasets/rh8c5tgg5k/1",
+    "license": "CC BY 4.0",
+    "filename": "Cauliflower Bacterial soft rot.zip",
+    "path": "data/raw/leafcheck_field_v12/brassica-intake/rh8c5tgg5k-Cauliflower Bacterial soft rot.zip",
+    "url": "https://data.mendeley.com/public-files/datasets/rh8c5tgg5k/files/4cabe3bc-7f83-4579-89a4-8aa81a2d63c3/file_downloaded",
+    "sha256": "33a0b44bc2abfd2c12774970e486a727fd4a0eb6aa56af166871660bfee52314",
+    "bytes": 20170877
+  }
+]
