@@ -147,3 +147,21 @@ deployment and the course and supplementary evaluations remain fixed.
 [Selection, per-class results and training curves](corn_seasonal_study.json).
 Restore the [source and training instructions](../../data/README.md#seasonal-corn-training-study)
 to rerun the matched comparison.
+
+### High-score corn upload replay
+
+The deployed threshold suggested labels for 42 of the 94 Pretoria
+development photos. Nine suggestions were jointly correct. At a
+descriptive 0.90 score cutoff, three of eight photos were correct.
+All three correct photos at that cutoff carried the northern-leaf-blight
+reference label. These are development counts. They do not support
+changing the application threshold.
+
+The nine highest-score errors included close-ups with visible leaf
+markings, occlusion, and two healthy proxies labeled as northern leaf
+blight. The packaged app's upload endpoint replayed three original
+bytes. It scored common rust as gray leaf spot at 0.954, scored a
+healthy proxy as northern leaf blight at 0.916, and correctly scored
+one northern-leaf-blight photo at 0.970. All 177 scores matched standalone
+inference exactly. The invalid-byte request returned HTTP 400.
+[Upload evidence](pretoria_upload_replay.json)

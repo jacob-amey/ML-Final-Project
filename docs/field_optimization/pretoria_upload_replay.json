@@ -1,0 +1,33 @@
+{
+  "measured_utc": "2026-11-26T05:21:23.543410+00:00",
+  "archive_sha256": "000443dad48f0740e5f015282dd43c5d97f7d6e8967e3d883b484a59bc3091cc",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "tests": "local API original-byte uploads and standalone parity",
+  "cases": {
+    "976": {
+      "reference_label": "corn__common_rust",
+      "label": "corn__gray_leaf_spot",
+      "score": 0.9537544250488281,
+      "decision": "suggestion",
+      "max_score_difference": 0.0,
+      "sha256": "04e8a17921aca53b6f04c97194549248235c6cddff7ab070b684a41ca838d4a3"
+    },
+    "1751": {
+      "reference_label": "corn__healthy",
+      "label": "corn__northern_leaf_blight",
+      "score": 0.9160978198051453,
+      "decision": "suggestion",
+      "max_score_difference": 0.0,
+      "sha256": "582e4d8644991c0dfc877ea36f6c1f322b2f3e371f843086b4ab23e87d185a0e"
+    },
+    "410": {
+      "reference_label": "corn__northern_leaf_blight",
+      "label": "corn__northern_leaf_blight",
+      "score": 0.9695694446563721,
+      "decision": "suggestion",
+      "max_score_difference": 0.0,
+      "sha256": "67c865178d9cf10624e82100103292873e09eb88c3af2df6897259269d4cee6d"
+    }
+  },
+  "invalid_upload_status": 400
+}
