@@ -1,0 +1,14 @@
+{
+  "version": "leafcheck_decafia_v2",
+  "source": "https://zenodo.org/records/22756170",
+  "doi": "10.5281/zenodo.22756170",
+  "license": "CC BY 4.0",
+  "archive_url": "https://zenodo.org/records/22756170/files/CoffeeLeaf-CO-v2.zip?download=1",
+  "publisher_md5": "2ba46bd8f7a23708d982ff578760f1fa",
+  "archive_sha256": "8d0652baeab1f1731c5ecc5dfe99387125aa84f76df92fe2175cd80f7d0225a5",
+  "role": "reserved source-held coffee confirmation. No baseline or candidate inference during intake.",
+  "sampling_rule": "Keep author-declared own_field photos only. Use rust-only detections with class ID 0 and healthy-background photos with zero annotations and the publisher's SANAS prefix. Draw up to 60 per label by stable filename hash. Validate extracted image hashes and actual YOLO labels, then screen overlap. Reserve all photos from this site as one group outside model fitting and validation.",
+  "healthy_limit": "The source's healthy background label is a visual proxy and does not establish absence of every condition.",
+  "expected_compatible_catalog_counts": {"coffee__rust": 158, "coffee__healthy": 1113},
+  "per_label": 60
+}
