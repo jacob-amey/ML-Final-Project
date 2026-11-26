@@ -48,9 +48,13 @@
         <div class="file-summary"><strong id="file-name">No photo selected</strong><span id="file-description">A clear photo of a single leaf works best.</span></div>
         <button class="secondary-button full-width" id="choose-button"><svg><use href="#upload"/></svg>Choose photo</button>
         <details class="crop-coverage" id="crop-coverage" hidden>
-          <summary>Crops the final CNN covers</summary>
-          <p id="covered-crops"></p>
-          <p>A crop on this list can still have conditions outside the model’s labels.</p>
+          <summary>Crops and conditions the final CNN covers</summary>
+          <div class="crop-context">
+            <label for="coverage-crop">Find conditions for a crop</label>
+            <select id="coverage-crop" aria-describedby="coverage-guidance"></select>
+            <p id="coverage-guidance">The list shows the labels the model can return for that crop.</p>
+            <p id="covered-conditions" role="status"></p>
+          </div>
         </details>
         <div class="crop-context" id="crop-controls" hidden>
           <label for="crop-context">Known crop (optional)</label>

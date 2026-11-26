@@ -12,7 +12,7 @@ const EXAMPLES = [
   { id: 'healthy', name: 'Healthy', image: 'assets/healthy.jpg' },
   { id: 'late_blight', name: 'Late blight', image: 'assets/late_blight.jpg' },
 ];
-const state = { models: {}, connected: false, connecting: false, selected: null, objectURL: null, results: null, busy: false, revision: 0, controller: null };
+const state = { models: {}, cropCoverage: new Map(), connected: false, connecting: false, selected: null, objectURL: null, results: null, busy: false, revision: 0, controller: null };
 const cards = {};
 const escapeHTML = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const percent = (value) => `${(Number(value) * 100).toFixed(1)}%`;
@@ -29,6 +29,28 @@ function labelParts(raw) {
   return parts.length > 1
     ? { title: prettyLabel(parts.slice(1).join(' · ')), plant: parts[0] }
     : { title: parts[0], plant: 'Tomato leaf' };
+}
+
+function showCoveredConditions() {
+  const conditions = state.cropCoverage.get($('#coverage-crop').value) || [];
+  $('#covered-conditions').textContent = conditions.join(' · ');
+}
+
+function updateCropCoverage(model) {
+  const coverage = new Map();
+  for (const label of model?.ready && Array.isArray(model.classes) ? model.classes : []) {
+    const { plant, title } = labelParts(label);
+    if (!coverage.has(plant)) coverage.set(plant, []);
+    coverage.get(plant).push(title);
+  }
+  state.cropCoverage = coverage;
+  const control = $('#coverage-crop');
+  const previousCrop = control.value;
+  const names = [...coverage.keys()].sort((a, b) => a.localeCompare(b));
+  control.replaceChildren(new Option('Choose a crop', ''), ...names.map(name => new Option(name, name)));
+  if (coverage.has(previousCrop)) control.value = previousCrop;
+  showCoveredConditions();
+  $('#crop-coverage').hidden = names.length === 0;
 }
 
 function message(text = '', error = false) {
@@ -171,12 +193,7 @@ async function connect() {
     const status = await response.json();
     if (!status.app_id?.startsWith('leafcheck-local-')) throw new Error('Restart LeafCheck with the updated launcher, then refresh this page.');
     state.models = status.models;
-    const final = state.models.final177;
-    const covered = final?.ready && Array.isArray(final.classes)
-      ? [...new Set(final.classes.map(label => labelParts(label).plant))].sort((a, b) => a.localeCompare(b))
-      : [];
-    $('#covered-crops').textContent = covered.join(', ');
-    $('#crop-coverage').hidden = covered.length === 0;
+    updateCropCoverage(state.models.final177);
     $('#crop-controls').hidden = !state.models.final177?.crop_context?.potato;
     if ($('#crop-controls').hidden) $('#crop-context').value = '';
     await loadFinalExamples();
@@ -393,6 +410,7 @@ function init() {
   $('#drop-zone').addEventListener('dragleave', (event) => { if (!$('#drop-zone').contains(event.relatedTarget)) $('#drop-zone').classList.remove('dragging'); });
   $('#drop-zone').addEventListener('drop', (event) => { event.preventDefault(); $('#drop-zone').classList.remove('dragging'); acceptFile(event.dataTransfer.files[0]); });
   $('#compare-button').addEventListener('click', compare);
+  $('#coverage-crop').addEventListener('change', showCoveredConditions);
   $('#crop-context').addEventListener('change', () => {
     invalidateResults();
     waitingCards();
