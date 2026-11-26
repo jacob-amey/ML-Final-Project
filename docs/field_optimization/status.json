@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-26T05:43:08.171879+00:00",
+  "updated_utc": "2026-11-26T05:49:50.275463+00:00",
   "frozen_model": "artifacts/leafcheck177-v1/model.pt",
   "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
   "deployment_decision": "Retain the frozen 177-label checkpoint and optional potato context. The packaged app lists the exact conditions by crop.",
@@ -16,7 +16,7 @@
     "runs/field_v11/feature_style",
     "runs/field_v12/spatial-pool"
   ],
-  "active_training": false,
+  "active_training": true,
   "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev8.docx",
   "report_sha256": "924b8f6f2f27bfd409513bc4e618a4414cc5071576bbc8d922a24c10a2fed9b0",
   "protected_confirmations": [
@@ -31,8 +31,8 @@
     "Hossain",
     "CoffeeLeaf-CO v2"
   ],
-  "best_next_question": "Does the Makerere bean rust collection provide enough distinct field images for a cross-source data experiment?",
-  "next_action": "Verify the publisher-pinned Makerere archives and screen them against the master and Tanzania sample. Decide whether there is adequate independent, label-compatible evidence for an experiment.",
+  "best_next_question": "Do screened field bean rust photos improve transfer more than repeat draws, while preserving master validation?",
+  "next_action": "Monitor both sequential eight-epoch runs and compare their reloaded best checkpoints under the registered validation rules.",
   "latest_demo": "artifacts/LeafCheck-condition-coverage-demo.zip",
   "demo_sha256": "4af7aa952534a92beaa8c0964ba7515b1985398d1e23ed4e50176549dad5e462",
   "latest_potato_result": {
@@ -79,5 +79,22 @@
     "unsupported_suggestions": 6,
     "unsupported_photos": 15,
     "evidence": "docs/field_optimization/tanzania_bean_uploads.json"
+  },
+  "active_run": {
+    "path": "runs/field_v12/bean-study",
+    "protocol": "configs/leafcheck_bean_rust_study.json",
+    "ordered_arms": [
+      "matched_repeat",
+      "new_field"
+    ],
+    "train_images_per_epoch": 59356,
+    "completed_epochs_required": 8
+  },
+  "latest_bean_intake": {
+    "candidate_train_rust": 348,
+    "field_validation_rust": 63,
+    "field_date_groups": 10,
+    "makerere": "docs/field_optimization/makerere_beans_audit.json",
+    "tanzania": "data/manifests/leafcheck_tanzania_bean_rust_validation.json"
   }
 }
