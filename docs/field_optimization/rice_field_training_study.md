@@ -38,3 +38,9 @@ caffeinate -i .venv/bin/python scripts/run_rice_field_study.py --run runs/field_
 ```
 
 The runner refuses a second writer, checks the saved arm configuration, resumes incomplete arms and skips completed arms with reload evidence. It executes the registered validation comparison after both checkpoints finish. A live-writer check was exercised against the original sequence. Logs and checkpoints remain in the existing study directory.
+
+## Deployed reference on the registered cohorts
+
+The promoted 224-pixel model was replayed on CPU before either study arm was compared. The original 177 outputs were eligible. The reference scored 33/119 on BanglaRiceLeaf, with represented-label macro-F1 0.336735 and 48 wrong-crop predictions. It scored 3/138 on Hasan, with represented-label macro-F1 0.035088 and 105 wrong-crop predictions. All 36 correct results were sheath blight. The reference classified zero of 88 healthy and zero of 52 brown-spot photos correctly. Equal-day accuracy within Hasan was 0.01553. The source differences support tracking both crop and condition failures and keeping the two cohorts distinct.
+
+[Reference metrics and hashes](rice_field_deployed_reference.json) · [Image-level replay](rice_field_deployed_reference.csv).
