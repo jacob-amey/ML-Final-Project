@@ -30,3 +30,11 @@ Both 160-pixel residual CNNs start with randomly initialized weights and train f
 ```
 
 The rebuilt training and validation manifests must match the digests in the [registered plan](../../configs/leafcheck_rice_field_study_v1.json). The file-level source and inspection details are recorded in the [release audit](rice_field_release_audit.json).
+
+To recover the registered run in place, use the sequential runner after the older launcher has stopped:
+
+```sh
+caffeinate -i .venv/bin/python scripts/run_rice_field_study.py --run runs/field_v13/rice-study
+```
+
+The runner refuses a second writer, checks the saved arm configuration, resumes incomplete arms and skips completed arms with reload evidence. It executes the registered validation comparison after both checkpoints finish. A live-writer check was exercised against the original sequence. Logs and checkpoints remain in the existing study directory.
