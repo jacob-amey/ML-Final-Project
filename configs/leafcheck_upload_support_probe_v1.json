@@ -1,0 +1,15 @@
+{
+  "hypothesis": "A linear boundary on the frozen CNN's pooled features can separate supported field uploads from nonplants and unsupported plants better than maximum softmax alone.",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "features": "Global-average pooled features, averaged over eight deployed dihedral views. Standardize using only the fit fold. Keep the original CNN frozen.",
+  "folds": [
+    {"supported": "sheikh", "nonplant": "Bicycle", "unsupported_plant": "Cactus"},
+    {"supported": "mduma", "nonplant": "Dog", "unsupported_plant": "Orchid"},
+    {"supported": "pakistan", "nonplant": "Typewriter", "unsupported_plant": "Spruce"}
+  ],
+  "fit": "Regularized logistic regression on the other two positive sources and negative category pairs. Give positives and negatives equal mass and each source, negative type, and category equal weight within its tier. No hyperparameter search.",
+  "l2": 0.01,
+  "min_macro_auroc_each_type": 0.65,
+  "min_macro_auroc_gain_each_type": 0.05,
+  "decision": "This is a grouped development screen on previously examined sources. Proceed to novel source acquisition only if both unsupported types pass both AUROC gates. It does not qualify a guard or threshold for deployment. Keep the course and follow-up confirmation photos out of this probe."
+}
