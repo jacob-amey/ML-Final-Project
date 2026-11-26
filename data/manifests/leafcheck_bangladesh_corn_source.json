@@ -1,0 +1,13 @@
+{
+  "version": "leafcheck_bangladesh_corn_v1",
+  "source": "https://data.mendeley.com/datasets/sb4wwjs8bz/1",
+  "doi": "10.17632/sb4wwjs8bz.1",
+  "license": "CC BY 4.0",
+  "role": "training-only candidate for the matched corn condition experiment",
+  "policy": "Use the RAW_Image JPEG files in the exact Common_Rust, Gray_Leaf_Spot and Healthy_Leaf folders. Exclude converted or augmented versions, unrelated labels and the nonspecific Corn_Leaf_Blight folder. Keep the whole collection in training. Preserve the publisher labels and screen the bytes against the existing releases and Pretoria development.",
+  "publisher_jpeg_counts": {
+    "corn__common_rust": 135,
+    "corn__gray_leaf_spot": 100,
+    "corn__healthy": 114
+  }
+}
