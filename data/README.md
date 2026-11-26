@@ -258,6 +258,27 @@ SHA-256 values. Raw images remain local.
   --output runs/field_v7/imagesafari-baseline
 ```
 
+## Hossain tomato context confirmation
+
+[Hossain et al.](https://data.mendeley.com/datasets/93h9p62kg4/1) publish
+tomato photos with visual condition labels under CC BY 4.0. We acquired
+all 473 JPEGs from the three compatible publisher folders. Their EXIF
+capture day is February 25, 2025. The visual sample showed detached leaves
+on pale surfaces. The confirmation therefore represents a single
+acquisition group under controlled framing.
+
+The [pinned release](manifests/leafcheck_hossain_tomato_v1_release.json)
+retained 181 early-blight, 98 healthy, and 106 late-blight photos. Checks
+excluded 72 likely repeat views, seven possible prior matches and nine
+entries from conflicting-label clusters. The cohort stayed outside all
+fitting and selection. Its opened predictions can be recomputed from
+the [saved records](../docs/field_optimization/tomato_context_predictions.csv).
+
+```sh
+.venv/bin/python scripts/prepare_hossain_tomato_holdout.py fetch
+.venv/bin/python scripts/prepare_hossain_tomato_holdout.py build
+```
+
 ## Earlier three-class dataset
 
 The dataset assigns `early_blight`, `healthy`, and `late_blight` to class indices 0, 1, and 2 respectively. The image folders under `data/processed/leafcheck/` are ready for a loader such as PyTorch `ImageFolder`. The [image inventory](manifests/image_inventory.csv) records the exact membership, original path, source revision, group, file hash, and any exclusion. The [label mapping](manifests/label_mapping.csv) records how the source labels translate to project labels.

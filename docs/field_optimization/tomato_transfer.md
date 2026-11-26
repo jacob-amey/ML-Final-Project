@@ -78,6 +78,35 @@ Each chosen training checkpoint reloaded and reproduced its recorded
 field confusion counts. A post-training batch-indexing correction reran
 only the automatic scorer from the existing saved checkpoints.
 
+## Explicit tomato context on a new source
+
+The original ten-label tomato context qualified on the Sheikh and Pakistan
+development groups. The [prospective protocol](../../configs/leafcheck_tomato_context_v1.json)
+then froze the checkpoint, probability rule and independent membership.
+[Hossain et al.](https://data.mendeley.com/datasets/93h9p62kg4/1) provided
+473 compatible photos. Screening retained 385 from a single capture day.
+The reviewed sample showed detached leaves on plain surfaces. Specimen
+identities remain unknown.
+
+| Method | Correct / 385 | Three-label macro-F1 | Wrong crop |
+| --- | ---: | ---: | ---: |
+| Automatic, 177 eligible labels | 0 | 0.000000 | 312 |
+| Tomato supplied, ten eligible conditions | 15 | 0.050251 | 0 |
+
+Providing the crop corrected 15 of 181 early-blight photos. Healthy
+recall was 0/98 and late-blight recall was 0/106 even with the crop.
+The model's most frequent automatic answer was rice leaf blast
+(255/385). When supplied tomato it mainly selected leaf mold or Septoria.
+It predicted early blight for 3/106 labeled late-blight photos, and
+late blight for 0/181 early-blight photos. The accuracy gain of 3.896
+points missed the registered five-point threshold, so the optional
+tomato policy remains out of the app. These outcomes document a
+second source where supplying the crop alone leaves a substantial
+condition recognition gap.
+
+[Data audit](hossain_tomato_audit.json) · [Freeze](tomato_context_freeze.json) ·
+[Metrics](tomato_context_confirmation.json) · [Predictions](tomato_context_predictions.csv)
+
 ## Reproduction
 
 ```sh

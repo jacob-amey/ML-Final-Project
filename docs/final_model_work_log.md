@@ -595,3 +595,18 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   matches to included master images, including 209 from the course
   holdout. Neither release was used for condition fitting or evaluation.
   [Catalog disposition and byte evidence](field_optimization/next_source_screen.json)
+
+### Evening continuation — explicit tomato context
+
+- Verified all 473 bytes against the Hossain catalog and retained 385
+  photos after screening repeats, label conflicts, and possible overlap.
+  All records share one EXIF capture day. The reviewed sample showed
+  detached leaves on pale surfaces. The whole source was held together
+  and frozen before scoring.
+- Reconstructed both outcomes from the exact prediction records.
+  The 177-label CNN got 0/385 right and named another crop 312 times.
+  Explicit tomato context got 15/385 right, improving macro-F1 by 0.050251
+  and accuracy by 3.896 points. Healthy and late-blight recall stayed
+  zero. The accuracy gain missed the five-point gate, so the app stays
+  with the frozen 177-label checkpoint and existing potato option.
+  [Study](field_optimization/tomato_transfer.md#explicit-tomato-context-on-a-new-source)
