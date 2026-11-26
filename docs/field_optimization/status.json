@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-26T18:00:29.205327+00:00",
+  "updated_utc": "2026-11-26T18:10:09.409203+00:00",
   "frozen_model": "artifacts/leafcheck177-v1/model.pt",
   "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
   "deployment_decision": "Retain the frozen 177-label checkpoint and optional potato context. The packaged app lists the exact conditions by crop.",
@@ -17,7 +17,7 @@
     "runs/field_v12/spatial-pool",
     "runs/field_v12/bean-study"
   ],
-  "active_training": false,
+  "active_training": true,
   "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev9.docx",
   "report_sha256": "f4f4d4047889baa462b7cdc8d3ba4bbcb958175e81b1a144bb09a6039dea320e",
   "protected_confirmations": [
@@ -32,8 +32,8 @@
     "Hossain",
     "CoffeeLeaf-CO v2"
   ],
-  "best_next_question": "Can multi-condition field training address both crop identity and healthy-versus-disease errors without reducing full-label validation performance?",
-  "next_action": "Seek a separate rice collection with mixed healthy and brown-spot capture groups. After checking exact label mapping and overlap, use source-separated training and validation with the frozen 177-output model as reference.",
+  "best_next_question": "Can three-condition field training improve two source-separated rice validations beyond equal class replays?",
+  "next_action": "Monitor the local matched run and verify both terminal checkpoints and the registered validation comparison.",
   "latest_demo": "artifacts/LeafCheck-condition-coverage-demo.zip",
   "demo_sha256": "4af7aa952534a92beaa8c0964ba7515b1985398d1e23ed4e50176549dad5e462",
   "latest_potato_result": {
@@ -111,5 +111,24 @@
     "dated_healthy_groups": 1,
     "roles_assigned": false,
     "evidence": "docs/field_optimization/rice_2026_preflight.json"
+  },
+  "active_run": {
+    "path": "runs/field_v13/rice-study",
+    "plan": "configs/leafcheck_rice_field_study_v1.json",
+    "owner": "local sequential run-seed434.zsh under caffeinate",
+    "arms": [
+      "matched_repeat",
+      "new_field"
+    ],
+    "training_images_per_epoch": 59383,
+    "epochs_per_arm": 12,
+    "latest_observation": "matched_repeat initialized successfully on MPS"
+  },
+  "rice_source_separated_intake": {
+    "training": 375,
+    "external_development": 257,
+    "hasan": 138,
+    "banglarice": 119,
+    "evidence": "docs/field_optimization/rice_field_training_study.md"
   }
 }

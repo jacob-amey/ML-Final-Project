@@ -1,0 +1,6016 @@
+{
+  "source_support": {
+    "banglarice": {
+      "rice__healthy": 54,
+      "rice__sheath_blight": 65
+    },
+    "hasan": {
+      "rice__brown_spot": 52,
+      "rice__healthy": 34,
+      "rice__sheath_blight": 52
+    },
+    "munna": {
+      "rice__brown_spot": 125,
+      "rice__healthy": 125,
+      "rice__sheath_blight": 125
+    }
+  },
+  "candidate_count": 1488,
+  "excluded": [
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1535.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1573.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1149.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_93.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_85.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_993.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_762.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1441.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_617.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_70.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_661.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_681.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1375.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_1509.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__healthy",
+      "member": "RiceLeafDiseaseBD/Original images/Healthy/Healthy_598.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_533.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_1512.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_828.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_114.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_885.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_910.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_263.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_604.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_463.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_313.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_253.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_210.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_17.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_3.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__brown_spot",
+      "member": "RiceLeafDiseaseBD/Original images/Brown spot/brown spot_14.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1402.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_390.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1575.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "munna:RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1574.jpg"
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_136.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_64.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_52.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_470.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_264.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1553.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "munna:RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1552.jpg"
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_195.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1634.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1487.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1683.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1519.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "munna:RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1517.jpg"
+    },
+    {
+      "source": "munna",
+      "label": "rice__sheath_blight",
+      "member": "RiceLeafDiseaseBD/Original images/Sheath blight/Sheath blight_1657.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "hasan",
+      "label": "rice__brown_spot",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (2).jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "hasan:Rice leaf disease/Testing data/Brown Spot/Brown_spot (1).jpg"
+    },
+    {
+      "source": "hasan",
+      "label": "rice__brown_spot",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (24).jpg",
+      "reason": "new_cluster_label_conflict",
+      "related": "hasan:Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (17).jpg"
+    },
+    {
+      "source": "hasan",
+      "label": "rice__brown_spot",
+      "member": "Rice leaf disease/Testing data/Brown Spot/Brown_spot (8).jpg",
+      "reason": "new_cluster_label_conflict",
+      "related": "hasan:Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (15).jpg"
+    },
+    {
+      "source": "hasan",
+      "label": "rice__healthy",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (13).jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "hasan:Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (12).jpg"
+    },
+    {
+      "source": "hasan",
+      "label": "rice__healthy",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (15).jpg",
+      "reason": "new_cluster_label_conflict",
+      "related": "hasan:Rice leaf disease/Testing data/Brown Spot/Brown_spot (8).jpg"
+    },
+    {
+      "source": "hasan",
+      "label": "rice__healthy",
+      "member": "Rice leaf disease/Testing data/Healthy Rice Leaf/Healthy_rice_leaf (17).jpg",
+      "reason": "new_cluster_label_conflict",
+      "related": "hasan:Rice leaf disease/Testing data/Brown Spot/Brown_spot (24).jpg"
+    },
+    {
+      "source": "hasan",
+      "label": "rice__sheath_blight",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (18).jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "hasan:Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (17).jpg"
+    },
+    {
+      "source": "hasan",
+      "label": "rice__sheath_blight",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (19).jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "hasan:Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (17).jpg"
+    },
+    {
+      "source": "hasan",
+      "label": "rice__sheath_blight",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (42).jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "hasan:Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (41).jpg"
+    },
+    {
+      "source": "hasan",
+      "label": "rice__sheath_blight",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (63).jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "hasan:Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (62).jpg"
+    },
+    {
+      "source": "hasan",
+      "label": "rice__sheath_blight",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (65).jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "hasan:Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (64).jpg"
+    },
+    {
+      "source": "hasan",
+      "label": "rice__sheath_blight",
+      "member": "Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (73).jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "hasan:Rice leaf disease/Testing data/Sheath Blight/Sheath_Blight (72).jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0002.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0001.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0003.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0004.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0005.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0006.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0008.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0009.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0010.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0011.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0012.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0013.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0012.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0014.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0016.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0017.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0016.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0018.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0020.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0021.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0022.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0023.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0024.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0026.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0028.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0029.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0030.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0029.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0031.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0032.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0034.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0035.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0036.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0037.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0039.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0040.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0041.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0042.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0041.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0043.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0045.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0046.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0047.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0048.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0049.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0051.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0050.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0052.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0053.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0054.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0056.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0057.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0059.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0060.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0061.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0062.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0063.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0065.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0066.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0067.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0068.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0070.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0071.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0072.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0073.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0075.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0076.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0077.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0078.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0079.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0081.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0082.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0084.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0085.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0086.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0087.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0089.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0090.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0091.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0092.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0093.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0095.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0096.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0097.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0098.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0099.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0101.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0103.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0004.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0104.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0019.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0105.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0021.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0106.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0022.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0107.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0023.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0108.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0025.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0109.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0026.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0110.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0026.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0111.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0027.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0112.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0028.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0113.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0029.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0114.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0029.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0115.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0031.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0116.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0005.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0117.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0032.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0118.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0033.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0119.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0034.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0120.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0035.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0121.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0036.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0122.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0037.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0123.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0038.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0124.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0039.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0125.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0039.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0126.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0040.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0127.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0041.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0128.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0006.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0129.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0043.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0130.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0044.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0131.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0045.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0132.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0046.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0133.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0047.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0134.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0049.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0135.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0050.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0136.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0052.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0137.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0055.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0138.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0055.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0139.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0056.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0140.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0007.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0141.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0057.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0142.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0058.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0143.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0058.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0144.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0059.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0145.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0060.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0146.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0061.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0147.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0061.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0148.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0062.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0149.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0063.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0150.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0064.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0151.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0064.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0152.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0065.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0153.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0065.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0154.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0066.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0155.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0008.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0156.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0067.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0157.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0068.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0158.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0069.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0159.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0070.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0160.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0071.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0161.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0072.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0162.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0073.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0163.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0073.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0164.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0074.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0165.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0075.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0166.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0076.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0167.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0011.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0168.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0077.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0169.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0078.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0170.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0079.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0171.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0079.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0172.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0080.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0173.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0081.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0174.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0082.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0175.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0083.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0176.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0083.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0177.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0084.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0178.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0085.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0179.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0086.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0180.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0012.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0181.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0087.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0182.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0088.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0183.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0089.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0184.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0089.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0185.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0090.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0186.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0091.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0187.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0092.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0188.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0093.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0189.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0094.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0190.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0095.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0191.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0096.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0192.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0014.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0193.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0097.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0194.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0098.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0195.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0099.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0196.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0100.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0197.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0101.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0198.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0102.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0199.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0102.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0200.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0018.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0201.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0202.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0203.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0205.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0207.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0208.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0203.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0209.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0210.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0211.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0213.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0214.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0209.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0215.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0209.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0216.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0209.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0218.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0219.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0220.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0221.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0223.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0224.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0225.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0226.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0225.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0227.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0228.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0230.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0232.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0233.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0234.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0235.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0236.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0237.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0233.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0238.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0240.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0241.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0243.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0244.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0245.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0247.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0248.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0249.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0250.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0251.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0252.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0253.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0255.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0254.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0256.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0257.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0258.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0256.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0259.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0201.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0261.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0262.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0256.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0264.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0263.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0265.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0267.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0268.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0269.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0202.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0270.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0213.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0271.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0224.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0272.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0235.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0273.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0246.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0274.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0257.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0275.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0268.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0277.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0276.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0278.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0279.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0276.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0280.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0281.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0282.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0284.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0222.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0285.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0287.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0288.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0286.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0289.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0290.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0276.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0291.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0292.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0294.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0295.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0296.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0234.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0298.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0299.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0300.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0301.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0278.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0302.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0303.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0305.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0306.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0307.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0308.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0310.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0311.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0312.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0260.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0313.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0280.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0315.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0316.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0317.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0318.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0320.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0322.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0323.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0260.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0324.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0281.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0325.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0260.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0326.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0327.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0222.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0328.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0329.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0234.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0332.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0333.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0334.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0335.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0282.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0336.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0337.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0338.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0337.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0339.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0334.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0341.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0336.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0342.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0337.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0344.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0345.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0346.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0283.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0347.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0348.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0350.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0351.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0352.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0353.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0354.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0356.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0357.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0222.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0358.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0359.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0355.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0361.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0363.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0364.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0326.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0365.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0366.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0368.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0285.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0369.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0203.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0370.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0204.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0371.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0205.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0372.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0206.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0373.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0207.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0374.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0203.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0375.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0209.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0376.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0210.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0377.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0211.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0378.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0212.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0379.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0286.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0380.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0209.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0381.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0209.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0382.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0209.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0383.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0217.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0384.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0218.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0385.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0219.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0386.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0220.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0387.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0221.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0388.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0222.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0389.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0223.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0390.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0287.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0391.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0225.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0392.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0225.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0393.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0227.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0394.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0228.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0395.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0229.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0396.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0230.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0397.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0231.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0398.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0232.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0399.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0233.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0400.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0234.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0401.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0286.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0402.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0236.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0403.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0233.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0404.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0238.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0405.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0239.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0406.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0240.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0407.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0241.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0408.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0242.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0409.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0243.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0410.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0244.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0411.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0245.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0412.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0289.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0413.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0247.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0414.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0248.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0415.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0249.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0416.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0250.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0417.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0251.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0418.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0252.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0419.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0253.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0420.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0254.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0421.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0254.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0422.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0256.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0423.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0261.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0424.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0291.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0425.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0256.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0426.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0292.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0427.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0293.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0428.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0294.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0429.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0295.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0430.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0234.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0431.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0297.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0432.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0298.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0433.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0299.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0434.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0300.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0435.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0256.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0436.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0302.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0437.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0303.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0438.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0304.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0439.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0305.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0440.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0306.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0441.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0307.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0442.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0308.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0443.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0309.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0444.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0310.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0445.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0311.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0446.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0263.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0447.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0314.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0448.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0315.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0449.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0316.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0450.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0317.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0451.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0318.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0452.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0319.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0453.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0320.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0454.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0321.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0455.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0322.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0456.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0260.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0457.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0263.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0458.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0260.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0459.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0326.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0460.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0222.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0461.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0328.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0462.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0234.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0463.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0330.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0464.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0331.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0465.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0332.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0466.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0333.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0467.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0334.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0468.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0265.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0469.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0336.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0470.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0337.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0471.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0337.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0472.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0334.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0473.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0340.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0474.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0336.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0475.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0337.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0476.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0343.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0477.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0344.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0478.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0345.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0479.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0266.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0480.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0347.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0481.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0348.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0482.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0349.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0483.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0350.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0484.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0351.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0485.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0352.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0486.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0353.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0487.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0354.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0488.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0355.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0489.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0356.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0490.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0267.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0491.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0358.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0492.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0355.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0493.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0360.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0494.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0361.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0495.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0362.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0496.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0363.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0497.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0326.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0498.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0365.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0499.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0366.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__healthy",
+      "member": "Healthy Leaf/Healthy_0500.jpg",
+      "reason": "new_cluster_repeated_view",
+      "related": "banglarice:Healthy Leaf/Healthy_0367.jpg"
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0002.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0003.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0004.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0005.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0006.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0007.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0008.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0010.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0012.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0013.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0014.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0015.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0016.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0017.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0018.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0019.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0020.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0021.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0022.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0023.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0024.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0026.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0027.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0028.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0029.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0031.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0032.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0033.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0034.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0035.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0036.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0037.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0038.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0039.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0040.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0041.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0042.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0044.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0045.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0046.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0047.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0048.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0050.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0051.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0052.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0053.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0054.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0055.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0056.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0057.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0058.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0059.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0061.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0062.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0063.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0065.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0067.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0068.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0069.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0070.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0071.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0072.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0073.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0075.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0076.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0077.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0078.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0079.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0080.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0081.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0083.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0084.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0085.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0087.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0088.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0089.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0090.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0091.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0093.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0094.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0095.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0097.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0098.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0099.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0100.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0101.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0102.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0103.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0104.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0105.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0106.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0107.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0108.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0110.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0111.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0112.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0114.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0115.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0116.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0117.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0119.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0120.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0121.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0123.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0124.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0125.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0126.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0127.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0128.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0129.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0132.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0133.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0134.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0135.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0136.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0138.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0139.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0140.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0141.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0143.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0144.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0145.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0146.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0147.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0149.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0150.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0151.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0152.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0153.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0154.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0156.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0157.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0158.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0159.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0160.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0162.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0163.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0164.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0165.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0166.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0168.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0169.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0170.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0171.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0172.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0174.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0175.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0176.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0177.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0178.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0179.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0180.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0181.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0182.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0184.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0185.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0186.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0187.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0188.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0189.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0191.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0193.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0194.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0195.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0196.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0197.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0198.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0199.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0202.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0203.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0204.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0205.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0207.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0208.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0209.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0210.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0211.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0212.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0214.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0215.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0216.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0217.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0219.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0220.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0221.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0222.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0223.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0224.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0225.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0226.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0227.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0228.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0229.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0230.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0231.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0232.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0233.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0234.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0236.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0238.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0239.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0240.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0241.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0243.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0244.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0245.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0246.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0247.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0248.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0249.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0251.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0252.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0253.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0254.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0255.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0257.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0258.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0259.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0260.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0261.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0262.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0263.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0265.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0266.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0267.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0268.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0269.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0271.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0272.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0274.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0275.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0276.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0277.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0278.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0279.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0280.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0282.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0283.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0284.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0285.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0286.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0287.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0288.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0289.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0291.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0292.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0293.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0294.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0295.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0296.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0297.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0298.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0299.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0300.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0301.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0302.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0303.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0305.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0306.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0307.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0308.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0309.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0311.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0312.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0314.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0315.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0316.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0317.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0318.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0319.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0320.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0321.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0322.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0324.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0325.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0326.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0327.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0329.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0330.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0331.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0333.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0334.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0335.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0336.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0337.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0338.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0339.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0340.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0341.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0342.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0343.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0344.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0346.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0347.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0348.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0349.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0350.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0351.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0353.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0354.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0355.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0356.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0358.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0359.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0360.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0362.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0363.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0364.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0365.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0366.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0367.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0368.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0369.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0371.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0372.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0373.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0374.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0375.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0376.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0377.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0378.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0380.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0381.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0382.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0383.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0384.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0385.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0387.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0388.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0389.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0390.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0391.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0392.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0393.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0394.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0396.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0397.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0398.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0400.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0401.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0402.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0404.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0405.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0406.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0407.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0408.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0409.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0411.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0413.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0414.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0415.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0417.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    },
+    {
+      "source": "banglarice",
+      "label": "rice__sheath_blight",
+      "member": "Sheath Blight/SB_0418.jpg",
+      "reason": "sample_quota",
+      "related": ""
+    }
+  ],
+  "visual_distance": 4,
+  "train_sha256": "42da855e02efe933e813569c233712d84d3d09507a455ebc4d841441e4b559b3",
+  "validation_sha256": "cca7362d5f9f284c00431f9b28ce4918e46974f7893f92fa8fc57f5eaa527de1"
+}
