@@ -737,3 +737,17 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   healthy photos. The existing blast labels remain intact and the ambiguous
   source label is scored only as a diagnostic family.
   [Rice source and metrics](field_optimization/rice_field_intake.md)
+
+### Source-separated rice experiment and view agreement
+
+- Built a 375-image exact-label rice training addition and 257-photo external
+  development comparison from whole source collections. Registered two
+  matched twelve-epoch configurations before training.
+- Eight-view disagreement improved pooled correctness AUROC from 0.5142 to
+  0.5953 and ranked supported field versus unsupported plants near chance.
+  Its registered gate failed and the application rule stayed fixed.
+- Checked a ten-page editable report revision incorporating the measured
+  field-rice diagnostic and the view agreement finding.
+  [Rice study](field_optimization/rice_field_training_study.md) ·
+  [View agreement](field_optimization/view_agreement_study.md) ·
+  [Report verification](field_optimization/report_rice_diagnostic_verification.json)

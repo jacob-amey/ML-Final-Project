@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-26T18:14:54.773706+00:00",
+  "updated_utc": "2026-11-26T18:19:58.718931+00:00",
   "frozen_model": "artifacts/leafcheck177-v1/model.pt",
   "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
   "deployment_decision": "Retain the frozen 177-label checkpoint and optional potato context. The packaged app lists the exact conditions by crop.",
@@ -18,8 +18,8 @@
     "runs/field_v12/bean-study"
   ],
   "active_training": true,
-  "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev9.docx",
-  "report_sha256": "f4f4d4047889baa462b7cdc8d3ba4bbcb958175e81b1a144bb09a6039dea320e",
+  "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev10.docx",
+  "report_sha256": "6cc7564c95382e4d2275b62890d2babe2e7581fc8b92d910587b72666cdc1d47",
   "protected_confirmations": [
     "course holdout",
     "PlantDoc",

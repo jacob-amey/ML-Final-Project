@@ -255,7 +255,8 @@ def tomato_transfer(doc, docs, freeze, include_crop_head=False):
 
 def build(artifact, output, include_field_followup=False, include_tomato_transfer=False,
           include_crop_head=False, include_field_v8=False, include_field_v9=False, include_field_v10=False,
-          include_seasonal_corn=False, include_feature_style=False, include_bean_rust=False):
+          include_seasonal_corn=False, include_feature_style=False, include_bean_rust=False,
+          include_rice_diagnostic=False):
     freeze = read(artifact / "freeze.json")
     manifest = read(artifact / "artifact.json")
     assert all(manifest[key] for key in ("final_evaluation_complete", "reference_evaluation_complete", "supplementary_evaluation_complete"))
@@ -363,7 +364,11 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             "field macro-F1 and missed its advancement criteria."
         )
         unsupported_copy = f"The upload rule suggested a label for {accepted} of {count} unsupported Open Images photos [19]."
-        if not include_bean_rust:
+        if include_rice_diagnostic:
+            views = read(docs / "field_optimization/view_agreement_result.json")
+            plant_separation = views["unsupported"]["unsupported_plant"]["source_mean"]["negative_disagreement"]
+            unsupported_copy += f" Eight-view disagreement ranked unsupported plants near chance (AUROC {plant_separation:.3f}) [5]."
+        elif not include_bean_rust:
             unsupported_copy += (" The demo now lists the covered crops and explains that unfamiliar subjects can receive high scores. "
                                  "The deployed checkpoint and decision threshold stayed fixed.")
         doc.add_paragraph(unsupported_copy)
@@ -371,23 +376,36 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
         trial = read(docs / "field_optimization/potato_partial_study.json")
         before = trial["arms"]["control"]["scores"]["field"]
         after = trial["arms"]["field"]["scores"]["field"]
-        doc.add_paragraph(
-            f"The potato control scored {before['correct']}/{before['sample_count']} on date-held photos "
-            f"and the candidate scored {after['correct']}/{after['sample_count']}. "
-            f"Adding {sum(trial['screened_source_counts'].values())} field photos [20] "
-            f"with exact healthy or combined blight labels gained {trial['field_macro_f1_gain']:.4f} field "
-            f"macro-F1 and lost {-trial['master_deltas']['macro_f1']:.4f} on master potato validation. "
-            "The candidate missed the registered limits."
-        )
+        if include_rice_diagnostic:
+            doc.add_paragraph(
+                f"Adding {sum(trial['screened_source_counts'].values())} potato field photos [20] gave "
+                f"{after['correct']}/{after['sample_count']} correct, matching the control, and lost "
+                f"{-trial['master_deltas']['macro_f1']:.4f} master potato macro-F1."
+            )
+        else:
+            doc.add_paragraph(
+                f"The potato control scored {before['correct']}/{before['sample_count']} on date-held photos "
+                f"and the candidate scored {after['correct']}/{after['sample_count']}. "
+                f"Adding {sum(trial['screened_source_counts'].values())} field photos [20] "
+                f"with exact healthy or combined blight labels gained {trial['field_macro_f1_gain']:.4f} field "
+                f"macro-F1 and lost {-trial['master_deltas']['macro_f1']:.4f} on master potato validation. "
+                "The candidate missed the registered limits."
+            )
     if include_field_v10:
         corn = read(docs / "field_optimization/pretoria_baseline.json")["measurements"]
         before, after = corn["automatic"], corn["supplied_corn"]
-        doc.add_paragraph(
-            f"On {before['sample_count']} Pretoria field photos [21], automatic corn condition accuracy "
-            f"was {before['correct']}/{before['sample_count']}. Supplying corn gave "
-            f"{after['correct']}/{after['sample_count']}. "
-            f"The automatic workflow had {before['right_crop_wrong_condition']} correct-crop condition errors."
-        )
+        if include_rice_diagnostic:
+            doc.add_paragraph(
+                f"Automatic corn prediction on Pretoria photos [21] scored {before['correct']}/{before['sample_count']}. "
+                f"Supplying the crop gave {after['correct']}/{after['sample_count']}."
+            )
+        else:
+            doc.add_paragraph(
+                f"On {before['sample_count']} Pretoria field photos [21], automatic corn condition accuracy "
+                f"was {before['correct']}/{before['sample_count']}. Supplying corn gave "
+                f"{after['correct']}/{after['sample_count']}. "
+                f"The automatic workflow had {before['right_crop_wrong_condition']} correct-crop condition errors."
+            )
     if include_seasonal_corn:
         study = read(docs / "field_optimization/corn_seasonal_study.json")
         count = sum(study["training"]["supplement"].values())
@@ -416,6 +434,16 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             f"versus {control['correct']}/{count} with repeat draws. Master validation macro-F1 changed by "
             f"{bean['deltas']['macro_f1']:+.4f}. {decision} The app lists its supported conditions by crop."
         )
+    if include_rice_diagnostic:
+        rice = read(docs / "field_optimization/rice_field_diagnostic.json")
+        total = rice["total"]
+        healthy = rice["by_condition"]["Healthy"]
+        doc.add_paragraph(
+            f"On {total['support']} rice field photos [27], automatic predictions got {total['automatic_correct']} "
+            f"right and chose the wrong crop {total['automatic_wrong_crop']} times. Supplying rice offline gave "
+            f"{total['given_rice_correct']}/{total['support']}, with {healthy['given_rice_correct']}/{healthy['support']} "
+            "healthy photos correct. The field diagnostic scores the two leaf-blast outputs as a family."
+        )
     doc.add_heading("Project Management", level=2)
     if include_feature_style:
         doc.add_paragraph("The planning decks assign Jacob Amey data, training, evaluation and integration. They assign Demetre the frontend and uploads. Jacob defined the final scope and authorized delivery. The contribution record flags claims that need team confirmation. Codex assisted with data, experiments, integration, writing and verification.")
@@ -428,7 +456,9 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
         doc.add_paragraph("START_HERE.md identifies the runnable source revision and bundled weights. The archived membership and predictions reproduce the saved metrics. Retraining requires access to the exact master or frozen images. The archived README and data guide give restore, validation and training commands.")
     else:
         doc.add_paragraph("The archive identifies its exact runnable source revision in START_HERE.md. Its demo uses bundled weights. The saved metrics can be recomputed from the archived membership and predictions. Retraining also requires permitted access to the exact original master or frozen images. Follow the restore, verification, cache and pinned training commands in the archived README and data guide.")
-    if include_bean_rust:
+    if include_rice_diagnostic:
+        doc.add_paragraph("Follow-up data and software checks are in docs/field_optimization.")
+    elif include_bean_rust:
         doc.add_paragraph("See docs/field_optimization for follow-up data and experiments. The condition lookup demo has its own archive.")
     elif include_field_v10:
         doc.add_paragraph("The manifests, follow-up evaluations and matched training records are in docs/field_optimization. The field-guidance demo has its own archive.")
@@ -504,7 +534,11 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
         if include_field_v9:
             doc.add_paragraph("[20] J. Johnson, “Sample dataset for enhanced field-based detection of potato blight,” Mendeley Data, v1, 2025. doi: 10.17632/pbnw43s6kt.1.")
         if include_field_v10:
-            doc.add_paragraph("[21] H. Craze, “Diseases of maize in the field,” Univ. Pretoria, 2022. doi: 10.25403/UPresearchdata.20237613.v1.")
+            if include_rice_diagnostic:
+                ref = doc.add_paragraph("[21] H. Craze, “Diseases of maize in the field,” Univ. Pretoria, 2022. ")
+                add_link(ref, "Dataset DOI", "https://doi.org/10.25403/UPresearchdata.20237613.v1")
+            else:
+                doc.add_paragraph("[21] H. Craze, “Diseases of maize in the field,” Univ. Pretoria, 2022. doi: 10.25403/UPresearchdata.20237613.v1.")
         if include_seasonal_corn:
             doc.add_paragraph("[22] M. H. Ahmad, “Seasonal corn leaf disease dataset,” Mendeley Data, 2025. doi: 10.17632/vy629dngm8.1.")
         if include_feature_style:
@@ -517,6 +551,8 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
         if include_bean_rust:
             doc.add_paragraph("[25] Makerere AI Lab, “Bean disease dataset,” 2020. https://github.com/AI-Lab-Makerere/ibean")
             doc.add_paragraph("[26] N. Mduma et al., “A labeled dataset of healthy and diseased common beans from Tanzania,” Zenodo, 2025. doi: 10.5281/zenodo.15685315.")
+        if include_rice_diagnostic:
+            doc.add_paragraph("[27] M. M. H. Munna et al., “RiceLeafDiseaseBD,” Mendeley Data, v3. doi: 10.17632/86s4jzj2m4.3.")
         for paragraph in doc.paragraphs[reference_start:]:
             paragraph.paragraph_format.space_after = Pt(0 if include_feature_style else 1 if include_field_v10 else 1.5 if include_field_v9 else 4)
             if include_field_v10:
@@ -538,8 +574,10 @@ if __name__ == "__main__":
     parser.add_argument("--include-seasonal-corn", action="store_true")
     parser.add_argument("--include-feature-style", action="store_true")
     parser.add_argument("--include-bean-rust", action="store_true")
+    parser.add_argument("--include-rice-diagnostic", action="store_true")
     arguments = parser.parse_args()
-    feature_style = arguments.include_feature_style or arguments.include_bean_rust
+    bean_rust = arguments.include_bean_rust or arguments.include_rice_diagnostic
+    feature_style = arguments.include_feature_style or bean_rust
     seasonal = arguments.include_seasonal_corn or feature_style
     field_v10 = arguments.include_field_v10 or seasonal
     field_v9 = arguments.include_field_v9 or field_v10
@@ -548,4 +586,4 @@ if __name__ == "__main__":
     tomato = arguments.include_tomato_transfer or crop_head
     build(arguments.artifact, arguments.output,
           arguments.include_field_followup or tomato, tomato, crop_head, field_v8, field_v9, field_v10,
-          seasonal, feature_style, arguments.include_bean_rust)
+          seasonal, feature_style, bean_rust, arguments.include_rice_diagnostic)
