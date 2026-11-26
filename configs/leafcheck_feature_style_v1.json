@@ -1,0 +1,19 @@
+{
+  "recipe": "residual177_128_color.json",
+  "hypothesis": "Mixing early feature statistics during training improves joint classification on source-held field photos by reducing dependence on appearance cues common in the master data.",
+  "reference_checkpoint": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "dataset": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "arms": {"control": 0.0, "feature_style": 0.5},
+  "alpha": 0.1,
+  "epochs": 8,
+  "seed": 434,
+  "validation": "Master validation selects each arm's best checkpoint using the existing macro-F1 rule. Score validation and the four fixed field development sources (Sheikh, Mduma, Pakistan, Pretoria) under the same D4 inference policy. Primary screen is the equally weighted mean of their joint-label macro-F1 scores, each over its represented classes with all 177 outputs eligible.",
+  "advance": {
+    "min_field_macro_f1_gain": 0.02,
+    "max_field_source_macro_f1_drop": 0.02,
+    "max_master_macro_f1_drop": 0.008,
+    "max_master_accuracy_drop": 0.005
+  },
+  "decision": "Run the same seed and epoch budget in both arms. Mix spatial means and deviations after residual blocks 1 and 2, with random in-batch pairing. Preserve the labels, train-only learned preprocessing and deployment graph. An eligible result warrants a matched second seed and adequate-budget confirmation. No pilot qualifies for deployment. All test or confirmation sets remain outside the trial.",
+  "method_reference": "Zhou et al., Domain Generalization with MixStyle, ICLR 2021, https://openreview.net/forum?id=6xHJ37MVxxp"
+}

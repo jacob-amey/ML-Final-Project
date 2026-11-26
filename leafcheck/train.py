@@ -14,6 +14,7 @@ from torch import nn
 from .common import (ROOT, RUNS, atomic_checkpoint, atomic_json, better, environment,
                      metrics_from_matrix, seed_everything, update_matrix, utc_now, write_csv)
 from .data import PixelCache, cache_path, release
+from .feature_style import forward_style
 from .model import LeafCNN
 from .preprocessing import prepare_batch
 
@@ -112,6 +113,12 @@ def train(config, run_dir, resume=False, max_updates=None):
     if crop_loss_weight:
         crops = np.array([label.split("__", 1)[0] for label in classes])
         same_crop = torch.from_numpy(crops[:, None] == crops).to(device)
+    style_probability = config.get("feature_style_probability", 0.0)
+    style_alpha = config.get("feature_style_alpha", 0.1)
+    if not 0 <= style_probability <= 1 or not math.isfinite(style_alpha) or style_alpha <= 0:
+        raise ValueError("Feature style mixing requires a probability in [0, 1] and a positive alpha")
+    if style_probability and model_config["architecture"] != "residual_v1":
+        raise ValueError("Feature style mixing expects the residual stage layout")
     history = []; best = None; epoch = 1; next_batch = 0
     matrix = np.zeros((177, 177), np.int64); loss_sum = 0.0; seen = 0
     early_score = -1.0; meaningful_epoch = 0; total_steps = 0; accumulated_seconds = 0.0; epoch_elapsed = 0.0
@@ -167,7 +174,12 @@ def train(config, run_dir, resume=False, max_updates=None):
             raw, labels = train_data.batch(indices)
             inputs = prepare_batch(raw, spec, device, config["augmentation"])
             optimizer.zero_grad(set_to_none=True)
-            logits = model(inputs)
+            if style_probability:
+                # Use a separate stream so mixing does not advance the image augmentation RNG.
+                style_rng = np.random.default_rng([config["seed"], current_epoch, batch])
+                logits = forward_style(model, inputs, style_rng, style_probability, style_alpha)
+            else:
+                logits = model(inputs)
             targets = labels.to(device)
             loss = loss_fn(logits, targets).mean()
             if same_crop is not None:
