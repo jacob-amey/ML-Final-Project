@@ -26,6 +26,31 @@ def arm_config(plan, arm):
                 min_epochs=plan["epochs"], max_epochs=plan["epochs"], seed=plan["seed"])
 
 
+def development_rows(checkpoint):
+    lineage = {"initial_weights": checkpoint}
+    data = ROOT / "data/processed"
+    _, field, old, new = load_inputs(data / "leafcheck_field_v2_sampled", lineage)
+    _, pakistan_release, _, pak = load_inputs(data / "leafcheck_pakistan_tomato_dev_v1", lineage)
+    pretoria_plan = read(PRETORIA_PLAN)
+    manifest = ROOT / pretoria_plan["manifest"]
+    if sha256(manifest) != pretoria_plan["manifest_sha256"]:
+        raise ValueError("Pretoria development membership changed")
+    pretoria = [dict(r, path=PRETORIA_RAW / f"{int(r['source_id'])}.jpg") for r in rows(manifest)
+                if r["screen"] == "no_candidate"]
+    if len(pretoria) != pretoria_plan["development_count"]:
+        raise ValueError("Unexpected Pretoria development support")
+    fingerprints = [field["fingerprint"], pakistan_release["fingerprint"], pretoria_plan["manifest_sha256"]]
+    return (old, new, pak, pretoria), fingerprints
+
+
+def development_pixels(members, size, class_mapping):
+    old, new, pak, pretoria = members
+    dev = prepare_development(old, new, size)
+    dev["pakistan"] = (pixels(pak, size), np.array([int(r["class_id"]) for r in pak]))
+    dev["pretoria"] = (pixels(pretoria, size), np.array([class_mapping[r["label"]] for r in pretoria]))
+    return {key: dev[key] for key in SOURCES}
+
+
 def compare(run, output):
     if output.exists():
         raise FileExistsError(output)
@@ -45,28 +70,14 @@ def compare(run, output):
                 or read(source / "dataset.json")["fingerprint"] != frozen["fingerprint"]):
             raise ValueError(f"The {name} run differs from the registered plan")
         paths[name] = source / "best_model.pt"
-    lineage = {"initial_weights": checkpoint}
-    data = ROOT / "data/processed"
-    _, field, old, new = load_inputs(data / "leafcheck_field_v2_sampled", lineage)
-    _, pakistan_release, _, pak = load_inputs(data / "leafcheck_pakistan_tomato_dev_v1", lineage)
-    pretoria_plan = read(PRETORIA_PLAN)
-    manifest = ROOT / pretoria_plan["manifest"]
-    if sha256(manifest) != pretoria_plan["manifest_sha256"]:
-        raise ValueError("Pretoria development membership changed")
-    pretoria = [dict(r, path=PRETORIA_RAW / f"{int(r['source_id'])}.jpg") for r in rows(manifest)
-                if r["screen"] == "no_candidate"]
-    if len(pretoria) != pretoria_plan["development_count"]:
-        raise ValueError("Unexpected Pretoria development support")
+    cohort, fingerprints = development_rows(checkpoint)
     members, measurements = {}, {}
     for name, path in paths.items():
         predictor = Predictor(path, device)
         size = predictor.spec["input_size"]
         if size not in members:
-            dev = prepare_development(old, new, size)
-            dev["pakistan"] = (pixels(pak, size), np.array([int(r["class_id"]) for r in pak]))
-            dev["pretoria"] = (pixels(pretoria, size),
-                              np.array([frozen["class_to_idx"][r["label"]] for r in pretoria]))
-            members[size] = PixelCache("val", size, frozen), {key: dev[key] for key in SOURCES}
+            dev = development_pixels(cohort, size, frozen["class_to_idx"])
+            members[size] = PixelCache("val", size, frozen), dev
         validation, dev = members[size]
         result = validate(predictor.model, validation, dev, predictor.classes, predictor.spec,
                           device, {"batch_size": 128}, "d4_probability_mean")
@@ -84,8 +95,7 @@ def compare(run, output):
               and master_delta["macro_f1"] >= -rules["max_master_macro_f1_drop"]
               and master_delta["accuracy"] >= -rules["max_master_accuracy_drop"])
     atomic_json(output, {"plan_sha256": sha256(PLAN), "dataset_fingerprint": frozen["fingerprint"],
-                         "field_fingerprints": [field["fingerprint"], pakistan_release["fingerprint"],
-                                                pretoria_plan["manifest_sha256"]],
+                         "field_fingerprints": fingerprints,
                          "measurements": measurements, "field_macro_f1_gain": gain, "source_gains": source_gains,
                          "master_deltas": master_delta, "passed_pilot": passed, "test_opened": False,
                          "device": str(device), "recorded_utc": utc_now()})

@@ -1,0 +1,11 @@
+{
+  "hypothesis": "Spatial averaging may dilute useful responses to small local features on field photos. Raising each feature channel's sparse responses relative to its ordinary mean can help rank the correct joint label.",
+  "method": "Replace global averaging during the probe with fixed order-2 generalized-mean pooling. Preserve each image's total pooled activation mass before the original linear head. Use the frozen weights, all 177 eligible labels, and the same eight-view scoring policy in both arms.",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "dataset": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "reference_scores": "docs/field_optimization/feature_style_study.json",
+  "min_field_macro_f1_gain": 0.02,
+  "max_source_macro_f1_drop": 0.02,
+  "decision": "Use only the four development cohorts. Reproduce the original per-source aggregate scores before interpreting the modifier. A pass can justify a separately registered scratch-training experiment. This diagnostic cannot qualify an inference change or a release. No test, threshold tuning or probability calibration.",
+  "reference": "F. Radenović, G. Tolias, and O. Chum, Fine-tuning CNN Image Retrieval with No Human Annotation, https://arxiv.org/abs/1711.02512. The fixed, mass-preserving probe is an adaptation and does not reproduce their retrieval protocol."
+}
