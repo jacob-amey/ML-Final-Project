@@ -171,6 +171,12 @@ async function connect() {
     const status = await response.json();
     if (!status.app_id?.startsWith('leafcheck-local-')) throw new Error('Restart LeafCheck with the updated launcher, then refresh this page.');
     state.models = status.models;
+    const final = state.models.final177;
+    const covered = final?.ready && Array.isArray(final.classes)
+      ? [...new Set(final.classes.map(label => labelParts(label).plant))].sort((a, b) => a.localeCompare(b))
+      : [];
+    $('#covered-crops').textContent = covered.join(', ');
+    $('#crop-coverage').hidden = covered.length === 0;
     $('#crop-controls').hidden = !state.models.final177?.crop_context?.potato;
     if ($('#crop-controls').hidden) $('#crop-context').value = '';
     await loadFinalExamples();
@@ -187,6 +193,7 @@ async function connect() {
     if (!state.results && !state.busy) waitingCards();
   } catch (error) {
     state.connected = false;
+    $('#crop-coverage').hidden = true;
     $('#connection-text').textContent = 'Local app disconnected';
     $('#connection-status').classList.add('offline');
     $('#connection-status').classList.remove('connected');

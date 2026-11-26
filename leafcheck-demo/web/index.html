@@ -47,6 +47,11 @@
         </div>
         <div class="file-summary"><strong id="file-name">No photo selected</strong><span id="file-description">A clear photo of a single leaf works best.</span></div>
         <button class="secondary-button full-width" id="choose-button"><svg><use href="#upload"/></svg>Choose photo</button>
+        <details class="crop-coverage" id="crop-coverage" hidden>
+          <summary>Crops the final CNN covers</summary>
+          <p id="covered-crops"></p>
+          <p>A crop on this list can still have conditions outside the model’s labels.</p>
+        </details>
         <div class="crop-context" id="crop-controls" hidden>
           <label for="crop-context">Known crop (optional)</label>
           <select id="crop-context" aria-describedby="crop-guidance">
@@ -67,7 +72,7 @@
         <div class="model-grid" id="model-grid"></div>
         <div class="comparison-summary" id="comparison-summary" role="status"><span class="summary-symbol">i</span><div><strong>Read each model in context</strong><p>The final CNN and Create ML cover 177 labels. The earlier pilots cover three tomato conditions.</p></div></div>
         <section class="final-evaluation panel" aria-labelledby="final-score-title"><h3 id="final-score-title">Final model test results</h3><div id="final-score">Loading the saved evaluation…</div></section>
-        <p class="interpretation">LeafCheck is a classroom prototype. Scores are uncalibrated rankings of each model’s supported labels. For a diagnosis, consult a plant specialist.</p>
+        <p class="interpretation">Scores rank the saved labels. LeafCheck can give a high score to an unfamiliar plant or an unrelated object. For a diagnosis, consult a plant specialist.</p>
       </section>
     </section>
 

@@ -76,6 +76,9 @@ h2 { margin: 0; font-size: 15px; font-weight: 650; letter-spacing: -.2px; }
 .primary-button svg, .secondary-button svg { width: 16px; height: 16px; }
 .full-width { width: 100%; }
 .upload-panel .primary-button { margin-top: 9px; justify-content: space-between; padding: 12px 14px; }
+.crop-coverage { color: #435937; font-size: 12px; line-height: 1.6; margin: 9px 0; }
+.crop-coverage summary { cursor: pointer; font-weight: 550; }
+.crop-coverage p { margin: 6px 0; }
 .upload-note { font-size: 10px; color: #9ba48e; text-align: center; line-height: 1.7; margin: 9px 0 19px; }
 .examples { border-top: 1px solid #e9ede4; padding-top: 17px; }
 .examples h3 { font-size: 12px; font-weight: 550; margin: 0 0 11px; }
