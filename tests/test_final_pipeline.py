@@ -102,7 +102,24 @@ class FinalPipelineTests(unittest.TestCase):
     def test_mid_epoch_resume_matches_uninterrupted_mps_updates(self):
         self.check_resume_device("mps")
 
-    def check_resume_device(self, device):
+    def test_mid_epoch_resume_matches_style_mixing_cpu_updates(self):
+        self.check_resume_device("cpu", style_mixing=True)
+
+    def test_feature_style_swaps_statistics_and_leaves_eval_exact(self):
+        from leafcheck.feature_style import forward_style, mix_feature_statistics
+
+        values = torch.tensor([[[[0., 2.], [0., 2.]]], [[[10., 14.], [10., 14.]]]], requires_grad=True)
+        swapped = mix_feature_statistics(values, torch.tensor([1, 0]), torch.zeros(2, 1, 1, 1))
+        torch.testing.assert_close(swapped, values.flip(0))
+        swapped.sum().backward()
+        self.assertTrue(torch.isfinite(values.grad).all())
+
+        model = LeafCNN("residual_v1", channels=(4, 8, 16, 32)).eval()
+        batch = torch.arange(2 * 3 * 16 * 16, dtype=torch.float32).view(2, 3, 16, 16) / 1024
+        styled = forward_style(model, batch, np.random.default_rng(434), 1.0, 0.1)
+        torch.testing.assert_close(styled, model(batch), atol=0, rtol=0)
+
+    def check_resume_device(self, device, style_mixing=False):
         # Actual caches and augmentation are used; test data is never opened.
         with tempfile.TemporaryDirectory(dir=ROOT / "runs/final177", prefix="resume-check-") as directory:
             directory = Path(directory)
@@ -110,6 +127,9 @@ class FinalPipelineTests(unittest.TestCase):
                       "model": {"architecture": "plain_v1", "channels": [4, 8, 16, 32], "num_classes": 177, "dropout": .2},
                       "learning_rate": .002, "weight_decay": .0001, "batch_size": 8,
                       "augmentation": "dihedral", "max_epochs": 2, "min_epochs": 1, "patience": 1}
+            if style_mixing:
+                config["model"]["architecture"] = "residual_v1"
+                config.update(feature_style_probability=1.0, feature_style_alpha=0.1)
             path = directory / "config.json"; path.write_text(json.dumps(config))
             base = [sys.executable, "-m", "leafcheck.train"]
             def run(name, updates, resume=False):
