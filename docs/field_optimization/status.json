@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-26T05:19:26.253539+00:00",
+  "updated_utc": "2026-11-26T05:27:02.042571+00:00",
   "frozen_model": "artifacts/leafcheck177-v1/model.pt",
   "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
   "deployment_decision": "Retain the frozen 177-label full-image checkpoint and verified optional potato context. Use the app with the crop coverage and score explanation.",
@@ -11,7 +11,8 @@
     "runs/field_v9/potato-partial-seed434",
     "runs/field_v10/pretoria-baseline",
     "runs/field_v10/corn-gate-check",
-    "runs/field_v10/corn-seasonal-seed434"
+    "runs/field_v10/corn-seasonal-seed434",
+    "runs/field_v11/control"
   ],
   "active_training": true,
   "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev7.docx",
@@ -25,10 +26,11 @@
     "Bangladesh",
     "PlantCity",
     "Holeta and TLID",
-    "Hossain"
+    "Hossain",
+    "CoffeeLeaf-CO v2"
   ],
   "best_next_question": "Can mixable early CNN feature statistics improve joint classification across the four development sources?",
-  "next_action": "Finish the registered eight-epoch control, run the style arm sequentially, and compare both under the same D4 policy.",
+  "next_action": "Monitor the feature-style arm, compare both verified checkpoints, and decide under the registered field and master limits.",
   "latest_demo": "artifacts/LeafCheck-field-guidance-demo.zip",
   "demo_sha256": "000443dad48f0740e5f015282dd43c5d97f7d6e8967e3d883b484a59bc3091cc",
   "latest_potato_result": {
@@ -46,14 +48,24 @@
     "automatic_correct_crop_wrong_condition": 51
   },
   "active_run": {
-    "path": "runs/field_v11/control",
-    "log": "runs/field_v11/control.log",
-    "protocol": "configs/leafcheck_feature_style_v1.json"
+    "path": "runs/field_v11/feature_style",
+    "log": "runs/field_v11/feature_style.log",
+    "protocol": "configs/leafcheck_feature_style_v1.json",
+    "resume_verified_at": {
+      "epoch": 1,
+      "completed_batches": 3
+    }
   },
   "latest_seasonal_result": {
     "control_field_macro_f1": 0.23812643301670489,
     "treatment_field_macro_f1": 0.22141938729874772,
     "eligible": false,
     "evidence": "docs/field_optimization/corn_seasonal_study.json"
+  },
+  "reserved_coffee_field": {
+    "support": 114,
+    "fingerprint": "b8b4288addd3421e52ab1e66edcfab01a601d96f7fd36382c669ac1213f11eef",
+    "opened": false,
+    "evidence": "docs/field_optimization/coffee_holdout.md"
   }
 }

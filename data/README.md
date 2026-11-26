@@ -361,3 +361,11 @@ training photos.
   --training-addition data/processed/leafcheck_seasonal_corn_v1 \
   --output runs/corn-seasonal-replay
 ```
+
+### Reserved Colombian coffee evaluation source
+
+The [coffee intake audit](../docs/field_optimization/coffee_holdout.md) explains
+the archive reconciliation, exact source IDs, two condition labels and overlap
+screen. Restore the established releases and the Pretoria originals, then use
+`.venv/bin/python scripts/prepare_decafia_holdout.py`. Keep the resulting
+`leafcheck_decafia_v2` release outside fitting and routine validation.

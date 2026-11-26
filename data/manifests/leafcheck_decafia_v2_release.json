@@ -1,0 +1,18 @@
+{
+  "version": "leafcheck_decafia_v2",
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "candidates": 120,
+  "files_sha256": {
+    "manifest.csv": "4b87b8751d0227a0e174175c253e19a99239e6d9ed0aa8a03581282a4d4b1bac",
+    "source.json": "8ccfcd7fe88a6790e38704fde0ffd027cff7de5c778efba629a0ba6add41d19a",
+    "source_files.csv": "abf314da9ef7aa26168213b3d62041f8c5e9cb1a10a6ee3c07ba9768317cdc7f"
+  },
+  "test_only_counts": {
+    "coffee__healthy": 60,
+    "coffee__rust": 54
+  },
+  "exclusions": {
+    "existing_visual_candidate": 6
+  },
+  "fingerprint": "b8b4288addd3421e52ab1e66edcfab01a601d96f7fd36382c669ac1213f11eef"
+}
