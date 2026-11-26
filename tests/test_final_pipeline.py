@@ -1,11 +1,15 @@
 """Meaningful contract, metric and exact CPU resume regression checks."""
 
 import json
+from hashlib import sha256 as sha256_bytes
+from io import BytesIO
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
+from zipfile import ZipFile
 from PIL import Image, ImageOps
 import numpy as np
 import torch
@@ -82,7 +86,6 @@ class FinalPipelineTests(unittest.TestCase):
         self.check_resume_device("cpu")
 
     def test_modified_pixel_cache_is_rejected_before_training(self):
-        from unittest.mock import patch
         from leafcheck.data import PixelCache
         with tempfile.TemporaryDirectory() as directory:
             directory = Path(directory); path = directory / "train.npy"
@@ -97,6 +100,47 @@ class FinalPipelineTests(unittest.TestCase):
                 pixels = np.load(path, mmap_mode="r+"); pixels[0, 0, 0, 0] = 1; pixels.flush(); del pixels
                 with self.assertRaisesRegex(AssertionError, "integrity"):
                     PixelCache("train", 8, frozen)
+
+    def test_paired_training_addition_changes_only_the_aligned_extra_pixels(self):
+        from leafcheck.training_addition import PairedTrainingAddition
+
+        class Base:
+            labels = np.array([1, 2, 2])
+            pixels = np.stack([np.full((8, 8, 3), i, dtype=np.uint8) for i in (9, 19, 29)])
+
+            def __len__(self):
+                return len(self.labels)
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            original = BytesIO()
+            Image.new("RGB", (8, 8), (100, 100, 100)).save(original, format="JPEG")
+            member = "train/rust/image.jpg"
+            archive_path = root / "source.zip"
+            with ZipFile(archive_path, "w") as archive:
+                archive.writestr(member, original.getvalue())
+            release = {"base_fingerprint": "frozen", "source_split": "train", "role": "experimental training only",
+                       "class_name": "bean__rust", "archive": {"path": archive_path.name, "sha256": sha256(archive_path)},
+                       "members": [{"member": member, "class_name": "bean__rust",
+                                    "sha256": sha256_bytes(original.getvalue()).hexdigest()}]}
+            manifest = root / "manifest.json"
+            manifest.write_text(json.dumps(release))
+            options = {"manifest": manifest.name, "sha256": sha256(manifest)}
+            frozen = {"fingerprint": "frozen", "class_to_idx": {"bean__rust": 2}}
+            indices = np.array([3, 0, 2])
+            with patch("leafcheck.training_addition.ROOT", root):
+                repeat, field = [PairedTrainingAddition(Base(), dict(options, arm=arm), frozen, 8, 434)
+                                 for arm in ("matched_repeat", "new_field")]
+                repeat_images, repeat_labels = repeat.batch(indices)
+                field_images, field_labels = field.batch(indices)
+                self.assertEqual(repeat_labels.tolist(), [2, 1, 2])
+                self.assertTrue(torch.equal(repeat_labels, field_labels))
+                self.assertTrue(torch.equal(repeat_images[1:], field_images[1:]))
+                self.assertTrue(torch.equal(field_images[0], torch.full((8, 8, 3), 100, dtype=torch.uint8)))
+                self.assertFalse(torch.equal(repeat_images[0], field_images[0]))
+                archive_path.write_bytes(b"changed")
+                with self.assertRaisesRegex(ValueError, "archive changed"):
+                    PairedTrainingAddition(Base(), dict(options, arm="new_field"), frozen, 8, 434)
 
     @unittest.skipUnless(torch.backends.mps.is_available(), "MPS is unavailable")
     def test_mid_epoch_resume_matches_uninterrupted_mps_updates(self):
