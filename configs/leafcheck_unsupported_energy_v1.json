@@ -1,0 +1,8 @@
+{
+  "baseline_protocol": "leafcheck_unsupported_screen_v1.json",
+  "hypothesis": "Unnormalized class evidence may separate unsupported and supported uploads better than normalized softmax scores.",
+  "signals": ["single_view_logsumexp", "mean_dihedral_logsumexp"],
+  "minimum_auroc_each_group": 0.65,
+  "minimum_auroc_gain_each_group_vs_max_softmax": 0.05,
+  "decision": "Compare fixed unit-temperature scores on the same registered development images. No threshold is fitted. Any passing signal needs a separately frozen confirmation and must preserve known field coverage."
+}
