@@ -1,0 +1,69 @@
+{
+  "release_fingerprint": "954fbf09f46346c218013527159aa8543b9c66cb523b0e32a3478a7291810600",
+  "registered_photos": 473,
+  "included": 385,
+  "eligible_for_confirmation": true,
+  "scope": "Held-source confirmation under detached-leaf controlled framing. Represents one vendor-labeled capture day.",
+  "photo_audit": {
+    "counts": {
+      "tomato__early_blight": 204,
+      "tomato__healthy": 103,
+      "tomato__late_blight": 166
+    },
+    "dates": [
+      {
+        "label": "tomato__early_blight",
+        "day": "2025:02:25",
+        "count": 204
+      },
+      {
+        "label": "tomato__healthy",
+        "day": "2025:02:25",
+        "count": 103
+      },
+      {
+        "label": "tomato__late_blight",
+        "day": "2025:02:25",
+        "count": 166
+      }
+    ],
+    "dimensions": [
+      {
+        "label": "tomato__early_blight",
+        "size": [
+          4032,
+          3024
+        ],
+        "count": 204
+      },
+      {
+        "label": "tomato__healthy",
+        "size": [
+          4032,
+          3024
+        ],
+        "count": 103
+      },
+      {
+        "label": "tomato__late_blight",
+        "size": [
+          4032,
+          3024
+        ],
+        "count": 166
+      }
+    ],
+    "errors": []
+  },
+  "observed_examples": 30,
+  "visual_review": "All reviewed photos depict detached leaves on pale surfaces, sometimes with shadows or uneven lighting.",
+  "capture_group_policy": "Single entire source group, with no claim of independent specimens or site-level macro-F1.",
+  "prior_exclusions": {
+    "new_cluster_repeated_view": 72,
+    "existing_visual_candidate": 7,
+    "new_cluster_label_conflict": 9
+  },
+  "provenance": "Publisher identifies mobile-captured specimens near Khagan and Charabag, labeled by visual experts or observations. All downloaded bytes match publisher hashes.",
+  "risk": "Unobserved repeats, grouping below capture-day level and label errors may remain. The single crop and controlled framing limit conclusions about natural field uploads.",
+  "checked_before_inference": true
+}

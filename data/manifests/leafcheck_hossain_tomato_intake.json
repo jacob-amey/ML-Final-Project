@@ -1,0 +1,13 @@
+{
+  "version": "leafcheck_hossain_tomato_v1",
+  "source": "https://data.mendeley.com/datasets/93h9p62kg4/1",
+  "source_api": "https://data.mendeley.com/public-api/datasets/93h9p62kg4/files",
+  "license": "CC BY 4.0",
+  "role": "prospective_tomato_context_confirmation_test_only",
+  "selection": "All JPEG image records in the three named publisher folders. Audit content, related views, dates, and prior overlap before any inference. Keep the entire source outside training and development.",
+  "folders": {
+    "62462de6-c1a5-45c0-a5bb-3146efbb0073": ["Early Blight", "tomato__early_blight", 204],
+    "aab39320-ccd5-432e-a7e2-e4cfce59b57c": ["Healthy", "tomato__healthy", 103],
+    "cc572321-d6d9-44d7-9bca-2af1daa05cc8": ["Late Blight", "tomato__late_blight", 166]
+  }
+}

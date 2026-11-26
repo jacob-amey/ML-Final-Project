@@ -1,0 +1,21 @@
+{
+  "version": "leafcheck_hossain_tomato_v1",
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "candidates": 473,
+  "files_sha256": {
+    "manifest.csv": "a703173d5cf54c558665a2e9b874bd446bfdafaa72a29ff08ff19e81f7d3a67d",
+    "source.json": "ebd4d3b046e35532c0aac92cb517b6801eb4edd213653032dae3090f76c7b2c5",
+    "source_files.csv": "5535b5fc45892b7be805911cd5aafb433d6e3db34a3a2ae6d431387893a9029d"
+  },
+  "test_only_counts": {
+    "tomato__early_blight": 181,
+    "tomato__healthy": 98,
+    "tomato__late_blight": 106
+  },
+  "exclusions": {
+    "new_cluster_repeated_view": 72,
+    "existing_visual_candidate": 7,
+    "new_cluster_label_conflict": 9
+  },
+  "fingerprint": "954fbf09f46346c218013527159aa8543b9c66cb523b0e32a3478a7291810600"
+}

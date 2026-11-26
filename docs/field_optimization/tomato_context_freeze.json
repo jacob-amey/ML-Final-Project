@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-11-26T00:11:41.703890+00:00",
+  "protocol_sha256": "0c92182a7873cfb921c702ec87580734167ac4829300d7a1d4e46eb18a09bf06",
+  "development_sha256": "e3a9ec0d57ff3bd7b313ad298dde0c2c6d7311d1bd869610c180811cd13b881e",
+  "audit_sha256": "fe6b084ee7e153dbc1f57fb7c54f68ccf79487e69f737afe4be7d7ab94e39b46",
+  "evaluator_sha256": "628e73b9a0e5adc983d13f5b9e5b4ca9736d42b8f4600ede25ba8e4d83c9c638",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "class_map_sha256": "53534f8af1d4fda317df463c3dfe160d488dec15e9c16e52a81352bf86e4b03a",
+  "preprocessing_sha256": "e5f90e4252b3ee708a9fa0385346429b9bed758d3ad36e5ec6fc0fd3abeaade9",
+  "artifact_sha256": "1d04282dcea543ca339d6cdd22a171d43665086ac5b59a0b2effffbec54cc360",
+  "dataset_fingerprint": "954fbf09f46346c218013527159aa8543b9c66cb523b0e32a3478a7291810600",
+  "class_support": {
+    "tomato__early_blight": 181,
+    "tomato__healthy": 98,
+    "tomato__late_blight": 106
+  }
+}
