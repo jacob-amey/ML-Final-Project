@@ -16,7 +16,7 @@ from .unsupported_screen import ARTIFACT, MANIFEST, RAW, auroc, pixels, read, ro
 PLAN = ROOT / "configs/leafcheck_view_agreement_v1.json"
 REFERENCE = "max_softmax"
 CANDIDATE = "negative_disagreement"
-QUIT = torch.finfo(torch.float32).tiny
+MIN_PROBABILITY = torch.finfo(torch.float32).tiny
 
 
 @torch.inference_mode()
@@ -38,7 +38,8 @@ def measurements(predictor, raw):
                 raise ValueError("View average changed the deployed label")
             checked = True
         confidence, top = p.max(1)
-        divergence = (distributions * (distributions.clamp_min(QUIT).log() - p.clamp_min(QUIT).log())).sum(2).mean(0)
+        log_ratio = distributions.clamp_min(MIN_PROBABILITY).log() - p.clamp_min(MIN_PROBABILITY).log()
+        divergence = (distributions * log_ratio).sum(2).mean(0)
         match = (distributions.argmax(2) == top).float().mean(0)
         scores.append(torch.stack((confidence, -divergence.clamp_min(0), match), dim=1).cpu())
         predictions.append(top.cpu())
@@ -60,8 +61,8 @@ def run(output):
     if plan["checkpoint_sha256"] != predictor.metadata["checkpoint_sha256"] or predictor.policy["name"] != "d4_probability_mean":
         raise ValueError("Unexpected frozen checkpoint or inference policy")
     membership, fingerprints = development_rows(plan["checkpoint_sha256"])
-    known = development_pixels(membership, predictor.spec["input_size"], predictor.artifact["class_to_idx"]
-                               if "class_to_idx" in predictor.artifact else dict(zip(predictor.classes, range(177))))
+    class_to_idx = {name: index for index, name in enumerate(predictor.classes)}
+    known = development_pixels(membership, predictor.spec["input_size"], class_to_idx)
     sources = {}
     for name in plan["development_supported"]:
         raw, truth = known[name]

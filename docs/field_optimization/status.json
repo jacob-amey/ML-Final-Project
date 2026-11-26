@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-26T18:10:09.409203+00:00",
+  "updated_utc": "2026-11-26T18:14:54.773706+00:00",
   "frozen_model": "artifacts/leafcheck177-v1/model.pt",
   "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
   "deployment_decision": "Retain the frozen 177-label checkpoint and optional potato context. The packaged app lists the exact conditions by crop.",
@@ -122,7 +122,7 @@
     ],
     "training_images_per_epoch": 59383,
     "epochs_per_arm": 12,
-    "latest_observation": "matched_repeat initialized successfully on MPS"
+    "latest_observation": "matched_repeat completed epoch 2 and is writing epoch 3 checkpoints"
   },
   "rice_source_separated_intake": {
     "training": 375,
@@ -130,5 +130,11 @@
     "hasan": 138,
     "banglarice": 119,
     "evidence": "docs/field_optimization/rice_field_training_study.md"
+  },
+  "view_agreement_result": {
+    "correctness_auc": 0.5953045404208195,
+    "reference_auc": 0.5141528239202657,
+    "eligible": false,
+    "evidence": "docs/field_optimization/view_agreement_result.json"
   }
 }

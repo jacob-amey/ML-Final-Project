@@ -1,0 +1,120 @@
+{
+  "created_utc": "2026-11-26T18:14:14.467591+00:00",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "plan_sha256": "5a1883b9c64f879c39c3d96fd6538575418c3de0ce8de10fe8f9ec51d3c8cbe5",
+  "supported_fingerprints": [
+    "94a9489fce692e2b8d21adc312fc882ae42de23686f26319cecc51d07150b781",
+    "61cf3f0df4c82f6f3d5f1998de98299900bb40ac01bfd7d3e1431d3f9f432ee6",
+    "48b736fb42c333debc54b86be4aa5c6c5a7812e22e0c4b9e62507e5dd201da15"
+  ],
+  "unsupported_manifest_sha256": "a32f4d1b10b0cdd7bcea629380451e522689998bcd6a10e045faa8c0614efccc",
+  "unsupported": {
+    "nonplant": {
+      "count": 22,
+      "by_source": {
+        "sheikh": {
+          "max_softmax": 0.7015216543113539,
+          "negative_disagreement": 0.6303160358954351,
+          "top_view_agreement": 0.6173429574717129
+        },
+        "mduma": {
+          "max_softmax": 0.598233520034468,
+          "negative_disagreement": 0.5465316673847479,
+          "top_view_agreement": 0.5358681602757432
+        },
+        "pakistan": {
+          "max_softmax": 0.44622279129321385,
+          "negative_disagreement": 0.37964148527528807,
+          "top_view_agreement": 0.4668693982074264
+        },
+        "pretoria": {
+          "max_softmax": 0.7098646034816247,
+          "negative_disagreement": 0.6968085106382979,
+          "top_view_agreement": 0.6245164410058027
+        }
+      },
+      "source_mean": {
+        "max_softmax": 0.6139606422801651,
+        "negative_disagreement": 0.5633244247984422,
+        "top_view_agreement": 0.5611492392401712
+      }
+    },
+    "unsupported_plant": {
+      "count": 23,
+      "by_source": {
+        "sheikh": {
+          "max_softmax": 0.6219443926105617,
+          "negative_disagreement": 0.5833177831685016,
+          "top_view_agreement": 0.47676805374136966
+        },
+        "mduma": {
+          "max_softmax": 0.47372759118071295,
+          "negative_disagreement": 0.48588501957552027,
+          "top_view_agreement": 0.3924376674222131
+        },
+        "pakistan": {
+          "max_softmax": 0.2743417023882425,
+          "negative_disagreement": 0.24892835272504593,
+          "top_view_agreement": 0.3312921004286589
+        },
+        "pretoria": {
+          "max_softmax": 0.6470860314523589,
+          "negative_disagreement": 0.6840888066604995,
+          "top_view_agreement": 0.4838112858464385
+        }
+      },
+      "source_mean": {
+        "max_softmax": 0.5042749294079689,
+        "negative_disagreement": 0.5005549905323918,
+        "top_view_agreement": 0.42107727685967006
+      }
+    }
+  },
+  "pooled_correctness": {
+    "max_softmax": 0.5141528239202657,
+    "negative_disagreement": 0.5953045404208195,
+    "top_view_agreement": 0.5338648947951273
+  },
+  "by_source_correctness": {
+    "sheikh": {
+      "count": 233,
+      "correct": 0,
+      "auc": {
+        "max_softmax": null,
+        "negative_disagreement": null,
+        "top_view_agreement": null
+      }
+    },
+    "mduma": {
+      "count": 211,
+      "correct": 7,
+      "auc": {
+        "max_softmax": 0.49789915966386555,
+        "negative_disagreement": 0.5812324929971989,
+        "top_view_agreement": 0.7013305322128851
+      }
+    },
+    "pakistan": {
+      "count": 142,
+      "correct": 7,
+      "auc": {
+        "max_softmax": 0.344973544973545,
+        "negative_disagreement": 0.5322751322751322,
+        "top_view_agreement": 0.5037037037037037
+      }
+    },
+    "pretoria": {
+      "count": 94,
+      "correct": 21,
+      "auc": {
+        "max_softmax": 0.5401174168297456,
+        "negative_disagreement": 0.5759947814742336,
+        "top_view_agreement": 0.4507501630789302
+      }
+    }
+  },
+  "advance": false,
+  "test_opened": false,
+  "threshold_fit": false,
+  "deployment_changed": false
+}
