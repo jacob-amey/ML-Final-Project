@@ -1,0 +1,19 @@
+{
+  "version": "leafcheck_bangladesh_corn_v1",
+  "base_release": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "candidates": 349,
+  "files_sha256": {
+    "manifest.csv": "cd16d2707269c889818bd910a8879af38d3740f68cd6a6cab93ca8172d7b5532",
+    "source.json": "7348e81fb87bc29886b6e896388f0e701faf389f20f8083050b733dca57acced",
+    "source_files.csv": "7b07aaf35691223ce7d2d0eb18259a5f8e9677e0c98c5d977cb5cca85653a255"
+  },
+  "train_only_counts": {
+    "corn__common_rust": 17,
+    "corn__gray_leaf_spot": 12,
+    "corn__healthy": 80
+  },
+  "exclusions": {
+    "new_cluster_repeated_view": 240
+  },
+  "fingerprint": "3e354ae35b53db3a262224647375ea13a3a3c4af6381a1f680a19788ef36f4cc"
+}

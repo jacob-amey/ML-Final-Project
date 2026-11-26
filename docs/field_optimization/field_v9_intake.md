@@ -90,3 +90,21 @@ errors. It provides no estimate of general reliability across all crops.
 `.venv/bin/python -m leafcheck.pretoria_baseline --output runs/field_v10/pretoria-baseline-replay`
 after restoring the expanded intake. The course and supplementary evaluation
 images were outside this comparison.
+
+### Matching the corn intake to the study
+
+The [Rabbany et al. release](https://data.mendeley.com/datasets/sb4wwjs8bz/1)
+provided 349 verified original JPEGs in the three suitable source folders.
+The reviewed sample mainly shows detached leaves with pale backing.
+The screening retained 80 healthy, 17 common-rust, and 12 gray-leaf-spot
+views. It excluded 240 possible repeats. A seeded visual sample of 18
+excluded/keeper pairs showed repeated framing of the same leaves or leaf
+sections. This supports the precaution without establishing specimen
+identity for every photo.
+
+The [registered corn comparison](../../configs/leafcheck_corn_field_v1.json)
+requires at least 50 retained images in every prospective source class.
+The intake failed in two classes. The training entry point confirmed the
+gate before creating a run or checkpoint. The release is available for
+reproduction and remains unused in training or scoring. See the
+[screening decision](bangladesh_corn_intake.json).

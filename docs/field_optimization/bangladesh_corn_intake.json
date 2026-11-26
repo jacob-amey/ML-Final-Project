@@ -1,0 +1,27 @@
+{
+  "release_fingerprint": "3e354ae35b53db3a262224647375ea13a3a3c4af6381a1f680a19788ef36f4cc",
+  "registry_sha256": "7b07aaf35691223ce7d2d0eb18259a5f8e9677e0c98c5d977cb5cca85653a255",
+  "distinct_exact_decoded_hashes": 338,
+  "retained_views": {
+    "corn__common_rust": 17,
+    "corn__gray_leaf_spot": 12,
+    "corn__healthy": 80
+  },
+  "excluded": {
+    "new_cluster_repeated_view": 240
+  },
+  "visual_intake_sample": {
+    "total": 24,
+    "finding": "Mostly detached leaves on pale backing. No EXIF capture date in the sample."
+  },
+  "visual_repeat_sample": {
+    "pairs": 18,
+    "method": "Six seeded excluded/keeper pairs per label.",
+    "finding": "The reviewed pairs showed similar leaf and lesion geometry and near-identical framing."
+  },
+  "minimum_retained_per_class": 50,
+  "passed": false,
+  "training_started": false,
+  "test_used": false,
+  "training_gate_output": "Insufficient training support after source screening"
+}
