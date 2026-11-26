@@ -1,0 +1,37 @@
+{
+  "updated_utc": "2026-11-26T00:04:26.544335+00:00",
+  "frozen_model": "artifacts/leafcheck177-v1/model.pt",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "deployment_decision": "Retain the validated 177-label full-image checkpoint and the verified optional potato context.",
+  "latest_completed_runs": [
+    "runs/field_v5/tomato_specialist",
+    "runs/field_v6/crop-434-recovered",
+    "runs/field_v6/crop-435",
+    "runs/field_v7/center-view.json",
+    "runs/field_v7/safari-434"
+  ],
+  "active_training": false,
+  "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev3.docx",
+  "report_sha256": "243be89327fb8715ab94bf9b6bcf66dcd49f744e004d7f420faa635f77bc094c",
+  "protected_confirmations": [
+    "course holdout",
+    "PlantDoc",
+    "PLDD-UP",
+    "Taiwan",
+    "Okara",
+    "Bangladesh",
+    "PlantCity",
+    "Holeta and TLID"
+  ],
+  "best_next_question": "Can the frozen 177-label scorer use explicitly supplied tomato context to improve joint correctness on independent photos without hurting late-blight recall, while keeping auto mode identical?",
+  "development_evidence": {
+    "source": "runs/field_v5/tomato_specialist",
+    "sheikh_automatic_correct": 0,
+    "sheikh_provided_tomato_correct": 15,
+    "sheikh_total": 233,
+    "pakistan_automatic_correct": 7,
+    "pakistan_provided_tomato_correct": 27,
+    "pakistan_total": 142
+  },
+  "next_action": "Register a context-only comparison based on the grouped development outcomes. Screen a new provenance-confirmed real tomato capture source for confirmation. Use no opened holdout for selection. In parallel, use identifiable crop imagery to design a full 177-label from-scratch shared crop-and-condition supervision trial."
+}

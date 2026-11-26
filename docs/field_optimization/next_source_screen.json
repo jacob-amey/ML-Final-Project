@@ -1,0 +1,226 @@
+{
+  "agri_vision4": {
+    "source": "https://data.mendeley.com/datasets/8t6k37ztxc/1",
+    "archive_name": "Orginal_Dataset.zip",
+    "publisher_sha256": "d8a5493ecc8dd73f74eaffb473615fc9c07f9896f7bf93f102dc43122aaf36cd",
+    "archive_size": 5144041703,
+    "directory_bytes": 2000000,
+    "directory_sha256": "d23fd74bf2357c0ea605112294e7445f8a4774954acbdb3c047abab56248d408",
+    "image_folders": {
+      "Orginal_Dataset/Batol_Gourd/Alternaria_Leaf_Blight": 303,
+      "Orginal_Dataset/Batol_Gourd/Anthracnose": 276,
+      "Orginal_Dataset/Batol_Gourd/Downy_Mildew": 286,
+      "Orginal_Dataset/Batol_Gourd/Early_Alternaria_Leaf_Blight": 179,
+      "Orginal_Dataset/Batol_Gourd/Fungal_Damage_Leaf": 39,
+      "Orginal_Dataset/Batol_Gourd/Healthy": 260,
+      "Orginal_Dataset/Batol_Gourd/Mosaic_Virus": 315,
+      "Orginal_Dataset/papaya_main_dataset/Bacterial_Blight": 183,
+      "Orginal_Dataset/papaya_main_dataset/Carica_Insect_Hole": 318,
+      "Orginal_Dataset/papaya_main_dataset/Curled_Yellow_Spot": 538,
+      "Orginal_Dataset/papaya_main_dataset/healthy_leaf": 189,
+      "Orginal_Dataset/papaya_main_dataset/Mosaic_Virus": 119,
+      "Orginal_Dataset/papaya_main_dataset/pathogen_symptoms": 286,
+      "Orginal_Dataset/papaya_main_dataset/Yellow_Necrotic_Spots_Holes": 51,
+      "Orginal_Dataset/Tomato/Downy Mildew": 57,
+      "Orginal_Dataset/Tomato/Healthy": 288,
+      "Orginal_Dataset/Tomato/Mosaic": 195,
+      "Orginal_Dataset/Tomato/Spot": 311,
+      "Orginal_Dataset/Tomato/white_spot": 65,
+      "Orginal_Dataset/Zucchini_Original/Angular_Leaf_Spot": 120,
+      "Orginal_Dataset/Zucchini_Original/Anthracnose": 129,
+      "Orginal_Dataset/Zucchini_Original/Downy_Midew": 153,
+      "Orginal_Dataset/Zucchini_Original/Dry_Leaf": 67,
+      "Orginal_Dataset/Zucchini_Original/Healthy": 88,
+      "Orginal_Dataset/Zucchini_Original/Insect_Damage": 78,
+      "Orginal_Dataset/Zucchini_Original/Iron_Chlorosis_Damage": 65,
+      "Orginal_Dataset/Zucchini_Original/Xanthomonas_Leaf_Spot": 86,
+      "Orginal_Dataset/Zucchini_Original/Yellow_Mosaic_Virus": 202
+    },
+    "inference_performed": false,
+    "image_folder_count": {
+      "Orginal_Dataset/Batol_Gourd/Alternaria_Leaf_Blight": 303,
+      "Orginal_Dataset/Batol_Gourd/Anthracnose": 276,
+      "Orginal_Dataset/Batol_Gourd/Downy_Mildew": 286,
+      "Orginal_Dataset/Batol_Gourd/Early_Alternaria_Leaf_Blight": 179,
+      "Orginal_Dataset/Batol_Gourd/Fungal_Damage_Leaf": 39,
+      "Orginal_Dataset/Batol_Gourd/Healthy": 260,
+      "Orginal_Dataset/Batol_Gourd/Mosaic_Virus": 315,
+      "Orginal_Dataset/papaya_main_dataset/Bacterial_Blight": 183,
+      "Orginal_Dataset/papaya_main_dataset/Carica_Insect_Hole": 318,
+      "Orginal_Dataset/papaya_main_dataset/Curled_Yellow_Spot": 538,
+      "Orginal_Dataset/papaya_main_dataset/healthy_leaf": 189,
+      "Orginal_Dataset/papaya_main_dataset/Mosaic_Virus": 119,
+      "Orginal_Dataset/papaya_main_dataset/pathogen_symptoms": 286,
+      "Orginal_Dataset/papaya_main_dataset/Yellow_Necrotic_Spots_Holes": 51,
+      "Orginal_Dataset/Tomato/Downy Mildew": 57,
+      "Orginal_Dataset/Tomato/Healthy": 288,
+      "Orginal_Dataset/Tomato/Mosaic": 195,
+      "Orginal_Dataset/Tomato/Spot": 311,
+      "Orginal_Dataset/Tomato/white_spot": 65,
+      "Orginal_Dataset/Zucchini_Original/Angular_Leaf_Spot": 120,
+      "Orginal_Dataset/Zucchini_Original/Anthracnose": 129,
+      "Orginal_Dataset/Zucchini_Original/Downy_Midew": 153,
+      "Orginal_Dataset/Zucchini_Original/Dry_Leaf": 67,
+      "Orginal_Dataset/Zucchini_Original/Healthy": 88,
+      "Orginal_Dataset/Zucchini_Original/Insect_Damage": 78,
+      "Orginal_Dataset/Zucchini_Original/Iron_Chlorosis_Damage": 65,
+      "Orginal_Dataset/Zucchini_Original/Xanthomonas_Leaf_Spot": 86,
+      "Orginal_Dataset/Zucchini_Original/Yellow_Mosaic_Virus": 202
+    },
+    "catalog_cross_folder_clusters": 254,
+    "catalog_cross_folder_entries": 704,
+    "entry_counts_by_folder": {
+      "Orginal_Dataset/Tomato/Downy Mildew": 1,
+      "Orginal_Dataset/Tomato/Spot": 5,
+      "Orginal_Dataset/Tomato/Healthy": 8,
+      "Orginal_Dataset/Tomato/Mosaic": 4,
+      "Orginal_Dataset/Zucchini_Original/Angular_Leaf_Spot": 110,
+      "Orginal_Dataset/Zucchini_Original/Anthracnose": 83,
+      "Orginal_Dataset/Zucchini_Original/Downy_Midew": 123,
+      "Orginal_Dataset/Zucchini_Original/Iron_Chlorosis_Damage": 64,
+      "Orginal_Dataset/Zucchini_Original/Dry_Leaf": 62,
+      "Orginal_Dataset/Zucchini_Original/Yellow_Mosaic_Virus": 18,
+      "Orginal_Dataset/Zucchini_Original/Insect_Damage": 68,
+      "Orginal_Dataset/Zucchini_Original/Xanthomonas_Leaf_Spot": 83,
+      "Orginal_Dataset/Zucchini_Original/Healthy": 75
+    },
+    "example_members_share_size_crc": [
+      [
+        "Orginal_Dataset/Zucchini_Original/Angular_Leaf_Spot/1730294736960.png",
+        395937,
+        2349863857
+      ],
+      [
+        "Orginal_Dataset/Zucchini_Original/Anthracnose/1730294736960.png",
+        395937,
+        2349863857
+      ],
+      [
+        "Orginal_Dataset/Zucchini_Original/Downy_Midew/1730294736960.png",
+        395937,
+        2349863857
+      ]
+    ],
+    "exact_bytes_read": true,
+    "verified_identical_bytes": {
+      "Orginal_Dataset/Zucchini_Original/Angular_Leaf_Spot/1730294736960.png": "4672257daa2db03d6733e67e83fc428714448be4fd9c9d0336d1d2cbd03f1a67",
+      "Orginal_Dataset/Zucchini_Original/Anthracnose/1730294736960.png": "4672257daa2db03d6733e67e83fc428714448be4fd9c9d0336d1d2cbd03f1a67",
+      "Orginal_Dataset/Zucchini_Original/Downy_Midew/1730294736960.png": "4672257daa2db03d6733e67e83fc428714448be4fd9c9d0336d1d2cbd03f1a67"
+    },
+    "disposition": "Exclude this release from condition training and evaluation unless label conflicts are resolved independently. No scores computed.",
+    "readme_sha256": "036e0caffd2207f0a6fed64030b96796a422ce83d6cce482040d71f9020cfa82"
+  },
+  "sarkar_mojumdar": {
+    "source": "https://data.mendeley.com/datasets/xc94xbg239/1",
+    "archive_name": "Tomato.zip",
+    "publisher_sha256": "5121ccfd42622e2728cc754d5f00ea63250d65954fe0dbd94df6ee911fd50d13",
+    "archive_size": 4423476057,
+    "directory_bytes": 2000000,
+    "directory_sha256": "178202a9fc1da88f2c147079b56783465420b940bc6217e9e9ce796fc3408ef1",
+    "image_folders": {
+      "Healthy_Leaf": 1013,
+      "Infected_Fruit": 1065,
+      "Infected_Leaf": 1050,
+      "Healthy_Fruit": 1025
+    },
+    "inference_performed": false,
+    "disposition": "Infected Leaf archive folder merges conditions. No condition-specific annotations found at catalog preflight."
+  },
+  "tomato_village": {
+    "source": "https://github.com/mamta-joshi-gehlot/Tomato-Village",
+    "disposition": "The author repository metadata contains no identified license. Keep out until image reuse terms are verified."
+  },
+  "tomato_disease_candidate": {
+    "source": "https://doi.org/10.5281/zenodo.15868289",
+    "license": "CC BY 4.0",
+    "archive_bytes": 544524808,
+    "publisher_md5": "f41cf311fdad64d87f5d41a89be2ccfb",
+    "disposition": "Keep outside fitting and confirmation. No class-index table in the archive, and catalog filenames refer to sources already present in the master. The public download timed out after 119489340 of 544524808 bytes; the verified range inventory is intact.",
+    "archive_directory_sha256": "09bb0b2b1401646e295866538925bf97c8fad3986810358debb3624266554d48",
+    "image_folders": {
+      "Tomato-Disease/test/images": 222,
+      "Tomato-Disease/train/images": 1769,
+      "Tomato-Disease/valid/images": 221
+    },
+    "label_files": 2212,
+    "label_examples": [
+      "Tomato-Disease/test/labels/1024_x_576_-_alternaria_early_infection_symptoms_spreading_jpg.rf.8ed534f58a0fd4a8f81b4177395c7804.txt",
+      "Tomato-Disease/test/labels/1c6727083428411181e9b58b4778c6b7_jpg.rf.a7bd3f76d5064106bbc87812c4acb776.txt",
+      "Tomato-Disease/test/labels/1f675039-385d-4438-b157-db0c95673580___PSU_CG-2100_JPG.rf.4ac66f69c2fefaac72d7ed1b65008fd8.txt",
+      "Tomato-Disease/test/labels/20100816earlyblight_jpg.rf.991af4f0b91a2a6b82e2d40c61b267f5.txt",
+      "Tomato-Disease/test/labels/20100824septoria_jpg.rf.7a2314a7539a853e779496b7729fd9bc.txt",
+      "Tomato-Disease/test/labels/2014-08-27-2B-2BCloser-2BView-2Bof-2BSeptoria-2BLeaf-2BSpot_jpg.rf.fbd09bc3ce1c2562a382b2c657cfc885.txt",
+      "Tomato-Disease/test/labels/2619_600_jpg.rf.6187a967371ddbac5b4b701e58200072.txt",
+      "Tomato-Disease/test/labels/2976_1600_jpg.rf.e536314a4a35fbbd00d7abed57f5a862.txt",
+      "Tomato-Disease/test/labels/298482_20210910_2_2_b6_3_2_12_1_0_jpg.rf.86da8788ae4f130c65b2a08575279f6e.txt",
+      "Tomato-Disease/test/labels/2afd76a3-68f8-42cf-a68a-2f3076168dc0___PSU_CG-2260_JPG.rf.c59533d615d636a34236e5ad16e940d6.txt",
+      "Tomato-Disease/test/labels/2c4x4n7_jpg.rf.0009e00558597f0b82790ac25f538ad3.txt",
+      "Tomato-Disease/test/labels/30b_spider_mite_damage_on_tomato_jpg.rf.28655c8fc5dacea0b6ae5cd1b6a6d57c.txt",
+      "Tomato-Disease/test/labels/310184_20210914_2_2_b6_3_2_12_1_26_jpg.rf.8b680a8d48c65778c6f2dc3c641ffe9f.txt",
+      "Tomato-Disease/test/labels/322674_20210916_2_2_b6_3_2_12_1_33_jpg.rf.300451fcd989d7c98420e553913f2b9c.txt",
+      "Tomato-Disease/test/labels/322677_20210916_2_2_b6_3_2_12_1_36_jpg.rf.eb9882a95b4729553754a075ee035197.txt"
+    ]
+  },
+  "greenhouse_late_blight": {
+    "source": "https://github.com/BaxaDE/tomato-disease-dataset",
+    "tree_sha1": "fbf7d44d3adfdbf80e4cce9614e9f7e4dedc1482",
+    "license": "MIT",
+    "catalog_image_count": 2404,
+    "master_casefold_name_matches": {
+      "test": 209,
+      "train": 1298,
+      "val": 404,
+      "excluded": 10
+    },
+    "master_identical_git_blob_matches": {
+      "test": 209,
+      "train": 1298,
+      "val": 404
+    },
+    "examples": {
+      "test": [
+        {
+          "source_member": "0%/0031da2a-8edd-468f-a8b1-106657717a32___RS_HL 0105.JPG",
+          "git_blob": "d3d292d2751083bf4d775ffd8fa068291fa70dce",
+          "class_name": "tomato__healthy",
+          "image_id": "sha256:fc4556527d5d059c9259d993b9b4774a2cee841b6cfab0444da17a6c0586d491"
+        },
+        {
+          "source_member": "0%/12c28bfa-a576-4787-8d4e-a500ac446766___RS_HL 0526.JPG",
+          "git_blob": "9b58b0e5d92b6236c0b43cd17fcd6908a0f554c0",
+          "class_name": "tomato__healthy",
+          "image_id": "sha256:ce8e0c187125d98d6e0b9f5d961c2cdab312689ca28588c9b3d64ba70361589f"
+        }
+      ],
+      "train": [
+        {
+          "source_member": "0%/017a4026-813a-4983-887a-4052bb78c397___RS_HL 0218.JPG",
+          "git_blob": "0123e6c11b29115a523eb238d2af406db268387b",
+          "class_name": "tomato__healthy",
+          "image_id": "sha256:c6be05aae640885191e0b84c5aaa70c0a3ae4fd14aa41d3b226bf3ff61d42bd2"
+        },
+        {
+          "source_member": "0%/025bc454-a051-42d2-b547-316f8cc3dc55___GH_HL Leaf 297.JPG",
+          "git_blob": "300499dc66c68b9cb65b6e8e7003adad09649264",
+          "class_name": "tomato__healthy",
+          "image_id": "sha256:f6d7742faadacf32865788713283c2ccb0f340f1d91f9d2a27ec30267be5a56c"
+        }
+      ],
+      "val": [
+        {
+          "source_member": "0%/04dec2d5-560b-4f34-a4a1-36b034031e4d___RS_HL 0516.JPG",
+          "git_blob": "bcb522ad72c7ad4995e47455623a75e914445198",
+          "class_name": "tomato__healthy",
+          "image_id": "sha256:577830c97da8c8790545fb4a07611a61260badedd736f73feedb3f6432cd49d1"
+        },
+        {
+          "source_member": "0%/07b44f68-fa0b-44b5-91cc-c6a7144fcc93___RS_HL 0357.JPG",
+          "git_blob": "96a9429a2b8f91d37712ae52b9249522a9a65a1b",
+          "class_name": "tomato__healthy",
+          "image_id": "sha256:974a73b456208af3ab3916c0046f63421104d8253ad894de2245331d45332d74"
+        }
+      ]
+    },
+    "disposition": "Do not treat this repository as independent. It reuses master photos, including the reserved test. Keep the whole source out of follow-up fitting and confirmation."
+  }
+}

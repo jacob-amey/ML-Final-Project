@@ -589,3 +589,9 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   exactly for every upload. These cases demonstrate model errors on
   publisher-labeled examples. The team's original photos are unverified.
   [Upload replay](field_optimization/plantcity_upload_replay.json)
+- Screened additional tomato sources before admitting photos. One
+  candidate archive contained the same zucchini image in three disease
+  folders. A greenhouse late-blight repository contained 1,911 exact
+  matches to included master images, including 209 from the course
+  holdout. Neither release was used for condition fitting or evaluation.
+  [Catalog disposition and byte evidence](field_optimization/next_source_screen.json)
