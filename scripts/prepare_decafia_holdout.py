@@ -43,6 +43,11 @@ def build(output):
         with archive.open(f"{PREFIX}/provenance_manifest.csv") as stream:
             manifest = list(csv.DictReader(io.TextIOWrapper(stream, encoding="utf-8-sig")))
         names = set(archive.namelist())
+        archive_images = defaultdict(list)
+        for path in names:
+            parts = PurePosixPath(path).parts
+            if len(parts) == 4 and parts[:2] == (PREFIX, "images") and parts[2] in {"train", "val", "test"}:
+                archive_images[parts[-1]].append(path)
         for row in manifest:
             if row["inferred_source"] != "own_field":
                 continue
@@ -55,9 +60,15 @@ def build(output):
                 label = "coffee__healthy"
             else:
                 continue
-            member = f"{PREFIX}/images/{row['split']}/{filename}"
-            sidecar = f"{PREFIX}/labels/{row['split']}/{PurePosixPath(filename).stem}.txt"
-            if member not in names or sidecar not in names:
+            # The v2 archive redistributed images without updating the CSV's split column.
+            # Use the unique archive path, then verify bytes against the declared hash.
+            matches = archive_images[filename]
+            if len(matches) != 1:
+                raise ValueError(f"No unique archived image for {filename}")
+            member = matches[0]
+            archive_split = PurePosixPath(member).parts[2]
+            sidecar = f"{PREFIX}/labels/{archive_split}/{PurePosixPath(filename).stem}.txt"
+            if sidecar not in names:
                 raise ValueError(f"An own-field image or annotation is absent: {filename}")
             pool[label].append((row, member, sidecar))
         if {key: len(items) for key, items in pool.items()} != plan["expected_compatible_catalog_counts"]:
