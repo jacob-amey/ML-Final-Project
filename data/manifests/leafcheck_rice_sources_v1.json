@@ -1,0 +1,56 @@
+{
+  "publisher": "https://data.mendeley.com/datasets/86s4jzj2m4/3",
+  "license": "CC BY 4.0",
+  "archive_url": "https://data.mendeley.com/public-files/datasets/86s4jzj2m4/files/bdd5d753-3c16-4491-bc4a-5d003ec9e386/file_downloaded",
+  "archive_size": 5632829086,
+  "publisher_archive_sha256": "00999f0aa30d7063fe32befefd51317b9a7cb0f8fdf0ed1e1df165eebf47110e",
+  "directory_bytes": 8000000,
+  "directory_sha256": "18b104ba1c46e0791e3645073d03b1f9a128b61cdb715928d1eaf343e05ad076",
+  "related_source_files": [
+    {
+      "filename": "Annotation_Protocol.pdf",
+      "path": "data/raw/leafcheck_field_v12/rice-intake/86s4jzj2m4-Annotation_Protocol.pdf",
+      "url": "https://data.mendeley.com/public-files/datasets/86s4jzj2m4/files/d74cf478-8891-4424-ace7-9c0bb0a33595/file_downloaded",
+      "sha256": "5f5260ea4557876759b1776c2c31a1e64f7759412ebc2b6bf7b02d4183daeb98",
+      "bytes": 174329,
+      "publisher": "https://data.mendeley.com/datasets/86s4jzj2m4/3",
+      "license": "CC BY 4.0"
+    },
+    {
+      "filename": "Dataset metadata.xlsx",
+      "path": "data/raw/leafcheck_field_v12/rice-intake/86s4jzj2m4-Dataset metadata.xlsx",
+      "url": "https://data.mendeley.com/public-files/datasets/86s4jzj2m4/files/e7e5cb40-4639-4cc3-8f18-28139b5ca06d/file_downloaded",
+      "sha256": "17d635b5b1f7ecee1c1fd2e907f8f02b9e4f21462b29b7ed35da3ea61d87ab41",
+      "bytes": 467612,
+      "publisher": "https://data.mendeley.com/datasets/86s4jzj2m4/3",
+      "license": "CC BY 4.0"
+    },
+    {
+      "filename": "README.md",
+      "path": "data/raw/leafcheck_field_v12/rice-intake/86s4jzj2m4-README.md",
+      "url": "https://data.mendeley.com/public-files/datasets/86s4jzj2m4/files/a3ff2eef-7e94-4f99-a5a5-dab782134652/file_downloaded",
+      "sha256": "b9017ba297b8622c0b04b2bdd652dad92e9d1040635a6284aa1dc2c910c21bcf",
+      "bytes": 11997,
+      "publisher": "https://data.mendeley.com/datasets/86s4jzj2m4/3",
+      "license": "CC BY 4.0"
+    },
+    {
+      "filename": "RiceLeafBD.rar",
+      "path": "data/raw/leafcheck_field_v12/rice-intake/sjkptpgv79-RiceLeafBD.rar",
+      "url": "https://data.mendeley.com/public-files/datasets/sjkptpgv79/files/4f00535b-3d8e-47a0-b9ec-ad5ed263e6ab/file_downloaded",
+      "sha256": "ea5da4b300af32998d4d2c396f5033b3d82843f5e9629a15bfc1131f744c9d2b",
+      "bytes": 21642468,
+      "publisher": "https://data.mendeley.com/datasets/sjkptpgv79/1",
+      "license": "CC BY 4.0"
+    }
+  ],
+  "roles": "Source preflight only; preserve disease family and exact label distinctions.",
+  "media_per_label": 15,
+  "media_per_capture_day_per_label": 4,
+  "conditions": {
+    "Healthy": "rice__healthy",
+    "Brown spot": "rice__brown_spot",
+    "Blast": "diagnostic:rice_blast_leaf_family",
+    "Sheath blight": "rice__sheath_blight"
+  }
+}
