@@ -1,0 +1,15 @@
+{
+  "question": "How often does the deployed full-label CNN recognize crop and condition on a new source of original corn field photos?",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "dataset_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "manifest": "data/manifests/leafcheck_pretoria_expanded.csv",
+  "manifest_sha256": "48b736fb42c333debc54b86be4aa5c6c5a7812e22e0c4b9e62507e5dd201da15",
+  "development_count": 94,
+  "policy": "d4_probability_mean",
+  "methods": [
+    "automatic across all 177 outputs",
+    "diagnostic restriction to all existing corn labels with corn explicitly supplied"
+  ],
+  "primary": "Automatic exact condition macro-F1 across the four source labels with support. Report top-1 accuracy and wrong-crop and within-crop errors. Show performance by EXIF date using counts and no unsupported independence claim.",
+  "limits": "The whole source is development-only. It contains a no-foliar-symptoms proxy for healthy, a single-label subset selected without viewing predictions, no published specimen mapping, and only two dated groups with common rust. Keep it out of fitting and independent confirmation. Make no changes to app weights or inference. Keep all registered test and supplementary images sealed."
+}
