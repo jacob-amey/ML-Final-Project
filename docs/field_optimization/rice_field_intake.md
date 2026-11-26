@@ -31,3 +31,8 @@ With the original bytes restored, run:
 ```
 
 [Metrics and captured dates](rice_field_diagnostic.json) · [Original top labels and scores](rice_field_predictions.csv).
+
+The extracted comparison app replayed two original blast JPEGs. One matched
+the blast family at a 68.6% model score. The other received sugarcane red rot
+at 99.3%. Both produced suggestions and all 177 scores matched standalone
+inference exactly. [Packaged upload replay](rice_upload_replay.json).

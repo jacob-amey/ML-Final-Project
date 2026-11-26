@@ -1,0 +1,29 @@
+{
+  "measured_utc": "2026-11-26T06:08:08.349560+00:00",
+  "archive_sha256": "4af7aa952534a92beaa8c0964ba7515b1985398d1e23ed4e50176549dad5e462",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "transport": "original JPEG bytes via localhost upload API",
+  "all_four_models_ready": true,
+  "cases": [
+    {
+      "source_label": "Blast",
+      "member": "RiceLeafDiseaseBD/Original images/Blast/blast_857.jpg",
+      "sha256": "eb0c0322e2c0bc4049938be6a4348d87b9a1e706daaad0b089672669342e9723",
+      "top_label": "rice__blast",
+      "score": 0.6858250498771667,
+      "decision": "suggestion",
+      "class_scores": 177,
+      "max_score_difference": 0.0
+    },
+    {
+      "source_label": "Blast",
+      "member": "RiceLeafDiseaseBD/Original images/Blast/blast_323.jpg",
+      "sha256": "36b47c8423c522b9325f2b89f09534f4ca536dc2f151004e0e7a2a44161d27c4",
+      "top_label": "sugarcane__red_rot",
+      "score": 0.9932397603988647,
+      "decision": "suggestion",
+      "class_scores": 177,
+      "max_score_difference": 0.0
+    }
+  ]
+}
