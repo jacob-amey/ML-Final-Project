@@ -1,5 +1,5 @@
 {
-  "hypothesis": "Three same-label sets of new field originals improve condition recognition on a different corn field collection compared with label-matched occurrences of master training photos.",
+  "hypothesis": "New publisher-original corn photos improve condition recognition on a different field source compared with label-matched occurrences of master training photos.",
   "labels": [
     "corn__common_rust",
     "corn__gray_leaf_spot",
@@ -24,6 +24,7 @@
     "field_min_gain_vs_original_given_corn": 0.03,
     "minimum_source_per_class": 50
   },
-  "procedure": "Train from independent random initialization with the same seed, architecture and batch schedule. The fixed master corn training split is present in both runs. Each Bangladesh training original adds one slot per epoch. Replace the slots in the control with sampled same-label master training images. Select checkpoints by four-label Pretoria development macro-F1, using the existing master guard and same checkpoint rules for both arms.",
+  "procedure": "Train from random initialization with the same seed, architecture and batch schedule. The fixed master corn training split is present in both runs. Each Bangladesh training original adds one slot per epoch. Replace the slots in the control with sampled same-label master training images. Select checkpoints by four-label Pretoria development macro-F1, using the existing master guard and same checkpoint rules for both arms.",
+  "pretraining_intake_amendment": "The inspected sample of 24 publisher-original JPEGs showed mostly detached leaves against pale material and no EXIF capture time. Treat the source as controlled framing. Keep the original cross-source transfer question, membership and advancement gates fixed.",
   "decision": "If the new-source model misses a gain threshold or the master limits, stop after seed 434. Otherwise preregister a repeat and an independent confirmation. Scope is diagnostic corn supplied, with all six original corn outputs still eligible. Course 177-label selection and all sealed tests remain separate. This experiment cannot change the deployed model on its own."
 }
