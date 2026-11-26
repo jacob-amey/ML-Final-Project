@@ -1,0 +1,18 @@
+{
+  "source": "https://researchdata.up.ac.za/articles/dataset/Diseases_of_maize_in_the_field/20237613",
+  "license": "CC BY 4.0",
+  "archive_url": "https://ndownloader.figshare.com/files/36203652",
+  "archive_size": 10755639029,
+  "archive_publisher_md5": "cec31c7f2bea1a669b7f98b9bdd7b617",
+  "directory_bytes": 2000000,
+  "directory_sha256": "cd2fbaafe4dfa93835cadb2c57b9cc47090f25307cbf6b71a86a4627b5888548",
+  "metadata_url": "https://ndownloader.figshare.com/files/36203595",
+  "metadata_sha256": "9379d3df7fe528c2ab4e302ab76bb49cb94948405042b94224c97f90796aeb5d",
+  "mapping": {
+    "GLS": "corn__gray_leaf_spot",
+    "NCLB": "corn__northern_leaf_blight",
+    "CR": "corn__common_rust",
+    "NoFoliarSymptoms": "corn__healthy"
+  },
+  "purpose": "Acquire four fixed samples from each compatible single-label category and audit metadata before assigning a role. Preserve the whole source as a single group until stronger capture evidence exists."
+}

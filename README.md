@@ -70,6 +70,8 @@ Read `docs/final_model_selection.json` for the pre-test decision,
 - [Crop loss and unsupported uploads](docs/field_optimization/field_v8_study.md):
   matched scratch-training results, a grouped feature probe, and browser
   verification of the current demo.
+- [Field-data intake and potato study](docs/field_optimization/field_v9_intake.md):
+  source screening, partial-label training and a matched validation result.
 
 ## Run the delivered study
 

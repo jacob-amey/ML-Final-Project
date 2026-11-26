@@ -1,0 +1,55 @@
+{
+  "source_files_sha256": "4d640d312420fff7907edc608b68d770ff97d4c156fb1860675bf1adc7c2dd67",
+  "audit_sha256": "0c0415a3c488108604f4bd9779bbb94c98043f348a3dab742b4e552488ee44d3",
+  "master_fingerprint": "4287764ba029d96abaa0532d7e1d14d2656cadc774f445be7785b03b69d2903c",
+  "preflight": {
+    "iit_potato/blight_unspecified": {
+      "sample_count": 217,
+      "screens": {
+        "no_candidate": 217
+      },
+      "exif_days": {
+        "2018:07:21": 51,
+        "2018:07:20": 67,
+        "2018:07:19": 17,
+        "2018:07:11": 2,
+        "2018:07:17": 4,
+        "2018:07:18": 7,
+        "2018:06:18": 23,
+        "2018:06:19": 2,
+        "2019:03:01": 1,
+        "2019:03:07": 12,
+        "2019:02:04": 2,
+        "2019:02:23": 1
+      },
+      "exif_devices": {
+        "iPhone 7": 31,
+        "LLD-AL10": 50,
+        "Micromax A120                  ": 7,
+        "ANE-AL00": 23,
+        "Moto G (4)": 15,
+        "GIONEE A1": 22,
+        "E5533": 25,
+        "Realme 2": 8,
+        "Redmi 6 Pro": 6,
+        "A1601": 2
+      }
+    },
+    "iit_potato/healthy": {
+      "sample_count": 88,
+      "screens": {
+        "no_candidate": 88
+      },
+      "exif_days": {
+        "2018:06:19": 88
+      },
+      "exif_devices": {
+        "E5533": 88
+      }
+    }
+  },
+  "scope": "Exact raw bytes, orientation-invariant decoded bytes and perceptual screening against master and prior releases, plus within-source grouping.",
+  "split_assigned": false,
+  "photos_admitted": 0,
+  "inference_run": false
+}

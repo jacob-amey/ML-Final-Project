@@ -326,3 +326,19 @@ unsupported-input checks.
 .venv/bin/python -m leafcheck.unsupported_screen --energy --output runs/unsupported-replay
 .venv/bin/python -m leafcheck.upload_support_probe --output runs/support-probe-replay
 ```
+
+### Field intake and partial-label potato training
+
+Read the [intake and training record](../docs/field_optimization/field_v9_intake.md)
+for provenance and the matched comparison. The 305 IIT Mandi images were
+used only in the training arm. The [source files](manifests/leafcheck_iit_potato_intake_files.csv)
+and [audit](manifests/leafcheck_iit_potato_intake_audit.csv) record the exact
+bytes and the original coarse labels. The master and registered study splits
+stay fixed.
+
+```bash
+.venv/bin/python scripts/audit_field_preflight.py fetch --iit-potato
+.venv/bin/python scripts/audit_field_preflight.py audit --iit-potato
+.venv/bin/python -m leafcheck.potato_partial_study \
+  --audit runs/field_v9/iit-potato --output runs/field_v9/potato-partial-replay
+```

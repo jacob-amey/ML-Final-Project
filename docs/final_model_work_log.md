@@ -633,3 +633,22 @@ paired evidence. See nov22_resume_record.json and the selection plan.
 - Rendered and inspected the ten-page editable Rev4 report. The original
   frozen course archive remains separately available.
   [Methods and delivery evidence](field_optimization/field_v8_study.md)
+
+### Field intake and partial-label potato experiment
+
+- Screened the 3,477-image GVLiD release and found 1,344 folder/sidecar
+  label disagreements, two exact decoded groups spanning folders and
+  conflicting date evidence. The archive stays outside the study.
+- Verified 305 public IIT Mandi field potato photos and screened them against
+  prior releases. The source paper documents both blights. Its published
+  labels allow an early-or-late target for 217 images and a healthy target
+  for 88 images. The full set entered the treatment arm only.
+- Ran two matched custom scratch CNNs to 18 epochs. Both selected
+  checkpoints gave 191/211 correct on the date-held Mduma validation.
+  The treatment gained 0.001316 macro-F1 while master potato validation
+  declined by 0.057221. The prespecified advancement gate failed. The
+  frozen CNN, its inference policy and the optional potato route stayed
+  in service. Recomputed all selected metrics from confusion counts
+  and verified model reload and exact training membership.
+- Updated and rendered the ten-page editable Rev5 report with the matched
+  potato result. [Data and model evidence](field_optimization/field_v9_intake.md)

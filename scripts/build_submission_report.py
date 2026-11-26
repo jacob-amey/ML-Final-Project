@@ -254,7 +254,7 @@ def tomato_transfer(doc, docs, freeze, include_crop_head=False):
 
 
 def build(artifact, output, include_field_followup=False, include_tomato_transfer=False,
-          include_crop_head=False, include_field_v8=False):
+          include_crop_head=False, include_field_v8=False, include_field_v9=False):
     freeze = read(artifact / "freeze.json")
     manifest = read(artifact / "artifact.json")
     assert all(manifest[key] for key in ("final_evaluation_complete", "reference_evaluation_complete", "supplementary_evaluation_complete"))
@@ -363,6 +363,18 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             "The demo now lists the covered crops and explains that unfamiliar subjects can receive high scores. "
             "The deployed checkpoint and decision threshold stayed fixed."
         )
+    if include_field_v9:
+        trial = read(docs / "field_optimization/potato_partial_study.json")
+        before = trial["arms"]["control"]["scores"]["field"]
+        after = trial["arms"]["field"]["scores"]["field"]
+        doc.add_paragraph(
+            f"The potato control scored {before['correct']}/{before['sample_count']} on date-held photos "
+            f"and the candidate scored {after['correct']}/{after['sample_count']}. "
+            f"Adding {sum(trial['screened_source_counts'].values())} field photos [20] "
+            f"with exact healthy or combined blight labels gained {trial['field_macro_f1_gain']:.4f} field "
+            f"macro-F1 and lost {-trial['master_deltas']['macro_f1']:.4f} on master potato validation. "
+            "The candidate missed the registered limits."
+        )
     doc.add_heading("Project Management", level=2)
     doc.add_paragraph("Jacob Amey’s assigned role covers data, training, evaluation and model integration. Jacob defined the final scope and authorized the delivery. Demetre’s assigned role covers the frontend and upload interface. The planning decks establish these roles. The contribution record documents available evidence and flags individual implementation and meeting claims for team confirmation. Codex assisted with data preparation, training experiments, evaluation, integration, writing and delivery verification.")
     doc.add_heading("Reproduction and Appendix", level=2)
@@ -427,8 +439,10 @@ def build(artifact, output, include_field_followup=False, include_tomato_transfe
             "[19] Google, “Open Images V7,” dataset and image metadata. [Online]. Available: https://storage.googleapis.com/openimages/web/download_v7.html",
         ]:
             doc.add_paragraph(ref)
+        if include_field_v9:
+            doc.add_paragraph("[20] J. Johnson, “Sample dataset for enhanced field-based detection of potato blight,” Mendeley Data, v1, 2025. doi: 10.17632/pbnw43s6kt.1.")
         for paragraph in doc.paragraphs[reference_start:]:
-            paragraph.paragraph_format.space_after = Pt(4)
+            paragraph.paragraph_format.space_after = Pt(1.5 if include_field_v9 else 4)
     output.parent.mkdir(parents=True, exist_ok=True)
     doc.save(output)
 
@@ -441,8 +455,10 @@ if __name__ == "__main__":
     parser.add_argument("--include-tomato-transfer", action="store_true")
     parser.add_argument("--include-crop-head", action="store_true")
     parser.add_argument("--include-field-v8", action="store_true")
+    parser.add_argument("--include-field-v9", action="store_true")
     arguments = parser.parse_args()
-    crop_head = arguments.include_crop_head or arguments.include_field_v8
+    field_v8 = arguments.include_field_v8 or arguments.include_field_v9
+    crop_head = arguments.include_crop_head or field_v8
     tomato = arguments.include_tomato_transfer or crop_head
     build(arguments.artifact, arguments.output,
-          arguments.include_field_followup or tomato, tomato, crop_head, arguments.include_field_v8)
+          arguments.include_field_followup or tomato, tomato, crop_head, field_v8, arguments.include_field_v9)

@@ -1,0 +1,27 @@
+{
+  "source_plan_sha256": "7153f601ce948e67999942cb8fd6ed226ab88b4368ed72e963faf337836c1410",
+  "audited_sample_sha256": "fac8bd7355306319c74ff8d65e9841de2111ffc00252870325776dc822ee1feb",
+  "published_members": 2355,
+  "multiple_condition_records": 891,
+  "compatible_single_label_candidate_counts": {
+    "corn__gray_leaf_spot": 630,
+    "corn__healthy": 232,
+    "corn__northern_leaf_blight": 140,
+    "corn__common_rust": 107
+  },
+  "sample_photos": 16,
+  "sample_screen_counts": {
+    "no_candidate": 16
+  },
+  "exif_capture_days": {
+    "2019:03:13": 4,
+    "2009:03:24": 3,
+    "2020:03:09": 2,
+    "2012:03:28": 1,
+    "2019:03:16": 5,
+    "2020:03:02": 1
+  },
+  "split_assigned": false,
+  "photos_admitted": 0,
+  "inference_run": false
+}

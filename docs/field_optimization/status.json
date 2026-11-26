@@ -1,18 +1,18 @@
 {
-  "updated_utc": "2026-11-26T00:04:26.544335+00:00",
+  "updated_utc": "2026-11-26T00:45:19.392659+00:00",
   "frozen_model": "artifacts/leafcheck177-v1/model.pt",
   "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
-  "deployment_decision": "Retain the validated 177-label full-image checkpoint and the verified optional potato context.",
+  "deployment_decision": "Retain the frozen 177-label full-image checkpoint and verified optional potato context. Use the app with the crop coverage and score explanation.",
   "latest_completed_runs": [
-    "runs/field_v5/tomato_specialist",
-    "runs/field_v6/crop-434-recovered",
-    "runs/field_v6/crop-435",
-    "runs/field_v7/center-view.json",
-    "runs/field_v7/safari-434"
+    "runs/field_v8/control",
+    "runs/field_v8/crop_loss",
+    "runs/field_v8/tomato-context-confirm",
+    "runs/field_v8/support-probe-repro",
+    "runs/field_v9/potato-partial-seed434"
   ],
   "active_training": false,
-  "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev3.docx",
-  "report_sha256": "243be89327fb8715ab94bf9b6bcf66dcd49f744e004d7f420faa635f77bc094c",
+  "latest_report": "artifacts/submission/LeafCheck_Report_Field_Study_Rev5.docx",
+  "report_sha256": "e4222b574f5bb3548619c29248e515ad33429fa72becebafefd05d7d9cf59e6e",
   "protected_confirmations": [
     "course holdout",
     "PlantDoc",
@@ -21,18 +21,17 @@
     "Okara",
     "Bangladesh",
     "PlantCity",
-    "Holeta and TLID"
+    "Holeta and TLID",
+    "Hossain"
   ],
-  "best_next_question": "Can the frozen 177-label scorer use explicitly supplied tomato context to improve joint correctness on independent photos without hurting late-blight recall, while keeping auto mode identical?",
-  "development_evidence": {
-    "source": "runs/field_v5/tomato_specialist",
-    "sheikh_automatic_correct": 0,
-    "sheikh_provided_tomato_correct": 15,
-    "sheikh_total": 233,
-    "pakistan_automatic_correct": 7,
-    "pakistan_provided_tomato_correct": 27,
-    "pakistan_total": 142
-  },
-  "next_action": "Obtain new traceable healthy, early-blight and late-blight tomato photos with adequate independent capture groups. Freeze the prospective context comparison against that membership before scoring. Continue independent extraction and model work while obtaining sources.",
-  "tomato_context_development_qualified": true
+  "best_next_question": "Do the four Pretoria corn categories have enough disjoint capture groups and consistent labels for a field-focused experiment?",
+  "next_action": "Expand the Pretoria byte-verified intake and check grouping/overlap. Preserve single-label compatibility and keep all opened course tests and confirmations out.",
+  "latest_demo": "artifacts/LeafCheck-field-guidance-demo.zip",
+  "demo_sha256": "000443dad48f0740e5f015282dd43c5d97f7d6e8967e3d883b484a59bc3091cc",
+  "latest_potato_result": {
+    "field_gain": 0.0013157894736842701,
+    "master_macro_f1_delta": -0.05722092807730261,
+    "eligible": false,
+    "evidence": "docs/field_optimization/potato_partial_study.json"
+  }
 }
