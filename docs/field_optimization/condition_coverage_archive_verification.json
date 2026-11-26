@@ -1,0 +1,61 @@
+{
+  "archive_sha256": "4af7aa952534a92beaa8c0964ba7515b1985398d1e23ed4e50176549dad5e462",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "hardware": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "Apple M2 Max",
+    "physical_memory_bytes": 34359738368,
+    "power_source": "AC Power"
+  },
+  "fresh_process": true,
+  "working_directory_has_training_data": false,
+  "notebooks_present": false,
+  "manifest_files_verified": 90,
+  "all_four_real_models_ready": true,
+  "python_executable": "/Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/runs/final177/runtime_env/bin/python",
+  "python_venv": "/Users/jacobamey/Desktop/Brockport_Class/ML-Final-Project/runs/final177/runtime_env",
+  "startup_command": "./Launch LeafCheck.command --port 0 (automatic browser disabled for the HTTP check)",
+  "startup_ms_including_first_swift_compile": 2471.2115839938633,
+  "http_latency": {
+    "warmup_requests": 2,
+    "timed_requests": 12,
+    "p50_ms": 49.51031249947846,
+    "p95_ms": 50.35710175288841,
+    "measurements_ms": [
+      48.93212500610389,
+      48.09087500325404,
+      47.96929200529121,
+      50.128917006077245,
+      47.86929101101123,
+      49.73850000533275,
+      48.310750018572435,
+      50.17108301399276,
+      50.12999998871237,
+      50.584457989316434,
+      49.84770799637772,
+      49.282124993624166
+    ],
+    "conditions": "Loopback HTTP, alternating packaged success/mistake, all four real models, warm local files, includes image upload/validation and JSON response; not CNN-only latency"
+  },
+  "example_results": [
+    {
+      "purpose": "success",
+      "reference_label": "tomato__healthy",
+      "predicted_label": "tomato__healthy",
+      "score": 0.9999866485595703,
+      "correct": true,
+      "all_four_predicted": true
+    },
+    {
+      "purpose": "mistake",
+      "reference_label": "tomato__late_blight",
+      "predicted_label": "potato__late_blight",
+      "score": 0.9820762872695923,
+      "correct": false,
+      "all_four_predicted": true
+    }
+  ],
+  "invalid_image_http_status": 400,
+  "unsupported_format_http_status": 415
+}

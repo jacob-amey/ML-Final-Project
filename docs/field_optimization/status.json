@@ -1,8 +1,8 @@
 {
-  "updated_utc": "2026-11-26T05:38:35.290020+00:00",
+  "updated_utc": "2026-11-26T05:43:08.171879+00:00",
   "frozen_model": "artifacts/leafcheck177-v1/model.pt",
   "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
-  "deployment_decision": "Retain the frozen 177-label full-image checkpoint and verified optional potato context. Use the app with the crop coverage and score explanation.",
+  "deployment_decision": "Retain the frozen 177-label checkpoint and optional potato context. The packaged app lists the exact conditions by crop.",
   "latest_completed_runs": [
     "runs/field_v8/control",
     "runs/field_v8/crop_loss",
@@ -31,10 +31,10 @@
     "Hossain",
     "CoffeeLeaf-CO v2"
   ],
-  "best_next_question": "How does the app communicate coverage for bean conditions excluded from the 177 labels?",
-  "next_action": "Screen the fixed Tanzania bean preflight, verify the condition lookup in the packaged upload app, and record the evidence.",
-  "latest_demo": "artifacts/LeafCheck-field-guidance-demo.zip",
-  "demo_sha256": "000443dad48f0740e5f015282dd43c5d97f7d6e8967e3d883b484a59bc3091cc",
+  "best_next_question": "Does the Makerere bean rust collection provide enough distinct field images for a cross-source data experiment?",
+  "next_action": "Verify the publisher-pinned Makerere archives and screen them against the master and Tanzania sample. Decide whether there is adequate independent, label-compatible evidence for an experiment.",
+  "latest_demo": "artifacts/LeafCheck-condition-coverage-demo.zip",
+  "demo_sha256": "4af7aa952534a92beaa8c0964ba7515b1985398d1e23ed4e50176549dad5e462",
   "latest_potato_result": {
     "field_gain": 0.0013157894736842701,
     "master_macro_f1_delta": -0.05722092807730261,
@@ -71,5 +71,13 @@
     "field_macro_f1_delta": -0.011487486005935096,
     "eligible": false,
     "evidence": "docs/field_optimization/spatial_pool_probe.json"
+  },
+  "latest_bean_diagnostic": {
+    "photos": 23,
+    "supported_rust_correct": 0,
+    "supported_rust_photos": 8,
+    "unsupported_suggestions": 6,
+    "unsupported_photos": 15,
+    "evidence": "docs/field_optimization/tanzania_bean_uploads.json"
   }
 }

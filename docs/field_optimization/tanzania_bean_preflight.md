@@ -12,3 +12,19 @@ Recreate and screen from the repository root with:
 .venv/bin/python scripts/inspect_tanzania_bean.py
 .venv/bin/python scripts/inspect_tanzania_bean.py --screen runs/field_v12/bean-screen.json
 ```
+
+## Upload results
+
+The first screen flagged one suspected non-bean leaf. The other 23 photos passed byte, decoded-pixel and visual-hash screening against 90,574 master records and 183 PlantDoc photos. The automated within-sample check flagged zero additional files, which leaves the observed same-date and specimen uncertainty in place.
+
+| Source label | Screened photos | Suggested labels | Top label was bean | Correct supported label |
+| --- | ---: | ---: | ---: | ---: |
+| Healthy | 7 | 1 | 0 | Outside label map |
+| Rust | 8 | 3 | 2 | 0 |
+| Anthracnose | 8 | 5 | 5 | Outside label map |
+
+Original JPEGs passed through the freshly extracted app. Every final-model label and all 177 scores matched standalone inference exactly. One anthracnose photo received bean rust with a model score of 0.9837. This confirms that the current score rule can still offer an unrelated condition on a familiar crop. Treat these as diagnostic counts with inherited labels from one source.
+
+In the frozen master, bean rust has 76 training images in 76 recorded groups. It was predicted correctly on 5 of 22 master validation images and on 0 of the 8 Tanzanian rust photos. Those groups are recorded identities and do not establish independent field specimens. Rust is the only eligible training label from this new source under the current 177-label scope. The new browser lookup shows the exact three bean labels without changing the inference path.
+
+[Upload evidence](tanzania_bean_uploads.json) · [Browser verification](condition_coverage_browser.json) · [Demo archive verification](condition_coverage_archive_verification.json).

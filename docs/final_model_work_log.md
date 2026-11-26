@@ -701,3 +701,14 @@ paired evidence. See nov22_resume_record.json and the selection plan.
   for a future independent comparison. No inference used the cohort.
   [Field experiments](field_optimization/feature_style_study.md) ·
   [Coffee data release](field_optimization/coffee_holdout.md)
+
+### Exact condition coverage at upload
+
+- Screened 24 Tanzanian bean-source files and replayed 23 through the newly
+  packaged app. The unsupported healthy and anthracnose labels produced six
+  suggestions across 15 photos. Zero of eight rust photos matched.
+- Added a crop-by-crop condition lookup using the loaded model's class list.
+  Verified all four models, the dropdown, original-byte browser upload, an
+  invalid image and 19 passing website tests on the extracted archive.
+  [Bean diagnostic](field_optimization/tanzania_bean_preflight.md) ·
+  [Browser verification](field_optimization/condition_coverage_browser.json)

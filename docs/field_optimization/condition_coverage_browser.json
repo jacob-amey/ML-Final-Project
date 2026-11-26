@@ -1,0 +1,40 @@
+{
+  "observed_utc": "2026-11-26T05:43:08.171879+00:00",
+  "source_revision": "06eadda9bc707276fecbf839bd1c6542fd12108e",
+  "archive_sha256": "4af7aa952534a92beaa8c0964ba7515b1985398d1e23ed4e50176549dad5e462",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "fresh_extraction": true,
+  "startup_command": "./Launch LeafCheck.command --port 8792",
+  "four_models_ready": true,
+  "coverage_checked": {
+    "crop_count": 43,
+    "bean": [
+      "Halo blight",
+      "Mosaic virus",
+      "Rust"
+    ]
+  },
+  "browser_uploads": [
+    {
+      "file": "healthy.jpg",
+      "role": "historical demo fixture",
+      "preview_visible": true,
+      "shown_label": "tomato__healthy",
+      "shown_model_score": "100.0%",
+      "api_model_score": 0.9998363256454468,
+      "sha256": "6a4d8803ba8ca0442bbac0ed3dc9bd3e374fab6a82fbf386cf58f9c5b7b99a7a"
+    },
+    {
+      "file": "invalid.jpg",
+      "role": "deliberately malformed fixture",
+      "shown_error": "This image could not be opened. Try another JPEG or PNG."
+    }
+  ],
+  "website_tests": {
+    "count": 19,
+    "passed": true,
+    "verified_against_extracted_server": true,
+    "log": "runs/field_v12/crop-coverage-demo/website-tests.log",
+    "log_sha256": "a36a3cb97bec5d79e86adbf6e6eac05e7d96426b405c66623aaf3f513bccb760"
+  }
+}

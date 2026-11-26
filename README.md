@@ -82,7 +82,7 @@ has the published project history. Use the exact revision in the archive for
 this delivery.
 
 1. **Run the demo.** The latest local package is
-   `artifacts/LeafCheck-field-guidance-demo.zip`. The original course archive
+   `artifacts/LeafCheck-condition-coverage-demo.zip`. The original course archive
    contains `LeafCheck-final-demo.zip`. On the tested Apple silicon Mac with
    Python 3.14 and Apple Swift tools, run the following from the extracted
    `LeafCheck/` folder:

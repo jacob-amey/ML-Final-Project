@@ -1,0 +1,11 @@
+{
+  "archive": "artifacts/LeafCheck-condition-coverage-demo.zip",
+  "sha256": "4af7aa952534a92beaa8c0964ba7515b1985398d1e23ed4e50176549dad5e462",
+  "bytes": 9003982,
+  "model_checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "files": 90,
+  "source_revision": "06eadda9bc707276fecbf839bd1c6542fd12108e",
+  "contains_training_dataset": false,
+  "contains_notebooks": false,
+  "restore": "Unzip into a new folder, install the app requirements in a compatible Python environment, then run its launcher or backend/server.py."
+}
