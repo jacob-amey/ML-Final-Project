@@ -1,0 +1,322 @@
+{
+  "source": "https://zenodo.org/records/15685315",
+  "license": "CC BY 4.0",
+  "archives": {
+    "healthy1.zip": {
+      "label": "healthy",
+      "archive_size": 1350964354,
+      "publisher_md5": "7cf7789c3b8c84ccf89e45234506f91f",
+      "directory_sha256": "0035b7afacf77e566d01c8c1aceda941c7d7126dd4cefa0277ded86359cd7c50"
+    },
+    "rust1.zip": {
+      "label": "rust",
+      "archive_size": 1134254897,
+      "publisher_md5": "3147aecedfcb5a4ff85b899c9882c817",
+      "directory_sha256": "7ef2bca75c1bd4d1101b30e19c2f3df4f7604ed33d6695499e0bbac6e8408ed1"
+    },
+    "anthra.zip": {
+      "label": "anthracnose",
+      "archive_size": 1760078636,
+      "publisher_md5": "b42f3a3fc39acafdc7892eaea9879f2f",
+      "directory_sha256": "ad55a58c53890400394aaa96e2b963f2ff0e97f094b42b706e2912e32a9ac40b"
+    }
+  },
+  "sampling": "Eight smallest SHA-256 digests of UTF-8 member paths per archive",
+  "role": "quarantined preflight",
+  "evaluation_run": false,
+  "counts": {
+    "healthy": 8,
+    "rust": 8,
+    "anthracnose": 8
+  },
+  "records": [
+    {
+      "archive": "healthy1.zip",
+      "member": "healthy1/1711014850825.jpg",
+      "label": "healthy",
+      "sha256": "2b0b8ad2a8142a6b066956b03757f7902601504a86ec807b4445b83941bc89a0",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2024:03:20 16:35:50"
+    },
+    {
+      "archive": "healthy1.zip",
+      "member": "healthy1/1711023307993.jpg",
+      "label": "healthy",
+      "sha256": "8b8b89ba0fe9ce74793f330d0ef4a8ea858d6e49a2b0aed8fe8f276c24f18021",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2024:03:21 14:20:12"
+    },
+    {
+      "archive": "healthy1.zip",
+      "member": "healthy1/1711109358843.jpg",
+      "label": "healthy",
+      "sha256": "9d7040f862e3e897ab73a1df7a5426fbec13e26c541bc32e36abf86f900416fb",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2024:03:22 12:51:50"
+    },
+    {
+      "archive": "healthy1.zip",
+      "member": "healthy1/1712225368392.jpg",
+      "label": "healthy",
+      "sha256": "2190a969d03ba2491fa263b53d3f12af593c7dfff0f59cd4edd3b5fa7aaa6bdc",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2024:04:04 10:54:46"
+    },
+    {
+      "archive": "healthy1.zip",
+      "member": "healthy1/1712049935863.jpg",
+      "label": "healthy",
+      "sha256": "d448a935cb449b099ed0359eaa36a0ca2348750ebda86aa967a603f891216c63",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2024:03:28 14:50:52"
+    },
+    {
+      "archive": "healthy1.zip",
+      "member": "healthy1/1711027490534.jpg",
+      "label": "healthy",
+      "sha256": "60a5e73fec7fb779a331f9a53baeb2ad31ceca6a44d9fe9c0bd43a19e76d69fe",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2024:03:20 16:14:01"
+    },
+    {
+      "archive": "healthy1.zip",
+      "member": "healthy1/1711099288093.jpg",
+      "label": "healthy",
+      "sha256": "7268856aa4f5121239cb435de32f11ec447737674c91435f00a18115db07b6f2",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2024:03:21 16:12:00"
+    },
+    {
+      "archive": "healthy1.zip",
+      "member": "healthy1/1711099460921.jpg",
+      "label": "healthy",
+      "sha256": "96483d0feaa9d80bb2fd7765d0ccdeb0c1d3d852d834f432efe60bdcb6383929",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2024:03:22 10:51:39"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust10426.jpg",
+      "label": "rust",
+      "sha256": "f66c455350b398e0232698501a161923ebd939d6f3502dbcb07bc84aca5232d1",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:11 16:18:26"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust16032.jpg",
+      "label": "rust",
+      "sha256": "0b98ca30b43e917af38dcfd5e12d5f46de1d27c38908ae9f63383f59da59eaf7",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:15 10:01:22"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust12475.jpg",
+      "label": "rust",
+      "sha256": "56781325f5379ddf9468bfdd2ca27be5187df9036f7d334690c4a1238d8de5f5",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:06 08:13:47"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust182.jpg",
+      "label": "rust",
+      "sha256": "0f711d23802fd5ee0269c8bfc65841f3f6c1888b967d3e9667f5068395642f1a",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:02 11:08:59"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust13976.jpg",
+      "label": "rust",
+      "sha256": "4879b1500777991f4e701c3ea7db72a6c19b72ad15acfe11c308e0cd6debf2f6",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:09 11:44:07"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust18946.jpg",
+      "label": "rust",
+      "sha256": "c65edb3e9c65b7365c38430a610641dc0c32296a0dedca97ce7cbdb623542eed",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:17 16:08:45"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust10746.jpg",
+      "label": "rust",
+      "sha256": "e901829a98be1e727e976c81d98b7272fc9b86065079570ab5225b1769563fa3",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:15 12:32:29"
+    },
+    {
+      "archive": "rust1.zip",
+      "member": "rust1/rust1681.jpg",
+      "label": "rust",
+      "sha256": "2715965e13d1762c17f88fcae7b5edc044e906e18f62f4c1dfa847f7d692bd9e",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:02 11:03:18"
+    },
+    {
+      "archive": "anthra.zip",
+      "member": "anthra/anthra11399.jpg",
+      "label": "anthracnose",
+      "sha256": "a5635e270dd28f21305a593bca3831476195ab9d00abe6e2a4769c637007e9af",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:04:06 14:22:51"
+    },
+    {
+      "archive": "anthra.zip",
+      "member": "anthra/anthra5146.jpg",
+      "label": "anthracnose",
+      "sha256": "ab98e2de1998d67b8a73334afe150ddbbe1d2e1b2003badd18e94f335bc12999",
+      "dimensions": [
+        1000,
+        978
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:02:25 10:33:11"
+    },
+    {
+      "archive": "anthra.zip",
+      "member": "anthra/anthra9756.jpg",
+      "label": "anthracnose",
+      "sha256": "a2da1d1f152b0e6747a03b75bd12cd80c6d5d3e597247178e0dbfe3c10d41293",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:04:06 14:15:50"
+    },
+    {
+      "archive": "anthra.zip",
+      "member": "anthra/anthra12809.jpg",
+      "label": "anthracnose",
+      "sha256": "67fb65fc215c12069a4b95e4cae11174a8f642f0099d1e49eaf706814951b252",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:04:06 13:39:57"
+    },
+    {
+      "archive": "anthra.zip",
+      "member": "anthra/anthra3253.jpg",
+      "label": "anthracnose",
+      "sha256": "4979901220e6a54788ef23fe6527f352bf6f6b62ee5f5bedc7d0af4987e810c5",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:03:13 09:40:10"
+    },
+    {
+      "archive": "anthra.zip",
+      "member": "anthra/anthra137.jpg",
+      "label": "anthracnose",
+      "sha256": "eb12b4898536959704cc6ef723d7a498cf771e81812654992c33bfe8df5f5a47",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:01:21 10:22:35"
+    },
+    {
+      "archive": "anthra.zip",
+      "member": "anthra/anthra12686.jpg",
+      "label": "anthracnose",
+      "sha256": "f3083af2dfdace053f819aa6c3c487c5b359e303a3643a2b3dd26e6542ec08d3",
+      "dimensions": [
+        1000,
+        750
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:03:13 09:35:14"
+    },
+    {
+      "archive": "anthra.zip",
+      "member": "anthra/anthra3490.jpg",
+      "label": "anthracnose",
+      "sha256": "54274d2647f88cf7b4ee7089e3740f51d58a0993e7db5651e14fe22c0534aaa0",
+      "dimensions": [
+        750,
+        1000
+      ],
+      "camera": "SM-A032F",
+      "capture_time": "2023:03:13 09:51:54"
+    }
+  ]
+}
