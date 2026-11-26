@@ -1,0 +1,98 @@
+{
+  "prediction_sha256": "9abcda61c654be3d87220afd45fb160b55f12721ddfd697857d5cc05f117b8c1",
+  "policy_sha256": "25715641674a950dfe9960f8c7a7cb81eb5da4e9a45c7bc66494a9651ae64a47",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "dataset": "Pretoria development only",
+  "count": 94,
+  "top_label_brier_score": 0.33140539346526116,
+  "ten_equal_width_bin_ece": 0.3615818735449872,
+  "fixed_threshold": {
+    "threshold": 0.5857925415039062,
+    "accepted": 42,
+    "correct": 9
+  },
+  "high_score": {
+    "threshold": 0.9,
+    "count": 8,
+    "correct": 3,
+    "correct_reference_labels": {
+      "corn__northern_leaf_blight": 3
+    }
+  },
+  "bucket_details": [
+    {
+      "lower": 0.1,
+      "upper": 0.2,
+      "count": 1,
+      "correct": 0,
+      "mean_score": 0.1611255556344986,
+      "accuracy": 0.0
+    },
+    {
+      "lower": 0.2,
+      "upper": 0.3,
+      "count": 5,
+      "correct": 0,
+      "mean_score": 0.24195196032524108,
+      "accuracy": 0.0
+    },
+    {
+      "lower": 0.3,
+      "upper": 0.4,
+      "count": 10,
+      "correct": 3,
+      "mean_score": 0.34226775765419004,
+      "accuracy": 0.3
+    },
+    {
+      "lower": 0.4,
+      "upper": 0.5,
+      "count": 16,
+      "correct": 3,
+      "mean_score": 0.4461917672306299,
+      "accuracy": 0.1875
+    },
+    {
+      "lower": 0.5,
+      "upper": 0.6,
+      "count": 21,
+      "correct": 7,
+      "mean_score": 0.5441382924715678,
+      "accuracy": 0.3333333333333333
+    },
+    {
+      "lower": 0.6,
+      "upper": 0.7,
+      "count": 13,
+      "correct": 1,
+      "mean_score": 0.6308082571396461,
+      "accuracy": 0.07692307692307693
+    },
+    {
+      "lower": 0.7,
+      "upper": 0.8,
+      "count": 10,
+      "correct": 3,
+      "mean_score": 0.740015321969986,
+      "accuracy": 0.3
+    },
+    {
+      "lower": 0.8,
+      "upper": 0.9,
+      "count": 10,
+      "correct": 1,
+      "mean_score": 0.8555441498756409,
+      "accuracy": 0.1
+    },
+    {
+      "lower": 0.9,
+      "upper": 1.0,
+      "count": 8,
+      "correct": 3,
+      "mean_score": 0.9341323375701904,
+      "accuracy": 0.375
+    }
+  ],
+  "fit_used": false,
+  "policy_changed": false
+}
