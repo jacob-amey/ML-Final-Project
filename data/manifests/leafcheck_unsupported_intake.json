@@ -1,0 +1,22 @@
+{
+  "version": "leafcheck_unsupported_openimages_v1",
+  "role": "development_only",
+  "source": "https://storage.googleapis.com/openimages/web/download_v7.html",
+  "mirror": "https://open-images-dataset.s3.amazonaws.com/validation/",
+  "metadata": {
+    "metadata": "https://storage.googleapis.com/openimages/2018_04/validation/validation-images-with-rotation.csv",
+    "labels": "https://storage.googleapis.com/openimages/v7/oidv7-val-annotations-human-imagelabels.csv",
+    "classes": "https://storage.googleapis.com/openimages/v7/oidv7-class-descriptions.csv"
+  },
+  "max_photos_per_category": 8,
+  "max_bytes": 8388608,
+  "categories": {
+    "Bicycle": "nonplant",
+    "Dog": "nonplant",
+    "Typewriter": "nonplant",
+    "Spruce": "unsupported_plant",
+    "Cactus": "unsupported_plant",
+    "Orchid": "unsupported_plant"
+  },
+  "admission": "Use positive human verification annotations. Choose the first eight candidates by stable image-ID hash within each named category. Require a CC BY license and individual photo attribution. Confirm the primary subject visually without model outputs. Keep this cohort separate from any later unknown-input confirmation."
+}

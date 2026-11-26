@@ -1,0 +1,8 @@
+{
+  "hypothesis": "An explicit unsupported-input cohort can expose false suggestions from the deployed maximum-score rule and guide later uncertainty work.",
+  "checkpoint_sha256": "3fa7e014945736b036f85aab1d0af06eafa27a7193a406c9c6349b4a133f23a8",
+  "supported_development": ["sheikh", "mduma", "pakistan"],
+  "unsupported_groups": ["nonplant", "unsupported_plant"],
+  "metrics": "Report exact acceptance counts under the current app rule. Compare developmental AUROC for separating supported field photos from each unsupported group using fixed confidence signals. Higher signal means more supported.",
+  "decision": "This small cohort measures failure modes and prioritizes later tests. Fit no new threshold and make no deployment change from this diagnosis. An improvement requires separate realistic confirmation and preservation of useful field coverage."
+}
